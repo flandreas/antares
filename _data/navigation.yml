@@ -1,0 +1,13 @@
+main:
+  - title: "Quick-Start"
+    url: /docs/quick-start/
+  - title: "About"
+    url: /docs/about/
+  - title: "Manual"
+    url: /manual/english/usermanual.html
+  - title: "Blog"
+    url: /blog/
+  - title: "Releases"
+    url: /docs/releases/
+  - title: "Examples"
+    url: /docs/examples

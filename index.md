@@ -1,37 +1,38 @@
-## Welcome to GitHub Pages
+---
+layout: splash
+header:
+  overlay_image: /assets/images/splash2.png
+  actions:
+    - label: "Download"
+      url: "https://github.com/mmistakes/minimal-mistakes/"
+excerpt: >
+  A free, powerful platform for designing, simulating and explaining digital circuits.<br />
+  <small><a href="https://github.com/mmistakes/minimal-mistakes/releases/tag/4.19.1">Latest release 0.1.0</a></small>
+feature_row:
+  - image_path: /assets/images/splash-button-design.jpg
+    title: "Design"
+    excerpt: "Design circuits using built-in libraries and develop your own libraries."
+    url: "#test-link"
+    btn_label: "Learn More"
+    btn_class: "btn--primary"
+  - image_path: /assets/images/splash-button-simulate.jpg
+    title: "Simulate & Animate"
+    excerpt: "Observe signal flow animations and dive into subcircuits while your circuit is simulated."
+    url: "#test-link"
+    btn_label: "Learn More"
+    btn_class: "btn--primary"
+  - image_path: /assets/images/splash-button-explain.jpg
+    title: "Explain"
+    excerpt: "Embed state-sensitive explanations in your circuits to make them self-explaining to your audience."
+    url: "#test-link"
+    btn_label: "Learn More"
+    btn_class: "btn--primary"
+  - image_path: /assets/images/splash-button-web.jpg
+    title: "Soon: Web-based"
+    excerpt: "Currently a desktop tool, Antares will eventually be available in web browsers."
+    url: "#test-link"
+    btn_label: "Learn More"
+    btn_class: "btn--primary"
+---
 
-You can use the [editor on GitHub](https://github.com/flandreas/antares/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/flandreas/antares/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+{% include feature_row %}
