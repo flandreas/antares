@@ -1,0 +1,31 @@
+= image:user-manual/base-library/tunnel.png[Tunnel] Tunnel
+:experimental:
+:page-layout: single
+:page-sidebar: { nav: "manual" }
+:page-liquid:
+:page-permalink: /user-manual/english/base-library/tunnel
+
+== Appearance
+
+image:user-manual/base-library/tunnel-sample.png[Example tunnel, 400]
+
+== Behavior
+
+The tunnel component is a wire element that is used to connect distant points of a circuit without the need to draw a wire.
+
+A circuit can contain several tunnel connections, which are distinguished by the name of the tunnel. In the example above, there are the two tunnel names "A" and "B". The signal of the switch on the far left leads to the tunnel input "A" and is automatically routed to the tunnel output with the same name. Note that the tunnel named "B" does not receive the signal, because it has a different name.
+
+The scope of a tunnel name is limited to the current circuit. If a circuit contains a subcircuit which itself contains a tunnel with the same name "A", the signal in tunnel "A" of the main circuit *not* is passed to tunnel "A" in the subcircuit.
+
+
+== Pins
+
+Input:: The input of the tunnel component is bidirectional, i.e. it is both input and output at the same time. This makes it possible to use the same component type for sending a signal into a tunnel and receiving the signal from this tunnel.
+
+== Attributes
+
+Orientation:: The direction in which the component's symbol is pointing.
+
+Name:: The name of the tunnel into which this component is sending its signal. The name is displayed on the opposite side of the pin.
+
+Bit Width:: The number of bits that can be transmitted simultaneously through this tunnel.

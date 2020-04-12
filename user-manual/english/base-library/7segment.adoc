@@ -1,0 +1,34 @@
+= image:user-manual/base-library/7segment.png[7Segment display] 7-Segment Display
+:experimental:
+:page-layout: single
+:page-sidebar: { nav: "manual" }
+:page-liquid:
+:page-permalink: /user-manual/english/base-library/7segment
+
+== Appearance
+
+image:user-manual/base-library/7segment-sample.png[Example 7-Segment, 400]
+
+== Behavior
+
+The 7-segment display contains 7 LEDs arranged in the form of a digit and one LED at the bottom right, which is used as a dot. The LEDs light up depending on the signals applied to the inputs. If a 0 is present, the LEDs are displayed in the dark representation of the selected light colour. If a 1 is present, the bright representation of the light colour is used.
+
+The 7-segment display is available in three different sizes. For the size display, you can choose whether the pins are available as a group or individually.
+
+image::user-manual/base-library/7segment-schema.png[Pin diagram, 200]
+
+== Pins
+
+p:: Controls the decimal point
+
+a-f-f:: Only available with the "Single" pin scheme. Controls the 7 segments of the display as shown in the figure above.
+
+s:: Only available with the "Combined" pin scheme. Accepts an 8-bit value whose bits control the 7 segments of the display, whereby bit 0 corresponds to segment "a" and bit 6 to segment "g". The most significant bit is not used.
+
+== Attributes
+
+LED colour:: The color of the LEDs. The menu offers all light colors implemented in Antares for selection.
+
+Size:: The 7-segment display can be displayed in the three sizes "large", "medium" and "small".
+
+Pin Scheme:: This attribute is only available if the attribute "size" has the value "large". It determines whether a separate pin should be provided for each segment of the LED (value "Single"), or whether all 7 segments should be combined into a single 8-bit pin (value "Combined").

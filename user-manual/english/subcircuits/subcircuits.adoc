@@ -1,0 +1,84 @@
+= Subcircuits
+:experimental:
+:page-layout: single
+:page-sidebar: { nav: "manual" }
+:page-liquid:
+:page-permalink: /user-manual/english/subcircuits/subcircuits
+
+As your circuits get bigger and more complex, you will soon reach the point where you want to split the circuit into manageable parts and reuse those parts several times in your circuits. In Antares these parts are called "subcircuits".
+
+In the chapter <<{{site.basedir}}/user-manual/english/first-steps/first-steps.adoc#, "First Steps">> you have already made your first experiences with the creation and reuse of partial circuits. The chapter <<{{site.basedir}}/user-manual/english/circuits/circuits.adoc#, "Circuits">> describes in detail how to create circuits.
+
+This chapter describes how to build a circuit that can be used as subcircuits in other circuits.
+
+== Ports
+
+<<{{site.basedir}}/user-manual/english/base-library/port.adoc#, Ports>> (inputs, outputs) are the most important components for the construction of subcircuits. They are used to transfer signals from the surrounding circuit to the subcircuit and to return signals to the surrounding circuit.
+
+It often happens that you have not yet decided at the beginning of the design of a new circuit whether the circuit should be reused as a subcircuit later on. At this stage, you may prefer to use switches and LEDs to interact with the circuit during simulation. If you then decide to use the circuit as a partial circuit, you will replace some (or all) switches with inputs and LEDs with outputs. Since the input components of Antares - at least in the outermost circuit - can also be used as switches during the simulation, and output components represent the current signal value, you can use inputs and outputs instead of switches and LEDs right from the beginning of the design phase.
+
+=== Names of Ports
+
+Ports must have a unique **name** so that they can be identified at various points by the user of the circuit, e.g. in the symbol of the partial circuit. Antares itself uses a different identification of ports internally. If a circuit uses a subcircuit with an input named "A" and a wire leads to this input, Antares does not remember the name "A" as a reference, but the internal number of the port (see below). This allows you to change the names of ports in subcircuits even if the subcircuit is already used in other circuits.
+
+Digital circuits often have inputs and outputs that transmit an inverted signal and whose names are marked with a crossbar above the text. An example is a flip-flops with the outputs Q and [overline]#Q#. You can create a crossbar in Antares by placing an exclamation mark in front of the letter that you want to have a crossbar. Longer text with crossbars can be additionally marked with round brackets.
+
+Examples:
+
+ !Q
+ !(ABC)
+
+=== Bidirectional Ports
+
+Antares supports bidirectional ports. The example below shows a section of the "Memory Buffer Register" from the "Microprocessor (Tannenbaum)" example circuit. Depending on the inputs "WR (Write)" and "RD (Read)" and the help of the tri-state buffers, port "D" can both accept data and output data.
+
+image::user-manual/subcircuits/bidirectional-port.png[Bidirectional connections, 400,align="center"]
+
+=== Direction of signal flow
+
+The basic components and subcircuits of the standard Antares library assume that signals in a circuit basically flow from left to right. This seems to be a standard - at least in western culture - in digital technology. For this reason, pins point east by default.
+
+This standard is problematic when signals with several bits are used, since in binary representations of these signals the least significant bit is on the right. Shift register or adder circuits then tend to require signals to flow from right to left. I do not know if there is a common solution to this conflict in the industry; if you develop your own libraries with Antares, you should start by thinking about this topic.
+
+=== Symbol editor
+
+The symbol editor is used to design the symbol of a partial circuit. Use the following two buttons on the Antares toolbar to toggle between the circuit editor and the symbol editor
+
+image::user-manual/subcircuits/view-tools.png[View tools, 100]
+
+The symbol editor consists of a tree that shows the elements that can be dragged into the symbol and the large drawing area in which the symbol is drawn. Additionally, the drawing tools can be used to add graphical elements such as rectangles to the symbol.
+
+image::user-manual/subcircuits/symbol-editor-tree-en.png[tree, 250, align="center"]
+
+The elements in the tree are divided into three categories.
+
+Ports :: The inputs and outputs of the circuit that can be included in the symbol. They are shown in the symbol with a connection dash (pin) and the name of the connection.
+
+Controls:: Controls are further components of the circuit, which can also be included in the symbol. See the "Controls" section below for more details. Controls are represented differently in the symbol depending on their type. Control connectors represent the current signal value of the connector, while interactive controls such as switches, LEDs, or 7-segment displays are displayed in the same way as in the circuit.
+
+Subcircuits:: This tree node contains all subcircuits of the circuit for which the symbol is created. It is used to include inner control elements of subcircuits in the symbol.
+
+If you drag an element from the tree into the symbol editor, the symbol is removed from the tree, as it makes no sense to have the same element in the symbol more than once. Conversely, if you delete an element in the symbol editor, it is added to the tree again.
+
+=== Properties of ports
+
+When a port is selected in the symbol editor, its attributes are displayed in the properties view, most of which can be edited.
+
+Port ID :: Displays the ID of the port (cannot be changed). This ID can be used for <<{{site.basedir}}/user-manual/english/scripting/scripting.adoc#, Scripting>> applications.
+
+Name:: The name of the port (cannot be changed). The name of a port can only be changed in the circuit itself.
+
+Orientation:: The cardinal point to which the pin of the port points.
+
+Label Position:: This attribute controls whether and where the pin name is displayed in the symbol. +
+**Internally**: The name is displayed inside the symbol, i.e. as slightly larger text opposite the connecting dash. +
+**Externally**: The name is displayed outside the symbol, i.e. as a slightly smaller text above the connecting line. +
+**Hide**: The name is not displayed.
+
+Show Bit Width:: Pins with a bit width greater than 1 are by default a small annotation that shows the number of bits of the pin. This attribute can be used to hide this annotation.
+
+Logic:: Only available for inputs. Controls the logic annotation of this connector. With the value "Negative", a small circle is displayed outside the symbol for this connection.
+
+Triggering:: Available for inputs only. With the value "Edge" a small triangle is displayed inside the symbol for the pin.
+
+Output Annotation:: Only available for outputs. Depending on the value "None", "Tri-State" or "Master-Slave", the corresponding annotation is displayed within the symbol for the pin.

@@ -1,0 +1,26 @@
+= image:user-manual/base-library/delay.png[Delay] Delay
+:experimental:
+:page-layout: single
+:page-sidebar: { nav: "manual" }
+:page-liquid:
+:page-permalink: /user-manual/english/base-library/delay
+
+== Appearance
+
+image:user-manual/base-library/delay-sample.png[Example delay element, 150]
+
+== Behavior
+
+The delay element outputs the signal present at the input after an adjustable delay time at the output.
+
+== Pins
+
+Input:: A 1-bit input that accepts the signal to be delayed.
+
+Output:: A 1-bit output, which outputs the delayed signal.
+
+== Attributes
+
+Orientation:: The direction in which the output points.
+
+Delay:: The delay time in nanoseconds.

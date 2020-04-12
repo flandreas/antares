@@ -1,0 +1,34 @@
+= image:user-manual/base-library/probe.png[Probe] Probe
+:experimental:
+:page-layout: single
+:page-sidebar: { nav: "manual" }
+:page-liquid:
+:page-permalink: /user-manual/english/base-library/probe
+
+== Appearance
+
+image:user-manual/base-library/probe-sample.png[Example Probe, 300]
+
+== Behavior
+
+The probe is used to display a signal value at a specific point in the circuit. If the attribute "Logging" is set, the signal values are additionally collected in the "Log" window of Antares and displayed together with the time at which the signal occurred. This can be useful for troubleshooting, for example.
+
+== Pins
+
+Input:: The probe has a single input that accepts the signal to be displayed. The bit width is determined by the attribute "Bit Width".
+
+Output:: If the attribute "Has Output" is set, the probe has an output at the opposite end where the read signal is output unchanged. This allows probes to be integrated directly into a wire without the need for branching.
+
+== Attributes
+
+Name:: The name of the probe that is displayed at the opposite location of the input (or above the probe if "Has Output" is set). The name is also used for the logging feature so that the logged signals can be associated to the probe with the corresponding name.
+
+Orientation:: The direction in which the probe points.
+
+Bit Width:: The bit width of the input (and output, if any).
+
+Representation:: The manner in which signal value is represented. Binary and hexadecimal representation are available.
+
+Has Output:: If this attribute is set, the probe has an additional output opposite the input.
+
+Logging:: If this attribute is set, changed signal values are collected and displayed in the "Log" view of Antares.

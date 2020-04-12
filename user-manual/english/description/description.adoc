@@ -1,0 +1,8 @@
+= Descriptions and Explanations
+:experimental:
+:page-layout: single
+:page-sidebar: { nav: "manual" }
+:page-liquid:
+:page-permalink: /user-manual/english/description/description
+
+TODO

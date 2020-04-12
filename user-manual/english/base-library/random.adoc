@@ -1,0 +1,26 @@
+= image:user-manual/base-library/random.png[Random] Random Generator
+:experimental:
+:page-layout: single
+:page-sidebar: { nav: "manual" }
+:page-liquid:
+:page-permalink: /user-manual/english/base-library/random
+
+== Appearance
+
+image:user-manual/base-library/random-sample.png[Example random generator, 300]
+
+== Behavior
+
+The random generator generates a new random number with each rising edge of the clock input.
+
+== Pins
+
+Input:: The clock input. With a rising edge a new random number is generated.
+
+Output:: An n-bit output that outputs the last generated random number.
+
+== Attributes
+
+Orientation:: The direction in which the output points.
+
+Bit Width:: The number of bits that make up the generated random number.

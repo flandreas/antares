@@ -1,0 +1,26 @@
+= image:user-manual/base-library/led.png[LED] LED
+:experimental:
+:page-layout: single
+:page-sidebar: { nav: "manual" }
+:page-liquid:
+:page-permalink: /user-manual/english/base-library/led
+
+== Appearance
+
+image:user-manual/base-library/led-sample.png[Example LED, 300]
+
+== Behavior
+
+Indicates the value at the input by displaying the LED's luminous body according to the color of the LED. A 1 at the input results in a bright LED, a 0 results in a dark LED.
+
+== Pins
+
+An LED has only one single input of bit width 1.
+
+== Attributes
+
+Orientation:: The direction in which the light is pointing.
+
+Name:: The name of the LED, which is displayed as text next to the luminous body (on the side opposite the pin).
+
+LED Color:: The color of the luminous body. The menu offers all light colors implemented in Antares for selection.

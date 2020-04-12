@@ -1,0 +1,48 @@
+= image:user-manual/base-library/xnor.png[XNOR] XNOR gate
+:experimental:
+:page-layout: single
+:page-sidebar: { nav: "manual" }
+:page-liquid:
+:page-permalink: /user-manual/english/base-library/xnor
+
+== Appearance
+
+image:user-manual/base-library/xnor-sample.png[Example XNOR gate, 300].
+
+== Behavior
+
+The XNOR (Nexclusive OR) outputs the result of the XNOR function of the 1-bit signals at the inputs. The output has the value 1 only if not exactly one input has the value 1. For an XNOR gate with two inputs, this means that the output is 1 if both inputs have the same value.
+
+Unconnected inputs always have the value 0.
+
+.truth table
+[%header,cols=5*, width="40%"]
+|===
+||0|1|Z|X
+|**0**|1|0|1|X
+|**1**|0|1|1|X
+|**Z**|1|1|1|X
+|**X**|X|X|X|X|X
+|===
+
+(Z: Undefined/High impedance, X: Error)
+
+=== Mnemonics
+
+The logical gates of Antares can illustrate their function with so-called "mnemonics". See the chapter <<{{site.basedir}}/user-manual/english/description/description.adoc#, Descriptions and explanations>>. The mnemonic of the XNOR gate is shown below.
+
+image:user-manual/base-library/xor-mnemonic.png[Example Mnemonic, 300]
+
+== Pins
+
+Inputs:: The 1-bit inputs of the XNOR gate. Their number is determined by the attribute "Number of inputs".
+
+Output:: The 1-bit output of the XNOR gate. Outputs the value of the calculated XNOR function.
+
+== Attributes
+
+Orientation:: The direction in which the output points.
+
+Number of inputs:: Determines how many inputs the XNOR gate has. There are 2 to max. 8 inputs available. If the XNOR gate is already connected to wires, this attribute cannot be changed.
+
+Output name:: The optional name displayed next to the output. This can be useful when the XNOR gate forms the end of a complex combinatorial circuit and the logical expression produced by the XNOR gate is to be specified.

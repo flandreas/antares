@@ -1,0 +1,48 @@
+= image:user-manual/base-library/nand.png[NANDd] NAND Gate
+:experimental:
+:page-layout: single
+:page-sidebar: { nav: "manual" }
+:page-liquid:
+:page-permalink: /user-manual/english/base-library/nand
+
+== Appearance
+
+image:user-manual/base-library/nand-sample.png[Example NAND, 300]
+
+== Behavior
+
+The NAND gate outputs the result of the NAND operation of the 1-bit signals at the input. The output has the value 0 only if all inputs have the value 1.
+
+Unconnected inputs always have the value 0.
+
+.truth table
+[%header,cols=5*, width="40%"]
+|===
+||0|1|Z|X
+|**0**|1|1|1|1
+|**1**|1|0|1|X
+|**Z**|1|1|1|X
+|**X**|1|X|X|X
+|===
+
+(Z: Undefined/High impedance, X: Error)
+
+=== Mnemonics
+
+The logical gates of Antares can illustrate their function with so-called "mnemonics". See the chapter <<{{site.basedir}}/user-manual/english/description/description.adoc#, Descriptions and explanations>>. Below is the mnemonic of the NAND gate.
+
+image:user-manual/base-library/nand-mnemonic.png[Example Mnemonic, 300]
+
+== Pins
+
+Inputs:: The 1-bit inputs of the NAND gate. Their number is determined by the attribute "Number of inputs".
+
+Output:: The 1-bit output of the NAND gate. Outputs the value of the calculated NAND function.
+
+== Attributes
+
+Orientation:: The direction in which the output points.
+
+Number of inputs:: Determines how many inputs the NAND has. There are 2 to max. 8 inputs available. If the NAND gate is already connected to wires, this attribute cannot be changed.
+
+Output Name:: The optional name displayed next to the output. This can be useful when the NAND gate forms the end of a complex combinatorial circuit and the logical expression produced by the NAND gate needs to be specified.

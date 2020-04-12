@@ -1,0 +1,25 @@
+= image:user-manual/base-library/rgb-led.png[RGB LED] RGB LED
+:experimental:
+:page-layout: single
+:page-sidebar: { nav: "manual" }
+:page-liquid:
+:page-permalink: /user-manual/english/base-library/rgb-led
+
+== Appearance
+
+image:user-manual/base-library/rgb-led-sample.png[Example LED, 300]
+
+== Behavior
+
+The color in which the RGB LED lights up is determined by the 24-bit value applied to the LED input.
+
+== Pins
+
+An RGB LED has only a single input of bit width 24. The most significant 8 bits contain the value of the red color channel, the middle 8 bits contain the value of the green color channel, and the least significant 8 bits contain the value of the blue color channel.
+
+== Pins
+
+Orientation:: The direction in which the luminous body is pointing.
+
+Name:: The name of the RGB LED, which is displayed as text next to the luminous body (on the side opposite the pin).
+

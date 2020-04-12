@@ -1,0 +1,40 @@
+= image:user-manual/base-library/terminal.png[Terminal] Terminal
+:experimental:
+:page-layout: single
+:page-sidebar: { nav: "manual" }
+:page-liquid:
+:page-permalink: /user-manual/english/base-library/terminal
+
+== Appearance
+
+image:user-manual/base-library/terminal-sample.png[Example Terminal, 400]
+
+== Behavior
+
+This component implements a very simple text terminal. It receives a sequence of ASCII characters at input "D", which it displays line by line. When the current line is full, the terminal continues on the next line, moving the whole terminal content upwards after the last available line has been filled.
+
+The terminal supports the following control characters:
+
+* *Backspace (ASCII code 8)*: Deletes the last character of the current line.
+* *Linefeed (ASCII code 10)*: Starts a new line, scrolling the current terminal content up one line if necessary.
+* *Form feed (ASCII code 12)*: Deletes the entire terminal content.
+
+== Pins
+
+D:: "Data" - Contains the ASCII code of the next character to be displayed.
+
+CLK:: "Clock" - If "EN" is 1, the next character is read on the rising edge of "CLK".
+
+EN:: "Enable" - Must have the value 1 for the terminal to accept characters. Signals at inputs "D" and "CLK" are ignored if "EN" has the value 0.
+
+CLR:: "Clear" - With the value 1, the terminal content is deleted asynchronously.
+
+== Attributes
+
+Number of rows:: The number of rows the terminal can display.
+
+Number of columns:: The number of columns the terminal can display. This is the same as the number of characters per row.
+
+Size:: The terminal can be displayed in the three sizes "large", "medium" and "small".
+
+Text color:: The color in which the text is displayed. The menu offers all light colors implemented in Antares for selection.

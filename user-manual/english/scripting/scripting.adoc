@@ -1,0 +1,67 @@
+= Scripting
+:experimental:
+:page-layout: single
+:page-sidebar: { nav: "manual" }
+:page-liquid:
+:page-permalink: /user-manual/english/scripting/scripting
+:icons: font
+
+Scripting is a powerful feature of Antares that allows you to influence the behavior of circuits during simulation in different ways. To do this, you write small scripts, i.e. small pieces of program that are stored in different places in a circuit and which are executed by Antares during the simulation.
+
+== Basics
+
+The programming language in which the scripts are written is JavaScript. Since JavaScript does not need to be compiled, but is interpreted during execution, the scripts do not need to be created separately and stored in the directory where Antares is installed, but can be stored as pure text within the circuit.
+
+CAUTION: Antares will eventually be executable in the browser and allow you to create web pages that contain individual circuits as active components, for example. In this environment, JavaScript can no longer be used as a language for security reasons, where users can create scripts themselves that run in other users' browsers. In the future, another scripting language will be used, e.g. Antares' own DSL.
+
+Scripts are recorded as attributes of selected objects in the properties window.
+
+image::user-manual/scripting/script-attribute-en.png[script property, 300]
+
+In the example above, the Function property contains a script. This is indicated by the text "[Script]". If there were no script, the text would be empty. If you click in the field, Antares will display a button to open the script editor. In the current version of Antares, the script editor is a simple multi-line text field without any special properties like syntax highlighting or similar.
+
+image::user-manual/scripting/scripting-editor-en.png[Script Editor, 500, align=center]
+
+In this window you write your script as JavaScript code. With the button btn:[OK] the current script is saved in the attribute where you opened the script editor.
+
+If you have made a programming error in a script (which can happen), Antares will detect this during the simulation - sooner or later depending on the type of script - and abort the simulation. In the "Problems" view, which can be displayed at the bottom of the main window, the color of the icon changes to red, and the table in the view contains a new entry that gives you information about the error that occurred.
+
+image::user-manual/scripting/scripting-error-en.png[Script error, 700, align=center]
+
+The entries in the table have the following attributes:
+
+Name:: The name or type of the problem. For scripting errors the name is always "JS Script". There are other types of errors, such as "design error", which occurs when your circuit contains lines connecting connectors of different bit widths.
+
+Origin:: An identification of the object where the error occurred. This can be a partial circuit, a use case, a scenario or in the future another source. +
+
+TIP: It would be desirable if Antares would highlight the source of the problem in the circuit when you select an entry in the table. This feature may be available in a future version of Antares.
+
+Context:: Additional information that further specifies the source of the error. If an object contains multiple scripts, the context is the name of the attribute of the source whose script contains the error. In the example above, this is the attribute "Function" of the sub-circuit "SR Latch".
+
+Description:: Describes the cause of the error. In case of JavaScript errors, this is the error message that was returned to Antares by the JavaScript engine. In the example above, in the script on line 2, the statement `var r = elem.inputBit("R");` was replaced by the erroneous statement `var r = elem.error("R");`, which caused the error.
+
+The content of the table is deleted every time a simulation is started. You can delete the contents of the table yourself at any time using the button in the upper right corner of the view.
+
+== Interfaces
+
+In the scripts that you write, you often want to access the state of the circuit, for example to determine the current signal at an output of a component. To do this, you use Antares interface objects, which are available to your script as "context".
+
+From a JavaScript point of view, your script code is the content of a JavaScript function. The function definition itself comes from Antares; you only write the contents of the function.
+
+[source,javascript]
+----
+function execVertice(elem) { // <1>
+  // Your code // <2>
+}
+----
+<1> You do not have to write this part of the code. Antares will automatically add it around your script. It defines the function parameters (in this case `elem`) that you can use in your script to access properties of the circuit.
+<2> Your script only contains the content of this function.
+
+Depending on the scripting application, Antares uses different wrapper functions with different parameters. The types of these parameters and the methods they provide are explained in the following chapters.
+
+== Scripting Applications
+
+The different applications of scripting are described in separate chapters.
+
+* <<{{site.basedir}}/user-manual/english/circuits/circuit-scripting.adoc#, Skriting in circuits>>
+* <<{{site.basedir}}/user-manual/english/scenarios/scenario-scripting.adoc#, Scripting in scenarios>>

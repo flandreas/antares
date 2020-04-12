@@ -1,0 +1,73 @@
+= Base Library
+:experimental:
+:page-layout: single
+:page-sidebar: { nav: "manual" }
+:page-liquid:
+:page-permalink: /user-manual/english/base-library/base-library
+
+This chapter describes all elementary library components that are built into Antares and programmed into it. These components are included in both the "Basic" and the "Standard" library.
+
+Compared to other tools, it may seem that these are rather few components. The philosophy of Antares differs from that of other tools in this respect: With Antares, the user should be able to explore the inner workings of as many components as possible. For this reason, Antares does not contain any programmed flip-flops, full adders or multiplexers; these are included in Antares as modeled sub-circuits in the standard library and can be opened by the user at any time as a sub-circuit and their functionality can be observed during the simulation.
+
+== Common Attributes
+
+Attributes that only apply to a specific component, or that have a different meaning depending on the component, are explained in the description of the respective component. This chapter describes attributes that apply equally to all components.
+
+ID:: The identification number of the component which is unique within the circuit in which the component is located. It is mainly used for scripting applications.
+
+Description:: In this field Attribute a multilingual description can be entered which describes the purpose of these components within the circuit. If available, it is displayed in the description popup instead of the standard description of the component. See chapter <<{{site.basedir}}/user-manual/english/description/description.adoc#, Descriptions and Explanations>> for more details.
+
+Propagation Delay:: The time in nanoseconds that elapses during simulation until a changed signal at the input of a component has been processed, e.g. by generating a changed signal at an output of the component, or, as in the case of the LED, by a different representation of the component.
+
+Shadows:: This attribute controls whether this particular component is to be displayed with a shadow. Shadows are only displayed if they have been activated in the Antares settings. If shadows are activated in the settings, you can prevent this component from being displayed.
+
+Color:: Normally, the color in which a component is drawn is determined by its style. The attribute "Color" can be used to override the color for a specific component. This can be used, for example, to identify all components of a circuit that perform a similar function with the same color. See chapter <<{{site.basedir}}/user-manual/english/styles/styles.adoc#, Styles and Themes>> for more details.
+
+== Components
+
+=== Net
+
+* image:user-manual/base-library/splitter.png[Splitter] <<{{site.basedir}}/user-manual/english/base-library/splitter.adoc#, Splitter>>
+* image:user-manual/base-library/concentrator.png[Combiner] <<{{site.basedir}}/user-manual/english/base-library/combiner.adoc#, Combiner>>
+* image:user-manual/base-library/probe.png[Probe] <<{{site.basedir}}/user-manual/english/base-library/probe.adoc#, Probe>>
+* image:user-manual/base-library/tunnel.png[Tunnel] <<{{site.basedir}}/user-manual/english/base-library/tunnel.adoc#, Tunnel>>
+* image:user-manual/base-library/constant.png[Constant] <<{{site.basedir}}/user-manual/english/base-library/constant.adoc#, Constant>>
+
+=== Logical Gates
+
+* image:user-manual/base-library/and.png[AND] <<{{site.basedir}}/user-manual/english/base-library/and.adoc#, AND>>
+* image:user-manual/base-library/or.png[OR] <<{{site.basedir}}/user-manual/english/base-library/or.adoc#, OR>>
+* image:user-manual/base-library/nor.png[NOT] <<{{site.basedir}}/user-manual/english/base-library/not.adoc#, NOT>>
+* image:user-manual/base-library/nand.png[NAND] <<{{site.basedir}}/user-manual/english/base-library/nand.adoc#, NAND>>
+* image:user-manual/base-library/nor.png[NOR] <<{{site.basedir}}/user-manual/english/base-library/nor.adoc#, NOR>>
+* image:user-manual/base-library/xor.png[Exculsive OR (XOR)] <<{{site.basedir}}/user-manual/english/base-library/xor.adoc#, XOR>>
+* image:user-manual/base-library/xor.png[Exclusive OR (XNOR)] <<{{site.basedir}}/user-manual/english/base-library/xnor.adoc#, XNOR>>
+* image:user-manual/base-library/buffer.png[Buffer] <<{{site.basedir}}/user-manual/english/base-library/buffer.adoc#, Buffer>>
+* image:user-manual/base-library/tristate-buffer.png[Tri-State Puffer] <<{{site.basedir}}/user-manual/english/base-library/tristate-buffer.adoc#, Tri-State Buffer>>
+* image:user-manual/base-library/delay.png[Delay] <<{{site.basedir}}/user-manual/english/base-library/delay.adoc#, Delay>>
+
+=== Input
+
+* image:user-manual/base-library/input.png[Circuit Input] <<{{site.basedir}}/user-manual/english/base-library/port.adoc#, Circuit Input>>
+* image:user-manual/base-library/switch.png[Switch] <<{{site.basedir}}/user-manual/english/base-library/switch.adoc#, Switch>>
+* image:user-manual/base-library/dip-switch.png[DIP Switch] <<{{site.basedir}}/user-manual/english/base-library/dip-switch.adoc#, DIP Switch>>
+* image:user-manual/base-library/clock.png[Clock] <<{{site.basedir}}/user-manual/english/base-library/clock.adoc#, Clock>>
+* image:user-manual/base-library/keyboard.png[Keyboard] <<{{site.basedir}}/user-manual/english/base-library/keyboard.adoc#, Keyboard>>
+
+=== Output
+
+* image:user-manual/base-library/output.png[Circuit Output] <<{{site.basedir}}/user-manual/english/base-library/port.adoc#, Circuit Output>>
+* image:user-manual/base-library/led.png[LED] <<{{site.basedir}}/user-manual/english/base-library/led.adoc#, LED>>
+* image:user-manual/base-library/rgb-led.png[RGB-LED] <<{{site.basedir}}/user-manual/english/base-library/rgb-led.adoc#, RGB-LED>>
+* image:user-manual/base-library/7segment.png[7-Segment-Display] <<{{site.basedir}}/user-manual/english/base-library/7segment.adoc#, 7-Segment-Display>>
+* image:user-manual/base-library/led-matrix.png[LED-Matrix] <<{{site.basedir}}/user-manual/english/base-library/led-matrix.adoc#, LED-Matrix>>
+* image:user-manual/base-library/terminal.png[Terminal] <<{{site.basedir}}/user-manual/english/base-library/terminal.adoc#, Terminal>>
+
+=== Memory
+
+* image:user-manual/base-library/ram.png[RAM] <<{{site.basedir}}/user-manual/english/base-library/ram.adoc#, RAM>>
+* image:user-manual/base-library/rom.png[ROM] <<{{site.basedir}}/user-manual/english/base-library/rom.adoc#, ROM>>
+
+=== Arithmetic
+
+* image:user-manual/base-library/random.png[Random] <<{{site.basedir}}/user-manual/english/base-library/random.adoc#, Random>>

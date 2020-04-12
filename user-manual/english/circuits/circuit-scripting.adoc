@@ -1,0 +1,105 @@
+= Scripting in circuits
+:page-layout: single
+:page-sidebar: { nav: "manual" }
+:page-liquid:
+:page-permalink: /user-manual/english/circuits/circuit-scripting
+
+== Execution logic
+
+In a <<{{site.basedir}}/user-manual/english/circuits/circuits.adoc#, circuit>> a script can be defined in the attribute "Function" which is executed at <<{{site.basedir}}/user-manual/english/simulation.simulation.adoc#, "Flat simulation">> instead of the circuit if the circuit is used as a partial circuit in another circuit.
+
+The script you write will be included as the "Function Body" of the following JavaScript function:
+
+[source,javascript]
+----
+function execVertice(elem) {
+  // Your script
+}
+----
+
+The function parameter `elem` is an object of the type <<{{site.basedir}}/user-manual/english/scripting/scripting-dsl.adoc#, `CircuitElemModelBridge`>>.
+
+=== Examples
+
+==== Half adder
+
+This example shows the execution logic of a 1-bit half-adder with 2 inputs "A" and "B" and the outputs "S" (sum) and "C" (carry).
+
+[source,javascript]
+----
+var a = elem.inputBit("A");
+var b = elem.inputBit("B");
+elem.setOutputBit("S", (a || b) && !(a && b))
+elem.setOutputBit("C", a && b);
+----
+
+Notice how the signals of the inputs are read, how logical operations are executed in JavaScript, and how the results of these operations are set as output signals.
+
+==== incrementer
+
+This example shows the execution logic of an 8-bit incrementer with data input "D" and the outputs "O" (data) and "CO" (carry out).
+
+[source,javascript]
+----
+var d = elem.input("D");
+var valueIn = parseInt(d, "16");
+var valueOut = (valueIn + 1) % 256;
+var co = (valueIn == 255);
+
+elem.setOutput("O", valueOut.toString("16"));
+elem.setOutputBit("CO", co);
+----
+
+Since `elem.input()` returns a hex string, this must be converted to a decimal value with `parseInt()` to base 16 so that it can be incremented. When setting the output signal with `elem.setOutput()`, the incremented value must be converted back to a hexadecimal string using the JavaScript function `toString(<base:String>)`.
+
+==== 2-4 Decoder
+
+This example shows the execution logic of a 2-4 decoder with two 1-bit data inputs "I0" and "I1", one enable input "EN" and 4 data outputs "O0" . "O3". The decoder. The decoder selects one of the 4 data outputs based on the 2-bit value at the two data inputs if "EN" is set.
+
+[source,javascript]
+----
+var en = elem.inputBit("EN");
+var i0 = elem.inputBit("I0") ? 1 : 0;
+var i1 = elem.inputBit("I1") ? 1 : 0;
+
+var val = i0 + 2 * i1;
+
+elem.setOutputBit("O0", en && val == 0);
+elem.setOutputBit("O1", en && val == 1);
+elem.setOutputBit("O2", en && val == 2);
+elem.setOutputBit("O3", en && val == 3);
+----
+
+Note how the value of the Enable input is used by JavaScript using the AND operator `&&` to ensure that an output is only set to 1 if "EN" is also 1.
+
+== Symbol representation
+
+In the symbol of a <<{{site.basedir}}/user-manual/english/subcircuits/subcircuits.adoc#, subcircuit>> scripting can be used to change the display of the symbol during the simulation.
+
+TIP: The possibilities for this are still rudimentary in the current version of Antares; future versions of Antares will provide more support here.
+
+The script you write will be included as the "Function Body" of the following JavaScript function:
+
+[source,javascript]
+----
+function execVerticeView(elem) {
+  // Your script
+}
+----
+
+The function parameter `elem` is an object of the type <<{{site.basedir}}/user-manual/english/scripting/scripting-dsl.adoc#, `CircuitElemViewBridge`>>.
+
+=== Examples
+
+==== Signal flow
+
+The example shows the representation logic of a multiplexer with two 4-bit inputs "A" and "B", a 1-bit selection input "S" (Select) and a 4-bit data output "O". Depending on the signal at the selection input, the resulting data flow from the selected input to the output is to be drawn.
+
+[source,javascript]
+----
+if (elem.inputBit("S")) {
+    elem.drawDataFlow("B", "O");
+} else {
+     elem.drawDataFlow("A", "O");
+}
+----

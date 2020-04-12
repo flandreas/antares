@@ -1,0 +1,28 @@
+= image:user-manual/base-library/constant.png[Constant] Constant
+:experimental:
+:page-layout: single
+:page-sidebar: { nav: "manual" }
+:page-liquid:
+:page-permalink: /user-manual/english/base-library/constant
+
+== Appearance
+
+image:user-manual/base-library/constant-sample.png[Example constant, 400]
+
+== Behavior
+
+The constant constantly outputs the configured value at its output.
+
+== Pins
+
+The constant has only one output whose bit width can be configured in the attribute "Bit Width".
+
+== Attributes
+
+Orientation:: The direction in which the output points.
+
+Bit Width:: The number of bits that make up the output signal. If this attribute is changed so that the number of bits is no longer sufficient to represent the set value in the "Value (decimal)" attribute, the value is truncated accordingly.
+
+Representation:: The way in which the value of the output signal is represented in the representation.
+
+Value (decimal):: The value (in decimal notation) that is output at the output of the constant.

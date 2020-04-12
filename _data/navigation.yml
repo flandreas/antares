@@ -4,10 +4,58 @@ main:
   - title: "About"
     url: /docs/about/
   - title: "Manual"
-    url: /manual/english/usermanual.html
+    url: /user-manual/english/first-steps/first-steps
   - title: "Blog"
     url: /blog/
   - title: "Releases"
     url: /docs/releases/
   - title: "Examples"
     url: /docs/examples
+
+manual:
+  - title: Getting Started
+    children:
+      - title: "Welcome"
+        url: /user-manual/english/usermanual
+      - title: "First Steps"
+        url: /user-manual/english/first-steps/first-steps
+  - title: Projects and libraries
+    children:
+      - title: "Overview"
+        url: /user-manual/english/projects-libraries/projects-libraries
+      - title: "Libraries"
+        url: /user-manual/english/projects-libraries/libraries
+      - title: "Projects"
+        url: /user-manual/english/projects-libraries/projects
+      - title: "Workbench"
+        url: /user-manual/english/projects-libraries/workbench
+      - title: "Library Reference"
+        url: /user-manual/english/base-library/base-library
+  - title: Circuits
+    children:
+      - title: "Circuits"
+        url: /user-manual/english/circuits/circuits
+      - title: "Wires"
+        url: /user-manual/english/circuits/wires
+      - title: "Subcircuits"
+        url: /user-manual/english/subcircuits/subcircuits
+  - title: Simulation
+    children:
+      - title: "Simulation"
+        url: /user-manual/english/simulation/simulation
+  - title: Other Basic Techniques
+    children:
+      - title: "Styles and Themes"
+        url: /user-manual/english/styles/styles
+      - title: "Descriptions and Explanations"
+        url: /user-manual/english/description/description
+  - title: Advances Techniques
+    children:
+      - title: "Scripting"
+        url: /user-manual/english/scripting/scripting
+      - title: "Scenarios"
+        url: /user-manual/english/scenarios/scenarios
+      - title: "Use Cases"
+        url: /user-manual/english/usecases/usecases
+      - title: "Oscilloscope"
+        url: /user-manual/english/oscilloscope/oscilloscope

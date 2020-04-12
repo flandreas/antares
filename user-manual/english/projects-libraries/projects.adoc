@@ -1,0 +1,30 @@
+= Projects
+:experimental:
+:page-layout: single
+:page-sidebar: { nav: "manual" }
+:page-liquid:
+:page-permalink: /user-manual/english/projects-libraries/projects
+
+In this chapter you will learn how to manage your own projects. The basics of projects are explained in <<{{site.basedir}}/user-manual/english/projects-libraries/projects-libraries.adoc#, "Projects and Libraries">>.
+
+== Manage projects
+
+The main menu menu:File[Projects...] takes you to the Antares project management.
+
+image::user-manual/projects-libraries/projects-sample-en.png[Projects,500,align="center"]
+
+btn:[Open]:: Opens the selected project. If one of the circuits of the project is marked with "Open on load", this circuit is opened automatically.
+
+btn:[New]:: Creates a new project and opens it. When doing so, Antares ensures that the name of the new project (in the current language) does not yet exist. By default, the new project contains a circuit named "New circuit". The new project is based on the library that is open in the workbench at this time.
+NOTE: In a future version of Antares, you will be able to select the library on which the new project will be based when you create the project.
+
+btn:[Delete]:: Deletes the selected project. This action cannot be undone.
+
+btn:[Export]:: Exports the selected project to a ZIP file. The generated ZIP file contains only the project; if the exported project is based on a user-defined library, the project can only be imported again in the same Antares installation, since this library is not available in other installations and there is no possibility to export libraries yet.
+NOTE: In a future version, it will be possible to export projects together with a user-defined library as a so-called "bundle" and import them back into another Antares installation.
+
+btn:[Import]:: Imports a project from a ZIP file. The following situations can occur where the import fails:
+[horizontally]
+Invalid:: The imported ZIP file is invalid, i.e. it was probably not created by an export from Antares.
+Name already exists:: Since the name of a library must be unique, Antares rejects the import of a library with an already existing name.
+Unknown library:: The project to be imported references a library that does not exist in this Antares installation.

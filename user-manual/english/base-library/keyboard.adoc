@@ -1,0 +1,38 @@
+= image:user-manual/base-library/keyboard.png[keyboard] Keyboard
+:experimental:
+:page-layout: single
+:page-sidebar: { nav: "manual" }
+:page-liquid:
+:page-permalink: /user-manual/english/base-library/keyboard
+
+== Appearance
+
+image:user-manual/base-library/keyboard-sample.png[Example keyboard, 350]
+
+== Behavior
+
+This component allows the circuit to accept characters that you enter via your computer keyboard (as long as they can be interpreted as 7-bit ASCII code).
+
+During the simulation, click with the mouse on the component to give it the input focus, which is displayed as usual with a thin blue rectangle. If you then enter characters via your computer keyboard, they are collected in the buffer of this component from left to right. At any given time, the component outputs the ASCII code of the leftmost character in the buffer through output "D". On a rising edge of the clock input "CLK", the leftmost character is removed from the buffer and the previously second character, which now moves to the leftmost position, is output at "D".
+
+The supported characters include all displayable characters in the range between 20 (space) and 126 (tilde) and the control characters 8 (backspace), 9 (tab), and 10 (linefeed). The control characters are represented as "\b" (backspace), "\t" (tab), and "\n" (linefeed). Antares ignores all other characters.
+
+The component is asynchronous in that the first character entered is immediately output at "D" without waiting for the clock signal.
+
+When the buffer is full, Antares indicates this with a red rectangle around the input field; Antares then ignores any further characters entered.
+
+== Pins
+
+CLK:: Input "Clock" - On rising edge the next character is output at D if EN is set.
+
+EN:: Input "Enable" - With 1, the next character is output at D if CLK goes to 1.
+
+CLR:: Input "Clear" - With 1, the buffer is cleared.
+
+D:: Output "Data" - The first character of the buffer is output at this 8-bit output.
+
+AV:: Output "Available" - 1 indicates that at least 1 character is contained in the buffer. Goes to 0 when the buffer is empty.
+
+== Attributes
+
+Buffer size :: The number of characters the buffer can store.

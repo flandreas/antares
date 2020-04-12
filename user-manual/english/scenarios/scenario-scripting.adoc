@@ -1,0 +1,8 @@
+= Scripting in Scenarios
+:experimental:
+:page-layout: single
+:page-sidebar: { nav: "manual" }
+:page-liquid:
+:page-permalink: /user-manual/english/scenarios/scenario-scripting
+
+TODO

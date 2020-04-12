@@ -1,0 +1,92 @@
+= Styles and Themes
+:experimental:
+:page-layout: single
+:page-sidebar: { nav: "manual" }
+:page-liquid:
+:page-permalink: /user-manual/english/styles/styles
+
+When displaying graphical objects, Antares - like any other graphical application - uses some graphical properties that influence the display. These properties are essentially the following:
+
+* Color
+* Character set (font)
+* Line type (Stroke)
+
+image::user-manual/styles/styles-sample.png[Styles, 500,align="center"]
+
+Antares pursues the goal of presenting circuits in an aesthetically pleasing way. To achieve this goal, Antares uses - among other things - the following means:
+
+* Bundling of graphical properties
+* Styles
+* Topics
+
+== Bundling of graphical properties
+
+By bundling graphical properties, it becomes easier to achieve a certain graphical consistency within a single circuit and across multiple circuits.
+
+The most important example of bundling graphical properties in Antares is the **color**. The color "green" in Antares is not just a specific RGB value such as "(0,255,0)", but consists of three different RGB values for foreground color, background color, and text color.  In Antares program code, such a color is called "Composite Color".
+
+The color components of a composite color are matched. The foreground color, with which, for example, the edge of a green rectangle is drawn, is still green, but much darker than the green background. The same applies to the text color, which is also green but has a tone that stands out sufficiently well from the background.
+
+So, in Antares, when you give a graphic object the color "green", you set the color of the foreground, background and text at the same time.
+
+The available composite colors are predefined by Antares. In the current version of Antares, there is no way to change these colors or add more colors.
+
+== Styles
+
+A style in Antares is a set of graphical properties that are available under a specific name. When such a style is "applied" to a graphical object, the graphical object automatically receives all graphical properties of that style.
+
+Basically, a style can have values for the basic properties color, font and line types. In addition, a style can define whether the graphic object has a shadow or not. Internally, Antares uses other special styles, e.g. for lines, to support different line types for bus lines or for the display during simulation.
+
+The set of styles is predefined by Antares. The following styles are available:
+
+Figure:: This style is the basic style in Antares. It is mainly used for "pure" graphical objects like rectangle, ellipse, line etc.
+
+Element:: This style is used for the node elements of the graph that make up the circuit. In Antares these are the circuit components such as logic gates or subcircuits.
+
+Connection:: This style is used in Antares for the lines that connect the circuit components.
+
+Annotation:: Annotations are small graphical elements or texts within elements, e.g. the small triangle that in a flip-flop indicates an input that is active with a rising signal edge. Designations of connectors are also annotations.
+
+Explanation:: Explanations are text boxes which are included in the circuit as graphical elements.
+
+Subsystem:: Subsystems are rectangles with a text that combine parts of a circuit to graphically express that these parts together form a subsystem of the circuit.
+
+TIP: Antares internally uses many other styles such as "background", "selection", "highlighting" etc., but these styles are not available in the user interface for application to graphical objects.
+
+=== Apply Styles
+
+If you select a component in the circuit editor, you can then determine the style of the component in the properties view and also influence certain graphical properties.
+
+image::user-manual/styles/style-properties-en.png[styles, 350,align="center"]
+
+NOTE: The example shows the properties of a rectangle. For other components the properties view may look different.
+
+Style:: In this attribute you determine the style the component has.
+
+Color::: In this attribute you can set the composite color of the component. The default value is "From style", i.e. the component adopts the color that the style specifies. But you can override this color, e.g. to make an AND gate, which is normally drawn in the color of the style, red to express that it has a special meaning in the circuit.
+
+Line Style:: In this attribute you can set the line style of the component. The default value is "From Style", i.e. the component adopts the line style of the current component. Currently, all combinations of three line styles (extended, dashed, dotted) and three knitting thicknesses (narrow, medium, wide) are available.
+
+Depending on the type of the selected component, further graphic properties such as "Filled", "Border" and "Shadow" can be set.
+
+NOTE: The "Shadow" attribute only has an effect if the display of shadows is basically activated in Antares settings.
+
+== Themes
+
+In Antares, a "theme" is a set of styles with specific values, all of which are grouped under a specific name. Not only styles that are available to you as a user for application to components are considered, but also "internal" styles like "selection" or "background".
+
+This makes it possible to fundamentally change the way circuits are displayed by changing the theme. The current theme is selected using the menu menu:View[Theme].
+
+The following three themes are available in the current version of Antares.
+
+Winter:: This is the default theme of Antares. It mainly uses blue figures on a white background.
++
+image::user-manual/styles/winter-theme-sample-en.png[Styles, 400,align="center"]
+
+Black & White:: An alternative theme similar to "Winter" but without the blue colour.
++
+image::user-manual/styles/bw-theme-sample-en.png[Styles, 400,align="center"]
+
+CRT :: An experimental "Dark Theme" which aims to explore the possibilities and limitations of themes. The name "CRT" is a reminiscence of times in the past when computers still had monochrome terminals.
++
+image::user-manual/styles/crt-theme-sample-en.png[Styles, 400,align="center"]

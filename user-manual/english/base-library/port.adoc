@@ -1,0 +1,34 @@
+= image:user-manual/base-library/input.png[Input] image:user-manual/base-library/output.png[Output] Port
+:experimental:
+:page-layout: single
+:page-sidebar: { nav: "manual" }
+:page-liquid:
+:page-permalink: /user-manual/english/base-library/port
+
+== Appearance
+
+image:user-manual/base-library/pin.png[Example port, 500]
+
+== Behavior
+
+A port is either an input, an output, or an input/output, depending on the value of the "Port Type" attribute. Ports are represented graphically as arrows, with the position of the arrowhead relative to the component's pin indicating whether it is an input or an output. In the case of an input, the arrowhead is located at the pin, in the case of an output, it is located on the opposite side of the pin.
+
+Ports show the current signal during simulation. Depending on the value of the attributes "Bit Width" and "Representation", different numbers of digits are required. Antares arranges the digits in blocks of 4 digits on top of each other, with lower digits at the bottom/right and higher digits at the top/left.
+
+During the simulation, inputs can be used like a switch, but only if they are part of the main circuits, i.e. the outermost circuit. If Antares would allow the user to change the signal of an input of a subcircuit, there would be a conflict with the signal passed to the input by the surrounding circuit.
+
+== Pins
+
+A port component has only one pin, the bit width of which is determined by the attribute "Bit Width".
+
+== Attributes
+
+Name:: The name of the port displayed on the opposite side of the pin. Antares uses the name to connect the pins of a subcircuit symbol to the ports of the subcircuit. For this reason the name must not be empty, and it must be unique within the subcircuit. For the same reason the name cannot be translated into multiple languages (at least in the current version of Antares).
+
+Port Type:: Defines whether the port is an input, an output, or both an input and an output.
+
+Bit Width:: The number of bits that can be transmitted simultaneously through this port.
+
+Representation:: Determines whether the value of the current signal is represented in binary or hexadecimal.
+
+Toggle:: Defines the behavior of a port when used as a switch by the user during simulation. If this attribute is set, the port remains in its state when the mouse button is released.

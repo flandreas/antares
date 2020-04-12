@@ -144,7 +144,7 @@ footer:
 # Reading Files
 include:
   - .htaccess
-  - _pages
+  - manual
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -232,6 +232,7 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-asciidoc
 
 
 # Archives
@@ -284,3 +285,11 @@ defaults:
       comments: # true
       share: true
       related: true
+
+# asciidoc
+asciidoc: {}
+asciidoctor:
+  base_dir: :docdir
+  safe: unsafe
+  attributes:
+    imagesdir: /assets/images
