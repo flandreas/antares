@@ -4,7 +4,7 @@ main:
   - title: "About"
     url: /docs/about/
   - title: "Manual"
-    url: /user-manual/english/first-steps/first-steps
+    url: /user-manual/english/usermanual
   - title: "Blog"
     url: /blog/
   - title: "Releases"
@@ -13,7 +13,7 @@ main:
     url: /docs/examples
 
 manual:
-  - title: Getting Started
+  - title: User Manual
     children:
       - title: "Welcome"
         url: /user-manual/english/usermanual
