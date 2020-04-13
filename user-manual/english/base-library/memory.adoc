@@ -1,8 +1,5 @@
 = image:user-manual/base-library/rom.png[ROM] image:user-manual/base-library/ram.png[RAM] Memory
-:experimental:
-:page-layout: single
-:page-sidebar: { nav: "manual" }
-:page-liquid:
+include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/base-library/memory
 
 This chapter describes properties that apply to both the <<{{site.basedir}}/user-manual/english/base-library/rom.adoc#, ROM>>- and the <<{{site.basedir}}/user-manual/english/base-library/ram.adoc#, RAM>> component.

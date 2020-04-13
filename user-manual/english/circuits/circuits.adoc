@@ -1,8 +1,5 @@
 = Circuits
-:experimental:
-:page-layout: single
-:page-sidebar: { nav: "manual" }
-:page-liquid:
+include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/circuits/circuits
 
 Circuits are the central structuring element of Antares.

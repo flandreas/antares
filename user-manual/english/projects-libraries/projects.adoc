@@ -1,8 +1,5 @@
 = Projects
-:experimental:
-:page-layout: single
-:page-sidebar: { nav: "manual" }
-:page-liquid:
+include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/projects-libraries/projects
 
 In this chapter you will learn how to manage your own projects. The basics of projects are explained in <<{{site.basedir}}/user-manual/english/projects-libraries/projects-libraries.adoc#, "Projects and Libraries">>.

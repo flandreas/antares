@@ -1,8 +1,5 @@
 = Base Library
-:experimental:
-:page-layout: single
-:page-sidebar: { nav: "manual" }
-:page-liquid:
+include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/base-library/base-library
 
 This chapter describes all elementary library components that are built into Antares and programmed into it. These components are included in both the "Basic" and the "Standard" library.

@@ -1,8 +1,5 @@
 = image:user-manual/base-library/led-matrix.png[LED Matrix] LED Matrix
-:experimental:
-:page-layout: single
-:page-sidebar: { nav: "manual" }
-:page-liquid:
+include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/base-library/led-matrix
 
 == Appearance

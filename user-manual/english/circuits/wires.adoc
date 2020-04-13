@@ -1,8 +1,5 @@
 = Wires
-:experimental:
-:page-layout: single
-:page-sidebar: { nav: "manual" }
-:page-liquid:
+include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/circuits/wires
 
 Wires are circuit elements with which pins of components can be connected, so that during

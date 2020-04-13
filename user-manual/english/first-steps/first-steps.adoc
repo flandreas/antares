@@ -1,8 +1,5 @@
 = First Steps
-:experimental:
-:page-layout: single
-:page-sidebar: { nav: "manual" }
-:page-liquid:
+include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/first-steps/first-steps
 
 In this chapter you will learn the most important areas of the main window and the basic functions of Antares.

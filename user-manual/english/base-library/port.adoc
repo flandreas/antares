@@ -1,8 +1,5 @@
 = image:user-manual/base-library/input.png[Input] image:user-manual/base-library/output.png[Output] Port
-:experimental:
-:page-layout: single
-:page-sidebar: { nav: "manual" }
-:page-liquid:
+include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/base-library/port
 
 == Appearance

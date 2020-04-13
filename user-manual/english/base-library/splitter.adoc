@@ -1,8 +1,5 @@
 = image:user-manual/base-library/splitter.png[Splitter] Splitter
-:experimental:
-:page-layout: single
-:page-sidebar: { nav: "manual" }
-:page-liquid:
+include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/base-library/splitter
 
 == Appearance

@@ -1,8 +1,5 @@
 = image:user-manual/base-library/7segment.png[7Segment display] 7-Segment Display
-:experimental:
-:page-layout: single
-:page-sidebar: { nav: "manual" }
-:page-liquid:
+include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/base-library/7segment
 
 == Appearance

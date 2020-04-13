@@ -1,7 +1,5 @@
 = Scripting in circuits
-:page-layout: single
-:page-sidebar: { nav: "manual" }
-:page-liquid:
+include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/circuits/circuit-scripting
 
 == Execution logic

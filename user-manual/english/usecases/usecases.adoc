@@ -1,8 +1,5 @@
 = Use cases
-:experimental:
-:page-layout: single
-:page-sidebar: { nav: "manual" }
-:page-liquid:
+include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/usecases/usecases
 
 Use cases in Antares are programmed uses of a circuit using <<{{site.basedir}}/user-manual/english/scripting/scripting.adoc#, scripts>>. The script of a use case can be used to program simulated user interactions such as pressing a switch or the presence of a particular signal at an input port. The user of a circuit can start the programmed use cases and observe how the circuit behaves without having to interact with the circuit at the right time.

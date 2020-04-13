@@ -1,10 +1,6 @@
 = Workbench
-:experimental:
-:page-layout: single
-:page-sidebar: { nav: "manual" }
-:page-liquid:
+include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/projects-libraries/workbench
-
 
 The Workbench is the part of the Antares user interface that displays the open project and the library in use, and allows you to use their circuits and create new circuits.
 

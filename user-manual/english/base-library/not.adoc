@@ -1,8 +1,5 @@
 = image:user-manual/base-library/not.png[NOT] NOT Gate
-:experimental:
-:page-layout: single
-:page-sidebar: { nav: "manual" }
-:page-liquid:
+include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/base-library/not
 
 == Appearance

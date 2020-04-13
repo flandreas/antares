@@ -1,0 +1,5 @@
+:experimental:
+:page-layout: single
+:page-toc: true
+:page-sidebar: { nav: "manual" }
+:page-liquid:

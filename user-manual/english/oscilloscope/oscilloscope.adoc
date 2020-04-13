@@ -1,8 +1,5 @@
 = Oscilloscope
-:experimental:
-:page-layout: single
-:page-sidebar: { nav: "manual" }
-:page-liquid:
+include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/oscilloscope/oscilloscope
 
 TODO

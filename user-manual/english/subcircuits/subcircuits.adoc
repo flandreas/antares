@@ -1,8 +1,5 @@
 = Subcircuits
-:experimental:
-:page-layout: single
-:page-sidebar: { nav: "manual" }
-:page-liquid:
+include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/subcircuits/subcircuits
 
 As your circuits get bigger and more complex, you will soon reach the point where you want to split the circuit into manageable parts and reuse those parts several times in your circuits. In Antares these parts are called "subcircuits".
