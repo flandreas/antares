@@ -1,4 +1,4 @@
-= image:user-manual/base-library/dip-switch.png[DIP switches] DIP Switch
+= DIP Switch
 include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/base-library/dip-switch
 

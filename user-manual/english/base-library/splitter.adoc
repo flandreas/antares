@@ -1,4 +1,4 @@
-= image:user-manual/base-library/splitter.png[Splitter] Splitter
+= Splitter
 include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/base-library/splitter
 

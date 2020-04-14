@@ -1,4 +1,4 @@
-= image:user-manual/base-library/rom.png[ROM] image:user-manual/base-library/ram.png[RAM] Memory
+= Memory
 include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/base-library/memory
 

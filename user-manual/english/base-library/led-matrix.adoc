@@ -1,4 +1,4 @@
-= image:user-manual/base-library/led-matrix.png[LED Matrix] LED Matrix
+= LED Matrix
 include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/base-library/led-matrix
 

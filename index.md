@@ -4,10 +4,10 @@ header:
   overlay_image: /assets/images/splash2.png
   actions:
     - label: "Download"
-      url: "https://github.com/mmistakes/minimal-mistakes/"
+      url: "/docs/quick-start"
 excerpt: >
   A free, powerful platform for designing, simulating and explaining digital circuits.<br />
-  <small><a href="https://github.com/mmistakes/minimal-mistakes/releases/tag/4.19.1">Latest release 0.1.0</a></small>
+  <small><a href="docs/releases/release-0.1.0">Latest release 0.1.0</a></small>
 feature_row:
   - image_path: /assets/images/splash-button-design.jpg
     title: "Design"

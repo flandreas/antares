@@ -1,4 +1,4 @@
-= image:user-manual/base-library/nand.png[NANDd] NAND Gate
+= NAND Gate
 include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/base-library/nand
 

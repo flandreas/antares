@@ -1,4 +1,4 @@
-= image:user-manual/base-library/terminal.png[Terminal] Terminal
+= Terminal
 include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/base-library/terminal
 

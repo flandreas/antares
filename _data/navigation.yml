@@ -6,7 +6,7 @@ main:
   - title: "Manual"
     url: /user-manual/english/usermanual
   - title: "Blog"
-    url: /blog/
+    url: /docs/blog
   - title: "Releases"
     url: /docs/releases/releases
   - title: "Examples"
@@ -19,6 +19,8 @@ manual:
         url: /user-manual/english/usermanual
       - title: "First Steps"
         url: /user-manual/english/first-steps/first-steps
+      - title: "Orientation"
+        url: /user-manual/english/first-steps/orientation
   - title: Projects and libraries
     children:
       - title: "Overview"

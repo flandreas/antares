@@ -1,4 +1,4 @@
-= image:user-manual/base-library/rgb-led.png[RGB LED] RGB LED
+= RGB LED
 include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/base-library/rgb-led
 

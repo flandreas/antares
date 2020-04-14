@@ -1,4 +1,4 @@
-= image:user-manual/base-library/concentrator.png[Combiner] Combiner
+= Combiner
 include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/base-library/combiner
 

@@ -1,4 +1,4 @@
-= image:user-manual/base-library/input.png[Input] image:user-manual/base-library/output.png[Output] Port
+= Port
 include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/base-library/port
 

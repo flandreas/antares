@@ -1,4 +1,4 @@
-= image:user-manual/base-library/led.png[LED] LED
+= LED
 include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/base-library/led
 

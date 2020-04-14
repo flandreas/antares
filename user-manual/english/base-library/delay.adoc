@@ -1,4 +1,4 @@
-= image:user-manual/base-library/delay.png[Delay] Delay
+= Delay
 include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/base-library/delay
 

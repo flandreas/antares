@@ -1,4 +1,4 @@
-= image:user-manual/base-library/or.png[OR] OR Gate
+= OR Gate
 include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/base-library/or
 

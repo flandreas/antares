@@ -1,4 +1,4 @@
-= image:user-manual/base-library/rom.png[ROM] ROM
+= ROM
 include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/base-library/rom
 

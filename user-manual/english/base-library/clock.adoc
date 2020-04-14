@@ -1,4 +1,4 @@
-= image:user-manual/base-library/clock.png[Clock] Clock
+= Clock
 include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/base-library/clock
 

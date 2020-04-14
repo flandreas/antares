@@ -1,4 +1,4 @@
-= image:user-manual/base-library/xnor.png[XNOR] XNOR gate
+= XNOR gate
 include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/base-library/xnor
 

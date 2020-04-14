@@ -1,4 +1,4 @@
-= image:user-manual/base-library/random.png[Random] Random Generator
+= Random Generator
 include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/base-library/random
 
