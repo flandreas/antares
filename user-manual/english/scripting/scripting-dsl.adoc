@@ -1,0 +1,412 @@
+= Antares Scripting DSL
+include::../../page-variables.txt[]
+:page-permalink: /user-manual/english/scripting/scripting-dsl
+:icons: font
+
+WARNING: The Antares Scripting DSL is in experimental state and will probably be subject of change. As long as the DSL is experimental, there is no guarantee that your scripts won't break when executed in future versions of Antares.
+
+TIP: The explanation of the Antares scripting DSL functions is still quite short. Please see the Antares Standard Library for lots of examples on how to use these functions.
+
+== Inhalt
+
+* <<CircuitViewBridge>>: Access to the circuit
+* <<CircuitElemModelBridge>>: Access to the model of a circuit element
+* <<CircuitElemViewBridge>>: Access to the symbol of a circuit element
+* <<Word>>: Access to a digital data word
+* <<UsecaseActionBridge>>: Register use case action statements
+* <<UsecaseTestBridge>>:: Register use case test assertions
+
+== CircuitViewBridge
+
+Used in all `Scenario` use cases. The statements below are accessible as functions of the object `circuit`.
+
+`name()`:: Returns the name of the circuit model as a string.
++
+.Example
+[source,javascript]
+----
+circuit.name();
+----
+
+`input(<Name>)`:: Returns the signal of the `GraphInput` with the specified name as as hex string.
++
+.Example
+[source,javascript]
+----
+return circuit.input("I") == "1";
+----
+
+`output(<Name>)`:: Returns the signal of the `GraphOutput` with the specified name as a hex string.
++
+.Example
+[source,javascript]
+----
+return circuit.output("O") == "FF";
+----
+
+`elem(<ID>)`:: Returns the `CircuitElemViewBridge` of the element with the specified ID.
++
+.Example
+[source,javascript]
+----
+return circuit.elem(1).input(1) == "1"
+----
+
+`scenario()`:: Returns the ID of the current `Scenario`, or an empty string if none is active.
++
+.Example
+[source,javascript]
+----
+if (scenario() != "") {
+  // do something
+}
+----
+
+`highlight(<ID>)`:: Highlights the element with the specified IDs. Note that highlighting can also be explicitly configured in scenario steps.
++
+.Example
+[source,javascript]
+----
+circuit.highlight(3,7,8);
+----
+
+`unhighlight()`:: Removes all highlights from the circuit.  Note that highlighting can also be explicitly configured in scenario steps.
++
+.Example
+[source,javascript]
+----
+circuit.unhighlight();
+----
+
+== CircuitElemModelBridge
+
+Used when executing a `GraphElement` during simulation without "deep simulation" mode. The statements in the table
+below are accessible as functions of the object `elem`.
+
+`id()`:: Returns the model ID of this element. +
++
+.Example
+[source,javascript]
+----
+val id = elem.id();
+----
+
+`input()`:: Returns the signal of the first (or one and only) `InputPort` as a hex string.
++
+.Example
+[source,javascript]
+----
+if (elem.input() == "1") {
+  // Do something
+}
+----
+
+`input(<name:String>)`:: Returns the signal of the `InputPort` with the specified name as a hex string.
++
+.Example
+[source,javascript]
+----
+if (elem.input("CLK") == "0") {
+  // Do something
+}
+----
+
+`input(<ID:Int>)`:: Returns the signal of the `InputPort` with the specified ID as a hex string.
++
+.Example
+[source,javascript]
+----
+if (elem.input(3) == "0") {
+  // Do something
+}
+----
+
+`inputWord(<name:String>)`:: Returns the signal of the `InputPort` with the specified name as a `Word`.
++
+.Example
+[source,javascript]
+----
+if (elem.inputWord("I1").bitAt(0)) {
+  // Do something
+}
+----
+
+`inputBit(<name:String>)`:: Returns the lowest-priority input signal `Bit` of the `InputPort` with the specified name as a boolean.
++
+.Example
+[source,javascript]
+----
+if (elem.inputBit("R")) {
+  // Do something
+}
+----
+
+`portRaised(<name:String>)`:: Determines whether the input signal of the `InputPort` with the specified name has changed and its new value is 1, and returns the result as boolean. This can be used to detect a raising signal edges.
++
+.Example
+[source,javascript]
+----
+if (elem.portRaised("C")) {
+  // Do something
+}
+----
+
+`output()`:: Returns the signal of the first (or one and only) `OutputPort` as a hex string.
++
+.Example
+[source,javascript]
+----
+if (elem.output() == "1") {
+  // Do something
+}
+----
+
+`output(<ID:Int>)`:: Returns the signal of the `OutputPort` with the specified ID as a hex string.
++
+.Example
+[source,javascript]
+----
+if (elem.output(4) == "0") {
+  // Do something
+}
+----
+
+`outputWord()`:: Returns the signal of the first (or one and only) `OutputPort` as a `Word`.
++
+.Example
+[source,javascript]
+----
+if (elem.outputWord().bitAt(1)) {
+  // Do something
+}
+----
+
+`outputWord(<name:String>)`:: Returns the signal of the `OutputPort` with the specified name as a `Word`.
++
+.Example
+[source,javascript]
+----
+if (elem.outputWord("I1").bitAt(2)) {
+  // Do something
+}
+----
+
+`outputWord(<ID:Int>)`:: Returns the signal of the `OutputPort` with the specified ID as a `Word`.
++
+.Example
+[source,javascript]
+----
+if (elem.outputWord(2).bitAt(0)) {
+  // Do something
+}
+----
+
+`setOutput(<value:HexString>)`:: Sets the output signal of the first (or one and only) `OutputPort` to the specified hex value.
++
+.Example
+[source,javascript]
+----
+elem.setOutput("7F");
+----
+
+`setOutput(<D:Int>, <value:HexString>)`:: Sets the output signal of the `OutputPort` with the specified ID to a hex value.
++
+.Example
+[source,javascript]
+----
+elem.setOutput(1, "A02B");
+----
+
+`setOutputWord(<value:Word>)`:: Sets the output signal of the first (or one and only) `OutputPort` to the specified `Word`.
++
+.Example
+[source,javascript]
+----
+if (elem.portRaised("C")) {
+  var d = elem.inputWord("D");
+  if (!elem.anyBitUndefined(d)) {
+    elem.setOutputWord(d);
+  }
+}
+----
+
+`setOutputWord(<name:String>, <value:Word>)`:: Sets the output signal of the `OutputPort` with the specified name to a `Word`.
++
+.Example
+[source,javascript]
+----
+elem.setOutputWord("Q", elem.inputWord("D"));
+----
+
+`setOutputWord(<ID:Int>, <value:Word>)`:: Sets the output signal of the `OutputPort` with the specified ID to a `Word`.
++
+.Example
+[source,javascript]
+----
+elem.setOutputWord(1, elem.inputWord("D"));
+----
+
+`setOutputBit(<value:Boolean>)`:: Sets the output signal of the first (or one and only) `OutputPort` to the specified boolean value.
++
+.Example
+[source,javascript]
+----
+elem.setOutputBit(true);
+----
+
+`setOutputBit(<name:String>, <value:Boolean>)`:: Sets the lowest-priority output signal `Bit` of the `OutputPort` with the specified name to a boolean.
++
+.Example
+[source,javascript]
+----
+elem.setOutputBit("Out", false);
+----
+
+`anyBitUndefined(<value:Word>)`:: Checks whether any `Bit` in the specified `Word` is undefined and returns the result as a boolean.
++
+.Example
+[source,javascript]
+----
+var d = elem.inputWord("D");
+if (!elem.anyBitUndefined(d)) {
+  elem.setOutputWord(d);
+}
+----
+
+== CircuitElemViewBridge
+
+Used as a sub-element of `CircuitViewBridge`. Note that `CircuitElemViewBridge` is an extension of
+`CircuitElemModelBridge` and therefore supports all functions of `CircuitElementModelBridge` as well.
+
+`id()`:: Returns the view ID of this element. +
++
+.Example
+[source,javascript]
+----
+val id = elem.id();
+----
+
+`drawDataFlow(<input:String>, <output:String>)`:: Draws a data flow line from the `InputPort` with name `input` to the `OutputPort` with name `output`.
++
+.Example
+[source,javascript]
+----
+if (elem.inputBit("S")) {
+  elem.drawDataFlow("I1", "O");
+} else {
+  elem.drawDataFlow("I2", "O");
+}
+----
+
+== Word
+
+Some functions return a `Word` as a signal value. A `Word` is an array of boolean values; the size of the array depends on the bit width of the port that produces the `Word`. Note that `Word` is immutable.
+
+`bitAt(<index:Int>)`:: Returns the value of the bit at the specified index as a boolean. The index of the least significant bit is 0.
++
+.Example
+[source,javascript]
+----
+if (elem.inputWord().bitAt(0)) {
+  // do something
+}
+----
+
+`toInt()`:: Returns the value of a `Word` as an integer.
++
+.Example
+[source,javascript]
+----
+if (elem.inputWord().toInt() == 255) {
+  // do something
+}
+----
+
+`toHexString()`::  Returns the value of a `Word` as hex string.
++
+.Example
+[source,javascript]
+----
+if (elem.inputWord().toHexString() == "FF00") {
+  // do something
+}
+----
+
+`not()`:: Returns the `Word` that represents the bit-wise inversion of this `Word`.
++
+.Example
+[source,javascript]
+----
+elem.setOutputWord(elem.inputWord().not());
+----
+
+`and(<word:Word>)`:: Returns the `Word` that represents the bit-wise logical "and" of this `Word` and the specified `Word`.
++
+.Example
+[source,javascript]
+----
+elem.setOutputWord(
+  elem.inputWord("A").and(elem.inputWord("B"))
+);
+----
+
+== UsecaseActionBridge
+
+Used in use case action scripts. The statements below are accessible as functions of the object `circuit`.
+
+`pressButtonAt(<time:Long>, <id:Int>)`:: Presses the button with ID `id` at simulation time `time`.
++
+.Example
+[source,javascript]
+----
+circuit.pressButtonAt(10000, 1);
+----
+
+`setInputAt(<time:Long>, <inputId:Int>, <hexValue: String>)`:: Sets the value of the input with ID `inputId` at simulation time `time` as a hexadecimal value `hexValue`.
++
+.Example
+[source,javascript]
+----
+circuit.setInputAt(10000, 6, "1");
+----
+
+`applyClock(<inputId:Int>, <period:Long>)`:: Applies a clock signal with period `period` (nanoseconds) to the input with ID `inputId`.
++
+.Example
+[source,javascript]
+----
+circuit.applyClock(6, 1000000000);
+----
+
+`pauseAt(<time:Long>)`:: Activate single step simulation mode at simulation time `time` (nanoseconds). This can be used to quickly go through the initialization phase of a circuit and the switch to single step simulation before an "interesting" part of circuit execution is entered that can only be and understood by single stepping.
++
+.Example
+[source,javascript]
+----
+circuit.applyClock(87, 91000);
+circuit.setInputAt(23062, 46, "0800");
+circuit.setInputAt(134948, 46, "1234");
+circuit.pauseAt(172544);
+----
+
+== UsecaseTestBridge
+
+Used in use case tet scripts. The statements below are accessible as functions of the object `circuit`.
+
+`assertLedOnAt(<time:Long>, <id:Int>)`:: Asserts that the LED with ID `id` is on at simulation time `time`.
++
+.Example
+[source,javascript]
+----
+circuit.assertLedOnAt(20000, 2);
+----
+
+`assertLedOffAt(<time:Long>, <id:Int>)`:: Asserts that the LED with ID `id` is off at simulation time `time`.
++
+.Example
+[source,javascript]
+----
+circuit.assertLedOffAt(20000, 2);
+----
+
+`assertOutputAt(<time:Long>, <id:Int>, <hexValue:String>)`:: Assert that the output component with ID `id` has the hex value `hexValue` at simulation time `time`.
