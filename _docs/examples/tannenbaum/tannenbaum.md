@@ -3,8 +3,8 @@ layout: single
 header:
   overlay_image: /assets/images/splash2.png
   show_overlay_excerpt: false
-title: "Tannenbaum CPU"
 sidebar: { nav: "examples" }
+title: "Examples"
 gallery:
   - url: /assets/examples/tannenbaum/tannenbaum-mc.png
     image_path: /assets/examples/tannenbaum/tannenbaum-mc.png
@@ -13,6 +13,8 @@ gallery:
     image_path: /assets/examples/tannenbaum/tannenbaum-cpu.png
     title: "CPU"
 ---
+
+# Tannenbaum CPU
 
 [Download]({{ "/assets/examples/tannenbaum/Microcomputer (Tannenbaum).zip" | relative_url }}){: .btn .btn--primary .btn--large}
 
