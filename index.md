@@ -12,25 +12,25 @@ feature_row:
   - image_path: /assets/images/splash-button-design.jpg
     title: "Design"
     excerpt: "Design circuits using built-in libraries and develop your own libraries."
-    url: "#test-link"
+    url: "/user-manual/english/projects-libraries/projects-libraries"
     btn_label: "Learn More"
     btn_class: "btn--primary"
   - image_path: /assets/images/splash-button-simulate.jpg
     title: "Simulate & Animate"
     excerpt: "Observe signal flow animations and dive into subcircuits while your circuit is simulated."
-    url: "#test-link"
+    url: "/user-manual/english/simulation/simulation"
     btn_label: "Learn More"
     btn_class: "btn--primary"
   - image_path: /assets/images/splash-button-explain.jpg
     title: "Explain"
     excerpt: "Embed state-sensitive explanations in your circuits to make them self-explaining to your audience."
-    url: "#test-link"
+    url: "/user-manual/english/description/description"
     btn_label: "Learn More"
     btn_class: "btn--primary"
   - image_path: /assets/images/splash-button-web.jpg
     title: "Soon: Web-based"
     excerpt: "Currently a desktop tool, Antares will eventually be available in web browsers."
-    url: "#test-link"
+    url: "/docs/web"
     btn_label: "Learn More"
     btn_class: "btn--primary"
 ---

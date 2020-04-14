@@ -1,6 +1,8 @@
-= Welcome to Antares!
+= User Manual
 include::../page-variables.txt[]
 :page-permalink: /user-manual/english/usermanual
+
+= Welcome
 
 Antares is a learning platform for digital circuits. In addition to drawing and simulating digital circuits, Antares places particular emphasis on providing tools to help students better understand how circuits work.
 
