@@ -11,10 +11,9 @@ install:
 
 deploy:
   provider: pages
-  github-token: $GITHUB_TOKEN
-  local-dir: _site
-  target-branch: gh-pages
-  skip-cleanup: true
-  keep-history: true
+  github_token: $GITHUB_TOKEN
+  local_dir: _site
+  target_branch: gh-pages
+  skip_cleanup: true
   on:
     branch: master
