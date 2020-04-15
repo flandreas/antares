@@ -1,5 +1,6 @@
 before_install:
 - gem install bundler
+- gem install rake
 - bundle
 
 deploy:
