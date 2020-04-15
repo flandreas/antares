@@ -9,6 +9,8 @@ before_install:
 install:
 - bundle install
 
+before_deploy: "rm .gitignore"
+
 deploy:
   provider: pages
   github_token: $GITHUB_TOKEN
