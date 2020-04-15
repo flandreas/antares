@@ -5,7 +5,7 @@ gem "minimal-mistakes-jekyll"
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
-# gem "github-pages", group: :jekyll_plugins
+gem "github-pages", group: :jekyll_plugins
 
 gem "rake", "~> 12"
 gem "jekyll"
@@ -14,7 +14,7 @@ gem "jekyll"
 group :jekyll_plugins do
 gem "jekyll-feed"
   gem "jekyll-sitemap"
-  gem "jekyll-paginate-v2"
+  gem "jekyll-paginate"
   gem "jekyll-seo-tag"
   gem "jekyll-compose", "~> 0.5"
   gem "jekyll-redirect-from"

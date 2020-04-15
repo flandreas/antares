@@ -115,6 +115,8 @@ GEM
       commonmarker (~> 0.17.6)
       jekyll-commonmark (~> 1.2)
       rouge (>= 2.0, < 4.0)
+    jekyll-compose (0.12.0)
+      jekyll (>= 3.7, < 5.0)
     jekyll-default-layout (0.1.4)
       jekyll (~> 3.0)
     jekyll-feed (0.13.0)
@@ -225,7 +227,7 @@ GEM
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (3.1.1)
-    rake (13.0.1)
+    rake (12.3.3)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
@@ -260,13 +262,22 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  jekyll
   jekyll-asciidoc
-  jekyll-feed (~> 0.12)
+  jekyll-compose (~> 0.5)
+  jekyll-feed
+  jekyll-paginate
+  jekyll-redirect-from
+  jekyll-seo-tag
+  jekyll-sitemap
   minimal-mistakes-jekyll
-  rake
+  rake (~> 12)
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)
+
+RUBY VERSION
+   ruby 2.7.1p83
 
 BUNDLED WITH
    2.1.4
