@@ -29,3 +29,7 @@ Follow the instructions of the installer application. After successful installat
 ## Usage
 
 If your are new to Antares, you might want to check out the [First Steps](/user-manual/english/first-steps/first-steps) tutorial. Otherwise, go to [Releases](/docs/releases/releases/) to see what's new in the current release.
+
+## Bugs or missing features?
+
+If you find any bugs or are missing a feature, you are very welcome to open an issue in the issue tracker of the [GitHub project](https://github.com/flandreas/antares).
