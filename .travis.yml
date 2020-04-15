@@ -1,5 +1,6 @@
 before_install:
 - gem install bundler
+- bundle
 
 deploy:
   provider: pages
