@@ -20,8 +20,8 @@ title                    : "Antares"
 title_separator          : "-"
 subtitle                 : Digital Circuit Learning Platform
 name                     : "Andreas Fleischmann"
-description              : 
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+description              :
+url                      : "https://flandreas.github.io/antares/"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "flandreas/antares"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
