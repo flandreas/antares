@@ -21,8 +21,8 @@ title_separator          : "-"
 subtitle                 : Digital Circuit Learning Platform
 name                     : "Andreas Fleischmann"
 description              :
-url                      : "https://flandreas.github.io/antares/"
-baseurl                  : # the subpath of your site, e.g. "/blog"
+url                      : "https://flandreas.github.io"
+baseurl                  : "/antares"
 repository               : "flandreas/antares"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
