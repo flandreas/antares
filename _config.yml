@@ -291,4 +291,4 @@ asciidoctor:
   base_dir: :docdir
   safe: unsafe
   attributes:
-    imagesdir: /antares/assets/images
+    imagesdir: /assets/images
