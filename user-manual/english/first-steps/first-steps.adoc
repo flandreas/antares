@@ -4,7 +4,7 @@ include::../../page-variables.txt[]
 
 In this chapter you will learn the most important areas of the main window and the basic functions of Antares.
 
-If necessary, see <<{{site.basedir}}/user-manual/english/first-steps/orientation.adoc#, Orientation>> for a basic overview of the user interface's elements.
+If necessary, see link:{{site.basedir}}/user-manual/english/first-steps/orientation[Orientation] for a basic overview of the user interface's elements.
 
 == Draw circuit
 
