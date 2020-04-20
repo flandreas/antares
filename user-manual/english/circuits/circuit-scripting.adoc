@@ -4,7 +4,7 @@ include::../../page-variables.txt[]
 
 == Execution logic
 
-In a <<{{site.basedir}}/user-manual/english/circuits/circuits.adoc#, circuit>> a script can be defined in the attribute "Function" which is executed at <<{{site.basedir}}/user-manual/english/simulation.simulation.adoc#, "Flat simulation">> instead of the circuit if the circuit is used as a partial circuit in another circuit.
+In a link:{{site.basedir}}/user-manual/english/circuits/circuits[circuit] a script can be defined in the attribute "Function" which is executed at link:{{site.basedir}}/user-manual/english/simulation.simulation["Flat simulation"] instead of the circuit if the circuit is used as a partial circuit in another circuit.
 
 The script you write will be included as the "Function Body" of the following JavaScript function:
 
@@ -15,7 +15,7 @@ function execVertice(elem) {
 }
 ----
 
-The function parameter `elem` is an object of the type <<{{site.basedir}}/user-manual/english/scripting/scripting-dsl.adoc#, `CircuitElemModelBridge`>>.
+The function parameter `elem` is an object of the type link:{{site.basedir}}/user-manual/english/scripting/scripting-dsl[`CircuitElemModelBridge`].
 
 === Examples
 
@@ -72,7 +72,7 @@ Note how the value of the Enable input is used by JavaScript using the AND opera
 
 == Symbol representation
 
-In the symbol of a <<{{site.basedir}}/user-manual/english/subcircuits/subcircuits.adoc#, subcircuit>> scripting can be used to change the display of the symbol during the simulation.
+In the symbol of a link:{{site.basedir}}/user-manual/english/subcircuits/subcircuits[subcircuit] scripting can be used to change the display of the symbol during the simulation.
 
 TIP: The possibilities for this are still rudimentary in the current version of Antares; future versions of Antares will provide more support here.
 
@@ -85,7 +85,7 @@ function execVerticeView(elem) {
 }
 ----
 
-The function parameter `elem` is an object of the type <<{{site.basedir}}/user-manual/english/scripting/scripting-dsl.adoc#, `CircuitElemViewBridge`>>.
+The function parameter `elem` is an object of the type link:{{site.basedir}}/user-manual/english/scripting/scripting-dsl[`CircuitElemViewBridge`].
 
 === Examples
 

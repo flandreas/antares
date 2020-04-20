@@ -36,7 +36,7 @@ image:user-manual/base-library/and-path-sample.png[Example AND-path, 75%]
 
 === Mnemonics
 
-The logical gates of Antares can illustrate their function with so-called "mnemonics". See the chapter <<{{site.basedir}}/user-manual/english/description/description.adoc#, Descriptions and explanations>>. The mnemonic of the AND gate is shown below.
+The logical gates of Antares can illustrate their function with so-called "mnemonics". See the chapter link:{{site.basedir}}/user-manual/english/description/description[Descriptions and explanations]. The mnemonic of the AND gate is shown below.
 
 image:user-manual/base-library/and-mnemonic.png[Example Mnemonic, 300]
 

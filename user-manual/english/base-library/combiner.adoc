@@ -16,7 +16,7 @@ The degree of comining is limited in that only integer dividers of the bit width
 * 4: The combiner has 4 inputs of 2 bits each
 * 8: The combiner has 8 inputs of 1 bit each
 
-In the current version of Antares, the combiner does not support bidirectional pins. To split wire bundles to narrower bundles (or single wires), the <<{{site.basedir}}/user-manual/english/base-library/splitter.adoc#, splitter component>> must therefore be used.
+In the current version of Antares, the combiner does not support bidirectional pins. To split wire bundles to narrower bundles (or single wires), the link:{{site.basedir}}/user-manual/english/base-library/splitter[splitter component] must therefore be used.
 
 Furthermore, for technical reasons, the current version of Antares has the restriction that the attributes "Bit Width", "Fan Out" and "Position Bit 0" can no longer be changed if pins are already connected to wires. Perhaps a future version will at least allow to increase the number of bits without having to disconnect existing wire connections beforehand.
 

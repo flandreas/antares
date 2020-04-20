@@ -2,7 +2,7 @@
 include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/usecases/usecases
 
-Use cases in Antares are programmed uses of a circuit using <<{{site.basedir}}/user-manual/english/scripting/scripting.adoc#, scripts>>. The script of a use case can be used to program simulated user interactions such as pressing a switch or the presence of a particular signal at an input port. The user of a circuit can start the programmed use cases and observe how the circuit behaves without having to interact with the circuit at the right time.
+Use cases in Antares are programmed uses of a circuit using link:{{site.basedir}}/user-manual/english/scripting/scripting[scripts]. The script of a use case can be used to program simulated user interactions such as pressing a switch or the presence of a particular signal at an input port. The user of a circuit can start the programmed use cases and observe how the circuit behaves without having to interact with the circuit at the right time.
 
 == Examples
 
@@ -23,7 +23,7 @@ The Antares simulation toolbar contains a selection box that offers all use case
 
 image::user-manual/usecases/usecases-dropdown-en.png[execution, 500,align="center"]
 
-When the user starts the execution of a use case, Antares automatically switches to simulation mode and starts the use case script. All possibilities of the simulation mode are available, such as controlling the simulation speed, single step mode or signal animation. If <<{{site.basedir}}/user-manual/english/scenarios/scenarios.adoc#, Scenarios>> are defined for the current circuit, they will also be applied and their descriptions will be displayed during the execution of the use case.
+When the user starts the execution of a use case, Antares automatically switches to simulation mode and starts the use case script. All possibilities of the simulation mode are available, such as controlling the simulation speed, single step mode or signal animation. If link:{{site.basedir}}/user-manual/english/scenarios/scenarios[Scenarios] are defined for the current circuit, they will also be applied and their descriptions will be displayed during the execution of the use case.
 
 At the end of a use case execution, Antares remains in simulation mode.
 

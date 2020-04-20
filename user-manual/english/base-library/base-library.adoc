@@ -12,59 +12,59 @@ Attributes that only apply to a specific component, or that have a different mea
 
 ID:: The identification number of the component which is unique within the circuit in which the component is located. It is mainly used for scripting applications.
 
-Description:: In this field Attribute a multilingual description can be entered which describes the purpose of these components within the circuit. If available, it is displayed in the description popup instead of the standard description of the component. See chapter <<{{site.basedir}}/user-manual/english/description/description.adoc#, Descriptions and Explanations>> for more details.
+Description:: In this field Attribute a multilingual description can be entered which describes the purpose of these components within the circuit. If available, it is displayed in the description popup instead of the standard description of the component. See chapter link:{{site.basedir}}/user-manual/english/description/description[Descriptions and Explanations] for more details.
 
 Propagation Delay:: The time in nanoseconds that elapses during simulation until a changed signal at the input of a component has been processed, e.g. by generating a changed signal at an output of the component, or, as in the case of the LED, by a different representation of the component.
 
 Shadows:: This attribute controls whether this particular component is to be displayed with a shadow. Shadows are only displayed if they have been activated in the Antares settings. If shadows are activated in the settings, you can prevent this component from being displayed.
 
-Color:: Normally, the color in which a component is drawn is determined by its style. The attribute "Color" can be used to override the color for a specific component. This can be used, for example, to identify all components of a circuit that perform a similar function with the same color. See chapter <<{{site.basedir}}/user-manual/english/styles/styles.adoc#, Styles and Themes>> for more details.
+Color:: Normally, the color in which a component is drawn is determined by its style. The attribute "Color" can be used to override the color for a specific component. This can be used, for example, to identify all components of a circuit that perform a similar function with the same color. See chapter link:{{site.basedir}}/user-manual/english/styles/styles[Styles and Themes] for more details.
 
 == Components
 
 === Net
 
-* image:user-manual/base-library/splitter.png[Splitter] <<{{site.basedir}}/user-manual/english/base-library/splitter.adoc#, Splitter>>
-* image:user-manual/base-library/concentrator.png[Combiner] <<{{site.basedir}}/user-manual/english/base-library/combiner.adoc#, Combiner>>
-* image:user-manual/base-library/probe.png[Probe] <<{{site.basedir}}/user-manual/english/base-library/probe.adoc#, Probe>>
-* image:user-manual/base-library/tunnel.png[Tunnel] <<{{site.basedir}}/user-manual/english/base-library/tunnel.adoc#, Tunnel>>
-* image:user-manual/base-library/constant.png[Constant] <<{{site.basedir}}/user-manual/english/base-library/constant.adoc#, Constant>>
+* image:user-manual/base-library/splitter.png[Splitter] link:{{site.basedir}}/user-manual/english/base-library/splitter[Splitter]
+* image:user-manual/base-library/concentrator.png[Combiner] link:{{site.basedir}}/user-manual/english/base-library/combiner[Combiner]
+* image:user-manual/base-library/probe.png[Probe] link:{{site.basedir}}/user-manual/english/base-library/probe[Probe]
+* image:user-manual/base-library/tunnel.png[Tunnel] link:{{site.basedir}}/user-manual/english/base-library/tunnel[Tunnel]
+* image:user-manual/base-library/constant.png[Constant] link:{{site.basedir}}/user-manual/english/base-library/constant[Constant]
 
 === Logical Gates
 
-* image:user-manual/base-library/and.png[AND] <<{{site.basedir}}/user-manual/english/base-library/and.adoc#, AND>>
-* image:user-manual/base-library/or.png[OR] <<{{site.basedir}}/user-manual/english/base-library/or.adoc#, OR>>
-* image:user-manual/base-library/nor.png[NOT] <<{{site.basedir}}/user-manual/english/base-library/not.adoc#, NOT>>
-* image:user-manual/base-library/nand.png[NAND] <<{{site.basedir}}/user-manual/english/base-library/nand.adoc#, NAND>>
-* image:user-manual/base-library/nor.png[NOR] <<{{site.basedir}}/user-manual/english/base-library/nor.adoc#, NOR>>
-* image:user-manual/base-library/xor.png[Exculsive OR (XOR)] <<{{site.basedir}}/user-manual/english/base-library/xor.adoc#, XOR>>
-* image:user-manual/base-library/xor.png[Exclusive OR (XNOR)] <<{{site.basedir}}/user-manual/english/base-library/xnor.adoc#, XNOR>>
-* image:user-manual/base-library/buffer.png[Buffer] <<{{site.basedir}}/user-manual/english/base-library/buffer.adoc#, Buffer>>
-* image:user-manual/base-library/tristate-buffer.png[Tri-State Puffer] <<{{site.basedir}}/user-manual/english/base-library/tristate-buffer.adoc#, Tri-State Buffer>>
-* image:user-manual/base-library/delay.png[Delay] <<{{site.basedir}}/user-manual/english/base-library/delay.adoc#, Delay>>
+* image:user-manual/base-library/and.png[AND] link:{{site.basedir}}/user-manual/english/base-library/and[AND]
+* image:user-manual/base-library/or.png[OR] link:{{site.basedir}}/user-manual/english/base-library/or[OR]
+* image:user-manual/base-library/nor.png[NOT] link:{{site.basedir}}/user-manual/english/base-library/not[NOT]
+* image:user-manual/base-library/nand.png[NAND] link:{{site.basedir}}/user-manual/english/base-library/nand[NAND]
+* image:user-manual/base-library/nor.png[NOR] link:{{site.basedir}}/user-manual/english/base-library/nor[NOR]
+* image:user-manual/base-library/xor.png[Exculsive OR (XOR)] link:{{site.basedir}}/user-manual/english/base-library/xor[XOR]
+* image:user-manual/base-library/xor.png[Exclusive OR (XNOR)] link:{{site.basedir}}/user-manual/english/base-library/xnor[XNOR]
+* image:user-manual/base-library/buffer.png[Buffer] link:{{site.basedir}}/user-manual/english/base-library/buffer[Buffer]
+* image:user-manual/base-library/tristate-buffer.png[Tri-State Puffer] link:{{site.basedir}}/user-manual/english/base-library/tristate-buffer[Tri-State Buffer]
+* image:user-manual/base-library/delay.png[Delay] link:{{site.basedir}}/user-manual/english/base-library/delay[Delay]
 
 === Input
 
-* image:user-manual/base-library/input.png[Circuit Input] <<{{site.basedir}}/user-manual/english/base-library/port.adoc#, Circuit Input>>
-* image:user-manual/base-library/switch.png[Switch] <<{{site.basedir}}/user-manual/english/base-library/switch.adoc#, Switch>>
-* image:user-manual/base-library/dip-switch.png[DIP Switch] <<{{site.basedir}}/user-manual/english/base-library/dip-switch.adoc#, DIP Switch>>
-* image:user-manual/base-library/clock.png[Clock] <<{{site.basedir}}/user-manual/english/base-library/clock.adoc#, Clock>>
-* image:user-manual/base-library/keyboard.png[Keyboard] <<{{site.basedir}}/user-manual/english/base-library/keyboard.adoc#, Keyboard>>
+* image:user-manual/base-library/input.png[Circuit Input] link:{{site.basedir}}/user-manual/english/base-library/port[Circuit Input]
+* image:user-manual/base-library/switch.png[Switch] link:{{site.basedir}}/user-manual/english/base-library/switch[Switch]
+* image:user-manual/base-library/dip-switch.png[DIP Switch] link:{{site.basedir}}/user-manual/english/base-library/dip-switch[DIP Switch]
+* image:user-manual/base-library/clock.png[Clock] link:{{site.basedir}}/user-manual/english/base-library/clock[Clock]
+* image:user-manual/base-library/keyboard.png[Keyboard] link:{{site.basedir}}/user-manual/english/base-library/keyboard[Keyboard]
 
 === Output
 
-* image:user-manual/base-library/output.png[Circuit Output] <<{{site.basedir}}/user-manual/english/base-library/port.adoc#, Circuit Output>>
-* image:user-manual/base-library/led.png[LED] <<{{site.basedir}}/user-manual/english/base-library/led.adoc#, LED>>
-* image:user-manual/base-library/rgb-led.png[RGB-LED] <<{{site.basedir}}/user-manual/english/base-library/rgb-led.adoc#, RGB-LED>>
-* image:user-manual/base-library/7segment.png[7-Segment-Display] <<{{site.basedir}}/user-manual/english/base-library/7segment.adoc#, 7-Segment-Display>>
-* image:user-manual/base-library/led-matrix.png[LED-Matrix] <<{{site.basedir}}/user-manual/english/base-library/led-matrix.adoc#, LED-Matrix>>
-* image:user-manual/base-library/terminal.png[Terminal] <<{{site.basedir}}/user-manual/english/base-library/terminal.adoc#, Terminal>>
+* image:user-manual/base-library/output.png[Circuit Output] link:{{site.basedir}}/user-manual/english/base-library/port[Circuit Output]
+* image:user-manual/base-library/led.png[LED] link:{{site.basedir}}/user-manual/english/base-library/led[LED]
+* image:user-manual/base-library/rgb-led.png[RGB-LED] link:{{site.basedir}}/user-manual/english/base-library/rgb-led[RGB-LED]
+* image:user-manual/base-library/7segment.png[7-Segment-Display] link:{{site.basedir}}/user-manual/english/base-library/7segment[7-Segment-Display]
+* image:user-manual/base-library/led-matrix.png[LED-Matrix] link:{{site.basedir}}/user-manual/english/base-library/led-matrix[LED-Matrix]
+* image:user-manual/base-library/terminal.png[Terminal] link:{{site.basedir}}/user-manual/english/base-library/terminal[Terminal]
 
 === Memory
 
-* image:user-manual/base-library/ram.png[RAM] <<{{site.basedir}}/user-manual/english/base-library/ram.adoc#, RAM>>
-* image:user-manual/base-library/rom.png[ROM] <<{{site.basedir}}/user-manual/english/base-library/rom.adoc#, ROM>>
+* image:user-manual/base-library/ram.png[RAM] link:{{site.basedir}}/user-manual/english/base-library/ram[RAM]
+* image:user-manual/base-library/rom.png[ROM] link:{{site.basedir}}/user-manual/english/base-library/rom[ROM]
 
 === Arithmetic
 
-* image:user-manual/base-library/random.png[Random] <<{{site.basedir}}/user-manual/english/base-library/random.adoc#, Random>>
+* image:user-manual/base-library/random.png[Random] link:{{site.basedir}}/user-manual/english/base-library/random[Random]

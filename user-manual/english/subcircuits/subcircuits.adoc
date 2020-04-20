@@ -4,13 +4,13 @@ include::../../page-variables.txt[]
 
 As your circuits get bigger and more complex, you will soon reach the point where you want to split the circuit into manageable parts and reuse those parts several times in your circuits. In Antares these parts are called "subcircuits".
 
-In the chapter <<{{site.basedir}}/user-manual/english/first-steps/first-steps.adoc#, "First Steps">> you have already made your first experiences with the creation and reuse of partial circuits. The chapter <<{{site.basedir}}/user-manual/english/circuits/circuits.adoc#, "Circuits">> describes in detail how to create circuits.
+In the chapter link:{{site.basedir}}/user-manual/english/first-steps/first-steps["First Steps"] you have already made your first experiences with the creation and reuse of partial circuits. The chapter link:{{site.basedir}}/user-manual/english/circuits/circuits["Circuits"] describes in detail how to create circuits.
 
 This chapter describes how to build a circuit that can be used as subcircuits in other circuits.
 
 == Ports
 
-<<{{site.basedir}}/user-manual/english/base-library/port.adoc#, Ports>> (inputs, outputs) are the most important components for the construction of subcircuits. They are used to transfer signals from the surrounding circuit to the subcircuit and to return signals to the surrounding circuit.
+link:{{site.basedir}}/user-manual/english/base-library/port[Ports] (inputs, outputs) are the most important components for the construction of subcircuits. They are used to transfer signals from the surrounding circuit to the subcircuit and to return signals to the surrounding circuit.
 
 It often happens that you have not yet decided at the beginning of the design of a new circuit whether the circuit should be reused as a subcircuit later on. At this stage, you may prefer to use switches and LEDs to interact with the circuit during simulation. If you then decide to use the circuit as a partial circuit, you will replace some (or all) switches with inputs and LEDs with outputs. Since the input components of Antares - at least in the outermost circuit - can also be used as switches during the simulation, and output components represent the current signal value, you can use inputs and outputs instead of switches and LEDs right from the beginning of the design phase.
 
@@ -61,7 +61,7 @@ If you drag an element from the tree into the symbol editor, the symbol is remov
 
 When a port is selected in the symbol editor, its attributes are displayed in the properties view, most of which can be edited.
 
-Port ID :: Displays the ID of the port (cannot be changed). This ID can be used for <<{{site.basedir}}/user-manual/english/scripting/scripting.adoc#, Scripting>> applications.
+Port ID :: Displays the ID of the port (cannot be changed). This ID can be used for link:{{site.basedir}}/user-manual/english/scripting/scripting[Scripting] applications.
 
 Name:: The name of the port (cannot be changed). The name of a port can only be changed in the circuit itself.
 

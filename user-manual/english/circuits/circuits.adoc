@@ -4,7 +4,7 @@ include::../../page-variables.txt[]
 
 Circuits are the central structuring element of Antares.
 
-In the introductory chapter <<{{site.basedir}}/user-manual/english/first-steps/first-steps.adoc#, First Steps>> you have already made first experiences with your own circuits. The chapter <<{{site.basedir}}/user-manual/english/projects-libraries/projects-libraries.adoc#, Projects and Libraries>> describes how to group circuits into your own projects or how to organize circuits in libraries so that they can be used in multiple projects. In the chapter <<{{site.basedir}}/user-manual/english/projects-libraries/workbench.adoc#, Workbench>> you learn how to create new circuits or open existing circuits for editing.
+In the introductory chapter link:{{site.basedir}}/user-manual/english/first-steps/first-steps[First Steps] you have already made first experiences with your own circuits. The chapter link:{{site.basedir}}/user-manual/english/projects-libraries/projects-libraries[Projects and Libraries] describes how to group circuits into your own projects or how to organize circuits in libraries so that they can be used in multiple projects. In the chapter link:{{site.basedir}}/user-manual/english/projects-libraries/workbench[Workbench] you learn how to create new circuits or open existing circuits for editing.
 
 This chapter describes how to edit a single circuit.
 
@@ -49,9 +49,9 @@ Name:: In this attribute a short name of the circuit can be entered in all suppo
 
 Description:: This attribute is used to capture a longer description of the circuit which is displayed in the preview of the explorer and in the description popup when used as a subcircuit in other circuits.
 
-Runtime:: This optional attribute can be used to specify the length of time that elapses between the processing of an input signal and the appearance of a modified output signal. It is used to control the display of the processing state of a subcircuit during <<{{site.basedir}}/user-manual/english/simulation/simulation.adoc#, simulation>>.
+Runtime:: This optional attribute can be used to specify the length of time that elapses between the processing of an input signal and the appearance of a modified output signal. It is used to control the display of the processing state of a subcircuit during link:{{site.basedir}}/user-manual/english/simulation/simulation[simulation].
 
-Function:: This attribute can be used to specify the script that Antares executes for this component during simulation, if the simulation is run in <<{{site.basedir}}/user-manual/english/simulation/simulation.adoc#, "Flat simulation">> mode. This is an advanced technique; for details on scripting, see the chapter <<circuit-scripting.adoc#, "Scripting in Circuits">>.
+Function:: This attribute can be used to specify the script that Antares executes for this component during simulation, if the simulation is run in link:{{site.basedir}}/user-manual/english/simulation/simulation["Flat simulation"] mode. This is an advanced technique; for details on scripting, see the chapter link:{{site.basedir}}/user-manual/english/circuits/circuit-scripting["Scripting in Circuits"].
 
 Default light color:: The light color that all components in this circuit should have by default (LED, 7-segment display, terminal). If you change the value of this attribute while the circuit already contains lit components, Antares will ask you if the new light color should be applied to these components. With this option, for example, all red LEDs and 7-segment displays can be changed to yellow with a single action.
 
@@ -65,11 +65,11 @@ When inserting a component for the first time, Antares places the inserted compo
 
 == Connect components
 
-Connecting components using lines is a separate, large topic that is dealt with in the separate chapter <<wired.adoc#, "Lines">>.
+Connecting components using lines is a separate, large topic that is dealt with in the separate chapter link:{{site.basedir}}/user-manual/english/circuits/wires["Wires"].
 
 == Attributes of subcircuits
 
-The properties of the built-in base components are explained in chapter <<{{site.basedir}}/user-manual/english/base-library/base-library.adoc#, "Base Library">>. This section describes the attributes of subcircuits which are inserted into a circuit.
+The properties of the built-in base components are explained in chapter link:{{site.basedir}}/user-manual/english/base-library/base-library["Base Library"]. This section describes the attributes of subcircuits which are inserted into a circuit.
 
 Orientation:: The cardinal point to which the symbol of the subcircuit points. Like basic components, symbols of subcircuits can also be rotated with kbd:[Cmd + R].
 
@@ -121,7 +121,7 @@ image:user-manual/circuits/text.gif[Text] **Text** A click with the left mouse b
 
 The selection state of the graphical objects is displayed by drawing in the selection color, as with digital components, and not by displaying the small editing rectangles (handles) as in other applications. These are only displayed when you move the mouse over a selected graphic component.
 
-Select a graphic component and change its attributes such as "Fill", "Border", "Shadow", "Style", "Color", "Line style" to customize the appearance of the component. In chapter <<{{site.basedir}}/user-manual/english/styles/styles.adoc#, "Styles and themes">> you can find more information about styles, colors and other graphical properties.
+Select a graphic component and change its attributes such as "Fill", "Border", "Shadow", "Style", "Color", "Line style" to customize the appearance of the component. In chapter link:{{site.basedir}}/user-manual/english/styles/styles["Styles and themes"] you can find more information about styles, colors and other graphical properties.
 
 == Alignment
 

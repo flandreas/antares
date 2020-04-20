@@ -2,10 +2,8 @@
 include::../page-variables.txt[]
 :page-permalink: /user-manual/english/usermanual
 
-= Welcome
-
 Antares is a learning platform for digital circuits. In addition to drawing and simulating digital circuits, Antares places particular emphasis on providing tools to help students better understand how circuits work.
 
-If you are using Antares for the first time, you will find an easy to understand introduction to Antares in the chapter <<{{site.basedir}}/user-manual/english/first-steps/first-steps.adoc#, "First Steps">>. The other chapters in the "Basics" section cover important topics such as using projects and libraries.
+If you are using Antares for the first time, you will find an easy to understand introduction to Antares in the chapter link:{{site.basedir}}/user-manual/english/first-steps/first-steps["First Steps"]. The other chapters in the "Basics" section cover important topics such as using projects and libraries.
 
 The part "Advanced Techniques" covers topics that are more interesting for ambitious users like teachers or authors of training material.

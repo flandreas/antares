@@ -60,5 +60,5 @@ Depending on the scripting application, Antares uses different wrapper functions
 
 The different applications of scripting are described in separate chapters.
 
-* <<{{site.basedir}}/user-manual/english/circuits/circuit-scripting.adoc#, Skriting in circuits>>
-* <<{{site.basedir}}/user-manual/english/scenarios/scenario-scripting.adoc#, Scripting in scenarios>>
+* link:{{site.basedir}}/user-manual/english/circuits/circuit-scripting[Skriting in circuits]
+* link:{{site.basedir}}/user-manual/english/scenarios/scenario-scripting[Scripting in scenarios]

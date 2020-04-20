@@ -8,7 +8,7 @@ The example below shows the opened project "Microcomputer (Tannenbaum)", which i
 
 image::user-manual/projects-libraries/workbench-sample-en.png[Workbench,300,align="center"]
 
-This chapter describes the properties and possibilities of the workbench, which apply equally to projects and libraries opened in it. The special properties of <<{{site.basedir}}/user-manual/english/projects-libraries/projects.adoc#, Projects>> and <<{{site.basedir}}/user-manual/english/projects-libraries/libraries.adoc#, Libraries>> are explained in the corresponding chapters.
+This chapter describes the properties and possibilities of the workbench, which apply equally to projects and libraries opened in it. The special properties of link:{{site.basedir}}/user-manual/english/projects-libraries/projects[Projects] and link:{{site.basedir}}/user-manual/english/projects-libraries/libraries[Libraries] are explained in the corresponding chapters.
 
 == Structure
 

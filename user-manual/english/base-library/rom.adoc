@@ -8,7 +8,7 @@ image:user-manual/base-library/rom-sample.png[Example ROM, 500]
 
 == Behavior
 
-The ROM is a <<memory.adoc#, memory>> component whose data can be loaded from a file by the author of the circuit and which is then part of the stored circuit containing the ROM. During the execution of the simulation the stored data cannot be changed.
+The ROM is a link:{{site.basedir}}/user-manual/english/base-library/memory[memory] component whose data can be loaded from a file by the author of the circuit and which is then part of the stored circuit containing the ROM. During the execution of the simulation the stored data cannot be changed.
 
 If the CS input of the ROM has the value 1 during simulation, the data at a specific memory address can be read out by applying the address at input "A". The data stored at this address will be available at output D after the propagation delay has expired.
 
@@ -68,7 +68,7 @@ D:: Output "Data": Outputs the data of the memory cell addressed with input "A".
 
 == Attributes
 
-See the chapter <<{{site.basedir}}/user-manual/english/base-library/memory.adoc#, Memory>> for a description of the general memory attributes. This section only describes the special attributes of the ROM component.
+See the chapter link:{{site.basedir}}/user-manual/english/base-library/memory[Memory] for a description of the general memory attributes. This section only describes the special attributes of the ROM component.
 
 Show Disassembler:: Only displayed if the attribute "Show contents" is selected. If the attribute "Show Disassembler" is set, the memory values are disassembled according to the "Disassembler configuration" and the result is displayed additionally.
 

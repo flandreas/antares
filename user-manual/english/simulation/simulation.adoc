@@ -32,10 +32,10 @@ The following table shows which support information is used in which area.
 |Information|Explore|Observe|Use
 |Active components|icon:check[]|icon:check[]|icon:check[]
 |Execution Animation|(icon:check[])|(icon:check[])|(icon:check[])
-|<<{{site.basedir}}/user-manual/english/scenarios/scenarios.adoc#, scenarios>>|(icon:check[])|(icon:check[])|(icon:check[])
+|link:{{site.basedir}}/user-manual/english/scenarios/scenarios[scenarios]|(icon:check[])|(icon:check[])|(icon:check[])
 |colored lines|icon:check[]|icon:check[]|
-|<<{{site.basedir}}/user-manual/english/description/description.adoc#, Mnemonics>>|icon:check[]|icon:check[]|
-|<<{{site.basedir}}/user-manual/english/base-library/memory.adoc#, ROM/RAM>>-memory contents|icon:check[]|icon:check[]|
+|link:{{site.basedir}}/user-manual/english/description/description[Mnemonics]|icon:check[]|icon:check[]|
+|link:{{site.basedir}}/user-manual/english/base-library/memory[ROM/RAM]-memory contents|icon:check[]|icon:check[]|
 |Display Execution Delay|(icon:check[])||
 |Signal flow animation|icon:check[]||
 |===
@@ -54,7 +54,7 @@ image::user-manual/simulation/wire-colors.png[wire colors, 700,align="center"]
 * **Black**: The wire carries a signal with several bits which all have the value 0.
 * **Gray**: The wire carries a signal with several bits, at least one of which has the value 1.
 
-NOTE: Colors are defined in Antares by <<{{site.basedir}}/user-manual/english/styles/styles.adoc#, "Themes">>. The themes currently contained in Antares all use the above colors. However, it is not excluded that in the future more themes will be added (or users may define their own themes) that use other colors.
+NOTE: Colors are defined in Antares by link:{{site.basedir}}/user-manual/english/styles/styles["Themes"]. The themes currently contained in Antares all use the above colors. However, it is not excluded that in the future more themes will be added (or users may define their own themes) that use other colors.
 
 == Simulation depth
 
@@ -62,7 +62,7 @@ One of the most important goals of Antares is to enable the user to explore all 
 
 The disadvantage of this approach is that large circuits consist of many basic components if all subcircuits are expanded for the simulation until only basic components are used. For example, the microcomputer in the example project "Microcomputer (Tannenbaum)" contains over 2'000 elementary logic gates and over 5'000 wires.
 
-The simulation of such large circuits takes a lot of time. Now Antares offers the possibility to define a <<{{site.basedir}}/user-manual/english/circuits/circuit-scripting.adoc#, Execution script>> for a subcircuit, which contains the logic of the subcircuit and is executed during the simulation instead of the inner circuit.
+The simulation of such large circuits takes a lot of time. Now Antares offers the possibility to define a link:{{site.basedir}}/user-manual/english/circuits/circuit-scripting[Execution script] for a subcircuit, which contains the logic of the subcircuit and is executed during the simulation instead of the inner circuit.
 
 With the menu menu:Simulation[Deep Simulation] you can choose whether Antares applies the execution scripts of sub-circuits or not. "Deep Simulation" means that the execution scripts are not applied and Antares simulates the full depth of the circuit. The opposite is called "Flat Simulation": Subcircuits are simulated only as deep as the depth of the circuit until a subcircuit contains an execution script.
 

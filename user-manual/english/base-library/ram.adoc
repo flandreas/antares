@@ -8,7 +8,7 @@ image:user-manual/base-library/ram-sample.png[Example RAM, 600]
 
 == Behavior
 
-The RAM is a <<{{site.basedir}}/user-manual/english/base-library/memory.adoc#, memory>> component whose data can be read and written by the using circuit during simulation.
+The RAM is a link:{{site.basedir}}/user-manual/english/base-library/memory[memory] component whose data can be read and written by the using circuit during simulation.
 
 The contents of the memory cells of the RAM component can be read and written synchronously via a bidirectional data pin.
 
@@ -34,6 +34,6 @@ CLR:: Input "Clear": Asynchronous input at which a value of 1 causes all memory 
 
 == Attributes
 
-See the chapter <<memory.adoc#, Memory>> for a description of the general memory attributes. In this section only the special attributes of the RAM component are described.
+See the chapter link:{{site.basedir}}/user-manual/english/base-library/memory[Memory] for a description of the general memory attributes. In this section only the special attributes of the RAM component are described.
 
 Clock Input:: If this attribute is set, the RAM contains the "CLK" pin.

@@ -2,13 +2,13 @@
 include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/base-library/memory
 
-This chapter describes properties that apply to both the <<{{site.basedir}}/user-manual/english/base-library/rom.adoc#, ROM>>- and the <<{{site.basedir}}/user-manual/english/base-library/ram.adoc#, RAM>> component.
+This chapter describes properties that apply to both the link:{{site.basedir}}/user-manual/english/base-library/rom[ROM]- and the link:{{site.basedir}}/user-manual/english/base-library/ram[RAM] component.
 
 == Behavior
 
 A memory component stores data values that are up to 32 bits long. The number of stored data values is determined by the width of the address, which is defined in the attribute "Address Bit Width".
 
-The attribute "Display content" can be used to control whether the memory component should display its memory content as part of the symbol during the simulation. Even if the attribute is set, the memory content is only displayed in the symbol if the simulation speed is at most in the "Observe" category - in the fastest "Use" category the memory content is never displayed. For an explanation of simulation speeds see chapter <<{{site.basedir}}/user-manual/english/simulation/simulation.adoc#, Simulation>>.
+The attribute "Display content" can be used to control whether the memory component should display its memory content as part of the symbol during the simulation. Even if the attribute is set, the memory content is only displayed in the symbol if the simulation speed is at most in the "Observe" category - in the fastest "Use" category the memory content is never displayed. For an explanation of simulation speeds see chapter link:{{site.basedir}}/user-manual/english/simulation/simulation[Simulation].
 
 == Importing and exporting memory contents
 

@@ -65,7 +65,7 @@ Name:: The name of the scenario, which can be translated into all supported lang
 Description:: The description of the scenario, which can be translated into all supported languages. It is displayed during simulation in a text box above the circuit as long as the scenario is active.
 
 Condition:: The script with the condition that must be fulfilled for this scenario to be activated. If several scenarios fulfill their condition at the same time, Antares will only activate the first of these scenarios.
-See <<{{site.basedir}}/user-manual/english/scripting/scripting.adoc#, Scripting>> for details on scripting.  +
+See link:{{site.basedir}}/user-manual/english/scripting/scripting[Scripting] for details on scripting.  +
 +
 .Example
 [source,javascript]
@@ -80,7 +80,7 @@ Name:: The name of the scenario step, which can be translated into all supported
 Description:: The description of the scenario step, which can be translated into all supported languages. It will be displayed in a text box below the circuit during the simulation, as long as the scenario step is active.
 
 Condition:: The script with the condition that must be fulfilled in order for this scenario to be recognized. If several scenario steps of the active scenario fulfilled their condition at the same time, Antares will activate only the first of these scenario steps. A scenario step can only be activated if the scenario it is part of is active.
-See <<{{site.basedir}}/user-manual/english/scripting/scripting.adoc#, Scripting>> for details on scripting.  +
+See link:{{site.basedir}}/user-manual/english/scripting/scripting[Scripting] for details on scripting.  +
 +
 .Example
 [source,javascript]
