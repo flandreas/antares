@@ -8,7 +8,7 @@ This chapter describes properties that apply to both the link:{{site.basedir}}/u
 
 A memory component stores data values that are up to 32 bits long. The number of stored data values is determined by the width of the address, which is defined in the attribute "Address Bit Width".
 
-The attribute "Display content" can be used to control whether the memory component should display its memory content as part of the symbol during the simulation. Even if the attribute is set, the memory content is only displayed in the symbol if the simulation speed is at most in the "Observe" category - in the fastest "Use" category the memory content is never displayed. For an explanation of simulation speeds see chapter link:{{site.basedir}}/user-manual/english/simulation/simulation[Simulation].
+The attribute "Display content" can be used to control whether the memory component should display its memory content as part of the symbol during simulation. Even if the attribute is set, the memory content is only displayed in the symbol if the simulation speed is at most in the "Observe" category - in the fastest "Use" category the memory content is never displayed. For an explanation of simulation speeds see chapter link:{{site.basedir}}/user-manual/english/simulation/simulation[Simulation].
 
 == Importing and exporting memory contents
 
@@ -107,6 +107,6 @@ Data Bit Width:: The bit width of each memory cell.
 
 Show contents:: Determines whether the memory content within the symbol should be displayed.
 
-Number of content lines:: Can only be set if "Show content" is selected. Determines the number of lines of memory content display within the symbol.
+Number of content rows:: Can only be set if "Show content" is selected. Determines the number of rows of memory content display within the symbol.
 
 Number of content columns:: Can only be set if "Show content" is selected. Determines the number of columns of the memory content display within the symbol.

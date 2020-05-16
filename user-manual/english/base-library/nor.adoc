@@ -8,7 +8,7 @@ image:user-manual/base-library/nor-sample.png[Example NOR, 300]
 
 == Behavior
 
-The NOR gate outputs the result of the NOR-gating of the 1-bit signals at the input. The output has the value 1 only if all inputs have the value 0.
+The NOR gate outputs the result of the NOR function of the 1-bit signals at the input. The output has the value 1 only if all inputs have the value 0.
 
 Disconnected inputs always have the value 0.
 

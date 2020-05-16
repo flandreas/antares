@@ -7,31 +7,31 @@ simulation of the circuit signals can flow between the components.
 
 image::user-manual/circuits/wires-sample.png[wires,250,align="center"]
 
-Unlike comparable tools, Antares does not automatically create a connection between a wire and a pin when they are in the same location; a connection must always be explicitly created by the user. To help you recognize unconnected wires at a glance, Antares displays unconnected wire ends with a small circle.
+Unlike comparable tools, Antares does not automatically create a connection between a wire and a pin when they are in the same location; a connection must always be explicitly created by the user. To help you recognize unconnected wires at a glance, Antares displays unconnected wire ends with a small white circle.
 
-== Create wires
+== Creating Wires
 
-To start creating a new wire, move the mouse over a connection of a component or an existing wire. Antares will then show you a small orange circle to indicate that you can start a new wire at this point.
+To start creating a new wire, move the mouse over a pin of a component or an existing wire. Antares will then show you a small orange circle to indicate that you can start a new wire at this point.
 
-Then press and hold the left mouse button while moving the mouse to the desired destination of the wire. Antares automatically creates a rectangular layout of the resulting wire.
+Then press and hold the left mouse button while moving the mouse to the desired destination of the wire. Antares automatically creates a orthogonal layout of the resulting wire.
 
-Depending on the type of connection where you start the wire, the following destinations of wires are possible:
+Depending on the location where you start the wire, the following destinations of wires are possible:
 
 Output to input:: Move the mouse with the left mouse button pressed down to the input of a component.
 
 Input to output or wire:: Move the mouse with pressed mouse button to the input of a component or to an already existing wire.
 
-Line to input:: To start a new wire on an already existing wire (branch), move the mouse over the existing wire and press the kbd:[Alt] key. Hold down the kbd:[Alt] key while dragging.
+Wire to input:: To start a new wire on an already existing wire (branch), move the mouse over the existing wire and press the kbd:[Alt] key. Hold down the kbd:[Alt] key while dragging.
 
 TIP: Bidirectional pins are both input and output and can be connected in both ways.
 
 In addition to these options, you can create an unconnected wire in all cases by releasing the mouse button over the background of the circuit.
 
-By default, Antares automatically creates a rectangular layout while creating the wire. To influence the layout of the resulting wire, press the kbd:[Alt]-key while defining the start location. Antares will then display an orange square instead of the orange circle. Then you can define the intermediate points of the resulting wire by clicking with the left mouse button. You do not have to keep the mouse button pressed while moving the mouse. Use the kbd:[ESC]-key to remove the last intermediate point. With a single click on an input or with a double click on the background the creation of the wire is completed.
+By default, Antares automatically creates an orthogonal layout while creating the wire. To influence the layout of the resulting wire, press the kbd:[Alt]-key while defining the start location. Antares will then display an orange square instead of the orange circle. Then you can define the intermediate points of the resulting wire by clicking with the left mouse button. You do not have to keep the mouse button pressed while moving the mouse. Use the kbd:[ESC]-key to remove the last intermediate point. With a single click on an input or with a double click on the background the creation of the wire is completed.
 
-== Wire bundle
+== Wire Bundle
 
-Wire bundles are wires that can transmit several bits simultaneously. The number of bits of a wire does not have to be explicitly specified, but is taken from the pints to which the wire is connected. Since pins of components can have different bit widths, this can lead to inconsistency, because Antares requires that a network of wires be connected exclusively to pins of the same bit width.
+Wire bundles are wires that can transmit several bits simultaneously. The bit width of a wire does not have to be explicitly specified, but is taken from the pins to which the wire is connected. Since pins of components can have different bit widths, this can lead to an inconsistency, because Antares requires that a network of wires be connected exclusively to pins of the same bit width.
 
 image::user-manual/circuits/inconsistent-net-en.png[Inconsistent net,400,align="center"]
 
@@ -41,27 +41,27 @@ Circuits with design errors cannot be simulated; before the simulation can be st
 
 == Reconnect wires
 
-Sometimes it happens that you have connected a wire to the wrong component. To change this, it is not necessary to delete the wire and then create a new wire. Antares offers the possibility to reassign existing wires to other connections.
+Sometimes it happens that you have connected a wire to the wrong component. To change this, it is not necessary to delete the wire and then create a new wire. Antares offers the possibility to reassign existing wires to other pins.
 
-Move the mouse over the port to which the wire is connected. Antares displays a small orange circle. Press the left mouse button and move the mouse to the new connection while keeping the mouse button pressed.
+Move the mouse over the port to which the wire is connected. Antares displays a small orange circle. Press the left mouse button and move the mouse to the new pin while keeping the mouse button pressed.
 
 == Automatic connection
 
-Antares offers the possibility to automatically connect the connections of components to open ends of existing wires. This is useful, for example, if you have already connected the connectors of a logical gate before you realize that you need a different type of gate.
+Antares offers the possibility to automatically connect the pins of components to open ends of existing wires. This is useful, for example, if you have already connected the pins of a logical gate before you realize that you need a different type of gate.
 
 image::user-manual/circuits/auto-connect.png[Automatic Connecting,300,align="center"]
 
-In this case the old gate can be deleted, resulting in three wires with one open end each (see example above). Now you can drag another gate into the circuit and move it over the place where the old gate was before. Antares detects this situation and indicates with orange circles that the component's connections are automatically connected when you release the mouse at this position.
+In this case the old gate can be deleted, resulting in three wires with one open end each (see example above). Now you can drag another gate into the circuit and move it over the place where the old gate was before. Antares detects this situation and indicates with orange circles that the component's pins are automatically connected when you release the mouse at this position.
 
 == Display of wires
 
-By default, the display of wires is only influenced by the bit width of the connected connections. Lines connecting ports of bit width 1 are displayed with a narrow wire, while wire bundles are displayed with a wider wire.
+By default, the display of wires is only influenced by the bit width of the connected pins. Wires connecting pins of bit width 1 are displayed with a narrow line, while wire bundles are displayed with a wider line.
 
-image::user-manual/circuits/wire-styles.png[Line styles,600,align="center"]
+image::user-manual/circuits/wire-styles.png[Wire styles,600,align="center"]
 
 Antares provides several options that allow you to additionally influence the display of wires. Select the wire and choose the corresponding properties in the properties window.
 
-Arrow:: Select this property if you want an arrowhead to be displayed at the end of the wire, if the wire ends at an input or a bidirectional connection.
+Arrow:: Select this property if you want an arrowhead to be displayed at the end of the wire, if the wire ends at an input or a bidirectional pin.
 
 Style:: For certain circuits, intelligibility can be increased by highlighting important wires, such as the data or address bus in a microprocessor circuit. The "Block" style can be used for this purpose. The wire is then not shown as a wire, but as a "block" with a border and a background in a different colour.
 

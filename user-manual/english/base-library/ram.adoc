@@ -24,7 +24,7 @@ A:: Input "Address": Determines the address of the memory cell whose data is to 
 
 CS:: Input "Chip Select": The RAM component only reads or writes data if this input has the value 1.
 
-D::: Input/Output "Data": Outputs the data to be read or accepts the data to be written, depending on the value of inputs "WR" and "CLK".
+D:: Input/Output "Data": Outputs the data to be read or accepts the data to be written, depending on the value of inputs "WR" and "CLK".
 
 CLK:: Input "Clock": Is only displayed if the attribute "Clock Input" is set. At the rising edge of the CLK signal, data is read or written, depending on the value of "WR".
 

@@ -10,13 +10,13 @@ The difference between projects and libraries is that circuits from libraries ca
 
 == Libraries
 
-Antares contains two libraries by default: The basic library and the standard library. Both libraries cannot be changed by you as a user. You can use their circuits in your own projects, you can open, execute and analyze their circuits, but you cannot change them, and you cannot add more circuits to these default libraries. This is because otherwise your changes would be overwritten by a newer release of Antares.
+Antares contains two libraries by default: The "Basic" library and the "Standard" library. Both libraries cannot be changed by you as a user. You can use their circuits in your own projects, you can open, execute and analyze their circuits, but you cannot change them, and you cannot add more circuits to these default libraries. This is because otherwise your changes would be overwritten by a newer release of Antares.
 
-The **Base library** contains only the basic components built-in into Antares, such as logic gates, LEDs, switches, etc. In the link:{{site.basedir}}/user-manual/english/base-library/base-library[Library Reference] you will find a description of these base components. You can use the base library to create projects with simple circuits based on it. You can also use the base library as a basis to create your own libraries.
+The **Base library** contains only the basic components built-in into Antares, such as logic gates, LEDs, switches, etc. In the link:{{site.basedir}}/user-manual/english/base-library/base-library[Library Reference] you will find a description of these base components. You can use the base library to create projects with simple circuits based on it. You can also use the base library as a starting point to create your own libraries.
 
 The **Standard Library** also contains all the basic components programmed in Antares. Additionally, it contains important, frequently used subcircuits such as flip-flops, registers and multiplexers, which you can use in your own projects.
 
-The choice of subcircuits available in the standard library was largely determined by the development of the example circuit "Microcomputer (Tannenbaum)", the circuit that has played a directing role in the design and development of Antares. In future versions of Antares it is likely that further subcircuits will be added to the standard library.
+The choice of subcircuits available in the standard library was largely determined by the development of the example circuit "Microcomputer (Tannenbaum)", the circuit that has played a directing role in the design and development of Antares. In future versions of Antares it is likely that additional subcircuits will be added to the standard library.
 
 The most important thing about libraries is however that you can create your own libraries to suit your own needs. Not only will you learn a lot about how Antares works, but you can also use the features link:{{site.basedir}}/user-manual/english/description/description["Descriptions and explanations"] to explain your library subcircuits. Especially if you are a teacher or an author, you should definitely consider developing your own library after you have gained some deeper experience with Antares.
 
@@ -24,7 +24,7 @@ In the chapter link:{{site.basedir}}/user-manual/english/projects-libraries/libr
 
 == Projects
 
-Projects combine circuits that you need for a specific project and that together fulfill a function. Projects are always based on exactly one library, which you select when you create the project. The example project "Microcomputer (Tannenbaum)" is based on the standard library and contains circuits like "CPU", "Address Decoder" and "ALU 16-Bit".
+Projects combine circuits that you need for a specific project and that together fulfill a particular function. Projects are always based on exactly one library, which you select when you create the project. The example project "Microcomputer (Tannenbaum)" is based on the standard library and contains circuits like "CPU", "Address Decoder" and "ALU 16-Bit".
 
 In the chapter link:{{site.basedir}}/user-manual/english/projects-libraries/projects[Projects] you will learn how to work with projects and create your own projects.
 
@@ -43,3 +43,5 @@ The location of this working directory depends on the operating system. On macOS
 If you edit a single circuit, you must explicitly save your changes, i.e. you should regularly execute the "Save" action. As long as such changes are not saved, they can be undone using the undo system.
 
 Changes to the structure of projects and libraries, however, are always saved automatically. For example, if you delete a directory in a project, this directory disappears from the workbench and the new project structure is immediately saved in the working directory of Antares. Since such actions cannot be undone, Antares will ask you for confirmation before executing such actions.
+
+NOTE: As of release 0.2, actions on projects and libraries are disabled if the main circuit contains unsaved changes. This is for avoiding inconsistent states when undoing and redoing main circuit changes while project and library states have changed in the meantime.

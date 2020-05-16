@@ -2,9 +2,9 @@
 include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/base-library/base-library
 
-This chapter describes all elementary library components that are built into Antares and programmed into it. These components are included in both the "Basic" and the "Standard" library.
+This chapter describes all library components that are built into Antares. These components are included in both the "Basic" and the "Standard" library.
 
-Compared to other tools, it may seem that these are rather few components. The philosophy of Antares differs from that of other tools in this respect: With Antares, the user should be able to explore the inner workings of as many components as possible. For this reason, Antares does not contain any programmed flip-flops, full adders or multiplexers; these are included in Antares as modeled sub-circuits in the standard library and can be opened by the user at any time as a sub-circuit and their functionality can be observed during the simulation.
+Compared to similar tools, it may seem that these are rather few components. The philosophy of Antares differs from that of other tools in this respect: With Antares, the user should be able to explore the inner workings of as many components as possible. For this reason, Antares does not contain any built-in or elemtary flip-flops, full adders or multiplexers; these are included in Antares as modeled subcircuits in the standard library and can therefore be opened by the user at any time as a subcircuit and their functionality can be observed during simulation.
 
 == Common Attributes
 
@@ -14,9 +14,9 @@ ID:: The identification number of the component which is unique within the circu
 
 Description:: In this field Attribute a multilingual description can be entered which describes the purpose of these components within the circuit. If available, it is displayed in the description popup instead of the standard description of the component. See chapter link:{{site.basedir}}/user-manual/english/description/description[Descriptions and Explanations] for more details.
 
-Propagation Delay:: The time in nanoseconds that elapses during simulation until a changed signal at the input of a component has been processed, e.g. by generating a changed signal at an output of the component, or, as in the case of the LED, by a different representation of the component.
+Propagation Delay:: The time in nanoseconds that elapses during simulation until a changed signal at the input of a component has been processed, e.g. by generating a changed signal at an output of the component, or, as in the case of the LED, by a different graphical representation of the component.
 
-Shadows:: This attribute controls whether this particular component is to be displayed with a shadow. Shadows are only displayed if they have been activated in the Antares settings. If shadows are activated in the settings, you can prevent this component from being displayed.
+Shadows:: This attribute controls whether this particular component is to be displayed with a shadow. Shadows are only displayed if they have been activated in the Antares settings. If shadows are activated in the settings, you can prevent an individual component from drawing a shadow.
 
 Color:: Normally, the color in which a component is drawn is determined by its style. The attribute "Color" can be used to override the color for a specific component. This can be used, for example, to identify all components of a circuit that perform a similar function with the same color. See chapter link:{{site.basedir}}/user-manual/english/styles/styles[Styles and Themes] for more details.
 

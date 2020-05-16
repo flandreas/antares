@@ -3,7 +3,7 @@ include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/scripting/scripting
 :icons: font
 
-Scripting is a powerful feature of Antares that allows you to influence the behavior of circuits during simulation in different ways. To do this, you write small scripts, i.e. small pieces of program that are stored in different places in a circuit and which are executed by Antares during the simulation.
+Scripting is a powerful feature of Antares that allows you to influence the behavior of circuits during simulation in different ways. To do this, you write small scripts, i.e. small pieces of program that are stored in different places in a circuit and which are executed by Antares during simulation.
 
 == Basics
 
@@ -15,25 +15,25 @@ Scripts are recorded as attributes of selected objects in the properties window.
 
 image::user-manual/scripting/script-attribute-en.png[script property, 300]
 
-In the example above, the Function property contains a script. This is indicated by the text "[Script]". If there were no script, the text would be empty. If you click in the field, Antares will display a button to open the script editor. In the current version of Antares, the script editor is a simple multi-line text field without any special properties like syntax highlighting or similar.
+In the example above, the "Function" property contains a script. This is indicated by the text "[Script]". If there were no script, the text would be empty. If you click in the field, Antares will display a button to open the script editor. In the current version of Antares, the script editor is a simple multi-line text field without any special properties like syntax highlighting or alike.
 
 image::user-manual/scripting/scripting-editor-en.png[Script Editor, 500, align=center]
 
 In this window you write your script as JavaScript code. With the button btn:[OK] the current script is saved in the attribute where you opened the script editor.
 
-If you have made a programming error in a script (which can happen), Antares will detect this during the simulation - sooner or later depending on the type of script - and abort the simulation. In the "Problems" view, which can be displayed at the bottom of the main window, the color of the icon changes to red, and the table in the view contains a new entry that gives you information about the error that occurred.
+If you have made a programming error in a script (which can happen), Antares will detect this during simulation - sooner or later depending on the type of script - and abort the simulation. In the "Issues" view, which can be displayed at the bottom of the main window, the color of the icon changes to red, and the table in the view contains a new entry that gives you information about the error that occurred.
 
 image::user-manual/scripting/scripting-error-en.png[Script error, 700, align=center]
 
 The entries in the table have the following attributes:
 
-Name:: The name or type of the problem. For scripting errors the name is always "JS Script". There are other types of errors, such as "design error", which occurs when your circuit contains lines connecting connectors of different bit widths.
+Name:: The name or type of the issue. For scripting errors the name is always "JS Script". There are other types of errors, such as "Design Error", which occurs when your circuit contains wires connecting pins of different bit widths.
 
-Origin:: An identification of the object where the error occurred. This can be a partial circuit, a use case, a scenario or in the future another source. +
+Origin:: An identification of the object where the error occurred. This can be a subcircuit, a use case, a scenario or in the future another source. +
 
 TIP: It would be desirable if Antares would highlight the source of the problem in the circuit when you select an entry in the table. This feature may be available in a future version of Antares.
 
-Context:: Additional information that further specifies the source of the error. If an object contains multiple scripts, the context is the name of the attribute of the source whose script contains the error. In the example above, this is the attribute "Function" of the sub-circuit "SR Latch".
+Context:: Additional information that further specifies the source of the error. If an object contains multiple scripts, the context is the name of the attribute of the source whose script contains the error. In the example above, this is the attribute "Function" of the subcircuit "SR Latch".
 
 Description:: Describes the cause of the error. In case of JavaScript errors, this is the error message that was returned to Antares by the JavaScript engine. In the example above, in the script on line 2, the statement `var r = elem.inputBit("R");` was replaced by the erroneous statement `var r = elem.error("R");`, which caused the error.
 
@@ -60,5 +60,5 @@ Depending on the scripting application, Antares uses different wrapper functions
 
 The different applications of scripting are described in separate chapters.
 
-* link:{{site.basedir}}/user-manual/english/circuits/circuit-scripting[Skriting in circuits]
+* link:{{site.basedir}}/user-manual/english/circuits/circuit-scripting[Scripting in circuits]
 * link:{{site.basedir}}/user-manual/english/scenarios/scenario-scripting[Scripting in scenarios]

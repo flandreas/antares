@@ -6,7 +6,7 @@ In this chapter you will learn how to create your own libraries. The basics of l
 
 == Manage libraries
 
-The main menu menu:File[Libraries...] leads you to the Antares library management.
+The main menu menu:File[Libraries...] leads you to the Antares library management window.
 
 image::user-manual/projects-libraries/libraries-sample-en.png[libraries,400,align="center"]
 
@@ -34,6 +34,6 @@ The context menu menu:Edit library[] opens the window shown below.
 
 image::user-manual/projects-libraries/libraries-edit-en.png[Edit,600,align="center"]
 
-It allows you to add more items from all existing libraries to the currently open library. The window displays the source library (the library from which components are fetched) on the left and the target library (the library to which components are added) on the right. Select the source library from the Source drop-down list. Open the directories in the source library, select the component to be added, and press the button between the two windows to copy the selected component. The component will be copied to the directory selected in the target library.
+It allows you to add more components from all existing libraries to the currently open library. The window displays the source library (the library from which components are fetched) on the left and the destination library (the library to which components are added) on the right. Select the source library from the "Source" drop-down list. Open the directories in the source library, select the component to be added, and press the button between the two windows to copy the selected component. The component will be copied to the directory selected in the "Destination" library.
 
 In the example, the "Half Adder" of the Standard library has been copied to the "Arithmetic" directory of the current "Test" library.

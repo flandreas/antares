@@ -15,15 +15,15 @@ image:user-manual/simulation/pause24.png[Pause] Activates the single step mode o
 
 image:user-manual/simulation/resume24.png[Continue] Executes the next single step (kbd:[Ctrl + Space]). Is only active if the single step mode is activated. The button is displayed with an orange frame if a single step is possible.
 
-With the slider the simulation speed can be controlled. The simulation speed is divided into three areas whose name is displayed as a tooltip when you move the mouse over the slider. The further to the left the slider is, the slower the simulation is executed and the more support information is displayed during the simulation.
+With the slider the simulation speed can be controlled. The simulation speed is divided into three categories whose names are displayed as a tooltip when you move the mouse over the slider. The further to the left the slider is, the slower the simulation is executed and the more support information is displayed during the simulation.
 
-The speed ranges have the following names:
+The speed categories have the following names:
 
-Use:: This range is mainly used to use a circuit without displaying more details about how it works. For example, if you have finished designing a microprocessor circuit and are running machine programs in it that you want to see the results of, you will move the controller all the way to the right to make the simulation run as fast as possible.
+Use:: This category is mainly used to use a circuit without displaying more details about how it works. For example, if you have finished designing a microprocessor circuit and are running machine programs in it that you want to see the results of, you will move the controller all the way to the right to make the simulation run as fast as possible.
 
-Observe:: This area displays support information that can be useful during the development of a circuit without running the simulation much slower.
+Observe:: This category displays support information that can be useful during the development of a circuit without running the simulation much slower.
 
-Explore:: This area displays all available support information, if enabled in the settings. In particular, the signal flow animations (if enabled) used in this area slow down the simulation so much that you will use this area mainly for demonstrations or training.
+Explore:: This category displays all available support information, if enabled in the settings. In particular, the signal flow animations (if enabled) used in this category slow down the simulation so much that you will use this category mainly for demonstrations or training.
 
 The following table shows which support information is used in which area.
 
@@ -33,7 +33,7 @@ The following table shows which support information is used in which area.
 |Active components|icon:check[]|icon:check[]|icon:check[]
 |Execution Animation|(icon:check[])|(icon:check[])|(icon:check[])
 |link:{{site.basedir}}/user-manual/english/scenarios/scenarios[scenarios]|(icon:check[])|(icon:check[])|(icon:check[])
-|colored lines|icon:check[]|icon:check[]|
+|Colored wires|icon:check[]|icon:check[]|
 |link:{{site.basedir}}/user-manual/english/description/description[Mnemonics]|icon:check[]|icon:check[]|
 |link:{{site.basedir}}/user-manual/english/base-library/memory[ROM/RAM]-memory contents|icon:check[]|icon:check[]|
 |Display Execution Delay|(icon:check[])||
@@ -43,7 +43,7 @@ The following table shows which support information is used in which area.
 
 == Signal colors
 
-Antares uses different colors during the simulation to represent the different values of signals or the states of wires and pins. The following circuit illustrates the colors used, where the wires on the left have the wire style "Line" and the wires on the right have the wire style "Block".
+Antares uses different colors during simulation to represent the different values of signals or the states of wires and pins. The following circuit illustrates the colors used, where the wires on the left have the wire style "Line" and the wires on the right have the wire style "Block".
 
 image::user-manual/simulation/wire-colors.png[wire colors, 700,align="center"]
 
@@ -58,19 +58,19 @@ NOTE: Colors are defined in Antares by link:{{site.basedir}}/user-manual/english
 
 == Simulation depth
 
-One of the most important goals of Antares is to enable the user to explore all the components of a circuit in order to understand its operation as deeply and thoroughly as possible. For this reason, the basic library contains rather few programmed components. Instead, standard components like flip-flops or registers are available as complete sub-circuits in the standard library, which the user can open and observe during circuit design and simulation.
+One of the most important design goals of Antares is to enable the user to explore all the components of a circuit in order to understand its operation as deeply and thoroughly as possible. For this reason, the basic library contains rather few programmed components. Instead, standard components like flip-flops or registers are available as complete subcircuits in the standard library, which the user can open and observe during circuit design and simulation.
 
-The disadvantage of this approach is that large circuits consist of many basic components if all subcircuits are expanded for the simulation until only basic components are used. For example, the microcomputer in the example project "Microcomputer (Tannenbaum)" contains over 2'000 elementary logic gates and over 5'000 wires.
+The disadvantage of this approach is that large circuits consist of many basic components if all subcircuits are expanded for simulation until only basic components are used. For example, the microcomputer in the example project "Microcomputer (Tannenbaum)" contains (when fully expaned) over 2'000 elementary logic gates and over 5'000 wires.
 
-The simulation of such large circuits takes a lot of time. Now Antares offers the possibility to define a link:{{site.basedir}}/user-manual/english/circuits/circuit-scripting[Execution script] for a subcircuit, which contains the logic of the subcircuit and is executed during the simulation instead of the inner circuit.
+The simulation of such large circuits takes a lot of time. Now Antares offers the possibility to define a link:{{site.basedir}}/user-manual/english/circuits/circuit-scripting[Execution script] for a subcircuit, which contains the logic of the subcircuit and is executed during simulation instead of the inner circuit.
 
-With the menu menu:Simulation[Deep Simulation] you can choose whether Antares applies the execution scripts of sub-circuits or not. "Deep Simulation" means that the execution scripts are not applied and Antares simulates the full depth of the circuit. The opposite is called "Flat Simulation": Subcircuits are simulated only as deep as the depth of the circuit until a subcircuit contains an execution script.
+With the menu menu:Simulation[Deep Simulation] you can choose whether Antares applies the execution scripts of subcircuits or not. "Deep Simulation" means that the execution scripts are not applied and Antares simulates the full depth of the circuit. The opposite is called "Flat Simulation": Subcircuits are simulated only as deep as the depth of the circuit until a subcircuit contains an execution script.
 
-A flat simulation has one important limitation: If you open a subcircuit containing an execution script during a shallow simulation, Antares can display the contents of the subcircuit, but it cannot tell you anything about the state of the components and wires of that subcircuit.
+A flat simulation has one important limitation: If you open a subcircuit containing an execution script during a flat simulation, Antares can display the contents of the subcircuit, but it cannot tell you anything about the state of the components and wires of that subcircuit.
 
 image::user-manual/simulation/simulation-depth.png[wire colors, 700,align="center"]
 
-Antares therefore represents such a partial circuit in a "disguised" state. In the picture above, one of the half adders has been opened in a separate view. Antares shows the opened half adder with a grey overlay. If the partial circuit would contain another partial circuit, you could also open it or dive into it, but it would also be shown in a disguised state.
+Antares therefore represents such a subcircuit in a "disguised" state. In the picture above, one of the half adders has been opened in a separate view. Antares shows the opened half adder with a grey overlay. If the subcircuit would contain another subcircuit, you could also open it or dive into it, but it would also be shown in a disguised state.
 
 == Simulation algorithm
 
@@ -82,23 +82,23 @@ The simulation of Antares uses signals with four possible values 0, 1, "Undefine
 
 Other simulations use other signals such as "0/1 (rising edge)" and "1/0 (falling edge)". So far, Antares has not shown any need for such extended models.
 
-=== Runtime
+=== Propagation delay
 
-The simulation uses the runtime defined for each component and each line. This is the time (in nanoseconds) a component needs to process a changed input signal and generate a corresponding signal at one or more outputs.
+The simulation uses the propagation delay defined for each component and each wire. This is the time (in nanoseconds) a component needs to process a changed input signal and generate a corresponding signal at one or more outputs.
 
-The simulation algorithm is event-based. Whenever a component detects a change in an input value, a new entry in an event list (event queue) is created in the simulation, which is intended to be executed after the runtime of the component has expired. After this time has elapsed, the simulator prompts the component to recalculate the value of its outputs. For this calculation, the component uses the signals that ** exist at its inputs at this time**.
+The simulation algorithm is event-based. Whenever a component detects a change in an input value, a new entry in an event queue is created in the simulation engine, which is intended to be executed after the propagation delay of the component has expired. After this time has elapsed, the simulator prompts the component to recalculate the value of its outputs. For this calculation, the component uses the signals that ** exist at its inputs at this time**.
 
 === Switch-on behaviour
 
-Antares does not yet contain a mechanism by which the switch-on behaviour can be influenced by the circuits and components. When starting the simulation, each component is requested to recalculate its outputs. The running time is also taken into account. If at the time of calculation no signal from other components has arrived at the inputs, it is up to the component to decide how to deal with this at the start. Most components then initially set the inputs to the value 0, which results in an unconnected AND gate having the output value 0 at startup and an unconnected NOT gate having the output value 1.
+Antares does not yet contain a mechanism by which the switch-on behaviour can be influenced by the circuits and components. When starting simulation, each component is requested to recalculate its outputs. The propagation delay is also taken into account. If at the time of calculation no signal from other components has arrived at the inputs, it is up to the component to decide how to deal with this at the start. Most components then initially set the inputs to the value 0, which results in an unconnected AND gate having the output value 0 at startup and an unconnected NOT gate having the output value 1.
 
-This behavior must be considered when designing sequential circuits. Without further action, the way the simulation algorithm works and the power-on behavior of Antares will cause an SR latch with NOR gates to assume an illegal state at power-on.
+This behavior must be considered when designing sequential circuits. Without further action, the way the simulation algorithm works and the power-on behavior of Antares will cause an SR latch with NOR gates to go into an illegal state at power-on.
 
-image::user-manual/simulation/sr-latch.png[Line colors, 400,align="center"]
+image::user-manual/simulation/sr-latch.png[Wire colors, 400,align="center"]
 
 Real latches do not show this behaviour, because slight differences in the propagation delay of the individual gates cause the circuit to settle into a stable and correct state when switched on.
 
 In Antares there are two approaches to achieve the same behavior in simulation as in real circuits.
 
 * **Different propagation delays**: In the example above, both NOR gates have the same propagation delay, e.g. 10 ns. If different propagation delays are defined for the two gates (e.g. 8 ns for the upper gate and 11 ns for the lower gate), the circuit will settle into a stable, correct state at startup. The latches and flip-flops of Antares' standard library are built according to this approach.
-* **Noise**: With the menu option menu:Simulation[Noise, Random Noise] the simulator can be instructed to change the runtimes of the components by a random value. With this option, the above SR latch takes a correct state at the start of the simulation (possibly after a short settling phase), even if both gates have configured the same run-time.
+* **Noise**: With the menu option menu:Simulation[Noise, Random Noise] the simulator can be instructed to change the runtimes of the components by a random value. With this option, the above SR latch takes a correct state at the start of simulation (possibly after a short settling phase), even if both gates have configured the same run-time.

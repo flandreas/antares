@@ -12,14 +12,14 @@ This chapter describes how to edit a single circuit.
 
 You open a circuit by double-clicking on the project element or the library element in the workbench tree. The name of the opened circuit is displayed in several places in the Antares window:
 
-* **Title bar**: The Antares window title bar shows the name of the circuit and whether the circuit is part of the open project or library. Example: __Antares - Project element "4-Bit Carry Ripple Adder"__.
-* **Navigation bar**: The first element of the navigation bar specifies the name of the opened circuit.
+* **Title bar**: The Antares window title bar shows the name of the circuit and whether the circuit is part of the open project or library. Example: __Antares - Project Element "4-Bit Carry Ripple Adder"__.
+* **Navigation bar**: The first element of the navigation bar specifies the name of the open circuit.
 * **Properties view**: If you click on the background of the current circuit in the drawing area, the attributes of the circuit are displayed in the properties window. The title of the properties window contains the name of the open circuit.
 * **Workbench tree**: The node in the workbench tree corresponding to the open circuit contains the name of the circuit. The icon of the node is highlighted in orange for the open circuit.
 
-A circuit always consists of the circuit itself and its icon, which is used when the circuit is added as a partial circuit to other circuits. Both parts can be edited separately. Use the view tools (the first two buttons in the toolbar) to switch between the two views.
+A circuit always consists of the circuit itself and its symbol, which is used when the circuit is added as a subcircuit to other circuits. Both parts can be edited separately. Use the view tools (the first two buttons in the toolbar) to switch between the two views.
 
-All changes - whether to the circuit itself, to the symbol view, or to attributes of the circuit - are always saved together. The circuit is the "memory unit" of Antares. While changes to project or library structures are always saved automatically, you must save changes to the circuit itself. Use the menu menu:File[Save] or the key combination kbd:[Cmd +S].
+All changes - whether to the circuit itself, to the symbol, or to attributes of the circuit - are always saved together. The circuit is the "storage unit" of Antares. While changes to project or library structures are always saved automatically, you must save changes to the circuit itself. Use the menu menu:File[Save] or the key combination kbd:[Cmd +S].
 
 == Select view
 
@@ -45,11 +45,11 @@ menu:View[Fit]:: Centers the display and sets the zoom factor so that the circui
 
 If you click with the mouse on the background of the circuit in the main window, the attributes of the circuit are offered for editing in the attibutes view.
 
-Name:: In this attribute a short name of the circuit can be entered in all supported languages. Note that you can still change the name of a circuit even if it is part of a library and is already used in projects as a partial circuit. This is because Antares does not use the name of the circuit for referencing subcircuits in libraries, but an internal unique identification (a so-called UUID).
+Name:: In this attribute a short name of the circuit can be entered in all supported languages. Note that you can still change the name of a circuit even if it is part of a library and is already used in projects as a subcircuit. This is because Antares does not use the name of the circuit for referencing subcircuits in libraries, but an internal unique identification (a so-called UUID).
 
 Description:: This attribute is used to capture a longer description of the circuit which is displayed in the preview of the explorer and in the description popup when used as a subcircuit in other circuits.
 
-Runtime:: This optional attribute can be used to specify the length of time that elapses between the processing of an input signal and the appearance of a modified output signal. It is used to control the display of the processing state of a subcircuit during link:{{site.basedir}}/user-manual/english/simulation/simulation[simulation].
+Propagation Delay:: This optional attribute can be used to specify the length of time that elapses between the processing of an input signal and the appearance of a modified output signal. It is used to control the display of the processing state of a subcircuit during link:{{site.basedir}}/user-manual/english/simulation/simulation[simulation].
 
 Function:: This attribute can be used to specify the script that Antares executes for this component during simulation, if the simulation is run in link:{{site.basedir}}/user-manual/english/simulation/simulation["Flat simulation"] mode. This is an advanced technique; for details on scripting, see the chapter link:{{site.basedir}}/user-manual/english/circuits/circuit-scripting["Scripting in Circuits"].
 
@@ -59,13 +59,13 @@ Default light color:: The light color that all components in this circuit should
 
 You add components to a circuit by selecting the components to be added in the workbench tree and dragging them into the circuit (Drag & Drop). The new component is given the default attributes specified by the programming.
 
-It often happens that you need several components with the same, modified attributes in a circuit, e.g. Or gates with three inputs instead of only two as with the default value. In these cases it may be useful to use copy/paste: Drag the first copy of the component into the circuit, set the desired attributes, copy the component to the clipboard using menu:Edit[Copy], and then paste the required number of additional components into the circuit using menu:Edit[Paste].
+It often happens that you need several components with the same, modified attributes in a circuit, e.g. OR gates with three inputs instead of only two as with the default value. In these cases it may be useful to use copy/paste: Drag the first copy of the component into the circuit, set the desired attributes, copy the component to the clipboard using menu:Edit[Copy], and then paste the required number of additional components into the circuit using menu:Edit[Paste].
 
 When inserting a component for the first time, Antares places the inserted component at a small distance from the original. If you then move the inserted component to a new location and then insert additional components from the clipboard, Antares will use the distance between the original and the location you defined for the first inserted component as a template. This makes it easy to create uniform arrangements of similar components, e.g. for flip-flops in shift register circuits.
 
 == Connect components
 
-Connecting components using lines is a separate, large topic that is dealt with in the separate chapter link:{{site.basedir}}/user-manual/english/circuits/wires["Wires"].
+Connecting components using wires is a separate, large topic that is dealt with in the separate chapter link:{{site.basedir}}/user-manual/english/circuits/wires["Wires"].
 
 == Attributes of subcircuits
 
@@ -73,37 +73,37 @@ The properties of the built-in base components are explained in chapter link:{{s
 
 Orientation:: The cardinal point to which the symbol of the subcircuit points. Like basic components, symbols of subcircuits can also be rotated with kbd:[Cmd + R].
 
-Mirror Horizontally:: Mirrors the symbol in horizontal direction (or on the vertical axis through the origin of the symbol). This is useful, for example, if lines with input signals arrive in the using circuit from the right side, but the inputs in the symbol are located on the left side of the symbol.
+Mirror Horizontally:: Mirrors the symbol in horizontal direction (or on the vertical axis through the origin of the symbol). This is useful, for example, if wires with input signals arrive in the using circuit from the right side, but the inputs in the symbol are located on the left side of the symbol.
 
-Mirror Vertically:: Mirrors the symbol in vertical direction (or on the horizontal axis through the origin of the symbol). This is useful e.g. if lines with control signals arrive from above in the using circuit, but the control inputs in the symbol are located at the lower side of the symbol.
+Mirror Vertically:: Mirrors the symbol in vertical direction (or on the horizontal axis through the origin of the symbol). This is useful e.g. if wires with control signals arrive from above in the using circuit, but the control inputs in the symbol are located at the lower side of the symbol.
 
-Description:: In this attribute a description of the partial circuit can be entered which is only valid for this one use of the partial circuit. This description replaces the one given by the author of the partial circuit.
+Description:: In this attribute a description of the subcircuit can be entered which is only valid for this one use of the subcircuit. This description replaces the one given by the author of the subcircuit.
 
-Label:: This attribute is only available if the symbol of the partial circuit contains at least one designation element, i.e. a text and/or a label. This attribute can be used to change the text of the label specified by the symbol. +
+Label:: This attribute is only available if the symbol of the subcircuit contains at least one designation element, i.e. a text and/or a label. This attribute can be used to change the text of the label specified by the symbol. +
  +
-Example: The example project "Microcomputer (Tannenbaum)" contains two 16bit registers that serve as latches in both data paths A and B of the CPU. The symbol of the 16-bit register contains the label component "REG" (for register). When using the registers within the CPU, this attribute "Label" can now be used to replace the text "REG" with "A Latch" or "B Latch". +
+Example: The example project "Microcomputer (Tannenbaum)" contains two 16-bit registers that serve as latches in both data paths A and B of the CPU. The symbol of the 16-bit register contains the label component "REG" (for register). When using the registers within the CPU, this attribute "Label" can now be used to replace the text "REG" with "A Latch" or "B Latch". +
  +
 The value of the attribute "Label" can also be deleted to ensure that the label specified by the symbol is not displayed.
 
 == Edit symbol
 
-The previously presented possibilities of adapting the symbol of a partial circuit by mirroring or changing the designation are often sufficient to integrate a partial circuit optimally into a circuit. Sometimes, however, the symbol of a partial circuit needs to be adapted even further.
+The previously presented possibilities of adapting the symbol of a subcircuit by mirroring or changing the designation are often sufficient to integrate a subcircuit optimally into a circuit. Sometimes, however, the symbol of a subcircuit needs to be adapted even further.
 
 The figure below shows the already described application of 16-bit registers as data path latches in a CPU. In addition to adapting the standard description of the register, in this case one would like to display e.g. the currently stored value of the register directly in the symbol, something which is not provided by the 16-bit register in the standard library.
 
 image::user-manual/circuits/edit-symbol.png[Edit Symbol, 300,align="center"]
 
-For such and similar applications, Antares offers the possibility to edit the symbol of a single partial circuit completely free. With menu:context menu[Edit Symbol] Antares opens the same symbol editor that is used for editing the symbol of circuits. This provides all the editor's options such as moving inputs, editing graphical elements such as rectangles, or adding control elements. In the example above, the control element "Output" of the 16-bit register has been added to the symbol.
+For such and similar applications, Antares offers the possibility to edit the symbol of a single subcircuit completely free. With context menu menu:Edit Symbol[] Antares opens the same symbol editor that is used for editing the symbol of circuits. This provides all the editor's options such as moving inputs, editing graphical elements such as rectangles, or adding control elements. In the example above, the control element "Output" of the 16-bit register has been added to the symbol.
 
-With btn:[OK] the symbol editor is closed and the changed symbol is saved as symbol of the partial circuit in the current circuit.
+With btn:[OK] the symbol editor is closed and the changed symbol is saved as symbol of the subcircuit in the current circuit.
 
-NOTE: The modified symbol is only valid for the selected partial circuit in the current circuit. Other subcircuits of the same circuit retain their symbol and, in particular, the library or project containing the subcircuit is not changed.
+NOTE: The modified symbol is only valid for the selected subcircuit in the current circuit. Other subcircuits of the same circuit retain their symbol and, in particular, the library or project containing the subcircuit is not changed.
 
-The original symbol can be restored with menu:context menu[Reset Symbol].
+The original symbol can be restored with context menu menu:Reset Symbol[].
 
 == Drawing tools
 
-A circuit in Antares can not only consist of digital components and the connected lines, but also of purely graphical elements such as rectangles or texts. Use the drawing tools in the Antares window toolbar to add such elements to the circuit.
+A circuit in Antares can not only consist of digital components and the connected wires, but also of purely graphical elements such as rectangles or texts. Use the drawing tools in the Antares window toolbar to add such elements to the circuit.
 
 Select the drawing tool and then move the mouse over the drawing area. The changed mouse pointer icon indicates that you can start drawing.
 
@@ -115,7 +115,7 @@ image:user-manual/circuits/ellipse.png[Ellipse] **Ellipse** Click the left mouse
 
 image:user-manual/circuits/polyline.gif[Polyline] **Polyline** Click the left mouse button to set the points of a polyline. A double click terminates the creation of the polyline. To add further points later, you can select the polyline and double-click on a segment of the polyline. If you move an intermediate point to another intermediate point, the two points will be merged into a single point.
 
-image:user-manual/circuits/curve-20.png[curve] **curve** Click with the mouse at three points to define the three points of a curve. The three points are the support points of a square Bézier curve.
+image:user-manual/circuits/curve-20.png[Curve] **Curve** Click with the mouse at three points to define the three points of a curve. The three points are the support points of a square Bézier curve.
 
 image:user-manual/circuits/text.gif[Text] **Text** A click with the left mouse button creates a text component with a standard text. Double click on the text to change the text or use the "Text" attribute in the Antares properties window. The text can contain several lines. In the current version of Antares, the text is left aligned. Change the size of the text box by editing it like a rectangle.
 
@@ -127,9 +127,9 @@ Select a graphic component and change its attributes such as "Fill", "Border", "
 
 Antares offers two tools that facilitate the mutual alignment of components.
 
-image:user-manual/circuits/snapGrid.gif[Raster] **Raster** This tool always sets the zero point of a component to a grid point. The spacing of the grid points can be changed in Antares preferences; note, however, that most of the given components are dimensioned so that their connections are aligned to the standard grid spacing.
+image:user-manual/circuits/snapGrid.gif[Raster] **Raster** This tool always sets the zero point of a component to a grid point. The spacing of the grid points can be changed in Antares preferences; note, however, that most of the given components are dimensioned so that their pins are aligned to the standard grid spacing.
 
-image:user-manual/circuits/snap.gif[Components] **Components** With this tool, Antares tries to align the component you place with respect to existing components. Depending on the type of component, either the zero point of the component or its inputs and outputs will be used. Antares uses thin orange guides to indicate where it has found a possible alignment with others.
+image:user-manual/circuits/snap.gif[Components] **Components** With this tool, Antares tries to align the component you place with respect to existing components. Depending on the type of component, either the zero point of the component or its inputs and outputs will be used. Antares uses thin orange guidelines to indicate where it has found a possible alignment with others.
 
 
 image::user-manual/circuits/snap.png[Alignment, 400, align="center"]

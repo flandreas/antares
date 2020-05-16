@@ -7,7 +7,7 @@ WARNING: The Antares Scripting DSL is in experimental state and will probably be
 
 TIP: The explanation of the Antares scripting DSL functions is still quite short. Please see the Antares Standard Library for lots of examples on how to use these functions.
 
-== Inhalt
+== Contents
 
 * <<CircuitViewBridge>>: Access to the circuit
 * <<CircuitElemModelBridge>>: Access to the model of a circuit element

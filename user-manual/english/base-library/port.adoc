@@ -12,7 +12,9 @@ A port is either an input, an output, or an input/output, depending on the value
 
 Ports show the current signal during simulation. Depending on the value of the attributes "Bit Width" and "Representation", different numbers of digits are required. Antares arranges the digits in blocks of 4 digits on top of each other, with lower digits at the bottom/right and higher digits at the top/left.
 
-During the simulation, inputs can be used like a switch, but only if they are part of the main circuits, i.e. the outermost circuit. If Antares would allow the user to change the signal of an input of a subcircuit, there would be a conflict with the signal passed to the input by the surrounding circuit.
+During simulation, inputs can be used like a switch, but only if they are part of the main circuits, i.e. the outermost circuit. If Antares would allow the user to change the signal of an input of a subcircuit, there would be a conflict with the signal passed to the input by the surrounding circuit.
+
+Note that you can also use the keyboard to alter the signal of an input port. The digit that currently has the focus is highlighted with a dashed rectangle. The keys you can use to alter the input signal depends on the the value of the "representation" attributes: For binary representations, you can use the 0 and 1 keys, whereas for hexadecimal representation, you can use all keys from 0..9 and from A..F.
 
 == Pins
 

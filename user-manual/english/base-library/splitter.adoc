@@ -8,13 +8,13 @@ image:user-manual/base-library/splitter-sample.png[Splitter,300]
 
 == Behavior
 
-The splitter can be used to split (or "fan out") the signal of a wire bundle to several wire bundles (or single wires) that contain fewer bits than the incoming wire bundle.
+The splitter can be used to split the signal of a wire bundle to several wire bundles (or single wires) that contain fewer bits than the incoming wire bundle.
 
 The degree of splitting is limited in that only integer divisors of the bit width of the input wire bundle are possible. For example, an 8-bit wire bundle can only be split as follows:
 
-* 2: The splitter has 2 output wire bundles of 4 bits each
-* 4: The splitter has 4 output wire bundles of 2 bits each
-* 8: The splitter has 8 output wires with 1 bit each
+* 2: The splitter has 2 output pins of 4 bits each
+* 4: The splitter has 4 output pins of 2 bits each
+* 8: The splitter has 8 output pins of 1 bit each
 
 In the current version of Antares, the splitter does not support bidirectional pins. Therefore, for combining wires into wire bundles, the link:{{site.basedir}}/user-manual/english/base-library/combiner[combiner component] must be used.
 

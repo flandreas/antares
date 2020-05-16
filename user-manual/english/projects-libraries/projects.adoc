@@ -6,7 +6,7 @@ In this chapter you will learn how to manage your own projects. The basics of pr
 
 == Manage projects
 
-The main menu menu:File[Projects...] takes you to the Antares project management.
+The main menu menu:File[Projects...] takes you to the Antares project management window.
 
 image::user-manual/projects-libraries/projects-sample-en.png[Projects,500,align="center"]
 
@@ -22,6 +22,6 @@ NOTE: In a future version, it will be possible to export projects together with 
 
 btn:[Import]:: Imports a project from a ZIP file. The following situations can occur where the import fails:
 [horizontally]
-Invalid:: The imported ZIP file is invalid, i.e. it was probably not created by an export from Antares.
-Name already exists:: Since the name of a library must be unique, Antares rejects the import of a library with an already existing name.
-Unknown library:: The project to be imported references a library that does not exist in this Antares installation.
+- *Invalid:* The imported ZIP file is invalid, i.e. it was probably not created by an export from Antares.
+- *Name already exists:* Since the name of a library must be unique, Antares rejects the import of a library with an already existing name.
+- *Unknown library:* The project to be imported references a library that does not exist in this Antares installation.

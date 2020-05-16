@@ -18,7 +18,7 @@ Navigation Bar:: The navigation bar shows you where you are right now. This is i
 
 Properties View:: The Properties view displays the properties of the component currently selected in the main window. Depending on the type of component, some properties can be changed while others are only displayed. For example, the AND gate has the property "Number of Inputs", which can be used to create an AND gate with more than two inputs.
 
-View Tools:: The View Tools allow you to switch between circuit and symbol view. In the circuit view, which is opened by default, the actual circuit can be designed, while in the symbol view the symbol of this circuit is designed, which is used when this circuit is reused in another circuit.
+View Tools:: The View Tools allow you to switch between circuit view and symbol view. In the circuit view, which is opened by default, the actual circuit can be designed, while in the symbol view the symbol of this circuit is designed, which is used when this circuit is reused in another circuit.
 
 Simulation Tools:: With the simulation tools the simulation of the circuit currently displayed in the main view can be started, paused and continued in single step mode. The slider allows to change the simulation speed.
 

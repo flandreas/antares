@@ -4,20 +4,20 @@ include::../../page-variables.txt[]
 
 == Introduction
 
-Scenarios are a feature of Antares that allows additional information to be displayed during the simulation of a circuit, which helps to better understand how the circuit works.
+Scenarios are a feature of Antares that allows additional information to be displayed during simulation of a circuit, which helps to better understand how the circuit works.
 
 Currently the following types of additional information are supported:
 
 * Display of text with explanations
 * Highlighting of components and wires
 
-The following example shows the circuit "SR Latch" from the standard library during execution of the simulation after the user clicked on the input "S" while the latch was reset. Note the two text boxes with explanations displayed above and below the circuit and the highlighting of the lines coming from the upper OR gate.
+The following example shows the circuit "SR Latch" from the standard library during execution of the simulation after the user clicked on the input "S" while the latch was reset. Note the two text boxes with explanations displayed above and below the circuit and the highlighting of the wire coming from the upper OR gate.
 
 image::user-manual/scenarios/scenarios-sample-en.png[Example scenarios, 500,align="center"]
 
 == Concept
 
-As the author of a circuit, you can define scenarios yourself, which in turn consist of scenario steps. For scenarios and scenario steps you define the conditions under which they are activated. These conditions are, for example, current output signals from components of the circuit. Antares constantly checks during the simulation whether one of these conditions has occurred, and if so, activates the relevant scenario and/or scenario step. The activation causes the additional information you have defined for this scenario or scenario step to be displayed.
+As the author of a circuit, you can define scenarios yourself, which in turn consist of scenario steps. For scenarios and scenario steps you define the conditions under which they are activated. These conditions are, for example, current output signals from components of the circuit. Antares constantly checks during simulation whether one of these conditions has occurred, and if so, activates the relevant scenario and/or scenario step. The activation causes the additional information you have defined for this scenario or scenario step to be displayed.
 
 In the above example of "SR Latch", the author of the circuit has defined four scenarios:
 
@@ -26,7 +26,7 @@ In the above example of "SR Latch", the author of the circuit has defined four s
 * **Store**: The condition of this scenario is that both S and R must be 0. This is the store case: The current output value should be retained even after the input signals have disappeared.
 * **Race Condition**: The condition of this scenario is that both S and R have the value 1. This is an illegal use of the "SR Latch".
 
-Scenario steps can be used to further refine a single scenario, e.g. to explain in detail how to set the "SR Latch". For scenario steps, it can be useful not only to display explanatory texts, but also to highlight the component that plays an important role in this scenario step, or to highlight lines through which a signal important for this scenario step is transmitted.
+Scenario steps can be used to further refine a single scenario, e.g. to explain in detail how to set the "SR Latch". For scenario steps, it can be useful not only to display explanatory texts, but also to highlight the component that plays an important role in this scenario step, or to highlight wires through which a signal important for this scenario step is transmitted.
 
 The explanation text of an active scenario is displayed in a text box above the circuit, while the explanation text of an active scenario step is displayed below the circuit.
 
@@ -77,7 +77,7 @@ return circuit.input("S") == "1" && circuit.input("R") == "0";
 
 Name:: The name of the scenario step, which can be translated into all supported languages. It is only used in the current version of Antares for display in the tree.
 
-Description:: The description of the scenario step, which can be translated into all supported languages. It will be displayed in a text box below the circuit during the simulation, as long as the scenario step is active.
+Description:: The description of the scenario step, which can be translated into all supported languages. It will be displayed in a text box below the circuit during simulation, as long as the scenario step is active.
 
 Condition:: The script with the condition that must be fulfilled in order for this scenario to be recognized. If several scenario steps of the active scenario fulfilled their condition at the same time, Antares will activate only the first of these scenario steps. A scenario step can only be activated if the scenario it is part of is active.
 See link:{{site.basedir}}/user-manual/english/scripting/scripting[Scripting] for details on scripting.  +

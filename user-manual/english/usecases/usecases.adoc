@@ -8,7 +8,7 @@ Use cases in Antares are programmed uses of a circuit using link:{{site.basedir}
 
 A simple example of use cases are the possible uses of an SR flip-flop, i.e. "Set" and "Reset". When setting, first both inputs "S" and "R" are set to 0 and then the input "S" is set to 1.
 
-A more complex example is the execution of a specific machine instruction in a microprocessor without the microprocessor being built into a using circuit with ROM, RAM and timer. If, for example, a LODD (Load Direct) instruction is to be executed, the following must happen after starting the simulation, depending on the microprocessor:
+A more complex example is the execution of a specific machine instruction in a microprocessor without the microprocessor being built into a using circuit with ROM, RAM and timer. If, for example, a LODD (Load Direct) instruction is to be executed, the following must happen after starting simulation, depending on the microprocessor:
 
 * At address 0 of the (non-existent) program memory, the LODD command with the address of the memory cell to be read out must be present
 * The clock input of the microprocessor must provide changing signals with a not too large period.
