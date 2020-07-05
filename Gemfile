@@ -19,6 +19,7 @@ gem "jekyll-feed"
   gem "jekyll-compose", "~> 0.5"
   gem "jekyll-redirect-from"
   gem 'jekyll-asciidoc'
+  gem 'jekyll-seo-tag'
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem

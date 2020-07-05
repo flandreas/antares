@@ -18,10 +18,14 @@ gallery:
 
 [Download]({{ "/assets/examples/tannenbaum/Microcomputer (Tannenbaum).zip" | relative_url }}){: .btn .btn--primary .btn--large}
 
+{% include gallery id="gallery" caption="Screenshots" %}
+
 A microcomputer with a micro-programmable CPU according to "Structured Computer Organisation" by Andrew S. Tannenbaum (Prentice Hall 1984, ISBN 0-13-854605-3).
 
 The microcomputer's ROM is loaded with a maschine program that sums all numbers between 0 and 100. The resulting sum is displayed by the 7-segment display of the microcomputer.
 
-Feel free to write your own machine programs and load them into the microcomputer's ROM.
+You can download this [data sheet]({{ "/assets/examples/tannenbaum/Tannenbaum-datasheet.pdf" | relative_url }}) that contains a documentation of the micro instruction set as well as the macro instruction set.
 
-{% include gallery id="gallery" caption="Screenshots" %}
+Feel free to write your own machine programs and load them into the microcomputer's ROM. You will have to assemble the machine code by yourself,
+but this is a very instructive experience. If you are a programmer, you can also write your own assembler program,
+which might also be a lot of fun to do.
