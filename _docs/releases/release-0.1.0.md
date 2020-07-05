@@ -8,7 +8,7 @@ sidebar: { nav: "releases" }
 
 This is the first public release after more than 4 years of development.
 
-**Release Date**: 14.04.2020
+**Release Date**: April 14, 2020
 
 # Features
 

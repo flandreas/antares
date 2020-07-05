@@ -20,7 +20,7 @@ title                    : "Antares"
 title_separator          : "-"
 subtitle                 : Digital Circuit Learning Platform
 name                     : "Andreas Fleischmann"
-description              :
+description              : Digital circuit simulation and learning platform
 url                      : "https://www.antarescircuit.io"
 baseurl                  : ""
 repository               : "antares/flandreas.github.io"
@@ -224,6 +224,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-seo-tag
 
 # mimic GitHub Pages with --safe
 whitelist:
