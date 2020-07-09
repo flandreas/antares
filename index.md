@@ -8,6 +8,7 @@ header:
 excerpt: >
   A free, powerful platform for designing, simulating and explaining digital circuits.<br />
   <small><a href="docs/releases/release-0.2.0">Latest release 0.2.0</a></small>
+description: "digital circuit simulator simulation education"
 feature_row:
   - image_path: /assets/images/splash-button-design.jpg
     title: "Design"

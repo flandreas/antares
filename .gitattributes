@@ -1,3 +1,0 @@
-Antares-*.pkg filter=lfs diff=lfs merge=lfs -text
-*.pkg filter=lfs diff=lfs merge=lfs -text
-*.msi filter=lfs diff=lfs merge=lfs -text
