@@ -51,7 +51,7 @@ manual:
         url: /user-manual/english/styles/styles
       - title: "Descriptions and Explanations"
         url: /user-manual/english/description/description
-  - title: Advances Techniques
+  - title: Advanced Techniques
     children:
       - title: "Scripting"
         url: /user-manual/english/scripting/scripting
