@@ -29,6 +29,7 @@ Color:: Normally, the color in which a component is drawn is determined by its s
 * image:user-manual/base-library/probe.png[Probe] link:{{site.basedir}}/user-manual/english/base-library/probe[Probe]
 * image:user-manual/base-library/tunnel.png[Tunnel] link:{{site.basedir}}/user-manual/english/base-library/tunnel[Tunnel]
 * image:user-manual/base-library/constant.png[Constant] link:{{site.basedir}}/user-manual/english/base-library/constant[Constant]
+* image:user-manual/base-library/break.png[Breakpoint] link:{{site.basedir}}/user-manual/english/base-library/breakpoint[Breakpoint]
 
 === Logical Gates
 

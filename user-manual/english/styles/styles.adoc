@@ -84,6 +84,10 @@ Black & White:: An alternative theme similar to "Winter" but without the blue co
 +
 image::user-manual/styles/bw-theme-sample-en.png[Styles, 400,align="center"]
 
-CRT :: An experimental "Dark Theme" which aims to explore the possibilities and limitations of themes. The name "CRT" is a reminiscence of times in the past when computers still had monochrome terminals.
+Darcula:: A dark theme.
++
+image::user-manual/styles/darcula-theme-sample-en.png[Styles, 400,align="center"]
+
+CRT:: An experimental "Dark Theme" which aims to explore the possibilities and limitations of themes. The name "CRT" is a reminiscence of times in the past when computers still had monochrome terminals.
 +
 image::user-manual/styles/crt-theme-sample-en.png[Styles, 400,align="center"]

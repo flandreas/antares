@@ -273,6 +273,44 @@ if (!elem.anyBitUndefined(d)) {
 }
 ----
 
+`hexWord(<value:String>, <bitWidth:Int>)`:: Returns the `Word` of a particular bit width with the specified hexadecimal value.
++
+.Example
+[source,javascript]
+----
+var outA = elem.hexWord("00FF", 16);
+----
+
+`undefinedWord(<bitWidth:Int)`:: Returns the `Word` of the specified bit width with all bits undefined.
++
+.Example
+[source,javascript]
+----
+var outA = elem.undefinedWord(16);
+----
+
+`store(<name:String>, <value:Word>)`:: Stores the specified `Word` under the given name, which must be unique for
+the current `GraphElement`. This can be used for scripting sequential circuits, or any circuits that store a state.
++
+.Example
+[source,javascript]
+----
+var c = elem.inputWord("C");
+var fc = elem.inputWord("FC").toInt();
+
+if (elem.inputBit("ENC") && elem.portRaised("CLK")) {
+  elem.store(fc.toString(), c);
+}
+----
+
+`load(<name:String>)`:: Returns the `Word` that has previously been stored under the given name.
++
+.Example
+[source,javascript]
+----
+var outA = elem.load("3");
+----
+
 == CircuitElemViewBridge
 
 Used as a sub-element of `CircuitViewBridge`. Note that `CircuitElemViewBridge` is an extension of
@@ -348,6 +386,34 @@ elem.setOutputWord(elem.inputWord().not());
 elem.setOutputWord(
   elem.inputWord("A").and(elem.inputWord("B"))
 );
+----
+
+`shiftLeft(<bitCount:Int>)`:: Returns a new `Word` whose bits are shifted the specified number of bits to the left.
++
+.Example
+[source,javascript]
+----
+var d = elem.inputWord("D");
+elem.setOutputWord("O", d.shiftLeft(1));
+----
+
+`shiftRight(<bitCount:Int>)`:: Returns a new `Word` whose bits are shifted the specified number of bits to the right.
++
+.Example
+[source,javascript]
+----
+var d = elem.inputWord("D");
+elem.setOutputWord("O", d.shiftRight(1));
+----
+
+`subword(<index:Int>, <width:Int)`:: Returns the subword of the specified bit width, starting at the specified index.
++
+.Example
+[source,javascript]
+----
+var d = elem.inputWord("D");
+// Sets "ADR" to bits 0..7 of "D"
+elem.setOutputWord("ADR", d.subword(0, 8));
 ----
 
 == UsecaseActionBridge

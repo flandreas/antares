@@ -20,4 +20,6 @@ Output:: A 1-bit output, which outputs the delayed signal.
 
 Orientation:: The direction in which the output points.
 
+Bit Width:: The bit width of the input and output pin.
+
 Delay:: The delay time in nanoseconds.

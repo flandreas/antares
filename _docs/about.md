@@ -14,6 +14,10 @@ gallery:
   - url: /assets/images/feature-gallery/microcomputer.png
     image_path: /assets/images/feature-gallery/microcomputer.png
     title: "Sample microcomputer"
+  - url: /assets/images/feature-gallery/darkmode.png
+    image_path: /assets/images/feature-gallery/darkmode.png
+    title: "Dark mode"
+
 ---
 
 Antares is a learning platform for digital circuits. In addition to drawing and simulating digital circuits, Antares places particular emphasis on providing tools to help students better understand how these circuits work.
@@ -41,6 +45,7 @@ The ultimate goal of Antares is to facilitate interactive textbooks with active 
   - True model-view design: Multiple views of circuit and subcircuits
   - Animations for diving into subcircuits
   - Choosable themes
+  - Dark mode
 - **Circuit Design**
   - Hierarchical circuit design: Build your own subcircuits
   - Editor for custom subcircuit symbols
