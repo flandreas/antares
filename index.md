@@ -31,7 +31,7 @@ feature_row:
   - image_path: /assets/images/splash-button-web.svg
     title: "Soon: Web-based"
     excerpt: "Currently a desktop tool, Antares will eventually be available in web browsers."
-    url: "/docs/web"
+    url: "/docs/web/web"
     btn_label: "Learn More"
     btn_class: "btn--primary"
 ---

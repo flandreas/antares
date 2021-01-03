@@ -7,4 +7,5 @@ header:
 
 This is the place where you will be able to follow the progress of the web version of Antares.
 
-The first step will be to display a simple circuit here. Stay tuned..
+[Level 1](../antares-web.html) Draw basic shapes. Various selection models. Drag and resize.
+Zoom using the mouse wheel.
