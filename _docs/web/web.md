@@ -5,7 +5,13 @@ header:
   show_overlay_excerpt: false
 ---
 
-This is the place where you will be able to follow the progress of the web version of Antares.
+This is the place where you can follow the development progress of Antares' web version.
 
-[Level 1](../antares-web.html) Draw basic shapes. Various selection models. Drag and resize.
+[Level 2](../antares-web.html): Load and display circuit from standard library.
+
+Next up: Simulate single circuit.
+
+## History
+
+**Level 1**: Draw basic shapes. Various selection models. Drag and resize.
 Zoom using the mouse wheel.
