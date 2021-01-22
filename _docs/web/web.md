@@ -7,13 +7,15 @@ header:
 
 This is the place where you can follow the development progress of Antares' web version.
 
-[Level 5](../antares-web.html): More simulation UI controls (break, resume, simulation speed).
+[Level 6](../antares-web.html): Dive into subcircuits.
 
-Supporting single step mode, simulation speed control and signal flow animation.
+Either with or without animation. Surface from subcircuit using breadcrumb.
 
-Next up: Dive down into subcircuits.
+Next up: Library tree.
 
 ## History
+
+**Level 5**: More simulation UI controls (break, resume, simulation speed).
 
 **Level 4**: Simulate circuits with subcircuits (Load library circuits).
 
