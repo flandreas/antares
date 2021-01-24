@@ -36,4 +36,10 @@ feature_row:
     btn_class: "btn--primary"
 ---
 
+<!---
+![Image](/assets/images/homepage-circuit.gif)
+-->
+
+{% include figure image_path="/assets/images/homepage-circuit.gif" %}
+
 {% include feature_row %}
