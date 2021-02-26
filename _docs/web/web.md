@@ -7,13 +7,15 @@ header:
 
 This is the place where you can follow the development progress of Antares' web version.
 
-[Level 6](../antares-web.html): Dive into subcircuits.
+[Level 7](../antares-web.html): Library tree.
 
-Either with or without animation. Surface from subcircuit using breadcrumb.
+Open circuits from the library tree. Drag component from the library into the circuit.
 
-Next up: Library tree.
+Next up: Project tree.
 
 ## History
+
+**Level 6**: Library tree.
 
 **Level 5**: More simulation UI controls (break, resume, simulation speed).
 
