@@ -24,48 +24,52 @@ Color:: Normally, the color in which a component is drawn is determined by its s
 
 === Net
 
-* image:user-manual/base-library/splitter.png[Splitter] link:{{site.basedir}}/user-manual/english/base-library/splitter[Splitter]
-* image:user-manual/base-library/concentrator.png[Combiner] link:{{site.basedir}}/user-manual/english/base-library/combiner[Combiner]
-* image:user-manual/base-library/probe.png[Probe] link:{{site.basedir}}/user-manual/english/base-library/probe[Probe]
-* image:user-manual/base-library/tunnel.png[Tunnel] link:{{site.basedir}}/user-manual/english/base-library/tunnel[Tunnel]
-* image:user-manual/base-library/constant.png[Constant] link:{{site.basedir}}/user-manual/english/base-library/constant[Constant]
-* image:user-manual/base-library/break.png[Breakpoint] link:{{site.basedir}}/user-manual/english/base-library/breakpoint[Breakpoint]
+* image:user-manual/base-library/splitter.svg[Splitter] link:{{site.basedir}}/user-manual/english/base-library/splitter[Splitter]
+* image:user-manual/base-library/concentrator.svg[Combiner] link:{{site.basedir}}/user-manual/english/base-library/combiner[Combiner]
+* image:user-manual/base-library/probe.svg[Probe] link:{{site.basedir}}/user-manual/english/base-library/probe[Probe]
+* image:user-manual/base-library/tunnel.svg[Tunnel] link:{{site.basedir}}/user-manual/english/base-library/tunnel[Tunnel]
+* image:user-manual/base-library/constant.svg[Constant] link:{{site.basedir}}/user-manual/english/base-library/constant[Constant]
+* image:user-manual/base-library/break.svg[Breakpoint] link:{{site.basedir}}/user-manual/english/base-library/breakpoint[Breakpoint]
+* image:user-manual/base-library/pull-resistor.svg[Pull Resistor] link:{{site.basedir}}/user-manual/english/base-library/pull-resistor[Pull Resistor]
+* image:user-manual/base-library/transistor.svg[Transistor] link:{{site.basedir}}/user-manual/english/base-library/transistor[Transistor]
+* image:user-manual/base-library/ground.svg[Ground] link:{{site.basedir}}/user-manual/english/base-library/ground[Ground]
+* image:user-manual/base-library/power.svg[Power] link:{{site.basedir}}/user-manual/english/base-library/power[Power]
 
 === Logical Gates
 
-* image:user-manual/base-library/and.png[AND] link:{{site.basedir}}/user-manual/english/base-library/and[AND]
-* image:user-manual/base-library/or.png[OR] link:{{site.basedir}}/user-manual/english/base-library/or[OR]
-* image:user-manual/base-library/nor.png[NOT] link:{{site.basedir}}/user-manual/english/base-library/not[NOT]
-* image:user-manual/base-library/nand.png[NAND] link:{{site.basedir}}/user-manual/english/base-library/nand[NAND]
-* image:user-manual/base-library/nor.png[NOR] link:{{site.basedir}}/user-manual/english/base-library/nor[NOR]
-* image:user-manual/base-library/xor.png[Exculsive OR (XOR)] link:{{site.basedir}}/user-manual/english/base-library/xor[XOR]
-* image:user-manual/base-library/xor.png[Exclusive OR (XNOR)] link:{{site.basedir}}/user-manual/english/base-library/xnor[XNOR]
-* image:user-manual/base-library/buffer.png[Buffer] link:{{site.basedir}}/user-manual/english/base-library/buffer[Buffer]
-* image:user-manual/base-library/tristate-buffer.png[Tri-State Puffer] link:{{site.basedir}}/user-manual/english/base-library/tristate-buffer[Tri-State Buffer]
-* image:user-manual/base-library/delay.png[Delay] link:{{site.basedir}}/user-manual/english/base-library/delay[Delay]
+* image:user-manual/base-library/and.svg[AND] link:{{site.basedir}}/user-manual/english/base-library/and[AND]
+* image:user-manual/base-library/or.svg[OR] link:{{site.basedir}}/user-manual/english/base-library/or[OR]
+* image:user-manual/base-library/nor.svg[NOT] link:{{site.basedir}}/user-manual/english/base-library/not[NOT]
+* image:user-manual/base-library/nand.svg[NAND] link:{{site.basedir}}/user-manual/english/base-library/nand[NAND]
+* image:user-manual/base-library/nor.svg[NOR] link:{{site.basedir}}/user-manual/english/base-library/nor[NOR]
+* image:user-manual/base-library/xor.svg[Exculsive OR (XOR)] link:{{site.basedir}}/user-manual/english/base-library/xor[XOR]
+* image:user-manual/base-library/xor.svg[Exclusive OR (XNOR)] link:{{site.basedir}}/user-manual/english/base-library/xnor[XNOR]
+* image:user-manual/base-library/buffer.svg[Buffer] link:{{site.basedir}}/user-manual/english/base-library/buffer[Buffer]
+* image:user-manual/base-library/tristate-buffer.svg[Tri-State Puffer] link:{{site.basedir}}/user-manual/english/base-library/tristate-buffer[Tri-State Buffer]
+* image:user-manual/base-library/delay.svg[Delay] link:{{site.basedir}}/user-manual/english/base-library/delay[Delay]
 
 === Input
 
-* image:user-manual/base-library/input.png[Circuit Input] link:{{site.basedir}}/user-manual/english/base-library/port[Circuit Input]
-* image:user-manual/base-library/switch.png[Switch] link:{{site.basedir}}/user-manual/english/base-library/switch[Switch]
-* image:user-manual/base-library/dip-switch.png[DIP Switch] link:{{site.basedir}}/user-manual/english/base-library/dip-switch[DIP Switch]
-* image:user-manual/base-library/clock.png[Clock] link:{{site.basedir}}/user-manual/english/base-library/clock[Clock]
-* image:user-manual/base-library/keyboard.png[Keyboard] link:{{site.basedir}}/user-manual/english/base-library/keyboard[Keyboard]
+* image:user-manual/base-library/input.svg[Circuit Input] link:{{site.basedir}}/user-manual/english/base-library/port[Circuit Input]
+* image:user-manual/base-library/switch.svg[Switch] link:{{site.basedir}}/user-manual/english/base-library/switch[Switch]
+* image:user-manual/base-library/dip-switch.svg[DIP Switch] link:{{site.basedir}}/user-manual/english/base-library/dip-switch[DIP Switch]
+* image:user-manual/base-library/clock.svg[Clock] link:{{site.basedir}}/user-manual/english/base-library/clock[Clock]
+* image:user-manual/base-library/keyboard.svg[Keyboard] link:{{site.basedir}}/user-manual/english/base-library/keyboard[Keyboard]
 
 === Output
 
-* image:user-manual/base-library/output.png[Circuit Output] link:{{site.basedir}}/user-manual/english/base-library/port[Circuit Output]
-* image:user-manual/base-library/led.png[LED] link:{{site.basedir}}/user-manual/english/base-library/led[LED]
-* image:user-manual/base-library/rgb-led.png[RGB-LED] link:{{site.basedir}}/user-manual/english/base-library/rgb-led[RGB-LED]
-* image:user-manual/base-library/7segment.png[7-Segment-Display] link:{{site.basedir}}/user-manual/english/base-library/7segment[7-Segment-Display]
-* image:user-manual/base-library/led-matrix.png[LED-Matrix] link:{{site.basedir}}/user-manual/english/base-library/led-matrix[LED-Matrix]
-* image:user-manual/base-library/terminal.png[Terminal] link:{{site.basedir}}/user-manual/english/base-library/terminal[Terminal]
+* image:user-manual/base-library/output.svg[Circuit Output] link:{{site.basedir}}/user-manual/english/base-library/port[Circuit Output]
+* image:user-manual/base-library/led.svg[LED] link:{{site.basedir}}/user-manual/english/base-library/led[LED]
+* image:user-manual/base-library/rgb-led.svg[RGB-LED] link:{{site.basedir}}/user-manual/english/base-library/rgb-led[RGB-LED]
+* image:user-manual/base-library/7segment.svg[7-Segment-Display] link:{{site.basedir}}/user-manual/english/base-library/7segment[7-Segment-Display]
+* image:user-manual/base-library/led-matrix.svg[LED-Matrix] link:{{site.basedir}}/user-manual/english/base-library/led-matrix[LED-Matrix]
+* image:user-manual/base-library/terminal.svg[Terminal] link:{{site.basedir}}/user-manual/english/base-library/terminal[Terminal]
 
 === Memory
 
-* image:user-manual/base-library/ram.png[RAM] link:{{site.basedir}}/user-manual/english/base-library/ram[RAM]
-* image:user-manual/base-library/rom.png[ROM] link:{{site.basedir}}/user-manual/english/base-library/rom[ROM]
+* image:user-manual/base-library/ram.svg[RAM] link:{{site.basedir}}/user-manual/english/base-library/ram[RAM]
+* image:user-manual/base-library/rom.svg[ROM] link:{{site.basedir}}/user-manual/english/base-library/rom[ROM]
 
 === Arithmetic
 
-* image:user-manual/base-library/random.png[Random] link:{{site.basedir}}/user-manual/english/base-library/random[Random]
+* image:user-manual/base-library/random.svg[Random] link:{{site.basedir}}/user-manual/english/base-library/random[Random]

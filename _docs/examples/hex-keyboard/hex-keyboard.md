@@ -16,7 +16,7 @@ gallery:
 
 # Hexadecimal Keyboard
 
-[Download]({{ "/assets/examples/hex-keyboard/Hexadecimal Keyboard.zip" | relative_url }}){: .btn .btn--primary .btn--large}
+[Download](https://github.com/flandreas/antares/releases/download/v0.4.0/Hexadecimal.Keyboard.zip){: .btn .btn--primary .btn--large}
 
 {% include gallery id="gallery" caption="Screenshots" %}
 

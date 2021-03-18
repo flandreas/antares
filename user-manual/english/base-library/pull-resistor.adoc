@@ -1,0 +1,27 @@
+= Pull Resistor
+include::../../page-variables.txt[]
+:page-permalink: /user-manual/english/base-library/pull-resistor
+
+== Appearance
+
+image:user-manual/base-library/pull-resistor-example.png[Example Pull Resistor, 200]
+
+== Behavior
+
+A pull resistor pulls the signal of the wire to which it is connected to either 0 or 1, depending on its configuration.
+
+If it is connected to a multi-bit wire, each bit of the wire's signal that is floating is pulled towards the configured direction, while the other bits of the signal are left unchanged.
+
+== Pins
+
+A pull resistor has only one output pin whose bit width is determined by the attribute "Bit Width".
+
+== Attributes
+
+Bit Width:: The number of bits of the output pin.
+
+Pull Direction:: The direction to which floating signal bits are pulled.
+* **Low**: Floating bits are set to 0.
+* **High**: Floating bits are set to 1.
+
+

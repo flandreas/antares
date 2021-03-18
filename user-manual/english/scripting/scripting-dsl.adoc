@@ -141,6 +141,27 @@ if (elem.inputBit("R")) {
 }
 ----
 
+`inputBit(<id:Int>)`:: Returns the lowest-priority input signal `Bit` of the `InputPort` with the specified ID as a boolean.
++
+.Example
+[source,javascript]
+----
+if (elem.inputBit(1)) {
+  // Do something
+}
+----
+
+`inputBit()`:: Returns the lowest-priority input signal `Bit` of the first `InputPort` as a boolean.
++
+.Example
+[source,javascript]
+----
+if (elem.inputBit()) {
+  // Do something
+}
+----
+
+
 `portRaised(<name:String>)`:: Determines whether the input signal of the `InputPort` with the specified name has changed and its new value is 1, and returns the result as boolean. This can be used to detect a raising signal edges.
 +
 .Example
@@ -260,6 +281,14 @@ elem.setOutputBit(true);
 [source,javascript]
 ----
 elem.setOutputBit("Out", false);
+----
+
+`setOutputBit(<id:Int>, <value:Boolean>)`:: Sets the lowest-priority output signal `Bit` of the `OutputPort` with the specified ID to a boolean.
++
+.Example
+[source,javascript]
+----
+elem.setOutputBit(1, false);
 ----
 
 `anyBitUndefined(<value:Word>)`:: Checks whether any `Bit` in the specified `Word` is undefined and returns the result as a boolean.

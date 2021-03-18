@@ -1,0 +1,21 @@
+= Ground
+include::../../page-variables.txt[]
+:page-permalink: /user-manual/english/base-library/ground
+
+== Appearance
+
+image:user-manual/base-library/ground-example.png[Example Ground, 50]
+
+== Behavior
+
+Emits a single 0 value onto a wire.
+
+The same functionality can be achieved using the more versatile Constant component. The only reason to prefer "Ground" is that it is a standard electronic symbol.
+
+== Pins
+
+A ground component has only one output pin that constantly emits 0.
+
+== Attributes
+
+Bit Width:: The number of bits of the output pin.

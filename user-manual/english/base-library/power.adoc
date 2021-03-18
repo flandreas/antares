@@ -1,0 +1,21 @@
+= Power
+include::../../page-variables.txt[]
+:page-permalink: /user-manual/english/base-library/power
+
+== Appearance
+
+image:user-manual/base-library/power-example.png[Example Power, 50]
+
+== Behavior
+
+Emits a single 1 value onto a wire.
+
+The same functionality can be achieved using the more versatile Constant component. The only reason to prefer "Power" is that it is a standard electronic symbol.
+
+== Pins
+
+A power component has only one output pin that constantly emits 1.
+
+== Attributes
+
+Bit Width:: The number of bits of the output pin.

@@ -1,0 +1,37 @@
+= Transistor
+include::../../page-variables.txt[]
+:page-permalink: /user-manual/english/base-library/transistor
+
+Transistor is a digitalized version of a FET transistor. It has two inputs, called _gate_ and _source_, and one output, called _drain_. In standard orientation, the gate input is located on the left side and connected to a large plate, while source and gate are located on the right side and connected to small plates. The source input is always opposite to the gate input.
+
+A real FET transistor has an additional pin called _bulk_. While Antares doesn't use the bulk pin, it is contained in the symbol and indicates the type of the transistor. An N-type transistor is represented by a bulk with an arrow pointing away from the gate, while a P-type transistor's bulk has an arrow pointing towards the gate. During simulation, the bulk symbol is moved in order to indicate whether the transistor is switched on or off.
+
+== Appearance
+
+image:user-manual/base-library/transistor-example.png[Example Transistor, 150]
+
+== Behavior
+
+Depending on the value found at _gate_, the value at _source_ may be transmitted to _drain_, or there may be no connection from _source_, so _drain_ is left floating. The determination of transmitting or disconnecting depends on the type of transistor. An N-type transistor transmits when _gate_ is 1, while a P-type transistor transmits when _gate_ is 0.
+
+An N-type transistor behaves very similar to a Tri-State Buffer. The primary difference is that a transistor is meant for more basic circuit designs.
+
+== Pins
+
+Input G:: Gate. Always has bit width 1.
+
+Input S:: Source. Its bit width is derived from the value of the attribute "Bit Width".
+
+Output D:: Drain. Its bit width is derived from the value of the attribute "Bit Width".
+
+== Attributes
+
+Type::
+* **N**: N-type transistor
+* **P**: P-type transistor
+
+Bit Width:: The number of bits of the _source_ and _drain_ pins.
+
+Control Input Orientation:: Determines on which side of the transistor the gate input is displayed.
+* **Right**: The gate input is displayed on the right side as seen from the gate's data flow direction.
+* **Left**: The gate input is displayed on the left side as seen from the gate's data flow direction.
