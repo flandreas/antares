@@ -7,8 +7,8 @@ gem "minimal-mistakes-jekyll"
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 gem "github-pages", group: :jekyll_plugins
 
-gem "rake", "~> 12"
-gem "jekyll"
+gem "rake"
+# gem "jekyll", "~> 4.2.0"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
@@ -16,7 +16,7 @@ gem "jekyll-feed"
   gem "jekyll-sitemap"
   gem "jekyll-paginate"
   gem "jekyll-seo-tag"
-  gem "jekyll-compose", "~> 0.5"
+  gem "jekyll-compose"
   gem "jekyll-redirect-from"
   gem 'jekyll-asciidoc'
 end
@@ -30,3 +30,5 @@ end
 
 # Performance-booster for watching directories on Windows
 gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
+
+gem "webrick", "~> 1.7"
