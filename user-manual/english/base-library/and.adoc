@@ -8,7 +8,7 @@ image:user-manual/base-library/and-sample.png[Example AND gate, 300, align="left
 
 == Behavior
 
-The AND gate outputs the result of the AND-function of the 1-bit signals at the input. The output has the value 1 only if all inputs have the value 1.
+The AND gate outputs the result of the AND function of the 1-bit signals at the input. The output has the value 1 only if all inputs have the value 1.
 
 Unconnected inputs always have the value 0.
 
@@ -28,7 +28,7 @@ Unconnected inputs always have the value 0.
 
 AND gates are often used in data path circuits in which one of several data paths is selected by means of control inputs. AND gates with n+1 inputs are used, where n is the number of bits required to select the data path.
 
-The AND gate offers the possibility to visualize the data path. If the attribute "data input" is set with the number of the input where the data path arrives, the AND gate draws the path from this input to the output. If the control inputs all have the value 1, the data path is drawn as a solid line. If one of the control inputs has the value 0, the AND gate disables and the data path is drawn as a dashed line.
+The AND gate offers the possibility to visualize the data path. If the attribute "Data input" is set with the number of the input where the data path arrives, the AND gate draws the path from this input to the output. If the control inputs all have the value 1, the data path is drawn as a solid line. If one of the control inputs has the value 0, the AND gate disables and the data path is drawn as a dashed line.
 
 The following example shows the use of data paths in the "4-1 Multiplexer" circuit of the standard Antares library.
 

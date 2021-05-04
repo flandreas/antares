@@ -6,7 +6,7 @@ As your circuits get bigger and more complex, you will soon reach the point wher
 
 In the chapter link:{{site.basedir}}/user-manual/english/first-steps/first-steps["First Steps"] you have already made your first experiences with the creation and reuse of subcircuits. The chapter link:{{site.basedir}}/user-manual/english/circuits/circuits["Circuits"] describes in detail how to create circuits.
 
-This chapter describes how to build a circuit that can be used as subcircuits in other circuits.
+This chapter describes how to build a circuit that can be used as a subcircuit in other circuits.
 
 == Ports
 
@@ -109,7 +109,7 @@ The following built-in components of Antares can be used as controls.
 * Keypad
 * Terminal
 
-Antares not only allows you to use controls of the circuit for which the symbol is created, but also controls of all sub-circuits and their sub-circuits.
+Antares not only allows you to use controls of the circuit for which the symbol is created, but also controls of all sub-circuits and their sub-circuits and so forth.
 
 This allows applications like the CPU of the example project "Microcomputer (Tannenbaum)", whose symbol displays the current values of the three most important registers "SP (Stack Pointer)", "AC (Accumulator)" and "PC (Program Counter)".
 

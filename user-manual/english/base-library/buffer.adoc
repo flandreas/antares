@@ -8,7 +8,7 @@ image:user-manual/base-library/not-sample.png[Example buffer, 300]
 
 == Behavior
 
-A buffer outputs the signal of the input unchanged at the output.
+A buffer forwards the signal of the input unchanged to the output.
 
 Unconnected inputs always have the value 0.
 

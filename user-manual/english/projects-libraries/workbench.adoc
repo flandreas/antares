@@ -12,7 +12,7 @@ This chapter describes the properties and possibilities of the workbench, which 
 
 == Structure
 
-The contents of the workbench are displayed as a tree whose topmost branches represent the project (if present) and the library being used. The leaves of the tree are either basic elements that are built-in in Antares or circuits that can be opened. You can also create directories to group circuits.
+The contents of the workbench are displayed as a tree whose topmost nodes represent the project (if present) and the library being used. The leaves of the tree are either basic components that are built-in in Antares or circuits that can be opened. You can also create directories to group circuits.
 
 Depending on their type, the individual workbench elements offer a menu with actions that can be executed by selecting the element and then clicking the right mouse button. Important actions can also be accessed via the main menu of Antares.
 
@@ -34,7 +34,7 @@ You can open a circuit of a project or a library by double-clicking on the workb
 
 If you have made a change in the previously opened circuit that you have not yet saved, Antares will ask you if you want to save these changes.
 
-Antares remembers which circuit was last opened when you close the application, and automatically reopens this circuit the next time you start Antares.
+Antares remembers which circuit was open when you close the application the last time, and automatically reopens this circuit the next time you start Antares.
 
 == Searching for components
 
@@ -42,15 +42,15 @@ If your project or the library you are using contains a lot of components, possi
 
 == Selecting a component
 
-If you select an elementary component or a subcircuit in the workbench tree, the preview above the workbench displays the component's icon as well as its name and short description (if available). This information helps you to identify the correct component before you add it to your circuit. You add the selected component to your circuit by dragging and dropping it into your circuit.
+If you select an build-in component or a subcircuit in the workbench tree, the preview above the workbench displays the component's icon as well as its name and short description (if available). This information helps you to identify the correct component before you add it to your circuit. You add the selected component to your circuit by dragging and dropping it into your circuit.
 
 == Expanding and collapsing tree nodes
 
-On each tree node that can contain child elements, Antares offers you the two pop-up menus menu:Expand all[]] and menu:Collapse all[], which can be used to expand and collapse this node and all nodes within it.
+On each tree node that can contain child elements, Antares offers you the two pop-up menus menu:Expand all[] and menu:Collapse all[], which can be used to expand and collapse this node and all nodes within it.
 
 == Creating new circuits
 
-In the tree elements "Project", "Library" and "Directory" you can create a new circuit with the popup menu menu:New circuit[]. The newly created circuit is part of the currently open project and is therefore also based on the library that the project uses and that is currently open.
+In the tree elements "Project", "Library" and "Directory" you can create a new circuit with the popup menu menu:New circuit[].
 
 The name entered in the dialog is used as name in the currently selected user language. The name of the circuit can be translated into other languages in the properties view of the circuit. In the current version Antares does not ensure that the name is unique within the directory. Nevertheless it is recommended to use unique names.
 

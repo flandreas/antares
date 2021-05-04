@@ -58,15 +58,15 @@ NOTE: Colors are defined in Antares by link:{{site.basedir}}/user-manual/english
 
 == Simulation depth
 
-One of the most important design goals of Antares is to enable the user to explore all the components of a circuit in order to understand its operation as deeply and thoroughly as possible. For this reason, the basic library contains rather few programmed components. Instead, standard components like flip-flops or registers are available as complete subcircuits in the standard library, which the user can open and observe during circuit design and simulation.
+One of the most important design goals of Antares is to enable the user to explore all the components of a circuit in order to understand its operation as deeply and thoroughly as possible. For this reason, the basic library contains rather few build-in components. Instead, standard components like flip-flops or registers are available as modelled subcircuits in the standard library, which the user can open and observe during circuit design and simulation.
 
-The disadvantage of this approach is that large circuits consist of many basic components if all subcircuits are expanded for simulation until only basic components are used. For example, the microcomputer in the example project "Microcomputer (Tannenbaum)" contains (when fully expaned) over 2'000 elementary logic gates and over 5'000 wires.
+The disadvantage of this approach is that large circuits consist of many basic components if all subcircuits are expanded for simulation until only basic components are used. For example, the microcomputer in the example project "Microcomputer (Tannenbaum)" contains (when fully expanded) over 2'000 elementary logic gates and over 5'000 wires.
 
 The simulation of such large circuits takes a lot of time. Now Antares offers the possibility to define a link:{{site.basedir}}/user-manual/english/circuits/circuit-scripting[Execution script] for a subcircuit, which contains the logic of the subcircuit and is executed during simulation instead of the inner circuit.
 
 With the menu menu:Simulation[Deep Simulation] you can choose whether Antares applies the execution scripts of subcircuits or not. "Deep Simulation" means that the execution scripts are not applied and Antares simulates the full depth of the circuit. The opposite is called "Flat Simulation": Subcircuits are simulated only as deep as the depth of the circuit until a subcircuit contains an execution script.
 
-A flat simulation has one important limitation: If you open a subcircuit containing an execution script during a flat simulation, Antares can display the contents of the subcircuit, but it cannot tell you anything about the state of the components and wires of that subcircuit.
+A flat simulation has one important limitation: If you open a subcircuit containing an execution script during a flat simulation, Antares can display the contents of the subcircuit, but it can't tell you anything about the state of the components and wires of that subcircuit.
 
 image::user-manual/simulation/simulation-depth.png[wire colors, 700,align="center"]
 
@@ -88,6 +88,8 @@ The simulation uses the propagation delay defined for each component and each wi
 
 The simulation algorithm is event-based. Whenever a component detects a change in an input value, a new entry in an event queue is created in the simulation engine, which is intended to be executed after the propagation delay of the component has expired. After this time has elapsed, the simulator prompts the component to recalculate the value of its outputs. For this calculation, the component uses the signals that ** exist at its inputs at this time**.
 
+Pure net components (wires, splitter, combiner, subcircuit ports) have a propagation delay of zero.
+
 === Switch-on behaviour
 
 Antares does not yet contain a mechanism by which the switch-on behaviour can be influenced by the circuits and components. When starting simulation, each component is requested to recalculate its outputs. The propagation delay is also taken into account. If at the time of calculation no signal from other components has arrived at the inputs, it is up to the component to decide how to deal with this at the start. Most components then initially set the inputs to the value 0, which results in an unconnected AND gate having the output value 0 at startup and an unconnected NOT gate having the output value 1.
@@ -102,3 +104,23 @@ In Antares there are two approaches to achieve the same behavior in simulation a
 
 * **Different propagation delays**: In the example above, both NOR gates have the same propagation delay, e.g. 10 ns. If different propagation delays are defined for the two gates (e.g. 8 ns for the upper gate and 11 ns for the lower gate), the circuit will settle into a stable, correct state at startup. The latches and flip-flops of Antares' standard library are built according to this approach.
 * **Noise**: With the menu option menu:Simulation[Noise, Random Noise] the simulator can be instructed to change the runtimes of the components by a random value. With this option, the above SR latch takes a correct state at the start of simulation (possibly after a short settling phase), even if both gates have configured the same run-time.
+
+=== Bus contention and signal conflicts
+
+While Antares prevents you from connecting more than one output-only port to the same wire, it is often useful to connect various input/output ports to the same wire. It is then up to the circuit logic to avoid that these ports assert different signals to this wire at the same time. If the circuit fails to achieve this, a signal conflict occurs. This often happens due to a timing problem in the circuit, and the signal propagation algorithm of Antares tries to help you to detect and fix these problems.
+
+Whenever an output port asserts a signal to a wire, Antares checks if this signal is in conflict with the signal asserted by any other output port to the same net. The term "net" refers to the combination of all wires that are reachable by this output port, including those behind splitters and combiners, and those that are connected to input ports within subcircuits.
+
+If Antares detects a signal conflict, the signal will not be asserted to the wire. Instead, the behaviour in this situation depends on the value of the following system preferences and settings.
+
+* **Preference "Allowed net contention duration"**: This preference defines how long Antares ignores bus contention situations before issuing a warning or error.
+
+* Menu **menu:Simulation[On signal conflict]**: Defines whether Antares ignores bus contention issues, or whether it issues a warning or an error. The issued warnings or errors are collected in the "Issues" tab of Antares' main window.
+
+* Menu **menu:Simulation[Pause on issue]**: Determines whether the simulation should be paused when an issue occurs. This allows you to analyse the current state of the simulated circuit and to identify the cause of the issue.
+
+If you hover the mouse over a wire in red error state, Antares displays a tooltip containing detailed information about the signal conflict.
+
+image::user-manual/simulation/signal-conflict.png[signal conflict, 700,align="center"]
+
+Note that the IDs referenced in the tooltip's origin and source designations (e.g. 2 in "to Input/Output (2)") reference model ID's of components. You see these model ID's in Antares' property panel when selecting a component in the edit mode.

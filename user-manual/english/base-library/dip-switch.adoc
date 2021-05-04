@@ -8,7 +8,7 @@ image:user-manual/base-library/dip-switch-sample.png[Example DIP Switch, 150].
 
 == Behavior
 
-The DIP switch combines small switches for 1 bit each to a common component. The number of small switches is determined by the attribute "Bit Width".
+The DIP switch combines small switches for 1 bit each to a single component. The number of small switches is determined by the attribute "Bit Width".
 
 The DIP switch has the attribute "Initial value", which is stored in the circuit and used as the current value of the DIP switch when the simulation is started.
 

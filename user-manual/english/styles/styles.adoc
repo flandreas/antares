@@ -14,7 +14,7 @@ Antares pursues the goal of presenting circuits in an aesthetically pleasing way
 
 * Bundling of graphical properties
 * Styles
-* Topics
+* Themes
 
 == Bundling of graphical properties
 
@@ -38,17 +38,17 @@ The set of styles is predefined by Antares. The following styles are available:
 
 Figure:: This style is the basic style in Antares. It is mainly used for "pure" graphical objects like rectangle, ellipse, line etc.
 
-Element:: This style is used for the node elements of the graph that make up the circuit. In Antares these are the circuit components such as logic gates or subcircuits.
+Element:: This style is used for the vertice elements of the graph that make up the circuit. In Antares these are the circuit components such as logic gates or subcircuits.
 
 Connection:: This style is used in Antares for the wires that connect the circuit components.
 
-Annotation:: Annotations are small graphical elements or texts within elements, e.g. the small triangle that in a flip-flop indicates an input that is active with a rising signal edge. Designations of pins are also annotations.
+Annotation:: Annotations are small graphical elements or texts within elements, e.g. the small triangle used in a flip-flop to indicate that an input is active with a rising signal edge. Labels of pins are also annotations.
 
 Explanation:: Explanations are text boxes which are included in the circuit as graphical elements.
 
 Subsystem:: Subsystems are rectangles with a text that combine parts of a circuit to graphically express that these parts together form a subsystem of the circuit.
 
-TIP: Antares internally uses many other styles such as "background", "selection", "highlighting" etc., but these styles are not available in the user interface for application to graphical objects.
+TIP: Antares internally uses many other styles such as "background", "selection", "highlighting" etc., but these styles are not available in the user interface for applying to graphical objects.
 
 === Applying Styles
 
@@ -60,9 +60,9 @@ NOTE: The example shows the properties of a rectangle. For other components the 
 
 Style:: In this attribute you determine the style the component has.
 
-Color:: In this attribute you can set the composite color of the component. The default value is "From style", i.e. the component adopts the color that the style specifies. But you can override this color, e.g. to make an AND gate, which is normally drawn in the color of the style, red to express that it has a special meaning in the circuit.
+Color:: In this attribute you can set the composite color of the component. The default value is "From style", i.e. the component inherits the color that the style specifies. But you can override this color, e.g. to make an AND gate, which is normally drawn in the color of the style, red to express that it has a special meaning in the circuit.
 
-Line Style:: In this attribute you can set the line style of the component. The default value is "From Style", i.e. the component adopts the line style of the current component. Currently, all combinations of three line styles (extended, dashed, dotted) and three knitting thicknesses (narrow, medium, wide) are available.
+Line Style:: In this attribute you can set the line style of the component. The default value is "From Style", i.e. the component inherits the line style that the style specifies. Currently, all combinations of three line styles (extended, dashed, dotted) and three widths (narrow, medium, wide) are available.
 
 Depending on the type of the selected component, more graphic properties such as "Filled", "Border" and "Shadow" can be set.
 
@@ -72,9 +72,9 @@ NOTE: The "Shadow" attribute only has an effect if the display of shadows is bas
 
 In Antares, a "theme" is a set of styles with specific values, all of which are grouped under a specific name. Not only styles that are available to you as a user for application to components are considered, but also "internal" styles like "selection" or "background".
 
-This makes it possible to fundamentally change the way circuits are displayed by changing the theme. The current theme is selected using the menu menu:View[Theme].
+This makes it possible to fundamentally change the way circuits are displayed by changing the theme. The current theme is can be selected in the preferences window.
 
-The following three themes are available in the current version of Antares.
+The following themes are available in the current version of Antares.
 
 Winter:: This is the default theme of Antares. It mainly uses blue figures on a white background.
 +

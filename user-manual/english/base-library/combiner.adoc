@@ -16,19 +16,19 @@ The degree of comining is limited in that only integer dividers of the bit width
 * 4: The combiner has 4 inputs of 2 bits each
 * 8: The combiner has 8 inputs of 1 bit each
 
-In the current version of Antares, the combiner does not support bidirectional pins. To split wire bundles to narrower bundles (or single wires), the link:{{site.basedir}}/user-manual/english/base-library/splitter[splitter component] must therefore be used.
+The combiner is uni-directional; it only forwards signals from the input pins to its output pin. See link:{{site.basedir}}/user-manual/english/base-library/bidi-splitter[bi-directional splitter] for a bi-directional version.
 
-Furthermore, for technical reasons, the current version of Antares has the restriction that the attributes "Bit Width", "Fan Out" and "Position Bit 0" can no longer be changed if pins are already connected to wires. Perhaps a future version will at least allow to increase the number of bits without having to disconnect existing wire connections beforehand.
+For technical reasons, the current version of Antares has the restriction that the attributes "Bit Width", "Fan Out" and "Position Bit 0" can no longer be changed if pins are already connected to wires. Perhaps a future version will at least allow to increase the number of bits without having to disconnect existing wire connections beforehand.
 
 == Pins
 
 Output:: The combiner has a single output whose bit width is determined by the attribute "Bit Width".
 
-Inputs:: The number of inputs of the combiner is determined by the attribute "Fanning". Each input has the bit width "Bit Width" / "Fan Out" and carries during simulation those bits of the input signal which correspond to the index of the input. For a combiner with 8-bit output and a fanning of 2, input 0 carries the bits 0..3 and input 1 carries the bits 4..7.
+Inputs:: The number of inputs of the combiner is determined by the attribute "Fan Out". Each input has the bit width "Bit Width" / "Fan Out" and carries during simulation those bits of the input signal which correspond to the index of the input. For a combiner with 8-bit output and a fan out of 2, input 0 carries bits 0..3 and input 1 carries bits 4..7.
 
 == Attributes
 
-Orientation:: The direction in which the output points.
+Orientation:: The direction in which the output pin points.
 
 Bit Width:: Determines the bit width of the output.
 

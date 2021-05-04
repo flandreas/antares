@@ -21,7 +21,7 @@ A circuit always consists of the circuit itself and its symbol, which is used wh
 
 All changes - whether to the circuit itself, to the symbol, or to attributes of the circuit - are always saved together. The circuit is the "storage unit" of Antares. While changes to project or library structures are always saved automatically, you must save changes to the circuit itself. Use the menu menu:File[Save] or the key combination kbd:[Cmd +S].
 
-== Select view
+== Zooming and panning
 
 If the circuit is larger, the need to select the size and section of the circuit display in the main window quickly arises. The size of the area containing the circuit is basically unlimited. This is also the reason why the main view does not contain scrollbars; instead, Antares offers several other options for selecting the size and section of the display.
 
@@ -41,7 +41,7 @@ menu:View[Center]:: Centers the display without changing the zoom factor.
 
 menu:View[Fit]:: Centers the display and sets the zoom factor so that the circuit completely fills the entire main view.
 
-== Circuit attributes
+== Changing circuit attributes
 
 If you click with the mouse on the background of the circuit in the main window, the attributes of the circuit are offered for editing in the attibutes view.
 
@@ -55,21 +55,21 @@ Function:: This attribute can be used to specify the script that Antares execute
 
 Default light color:: The light color that all components in this circuit should have by default (LED, 7-segment display, terminal). If you change the value of this attribute while the circuit already contains lit components, Antares will ask you if the new light color should be applied to these components. With this option, for example, all red LEDs and 7-segment displays can be changed to yellow with a single action.
 
-== Add components
+== Adding components
 
 You add components to a circuit by selecting the components to be added in the workbench tree and dragging them into the circuit (Drag & Drop). The new component is given the default attributes specified by the programming.
 
 It often happens that you need several components with the same, modified attributes in a circuit, e.g. OR gates with three inputs instead of only two as with the default value. In these cases it may be useful to use copy/paste: Drag the first copy of the component into the circuit, set the desired attributes, copy the component to the clipboard using menu:Edit[Copy], and then paste the required number of additional components into the circuit using menu:Edit[Paste].
 
-When inserting a component for the first time, Antares places the inserted component at a small distance from the original. If you then move the inserted component to a new location and then insert additional components from the clipboard, Antares will use the distance between the original and the location you defined for the first inserted component as a template. This makes it easy to create uniform arrangements of similar components, e.g. for flip-flops in shift register circuits.
+When pasting a particular component from the clipboard for the first time, Antares places the pasted component at a small distance from the original. If you then move the pasted component to a new location and then perform additional paste actions, Antares will use the distance between the original and the location you defined for the first inserted component as a template. This makes it easy to create uniform arrangements of similar components, e.g. for flip-flops in shift register circuits.
 
-== Connect components
+== Connecting components
 
 Connecting components using wires is a separate, large topic that is dealt with in the separate chapter link:{{site.basedir}}/user-manual/english/circuits/wires["Wires"].
 
 == Attributes of subcircuits
 
-The properties of the built-in base components are explained in chapter link:{{site.basedir}}/user-manual/english/base-library/base-library["Base Library"]. This section describes the attributes of subcircuits which are inserted into a circuit.
+The properties of the built-in components are explained in chapter link:{{site.basedir}}/user-manual/english/base-library/base-library["Base Library"]. This section describes the attributes of subcircuit components.
 
 Orientation:: The cardinal point to which the symbol of the subcircuit points. Like basic components, symbols of subcircuits can also be rotated with kbd:[Cmd + R].
 
@@ -85,9 +85,9 @@ Example: The example project "Microcomputer (Tannenbaum)" contains two 16-bit re
  +
 The value of the attribute "Label" can also be deleted to ensure that the label specified by the symbol is not displayed.
 
-== Edit symbol
+== Editing subcircuit symbols
 
-The previously presented possibilities of adapting the symbol of a subcircuit by mirroring or changing the designation are often sufficient to integrate a subcircuit optimally into a circuit. Sometimes, however, the symbol of a subcircuit needs to be adapted even further.
+The previously presented possibilities of adapting the symbol of a subcircuit by mirroring or changing the label are often sufficient to integrate a subcircuit optimally into a circuit. Sometimes, however, the symbol of a subcircuit needs to be adapted even further.
 
 The figure below shows the already described application of 16-bit registers as data path latches in a CPU. In addition to adapting the standard description of the register, in this case one would like to display e.g. the currently stored value of the register directly in the symbol, something which is not provided by the 16-bit register in the standard library.
 
@@ -101,7 +101,7 @@ NOTE: The modified symbol is only valid for the selected subcircuit in the curre
 
 The original symbol can be restored with context menu menu:Reset Symbol[].
 
-== Drawing tools
+== Using the drawing tools
 
 A circuit in Antares can not only consist of digital components and the connected wires, but also of purely graphical elements such as rectangles or texts. Use the drawing tools in the Antares window toolbar to add such elements to the circuit.
 
@@ -123,7 +123,7 @@ The selection state of the graphical objects is displayed by drawing in the sele
 
 Select a graphic component and change its attributes such as "Fill", "Border", "Shadow", "Style", "Color", "Line style" to customize the appearance of the component. In chapter link:{{site.basedir}}/user-manual/english/styles/styles["Styles and themes"] you can find more information about styles, colors and other graphical properties.
 
-== Alignment
+== Aligning components
 
 Antares offers two tools that facilitate the mutual alignment of components.
 

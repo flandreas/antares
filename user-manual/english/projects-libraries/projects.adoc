@@ -20,8 +20,8 @@ btn:[Delete]:: Deletes the selected project. This action cannot be undone.
 btn:[Export]:: Exports the selected project to a ZIP file. The generated ZIP file contains only the project; if the exported project is based on a user-defined library, the project can only be imported again in the same Antares installation, since this library is not available in other installations and there is no possibility to export libraries yet.
 NOTE: In a future version, it will be possible to export projects together with a user-defined library as a so-called "bundle" and import them back into another Antares installation.
 
-btn:[Import]:: Imports a project from a ZIP file. The following situations can occur where the import fails:
+btn:[Import]:: Imports a project from a ZIP file. Importing can fail in one of the following situations:
 [horizontally]
 - *Invalid:* The imported ZIP file is invalid, i.e. it was probably not created by an export from Antares.
-- *Name already exists:* Since the name of a library must be unique, Antares rejects the import of a library with an already existing name.
+- *Name already exists:* Since the name of a project must be unique, Antares rejects the import of a project with an already existing name.
 - *Unknown library:* The project to be imported references a library that does not exist in this Antares installation.

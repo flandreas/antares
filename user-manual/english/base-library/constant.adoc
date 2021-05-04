@@ -16,7 +16,7 @@ The constant has only one output whose bit width can be configured in the attrib
 
 == Attributes
 
-Orientation:: The direction in which the output points.
+Orientation:: The direction in which the output pin points.
 
 Bit Width:: The number of bits that make up the output signal. If this attribute is changed so that the number of bits is no longer sufficient to represent the set value in the "Value (decimal)" attribute, the value is truncated accordingly.
 

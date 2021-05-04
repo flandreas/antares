@@ -10,7 +10,7 @@ image:user-manual/base-library/keyboard-sample.png[Example keyboard, 350]
 
 This component allows the circuit to accept characters that you enter via your computer keyboard (as long as they can be interpreted as 7-bit ASCII code).
 
-During simulation, click with the mouse on the component to give it the input focus, which is displayed as usual with a thin blue rectangle. If you then enter characters via your computer keyboard, they are collected in the buffer of this component from left to right. At any given time, the component outputs the ASCII code of the leftmost character in the buffer through output "D". On a rising edge of the clock input "CLK", the leftmost character is removed from the buffer and the previously second character, which now moves to the leftmost position, is output at "D".
+During simulation, click with the mouse on the component to give it the input focus, which is displayed as usual with a thin dotted rectangle. If you then enter characters via your computer keyboard, they are collected in the buffer of this component from left to right. At any given time, the component outputs the ASCII code of the leftmost character in the buffer through output "D". On a rising edge of the clock input "CLK", the leftmost character is removed from the buffer and the previously second character, which now moves to the leftmost position, is output at "D".
 
 The supported characters include all displayable characters in the range between 20 (space) and 126 (tilde) and the control characters 8 (backspace), 9 (tab), and 10 (linefeed). The control characters are represented as "\b" (backspace), "\t" (tab), and "\n" (linefeed). Antares ignores all other characters.
 

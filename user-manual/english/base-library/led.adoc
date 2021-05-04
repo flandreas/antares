@@ -16,7 +16,7 @@ An LED has only one single input of bit width 1.
 
 == Attributes
 
-Orientation:: The direction in which the light is pointing.
+Orientation:: The direction in which the luminous body is pointing.
 
 Name:: The name of the LED, which is displayed as text next to the luminous body (on the side opposite the pin).
 

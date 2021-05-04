@@ -3,15 +3,15 @@ include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/circuits/wires
 
 Wires are circuit elements with which pins of components can be connected, so that during
-simulation of the circuit signals can flow between the components.
+simulation of the circuit signals can flow between these components.
 
 image::user-manual/circuits/wires-sample.png[wires,250,align="center"]
 
-Unlike comparable tools, Antares does not automatically create a connection between a wire and a pin when they are in the same location; a connection must always be explicitly created by the user. To help you recognize unconnected wires at a glance, Antares displays unconnected wire ends with a small white circle.
+To help you recognize unconnected wires at a glance, Antares displays unconnected wire ends with a small white circle.
 
 == Creating Wires
 
-To start creating a new wire, move the mouse over a pin of a component or an existing wire. Antares will then show you a small orange circle to indicate that you can start a new wire at this point.
+To start creating a new wire, move the mouse over a pin of a component or an existing wire. Antares will then show a small orange circle to indicate that you can start a new wire at this point.
 
 Then press and hold the left mouse button while moving the mouse to the desired destination of the wire. Antares automatically creates a orthogonal layout of the resulting wire.
 
@@ -31,7 +31,7 @@ By default, Antares automatically creates an orthogonal layout while creating th
 
 == Wire Bundle
 
-Wire bundles are wires that can transmit several bits simultaneously. The bit width of a wire does not have to be explicitly specified, but is taken from the pins to which the wire is connected. Since pins of components can have different bit widths, this can lead to an inconsistency, because Antares requires that a network of wires be connected exclusively to pins of the same bit width.
+Wire bundles are wires that can transmit several bits simultaneously. The bit width of a wire does not have to be explicitly specified, but is derived from the pins to which the wire is connected. Since pins of components can have different bit widths, this can lead to an inconsistency, because Antares requires that a network of wires be connected exclusively to pins of the same bit width.
 
 image::user-manual/circuits/inconsistent-net-en.png[Inconsistent net,400,align="center"]
 
@@ -39,7 +39,7 @@ This is an error in the design of the circuit, which Antares indicates by drawin
 
 Circuits with design errors cannot be simulated; before the simulation can be started, the design error must be corrected. In the example above, output "O2" must have bit width 1.
 
-== Reconnect wires
+== Reconnecting wires
 
 Sometimes it happens that you have connected a wire to the wrong component. To change this, it is not necessary to delete the wire and then create a new wire. Antares offers the possibility to reassign existing wires to other pins.
 
@@ -53,9 +53,9 @@ image::user-manual/circuits/auto-connect.png[Automatic Connecting,300,align="cen
 
 In this case the old gate can be deleted, resulting in three wires with one open end each (see example above). Now you can drag another gate into the circuit and move it over the place where the old gate was before. Antares detects this situation and indicates with orange circles that the component's pins are automatically connected when you release the mouse at this position.
 
-== Display of wires
+== Wire properties
 
-By default, the display of wires is only influenced by the bit width of the connected pins. Wires connecting pins of bit width 1 are displayed with a narrow line, while wire bundles are displayed with a wider line.
+By default, the way wires are drawn is only influenced by the bit width of the connected pins. Wires connecting pins of bit width 1 are displayed with a narrow line, while wire bundles are displayed with a wider line.
 
 image::user-manual/circuits/wire-styles.png[Wire styles,600,align="center"]
 

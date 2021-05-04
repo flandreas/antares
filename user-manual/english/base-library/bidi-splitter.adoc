@@ -1,0 +1,22 @@
+= Bi-directional Splitter
+include::../../page-variables.txt[]
+:page-permalink: /user-manual/english/base-library/bidi-splitter
+
+== Appearance
+
+image:user-manual/base-library/bidi-splitter-sample.png[Splitter,300]
+
+== Behaviour
+
+The bi-directional splitter combines link:{{site.basedir}}/user-manual/english/base-library/splitter[splitter] and link:{{site.basedir}}/user-manual/english/base-library/combiner[combiner] in one single component and can therefore forward signals in both directions.
+
+== Pins
+
+All pins of bi-directional splitter are input/output pins.
+
+== Attributes
+
+See link:{{site.basedir}}/user-manual/english/base-library/splitter[splitter] for a description of the various attributes.
+
+
+

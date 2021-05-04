@@ -65,6 +65,8 @@ manual:
 releases:
   - title: 2021
     children:
+      - title: "0.5.0"
+        url: /docs/releases/release-0.5.0
       - title: "0.4.1"
         url: /docs/releases/release-0.4.1
       - title: "0.4.0"
@@ -91,3 +93,5 @@ examples:
         url: /docs/examples/hex-keyboard/hex-keyboard
       - title: "Building logic gates with transistors"
         url: /docs/examples/quasi-analog/quasi-analog
+      - title: "Bus transceiver"
+        url: /docs/examples/bidirectional-splitter/bidirectional-splitter

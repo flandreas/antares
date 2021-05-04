@@ -12,13 +12,13 @@ The delay element outputs the signal present at the input after an adjustable de
 
 == Pins
 
-Input:: A 1-bit input that accepts the signal to be delayed.
+Input:: Accepts the signal to be delayed. The bit width of this input is determined by attribute "Bit Width".
 
-Output:: A 1-bit output, which outputs the delayed signal.
+Output:: Outputs the delayed signal. The bit width of this output is determined by attribute "Bit Width".
 
 == Attributes
 
-Orientation:: The direction in which the output points.
+Orientation:: The direction in which the output pin points.
 
 Bit Width:: The bit width of the input and output pin.
 
