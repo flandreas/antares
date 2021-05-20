@@ -7,8 +7,8 @@ header:
 
 ## Download
 
-[Windows](https://github.com/flandreas/antares/releases/download/v0.5.1/Antares-0.5.1.msi){: .btn .btn--success .btn--large}
-[macOS](https://github.com/flandreas/antares/releases/download/v0.5.1/Antares-0.5.1.pkg){: .btn .btn--success .btn--large}
+[Windows](https://github.com/flandreas/antares/releases/download/v0.5.2/Antares-0.5.2.msi){: .btn .btn--success .btn--large}
+[macOS](https://github.com/flandreas/antares/releases/download/v0.5.2/Antares-0.5.2.pkg){: .btn .btn--success .btn--large}
 
 ## Installation
 

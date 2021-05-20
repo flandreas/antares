@@ -7,7 +7,7 @@ header:
       url: "/docs/quick-start"
 excerpt: >
   A free, powerful platform for designing, simulating and explaining digital circuits.<br />
-  <small><a href="docs/releases/release-0.5.1">Latest release 0.5.1</a></small>
+  <small><a href="docs/releases/release-0.5.2">Latest release 0.5.2</a></small>
 description: "digital circuit simulator simulation education"
 feature_row:
   - image_path: /assets/images/splash-button-design.svg
