@@ -8,7 +8,8 @@ image:user-manual/base-library/not-sample.png[Example NOT, 300]
 
 == Behavior
 
-The NOT gate inverts the 1-bit signal at the input and outputs it at the output.
+The NOT gate inverts the signal at the input and outputs it at the output. If property
+"Bit Width" is larger than 1, the "NOT" function is applied to each bit individually.
 
 Unconnected inputs always have the value 0.
 
@@ -30,11 +31,15 @@ The logical gates of Antares can illustrate their function with so-called "mnemo
 
 image:user-manual/base-library/not-mnemonic.png[Example Mnemonic, 300]
 
+Mnemonics are only displayed if property "Bit Width" is 1.
+
 == Pins
 
-Input:: The 1-bit input of the NOT gate.
-Output:: The 1-bit-output of the NOT gate, which outputs the inverted signal of the input.
+Input:: The input of the NOT gate. Its bit width is determined by property "Bit Width".
+Output:: The output of the NOT gate, which outputs the inverted signal of the input. Its bit width is determined by property "Bit Width".
 
 == Attributes
 
 Orientation:: The direction in which the output points.
+
+Bit Width:: The bit width of the signal that can be passed through the NOT gate.
