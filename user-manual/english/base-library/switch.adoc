@@ -30,5 +30,5 @@ Label Position:: Determines where the "Name" of the switch is displayed as text.
 * *Out*: The name is displayed opposite the pin.
 * *Inside*: The name is displayed inside the switch. If the name contains more than one character, the switch is enlarged accordingly.
 
-Toggle:: If this attribute is set (default), the switch remains in the pressed state after the user has released the mouse button (or the keyboard key that triggered the pressing of the switch).
+Switch:: If this attribute is set (default), the switch remains in the pressed state after the user has released the mouse button (or the keyboard key that triggered the pressing of the switch).
 

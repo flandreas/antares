@@ -65,6 +65,8 @@ manual:
 releases:
   - title: 2021
     children:
+      - title: "0.7.0"
+        url: /docs/releases/release-0.7.0
       - title: "0.6.1"
         url: /docs/releases/release-0.6.1
       - title: "0.6.0"
@@ -103,3 +105,5 @@ examples:
         url: /docs/examples/quasi-analog/quasi-analog
       - title: "Bus transceiver"
         url: /docs/examples/bidirectional-splitter/bidirectional-splitter
+      - title: "Sine Wave"
+        url: /docs/examples/sine-wave/sine-wave

@@ -40,6 +40,9 @@ Output:: The 1-bit output of the XOR gate. Outputs the value of the calculated X
 
 Orientation:: The direction in which the output points.
 
-Number of inputs:: Determines how many inputs the XOR gate has. There are 2 to max. 8 inputs available. If the XOR gate is already connected to wires, this attribute cannot be changed.
+Number of inputs:: Determines how many inputs the XOR gate has. There are 2 to max. 8 inputs available. Can even be changed if the gate is already connected to wires.
+
+Negate input n:: When selected, the n-th input pin is negated. The maximum of "n" is determined by attribute "Number of inputs". Negation is also
+applied to the truth table and the mnemonics displayed for the gate.
 
 Output Name:: The optional name displayed next to the output. This can be useful when the XOR gate forms the end of a complex combinatorial circuit and the logical expression produced by the XOR gate is to be specified.

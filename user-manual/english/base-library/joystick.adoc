@@ -1,0 +1,24 @@
+= Joystick
+include::../../page-variables.txt[]
+:page-permalink: /user-manual/english/base-library/joystick
+
+== Appearance
+
+image:user-manual/base-library/joystick-sample.png[Example 7-Segment, 300]
+
+== Behaviour
+
+The user can drag a knob within a circular or rectangular area, and the outputs update to indicate
+the knob's current x- and y-coordinates.
+
+== Pins
+
+X:: Indicates the knob's x-coordinate, to be interpreted as an unsigned integer whose value will never be 0. A value of 1 represents the far left, and the maximum value for the bit width indicates the far right. When the knob is at rest (in the center), the value has the pattern 10..00.
+
+Y:: Indicates the knob's y-coordinate,  to be interpreted as an unsigned integer whose value will never be 0. A value of 1 represents the top most, and the maximum value for the bit width indicates the down most position. When the knob is at rest (in the center), the value has the pattern 10..00.
+
+== Attributes
+
+Bit Width:: The number of bits used to indicate each of the knob's coordinates.
+
+Deflection:: The geometry of the area within the knob can be moved.

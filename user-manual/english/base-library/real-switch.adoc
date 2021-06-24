@@ -1,0 +1,25 @@
+= Real Switch
+include::../../page-variables.txt[]
+:page-permalink: /user-manual/english/base-library/real-switch
+
+== Appearance
+
+image:user-manual/base-library/real-switch-sample.png[Example Real Switch, 150]
+
+== Behaviour
+
+This component implement a bi-directional switch with two pins.
+
+When the state of the switch changes during simulation, both nets connected to the pins are combined to form a single net, and the current signal in this combined net gets recalculated.
+
+When pressing the real switch with the mouse, it receives the keyboard focus, which is represented by a thin blue dashed rectangle. If a real switch has the keyboard focus, it can also be operated with the kbd:[Enter] key as well as with the keys kbd:[0] and kbd:[1].
+
+== Pins
+
+A real switch has two pins whose bit width is derived from the attribute "Bit Width".
+
+== Attributes
+
+Bit Width:: The number of bits of both pins.
+
+Switch:: If this attribute is set (default), the switch remains in the pressed state after the user has released the mouse button (or the keyboard key that triggered the pressing of the switch).
