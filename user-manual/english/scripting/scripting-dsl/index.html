@@ -1,0 +1,1159 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Antares Scripting DSL - Antares</title>
+<meta name="description" content="Digital circuit simulation and learning platform ">
+
+
+  <meta name="author" content="Andreas Fleischmann">
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Antares">
+<meta property="og:title" content="Antares Scripting DSL">
+<meta property="og:url" content="https://www.antarescircuit.io/user-manual/english/scripting/scripting-dsl/">
+
+
+  <meta property="og:description" content="Digital circuit simulation and learning platform ">
+
+
+
+  <meta property="og:image" content="https://www.antarescircuit.io/assets/images/splash2.png">
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://www.antarescircuit.io/user-manual/english/scripting/scripting-dsl/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Andreas Fleischmann",
+      "url": "https://www.antarescircuit.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Antares Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- Used for AsciiDoc integration -->
+<link rel="stylesheet" href="/assets/css/asciidoc.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+<link rel="manifest" href="/assets/images/site.webmanifest">
+<link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="theme-color" content="#ffffff"
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Antares
+          <span class="site-subtitle">Digital Circuit Learning Platform</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/docs/quick-start/">Quick-Start</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/user-manual/english/usermanual">Manual</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/blog">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/releases/releases">Releases</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/examples/examples">Examples</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: url('/assets/images/splash2.png');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Antares Scripting DSL
+
+        
+      </h1>
+      
+      
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">User Manual</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/usermanual">Welcome</a></li>
+          
+            <li><a href="/user-manual/english/first-steps/first-steps">First Steps</a></li>
+          
+            <li><a href="/user-manual/english/first-steps/orientation">Orientation</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Projects and libraries</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/projects-libraries/projects-libraries">Overview</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/libraries">Libraries</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/projects">Projects</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/workbench">Workbench</a></li>
+          
+            <li><a href="/user-manual/english/base-library/base-library">Library Reference</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Circuits</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/circuits/circuits">Circuits</a></li>
+          
+            <li><a href="/user-manual/english/circuits/wires">Wires</a></li>
+          
+            <li><a href="/user-manual/english/subcircuits/subcircuits">Subcircuits</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Simulation</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/simulation/simulation">Simulation</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Other Basic Techniques</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/styles/styles">Styles and Themes</a></li>
+          
+            <li><a href="/user-manual/english/description/description">Descriptions and Explanations</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Advanced Techniques</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/scripting/scripting">Scripting</a></li>
+          
+            <li><a href="/user-manual/english/scenarios/scenarios">Scenarios</a></li>
+          
+            <li><a href="/user-manual/english/usecases/usecases">Use Cases</a></li>
+          
+            <li><a href="/user-manual/english/oscilloscope/oscilloscope">Oscilloscope</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Antares Scripting DSL">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#contents">Contents</a></li>
+  <li><a href="#circuitviewbridge">CircuitViewBridge</a></li>
+  <li><a href="#circuitelemmodelbridge">CircuitElemModelBridge</a></li>
+  <li><a href="#circuitelemviewbridge">CircuitElemViewBridge</a></li>
+  <li><a href="#word">Word</a></li>
+  <li><a href="#usecaseactionbridge">UsecaseActionBridge</a></li>
+  <li><a href="#usecasetestbridge">UsecaseTestBridge</a></li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <div id="preamble">
+<div class="sectionbody">
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+The Antares Scripting DSL is in experimental state and will probably be subject of change. As long as the DSL is experimental, there is no guarantee that your scripts won&#8217;t break when executed in future versions of Antares.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+The explanation of the Antares scripting DSL functions is still quite short. Please see the Antares Standard Library for lots of examples on how to use these functions.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contents">Contents</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#circuitviewbridge">CircuitViewBridge</a>: Access to the circuit</p>
+</li>
+<li>
+<p><a href="#circuitelemmodelbridge">CircuitElemModelBridge</a>: Access to the model of a circuit element</p>
+</li>
+<li>
+<p><a href="#circuitelemviewbridge">CircuitElemViewBridge</a>: Access to the symbol of a circuit element</p>
+</li>
+<li>
+<p><a href="#word">Word</a>: Access to a digital data word</p>
+</li>
+<li>
+<p><a href="#usecaseactionbridge">UsecaseActionBridge</a>: Register use case action statements</p>
+</li>
+<li>
+<p>&lt;&lt;UsecaseTestBridge&gt;: Register use case test assertions</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="circuitviewbridge">CircuitViewBridge</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Used in all <code>Scenario</code> use cases. The statements below are accessible as functions of the object <code>circuit</code>.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>name()</code></dt>
+<dd>
+<p>Returns the name of the circuit model as a string.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">circuit.name();</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>input(&lt;Name&gt;)</code></dt>
+<dd>
+<p>Returns the signal of the <code>GraphInput</code> with the specified name as as hex string.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">return circuit.input("I") == "1";</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>output(&lt;Name&gt;)</code></dt>
+<dd>
+<p>Returns the signal of the <code>GraphOutput</code> with the specified name as a hex string.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">return circuit.output("O") == "FF";</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>elem(&lt;ID&gt;)</code></dt>
+<dd>
+<p>Returns the <code>CircuitElemViewBridge</code> of the element with the specified ID.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">return circuit.elem(1).input(1) == "1"</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>scenario()</code></dt>
+<dd>
+<p>Returns the ID of the current <code>Scenario</code>, or an empty string if none is active.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">if (scenario() != "") {
+  // do something
+}</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>highlight(&lt;ID&gt;)</code></dt>
+<dd>
+<p>Highlights the element with the specified IDs. Note that highlighting can also be explicitly configured in scenario steps.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">circuit.highlight(3,7,8);</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>unhighlight()</code></dt>
+<dd>
+<p>Removes all highlights from the circuit.  Note that highlighting can also be explicitly configured in scenario steps.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">circuit.unhighlight();</code></pre>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="circuitelemmodelbridge">CircuitElemModelBridge</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Used when executing a <code>GraphElement</code> during simulation without "deep simulation" mode. The statements in the table
+below are accessible as functions of the object <code>elem</code>.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>id()</code></dt>
+<dd>
+<p>Returns the model ID of this element.<br></p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">val id = elem.id();</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>input()</code></dt>
+<dd>
+<p>Returns the signal of the first (or one and only) <code>InputPort</code> as a hex string.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">if (elem.input() == "1") {
+  // Do something
+}</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>input(&lt;name:String&gt;)</code></dt>
+<dd>
+<p>Returns the signal of the <code>InputPort</code> with the specified name as a hex string.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">if (elem.input("CLK") == "0") {
+  // Do something
+}</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>input(&lt;ID:Int&gt;)</code></dt>
+<dd>
+<p>Returns the signal of the <code>InputPort</code> with the specified ID as a hex string.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">if (elem.input(3) == "0") {
+  // Do something
+}</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>inputWord(&lt;name:String&gt;)</code></dt>
+<dd>
+<p>Returns the signal of the <code>InputPort</code> with the specified name as a <code>Word</code>.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">if (elem.inputWord("I1").bitAt(0)) {
+  // Do something
+}</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>inputBit(&lt;name:String&gt;)</code></dt>
+<dd>
+<p>Returns the lowest-priority input signal <code>Bit</code> of the <code>InputPort</code> with the specified name as a boolean.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">if (elem.inputBit("R")) {
+  // Do something
+}</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>inputBit(&lt;id:Int&gt;)</code></dt>
+<dd>
+<p>Returns the lowest-priority input signal <code>Bit</code> of the <code>InputPort</code> with the specified ID as a boolean.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">if (elem.inputBit(1)) {
+  // Do something
+}</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>inputBit()</code></dt>
+<dd>
+<p>Returns the lowest-priority input signal <code>Bit</code> of the first <code>InputPort</code> as a boolean.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">if (elem.inputBit()) {
+  // Do something
+}</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>portRaised(&lt;name:String&gt;)</code></dt>
+<dd>
+<p>Determines whether the input signal of the <code>InputPort</code> with the specified name has changed and its new value is 1, and returns the result as boolean. This can be used to detect a raising signal edges.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">if (elem.portRaised("C")) {
+  // Do something
+}</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>output()</code></dt>
+<dd>
+<p>Returns the signal of the first (or one and only) <code>OutputPort</code> as a hex string.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">if (elem.output() == "1") {
+  // Do something
+}</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>output(&lt;ID:Int&gt;)</code></dt>
+<dd>
+<p>Returns the signal of the <code>OutputPort</code> with the specified ID as a hex string.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">if (elem.output(4) == "0") {
+  // Do something
+}</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>outputWord()</code></dt>
+<dd>
+<p>Returns the signal of the first (or one and only) <code>OutputPort</code> as a <code>Word</code>.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">if (elem.outputWord().bitAt(1)) {
+  // Do something
+}</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>outputWord(&lt;name:String&gt;)</code></dt>
+<dd>
+<p>Returns the signal of the <code>OutputPort</code> with the specified name as a <code>Word</code>.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">if (elem.outputWord("I1").bitAt(2)) {
+  // Do something
+}</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>outputWord(&lt;ID:Int&gt;)</code></dt>
+<dd>
+<p>Returns the signal of the <code>OutputPort</code> with the specified ID as a <code>Word</code>.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">if (elem.outputWord(2).bitAt(0)) {
+  // Do something
+}</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>setOutput(&lt;value:HexString&gt;)</code></dt>
+<dd>
+<p>Sets the output signal of the first (or one and only) <code>OutputPort</code> to the specified hex value.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">elem.setOutput("7F");</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>setOutput(&lt;D:Int&gt;, &lt;value:HexString&gt;)</code></dt>
+<dd>
+<p>Sets the output signal of the <code>OutputPort</code> with the specified ID to a hex value.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">elem.setOutput(1, "A02B");</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>setOutputWord(&lt;value:Word&gt;)</code></dt>
+<dd>
+<p>Sets the output signal of the first (or one and only) <code>OutputPort</code> to the specified <code>Word</code>.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">if (elem.portRaised("C")) {
+  var d = elem.inputWord("D");
+  if (!elem.anyBitUndefined(d)) {
+    elem.setOutputWord(d);
+  }
+}</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>setOutputWord(&lt;name:String&gt;, &lt;value:Word&gt;)</code></dt>
+<dd>
+<p>Sets the output signal of the <code>OutputPort</code> with the specified name to a <code>Word</code>.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">elem.setOutputWord("Q", elem.inputWord("D"));</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>setOutputWord(&lt;ID:Int&gt;, &lt;value:Word&gt;)</code></dt>
+<dd>
+<p>Sets the output signal of the <code>OutputPort</code> with the specified ID to a <code>Word</code>.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">elem.setOutputWord(1, elem.inputWord("D"));</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>setOutputBit(&lt;value:Boolean&gt;)</code></dt>
+<dd>
+<p>Sets the output signal of the first (or one and only) <code>OutputPort</code> to the specified boolean value.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">elem.setOutputBit(true);</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>setOutputBit(&lt;name:String&gt;, &lt;value:Boolean&gt;)</code></dt>
+<dd>
+<p>Sets the lowest-priority output signal <code>Bit</code> of the <code>OutputPort</code> with the specified name to a boolean.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">elem.setOutputBit("Out", false);</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>setOutputBit(&lt;id:Int&gt;, &lt;value:Boolean&gt;)</code></dt>
+<dd>
+<p>Sets the lowest-priority output signal <code>Bit</code> of the <code>OutputPort</code> with the specified ID to a boolean.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">elem.setOutputBit(1, false);</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>anyBitUndefined(&lt;value:Word&gt;)</code></dt>
+<dd>
+<p>Checks whether any <code>Bit</code> in the specified <code>Word</code> is undefined and returns the result as a boolean.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">var d = elem.inputWord("D");
+if (!elem.anyBitUndefined(d)) {
+  elem.setOutputWord(d);
+}</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>hexWord(&lt;value:String&gt;, &lt;bitWidth:Int&gt;)</code></dt>
+<dd>
+<p>Returns the <code>Word</code> of a particular bit width with the specified hexadecimal value.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">var outA = elem.hexWord("00FF", 16);</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>undefinedWord(&lt;bitWidth:Int)</code></dt>
+<dd>
+<p>Returns the <code>Word</code> of the specified bit width with all bits undefined.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">var outA = elem.undefinedWord(16);</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>store(&lt;name:String&gt;, &lt;value:Word&gt;)</code></dt>
+<dd>
+<p>Stores the specified <code>Word</code> under the given name, which must be unique for
+the current <code>GraphElement</code>. This can be used for scripting sequential circuits, or any circuits that store a state.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">var c = elem.inputWord("C");
+var fc = elem.inputWord("FC").toInt();
+
+if (elem.inputBit("ENC") &amp;&amp; elem.portRaised("CLK")) {
+  elem.store(fc.toString(), c);
+}</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>load(&lt;name:String&gt;)</code></dt>
+<dd>
+<p>Returns the <code>Word</code> that has previously been stored under the given name.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">var outA = elem.load("3");</code></pre>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="circuitelemviewbridge">CircuitElemViewBridge</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Used as a sub-element of <code>CircuitViewBridge</code>. Note that <code>CircuitElemViewBridge</code> is an extension of
+<code>CircuitElemModelBridge</code> and therefore supports all functions of <code>CircuitElementModelBridge</code> as well.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>id()</code></dt>
+<dd>
+<p>Returns the view ID of this element.<br></p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">val id = elem.id();</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>drawDataFlow(&lt;input:String&gt;, &lt;output:String&gt;)</code></dt>
+<dd>
+<p>Draws a data flow line from the <code>InputPort</code> with name <code>input</code> to the <code>OutputPort</code> with name <code>output</code>.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">if (elem.inputBit("S")) {
+  elem.drawDataFlow("I1", "O");
+} else {
+  elem.drawDataFlow("I2", "O");
+}</code></pre>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="word">Word</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Some functions return a <code>Word</code> as a signal value. A <code>Word</code> is an array of boolean values; the size of the array depends on the bit width of the port that produces the <code>Word</code>. Note that <code>Word</code> is immutable.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>bitAt(&lt;index:Int&gt;)</code></dt>
+<dd>
+<p>Returns the value of the bit at the specified index as a boolean. The index of the least significant bit is 0.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">if (elem.inputWord().bitAt(0)) {
+  // do something
+}</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>toInt()</code></dt>
+<dd>
+<p>Returns the value of a <code>Word</code> as an integer.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">if (elem.inputWord().toInt() == 255) {
+  // do something
+}</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>toHexString()</code></dt>
+<dd>
+<p>Returns the value of a <code>Word</code> as hex string.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">if (elem.inputWord().toHexString() == "FF00") {
+  // do something
+}</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>not()</code></dt>
+<dd>
+<p>Returns the <code>Word</code> that represents the bit-wise inversion of this <code>Word</code>.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">elem.setOutputWord(elem.inputWord().not());</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>and(&lt;word:Word&gt;)</code></dt>
+<dd>
+<p>Returns the <code>Word</code> that represents the bit-wise logical "and" of this <code>Word</code> and the specified <code>Word</code>.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">elem.setOutputWord(
+  elem.inputWord("A").and(elem.inputWord("B"))
+);</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>shiftLeft(&lt;bitCount:Int&gt;)</code></dt>
+<dd>
+<p>Returns a new <code>Word</code> whose bits are shifted the specified number of bits to the left.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">var d = elem.inputWord("D");
+elem.setOutputWord("O", d.shiftLeft(1));</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>shiftRight(&lt;bitCount:Int&gt;)</code></dt>
+<dd>
+<p>Returns a new <code>Word</code> whose bits are shifted the specified number of bits to the right.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">var d = elem.inputWord("D");
+elem.setOutputWord("O", d.shiftRight(1));</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>subword(&lt;index:Int&gt;, &lt;width:Int)</code></dt>
+<dd>
+<p>Returns the subword of the specified bit width, starting at the specified index.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">var d = elem.inputWord("D");
+// Sets "ADR" to bits 0..7 of "D"
+elem.setOutputWord("ADR", d.subword(0, 8));</code></pre>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="usecaseactionbridge">UsecaseActionBridge</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Used in use case action scripts. The statements below are accessible as functions of the object <code>circuit</code>.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>pressButtonAt(&lt;time:Long&gt;, &lt;id:Int&gt;)</code></dt>
+<dd>
+<p>Presses the button with ID <code>id</code> at simulation time <code>time</code>.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">circuit.pressButtonAt(10000, 1);</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>setInputAt(&lt;time:Long&gt;, &lt;inputId:Int&gt;, &lt;hexValue: String&gt;)</code></dt>
+<dd>
+<p>Sets the value of the input with ID <code>inputId</code> at simulation time <code>time</code> as a hexadecimal value <code>hexValue</code>.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">circuit.setInputAt(10000, 6, "1");</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>applyClock(&lt;inputId:Int&gt;, &lt;period:Long&gt;)</code></dt>
+<dd>
+<p>Applies a clock signal with period <code>period</code> (nanoseconds) to the input with ID <code>inputId</code>.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">circuit.applyClock(6, 1000000000);</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>pauseAt(&lt;time:Long&gt;)</code></dt>
+<dd>
+<p>Activate single step simulation mode at simulation time <code>time</code> (nanoseconds). This can be used to quickly go through the initialization phase of a circuit and the switch to single step simulation before an "interesting" part of circuit execution is entered that can only be and understood by single stepping.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">circuit.applyClock(87, 91000);
+circuit.setInputAt(23062, 46, "0800");
+circuit.setInputAt(134948, 46, "1234");
+circuit.pauseAt(172544);</code></pre>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="usecasetestbridge">UsecaseTestBridge</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Used in use case tet scripts. The statements below are accessible as functions of the object <code>circuit</code>.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>assertLedOnAt(&lt;time:Long&gt;, &lt;id:Int&gt;)</code></dt>
+<dd>
+<p>Asserts that the LED with ID <code>id</code> is on at simulation time <code>time</code>.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">circuit.assertLedOnAt(20000, 2);</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>assertLedOffAt(&lt;time:Long&gt;, &lt;id:Int&gt;)</code></dt>
+<dd>
+<p>Asserts that the LED with ID <code>id</code> is off at simulation time <code>time</code>.</p>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">circuit.assertLedOffAt(20000, 2);</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>assertOutputAt(&lt;time:Long&gt;, &lt;id:Int&gt;, &lt;hexValue:String&gt;)</code></dt>
+<dd>
+<p>Assert that the output component with ID <code>id</code> has the hex value <code>hexValue</code> at simulation time <code>time</code>.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/flandreas/antares" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 Andreas Fleischmann. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
