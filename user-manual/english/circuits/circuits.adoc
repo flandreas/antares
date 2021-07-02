@@ -53,6 +53,8 @@ Propagation Delay:: This optional attribute can be used to specify the length of
 
 Function:: This attribute can be used to specify the script that Antares executes for this component during simulation, if the simulation is run in link:{{site.basedir}}/user-manual/english/simulation/simulation["Flat simulation"] mode. This is an advanced technique; for details on scripting, see the chapter link:{{site.basedir}}/user-manual/english/circuits/circuit-scripting["Scripting in Circuits"].
 
+Always use function:: This attributes is used to activate the "purely scripted" feature of a circuit. If the attribute is set, the script in attribute "Function" is executed even if simulation depth is "deep". This can be used to build functional components without the need to build the entire inner circuit, although you probably will add some inputs and outputs to give the component an interface to the surrounding circuit.
+
 Default light color:: The light color that all components in this circuit should have by default (LED, 7-segment display, terminal). If you change the value of this attribute while the circuit already contains lit components, Antares will ask you if the new light color should be applied to these components. With this option, for example, all red LEDs and 7-segment displays can be changed to yellow with a single action.
 
 == Adding components
