@@ -11,19 +11,19 @@ image:user-manual/base-library/not-sample.png[Example NOT, 300]
 The NOT gate inverts the signal at the input and outputs it at the output. If property
 "Bit Width" is larger than 1, the "NOT" function is applied to each bit individually.
 
-Unconnected inputs always have the value 0.
-
-.truth table
+.Truth table
 [%header,cols=2*, width="40%"]
 |===
 |In|Out
 |**0**|1
 |**1**|0
-|**Z**|Z
+|**Z**|0
 |**X**|X
 |===
 
 (Z: Undefined/High impedance, X: Error)
+
+The behaviour for unconnected inputs or input wires carrying an undefined signal can be changed using the system preference "Open Gate Input Behaviour".
 
 === Mnemonics
 

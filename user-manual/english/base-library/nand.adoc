@@ -10,19 +10,19 @@ image:user-manual/base-library/nand-sample.png[Example NAND, 300]
 
 The NAND gate outputs the result of the NAND operation of the 1-bit signals at the input. The output has the value 0 only if all inputs have the value 1.
 
-Unconnected inputs always have the value 0.
-
-.truth table
+.Truth table
 [%header,cols=5*, width="40%"]
 |===
 ||0|1|Z|X
-|**0**|1|1|1|1
+|**0**|1|1|1|X
 |**1**|1|0|1|X
 |**Z**|1|1|1|X
-|**X**|1|X|X|X
+|**X**|X|X|X|X
 |===
 
 (Z: Undefined/High impedance, X: Error)
+
+The behaviour for unconnected inputs or input wires carrying an undefined signal can be changed using the system preference "Open Gate Input Behaviour".
 
 === Mnemonics
 

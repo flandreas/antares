@@ -105,6 +105,20 @@ In Antares there are two approaches to achieve the same behavior in simulation a
 * **Different propagation delays**: In the example above, both NOR gates have the same propagation delay, e.g. 10 ns. If different propagation delays are defined for the two gates (e.g. 8 ns for the upper gate and 11 ns for the lower gate), the circuit will settle into a stable, correct state at startup. The latches and flip-flops of Antares' standard library are built according to this approach.
 * **Noise**: With the menu option menu:Simulation[Noise, Random Noise] the simulator can be instructed to change the runtimes of the components by a random value. With this option, the above SR latch takes a correct state at the start of simulation (possibly after a short settling phase), even if both gates have configured the same run-time.
 
+=== Behavior with undefined input values
+
+Certain components like tri-state buffers or bi-directional inputs/outputs can produce undefined (floating) values. The same happens with
+input ports left unconnected: their signal is assumed to be undefined. On the other hand, logic gates require defined inputs to work properly.
+
+Using the system preference "Undefined Gate Input Behaviour", you can define how Antares behaves during simulation regarding undefined input values. The following
+options are available.
+
+* **Read as 0**: An undefined input signal is treated as a 0. This is equivalent to a real logic gate with an integrated pull-down resistors at its inputs.
+* **Read as 1**: An undefined input signal is treated as a 1. This is equivalent to a real logic gate with an integrated pull-up resistors at its inputs.
+* **Read as random value**: An undefined input signal is treated as a random value. If you choose this option, you have to make sure that all input ports
+are connected, and all tri-state output ports connected to the same input port are coordinated such that a stable signal is always produced, unless your
+circuits explicitly contains pull resistors that cover these cases.
+
 === Bus contention and signal conflicts
 
 While Antares prevents you from connecting more than one output-only port to the same wire, it is often useful to connect various input/output ports to the same wire. It is then up to the circuit logic to avoid that these ports assert different signals to this wire at the same time. If the circuit fails to achieve this, a signal conflict occurs. This often happens due to a timing problem in the circuit, and the signal propagation algorithm of Antares tries to help you to detect and fix these problems.

@@ -10,19 +10,19 @@ image:user-manual/base-library/xor-sample.png[Example XOR gate, 300]
 
 The XOR gate (Exclusive OR) outputs the result of the XOR function of the 1-bit signals at the input. The output only has the value 1 if exactly one input has the value 1. For an XOR gate with two inputs, this means that the output is 1 if the two inputs have a different value.
 
-Unconnected inputs always have the value 0.
-
 .truth table
 [%header,cols=5*, width="40%"]
 |===
 ||0|1|Z|X
 |**0**|0|1|0|X
-|**1**|1|0|0|X
-|**Z****|0|0|0|X
+|**1**|1|0|1|X
+|**Z**|0|1|0|X
 |**X**|X|X|X|X|X
 |===
 
 (Z: Undefined/High impedance, X: Error)
+
+The behaviour for unconnected inputs or input wires carrying an undefined signal can be changed using the system preference "Open Gate Input Behaviour".
 
 === Mnemonics
 

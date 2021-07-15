@@ -8,21 +8,22 @@ image:user-manual/base-library/xnor-sample.png[Example XNOR gate, 300].
 
 == Behavior
 
-The XNOR (Nexclusive OR) outputs the result of the XNOR function of the 1-bit signals at the inputs. The output has the value 1 only if not exactly one input has the value 1. For an XNOR gate with two inputs, this means that the output is 1 if both inputs have the same value.
+The XNOR (Exclusive NOR) outputs the result of the XNOR function of the 1-bit signals at the inputs. The output has the value 1 only if not exactly one input has the value 1. For an XNOR gate with two inputs, this means that the output is 1 if both inputs have the same value.
 
-Unconnected inputs always have the value 0.
 
-.truth table
+.Truth table
 [%header,cols=5*, width="40%"]
 |===
 ||0|1|Z|X
 |**0**|1|0|1|X
-|**1**|0|1|1|X
-|**Z**|1|1|1|X
+|**1**|0|1|0|X
+|**Z**|1|0|1|X
 |**X**|X|X|X|X|X
 |===
 
 (Z: Undefined/High impedance, X: Error)
+
+The behaviour for unconnected inputs or input wires carrying an undefined signal can be changed using the system preference "Open Gate Input Behaviour".
 
 === Mnemonics
 

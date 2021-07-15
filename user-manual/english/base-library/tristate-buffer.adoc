@@ -14,15 +14,14 @@ Tri-state buffers are used when the output of several components is to be combin
 
 The control input of the tri-state buffer can be set to "positive" or "negative" with the "Logic" attribute.
 
-Unconnected inputs always have the value 0.
-
 .Truth table "Positive logic"
 [%header,cols=5*, width="40%"]
 |===
 ||EN=0|EN=1|EN=Z|EN=X
 |**0**|Z|0|Z|X
 |**1**|Z|1|Z|X
-|**Z/X**|Z|Z/X|Z|X
+|**Z**|Z|0|Z|X
+|**X**|Z|X|Z|X
 |===
 
 .Truth table "Negative logic"
@@ -31,10 +30,13 @@ Unconnected inputs always have the value 0.
 ||EN=0|EN=1|EN=Z|EN=X
 |**0**|0|Z|Z|X
 |**1**|1|Z|Z|X
-|**Z/X**|Z/X|Z|Z|X
+|**Z**|0|Z|Z|X
+|**X**|X|Z|Z|X
 |===
 
 (Z: Undefined/High impedance, X: Error)
+
+The behaviour for unconnected inputs or input wires carrying an undefined signal can be changed using the system preference "Open Gate Input Behaviour".
 
 === Mnemonics
 

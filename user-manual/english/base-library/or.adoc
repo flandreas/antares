@@ -10,19 +10,20 @@ image:user-manual/base-library/or-sample.png[Example OR gate, 300]
 
 The OR gate outputs the result of the OR function of the 1-bit signals at the input. The output only has the value 1 if at least one of the inputs has the value 1.
 
-Unconnected inputs always have the value 0.
-
-.truth table
+.Truth table
 [%header,cols=5*, width="40%"]
 |===
 ||0|1|Z|X
 |**0**|0|1|0|X
-|**1**|1|1|1|1
+|**1**|1|1|1|X
 |**Z**|0|1|0|X
-|**X**||X|1|X|X
+|**X**|X|X|X|X|X
 |===
 
 (Z: Undefined/High impedance, X: Error)
+
+The behaviour for unconnected inputs or input wires carrying an undefined signal can be changed using the system preference
+"Open Gate Input Behaviour".
 
 === Mnemonics
 

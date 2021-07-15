@@ -62,3 +62,11 @@ You can use drag & drop to move a component to another position within the direc
 
 * A circuit cannot be moved from the project to the library if it references other circuits in the project.
 * The default Antares libraries cannot be changed.
+
+== Exporting/Importing circuits
+
+In order to share custom circuits between users, Antares allows you to export a circuit (including all non-standard circuits it depends on) to a ZIP file. Other users can then import this ZIP file into their own project or custom library.
+
+To export a circuit, use the pop-up menu menu:Export...[] on a circuit element in the workbench tree.
+
+To import a circuit from a ZIP file, use the pop-up menu:Import...[] on the project element, the library element, or any folder element in the workbench tree. After selecting the ZIP file to import, Antares will create a new folder "Import '[Name]''" and add all imported circuits to that folder. You can then choose to move the imported circuits to wherever you like in the workbench.

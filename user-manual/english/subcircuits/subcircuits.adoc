@@ -134,3 +134,29 @@ image::user-manual/subcircuits/keyboard-usage.png[, 600, align="center"]
 Notice how the user can use the keyboard subcircuit just like is was a built-in component during simulation. It displays its switches with their current states and allows the user to click the switches with the mouse.
 
 If you take this idea even further, you can imagine to include a special circuit in a project whose symbol contains all interactive elements of all subcircuits. Thus, this special circuit can be used like the "front panel" of a complex circuit; if you open this circuit, you will only see the interactive elements of the system, i.e. the switches, LEDs or 7-segment displays.
+
+=== DIL packages
+
+When drawing symbols for subcircuits, you can basically choose between two different styles of symbols.
+
+Standard:: In this style, the symbol body consists of a standard shape like a rectangle or a polyline, and the
+ports of the symbol are simple lines. The subcircuits of Antares' standard libraries are built using this style.
+
+DIL:: DIL (Dual in-line) can be used if you want to use your subcircuits in a way that is closer to real word circuits, e.g. like using SN74xx packages for breadboard systems.
+
+image::user-manual/subcircuits/DIL.png[, 150, align="center"]
+
+In order to create a DIL symbol, you add the special "DIL Package" component from the drawing toolbar to the symbol drawing. It has a text property whose text is automatically vertically oriented. Set this text to the name of the DIL symbol, e.g. "7400".
+
+When dragging a port over the DIL package, Antares highlights the proposed port locations on both sides of the DIL package and snaps the port to these locations. It also changes the port style from "Line" to "DIL" and adjusts its orientation accordingly, e.g. to "East" when placing the port at the right edge of the DIL package.
+
+TIP: When using the DIL package, activate the tool "Align" in the toolbar to take full advantage of the snapping feature.
+
+The recommended dimensions of DIL symbols are as follows:
+
+* **Package width**: 5 grid line units (10 grid units)
+* **Port distance**: 2 grid line units (4 grid units)
+
+When using DIL symbols in circuits along with other subcircuits that contain multi-bit ports, you will often
+use splitters to split wires to the single-bit wire required by DIL packages. In order to be aligned with
+the recommended DIL port distance, the splitter components offer a property "Pin Spacing" with a value "Wide". This allows you to connect splitters to DIL symbols with straight wires.

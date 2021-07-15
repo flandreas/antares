@@ -10,19 +10,19 @@ image:user-manual/base-library/not-sample.png[Example buffer, 300]
 
 A buffer forwards the signal of the input unchanged to the output.
 
-Unconnected inputs always have the value 0.
-
 .truth table
 [%header,cols=2*, width="40%"]
 |===
 |In|Out
 |**0**|0
 |**1**|1
-|**Z**|Z
+|**Z**|0
 |**X**|X
 |===
 
 (Z: Undefined/High impedance, X: Error)
+
+The behaviour for unconnected inputs or input wires carrying an undefined signal can be changed using the system preference "Open Gate Input Behaviour".
 
 === Mnemonics
 
