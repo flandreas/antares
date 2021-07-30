@@ -23,6 +23,7 @@ The NOR gate outputs the result of the NOR function of the 1-bit signals at the 
 
 The behaviour for unconnected inputs or input wires carrying an undefined signal can be changed using the system preference "Open Gate Input Behaviour".
 
+The multi-bit version of the NOR gate will perform its one-bit transformation bitwise on its inputs.
 
 === Mnemonics
 

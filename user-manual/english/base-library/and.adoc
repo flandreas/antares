@@ -25,6 +25,8 @@ The AND gate outputs the result of the AND function of the 1-bit signals at the 
 The behaviour for unconnected inputs or input wires carrying an undefined signal can be changed using the system preference
 "Open Gate Input Behaviour".
 
+The multi-bit version of the AND gate will perform its one-bit transformation bitwise on its inputs.
+
 == Data path
 
 AND gates are often used in data path circuits in which one of several data paths is selected by means of control inputs. AND gates with n+1 inputs are used, where n is the number of bits required to select the data path.

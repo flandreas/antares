@@ -22,8 +22,9 @@ The OR gate outputs the result of the OR function of the 1-bit signals at the in
 
 (Z: Undefined/High impedance, X: Error)
 
-The behaviour for unconnected inputs or input wires carrying an undefined signal can be changed using the system preference
-"Open Gate Input Behaviour".
+The behaviour for unconnected inputs or input wires carrying an undefined signal can be changed using the system preference "Open Gate Input Behaviour".
+
+The multi-bit version of the OR gate will perform its one-bit transformation bitwise on its inputs.
 
 === Mnemonics
 
