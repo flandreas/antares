@@ -1,0 +1,26 @@
+<project _id='0' defaultElement='440b10dc-0999-4426-aa0f-c22c5221f641' uuid='532f0477-722c-4c88-ada3-c419a386d06a' author='5ecf330b-e395-4e17-88b0-0883834b384a' import='6707f981-110d-4629-a0bf-c35a4688025c'>
+  <folder>
+    <libraryFolder _id='1'>
+      <name>
+        <translation lang='en' text='Binary Addition'/>
+      </name>
+      <items>
+        <containerLibraryElement _id='2' uuid='440b10dc-0999-4426-aa0f-c22c5221f641'>
+          <name>
+            <translation lang='en' text='Result Calculation'/>
+          </name>
+        </containerLibraryElement>
+        <containerLibraryElement _id='3' uuid='ae8e1d4c-5201-489d-9494-8eec9f54380d'>
+          <name>
+            <translation lang='en' text='Carry Calculation'/>
+          </name>
+        </containerLibraryElement>
+        <containerLibraryElement _id='4' uuid='e2252451-b870-4541-ac11-1ffe2aca72ca'>
+          <name>
+            <translation lang='en' text='4 Bit Addition'/>
+          </name>
+        </containerLibraryElement>
+      </items>
+    </libraryFolder>
+  </folder>
+</project>

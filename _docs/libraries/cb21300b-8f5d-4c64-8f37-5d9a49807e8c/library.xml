@@ -33,10 +33,16 @@
           <items>
             <baseLibraryElement _id='3' id='Splitter'/>
             <baseLibraryElement _id='4' id='Concentrator'/>
+            <baseLibraryElement _id='50' id='BidirectionalSplitter'/>
             <baseLibraryElement _id='5' id='Probe'/>
             <baseLibraryElement _id='6' id='Tunnel'/>
             <baseLibraryElement _id='7' id='Constant'/>
             <baseLibraryElement _id='37' id='Break'/>
+            <baseLibraryElement _id='46' id='PullResistor'/>
+            <baseLibraryElement _id='47' id='Transistor'/>
+            <baseLibraryElement _id='48' id='Ground'/>
+            <baseLibraryElement _id='49' id='Power'/>
+            <baseLibraryElement _id='51' id='RealSwitch'/>
           </items>
         </libraryFolder>
         <libraryFolder _id='8'>
@@ -68,6 +74,7 @@
             <baseLibraryElement _id='21' id='DipSwitch'/>
             <baseLibraryElement _id='22' id='Clock'/>
             <baseLibraryElement _id='35' id='Keyboard'/>
+            <baseLibraryElement _id='50' id='Joystick'/>
           </items>
         </libraryFolder>
         <libraryFolder _id='24'>
@@ -101,6 +108,7 @@
           </name>
           <items>
             <baseLibraryElement _id='34' id='Random'/>
+            <baseLibraryElement _id='52' id='BitExtender'/>
           </items>
         </libraryFolder>
       </items>

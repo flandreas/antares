@@ -34,14 +34,14 @@
                 <netPortRef verticeId='24' portId='2'/>
               </ports>
             </digitalNet>
-            <nandGate _id='12' id='11' delay='8' inputCount='3'/>
+            <nandGate _id='12' id='11' delay='11' inputCount='3'/>
             <digitalNet _id='13' id='12' delay='0'>
               <ports>
                 <netPortRef verticeId='7' portId='3'/>
                 <netPortRef verticeId='12' portId='2'/>
               </ports>
             </digitalNet>
-            <nandGate _id='14' id='13' delay='11' inputCount='3'/>
+            <nandGate _id='14' id='13' delay='8' inputCount='3'/>
             <digitalNet _id='15' id='14' delay='0'>
               <ports>
                 <netPortRef verticeId='8' portId='3'/>
@@ -64,8 +64,8 @@
                 <netPortRef verticeId='12' portId='3'/>
               </ports>
             </digitalNet>
-            <circuitInOut _id='20' id='19' name='PRE' type='input' bitWidth='1'/>
-            <circuitInOut _id='21' id='20' name='CLR' type='input' bitWidth='1'/>
+            <circuitInOut _id='20' id='19' name='!(PRE)' type='input' bitWidth='1'/>
+            <circuitInOut _id='21' id='20' name='!(CLR)' type='input' bitWidth='1'/>
             <digitalNet _id='22' id='22' delay='0'>
               <ports>
                 <netPortRef verticeId='12' portId='1'/>
@@ -291,18 +291,14 @@
           <name>
             <translation lang='en' text='SR Flip-Flop PRE/CLR (Neg)'/>
           </name>
-          <desc>
-            <translation lang='en' text='SR flip-flop with asanchronous set and reset input'/>
-            <translation lang='de' text='SR-Flipflop mit asynchronem Set- und Rücksetz-Eingang'/>
-          </desc>
           <ports>
             <subCircuitPort _id='87' portId='1' name='S' logic='positive' bitWidth='1' trigger='level' type='input' representation='binary'/>
             <subCircuitPort _id='88' portId='2' name='C' logic='negative' bitWidth='1' trigger='edge' type='input' representation='binary'/>
             <subCircuitPort _id='89' portId='3' name='R' logic='positive' bitWidth='1' trigger='level' type='input' representation='binary'/>
             <subCircuitPort _id='90' portId='4' name='Q' logic='positive' bitWidth='1' trigger='level' type='output' representation='binary'/>
             <subCircuitPort _id='91' portId='5' name='!Q' logic='negative' bitWidth='1' trigger='level' type='output' representation='binary'/>
-            <subCircuitPort _id='92' portId='6' name='PRE' logic='negative' bitWidth='1' trigger='level' type='input' representation='binary'/>
-            <subCircuitPort _id='93' portId='7' name='CLR' logic='negative' bitWidth='1' trigger='level' type='input' representation='binary'/>
+            <subCircuitPort _id='92' portId='6' name='!(PRE)' logic='negative' bitWidth='1' trigger='level' type='input' representation='binary'/>
+            <subCircuitPort _id='93' portId='7' name='!(CLR)' logic='negative' bitWidth='1' trigger='level' type='input' representation='binary'/>
           </ports>
         </subGraphVertice>
       </model>

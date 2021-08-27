@@ -5,29 +5,20 @@ header:
   show_overlay_excerpt: false
 ---
 
-This is the place where you can follow the development progress of Antares' web version.
+Although the Antares desktop client is already very powerful and provides many useful features for single users, essential parts of the Antares vision cannot be achieved with it alone. Therefore, in addition to the desktop client, we are striving for a cloud-based web version of Antares.
 
-[Level 7](../antares-web.html): Library tree.
+# Interactive online textbooks
 
-Open circuits from the library tree. Drag component from the library into the circuit.
+With the help of Antares, it will be possible in the future for authors of digital technology textbooks to create online versions of their textbooks that contain interactive, animated circuits. This will supplement the author's explanatory text with interactive elements in which the student can interactively experience and deepen the subject matter.
 
-Next up: Project tree.
+This [example](../antares-web.html) shows how a page in an online textbook with Antares circuit elements might look.
 
-## History
+An essential element is the question of the form in which the textual content is created, supplemented by interactive Antares elements. We aim to provide plugins for common CMS systems that can be used to integrate Antares elements into online pages.
 
-**Level 6**: Library tree.
+# Integration with course management and online homework assignments
 
-**Level 5**: More simulation UI controls (break, resume, simulation speed).
+As a complement to the online textbooks, authors will be able to capture students in their classes and send them online exercises that also include interactive circuit elements. The student can create, simulate, and save the requested circuits. Antares then provides support to the teacher in correcting these exercises.
 
-**Level 4**: Simulate circuits with subcircuits (Load library circuits).
+# Integration with third-party learning platforms
 
-The sample circuit that can be loaded and simulated is the "Full Adder" from the
-standard library. It contains two "Half Adders" that are loaded and simulated,
-but it is not yet possible to dive into them, as it is possible with Antares desktop.
-
-**Level 3**: Simulate circuit from standard library.
-
-**Level 2**: Load and display circuit from standard library.
-
-**Level 1**: Draw basic shapes. Various selection models. Drag and resize.
-Zoom using the mouse wheel.
+Another possibility is to explore in the future whether Antares could be integrated with widespread learning platforms such as [Brilliant](https://brilliant.org) to enable these platforms to offer interactive learning units for digital circuits and computer design.
