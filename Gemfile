@@ -12,13 +12,14 @@ gem "rake"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-gem "jekyll-feed"
+  gem "jekyll-feed"
   gem "jekyll-sitemap"
   gem "jekyll-paginate"
   gem "jekyll-seo-tag"
   gem "jekyll-compose"
   gem "jekyll-redirect-from"
   gem 'jekyll-asciidoc'
+  gem 'jemoji'
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
