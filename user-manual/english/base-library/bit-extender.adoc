@@ -1,0 +1,24 @@
+= Bit Extender
+include::../../page-variables.txt[]
+:page-permalink: /user-manual/english/base-library/bit-extender
+
+== Appearance
+
+image:user-manual/base-library/bitextender-sample.png[Example Bit Extender]
+
+== Behaviour
+
+Extends the bit width of a signed input value while preserving the sign. If the input is a single bit, this bit is set on all output bits.
+
+== Pins
+
+Input:: The input signal to be extended.
+
+Output:: The extended output signal.
+
+== Attributes
+
+Input Bit Width:: The number of bits of the input pin. Must be smaller than "Output Bit Width".
+
+Output Bit Width:: The number of bits of the output pin. Must be larger than "Input Bit Width".
+

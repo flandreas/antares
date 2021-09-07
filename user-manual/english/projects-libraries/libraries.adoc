@@ -20,6 +20,13 @@ btn:[New]:: Creates a new library. Besides the name of the new library, an alrea
 
 btn:[Delete]:: Deletes the selected library. This action cannot be undone. If you have projects based on the deleted library, these projects will no longer be usable.
 
+btn:[Export]:: Exports the selected library to a ZIP file.
+
+btn:[Import]:: Imports a library from a ZIP file. Importing can fail in one of the following situations:
+[horizontally]
+- *Invalid:* The imported ZIP file is invalid, i.e. it was probably not created by an export from Antares.
+- *Name already exists:* Since the name of a library must be unique, Antares rejects the import of a library with an already existing name.
+
 == Change properties
 
 With the context menu menu:Properties[] on the library in the workbench you can change the name and description of a library.

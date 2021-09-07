@@ -80,3 +80,4 @@ Color:: Normally, the color in which a component is drawn is determined by its s
 === Arithmetic
 
 * image:user-manual/base-library/random.svg[Random] link:{{site.basedir}}/user-manual/english/base-library/random[Random]
+* image:user-manual/base-library/bitextender.svg[Bit Extender] link:{{site.basedir}}/user-manual/english/base-library/bit-extender[Bit Extender]
