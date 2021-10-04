@@ -65,6 +65,8 @@ manual:
 releases:
   - title: 2021
     children:
+      - title: "0.12.2"
+        url: /docs/releases/release-0.12.2
       - title: "0.12.0"
         url: /docs/releases/release-0.12.0
       - title: "0.11.0"
