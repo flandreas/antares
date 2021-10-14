@@ -11,11 +11,13 @@ image::user-manual/simulation/simulation-tools.png[Simulation Tools, 300]
 
 image:user-manual/simulation/play24.png[Start] With this button (kbd:[Ctrl + R]) the simulation can be started and stopped.
 
-image:user-manual/simulation/pause24.png[Pause] Activates the single step mode of the simulation.
+image:user-manual/simulation/pause24.png[Pause] Pauses or resumes the simulation (kbd:[Space]). The button turns orange if simulation is paused.
 
-image:user-manual/simulation/resume24.png[Continue] Executes the next single step (kbd:[Ctrl + Space]). Is only active if the single step mode is activated. The button is displayed with an orange frame if a single step is possible.
+image:user-manual/simulation/resume24.png[Continue] Activates the single step mode of the simulation.
 
-With the slider the simulation speed can be controlled. The simulation speed is divided into three categories whose names are displayed as a tooltip when you move the mouse over the slider. The further to the left the slider is, the slower the simulation is executed and the more support information is displayed during the simulation.
+TIP: If single step mode should pause simulation with every new signal being generated, make sure to select menu option menu:Simulation[Soft Breakpoints]. Otherwise, only "hard breakpoints" from the "Break Component" are used.
+
+With the slider the simulation speed can be controlled. The simulation speed is divided into three categories whose names are displayed as a tooltip when you move the mouse over the slider. The further to the left the slider is, the slower the simulation is executed and the more support information is displayed during simulation.
 
 The speed categories have the following names:
 

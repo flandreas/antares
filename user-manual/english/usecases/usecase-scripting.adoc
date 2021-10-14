@@ -1,0 +1,90 @@
+= Scripting in Use Cases
+include::../../page-variables.txt[]
+:page-permalink: /user-manual/english/circuits/circuit-scripting
+:icons: font
+
+This chapter describes in detail how scripting can be used in link:{{site.basedir}}/user-manual/english/usecases/usecases[use cases].
+
+Scripting in use cases uses the link:{{site.basedir}}/user-manual/english/scripting/scripting-dsl[_Antares DSL_] programming language.
+
+TIP: Remember that whenever you have to specify an ID of a particular circuit component, you can select that component in the circuit editor and learn the ID from the property "ID" in the properties window.
+
+== Execute Use Cases
+
+When you write action scripts for use cases, your script typically simulates a user who interacts with the circuit by pressing buttons or manually setting a value of an input pin.
+
+In addition to predefining variables for all inputs and outputs of the current circuit, Antares also predefines some functions your script can use to interact with the circuit.
+
+[source,javascript]
+----
+/**
+ * Sets the signal of a particular input pin.
+ *
+ * @param time the simulation time (ns) at which the input is to be set
+ * @param inputName the name of the input pin whose signal is to be set
+ * @param signal the signal to set on the specified input pin
+ */
+private fun setInputAt(time: Long, inputName: String, signal: Any)
+
+/**
+ * Pause simulation at a particular simulation time. Can be used to drive
+ * the simulation into a particular state and then pause the simulation
+ * to let the user take over.
+ *
+ * @param time the time (ns) at which the simulation is to be paused
+ */
+private fun pauseAt(time: Long)
+
+/**
+ * Press a button at a particular simulation time.
+ *
+ * @param time the simulation time (ns) at which the button is to be pressed
+ * @param buttonId the ID of the button to be pressed
+ */
+private fun pressButtonAt(time: Long, buttonId: Long)
+
+/**
+ * Applies an oscillating clock signal to an input pin. Can be used in
+ * subcircuits that received a clock signal from the surrounding circuit.
+ *
+ * @param inputName the name of the input pin to apply the clock signal to
+ * @param period the period (ns) of the clock signal to apply
+ */
+private fun applyClock(inputName: String, period: Long)
+----
+
+== Test Cases
+
+The purpose of test case scripts is to check whether the circuit is in a particular state after a use case has been executed.
+
+In addition to predefining variables for all inputs and outputs of the current circuit, Antares also predefines some functions your script can use to check these conditions.
+
+Like in unit test frameworks used in software programming, the term for making sure that a certain condition is true is " to assert". This is not to be confused with the term "assert" in digital circuits referring to assigning values to a pin that triggers some logic.
+
+[source,javascript]
+----
+/**
+ * Asserts (checks) that an output pin has a particular value.
+ *
+ * @param time the simulation time (ns) at which the output pin is supposed to have value [signal]
+ * @param outputName the name of the output pin
+ * @param signal the expected value
+ */
+private fun assertOutputAt(time: Long, outputName: String, signal: Any)
+
+/**
+ * Checks if an LED is on.
+ *
+ * @param time the simulation time (ns) at which the LED must be on
+ * @param id the ID of the LED to check
+ */
+private fun assertLedOnAt(time: Long, id: Int)
+
+/**
+ * Checks if an LED is off.
+ *
+ * @param time the simulation time (ns) at which the LED must be off
+ * @param id the ID of the LED to check
+ */
+private fun assertLedOffAt(time: Long, id: Int)
+----

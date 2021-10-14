@@ -4,6 +4,8 @@ include::../../page-variables.txt[]
 
 Use cases in Antares are programmed uses of a circuit using link:{{site.basedir}}/user-manual/english/scripting/scripting[scripts]. The script of a use case can be used to program simulated user interactions such as pressing a switch or the presence of a particular signal at an input port. The user of a circuit can start the programmed use cases and observe how the circuit behaves without having to interact with the circuit at the right time.
 
+See link:{{site.basedir}}/user-manual/english/usecases/usecase-scripting[Scripting in Use Cases] for an in-depth explanation of how to use scripting for use cases.
+
 == Examples
 
 A simple example of use cases are the possible uses of an SR flip-flop, i.e. "Set" and "Reset". When setting, first both inputs "S" and "R" are set to 0 and then the input "S" is set to 1.
@@ -17,7 +19,7 @@ A more complex example is the execution of a specific machine instruction in a m
 
 With the Antares "Use Cases" feature, it is possible to define a use case "LODD" in the microprocessor circuitry that takes the right actions at the right time. The user, who has opened the microprocessor circuit, starts only this use case and can then observe how the microprocessor executes the machine instruction.
 
-== Execute use cases
+== Execute Use Cases
 
 The Antares simulation toolbar contains a selection box that offers all use cases defined in a circuit for execution.
 
@@ -27,7 +29,7 @@ When the user starts the execution of a use case, Antares automatically switches
 
 At the end of a use case execution, Antares remains in simulation mode.
 
-== Test cases
+== Test Cases
 
 For each use case, a test case can also be defined to check that the circuit functions correctly when this use case is executed.
 
@@ -55,7 +57,7 @@ Run Test:: Context menu on the application case node, which is only active if a 
 
 Run all Tests:: Context menu on the circuit node. Runs the tests of all use cases.
 
-=== Attributes of use cases
+=== Attributes of Use Cases
 
 Name:: The name of the use case that can be translated into all supported languages.
 
@@ -66,7 +68,7 @@ Action:: The script that contains the logic of the use case. +
 .Example
 [source,javascript]
 ----
-circuit.pressButtonAt(10000, 1);
+pressButtonAt(10000, 1)
 ----
 
 Test:: The script that contains the test conditions of the use case. +
@@ -74,6 +76,6 @@ Test:: The script that contains the test conditions of the use case. +
 .Example
 [source,javascript]
 ----
-circuit.assertLedOnAt(20000, 2);
+assertLedOnAt(20000, 2)
 ----
 

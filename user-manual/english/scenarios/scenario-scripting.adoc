@@ -1,5 +1,0 @@
-= Scripting in Scenarios
-include::../../page-variables.txt[]
-:page-permalink: /user-manual/english/scenarios/scenario-scripting
-
-TODO

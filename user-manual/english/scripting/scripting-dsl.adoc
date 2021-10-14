@@ -3,506 +3,495 @@ include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/scripting/scripting-dsl
 :icons: font
 
-WARNING: The Antares Scripting DSL is in experimental state and will probably be subject of change. As long as the DSL is experimental, there is no guarantee that your scripts won't break when executed in future versions of Antares.
+== Language Description
 
-TIP: The explanation of the Antares scripting DSL functions is still quite short. Please see the Antares Standard Library for lots of examples on how to use these functions.
+=== Types and Literals
 
-== Contents
+_Antares DSL_ is a dynamically typed programming language. Expressions do have a type, but type checking when evaluating assignments or calling functions is only done at runtime.
 
-* <<CircuitViewBridge>>: Access to the circuit
-* <<CircuitElemModelBridge>>: Access to the model of a circuit element
-* <<CircuitElemViewBridge>>: Access to the symbol of a circuit element
-* <<Word>>: Access to a digital data word
-* <<UsecaseActionBridge>>: Register use case action statements
-* <<UsecaseTestBridge>: Register use case test assertions
+_Antares DSL_ supports the following basic types:
 
-== CircuitViewBridge
+* Number (Long)
+* String
+* Digital Signal
 
-Used in all `Scenario` use cases. The statements below are accessible as functions of the object `circuit`.
+Number values are primarily used as counting variables in loops and in arithmetic expressions. Strings are currently only used as names of pins in circuits. Most of the time, you will use digital signal values.
 
-`name()`:: Returns the name of the circuit model as a string.
-+
-.Example
+_Antares DSL_ uses special prefixes to specify hexadecimal values of digital signals.
+
+* *0x* (Hexadecimal literal)
+* *0x?* (Undefined / floating hexadecimal value)
+
 [source,javascript]
 ----
-circuit.name();
+// Number literal
+42
+
+// String literal
+"Hello"
+
+// Hexadecimal literal
+0xFA
+
+// Hexadecimal literal with 8 undefined (floating) Bits
+0x?8
 ----
 
-`input(<Name>)`:: Returns the signal of the `GraphInput` with the specified name as as hex string.
-+
-.Example
+When hexadecimal values are combined with or assigned to other hexadecimal values with a different bit width, the value with the smaller bit width is left padded with zeros.
+
+NOTE: Note that there is no "Boolean" type. Booleans are represented as Numbers, where 0 (zero) is interpreted as "false", and every value other than 0 is interpreted as "true".
+
+=== Statements and Expressions
+
+An _Antares DSL_ script is a sequence of statements. All of these statements are dealing somehow with expressions that get evaluated to values. Statements return those values as their result. These results can be used by other statements that surround those statements, or are simply returned as the final result of a script.
+
+This is important to remember when writing conditions scripts from which Antares expects a number to be interpreted as boolean value. In such scripts, the value returned by the last statement of the script will be used as return value of the script.
+
 [source,javascript]
 ----
-return circuit.input("I") == "1";
-----
+// This would just return 0
+0
 
-`output(<Name>)`:: Returns the signal of the `GraphOutput` with the specified name as a hex string.
-+
-.Example
-[source,javascript]
-----
-return circuit.output("O") == "FF";
-----
+// This would return the result of evaluating the expression
+A * (B + C)
 
-`elem(<ID>)`:: Returns the `CircuitElemViewBridge` of the element with the specified ID.
-+
-.Example
-[source,javascript]
-----
-return circuit.elem(1).input(1) == "1"
-----
-
-`scenario()`:: Returns the ID of the current `Scenario`, or an empty string if none is active.
-+
-.Example
-[source,javascript]
-----
-if (scenario() != "") {
-  // do something
-}
-----
-
-`highlight(<ID>)`:: Highlights the element with the specified IDs. Note that highlighting can also be explicitly configured in scenario steps.
-+
-.Example
-[source,javascript]
-----
-circuit.highlight(3,7,8);
-----
-
-`unhighlight()`:: Removes all highlights from the circuit.  Note that highlighting can also be explicitly configured in scenario steps.
-+
-.Example
-[source,javascript]
-----
-circuit.unhighlight();
-----
-
-== CircuitElemModelBridge
-
-Used when executing a `GraphElement` during simulation without "deep simulation" mode. The statements in the table
-below are accessible as functions of the object `elem`.
-
-`id()`:: Returns the model ID of this element. +
-+
-.Example
-[source,javascript]
-----
-val id = elem.id();
-----
-
-`input()`:: Returns the signal of the first (or one and only) `InputPort` as a hex string.
-+
-.Example
-[source,javascript]
-----
-if (elem.input() == "1") {
-  // Do something
-}
-----
-
-`input(<name:String>)`:: Returns the signal of the `InputPort` with the specified name as a hex string.
-+
-.Example
-[source,javascript]
-----
-if (elem.input("CLK") == "0") {
-  // Do something
-}
-----
-
-`input(<ID:Int>)`:: Returns the signal of the `InputPort` with the specified ID as a hex string.
-+
-.Example
-[source,javascript]
-----
-if (elem.input(3) == "0") {
-  // Do something
-}
-----
-
-`inputWord(<name:String>)`:: Returns the signal of the `InputPort` with the specified name as a `Word`.
-+
-.Example
-[source,javascript]
-----
-if (elem.inputWord("I1").bitAt(0)) {
-  // Do something
-}
-----
-
-`inputBit(<name:String>)`:: Returns the lowest-priority input signal `Bit` of the `InputPort` with the specified name as a boolean.
-+
-.Example
-[source,javascript]
-----
-if (elem.inputBit("R")) {
-  // Do something
-}
-----
-
-`inputBit(<id:Int>)`:: Returns the lowest-priority input signal `Bit` of the `InputPort` with the specified ID as a boolean.
-+
-.Example
-[source,javascript]
-----
-if (elem.inputBit(1)) {
-  // Do something
-}
-----
-
-`inputBit()`:: Returns the lowest-priority input signal `Bit` of the first `InputPort` as a boolean.
-+
-.Example
-[source,javascript]
-----
-if (elem.inputBit()) {
-  // Do something
-}
-----
-
-
-`portRaised(<name:String>)`:: Determines whether the input signal of the `InputPort` with the specified name has changed and its new value is 1, and returns the result as boolean. This can be used to detect a raising signal edges.
-+
-.Example
-[source,javascript]
-----
-if (elem.portRaised("C")) {
-  // Do something
-}
-----
-
-`output()`:: Returns the signal of the first (or one and only) `OutputPort` as a hex string.
-+
-.Example
-[source,javascript]
-----
-if (elem.output() == "1") {
-  // Do something
-}
-----
-
-`output(<ID:Int>)`:: Returns the signal of the `OutputPort` with the specified ID as a hex string.
-+
-.Example
-[source,javascript]
-----
-if (elem.output(4) == "0") {
-  // Do something
-}
-----
-
-`outputWord()`:: Returns the signal of the first (or one and only) `OutputPort` as a `Word`.
-+
-.Example
-[source,javascript]
-----
-if (elem.outputWord().bitAt(1)) {
-  // Do something
-}
-----
-
-`outputWord(<name:String>)`:: Returns the signal of the `OutputPort` with the specified name as a `Word`.
-+
-.Example
-[source,javascript]
-----
-if (elem.outputWord("I1").bitAt(2)) {
-  // Do something
-}
-----
-
-`outputWord(<ID:Int>)`:: Returns the signal of the `OutputPort` with the specified ID as a `Word`.
-+
-.Example
-[source,javascript]
-----
-if (elem.outputWord(2).bitAt(0)) {
-  // Do something
-}
-----
-
-`setOutput(<value:HexString>)`:: Sets the output signal of the first (or one and only) `OutputPort` to the specified hex value.
-+
-.Example
-[source,javascript]
-----
-elem.setOutput("7F");
-----
-
-`setOutput(<D:Int>, <value:HexString>)`:: Sets the output signal of the `OutputPort` with the specified ID to a hex value.
-+
-.Example
-[source,javascript]
-----
-elem.setOutput(1, "A02B");
-----
-
-`setOutputWord(<value:Word>)`:: Sets the output signal of the first (or one and only) `OutputPort` to the specified `Word`.
-+
-.Example
-[source,javascript]
-----
-if (elem.portRaised("C")) {
-  var d = elem.inputWord("D");
-  if (!elem.anyBitUndefined(d)) {
-    elem.setOutputWord(d);
-  }
-}
-----
-
-`setOutputWord(<name:String>, <value:Word>)`:: Sets the output signal of the `OutputPort` with the specified name to a `Word`.
-+
-.Example
-[source,javascript]
-----
-elem.setOutputWord("Q", elem.inputWord("D"));
-----
-
-`setOutputWord(<ID:Int>, <value:Word>)`:: Sets the output signal of the `OutputPort` with the specified ID to a `Word`.
-+
-.Example
-[source,javascript]
-----
-elem.setOutputWord(1, elem.inputWord("D"));
-----
-
-`setOutputBit(<value:Boolean>)`:: Sets the output signal of the first (or one and only) `OutputPort` to the specified boolean value.
-+
-.Example
-[source,javascript]
-----
-elem.setOutputBit(true);
-----
-
-`setOutputBit(<name:String>, <value:Boolean>)`:: Sets the lowest-priority output signal `Bit` of the `OutputPort` with the specified name to a boolean.
-+
-.Example
-[source,javascript]
-----
-elem.setOutputBit("Out", false);
-----
-
-`setOutputBit(<id:Int>, <value:Boolean>)`:: Sets the lowest-priority output signal `Bit` of the `OutputPort` with the specified ID to a boolean.
-+
-.Example
-[source,javascript]
-----
-elem.setOutputBit(1, false);
-----
-
-`anyBitUndefined(<value:Word>)`:: Checks whether any `Bit` in the specified `Word` is undefined and returns the result as a boolean.
-+
-.Example
-[source,javascript]
-----
-var d = elem.inputWord("D");
-if (!elem.anyBitUndefined(d)) {
-  elem.setOutputWord(d);
-}
-----
-
-`hexWord(<value:String>, <bitWidth:Int>)`:: Returns the `Word` of a particular bit width with the specified hexadecimal value.
-+
-.Example
-[source,javascript]
-----
-var outA = elem.hexWord("00FF", 16);
-----
-
-`undefinedWord(<bitWidth:Int)`:: Returns the `Word` of the specified bit width with all bits undefined.
-+
-.Example
-[source,javascript]
-----
-var outA = elem.undefinedWord(16);
-----
-
-`store(<name:String>, <value:Word>)`:: Stores the specified `Word` under the given name, which must be unique for
-the current `GraphElement`. This can be used for scripting sequential circuits, or any circuits that store a state.
-+
-.Example
-[source,javascript]
-----
-var c = elem.inputWord("C");
-var fc = elem.inputWord("FC").toInt();
-
-if (elem.inputBit("ENC") && elem.portRaised("CLK")) {
-  elem.store(fc.toString(), c);
-}
-----
-
-`load(<name:String>)`:: Returns the `Word` that has previously been stored under the given name.
-+
-.Example
-[source,javascript]
-----
-var outA = elem.load("3");
-----
-
-== CircuitElemViewBridge
-
-Used as a sub-element of `CircuitViewBridge`. Note that `CircuitElemViewBridge` is an extension of
-`CircuitElemModelBridge` and therefore supports all functions of `CircuitElementModelBridge` as well.
-
-`id()`:: Returns the view ID of this element. +
-+
-.Example
-[source,javascript]
-----
-val id = elem.id();
-----
-
-`drawDataFlow(<input:String>, <output:String>)`:: Draws a data flow line from the `InputPort` with name `input` to the `OutputPort` with name `output`.
-+
-.Example
-[source,javascript]
-----
-if (elem.inputBit("S")) {
-  elem.drawDataFlow("I1", "O");
+// This would return the result of the `then` block in the `if` statement
+if (1) {
+    A + B
 } else {
-  elem.drawDataFlow("I2", "O");
+    C
 }
 ----
 
-== Word
+=== Operations
 
-Some functions return a `Word` as a signal value. A `Word` is an array of boolean values; the size of the array depends on the bit width of the port that produces the `Word`. Note that `Word` is immutable.
+The kind of operations you can use in expressions depends on the type of terms the expression contains.
 
-`bitAt(<index:Int>)`:: Returns the value of the bit at the specified index as a boolean. The index of the least significant bit is 0.
-+
-.Example
+==== Arithmetic Operations
+
+_Antares DSL_ supports the following arithmetic operations.
+
+* *+* (Integer addition)
+* *-* (Integer subtraction)
+* *** (Integer multiplication)
+* */* (Integer division)
+* *%* (Modulo operation)
+* *<*< (Bitwise shift left)
+* *>>* (Bitwise shift right)
+
 [source,javascript]
 ----
-if (elem.inputWord().bitAt(0)) {
-  // do something
+A + 25 - B
+A * (B + C)
+A / B
+A % 2
+
+// Shift every bit of 128 by 2 bits to the right
+128 >> 2
+----
+
+==== Logic Operations
+
+_Antares DSL_ supports the following logic operations. These logic operations are performed on every bit of the two terms (or the one term in case of the unary "not" operation).
+
+* *and* (Bitwise AND)
+* *or* (Bitwise OR)
+* *not* (Bitwise NOT)
+
+[source,javascript]
+----
+A and B
+A and (B or C)
+not A
+----
+
+==== Comparison Operations
+
+_Antares DSL_ support the following comparison operations. The result of a comparison operation is a value of type "Number", where 0 represents "false" and 1 represents "true".
+
+* *==* (Equal)
+* *!=* (Non equal)
+* *>* (Greater than)
+* *>=* (Greater than or equal)
+* *<* (Smaller than)
+* *\<=* (Smaller than or equal)
+
+[source,javascript]
+----
+A == 42
+A != B
+A > B
+A >= 17
+B <= A
+----
+
+==== Bit Access Operations
+
+Bit access operations are available both for numbers and digital signals and allow to query and to set individual bits of such values.
+
+The bit access operator `@` uses the bit position to reference an individual bit within a value, where the
+first (least significant bit) is referenced by 0 (zero).
+
+[source,javascript]
+----
+// Querying bit 2 of value 4 (binary 100) returns 1
+4@2
+
+// Use expressions for the bit position
+A@(I + 1)
+
+// Setting bit 0 in value 4 (binary 100) returns 5 (binary 101)
+4@0 = 1
+----
+
+=== Mixing Types in Operations
+
+Since Antares supports arithmetic operations on both numbers and signals signals, you can mix values of
+different types in an operation.
+
+[source,javascript]
+----
+F0 + 2 + F1
+----
+
+In this example, F0 and F1 are the names of input pins and are therefore mapped to variables holding
+a digital signal.
+
+The first thing to be aware of is that operations on digital signals try to produce results
+[.underline]#with the same bit width#. If you add two 1-bit digital signals, the result is still a 1-bit signal,
+although this might lead to an overflow and therefore to a result different from what you've might expected. The
+reason for this behaviour is that its results are closer to the signals produced by your circuit when simulated
+in "deep simulation" mode.
+
+If you mix types in an operation, the term of the [.underline]#left side# determines the type of the result. Therefore, the result of
+
+[source,javascript]
+----
+2 + F1
+----
+
+is a number and not a digital signal, because 2 is a number. Adding digital signals to numbers doesn't limit the
+result to a particular size other than the maximum length of numbers.
+
+Therefore, when your script needs to avoid data truncation by overflow, the above example should be formulated as
+
+[source,javascript]
+----
+2 * F1 + F0
+----
+
+Since expressions are evaluated from left to right, the first term `2 * F1` evaluates to a number, and then adding that
+number to `F0` still evaluates to a number.
+
+=== Variables and Assignments
+
+As in any other programming language, you can use named variables to store values. Variables must be explicitly declared using `var`.
+
+Variable are case-sensitive; their names must start with a character.
+
+Use the assignment operator "=" to assign a value to a variable.
+
+[source,javascript]
+----
+var A = 42
+var B1 = A * (C + 1)
+----
+
+
+Variables are accessible from the scope they are declared in, or in any nested scope. Variables can be redeclared
+within a deeper scope.
+
+[source,javascript]
+----
+var A = 42
+var B = 17
+if (B == 17) {
+    // This creates a another instance of A within this scope.
+    // The outer A is not changed.
+    var A = 0
+
+    // This accesses B from the outer scope
+    B = 1
 }
 ----
 
-`toInt()`:: Returns the value of a `Word` as an integer.
-+
-.Example
+Depending on the context in which your script is executed, Antares makes sure that some variables are already predefined. For example, if you write the execution logic script of a RS Latch, the pin names "S", "R", "Q" and "!Q" are automatically predefined, which allows you to easily access the signals at these pins just by using them as variables.
+
+CAUTION: If you want to use scripting in your circuits, make sure you don't name your pins like any of the reserved keywords of _Antares DSL_ (like `var`, `if`, `then` and so forth.)
+
 [source,javascript]
 ----
-if (elem.inputWord().toInt() == 255) {
-  // do something
+if (S and R) {
+    Q = 0
+    '!Q' = 0
+    return
 }
 ----
 
-`toHexString()`::  Returns the value of a `Word` as hex string.
-+
-.Example
+NOTE: If your pin name doesn't start with a character or contains white space characters such as blanks, you have to quote the pin name using single quotes. This is for example always the case with negated pin names like "!Q".
+
+=== Arrays
+
+While variable values are usually "scalar", they can also represent an array of values. This can be useful when writing an execution script for a circuit like a "Register File" in a CPU that has to store multiple register values.
+
 [source,javascript]
 ----
-if (elem.inputWord().toHexString() == "FF00") {
-  // do something
+// Write array field
+R[0] = 0xE3
+R[1] = 0x73
+
+// Read array field
+A = R[0]
+----
+
+NOTE: Although arrays in _Antares DSL_ are conceptually "associative arrays" (i.e. more like maps than arrays) and would support access to values using arbitrary keys, currently only keys of type "Number" are supported.
+
+=== Conditions
+
+Conditions are used to execute code blocks depending on a certain condition.
+
+The `if` statement is used if there are only two options.
+
+[source,javascript]
+----
+if (A == 0) {
+    B = 0xF
+} else {
+    B = 0x0
 }
 ----
 
-`not()`:: Returns the `Word` that represents the bit-wise inversion of this `Word`.
-+
-.Example
+The `when` statement is used if there are more than two options.
+
 [source,javascript]
 ----
-elem.setOutputWord(elem.inputWord().not());
+when (A) {
+    1 : B = 11
+    2 : B = 22
+    3 : {
+        B = 33
+        C = 0
+    }
+    else : B = 99
+}
 ----
 
-`and(<word:Word>)`:: Returns the `Word` that represents the bit-wise logical "and" of this `Word` and the specified `Word`.
-+
-.Example
+=== Loops
+
+Use the `for` statement to iterate over a block of code while incrementing (or decrementing) a dedicated loop variable.
+
 [source,javascript]
 ----
-elem.setOutputWord(
-  elem.inputWord("A").and(elem.inputWord("B"))
-);
+for (i in 1 to 3) {
+    A[i] = 2 * i
+}
 ----
 
-`shiftLeft(<bitCount:Int>)`:: Returns a new `Word` whose bits are shifted the specified number of bits to the left.
-+
-.Example
+=== Functions
+
+_Antares DSL_ supports calling functions that consume argument values and return a result value.
+
 [source,javascript]
 ----
-var d = elem.inputWord("D");
-elem.setOutputWord("O", d.shiftLeft(1));
+var A = 0
+hello(A, 42)
+
+var B = hello(A, 0) + hello(A, 1)
 ----
 
-`shiftRight(<bitCount:Int>)`:: Returns a new `Word` whose bits are shifted the specified number of bits to the right.
-+
-.Example
+The functions you can call are implicitly defined by Antares and depend on the context the script is running in. For example, when writing action script for Antares "Usecases", Antares provides the function `setInputAt(time, inputName, signal)` that allows to set the input of a circuit at a particular simulation time.
+
+Check out the corresponding user manual sections to learn what external functions are available.
+
+NOTE: The current version of _Antares DSL_ does not yet allow you to define your own functions.
+
+=== Return Statement
+
+Use the `return` statement to exit the entire script.
+
 [source,javascript]
 ----
-var d = elem.inputWord("D");
-elem.setOutputWord("O", d.shiftRight(1));
+if (A) {
+    return 1
+}
 ----
 
-`subword(<index:Int>, <width:Int)`:: Returns the subword of the specified bit width, starting at the specified index.
-+
-.Example
+The expression of the `return` statement is optional. If you don't specify an expression, 0 is returned.
+
+=== Asserted Pins
+
+When writing execution scripts for subcircuits, it is often necessary to calculate output signals depending on whether input pins have been asserted or not. An edge-triggered D flipflop for example changes its state only when the clock input "C" has been asserted, i.e. went from 0 to 1 [.underline]#in the current simulation step#.
+
+Use the unary `^` operator to find out if an input port has been asserted.
+
 [source,javascript]
 ----
-var d = elem.inputWord("D");
-// Sets "ADR" to bits 0..7 of "D"
-elem.setOutputWord("ADR", d.subword(0, 8));
+if (^C) {
+    Q = D
+    '!Q' = not D
+}
 ----
 
-== UsecaseActionBridge
+NOTE: The assertion operator respect the "Logic" property of input pins. If an input pin has negative logic, the assertion operator returns 1 if the input pin changed from 1 to 0.
 
-Used in use case action scripts. The statements below are accessible as functions of the object `circuit`.
+=== Initialization Code Blocks
 
-`pressButtonAt(<time:Long>, <id:Int>)`:: Presses the button with ID `id` at simulation time `time`.
-+
-.Example
+When writing execution scripts for subcircuits, you sometimes want to have code that is only executed when the simulation is started, for example to initialize output pin values. You can do so using the `init` code block.
+
 [source,javascript]
 ----
-circuit.pressButtonAt(10000, 1);
+init {
+    Q = 0
+    '!Q' = 1
+}
 ----
 
-`setInputAt(<time:Long>, <inputId:Int>, <hexValue: String>)`:: Sets the value of the input with ID `inputId` at simulation time `time` as a hexadecimal value `hexValue`.
-+
-.Example
+=== Keeping values across script calls
+
+During simulation of a circuit, your scripts are called very often. In the case of subcircuit execution scripts, they are called whenever an input pin has changed its value. When a script gets called, its memory state is reset by Antares, meaning that all variable values from former runs are cleared.
+
+However, there are situation where you need to keep such values across multiple script call. An example of such situations is a script for a CPU's register file that must contain register values across script calls. You can achieve this using `store` variable declarations.
+
 [source,javascript]
 ----
-circuit.setInputAt(10000, 6, "1");
+init {
+    store fcStore
+    for (i in 0 to 15) {
+        fcStore[i] = 0
+    }
+}
 ----
 
-`applyClock(<inputId:Int>, <period:Long>)`:: Applies a clock signal with period `period` (nanoseconds) to the input with ID `inputId`.
-+
-.Example
+Think of `store` variable declarations as normal `var` declarations, but with a live time that spans multiple script calls.
+
+`store` variables are typically declared within an `init` block.
+
+After having declared a variable as a `store` variable, in can be accessed like any other normal variable.
+
 [source,javascript]
 ----
-circuit.applyClock(6, 1000000000);
+store fcStore
+if (ENC and ^CLK) {
+    if (FC == 10 or FC <= 4) {
+        fcStore[FC] = C
+    }
+}
 ----
 
-`pauseAt(<time:Long>)`:: Activate single step simulation mode at simulation time `time` (nanoseconds). This can be used to quickly go through the initialization phase of a circuit and the switch to single step simulation before an "interesting" part of circuit execution is entered that can only be and understood by single stepping.
-+
-.Example
+=== Accessing Circuit Elements
+
+So far, we have seen how a subcircuits scripts accesses the values of the subcircuit's pins by simply accessing them as normal variables.
+
 [source,javascript]
 ----
-circuit.applyClock(87, 91000);
-circuit.setInputAt(23062, 46, "0800");
-circuit.setInputAt(134948, 46, "1234");
-circuit.pauseAt(172544);
+O = I1 and I2
 ----
 
-== UsecaseTestBridge
+But what about situations where your script runs in the context of an entire circuit and you need to access the pins of any of the circuit's element? This demand arises especially when writing scripts for Antares "Usecases" that need to display explanations depending on the state of the entire circuit.
 
-Used in use case tet scripts. The statements below are accessible as functions of the object `circuit`.
+To access pin values of any of the circuit's element, you can use the "Property access syntax" based on the `#` operator.
 
-`assertLedOnAt(<time:Long>, <id:Int>)`:: Asserts that the LED with ID `id` is on at simulation time `time`.
-+
-.Example
 [source,javascript]
 ----
-circuit.assertLedOnAt(20000, 2);
+#1.A == 1 and #1.B == 0
 ----
 
-`assertLedOffAt(<time:Long>, <id:Int>)`:: Asserts that the LED with ID `id` is off at simulation time `time`.
-+
-.Example
+The first number right after the `#` tag represents the ID of the circuit components whose pins you want to access. The second value right after the `.` identifies an individual port of that circuit component. Both together are resolved to the corresponding pin's current signal value.
+
+TIP: How do you find out the ID of a circuit component? Select the component in your circuit and consult the property "ID" in the properties window.
+
+The above example identifies pins by their names. Remember to use quoted port names like `"!Q"` if the port name doesn't represent a legal variable name.
+
+Since names are not mandatory for ports (and a lot of build-in components like logic gates don't have port names), is is also possible to reference ports by their ID.
+
 [source,javascript]
 ----
-circuit.assertLedOffAt(20000, 2);
+#1.1 == 1 and #1.1 == 0
 ----
 
-`assertOutputAt(<time:Long>, <id:Int>, <hexValue:String>)`:: Assert that the output component with ID `id` has the hex value `hexValue` at simulation time `time`.
+There are two ways how to find out the ID of a port in a circuit component.
 
+* Hover with the mouse in the circuit over the port. The displayed tooltip shows the port ID if the circuit is in edit mode (i.e. not being simulated).
+* For custom subcircuits, you can also go to the subcircuit's symbol editor, select the port in the editor, and use the value displayed in the property "Port ID".
+
+[TIP]
+====
+To avoid the need to go to the property window every time to need a port ID of a built-in component, you can also use the following rules of thumb to figure it out by yourself.
+
+* Port IDs start with 1
+* Inputs come before outputs
+====
+
+== Example
+
+The following example has been taken from the "Register File" circuit in the "Tanenbaum CPU" example project.
+
+The register file contains some 16 bit registers and some constant values used for microprogram execution. The circuit has a 16 bit input "C" and two 16 bit output "A" and "B". The "FA" an "FB" 4 bit inputs determine which of the 16 values should be written to the "A" and "B" output. The 4 bit "FC" input determine which register should store the new value arriving at "C" when "EN" is high and "CLK" is asserted.
+
+[source,javascript,linenums]
+----
+init {
+    store fcStore
+    for (i in 0 to 15) {
+        fcStore[i] = 0
+    }
+}
+
+if (ENC and ^CLK) {
+    if (FC == 10 or FC <= 4) {
+        fcStore[FC] = C
+    }
+}
+
+when (FA) {
+    0 : A = fcStore[0]
+    1 : A = fcStore[1]
+    2 : A = fcStore[2]
+    3 : A = fcStore[3]
+    4 : A = fcStore[4]
+    5 : A = 0
+    6 : A = 1
+    7 : A = 0xFFFF
+    8 : A = 0x0FFF
+    9 : A = 0x00FF
+    10 : A = fcStore[10]
+    else : A = 0x?16
+}
+
+when (FB) {
+    0 : B = fcStore[0]
+    1 : B = fcStore[1]
+    2 : B = fcStore[2]
+    3 : B = fcStore[3]
+    4 : B = fcStore[4]
+    5 : B = 0
+    6 : B = 1
+    7 : B = 0xFFFF
+    8 : B = 0x0FFF
+    9 : B = 0x00FF
+    10 : B = fcStore[10]
+    else : B = 0x?16
+}
+----
+
+The register values are stored by the script using the `store` array variable "fcStore". Note how these values are initialized in the `init` block.
+
+The `if` statement on line 8 make sure that the stored values are only updated if both "ENC" and "CLK" are asserted.
+
+The `when` statements on line 14 and 29 dispatch the register or constant addresses in "FA" and "FB" to the corresponding output values "A" and "B".
+
+[NOTE]
+====
+It would be nice if the `when` statement could be used as an expression of the form
+
+[source,javascript]
+----
+A = when (FA) {
+    0: fcStore[0]
+    1: fcStore[1]
+    // ...
+    else : 0x?16
+}
+----
+This has not yet been implemented.
+====

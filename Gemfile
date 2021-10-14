@@ -18,7 +18,7 @@ group :jekyll_plugins do
   gem "jekyll-seo-tag"
   gem "jekyll-compose"
   gem "jekyll-redirect-from"
-  gem 'jekyll-asciidoc'
+  gem 'jekyll-asciidoc', "~> 3.0.0"
   gem 'jemoji'
 end
 
