@@ -2,31 +2,14 @@
   <graph>
     <graphStorable _id='1'>
       <model>
-        <graph _id='2' script='var input = 0;
-if (elem.inputBit(&quot;S0&quot;)) {
-	input += 1;
-}
-if (elem.inputBit(&quot;S1&quot;)) {
-	input += 2;
-}
-
-switch (input) {
-	case 0:
-		elem.setOutputWord(elem.inputWord(&quot;I0&quot;));
-		break;
-	case 1:
-		elem.setOutputWord(elem.inputWord(&quot;I1&quot;));
-		break;
-	case 2:
-		elem.setOutputWord(elem.inputWord(&quot;I2&quot;));
-		break;
-	case 3:
-		elem.setOutputWord(elem.inputWord(&quot;I3&quot;));
-		break;
-	default:
-		elem.setOutput(&quot;0&quot;);
-}
-'>
+        <graph _id='2' script='var s = S0 + 2 * S1
+when (s) {
+	0 : O = I0
+	1 : O = I1
+	2 : O = I2
+	3 : O = I3
+	else : O = 0
+}'>
           <elements>
             <circuitInOut _id='3' id='4' name='S1' type='input' bitWidth='1'/>
             <circuitInOut _id='4' id='5' name='S0' type='input' bitWidth='1'/>

@@ -2,30 +2,23 @@
   <graph>
     <graphStorable _id='1'>
       <model>
-        <graph _id='2' script='var en = elem.inputBit(&quot;EN&quot;);
-var i0 = elem.inputBit(&quot;I0&quot;) ? 1 : 0;
-var i1 = elem.inputBit(&quot;I1&quot;) ? 1 : 0;
-var i2 = elem.inputBit(&quot;I2&quot;) ? 1 : 0;
-var i3 = elem.inputBit(&quot;I3&quot;) ? 1 : 0;
-
-var val = i0 + 2 * i1 + 4 * i2 + 8 * i3;
-
-elem.setOutputBit(&quot;O0&quot;, en &amp;&amp; val == 0);
-elem.setOutputBit(&quot;O1&quot;, en &amp;&amp; val == 1);
-elem.setOutputBit(&quot;O2&quot;, en &amp;&amp; val == 2);
-elem.setOutputBit(&quot;O3&quot;, en &amp;&amp; val == 3);
-elem.setOutputBit(&quot;O4&quot;, en &amp;&amp; val == 4);
-elem.setOutputBit(&quot;O5&quot;, en &amp;&amp; val == 5);
-elem.setOutputBit(&quot;O6&quot;, en &amp;&amp; val == 6);
-elem.setOutputBit(&quot;O7&quot;, en &amp;&amp; val == 7);
-elem.setOutputBit(&quot;O8&quot;, en &amp;&amp; val == 8);
-elem.setOutputBit(&quot;O9&quot;, en &amp;&amp; val == 9);
-elem.setOutputBit(&quot;O10&quot;, en &amp;&amp; val == 10);
-elem.setOutputBit(&quot;O11&quot;, en &amp;&amp; val == 11);
-elem.setOutputBit(&quot;O12&quot;, en &amp;&amp; val == 12);
-elem.setOutputBit(&quot;O13&quot;, en &amp;&amp; val == 13);
-elem.setOutputBit(&quot;O14&quot;, en &amp;&amp; val == 14);
-elem.setOutputBit(&quot;O15&quot;, en &amp;&amp; val == 15);' propDelay='90'>
+        <graph _id='2' script='var val = I0 + 2 * I1 + 4 * I2 + 8 * I3
+O0 = EN and val == 0
+O1 = EN and val == 1
+O2 = EN and val == 2
+O3 = EN and val == 3
+O4 = EN and val == 4
+O5 = EN and val == 5
+O6 = EN and val == 6
+O7 = EN and val == 7
+O8 = EN and val == 8
+O9 = EN and val == 9
+O10 = EN and val == 10
+O11 = EN and val == 11
+O12 = EN and val == 12
+O13 = EN and val == 13
+O14 = EN and val == 14
+O15 = EN and val == 15' propDelay='90'>
           <elements>
             <subGraphVerticeRef _id='3' id='1' delay='43' uuid='4a1729f4-06ee-4683-a65d-ebaef1271d92'/>
             <subGraphVerticeRef _id='4' id='2' delay='43' uuid='4a1729f4-06ee-4683-a65d-ebaef1271d92'/>

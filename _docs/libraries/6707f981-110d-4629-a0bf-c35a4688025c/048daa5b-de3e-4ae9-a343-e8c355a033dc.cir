@@ -161,7 +161,7 @@
           <components>
             <graphElement _id='100' modelId='101' id='0'>
               <component>
-                <rectangle _id='102' id='0' style='subsystem' filled='true' stroked='true' x='-196.0' y='-322.0' w='266.0' h='294.0' vAlign='top'>
+                <rectangle _id='102' id='0' style='subsystem' filled='true' stroked='true' x='-196.0' y='-322.0' w='266.0' h='294.0' vAlign='top' hAlign='left'>
                   <text>
                     <translation lang='en' text='Master JK'/>
                   </text>
@@ -170,7 +170,7 @@
             </graphElement>
             <graphElement _id='103' modelId='104' id='64'>
               <component>
-                <rectangle _id='105' id='64' style='subsystem' filled='true' stroked='true' x='126.0' y='-322.0' w='266.0' h='294.0' vAlign='top'>
+                <rectangle _id='105' id='64' style='subsystem' filled='true' stroked='true' x='126.0' y='-322.0' w='266.0' h='294.0' vAlign='top' hAlign='left'>
                   <text>
                     <translation lang='en' text='Slave JK'/>
                   </text>

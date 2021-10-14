@@ -2,11 +2,7 @@
   <graph>
     <graphStorable _id='1'>
       <model>
-        <graph _id='2' script='if (elem.inputBit(&quot;S&quot;)) {
-  elem.setOutput(&quot;O&quot;, elem.input(&quot;B&quot;));
-} else {
-  elem.setOutput(&quot;O&quot;, elem.input(&quot;A&quot;));
-}' propDelay='60'>
+        <graph _id='2' script='if (S) O = B else O = A' propDelay='60'>
           <elements>
             <circuitInOut _id='3' id='1' name='A' type='input' bitWidth='4'/>
             <circuitInOut _id='4' id='2' name='B' type='input' bitWidth='4'/>
@@ -520,11 +516,7 @@
     </graphStorable>
   </graph>
   <container>
-    <containerDrawing _id='203' execDrawScript='if (elem.inputBit(&quot;S&quot;)) {
-    elem.drawDataFlow(&quot;B&quot;, &quot;O&quot;);
-} else {
-     elem.drawDataFlow(&quot;A&quot;, &quot;O&quot;);
-}'>
+    <containerDrawing _id='203' execDrawScript='if (S) drawDataFlow(&quot;B&quot;, &quot;O&quot;) else drawDataFlow(&quot;A&quot;, &quot;O&quot;)'>
       <components>
         <originIndicator _id='204'>
           <location>

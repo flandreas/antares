@@ -2,70 +2,30 @@
   <graph>
     <graphStorable _id='1'>
       <model>
-        <graph _id='2' script='var input = 0;
-if (elem.inputBit(&quot;A&quot;)) {
-	input += 1;
-}
-if (elem.inputBit(&quot;B&quot;)) {
-	input += 2;
-}
-if (elem.inputBit(&quot;C&quot;)) {
-	input += 4;
-}
-if (elem.inputBit(&quot;D&quot;)) {
-	input += 8;
-}
-switch (input) {
-	case 0:
-		elem.setOutput(&quot;3F&quot;);
-		break;
-	case 1:
-		elem.setOutput(&quot;06&quot;);
-		break;
-	case 2:
-		elem.setOutput(&quot;5B&quot;);
-		break;
-	case 3:
-		elem.setOutput(&quot;4F&quot;);
-		break;
-	case 4:
-		elem.setOutput(&quot;66&quot;);
-		break;
-	case 5:
-		elem.setOutput(&quot;6D&quot;);
-		break;
-	case 6:
-		elem.setOutput(&quot;7D&quot;);
-		break;
-	case 7:
-		elem.setOutput(&quot;07&quot;);
-		break;
-	case 8:
-		elem.setOutput(&quot;7F&quot;);
-		break;
-	case 9:
-		elem.setOutput(&quot;6F&quot;);
-		break;
-	case 10:
-		elem.setOutput(&quot;77&quot;);
-		break;
-	case 11:
-		elem.setOutput(&quot;7C&quot;);
-		break;
-	case 12:
-		elem.setOutput(&quot;39&quot;);
-		break;
-	case 13:
-		elem.setOutput(&quot;5E&quot;);
-		break;
-	case 14:
-		elem.setOutput(&quot;79&quot;);
-		break;
-	case 15:
-		elem.setOutput(&quot;71&quot;);
-		break;
-	default:
-		elem.setOutput(&quot;0&quot;);
+        <graph _id='2' script='var input = 0
+if (A) input = input + 1
+if (B) input = input + 2
+if (C) input = input + 4
+if (D) input = input + 8
+
+when (input) {
+	0 : &apos;a..g&apos; = 0x3F
+	1 : &apos;a..g&apos; = 0x06
+	2 : &apos;a..g&apos; = 0x5B
+	3 : &apos;a..g&apos; = 0x4F
+	4 : &apos;a..g&apos; = 0x66
+	5 : &apos;a..g&apos; = 0x6D
+	6 : &apos;a..g&apos; = 0x7D
+	7 : &apos;a..g&apos; = 0x07
+	8 : &apos;a..g&apos; = 0x7F
+	9 : &apos;a..g&apos; = 0x6F
+	10 : &apos;a..g&apos; = 0x77
+	11 : &apos;a..g&apos; = 0x7C
+	12 : &apos;a..g&apos; = 0x39
+	13 : &apos;a..g&apos; = 0x5E
+	14 : &apos;a..g&apos; = 0x79
+	15 : &apos;a..g&apos; = 0x71
+	else : &apos;a..g&apos; = 0
 }'>
           <elements>
             <circuitInOut _id='3' id='1' name='A' type='input' bitWidth='1'/>
