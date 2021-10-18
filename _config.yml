@@ -293,4 +293,8 @@ asciidoctor:
   base_dir: :docdir
   safe: unsafe
   attributes:
-    imagesdir: /assets/images
+    - idprefix=_
+    - source-highlighter=pygments
+    - pygments-css=class
+    - imagesdir=/assets/images
+    - icons=font

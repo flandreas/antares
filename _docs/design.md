@@ -86,7 +86,7 @@ Open subcircuits in additional views.
 ### Scripting
 
 Use scripts to customize various parts of Antares' functionality and the
-behaviour of your circuits. Scripts are currently written as JavaScript;
-in the future, a custom DSL (Domain Specific Language) will be used.
+behaviour of your circuits. Scripts are written in a custom DSL (Domain Specific Language) that has been specially designed for dealing with
+digital circuits.
 
 <img src="/assets/images/design/scripting.png" width="600">
