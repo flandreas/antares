@@ -1,0 +1,208 @@
+<metaGraph _id='0'>
+  <graph>
+    <graphStorable _id='1'>
+      <model>
+        <graph _id='2'>
+          <elements>
+            <transistor _id='3' id='1' delay='10' name='NMOS 1' bitWidth='1' type='n'/>
+            <transistor _id='4' id='2' delay='10' name='NMOS 2' bitWidth='1' type='n'/>
+            <digitalNet _id='5' id='3' delay='0'>
+              <ports>
+                <netPortRef _id='6' verticeId='4' portId='3'/>
+                <netPortRef _id='7' verticeId='3' portId='1'/>
+              </ports>
+            </digitalNet>
+            <ground _id='8' id='4' delay='1' bitWidth='1'/>
+            <digitalNet _id='9' id='5' delay='0'>
+              <ports>
+                <netPortRef _id='10' verticeId='8' portId='1'/>
+                <netPortRef _id='11' verticeId='4' portId='1'/>
+              </ports>
+            </digitalNet>
+            <pullResistor _id='12' id='6' delay='0' bitWidth='1' pullDir='high'/>
+            <digitalNet _id='13' id='7' delay='0'>
+              <ports>
+                <netPortRef _id='14' verticeId='12' portId='1'/>
+                <netPortRef _id='15' verticeId='3' portId='3'/>
+                <netPortRef _id='16' verticeId='17' portId='1'/>
+              </ports>
+            </digitalNet>
+            <switch _id='18' id='8' delay='1000' name='In 1'/>
+            <digitalNet _id='19' id='9' delay='0'>
+              <ports>
+                <netPortRef _id='20' verticeId='18' portId='1'/>
+                <netPortRef _id='21' verticeId='3' portId='2'/>
+              </ports>
+            </digitalNet>
+            <switch _id='22' id='10' delay='1000' name='In 2'/>
+            <digitalNet _id='23' id='11' delay='0'>
+              <ports>
+                <netPortRef _id='24' verticeId='22' portId='1'/>
+                <netPortRef _id='25' verticeId='4' portId='2'/>
+              </ports>
+            </digitalNet>
+            <led _id='17' id='12' delay='0' name='Out'/>
+          </elements>
+        </graph>
+      </model>
+      <view>
+        <graphView _id='26'>
+          <netViews>
+            <netView _id='27' modelId='5' style='line'/>
+            <netView _id='28' modelId='9' style='line'/>
+            <netView _id='29' modelId='13' style='line'/>
+            <netView _id='30' modelId='19' style='line'/>
+            <netView _id='31' modelId='23' style='line'/>
+          </netViews>
+          <scenarios>
+            <scenarios _id='32'>
+              <scenarios>
+                <scenario _id='33' id='1' condition='#1.2 == 0 and #2.2 == 0'>
+                  <name>
+                    <translation lang='en' text='Input 0,0'/>
+                  </name>
+                  <desc>
+                    <translation lang='en' text='The output of the NAND gate is 1 if both inputs are 0.'/>
+                  </desc>
+                  <steps>
+                    <scenarioStep _id='34' id='1' highlightIds='6,7,15' condition='#1.2 == 0 and #2.2 == 0'>
+                      <name>
+                        <translation lang='en' text='Input 0,0 Step'/>
+                      </name>
+                      <desc>
+                        <translation lang='en' text='Since both transistors are off, the connection from the LED to ground is interrupted, and the 1 from the power supply flows into the LED.'/>
+                      </desc>
+                    </scenarioStep>
+                  </steps>
+                </scenario>
+                <scenario _id='35' id='2' condition='#1.2 == 1 and #2.2 == 0'>
+                  <name>
+                    <translation lang='en' text='Input 1,0'/>
+                  </name>
+                  <desc>
+                    <translation lang='en' text='The output of the NAND gate is 1 if only one input is 1.'/>
+                  </desc>
+                  <steps>
+                    <scenarioStep _id='36' id='1' highlightIds='1,6,7,15' condition='#1.2 == 1 and #2.2 == 0'>
+                      <name>
+                        <translation lang='en' text='Input 1,0 Step'/>
+                      </name>
+                      <desc>
+                        <translation lang='en' text='Although transistor &quot;NMOS 1&quot; is on, transistor &quot;NMOS 2&quot; is still off and disconnects the LED from ground, which is why the 1 from the power supply flows into the LED.'/>
+                      </desc>
+                    </scenarioStep>
+                  </steps>
+                </scenario>
+                <scenario _id='37' id='3' condition='#1.2 == 0 and #2.2 == 1'>
+                  <name>
+                    <translation lang='en' text='Input 0,1'/>
+                  </name>
+                  <desc>
+                    <translation lang='en' text='The output of the NAND gate is 1 if only one input is 1.'/>
+                  </desc>
+                  <steps>
+                    <scenarioStep _id='38' id='1' highlightIds='2,3,4,5,6,7,15' condition='#1.2 == 0 and #2.2 == 1'>
+                      <name>
+                        <translation lang='en' text='Input 0,1 Step'/>
+                      </name>
+                      <desc>
+                        <translation lang='en' text='Although transistor &quot;NMOS 2&quot; is on, transistor &quot;NMOS 1&quot; is still off and disconnects the LED from ground, which is why the 1 from the power supply flows into the LED.'/>
+                      </desc>
+                    </scenarioStep>
+                  </steps>
+                </scenario>
+                <scenario _id='39' id='4' condition='#1.2 == 1 and #2.2 == 1'>
+                  <name>
+                    <translation lang='en' text='Input 1,1'/>
+                  </name>
+                  <desc>
+                    <translation lang='en' text='The output of the NAND gate is 0 if both inputs are 1.'/>
+                  </desc>
+                  <steps>
+                    <scenarioStep _id='40' id='1' highlightIds='1,2,3,4,5,14,15' condition='#1.2 == 1 and #2.2 == 1'>
+                      <name>
+                        <translation lang='en' text='Input 1,1 Step'/>
+                      </name>
+                      <desc>
+                        <translation lang='en' text='Both transistors are switched on and connect the LED to ground, which is why the LED is off.'/>
+                      </desc>
+                    </scenarioStep>
+                  </steps>
+                </scenario>
+              </scenarios>
+            </scenarios>
+          </scenarios>
+          <components>
+            <transistorView _id='41' id='1' rot='0' filled='true' stroked='true' modelId='3' x='-42.0' y='-105.0' symbol='inverterCircle'/>
+            <transistorView _id='42' id='2' rot='0' filled='true' stroked='true' modelId='4' x='-42.0' y='7.0' symbol='inverterCircle'/>
+            <digitalEdgeView _id='43' id='3' filled='true' stroked='true' modelId='5' layout='ortho' orig='42' origPort='3' origPortOutput='true' dest='41' destPort='1' adjusted='false'>
+              <shape>
+                <polylineShape points='0.0,-28.0 0.0,-98.0'/>
+              </shape>
+            </digitalEdgeView>
+            <groundView _id='44' id='4' rot='90' filled='true' stroked='true' modelId='8' x='0.0' y='42.0'/>
+            <digitalEdgeView _id='45' id='5' filled='true' stroked='true' modelId='9' layout='ortho' orig='44' origPort='1' origPortOutput='true' dest='42' destPort='1' adjusted='false'>
+              <shape>
+                <polylineShape points='0.0,56.0 0.0,14.0'/>
+              </shape>
+            </digitalEdgeView>
+            <pullResistorView _id='46' id='6' rot='270' filled='true' stroked='true' modelId='12' x='0.0' y='-203.0'/>
+            <digitalEdgeView _id='47' id='7' filled='true' stroked='true' modelId='13' layout='ortho' orig='46' origPort='1' origPortOutput='true' dest='48' adjusted='false'>
+              <shape>
+                <polylineShape points='0.0,-217.0 0.0,-182.0'/>
+              </shape>
+            </digitalEdgeView>
+            <switchView _id='49' id='8' rot='0' filled='true' stroked='true' modelId='18' x='-70.0' y='-119.0'/>
+            <digitalEdgeView _id='50' id='9' filled='true' stroked='true' modelId='19' layout='ortho' orig='49' origPort='1' origPortOutput='true' dest='41' destPort='2' adjusted='false'>
+              <shape>
+                <polylineShape points='-84.0,-119.0 -28.0,-119.0'/>
+              </shape>
+            </digitalEdgeView>
+            <switchView _id='51' id='10' rot='0' filled='true' stroked='true' modelId='22' x='-70.0' y='-7.0'/>
+            <digitalEdgeView _id='52' id='11' filled='true' stroked='true' modelId='23' layout='ortho' orig='51' origPort='1' origPortOutput='true' dest='42' destPort='2' adjusted='false'>
+              <shape>
+                <polylineShape points='-84.0,-7.0 -28.0,-7.0'/>
+              </shape>
+            </digitalEdgeView>
+            <ledView _id='53' id='12' rot='0' filled='true' stroked='true' modelId='17' x='56.0' y='-182.0' size='large' lightColor='red'/>
+            <digitalNodeView _id='48' id='13' filled='true' stroked='true' modelId='13'>
+              <location>
+                <point x='0.0' y='-182.0'/>
+              </location>
+            </digitalNodeView>
+            <digitalEdgeView _id='54' id='14' filled='true' stroked='true' modelId='13' layout='ortho' orig='48' dest='41' destPort='3' destPortOutput='true' adjusted='false'>
+              <shape>
+                <polylineShape points='0.0,-182.0 0.0,-140.0'/>
+              </shape>
+            </digitalEdgeView>
+            <digitalEdgeView _id='55' id='15' filled='true' stroked='true' modelId='13' layout='ortho' orig='48' dest='53' destPort='1' adjusted='false'>
+              <shape>
+                <polylineShape points='0.0,-182.0 70.0,-182.0'/>
+              </shape>
+            </digitalEdgeView>
+          </components>
+        </graphView>
+      </view>
+    </graphStorable>
+  </graph>
+  <container>
+    <containerDrawing _id='56'>
+      <components>
+        <rectangle _id='57' id='1' style='figure' filled='true' stroked='true' x='140.0' y='140.0' w='56.0' h='70.0'/>
+        <originIndicator _id='58'>
+          <location>
+            <point x='140.0' y='140.0'/>
+          </location>
+        </originIndicator>
+      </components>
+      <model>
+        <subGraphVertice _id='59' id='0' delay='0' uuid='567d75fc-34be-4813-9f7d-59f00bd407d7'>
+          <name>
+            <translation lang='en' text='NMOS NAND Gate'/>
+          </name>
+          <ports/>
+        </subGraphVertice>
+      </model>
+    </containerDrawing>
+  </container>
+</metaGraph>
