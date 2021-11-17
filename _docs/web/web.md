@@ -13,6 +13,11 @@ With the help of Antares, it will be possible in the future for authors of digit
 
 This [example](../antares-web.html) shows how a page in an online textbook with Antares circuit elements might look.
 
+The following example show how pages in an online textbook with Antares circuit elements might look like:
+
+- [Binary Addition](../antares-web.html): Built as a ReactJS page.
+- [Making Logic Gates from Transistors](/gates-from-transistors): Embedded iFrames in Jekyll blog page.
+
 An essential element is the question of the form in which the textual content is created, supplemented by interactive Antares elements. We aim to provide plugins for common CMS systems that can be used to integrate Antares elements into online pages.
 
 # Integration with course management and online homework assignments
