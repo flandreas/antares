@@ -1,6 +1,6 @@
 = Antares Scripting DSL
 include::../../page-variables.txt[]
-:page-permalink: /user-manual/english/scripting/scripting-dsl
+:page-permalink: /user-manual/english/scripting/scripting-language
 :icons: font
 
 == Language Description
@@ -396,9 +396,9 @@ To access pin values of any of the circuit's element, you can use the "Property 
 #1.A == 1 and #1.B == 0
 ----
 
-The first number right after the `#` tag represents the ID of the circuit components whose pins you want to access. The second value right after the `.` identifies an individual port of that circuit component. Both together are resolved to the corresponding pin's current signal value.
+The first number right after the `#` tag represents the model ID of the circuit components whose pins you want to access. The second value right after the `.` identifies an individual port of that circuit component. Both together are resolved to the corresponding pin's current signal value.
 
-TIP: How do you find out the ID of a circuit component? Select the component in your circuit and consult the property "ID" in the properties window.
+TIP: How do you find out the model ID of a circuit component? Select the component in your circuit and consult the property "Model ID" in the properties window.
 
 The above example identifies pins by their names. Remember to use quoted port names like `"!Q"` if the port name doesn't represent a legal variable name.
 

@@ -44,4 +44,4 @@ The content of the table is deleted every time a simulation is started. You can 
 The different applications of scripting are described in separate chapters.
 
 * link:{{site.basedir}}/user-manual/english/circuits/circuit-scripting[Scripting in circuits]
-* link:{{site.basedir}}/user-manual/english/scenarios/scenario-scripting[Scripting in scenarios]
+* link:{{site.basedir}}/user-manual/english/usecases/usecase-scripting[Scripting in usecases]

@@ -4,11 +4,11 @@ include::../../page-variables.txt[]
 
 Transistor is a digitalized version of a FET transistor. It has two inputs, called _gate_ and _source_, and one output, called _drain_. In standard orientation, the gate input is located on the left side and connected to a large plate, while source and gate are located on the right side and connected to small plates. The source input is always opposite to the gate input.
 
-A real FET transistor has an additional pin called _bulk_. While Antares doesn't use the bulk pin, it is contained in the symbol and indicates the type of the transistor. An N-type transistor is represented by a bulk with an arrow pointing away from the gate, while a P-type transistor's bulk has an arrow pointing towards the gate. During simulation, the bulk symbol is moved in order to indicate whether the transistor is switched on or off.
+A real FET transistor has an additional pin called _bulk_. While Antares doesn't use the bulk pin, it is contained in the symbol and indicates the type of the transistor. An N-type transistor is represented by a bulk with an arrow pointing towards the gate, while a P-type transistor's bulk has an arrow pointing away from the gate. During simulation, the bulk symbol is moved in order to indicate whether the transistor is switched on or off.
 
 == Appearance
 
-image:user-manual/base-library/transistor-example.png[Example Transistor, 150]
+image:user-manual/base-library/transistor-example.png[Example Transistor, 300]
 
 == Behavior
 
@@ -30,7 +30,13 @@ Type::
 * **N**: N-type transistor
 * **P**: P-type transistor
 
-Bit Width:: The number of bits of the _source_ and _drain_ pins.
+Symbol::
+
+Allows you to choose between two different symbol types. Although there is a user preference setting you can use to decide which symbol type is used when adding a new transistor to a circuit, the symbol type is store per transistor because each symbol type has different pin geometries, and globally changing the symbol type would distort your circuit layout.
+* **Bulk**: Displays the transistor's bulk (without external pin)
+* **Inverter**: Displays a small inverter circle at the gate pin for p-type transistors. Also displays an array at the source pin, which points in signal flow direction for p-type transistors and against signal flow direction for n-type transistors.
+
+Bit Width:: The number of bits of the _source_ and _drain_ pins. For n-type transistors, the bulk arrow points towards the gate.
 
 Control Input Orientation:: Determines on which side of the transistor the gate input is displayed.
 * **Right**: The gate input is displayed on the right side as seen from the gate's data flow direction.
