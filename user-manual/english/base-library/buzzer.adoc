@@ -1,0 +1,28 @@
+= Buzzer
+include::../../page-variables.txt[]
+:page-permalink: /user-manual/english/base-library/buzzer
+
+== Appearance
+
+image:user-manual/base-library/buzzer-sample.png[Buzzer]
+
+== Behaviour
+
+Plays a sound of a given frequency and volume if the buzzer is enabled. An individual buzzer can only play one sound at the time, but there can multiple buzzers playing at the same time.
+
+== Pins
+
+EN:: 1-bit "Enabled" input. If 1, the sound is played.
+F:: 12-bit "Frequency" input.
+V:: 8-bit "Volume" input.
+
+== Attributes
+
+Waveform:: The waveform of the played sound. Determines the acoustic characteristics of the played sound.
+* **Sine**
+* **Square**
+* **Triangle**
+* **Sawtooth**
+* **Noise**
+
+

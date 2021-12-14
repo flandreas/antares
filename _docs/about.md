@@ -24,6 +24,9 @@ Antares is a learning platform for digital circuits. In addition to drawing and 
 
 {% include gallery id="gallery" caption="Screenshots" %}
 
+Antares doesn't dare to claim being a "Logisim successor", although it was largely influence
+by this famous application that has sadly beed discontinued a long time ago. However, regarding its design philosophy, Antares strives to go beyond Logism and simular tools.
+
 ## Supported Platforms
 
 Antares is a desktop application for Windows and macOS. The installation programs include the entire required runtime environment; installation of additional components like Java JRE is not required.
@@ -48,16 +51,19 @@ The ultimate goal of Antares is to facilitate interactive textbooks with active 
   - Dark mode
 - **Circuit Design**
   - Hierarchical circuit design: Build your own subcircuits
+  - True bi-directional subcircuit ports and bus splitters
   - Editor for custom subcircuit symbols
   - Custom symbols with active elements such as switches or LEDs
   - Custom projects and libraries
   - Mirroring of symbols
   - Automatic wire layout
   - Wire bundles and optional bus representation of wires
+  - Custom scripting language for writing scripts for simulation and symbol customization
+  - Parametrized circuits
 - **Simulation**
   - Simulation of individual propagation delays
   - Signal flow animation
-  - Optional skripting of subciruit logic
+  - Optional scripting of subciruit logic
   - Continuously choosable simulation speed
   - Single-step simulation
   - Oscilloscope (experimental)
@@ -70,9 +76,9 @@ The ultimate goal of Antares is to facilitate interactive textbooks with active 
 
 1. Bugfixes in the current beta version
 2. Implement feature requests from the community
-3. Explore more sophisticated features for explaining how microcomputers work
-3. Possibly: Integration of an analog simulation layer to explain how basic gates work
-4. Web version
+3. Web version
+4. Explore more sophisticated features for explaining how microcomputers work
+5. Possibly: Integration of an analog simulation layer to explain how basic gates work
 
 ## Credits
 

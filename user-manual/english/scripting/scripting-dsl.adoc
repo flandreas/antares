@@ -183,6 +183,23 @@ Therefore, when your script needs to avoid data truncation by overflow, the abov
 Since expressions are evaluated from left to right, the first term `2 * F1` evaluates to a number, and then adding that
 number to `F0` still evaluates to a number.
 
+[TIP]
+====
+There are situations when you can't live with results of digital signal expressions being truncated to the bit width of the left-most term. An example of such a situation is an execution script of a multiplier circuit with 8 bit inputs A and B and a 16 bit output O. If you would simply write the execution script as `O = A * B`, the result would never exceed 255, because the result of the multiplication is truncated to 8 bit before it is assigned to the output.
+
+To overcome this limitation, you can explicitly convert digital signals to numbers using e.g. the following expression:
+
+[source,javascript]
+----
+// Either so
+O = (1 * A) * (1 * B)
+// or so
+O = (0 + A) * (0 + B)
+----
+
+The seemingly redundant multiplication by 1 converts the signal values to numbers which will then be used for expression evaluation without any upper bound other than the maximum value for long numbers.
+====
+
 === Variables and Assignments
 
 As in any other programming language, you can use named variables to store values. Variables must be explicitly declared using `var`.
