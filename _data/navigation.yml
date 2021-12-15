@@ -7,6 +7,8 @@ main:
     url: /user-manual/english/usermanual
   - title: "Blog"
     url: /docs/blog
+  - title: FAQ
+    url: /docs/faq
   - title: "Releases"
     url: /docs/releases/releases
   - title: "Examples"
