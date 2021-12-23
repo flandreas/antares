@@ -1,6 +1,6 @@
 = Antares Scripting DSL
 include::../../page-variables.txt[]
-:page-permalink: /user-manual/english/scripting/scripting-language
+:page-permalink: /user-manual/english/scripting/scripting-dsl
 :icons: font
 
 == Language Description

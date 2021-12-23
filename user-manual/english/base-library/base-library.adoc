@@ -40,8 +40,6 @@ Color:: Normally, the color in which a component is drawn is determined by its s
 * image:user-manual/base-library/ground.svg[Ground] link:{{site.basedir}}/user-manual/english/base-library/ground[Ground]
 * image:user-manual/base-library/power.svg[Power] link:{{site.basedir}}/user-manual/english/base-library/power[Power]
 * image:user-manual/base-library/real-switch.svg[Real Switch] link:{{site.basedir}}/user-manual/english/base-library/real-switch[Real Switch]
-* Bus Transceiver 4 Bit
-* Bus Transceiver 8 Bit
 
 === Logic Gates
 
@@ -55,8 +53,6 @@ Color:: Normally, the color in which a component is drawn is determined by its s
 * image:user-manual/base-library/buffer.svg[Buffer] link:{{site.basedir}}/user-manual/english/base-library/buffer[Buffer]
 * image:user-manual/base-library/tristate-buffer.svg[Tri-State Puffer] link:{{site.basedir}}/user-manual/english/base-library/tristate-buffer[Tri-State Buffer]
 * image:user-manual/base-library/delay.svg[Delay] link:{{site.basedir}}/user-manual/english/base-library/delay[Delay]
-* Pulse Generator
-* Pulse Generator (Neg)
 
 === Input
 
@@ -76,65 +72,13 @@ Color:: Normally, the color in which a component is drawn is determined by its s
 * image:user-manual/base-library/led-matrix.svg[LED-Matrix] link:{{site.basedir}}/user-manual/english/base-library/led-matrix[LED-Matrix]
 * image:user-manual/base-library/terminal.svg[Terminal] link:{{site.basedir}}/user-manual/english/base-library/terminal[Terminal]
 * image:user-manual/base-library/buzzer.svg[Buzzer] link:{{site.basedir}}/user-manual/english/base-library/buzzer[Buzzer]
-* 8x8 LED Matrix with Ctrl
 
 === Memory
 
 * image:user-manual/base-library/ram.svg[RAM] link:{{site.basedir}}/user-manual/english/base-library/ram[RAM]
 * image:user-manual/base-library/rom.svg[ROM] link:{{site.basedir}}/user-manual/english/base-library/rom[ROM]
-* Register 4,8,16,32 Bit
-* Shift Register Parallel-Out 4,8 Bit
-* Shift Register Parallel-In 4,8 Bit
 
 === Arithmetic
 
 * image:user-manual/base-library/random.svg[Random] link:{{site.basedir}}/user-manual/english/base-library/random[Random]
 * image:user-manual/base-library/bitextender.svg[Bit Extender] link:{{site.basedir}}/user-manual/english/base-library/bit-extender[Bit Extender]
-* Half Adder
-* Full Adder
-* Incrementer 8 Bit
-* Shifter 8,16 Bit
-* Comparator 4,8 Bit
-* Magnitude Comparator 4 Bit
-* Full Adder 4 Bit (Fast Carry)
-* Adder n Bit
-* Substractor n Bit
-* Multiplier n Bit
-* Divider n Bit
-
-=== Codec
-
-* 2-4 Decoder
-* 3-8 Decoder
-* 4-16 Decoder
-* BCD 7-Seg Decoder
-* BCD 7-Seg (Hex) Decoder
-* BCD-DEC Decoder (Neg)
-* 4-2 Priority Encoder
-* 8-3 Priority Encoder
-
-=== FLip-Flops
-
-* D Flip-Flop
-* T Flip-Flop
-* SR Latch
-* SR Flip-Flop
-* JK Flip-Flop
-* JK Master-Slave Flip-Flop
-
-=== Plexer
-
-* 2x 4-4 Multiplexer
-* 2x 8-8 Multiplexer
-* 2x 16-16 Multiplexer
-* 2-1 Multiplexer
-* 4-1 Multiplexer
-* 8-1 Multiplexer
-* 2x 2-2 Multiplexer
-
-=== Counter
-
-* Sync. Forward Counter 3 Bit
-* Sync. BCD Counter 4 Bit
-* Frequency Divider 1:16
-* Binary Counter 4 Bit LD/CLR

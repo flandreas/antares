@@ -1,6 +1,6 @@
 = Scripting in Use Cases
 include::../../page-variables.txt[]
-:page-permalink: /user-manual/english/circuits/circuit-scripting
+:page-permalink: /user-manual/english/usecases/usecase-scripting
 :icons: font
 
 This chapter describes in detail how scripting can be used in link:{{site.basedir}}/user-manual/english/usecases/usecases[use cases].
