@@ -1,0 +1,29 @@
+= Video RAM
+include::../../page-variables.txt[]
+:page-permalink: /user-manual/english/base-library/video-ram
+
+== Appearance
+
+image:user-manual/base-library/video-ram-sample.png[Example Video RAM, 200]
+
+== Behaviour
+
+Used to display bitmap graphics. A Video RAM behaves exactly like a normal link:{{site.basedir}}/user-manual/english/base-library/ram[RAM], except that it displays its contents as an image.
+
+Each memory cell value is interpreted as an index in a color map defined by the attribute "Color Model".
+
+== Pins
+
+The Video RAM has the same pins like the link:{{site.basedir}}/user-manual/english/base-library/ram[RAM].
+
+== Attributes
+
+Width:: The width of the Video RAM display in pixels. Limited to 600. The bit width of pin "A" (Address) must be sufficiently large to address he resulting Video RAM size (Width * Height).
+
+Height:: The height of the Video RAM display in pixels. Limited to 400. The bit width of pin "A" (Address) must be sufficiently large to address he resulting Video RAM size (Width * Height).
+
+Pixel Size:: The size of each Video RAM pixel on the real screen with the values "Small" (2 real pixels), "Medium" (6 real pixels) and "Large" (10 real pixels).
+
+Color Model:: Defines the color map used to map a memory cell value to the color in which the corresponding pixel is drawn. Each color model determines the bit width of the ROM's "D" pin. +
++
+- **CGA 16**: The 4-bit / 16 color palette of the https://en.wikipedia.org/wiki/Color_Graphics_Adapter["Computer Graphics Adapter"] standard ("Full CGA 16-color palette"). See the linked Wikipedia page for a definition of the color values.

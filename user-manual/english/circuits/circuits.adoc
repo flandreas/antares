@@ -43,13 +43,15 @@ menu:View[Fit]:: Centers the display and sets the zoom factor so that the circui
 
 == Changing circuit attributes
 
-If you click with the mouse on the background of the circuit in the main window, the attributes of the circuit are offered for editing in the attibutes view.
+If you click with the mouse on the background of the circuit in the main window, the attributes of the circuit are offered for editing in the attributes view.
 
 Name:: In this attribute a short name of the circuit can be entered in all supported languages. Note that you can still change the name of a circuit even if it is part of a library and is already used in projects as a subcircuit. This is because Antares does not use the name of the circuit for referencing subcircuits in libraries, but an internal unique identification (a so-called UUID).
 
 Description:: This attribute is used to capture a longer description of the circuit which is displayed in the preview of the explorer and in the description popup when used as a subcircuit in other circuits.
 
 Propagation Delay:: This optional attribute can be used to specify the length of time that elapses between the processing of an input signal and the appearance of a modified output signal. It is used to control the display of the processing state of a subcircuit during link:{{site.basedir}}/user-manual/english/simulation/simulation[simulation].
+
+Start-up Duration:: The time (in ns) it takes the circuit to settle after starting the simulation. This optional attribute is used to omit signal flow animations during simulation start-up. In order to figure out the start-up duration of your circuit, activate menu menu:Simulation[Display Simulation Time in State Bar], start the simulation, and wait until the circuit has settled. Then use the value displayed at the right edge of the state bar.
 
 Function:: This attribute can be used to specify the script that Antares executes for this component during simulation, if the simulation is run in link:{{site.basedir}}/user-manual/english/simulation/simulation["Flat simulation"] mode. This is an advanced technique; for details on scripting, see the chapter link:{{site.basedir}}/user-manual/english/circuits/circuit-scripting["Scripting in Circuits"].
 

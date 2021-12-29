@@ -67,6 +67,10 @@ if (1) {
 
 The kind of operations you can use in expressions depends on the type of terms the expression contains.
 
+NOTE: When expressions contain digital signals that are fully or partially undefined, the user preference
+"Undefined Gate Input Behaviour" is applied to derive a defined value to be used in the expression. The default
+value of this preference is 0.
+
 ==== Arithmetic Operations
 
 _Antares DSL_ supports the following arithmetic operations.
@@ -75,6 +79,7 @@ _Antares DSL_ supports the following arithmetic operations.
 * *-* (Integer subtraction)
 * *** (Integer multiplication)
 * */* (Integer division)
+* *^* (Integer power)
 * *%* (Modulo operation)
 * *<*< (Bitwise shift left)
 * *>>* (Bitwise shift right)
@@ -85,6 +90,9 @@ A + 25 - B
 A * (B + C)
 A / B
 A % 2
+
+// Raises 2 to the power 3
+2^3
 
 // Shift every bit of 128 by 2 bits to the right
 128 >> 2
@@ -316,9 +324,13 @@ hello(A, 42)
 var B = hello(A, 0) + hello(A, 1)
 ----
 
-The functions you can call are implicitly defined by Antares and depend on the context the script is running in. For example, when writing action script for Antares "Usecases", Antares provides the function `setInputAt(time, inputName, signal)` that allows to set the input of a circuit at a particular simulation time.
+Some functions are globally defined and are available to all scripts written in Antares DSL.
+See link:{{site.basedir}}/user-manual/english/scripting/scripting-global-functions[_Global DSL Functions_] for a description of these functions.
 
-Check out the corresponding user manual sections to learn what external functions are available.
+Other functions depend on the context the script is running in. For example, when writing action script for Antares "Usecases", Antares provides the function `setInputAt(time, inputName, signal)` that allows to set the input of a circuit at a particular simulation time.
+
+Check out the corresponding user manual sections to learn what external functions are available
+in particular contexts.
 
 NOTE: The current version of _Antares DSL_ does not yet allow you to define your own functions.
 

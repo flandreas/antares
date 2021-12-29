@@ -1,0 +1,26 @@
+= Global DSL Functions
+include::../../page-variables.txt[]
+:page-permalink: /user-manual/english/scripting/circuit-global-functions
+:icons: font
+
+This chapter describes the functions that are globally available in all scripts written in the
+link:{{site.basedir}}/user-manual/english/scripting/scripting-dsl[_Antares DSL_] programming language.
+
+== Arithmetic Functions
+
+[source,javascript]
+----
+/**
+ * Computes the binary logarithm (base 2) of a given value.
+ *
+ * The result is rounded up to the next bigger integer value in order to
+ * provide enough bits when used to calculate the number of necessary bits that
+ * represent a number whose number of bits is given by [value].
+ *
+ * Examples:
+ * - log2(8) = 3
+ * - log2(10) = 4
+ * - log2(16) = 4
+ */
+private fun log2(value: Long): Long
+----
