@@ -28,6 +28,12 @@ feature_row:
     url: "/docs/explain"
     btn_label: "Learn More"
     btn_class: "btn--primary"
+  - image_path: /assets/images/splash-button-share.svg
+    title: "Share"
+    excerpt: "Share circuits, projects and libraries with other users."
+    url: "https://github.com/flandreas/antares-assets"
+    btn_label: "Learn More"
+    btn_class: "btn--primary"
   - image_path: /assets/images/splash-button-web.svg
     title: "Soon: Web-based"
     excerpt: "Currently a desktop tool, Antares will eventually be available in web browsers."
@@ -39,8 +45,6 @@ feature_row:
 <!---
 ![Image](/assets/images/homepage-circuit.gif)
 -->
-
-Also checkout [Antares Assets](https://github.com/flandreas/antares-assets) for sharing circuits, projects and libraries
 
 {% include figure image_path="/assets/images/homepage-circuit.gif" %}
 
