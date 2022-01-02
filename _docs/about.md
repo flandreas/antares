@@ -24,8 +24,8 @@ Antares is a learning platform for digital circuits. In addition to drawing and 
 
 {% include gallery id="gallery" caption="Screenshots" %}
 
-Antares doesn't dare to claim being a "Logisim successor", although it was largely influence
-by this famous application that has sadly beed discontinued a long time ago. However, regarding its design philosophy, Antares strives to go beyond Logisim and similar tools.
+Antares doesn't dare to claim being a "Logisim successor", although it was largely influenced
+by this famous application that has sadly been discontinued a long time ago. However, regarding its design philosophy, Antares strives to go beyond Logisim and similar tools.
 
 ## Supported Platforms
 

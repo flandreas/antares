@@ -13,12 +13,12 @@ Simulate your designed circuit and interact with it during simulation.
 
 ### Event based simulation
 
-Take adavantage of Antare's event based simulation algorithm that respects
+Take advantage of Antare's event-based simulation algorithm that respects
 gate's propagation delay and allows for multiple independent clocks.
 
 ### Simulation speed category
 
-Seamlessly adjust the the simulation's speed and let Antares display ever more details
+Seamlessly adjust the simulation's speed and let Antares display ever more details
 with decreasing speed.
 
 <img src="/assets/images/simulate/simulation-speed.png" width="400">
@@ -45,6 +45,6 @@ track of where you are, and to resurface to the level of your choice.
 
 ### Simulate complex circuits
 
-Build and simulate complex, hiearchical circuits like entire microcomputers.
+Build and simulate complex, hierarchical circuits like entire microcomputers.
 
 <img src="/assets/images/simulate/microcomputer.gif" width="600">
