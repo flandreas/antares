@@ -62,7 +62,7 @@ NOTE: Colors are defined in Antares by link:{{site.basedir}}/user-manual/english
 
 One of the most important design goals of Antares is to enable the user to explore all the components of a circuit in order to understand its operation as deeply and thoroughly as possible. For this reason, the basic library contains rather few build-in components. Instead, standard components like flip-flops or registers are available as modelled subcircuits in the standard library, which the user can open and observe during circuit design and simulation.
 
-The disadvantage of this approach is that large circuits consist of many basic components if all subcircuits are expanded for simulation until only basic components are used. For example, the microcomputer in the example project "Microcomputer (Tannenbaum)" contains (when fully expanded) over 2'000 elementary logic gates and over 5'000 wires.
+The disadvantage of this approach is that large circuits consist of many basic components if all subcircuits are expanded for simulation until only basic components are used. For example, the microcomputer in the example project "Microcomputer (Tanenbaum)" contains (when fully expanded) over 2'000 elementary logic gates and over 5'000 wires.
 
 The simulation of such large circuits takes a lot of time. Now Antares offers the possibility to define a link:{{site.basedir}}/user-manual/english/circuits/circuit-scripting[Execution script] for a subcircuit, which contains the logic of the subcircuit and is executed during simulation instead of the inner circuit.
 

@@ -4,7 +4,7 @@ include::../../page-variables.txt[]
 
 The Workbench is the part of the Antares user interface that displays the open project and the library in use, and allows you to use their circuits and create new circuits.
 
-The example below shows the opened project "Microcomputer (Tannenbaum)", which is based on the library "Standard".
+The example below shows the opened project "Microcomputer (Tanenbaum)", which is based on the library "Standard".
 
 image::user-manual/projects-libraries/workbench-sample-en.png[Workbench,300,align="center"]
 

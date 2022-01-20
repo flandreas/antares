@@ -23,7 +23,7 @@ The ROM component uses a list of https://en.wikipedia.org/wiki/Regular_expressio
 regularExpression = result
 ----
 
-The following example is taken from the example project "Microcomputer (Tannenbaum)".
+The following example is taken from the example project "Microcomputer (Tanenbaum)".
 
 .Example
 ----
@@ -54,7 +54,7 @@ FF([A-F0-9]{2})=HALT
 
 ----
 
-The configuration with the example above leads to the following display in the symbol of the ROM component, which contains a machine program for the Tannenbaum CPU that adds up all numbers between 1 and 100 (only a section is shown).
+The configuration with the example above leads to the following display in the symbol of the ROM component, which contains a machine program for the Tanenbaum CPU that adds up all numbers between 1 and 100 (only a section is shown).
 
 image:user-manual/base-library/disassembler.png[Disassembler, 300, align="center"]
 

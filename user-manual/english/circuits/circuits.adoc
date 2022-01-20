@@ -85,7 +85,7 @@ Description:: In this attribute a description of the subcircuit can be entered w
 
 Label:: This attribute is only available if the symbol of the subcircuit contains at least one designation element, i.e. a text and/or a label. This attribute can be used to change the text of the label specified by the symbol. +
  +
-Example: The example project "Microcomputer (Tannenbaum)" contains two 16-bit registers that serve as latches in both data paths A and B of the CPU. The symbol of the 16-bit register contains the label component "REG" (for register). When using the registers within the CPU, this attribute "Label" can now be used to replace the text "REG" with "A Latch" or "B Latch". +
+Example: The example project "Microcomputer (Tanenbaum)" contains two 16-bit registers that serve as latches in both data paths A and B of the CPU. The symbol of the 16-bit register contains the label component "REG" (for register). When using the registers within the CPU, this attribute "Label" can now be used to replace the text "REG" with "A Latch" or "B Latch". +
  +
 The value of the attribute "Label" can also be deleted to ensure that the label specified by the symbol is not displayed.
 

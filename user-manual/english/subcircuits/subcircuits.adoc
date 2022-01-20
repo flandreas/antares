@@ -27,7 +27,7 @@ Examples:
 
 === Bidirectional Ports
 
-Antares supports bidirectional ports. The example below shows a section of the "Memory Buffer Register" from the "Microprocessor (Tannenbaum)" example circuit. Depending on the inputs "WR (Write)" and "RD (Read)" and the help of the tri-state buffers, port "D" can both accept data and output data.
+Antares supports bidirectional ports. The example below shows a section of the "Memory Buffer Register" from the "Microprocessor (Tanenbaum)" example circuit. Depending on the inputs "WR (Write)" and "RD (Read)" and the help of the tri-state buffers, port "D" can both accept data and output data.
 
 image::user-manual/subcircuits/bidirectional-port.png[Bidirectional pins, 400,align="center"]
 
@@ -114,7 +114,7 @@ The following built-in components of Antares can be used as controls.
 
 Antares not only allows you to use controls of the circuit for which the symbol is created, but also controls of all sub-circuits and their sub-circuits and so forth.
 
-This allows applications like the CPU of the example project "Microcomputer (Tannenbaum)", whose symbol displays the current values of the three most important registers "SP (Stack Pointer)", "AC (Accumulator)" and "PC (Program Counter)".
+This allows applications like the CPU of the example project "Microcomputer (Tanenbaum)", whose symbol displays the current values of the three most important registers "SP (Stack Pointer)", "AC (Accumulator)" and "PC (Program Counter)".
 
 image::user-manual/subcircuits/cpu-with-controls.png[, 250, align="center"]
 

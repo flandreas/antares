@@ -16,7 +16,7 @@ The **Base library** contains only the basic components built-in into Antares, s
 
 The **Standard Library** also contains all the basic built-in components of Antares. Additionally, it contains important, frequently used subcircuits such as flip-flops, registers and multiplexers that you can include into your own projects.
 
-The choice of subcircuits available in the standard library was largely determined by the development of the example circuit "Microcomputer (Tannenbaum)", the circuit that has played a directing role in the design and development of Antares. In future versions of Antares it is likely that additional subcircuits will be added to the standard library.
+The choice of subcircuits available in the standard library was largely determined by the development of the example circuit "Microcomputer (Tanenbaum)", the circuit that has played a directing role in the design and development of Antares. In future versions of Antares it is likely that additional subcircuits will be added to the standard library.
 
 However, an important feature of libraries is that you can create your own libraries that suit your own particular needs. Not only will you learn a lot about how Antares works, but you can also use the features link:{{site.basedir}}/user-manual/english/description/description["Descriptions and explanations"] to explain your library subcircuits. Especially if you are a teacher or an author, you should definitely consider developing your own library after you have gained some deeper experience with Antares.
 
@@ -24,7 +24,7 @@ In the chapter link:{{site.basedir}}/user-manual/english/projects-libraries/libr
 
 == Projects
 
-Projects combine circuits that you need for a specific application and that together fulfill a particular function. Projects are always based on exactly one library, which you select when you create the project. The example project "Microcomputer (Tannenbaum)" is based on the standard library and contains circuits like "CPU", "Address Decoder" and "ALU 16-Bit".
+Projects combine circuits that you need for a specific application and that together fulfill a particular function. Projects are always based on exactly one library, which you select when you create the project. The example project "Microcomputer (Tanenbaum)" is based on the standard library and contains circuits like "CPU", "Address Decoder" and "ALU 16-Bit".
 
 In the chapter link:{{site.basedir}}/user-manual/english/projects-libraries/projects[Projects] you will learn how to work with projects and create your own projects.
 

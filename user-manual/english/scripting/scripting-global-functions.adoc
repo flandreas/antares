@@ -23,4 +23,11 @@ link:{{site.basedir}}/user-manual/english/scripting/scripting-dsl[_Antares DSL_]
  * - log2(16) = 4
  */
 private fun log2(value: Long): Long
+
+/**
+ * Extracts [size] bits at position [pos] from [signal], where bit positions start with 0.
+ * Example: bits(31, 3, 2) = 3.
+ */
+private fun bits(signal: Long, pos: Long, size: Long): Long
+
 ----
