@@ -79,7 +79,7 @@ With this layout, individual segments can be moved in parallel. To do this, clic
 
 None:: In this layout, Antares does not make any adjustments to the layout at either end when moving the components to which the wire is connected. This layout is typically used to draw non-orthogonal wires, as is often required for flip-flop circuits. +
  +
-With this layout, the individual intermediate points can be moved. Select the wire, whereupon Antares will display small empty rectangles at the intermediate points. Move these intermediate points by holding down the left mouse button.
+With this layout, the individual intermediate points can be moved. Select the wire, where upon Antares will display small empty rectangles at the intermediate points. Move these intermediate points by holding down the left mouse button.
 
 Straight:: In this layout a straight connection between the start and end point of the wire is drawn. This layout exists for reasons of completeness, but is rather not used in digital circuits. +
  +

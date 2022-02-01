@@ -27,8 +27,8 @@ Name:: The optional name of the switch, which is displayed depending on the valu
 Label Position:: Determines where the "Name" of the switch is displayed as text.
 
 * *Hide*: The name is not displayed.
-* *Out*: The name is displayed opposite the pin.
-* *Inside*: The name is displayed inside the switch. If the name contains more than one character, the switch is enlarged accordingly.
+* *Externally*: The name is displayed outside of the switch, opposite to the pin.
+* *Internally*: The name is displayed inside the switch. If the name contains more than one character, the switch is enlarged accordingly.
 
 Switch:: If this attribute is set (default), the switch remains in the pressed state after the user has released the mouse button (or the keyboard key that triggered the pressing of the switch).
 

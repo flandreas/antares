@@ -74,8 +74,6 @@ Show Disassembler:: Only displayed if the attribute "Show contents" is selected.
 
 Disassembler configuration:: A list of disassembler regular expressions. The definitions must be separated by line breaks.
 
-Highlight current cell even without CS: Only displayed if the attribute "Show contents" is selected. Normally, the currently addressed
-cell is only highlighted in the memory contents view if the memory is selected, i.e. the input CS is asserted. If this
-attribute is set, the last addressed cell keeps highlighted even if the CS is not asserted any more. This can be
+Highlight current cell even without CS:: Only displayed if the attribute "Show contents" is selected. Normally, the currently addressed cell is only highlighted in the memory contents view if the memory is selected, i.e. the input CS is asserted. If this attribute is set, the last addressed cell keeps highlighted even if the CS is not asserted any more. This can be
 usefull in microcomputer circuits where the ROM component contains the executed machine program, and you want the user to
 be able to keep track of the progress in the machine program.

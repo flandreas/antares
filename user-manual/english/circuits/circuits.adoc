@@ -89,6 +89,11 @@ Example: The example project "Microcomputer (Tanenbaum)" contains two 16-bit reg
  +
 The value of the attribute "Label" can also be deleted to ensure that the label specified by the symbol is not displayed.
 
+Control Visibility:: Determines when controls contained in a subcircuit symbol are to be displayed.
+* **Never**: Controls are displayed neither in edit mode nor during simulation.
+* **During Simulation**: Controls are displayed only during simulation. This is the default value.
+* **Always**: Controls are displayed in edit mode as well as during simulation.
+
 == Editing subcircuit symbols
 
 The previously presented possibilities of adapting the symbol of a subcircuit by mirroring or changing the label are often sufficient to integrate a subcircuit optimally into a circuit. Sometimes, however, the symbol of a subcircuit needs to be adapted even further.

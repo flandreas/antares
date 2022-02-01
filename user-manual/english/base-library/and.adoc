@@ -60,4 +60,4 @@ applied to the truth table and the mnemonics displayed for the gate.
 
 Output Name:: The optional name displayed next to the output. This can be useful if the AND gate is the end of a complex combinatorial circuit and the logical expression produced by the AND gate is to be specified.
 
-Data Input:: In this attribute the number of the input containing the data path can be selected if the feature "data path" (see above) is to be used. In the direction of data flow through the AND gate, the number 1 designates the output at the top.
+Data Input:: In this attribute the number of the input containing the data path can be selected if the feature "data path" (see above) is to be used. In the direction of data flow through the AND gate, number 1 designates the left-most input.

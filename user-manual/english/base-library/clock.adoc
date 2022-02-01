@@ -24,6 +24,6 @@ Orientation:: The direction in which the output pin points.
 
 Period:: The period in microseconds. The period is the time that elapses until the clock emits the same signal again. If the period is 1'000 µs, the output is 1 for 500 µs and 0 for 500 µs.
 
-Active:: If the "Active" attribute is not set, the output always remains at 0 during simulation.
+Enabled:: If the "Enabled" attribute is not set, the output always remains at 0 during simulation.
 
 Change period during simulation:: The knob with which the period can be changed by the user during simulation is only displayed if this attribute is set.

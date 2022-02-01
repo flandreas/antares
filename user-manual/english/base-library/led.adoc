@@ -20,4 +20,11 @@ Orientation:: The direction in which the luminous body is pointing.
 
 Name:: The name of the LED, which is displayed as text next to the luminous body (on the side opposite the pin).
 
-LED Color:: The color of the luminous body. The menu offers all light colors implemented in Antares for selection.
+Color:: The color of the luminous body. The menu offers all light colors implemented in Antares for selection.
+
+Square:: If set, the luminous body is drawn as a square rather than a circle.
+
+Size:: The size in which the LED is drawn.
+
+Border:: If not set, the LED is drawn without a border, which can be useful for building areas of multiple rectangular LEDs.
+

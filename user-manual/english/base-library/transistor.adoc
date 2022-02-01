@@ -34,7 +34,7 @@ Symbol::
 
 Allows you to choose between two different symbol types. Although there is a user preference setting you can use to decide which symbol type is used when adding a new transistor to a circuit, the symbol type is store per transistor because each symbol type has different pin geometries, and globally changing the symbol type would distort your circuit layout.
 * **Bulk**: Displays the transistor's bulk (without external pin)
-* **Inverter**: Displays a small inverter circle at the gate pin for p-type transistors. Also displays an array at the source pin, which points in signal flow direction for p-type transistors and against signal flow direction for n-type transistors.
+* **Inverter**: Displays a small inverter circle at the gate pin for p-type transistors. Also displays an arrow at the source pin, which points in signal flow direction for p-type transistors and against signal flow direction for n-type transistors.
 
 Bit Width:: The number of bits of the _source_ and _drain_ pins. For n-type transistors, the bulk arrow points towards the gate.
 

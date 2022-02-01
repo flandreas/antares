@@ -82,6 +82,7 @@ The ultimate goal of Antares is to facilitate interactive textbooks with active 
 
 ## Credits
 
-- [Kotllin Programming Language](https://kotlinlang.org)
+- [Kotlin Programming Language](https://kotlinlang.org)
 - [AdoptOpenJDK](https://adoptopenjdk.net)
-- [Icons8](https://icons8.com/icons)
+- [FlatLaf Look and Feel](https://www.formdev.com/flatlaf/)
+- Icons by Janis
