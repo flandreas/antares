@@ -34,4 +34,6 @@ Bit Width:: The number of bits that can be transmitted simultaneously through th
 
 Representation:: Determines whether the value of the current signal is represented in binary or hexadecimal.
 
-Toggle:: Defines the behavior of a port when used as a switch by the user during simulation. If this attribute is set, the port remains in its state when the mouse button is released.
+Switch:: Defines the behavior of a port when used as a switch by the user during simulation. If this attribute is set, the port remains in its state when the mouse button is released.
+
+Tri-State Output:: Only available for output ports. If set, the port has tri-state behaviour. The corresponding pin in a sub circuit will then allow you to connect it with other output pins on the same net, which Antares wouldn't allow otherwise.

@@ -14,13 +14,13 @@ gallery:
     title: "CPU"
 ---
 
-# Tannenbaum CPU
+# Tanenbaum CPU
 
 [Download](https://github.com/flandreas/antares/releases/download/v0.17.0/Microcomputer.Tannenbaum.zip){: .btn .btn--primary .btn--large}
 
 {% include gallery id="gallery" caption="Screenshots" %}
 
-A microcomputer with a micro-programmable CPU according to "Structured Computer Organisation" by Andrew S. Tannenbaum (Prentice Hall 1984, ISBN 0-13-854605-3).
+A microcomputer with a micro-programmable CPU according to "Structured Computer Organisation" by Andrew S. Tanenbaum (Prentice Hall 1984, ISBN 0-13-854605-3).
 
 The microcomputer's ROM is loaded with a maschine program that sums all numbers between 0 and 100. The resulting sum is displayed by the 7-segment display of the microcomputer.
 

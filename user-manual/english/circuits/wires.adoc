@@ -11,7 +11,7 @@ To help you recognize unconnected wires at a glance, Antares displays unconnecte
 
 == Creating Wires
 
-To start creating a new wire, move the mouse over a pin of a component or an existing wire. Antares will then show a small orange circle to indicate that you can start a new wire at this point.
+To start creating a new wire, move the mouse over a pin of a component or an existing wire. Antares will then show a small green circle to indicate that you can start a new wire at this point.
 
 Then press and hold the left mouse button while moving the mouse to the desired destination of the wire. Antares automatically creates a orthogonal layout of the resulting wire.
 
@@ -27,7 +27,7 @@ TIP: Bidirectional pins are both input and output and can be connected in both w
 
 In addition to these options, you can create an unconnected wire in all cases by releasing the mouse button over the background of the circuit.
 
-By default, Antares automatically creates an orthogonal layout while creating the wire. To influence the layout of the resulting wire, press the kbd:[Alt]-key while defining the start location. Antares will then display an orange square instead of the orange circle. Then you can define the intermediate points of the resulting wire by clicking with the left mouse button. You do not have to keep the mouse button pressed while moving the mouse. Use the kbd:[ESC]-key to remove the last intermediate point. With a single click on an input or with a double click on the background the creation of the wire is completed.
+By default, Antares automatically creates an orthogonal layout while creating the wire. To influence the layout of the resulting wire, press the kbd:[Alt]-key while defining the start location. Antares will then display a green square instead of the green circle. Then you can define the intermediate points of the resulting wire by clicking with the left mouse button. You do not have to keep the mouse button pressed while moving the mouse. Use the kbd:[ESC]-key to remove the last intermediate point. With a single click on an input or with a double click on the background the creation of the wire is completed.
 
 == Wire Bundle
 
@@ -43,7 +43,7 @@ Circuits with design errors cannot be simulated; before the simulation can be st
 
 Sometimes it happens that you have connected a wire to the wrong component. To change this, it is not necessary to delete the wire and then create a new wire. Antares offers the possibility to reassign existing wires to other pins.
 
-Move the mouse over the port to which the wire is connected. Antares displays a small orange circle. Press the left mouse button and move the mouse to the new pin while keeping the mouse button pressed.
+Move the mouse over the port to which the wire is connected. Antares displays a small green circle. Press the left mouse button and move the mouse to the new pin while keeping the mouse button pressed.
 
 == Automatic connection
 
@@ -51,7 +51,7 @@ Antares offers the possibility to automatically connect the pins of components t
 
 image::user-manual/circuits/auto-connect.png[Automatic Connecting,300,align="center"]
 
-In this case the old gate can be deleted, resulting in three wires with one open end each (see example above). Now you can drag another gate into the circuit and move it over the place where the old gate was before. Antares detects this situation and indicates with orange circles that the component's pins are automatically connected when you release the mouse at this position.
+In this case the old gate can be deleted, resulting in three wires with one open end each (see example above). Now you can drag another gate into the circuit and move it over the place where the old gate was before. Antares detects this situation and indicates with green circles that the component's pins are automatically connected when you release the mouse at this position.
 
 == Wire properties
 

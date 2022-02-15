@@ -1,0 +1,24 @@
+= Double-Throw Switch
+include::../../page-variables.txt[]
+:page-permalink: /user-manual/english/base-library/double-throw-switch
+
+== Appearance
+
+image:user-manual/base-library/double-throw-switch-example.png[Example Real Switch, 150]
+
+== Behaviour
+
+A double-throw switch is a bi-directional real switch with three pins. It allows to connect a net
+on one side with one of two possible nets on the other side of the switch.
+
+When pressing the double-throw switch with the mouse, it receives the keyboard focus, which is represented by a thin blue dashed rectangle. If a double-throw switch has the keyboard focus, it can also be operated with the kbd:[Enter] key as well as with the keys kbd:[0] and kbd:[1].
+
+== Pins
+
+A double-throw switch has three pins whose bit width is derived from the attribute "Bit Width".
+
+== Attributes
+
+Bit Width:: The number of bits of both pins.
+
+Switch:: If this attribute is set (default), the switch remains in the pressed state after the user has released the mouse button (or the keyboard key that triggered the pressing of the switch).
