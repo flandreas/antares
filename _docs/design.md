@@ -83,6 +83,13 @@ Open subcircuits in additional views.
 
 <img src="/assets/images/design/desktop.png" width="1000">
 
+### Boolean Expressions and Circuit Synthesis
+
+Define and edit truth tables, generate optimized boolean expressions (DNF), and let
+Antares generate a combinational circuit that realizes these expressions.
+
+<img src="/assets/images/user-manual/circuits/truth-table-sample.png" width="1000">
+
 ### Scripting
 
 Use scripts to customize various parts of Antares' functionality and the

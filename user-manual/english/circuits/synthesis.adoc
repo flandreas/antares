@@ -1,0 +1,60 @@
+= Synthesis
+include::../../page-variables.txt[]
+:page-permalink: /user-manual/english/circuits/synthesis
+
+Antares' "Synthesis" module allows you to define the logic of a combinational circuit by filling out
+a truth table, creating minimized boolean expressions for that truth table, and finally letting Antares
+create a circuit that implements these boolean expressions.
+
+image::user-manual/circuits/truth-table-sample.png[Truth Table,600,align="center"]
+
+== Creating a Truth Table
+
+Truth tables are elements in the desktop's element tree just like circuits are. They are stored within the project or library they are part of. Like with circuits, just double-click on a truth table node in the explorer tree to open the truth table in Antares' main view.
+
+To create a new truth table, select a project/library node or a folder in a project/library to which you want to add a new truth table. Right-click and select the menu:Context Menu[New Truth Table..].
+
+image::user-manual/circuits/truth-table-dialog.png[Truth Table,400,align="center"]
+
+Enter the name of the truth table and a comma-separated list of the names of the inputs (variable) and outputs (results).
+
+After pressing btn:[OK], Antares adds the newly created truth table to the project/library and opens the truth table in the main view.
+
+== Editing a Truth Table
+
+The truth table view contains a table with two types of columns:
+
+- **Inputs (Variables)**: Contains all possible combinations of bit assignments for the variables. Cannot be edited.
+- **Outputs (Results)**: Contains the result values for every possible combination of input bits. Can be edited.
+
+Select an output column cell and enter 0, 1 or X (for "don't care") using the keyboard. Save your data using menu menu:File[Save].
+
+== Creating Minimized Expressions
+
+Antares uses the "Quine McCluskey" algorithm for creating minimized boolean expressions for the data in the truth table. Since the complexity of this algorithm increases exponentially with the number of variables, the number of inputs and outputs is limited to 8.
+
+The created expressions are in disjunctive normal form (DNF).
+
+Click button btn:[Create Expressions] to let Antares create the minimized boolean expressions.
+
+NOTE: These expressions are not stored in the project file. Every time you change a value in the truth table, or you open a stored truth table, the expressions are cleared and must be recalculated on demand.
+
+== Creating a Circuit
+
+After having created the minimized expressions, you can press button btn:[Create Circuit..] to let Antares create a circuit that implements these expression. They same can also be achieved using the menu:Context[Create Circuit..] menu on a truth table in the explorer tree.
+
+Antares creates a circuit with AND and OR gates. Other implementation types (like such based on look-up tables) might follow in the future.
+
+CAUTION: Since AND and OR gates in Antares can only have up to 8 input pins, the expression terms are also limited to 8 factors each.
+
+The created circuit is added to the same explorer tree folder in which the truth table is contained. Antares also automatically creates a default circuit symbol that contains an input pin for every variable and an output pins for every output column.
+
+image::user-manual/circuits/truth-table-circuit.png[Truth Table,700,align="center"]
+
+== User Preferences
+
+Use the preferences in menu:Antares[Preferences > Circuit > Expression] to specify the format of generated boolean expressions.
+
+- **Notation**: There are currently 4 different notations implemented. More are likely to follow.
+- **Omit AND for single character variable names**: If this option is selected, factors in AND terms are not separated by an operator (e.g. "AND" or "*") if all variable names consist of a single character only.
+- **Put AND terms in parenthesis**: If this option is not selected, the generated expressions rely on operator priority NOT > AND > OR, and parenthesis for DNF AND terms are therefore omitted.

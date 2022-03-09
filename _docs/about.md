@@ -60,6 +60,8 @@ The ultimate goal of Antares is to facilitate interactive textbooks with active 
   - Wire bundles and optional bus representation of wires
   - Custom scripting language for writing scripts for simulation and symbol customization
   - Parametrized circuits
+  - Boolean expression optimization from truth tables
+  - Circuit synthesis
 - **Simulation**
   - Simulation of individual propagation delays
   - Signal flow animation

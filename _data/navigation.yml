@@ -41,6 +41,8 @@ manual:
         url: /user-manual/english/circuits/circuits
       - title: "Wires"
         url: /user-manual/english/circuits/wires
+      - title: "Synthesis"
+        url: /user-manual/english/circuits/synthesis
       - title: "Subcircuits"
         url: /user-manual/english/subcircuits/subcircuits
   - title: Simulation
@@ -69,6 +71,8 @@ manual:
 releases:
   - title: 2022
     children:
+      - title: "0.21.0"
+        url: /docs/releases/release-0.21.0
       - title: "0.20.0"
         url: /docs/releases/release-0.20.0
       - title: "0.19.0"
