@@ -2,13 +2,19 @@
 include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/circuits/synthesis
 
-Antares' "Synthesis" module allows you to define the logic of a combinational circuit by filling out
+Antares' "Synthesis" module allows you to specify a combinational circuit's logic by either
+filling out a truth table or by entering boolean expressions. After that, you can ask Antares
+to generate a circuit from your specification.
+
+== Truth Tables
+
+Truth tables allows you to define the logic of a combinational circuit by filling out
 a truth table, creating minimized boolean expressions for that truth table, and finally letting Antares
 create a circuit that implements these boolean expressions.
 
 image::user-manual/circuits/truth-table-sample.png[Truth Table,600,align="center"]
 
-== Creating a Truth Table
+=== Creating a Truth Table
 
 Truth tables are elements in the desktop's element tree just like circuits are. They are stored within the project or library they are part of. Like with circuits, just double-click on a truth table node in the explorer tree to open the truth table in Antares' main view.
 
@@ -18,9 +24,11 @@ image::user-manual/circuits/truth-table-dialog.png[Truth Table,400,align="center
 
 Enter the name of the truth table and a comma-separated list of the names of the inputs (variable) and outputs (results).
 
+TIP: Output colum names can be negated. Use the same negation notation you use when naming negated circuit port names, e.g. `!Q` or `!(OUT)`
+
 After pressing btn:[OK], Antares adds the newly created truth table to the project/library and opens the truth table in the main view.
 
-== Editing a Truth Table
+=== Editing a Truth Table
 
 The truth table view contains a table with two types of columns:
 
@@ -29,7 +37,7 @@ The truth table view contains a table with two types of columns:
 
 Select an output column cell and enter 0, 1 or X (for "don't care") using the keyboard. Save your data using menu menu:File[Save].
 
-== Creating Minimized Expressions
+=== Creating Minimized Expressions
 
 Antares uses the "Quine McCluskey" algorithm for creating minimized boolean expressions for the data in the truth table. Since the complexity of this algorithm increases exponentially with the number of variables, the number of inputs and outputs is limited to 8.
 
@@ -39,7 +47,7 @@ Click button btn:[Create Expressions] to let Antares create the minimized boolea
 
 NOTE: These expressions are not stored in the project file. Every time you change a value in the truth table, or you open a stored truth table, the expressions are cleared and must be recalculated on demand.
 
-== Creating a Circuit
+=== Creating a Circuit
 
 After having created the minimized expressions, you can press button btn:[Create Circuit..] to let Antares create a circuit that implements these expression. They same can also be achieved using the menu:Context[Create Circuit..] menu on a truth table in the explorer tree.
 
@@ -50,6 +58,34 @@ CAUTION: Since AND and OR gates in Antares can only have up to 8 input pins, the
 The created circuit is added to the same explorer tree folder in which the truth table is contained. Antares also automatically creates a default circuit symbol that contains an input pin for every variable and an output pins for every output column.
 
 image::user-manual/circuits/truth-table-circuit.png[Truth Table,700,align="center"]
+
+== Boolean Expressions
+
+Boolean expressions allow you to define the logic of a combinational circuit, optimizing them, and finally letting Antares create a circuit that implements these boolean expressions.
+
+image::user-manual/circuits/expressions-sample.png[Truth Table,800,align="center"]
+
+=== Creating Boolean Expressions
+
+Boolean expressions are elements in the desktop's element tree just like circuits are. They are stored withing the project or library they are part of. Like with circuits, just double-click on a boolean expression node in the explorer tree to open it in Antares' main view.
+
+To create a boolean expression, select a project/library node or a folder in a project/library to which you want to add a new boolean expression. Right-click and select the menu:Context[New Expression..] and enter the boolean expression's name. After pressing btn:[OK] in the dialog, Antares adds the newly created boolean expression to the project/library and opens it in the main view.
+
+=== Editing Boolean Expressions
+
+The boolean expressions window contains a text area where you can enter your boolean expressions. A sample text shows the various expression formats supported by Antares. Enter a separate expression for every variable on a separate line.
+
+Select the checkbox "One-Character Variables" if the names of all variables in your expressions consist only of a single character. If this option is used, boolean operator priority NOT > AND > OR is applied when parsing the expressions, and you can omit AND operators in the expressions, even if you don't surround the AND terms with parentheses.
+
+After having entered your expressions, press btn:[Apply] to let Antares check the syntax of your expressions and generate a minimized version of them. Antares will also auto-fill the read-only truth table according to the logic of your expressions.
+
+Don't forget to save your changes using menu:File[Save]; Antares wont automatically save your changes.
+
+NOTE: Undo/redo in the expressions view is available for every "Apply" action and not for every individual character change you make in the expressions text field.
+
+=== Creating a Circuit
+
+After having entered your boolean expressions, you can press button btn:[Create Curcit..] to let Antares create a circuit that implements the minimized expressions. This works the same as with truth tables, so refer to the corresponding section in the "Truth Tables" chapter.
 
 == User Preferences
 

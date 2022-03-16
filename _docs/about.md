@@ -61,7 +61,9 @@ The ultimate goal of Antares is to facilitate interactive textbooks with active 
   - Custom scripting language for writing scripts for simulation and symbol customization
   - Parametrized circuits
   - Boolean expression optimization from truth tables
-  - Circuit synthesis
+  - Circuit synthesis based on truth tables or boolean expressions, including expression minimization
+  - Circuit generation from minimized expressions
+  - Circuit analysis
 - **Simulation**
   - Simulation of individual propagation delays
   - Signal flow animation

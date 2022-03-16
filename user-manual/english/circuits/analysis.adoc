@@ -1,0 +1,29 @@
+= Analysis
+include::../../page-variables.txt[]
+:page-permalink: /user-manual/english/circuits/analysis
+
+Antares' "Analysis" module allows you to analyse a combinational circuit and generate the corresponding boolean expressions.
+
+image::user-manual/circuits/analysis-sample.png[Truth Table,600,align="center"]
+
+A circuit must fulfill certain requirements to be analysed.
+
+* Must have at least 1 non-bidirectional circuit input component
+* Must have at least 1 non-bidirectional circuit output component
+* Multi-bit inputs and outputs are not supported
+
+Antares doesn't explicitly ensure that the circuit is combinational and not sequential. When analysing, Antares identifies all circuit inputs as input variables, all circuit outputs as output variables, and then runs background simulations for every possible combination of input signals. The signals arriving at the outputs are collected and added to a resulting truth table, which is then used to generate minimized boolean expressions.
+
+This means that Antares won't prevent you from running analysis on sequential circuits like flip-flops, but the resulting truth table and boolean expressions probably won't be what you would expect.
+
+NOTE: If a simulation for a particular input signal combination doesn't settle after a certain number of simulation iterations, Antares will show the error "Too many simulation iterations".
+
+=== Analysing a Circuit
+
+Select a circuit in the explorer's tree and choose menu menu:Synthesis[Analyse Circuit...]. Antares will then run the analysis in the background and display the results as shown in the image above.
+
+=== Using the Analysis Results
+
+The truth table and the expressions text in the result window are both read-only, but you can copy/paste the contents of both components and use them in another application.
+
+If you would like to use the analysis within Antares, you can save them either as truth table or as boolean expression by pressing the corresponding buttons in the results view. Antares will then save the corresponding objects in the same explorer folder that contains the analysed circuit. You can work on from there by changing these object to derive new circuits with different combinational logic.
