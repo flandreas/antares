@@ -48,3 +48,10 @@ track of where you are, and to resurface to the level of your choice.
 Build and simulate complex, hierarchical circuits like entire microcomputers.
 
 <img src="/assets/images/simulate/microcomputer.gif" width="600">
+
+### Usecases and test scripts
+
+Use Antares scripting to define complex circuit interaction usecases, and let your
+users simply start these usecases to observe how the circuit behaves. Define test conditions for each usecase and let Antares run them to check if a circuit's logic is correct.
+
+<img src="/assets/images/simulate/usecases.gif" width="600">
