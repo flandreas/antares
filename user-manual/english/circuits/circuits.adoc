@@ -140,5 +140,20 @@ image:user-manual/circuits/snapGrid.gif[Raster] **Raster** This tool always sets
 
 image:user-manual/circuits/snap.gif[Components] **Components** With this tool, Antares tries to align the component you place with respect to existing components. Depending on the type of component, either the zero point of the component or its inputs and outputs will be used. Antares uses thin orange guidelines to indicate where it has found a possible alignment with others.
 
-
 image::user-manual/circuits/snap.png[Alignment, 400, align="center"]
+
+== Save History
+
+Antares can maintain a history of all saved versions of a circuit. You can use this feature to restore a previously saved version in case case you've accidentally saved some undesired changes.
+
+To enable save histories, enable the user preference menu:Preferences[Editor,Save History]. After that, Antares will create a side copy of your already saved circuit whenever you save new changes of that circuit.
+
+To view the save history of a particular circuit, select that circuit in the explorer tree, left-click to open the context menu, and select menu:Context Menu[Show History..]. This will open the "History" view for the selected circuit.
+
+NOTE: The menu menu:Context Menu[Show History..] is disabled if there are unsaved changes in the currently open circuit.
+
+image::user-manual/circuits/save-history-sample.png[Alignment, 600, align="center"]
+
+Select an entry in the list of old version to display a preview of that version. Click btn:[Restore] to restore the old version and make it the current version.
+
+NOTE: The save history of a circuit gets also deleted if that circuit is deleted from the project or library.

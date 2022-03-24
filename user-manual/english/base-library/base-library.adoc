@@ -84,6 +84,7 @@ Color:: Normally, the color in which a component is drawn is determined by its s
 
 * image:user-manual/base-library/ram.svg[RAM] link:{{site.basedir}}/user-manual/english/base-library/ram[RAM]
 * image:user-manual/base-library/rom.svg[ROM] link:{{site.basedir}}/user-manual/english/base-library/rom[ROM]
+* image:user-manual/base-library/lut.svg[LUT] link:{{site.basedir}}/user-manual/english/base-library/lut[Lookup Table]
 * Register 4,8,16,32 Bit
 * Shift Register Parallel-Out 4,8 Bit
 * Shift Register Parallel-In 4,8 Bit
