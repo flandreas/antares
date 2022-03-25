@@ -73,6 +73,8 @@ manual:
 releases:
   - title: 2022
     children:
+      - title: "0.23.1"
+        url: /docs/releases/release-0.23.1
       - title: "0.23.0"
         url: /docs/releases/release-0.23.0
       - title: "0.22.0"
