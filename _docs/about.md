@@ -70,7 +70,7 @@ The ultimate goal of Antares is to facilitate interactive textbooks with active 
   - Optional scripting of subciruit logic
   - Continuously choosable simulation speed
   - Single-step simulation
-  - Oscilloscope (experimental)
+  - Oscilloscope
 - **Explanations**
   - Internationalization: Custom texts are translatable to all supported user languages
   - Programmable scenarios for displaying dynamic explanations during simulation

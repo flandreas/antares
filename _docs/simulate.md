@@ -55,3 +55,9 @@ Use Antares scripting to define complex circuit interaction usecases, and let yo
 users simply start these usecases to observe how the circuit behaves. Define test conditions for each usecase and let Antares run them to check if a circuit's logic is correct.
 
 <img src="/assets/images/simulate/usecases.gif" width="600">
+
+### Oscilloscope
+
+Setup an oscilloscope in your circuit to capture signal curves during simulation. Choose between "clocked" and "real-time" (with propagation delay awareness) mode.
+
+<img src="/assets/images/user-manual/oscilloscope/oscilloscope-scale.png" width="600">

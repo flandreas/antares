@@ -1,4 +1,4 @@
-= Base Library
+= Library Reference
 include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/base-library/base-library
 

@@ -1,0 +1,26 @@
+---
+layout: single
+header:
+  overlay_image: /assets/images/splash2.png
+  show_overlay_excerpt: false
+sidebar: { nav: "releases" }
+---
+
+**Release Date**: April 2, 2022
+
+The main purpose of this release is to make the oscilloscope component available to the users. It has been around for a couple of years as a development version, and now we've taken the taken the time to finish it.
+
+![Oscilloscope](/assets/images/user-manual/oscilloscope/oscilloscope-scale.png)
+
+See the new chapter in the [user manual](/user-manual/english/oscilloscope/oscilloscope) for a description on how to use the oscilloscope.
+
+The oscilloscope still lacks experience out in the field, so please give us feedback what you think of it.
+
+
+# Features
+
+* **#336: Oscilloscope:** The oscilloscope has been around in an unfinished state for a couple of years; now it's time to complete it and make it available to the users.
+
+# Bugfixes
+
+* **#337: Clock frequency changed during simulation should not be stored":** If you changed the frequency of a clock component during simulation using the popup knob, the changed frequency got stored along with other changes made in edit mode. This was not intended and is now avoided.
