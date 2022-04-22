@@ -226,6 +226,7 @@ plugins:
   - jekyll-include-cache
   - jekyll-seo-tag
   - jemoji
+  - jekyll-analytics
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -298,3 +299,8 @@ asciidoctor:
     - pygments-css=class
     - imagesdir=/assets/images
     - icons=font
+
+jekyll_analytics:
+  Plausible:
+    domain: 'antarescircuit.io'
+    source: 'https://plausible.example.com/js/plausible.js'
