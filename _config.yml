@@ -303,4 +303,4 @@ asciidoctor:
 jekyll_analytics:
   Plausible:
     domain: 'antarescircuit.io'
-    source: 'https://plausible.example.com/js/plausible.js'
+    source: 'https://plausible.io/js/plausible.js'
