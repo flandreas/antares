@@ -1,0 +1,64 @@
+= Key Bindings
+include::../../page-variables.txt[]
+:page-permalink: /user-manual/english/misc/key-bindings
+
+== General
+
+[%header, cols="3,1,1"]
+|===
+| Action | MacOS | Windows
+| Close View | kbd:[CMD]+kbd:[W] | kbd:[CTRL]+kbd:[F4]
+| Preferences | kbd:[CMD]+kbd:[,] | -
+| Quit Application | kbd:[CMD]+kbd:[Q] | kbd:[ALT]+kbd:[F4]
+| Toggle Oscilloscope | kbd:[SHIFT]+kbd:[CMD]+kbd:[O] | kbd:[SHIFT]+kbd:[CTRL]+kbd:[O]
+3+|*Zoom & Pan*
+| Zoom In (+)| kbd:[SHIFT]+kbd:[CMD]+kbd:[1]| kbd:[SHIFT]+kbd:[CTRL]+kbd:[1]
+| Zoom Normal (=)| kbd:[SHIFT]+kbd:[CMD]+kbd:[0]| kbd:[SHIFT]+kbd:[CTRL]+kbd:[0]
+| Zoom Out (-)| kbd:[CMD]+kbd:[-]| kbd:[CTRL]+kbd:[-]
+| Zoom Centered| kbd:[CMD]+kbd:[M]| kbd:[CTRL]+kbd:[M]
+| Zoom to Fit| kbd:[CMD]+kbd:[F]| kbd:[CTRL]+kbd:[F]
+| Zoom to Fit (Max. 100%)| kbd:[ALT]+kbd:[CMD]+kbd:[F]| kbd:[ALT]+kbd:[CTRL]+kbd:[F]
+3+|*Subcircuit Navigation*
+| Omit dive animation (double-click on symbol)| kbd:[CMD] | kbd:[CTRL]
+| Omit emmerge animation (click on breadcrumb)| kbd:[CMD] | kbd:[CTRL]
+| Additional view (double-click on symbol)| kbd:[ALT] | kbd:[ALT]
+|===
+
+== Edit Mode
+
+[%header, cols="3,1,1"]
+|===
+| Action | MacOS | Windows
+| Projects Dialog| kbd:[SHIFT]+kbd:[CMD]+kbd:[P] | kbd:[SHIFT]+kbd:[CTRL]+kbd:[P]
+| Libraries Dialog| kbd:[SHIFT]+kbd:[CMD]+kbd:[L] | kbd:[SHIFT]+kbd:[CTRL]+kbd:[L]
+3+|*General Editing*
+| Save | kbd:[CMD]+kbd:[S] | kbd:[CTRL]+kbd:[S]
+| Cut | kbd:[CMD]+kbd:[X] | kbd:[CTRL]+kbd:[X]
+| Copy | kbd:[CMD]+kbd:[C] | kbd:[CTRL]+kbd:[C]
+| Paste | kbd:[CMD]+kbd:[V] | kbd:[CTRL]+kbd:[V]
+| Undo | kbd:[CMD]+kbd:[Z] | kbd:[CTRL]+kbd:[Z]
+| Redo | kbd:[SHIFT]+kbd:[CMD]+kbd:[Z] | kbd:[CTRL]+kbd:[Y]
+| Delete | kbd:[BACKSPACE] | kbd:[DEL]
+| Rotate | kbd:[CMD]+kbd:[R] | kbd:[CTRL]+kbd:[R]
+| Select All | kbd:[CMD]+kbd:[A] | kbd:[CTRL]+kbd:[A]
+| Select Next | kbd:[CMD]+kbd:[ARROW RIGHT] | kbd:[CTRL]+kbd:[ARROW RIGHT]
+| Select Previous | kbd:[CMD]+kbd:[ARROW LEFT] | kbd:[CTRL]+kbd:[ARROW LEFT]
+| Move | kbd:[ARROW L/R/U/D] | kbd:[ARROW L/R/U/D]
+| Orthogonal mouse drag | kbd:[SHIFT] | kbd:[SHIFT]
+| Omit Snap during mouse drag | kbd:[ALT] | kbd:[ALT]
+3+|*Wires*
+| Start wire with intermediate points | kbd:[ALT] | kbd:[ALT]
+| Reconnect wire | kbd:[ALT] | kbd:[ALT]
+|===
+
+== Simulation Mode
+
+[%header, cols="3,1,1"]
+|===
+| Action | MacOS | Windows
+| Start/Stop (Run) | kbd:[CTRL]+kbd:[R] | kbd:[CTRL]+kbd:[R]
+| Pause/Resume | kbd:[SPACE] | kbd:[SPACE]
+| Move focus in inputs/outputs | kbd:[ARROW L/R] | kbd:[ARROW L/R]
+| Toggle focused switch | kbd:[ENTER] | kbd:[ENTER]
+| Toggle focused input digits | kbd:[ENTER] | kbd:[ENTER]
+|===

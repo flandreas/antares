@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/hendrikschneider/jekyll-analytics
+  revision: 40e09570dea80e3a9ecb0ad796aad1c434ff067c
+  ref: 40e09570dea80e3a9ecb0ad796aad1c434ff067c
+  specs:
+    jekyll-analytics (0.1.12)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -297,6 +304,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  jekyll-analytics (~> 0.1)!
   jekyll-asciidoc (~> 3.0.0)
   jekyll-compose
   jekyll-feed

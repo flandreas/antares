@@ -71,10 +71,16 @@ manual:
         url: /user-manual/english/circuits/circuit-parameters
       - title: "Oscilloscope"
         url: /user-manual/english/oscilloscope/oscilloscope
+  - title: Miscellaneous
+    children:
+      - title: "Key Bindings"
+        url: /user-manual/english/misc/key-bindings
 
 releases:
   - title: 2022
     children:
+      - title: "0.27.0"
+        url: /docs/releases/release-0.27.0
       - title: "0.26.0"
         url: /docs/releases/release-0.26.0
       - title: "0.25.0"
