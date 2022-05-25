@@ -8,7 +8,9 @@ In the chapter link:{{site.basedir}}/user-manual/english/first-steps/first-steps
 
 This chapter describes how to build a circuit that can be used as a subcircuit in other circuits.
 
-== Ports
+== Main Circuit Editor
+
+=== Ports
 
 link:{{site.basedir}}/user-manual/english/base-library/port[Ports] (inputs, outputs) are the most important components for the construction of subcircuits. They are used to transfer signals from the surrounding circuit to the subcircuit and to return signals to the surrounding circuit.
 
@@ -37,11 +39,33 @@ The basic components and subcircuits of the standard Antares library assume that
 
 This standard is problematic when signals with several bits are used, since in binary representations of these signals the least significant bit is on the right. Shift register or adder circuits then tend to require signals to flow from right to left. I do not know if there is a common solution to this conflict in the domain; if you develop your own libraries with Antares, you should start by thinking about this topic.
 
-=== Symbol editor
+== Symbol editor
 
 The symbol editor is used to design the symbol of a subcircuit. Use the following two buttons on the Antares toolbar to toggle between the circuit editor and the symbol editor
 
 image::user-manual/subcircuits/view-tools.png[View tools, 100]
+
+=== Automatic Symbol Generation
+
+If you don't need anything special in the symbol of your circuit, Antares can automatically generate a symbol for you. You can control this behaviour using the user preference menu:Preferences[Circuit,Style of generated symbols]. Choose from the following options:
+
+**None (deactivated)**:: This option doesn't do any automatic symbol generation. You will have to draw the symbol on your own.
+
+**Narrow**:: This automatically generated symbol places all input ports at the left side and all output ports at the right side of a narrow box. The name of the circuit is denoted by a label near the top of the symbol that contains an abbreviation of the circuit name, e.g. "Half Adder" gets abbreviated to "HA".
++
+image::user-manual/subcircuits/generate_narrow-symbol.png[Narrow Symbol, 300, align="center"]
+
+**Wide**:: This automatically generated symbol also places all input ports at the left side and all output ports at the right side of a narrow box. The name of the circuit is denoted by a label at the bottom of the symbol. With this option, the circuit name is not abbreviated, so the symbol tends to be wider than with option "Narrow".
++
+image::user-manual/subcircuits/generate_wide_symbol.png[Wide Symbol, 300, align="center"]
+
+If automatic symbol generation is active, Antares automatically updates the symbol whenever you make a relevant change in the main circuit, such as adding or removing ports, changing the name of ports, or changing the name of the main circuit.
+
+However, as soon as you make a manual change to the generated symbol, Antares recognizes this change and switches to "Manual Symbol" mode, ignoring thereafter any change in the main circuit that would otherwise update the symbol in "Automatic Symbol" mode. The checkbox "Symbol generated" in the symbol editor's toolbar displays the current mode.
+
+If you have manually built a symbol, or if you have manually changed an automatically generated symbol, you can use the button btn:[Generate Symbol] in the symbol editor's toolbar to re-generate the symbol.
+
+=== Manual Symbol Creation
 
 The symbol editor consists of a tree that shows the elements that can be dragged into the symbol and the large drawing area in which the symbol is drawn. Additionally, the drawing tools can be used to add graphical elements such as rectangles to the symbol.
 
