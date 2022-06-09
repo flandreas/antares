@@ -157,3 +157,18 @@ image::user-manual/circuits/save-history-sample.png[Alignment, 600, align="cente
 Select an entry in the list of old version to display a preview of that version. Click btn:[Restore] to restore the old version and make it the current version.
 
 NOTE: The save history of a circuit gets also deleted if that circuit is deleted from the project or library.
+
+== Searching in Circuits
+
+Antares allows you to search for components in a circuit that currently has the focus. If you press kbd:[ALT]+kbd:[CMD]+kbd:[F], Antares displays the search bar just above the circuit. Enter your search expression in the search field, and Antares will execute a search for every entered character. The components matching the search criteria get selected in the circuit.
+
+image::user-manual/circuits/search-in-circuit.png[Alignment, 700, align="center"]
+
+Components are found according to the following criteria:
+
+* If you enter a numerical value such as 42, this value is also interpreted as "ID" of the component, as displayed in the property field "ID" when selecting a component. This can be useful when you write scripts, which is when you often have to deal with IDs of components.
+* The search expression matches the type name of components, such as "Flip-Flop" or "Shifter 16 Bit".
+* The search expression matches labels of components, such as inputs, outputs, LEDs, switches, tunnels or DIP switches.
+* When a search matches an input, an output, a tunnel, a switch or a DIP switch, the wire connected to the single port of that component is also selected. This can e.g. used to get an overview of a signal line leading through tunnels.
+
+Press kbd:[ESC] to close the search bar, or click button btn:[X] at the right edge of the search bar.
