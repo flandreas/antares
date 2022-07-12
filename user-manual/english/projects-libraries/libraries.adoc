@@ -33,7 +33,18 @@ With the context menu menu:Properties[] on the library in the workbench you can 
 
 image::user-manual/projects-libraries/libraries-attributes-en.png[properties,400,align="center"]
 
-Both features are internationalized, i.e. you can enter texts in all languages supported by Antares. The description is mainly used in the "Libraries" window.
+Both texts are internationalized, i.e. you can enter texts in all languages supported by Antares. The description is mainly used in the "Libraries" window.
+
+=== Ownership
+
+The property "Owned by me" indicates whether the current project is owned by you. This is true for all libraries and projects you've created by yourself. You can only edit projects and libraries (and the circuit contained in them) that are owned by your. This prevents you from accidentally altering imported libraries and projects, since your changes would be overwritten once you re-import the library.
+
+However, there are situations where you want to change an imported library or project nonetheless. In such a case, you can select the "Owned by me" checkbox, and Antares will transfer ownership of your local copy of this library/project to you.
+
+[Note]
+====
+*Note:* If a library/project is already owned by you, the checkbox is not enabled. There is no way of "giving up" ownership of a library/project, since Antares wouldn't know to whom ownership is supposed to be transferred.
+====
 
 == Edit library
 

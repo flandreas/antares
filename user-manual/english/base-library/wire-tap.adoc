@@ -1,0 +1,43 @@
+= Wire Tap
+include::../../page-variables.txt[]
+:page-permalink: /user-manual/english/base-library/wire-tap
+
+== Appearance
+
+image:user-manual/base-library/wire-tap-sample.png[Splitter, 80]
+
+== Behaviour
+
+The wire tap component taps into a wide wire to derive multiple narrower wires. It is similar to the splitter and concentrator components, but these tend to become very large when deriving individual bits from a large bus. Use wire taps if you want to derive only a few bits from a wide wire.
+
+The wire tap component is inherently bi-directional, i.e. during simulation, it can take bits off the wide wire and also let bits flow into that wire.
+
+Like all bi-directional components, it adds a certain overhead to the simulation algorithm, so keep that in mind if performance is important.
+
+== Pins
+
+Wide side pin:: The wire tap has a single input/output pin whose bit width is determined by attribute "Wide Bit Width".
+
+Narrow side pins:: The wire taps has as many input/output pins at its narrow side indicates with attribute "Number of Outputs". Their bit width is determined by attribute "Narrow Bit Width".
+
+== Attributes
+
+Wide Bit Width:: The number of bits at the wide side of the wire tap. This must correspond with the bit width of the bus to which it is to be connected. Only editable if the wire tap is still unconnected.
+
+Narrow Bit Width:: The number of bits of all pins at the narrow side of the wire tap. All those pins have the same bit width. . Only editable if the wire tap is still unconnected.
+
+Narrow Pin Facing:: The direction into which the narrow pins are facing if the wire tap is oriented to the east.
+
+Pin Spacing:: Determines the space between the narrow pins. Choose between "Narrow" and "Wide". The wide pin spacing matches the distance of standard logic gate input pins.
+
+Number of Outputs:: The number of pins at the narrow side.
+
+Bit Position [n]:: The starting position of the bit range of the wide bus into which this narrow pin is tapping. These positions start with 0 indicating the least significant bit. The effective tapped bit range is the "Bit Position .. (Bit Position + Narrow Bit Width"). Example: Tapping into an 8 bit bus with narrow bit with 4 and bit position 2 taps the bits 2..6. +
++
+Antares enforces that tapped bit positions don't overlap, as this would lead to conflicts during simulation. Therefore, bit positions like "0..3" and "1..4" together are not allowed.
+
+[Note]
+====
+*Note:* Due to technical restrictions, Antares will reset the wire tap to standard settings when certain attributes like "Wide Bit Width" are changed.
+====
+

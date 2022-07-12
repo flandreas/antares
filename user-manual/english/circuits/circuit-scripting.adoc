@@ -50,6 +50,27 @@ O3 = EN and val == 3
 
 Note how the value of the "EN" input is used by the `and` operator to ensure that an output is only set to 1 if "EN" is also 1.
 
+=== Undefined Gate Input Behaviour
+
+Antares' system preference "Undefined Gate Input Behaviour" defines how gates behave with undefined (floating) input values. The default setting for this preference is "Read as O", meaning that a logic gate will treat an undefined signal at any of its outputs as 0.
+
+When you write execution scripts for subcircuits, this logic is not applied per default, because the script engine can't know which input pins are to be treated according to this logic, while others like data bus inputs must not.
+
+Therefore, you can use the global DSL function `gated()` to apply the logic according to "Undefined Gate Input Behaviour" when accessing an input signal in an execution script.
+
+For example, if you write a script for a "Multiplexer n Bit" subcircuit that is fully scripted, and you would like its output O to always be zero if the selection input or the selected input is undefined, you would write the script as follows:
+
+[source,javascript]
+----
+if (gated(S)) {
+  O = gated(B)
+} else {
+  O = gated(A)
+}
+----
+
+See also link:{{site.basedir}}/user-manual/english/scripting/scripting-global-functions[_Global DSL Functions_] for a description of this function.
+
 == Symbol Representation
 
 In the symbol of a link:{{site.basedir}}/user-manual/english/subcircuits/subcircuits[subcircuit] scripting can be used to change the visualization of the symbol during simulation.

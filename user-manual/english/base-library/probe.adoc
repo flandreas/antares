@@ -10,6 +10,8 @@ image:user-manual/base-library/probe-sample.png[Example Probe, 300]
 
 The probe is used to display a signal value at a specific point in the circuit. If the attribute "Logging" is set, the signal values are additionally collected in the "Log" window of Antares and displayed together with the time at which the signal occurred. This can be useful for troubleshooting, for example.
 
+The probe also supports interpreting signals as fixed point fractional (non-integer) number.
+
 == Pins
 
 Input:: The probe has a single input that accepts the signal to be displayed. The bit width is determined by the attribute "Bit Width".
@@ -24,8 +26,12 @@ Orientation:: The direction in which the probe points.
 
 Bit Width:: The bit width of the input (and output, if any).
 
-Representation:: The manner in which signal value is represented. Binary and hexadecimal representation are available.
+Representation:: The manner in which signal value is represented. If "Fixed Point" is selected, you can use the additional attributes "Number of fraction bits" and "Signed Fixed Point" to specify how the current signal is displayed as decimal fixed point number.
 
 Has Output:: If this attribute is set, the probe has an additional output opposite the input.
 
 Logging:: If this attribute is set, changed signal values are collected and displayed in the "Log" view of Antares.
+
+Number of fraction bits:: The number of bits after the decimal point. Only available for "Representation" "Fixed Point".
+
+Signed Fixed Point:: If set, the signal is interpreted as signed fixed point number. The number is negative if the most significant bit set.
