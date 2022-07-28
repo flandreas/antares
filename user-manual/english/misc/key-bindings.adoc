@@ -44,12 +44,14 @@ include::../../page-variables.txt[]
 | Select All | kbd:[CMD]+kbd:[A] | kbd:[CTRL]+kbd:[A]
 | Select Next | kbd:[CMD]+kbd:[ARROW RIGHT] | kbd:[CTRL]+kbd:[ARROW RIGHT]
 | Select Previous | kbd:[CMD]+kbd:[ARROW LEFT] | kbd:[CTRL]+kbd:[ARROW LEFT]
+| Expand/reduce selection| kbd:[SHIFT] + click | kbd:[SHIFT] + click
 | Move | kbd:[ARROW L/R/U/D] | kbd:[ARROW L/R/U/D]
 | Orthogonal mouse drag | kbd:[SHIFT] | kbd:[SHIFT]
 | Omit Snap during mouse drag | kbd:[ALT] | kbd:[ALT]
 3+|*Wires*
 | Start wire with intermediate points | kbd:[ALT] | kbd:[ALT]
 | Reconnect wire | kbd:[ALT] | kbd:[ALT]
+| Select all wire parts | kbd:[CMD] + click | kbd:[CMD] + click
 |===
 
 == Simulation Mode

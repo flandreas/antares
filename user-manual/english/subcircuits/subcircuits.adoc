@@ -96,6 +96,12 @@ Label Position:: This attribute controls whether and where the pin name is displ
 **Externally**: The name is displayed outside the symbol, i.e. as a slightly smaller text above the connecting wire. +
 **Hide**: The name is not displayed.
 
+Large Label Distance:: Only editable for "Label Position" "Externally". Increases the distance between the label and its origin point. Useful when placing pins at non-orthogonal symbol borders.
+
+Label Orientation:: Only available for "Label Position" "Internally". Determines how internal labels are oriented. +
+**Horizontal (Default)**: The internal label is always horizontal, independent of the pin's orientation. +
+**Aligned with pin**: The internal label is vertical if the pin's orientation is "North" or "South", and horizontal if the pin's orientation is "West" or "East".
+
 Show Bit Width:: Pins with a bit width greater than 1 are by default a small annotation that shows the number of bits of the pin. This attribute can be used to hide this annotation.
 
 Logic:: Only available for inputs. Controls the logic annotation of this pin. With the value "Negative", a small circle is displayed outside the symbol for this pin.

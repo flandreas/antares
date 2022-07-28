@@ -1,0 +1,125 @@
+= Preferences
+include::../../page-variables.txt[]
+:page-permalink: /user-manual/english/misc/preferences
+
+Use menu menu:File[Preferences...] (or menu:Antares[Preferences...] on macOS) to display the preferences window.
+
+Select an entry of the tree in window's left part to display the preferences of a particular section. Once you've changed any of the preferences values, press button btn:[Apply] to apply your changes to Antares. If you press btn:[Close] without applying your changes, they wont become effective.
+
+Some of the preferences can't be made effective without restarting the application. Antares will show a dialog if that's the case.
+
+== General
+
+Language:: The language in which texts of the user interface are displayed. Currently only English and German supported.
+
+Log Level:: Determines the amount of log file output being produced. "Error" produces the least amount of log output, while "Trace" produces a lot of output and should normally only be used by developers.
+
+Show tips for beginners:: If this option is enabled, Antares shows certain tooltips that should help beginners to familiarize with Antares' functionality. More experienced users can disable this option.
+
+Show unexpected errors:: If this option is enabled, Antares shows an error dialog whenever an unexpected situation in the code arises. You can help supporting the project by following the description shown in the dialog to report this situation to the development team.
+
+Data location:: Only relevant for the upcoming web version of Antares. Determines where Antares stores a user's projects and libraries.
+
+Server URL:: Only relevant for the upcoming web version of Antares. Specifies the base URL of the Antares REST API.
+
+== Rendering
+
+Theme:: The theme used for rendering the entire UI. The most important ones are "Winter", the standard light theme with white and blue coloring, and "Darcula", a dark theme.
+
+Shadow:: If this option is enabled, circuit components like gates or switches are displayed with a drop shadow.
+
+Shadow distance:: The number of pixels the shadow is placed apart from the origin component. Only effective if "Shadow" is enabled.
+
+Fill basic components:: If enabled, basic components like gates or switches are filled with the theme's default color for filling content. Because sub circuit symbols are always filled, this option can help to visually distinguish between basic, built in components and subcircuit symbols. However, some basic components like LEDs are also always filled due to their nature.
+
+== View
+
+Zoom step:: The increment or decrement of the zoom factor when using menu:View[Zoom In] or menu:View[Zoom Out].
+
+Zoom step (mousse wheel):: The increment or decrement of the zoom factor when zooming with the mouse wheel.
+
+Pan step (mouse):: The amount of view displacement when panning with the mouse (drag with left mouse button pressed)
+
+Default zoom factor:: The zoom factor applied when executing action menu:View[Zoom Normal].
+
+Minimum zoom factor:: The minimum zoom factor.
+
+Maximum zoom factor:: The maximum zoom factor.
+
+Tooltip delay (ms):: The time in milliseconds Antares waits before displaying a tooltip after the mouse stopped moving over a component.
+
+Zoom factor in symbol editor:: The initial zoom factor used when switching to the symbol editor.
+
+=== Navigation
+
+Use animation when immerging into subcircuits:: If set, Antares plays an animation when you double click on a subcircuit symbol to immerge into it's inner circuit.
+
+Switch mode using zoom factor:: If set, you can switch between the the circuit editor and the symbol editor by zooming out and zooming in with large factors.
+
+== Simulation
+
+Max. number of collected issues:: The maximum number of issues collected during a simulation run and displayed in the "Issues" tab.
+
+Allowed net contention duration (ns):: The time in nanoseconds during which net contention (i.e. conflicting signals on a net) are allowed without generating a simulation issue. The default is 20.
+
+== Editor
+
+Grid distance:: The distance between grid snap points in model coordinate space. The default is 7. This value should normally not be changed, because the geometry of many components is aligned with this value, such as the distance between logic gate pins.
+
+Grid dot step:: The number of "Grid distance" units between two grid dots (or grid lines, depending on "Grid rendering"). The default value is 2, which results in a distance of 14 between two grid dots if "Grid Distance" is 7.
+
+Minimum grid dot distance:: The minimum distance between two grid dots (or grid lines, depending on "Grid rendering") in view coordinate space. Below this value, the grid is not drawn any more, which avoids drawing grid that are too dense and therefore useless.
+
+Number of undo per Snapshot:: The undo system uses snapshots (copies of the circuit) from which recorded actions are replayed when the user requests undoing or redoing them. This value determines how many actions are recorded before a new snapshot is created. Smaller values result in better performance, but more memory consumption, larger values may lead to worse performance. The default value is 10.
+
+Save history:: If enabled, Antares saves a copy of the previous version whenever a circuit is saved, which allows you to view the save history using menu:Popup[Show History..] and to restore old versions of a circuit.
+
+== Oscilloscope
+
+Max. number of signal values:: The maximum number of signal values a row in the oscilloscope can store and display. If more signals arrive, the oldest ones are deleted.
+
+Individual probe colors:: If set, the rows of an oscilloscope and their corresponding probe components are drawn in different, system defined colors.
+
+Fill signal curve:: If set, signal curves in oscilloscope rows are filled with a fill color.
+
+== Circuit
+
+Gate style:: The style in which logic gates are drawn. Choose between ANSI/IEEE (rounded symbols) and IEC (rectangular symbols) style.
+
+Style of generated symbols:: Determines whether and how Antares automatically generates symbols for your custom circuit.
+- **None (deactivated)**: Antares doesn't generate symbols. You will have to draw them on your own using the symbol editor.
+- **Narrow**: Antares generates narrow symbols that contain an abbreviation of the circuit name as label, as well as input and output pins.
+- **Wide**: Antares generates wide symbols that contain the entire circuit name as label, as well as input and output pins.
+
+Undefined gate input behaviour:: Determines how Antares behaves if gates have undefined signals at their input pins during simulation.
+- **Read as 0**: Undefined signals are treated as if they were 0 (zero)
+- **Read as 1**: Undefined signals are treated as if they were 1
+- **Read as random value**: Undefined signal are randomly read as either 0 or 1.
+
+Data flow display in AND gates:: If set, the link:{{site.basedir}}/user-manual/english/base-library/and["Data Path"] feature for AND gates is generally enabled. Disable this option if you don't like that feature.
+
+Light color:: The default light color of light-emitting components like LEDs. Applied when such components are added to a circuit.
+
+Signal notation:: Determines how signals are annotated to distinguish between different signal representations like "Binary" or "Hexadecimal".
+- **Prefix**: Annotated with a prefix, e.g. "0x10" for hexadecimal 16.
+- **Subscript**: Annotated with a subscript, e.g. "10&#x2081;&#x2086;"
+- **Suffix**: Annotated with a suffix, e.g. "10h"
+- **Suffix (Uppercase)**: Annotated with an uppercase suffix, e.g. "11H"
+
+Tunnel symbol:: Determines the style in which link:{{site.basedir}}/user-manual/english/base-library/tunnel["Tunnel symbols"] are drawn.
+
+Transistor symbol:: Determines the style in which link:{{site.basedir}}/user-manual/english/base-library/transistor["Transistor symbols"] are drawn.
+
+Transistor with circle:: If set, transistors are drawn with a circle around the three pins.
+
+Wide bus stroke:: If set, wires with a bit width larger than 1 are drawn with a wider stroke.
+
+Switch propagation delay (ns):: The propagation delay in nanoseconds used for switch-like components like switch or DIP switch as default propagation delay. Default value is 1'000.
+
+=== Expressions
+
+Notation:: The default notation for boolean expression used when Antares generates them.
+
+Omit AND for single character variable names:: If set, Antares omits "AND" operators when generating terms in boolean expressions whose variable names consist only of a single character, as in `AB or CD`.
+
+Put AND terms in parenthesis:: If set, Antares puts AND terms in generated boolean expressions in parenthesis, as in `(AB) or (CD)` to explicitly denote operator precedence.

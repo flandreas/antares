@@ -73,6 +73,8 @@ manual:
         url: /user-manual/english/oscilloscope/oscilloscope
   - title: Miscellaneous
     children:
+      - title: "Preferences"
+        url: /user-manual/english/misc/preferences
       - title: "Key Bindings"
         url: /user-manual/english/misc/key-bindings
 
