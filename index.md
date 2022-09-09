@@ -7,8 +7,10 @@ header:
       url: "/docs/quick-start"
 excerpt: >
   A free, powerful platform for designing, simulating and explaining digital circuits.<br />
-  <small><a href="docs/releases/release-0.31.0">Latest release 0.31.0</a></small><br />
+  <small><a href="docs/releases/release-1.0.0">Latest release 1.0.0</a></small><br />
 description: "digital circuit simulator simulation education"
+intro:
+  - excerpt: We are an small, independent team with a passion for software development and for explaining how complex systems work.<br><br>You can contact us on <img src="/assets/images/antares-email.png" style="width:250px"> or by creating an issue or starting a discussion on our <a href="https://github.com/flandreas/antares">GitHub project</a>.
 feature_row:
   - image_path: /assets/images/splash-button-design.svg
     title: "Design"
@@ -49,3 +51,5 @@ feature_row:
 {% include figure image_path="/assets/images/homepage-circuit.gif" %}
 
 {% include feature_row %}
+
+{% include feature_row id="intro" type="center" %}

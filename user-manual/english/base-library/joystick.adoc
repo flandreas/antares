@@ -11,6 +11,8 @@ image:user-manual/base-library/joystick-sample.png[Example 7-Segment, 300]
 The user can drag a knob within a circular or rectangular area, and the outputs update to indicate
 the knob's current x- and y-coordinates.
 
+Dragging can be done with the mouse by clicking within the joystick and dragging while holding the left mouse button, or with the keyboard left/right/up/down arrow keys if the joystick has the input focus.
+
 == Pins
 
 X:: Indicates the knob's x-coordinate, to be interpreted as an unsigned integer whose value will never be 0. A value of 1 represents the far left, and the maximum value for the bit width indicates the far right. When the knob is at rest (in the center), the value has the pattern 10..00.

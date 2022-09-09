@@ -76,6 +76,7 @@ Color:: Normally, the color in which a component is drawn is determined by its s
 * image:user-manual/base-library/led.svg[LED] link:{{site.basedir}}/user-manual/english/base-library/led[LED]
 * image:user-manual/base-library/rgb-led.svg[RGB-LED] link:{{site.basedir}}/user-manual/english/base-library/rgb-led[RGB-LED]
 * image:user-manual/base-library/7segment.svg[7-Segment-Display] link:{{site.basedir}}/user-manual/english/base-library/7segment[7-Segment-Display]
+* image:user-manual/base-library/16segment.svg[16-Segment-Display] link:{{site.basedir}}/user-manual/english/base-library/16segment[16-Segment-Display]
 * image:user-manual/base-library/led-matrix.svg[LED-Matrix] link:{{site.basedir}}/user-manual/english/base-library/led-matrix[LED-Matrix]
 * image:user-manual/base-library/terminal.svg[Terminal] link:{{site.basedir}}/user-manual/english/base-library/terminal[Terminal]
 * image:user-manual/base-library/buzzer.svg[Buzzer] link:{{site.basedir}}/user-manual/english/base-library/buzzer[Buzzer]
@@ -118,6 +119,7 @@ Color:: Normally, the color in which a component is drawn is determined by its s
 * BCD-DEC Decoder (Neg)
 * 4-2 Priority Encoder
 * 8-3 Priority Encoder
+* ASCII-16Seg Decoder
 
 === FLip-Flops
 

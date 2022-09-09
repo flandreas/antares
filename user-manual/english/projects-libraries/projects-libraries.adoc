@@ -24,13 +24,13 @@ In the chapter link:{{site.basedir}}/user-manual/english/projects-libraries/libr
 
 == Projects
 
-Projects combine circuits that you need for a specific application and that together fulfill a particular function. Projects are always based on exactly one library, which you select when you create the project. The example project "Microcomputer (Tanenbaum)" is based on the standard library and contains circuits like "CPU", "Address Decoder" and "ALU 16-Bit".
+Projects combine circuits that you need for a specific application and that together fulfill a particular function. Projects can import an arbitrary number of libraries from which it can consume circuits. The example project "Microcomputer (Tanenbaum)" is based on the standard library and contains circuits like "CPU", "Address Decoder" and "ALU 16-Bit".
 
 In the chapter link:{{site.basedir}}/user-manual/english/projects-libraries/projects[Projects] you will learn how to work with projects and create your own projects.
 
 == Workbench
 
-The link:{{site.basedir}}/user-manual/english/projects-libraries/workbench[Workbench] is the part of the Antares user interface that displays the open project and the library it's based on, and allows you to use its circuits and create new ones.
+The link:{{site.basedir}}/user-manual/english/projects-libraries/workbench[Workbench] is the part of the Antares user interface that displays the open project and the libraries it is based on, and allows you to use its circuits and create new ones.
 
 == Storage
 

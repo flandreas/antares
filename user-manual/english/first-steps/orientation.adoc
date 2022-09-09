@@ -8,7 +8,7 @@ image::user-manual/first-steps/orientation-en.png[Orientation, 800, align="cente
 
 In the following, the most important areas of the Antares window are briefly explained. The other areas are used for advanced topics and are explained later in this manual.
 
-Workbench:: The Workbench contains the currently open project as well as the library of components that can be added to the currently open circuit. Only one project and one library can be open at a time. When you open Antares for the first time, a project named "My first project" is automatically created and opened, and an empty circuit named "New circuit" is created in this project.
+Workbench:: The Workbench contains the currently open project as well as the libraries of components that can be added to the currently open circuit. Only one project or one main library can be open at a time. When you open Antares for the first time, a project named "My first project" is automatically created and opened, and an empty circuit named "New circuit" is created in this project.
 
 Preview:: The preview shows the symbol, the name and a short description of the component selected in the workbench. As an example, open the "Logical Gates" directory in the "Standard" library and select the component "AND": The preview shows the circuit symbol of the AND gate and the description "The output is only 1 if all inputs are 1". This helps you to find the right components when creating circuits. You can also search for components by entering a search term in the "Search" field at the top of the workbench.
 

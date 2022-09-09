@@ -12,8 +12,7 @@ image::user-manual/projects-libraries/projects-sample-en.png[Projects,500,align=
 
 btn:[Open]:: Opens the selected project. If one of the circuits of the project is marked with "Open on load", this circuit is opened automatically.
 
-btn:[New]:: Creates a new project and opens it. When doing so, Antares ensures that the name of the new project (in the current language) does not yet exist. By default, the new project contains a circuit named "New circuit". The new project is based on the library that is open in the workbench at this time.
-NOTE: In a future version of Antares, you will be able to select the library on which the new project will be based when you create the project.
+btn:[New]:: Creates a new project and opens it. When doing so, Antares ensures that the name of the new project (in the current language) does not yet exist. By default, the new project contains a circuit named "New circuit". The new project will add (be based on) the library you've chosen in "Added Library".
 
 btn:[Delete]:: Deletes the selected project. This action cannot be undone.
 

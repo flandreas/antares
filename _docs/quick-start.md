@@ -7,24 +7,27 @@ header:
 
 ## Download
 
-[Windows](https://github.com/flandreas/antares/releases/download/v0.31.0/Antares-0.31.0.msi){: .btn .btn--success .btn--large}
-[macOS](https://github.com/flandreas/antares/releases/download/v0.31.0/Antares-0.31.0.pkg){: .btn .btn--success .btn--large}
+[Windows](https://github.com/flandreas/antares/releases/download/v1.0.0/Antares-1.0.0.dmg){: .btn .btn--success .btn--large}
+[macOS](https://github.com/flandreas/antares/releases/download/v1.0.0/Antares-1.0.0.pkg){: .btn .btn--success .btn--large}
+[Linux](https://github.com/flandreas/antares/releases/download/v1.0.0/antares-1.0.0-1.x86_64.rpm){: .btn .btn--success .btn--large}
 
 ## Installation
 
 ### macOS
 
-The Antares macOS installer is not yet signed with an Apple developer certificate (see [Apple User Guide page](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac)). If you trust me, you can install Antares using the following procedure:
-
-1. In the Finder on your Mac, locate the downloaded installer.
-2. Control-click the installer, then choose "Open" from the shortcut menu.
-3. Click "Open".
-
-If you don't trust me (which is perfectly fine), you should not install Antares this way and wait until I have an Apple developer certificate to sign the installer, or wait until the [web version](/docs/web) of Antares is available.
+Open the image and drag the Antares icon into the "Applications" folder.
 
 ### Windows
 
 Follow the instructions of the installer application. After successful installation, you'll find an alias icon on your Windows desktop you can use to start Antares.
+
+### Linux
+
+Download the .rmp package and install it with
+
+`sudo alien -i <name of package>.rpm`
+
+Tested on Ubuntu 20.
 
 ## Usage
 

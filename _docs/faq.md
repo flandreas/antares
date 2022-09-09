@@ -6,9 +6,7 @@ header:
   show_overlay_excerpt: false
 ---
 
-### How do I create a wire junction?
-
-Move the mouse over an existing wire, press ALT and the left mouse button, and drag the mouse to create the new wire.
+## General
 
 ### How do I zoom the view?
 
@@ -18,9 +16,36 @@ Scroll with the mouse wheel.
 
 Press/hold middle mouse button and move the mouse.
 
+## Editing
+
+### How do I create a wire junction?
+
+Move the mouse over an existing wire, press ALT and the left mouse button, and drag the mouse to create the new wire.
+
 ### How to I create non-orthogonal wires?
 
 First create an orthogonal wire. Then change the wire's "Layout" property to "None". Now you can select the wire and move the line segment's end point.
+
+### How do I choose the circuit to be automatically opened when I open a project?
+
+Open the project, select the circuit in the explorer's tree, right-click to open the
+popup menu, and select "Open when loading".
+
+### Why are explorer popup menu items sometimes disabled?
+
+Certain operations on top level (e.g. "Duplicate..") can only be executed if there are no unsaved circuit changes. Save your circuit changes and then perform the operation.
+
+### Where are the 74xx DIL packages?
+
+A library containing some 74xx DIL packages can be downloaded from the [GitHub assets project](https://github.com/flandreas/antares-assets). Go to `libraries/SN74xx`, download `SN74xx.zip`, and import it into your local Antares installation.
+
+## Simulation
+
+### Why is the simulation so slow?
+
+There are various settings that influcence the simulation speed. For maximum speed, make sure that
+- Menu "Simulation" -> "Deep Simulation" is NOT selected
+- The "Simulation Speed" slider is set at the right end of the scale
 
 ### Why do I not see signal flow animations?
 
@@ -33,11 +58,6 @@ that the menu "Simulation -> Soft Breakpoints" is selected. Without that menu op
 simulation running in "Single-Step Mode" ony pauses in hard breakpoints produced by
 the "Break" component.
 
-### How do I choose the circuit to be automatically opened when I open a project?
+### Why is my custom flip-flop oscillating?
 
-Open the project, select the circuit in the explorer's tree, right-click to open the
-popup menu, and select "Open when loading".
-
-### Why are explorer popup menu items sometimes disabled?
-
-Certain operations on top level (e.g. "Duplicate..") can only be executed if there are no unsaved circuit changes. Save your circuit changes and then perform the operation.
+Simulation of sequential circuits is sensitive to logic gate's propagation delay, which is 20 ns by default. Choose either a different propagation delay for both of the gates in the flip-flop, or select menu "Simulation" -> "Noise" -> "Random noise" to let Antares vary the propagation delays randomly.

@@ -140,3 +140,13 @@ If you hover the mouse over a wire in red error state, Antares displays a toolti
 image::user-manual/simulation/signal-conflict.png[signal conflict, 700,align="center"]
 
 Note that the IDs referenced in the tooltip's origin and source designations (e.g. 2 in "to Input/Output (2)") reference model ID's of components. You see these model ID's in Antares' property panel when selecting a component in the edit mode.
+
+=== Wire Logic
+
+Starting with release 1.0, Antares supports two different types of "Wire Logic", which determine how the simulation behaves when two different signals are asserted to the same wire.
+
+* **Conflict**: This is the default value: Different values asserted to the same wire are regared as conflict. See the preceding section for a description of how Antares reacts to conflicts during simulation.
+
+* **Wired OR**: In this mode, conflicting signals are OR-ed together, allowing you to build circuits based on "Wired OR" behaviour. Every component in the circuit is regarded to be an open-collector device with an internal pull resistor. See Wikipedia's https://en.wikipedia.org/wiki/Open_collector["Open Collector"] article for more detail, or the https://de.wikipedia.org/wiki/Wired-OR-Verknüpfung["Wired OR"] article in the German Wikipedia.
+
+You can choose your preferred wire logic in a circuit's properties. When starting a simulation run, Antares uses the wire logic of the main circuit, even if subcircuits might have a different wire logic property value.

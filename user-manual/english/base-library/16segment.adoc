@@ -1,0 +1,48 @@
+= 16-Segment Display
+include::../../page-variables.txt[]
+:page-permalink: /user-manual/english/base-library/16segment
+
+== Appearance
+
+image:user-manual/base-library/16segment-sample.png[Example 16-Segment, 150]
+
+== Behaviour
+
+The 16-segment display contains 16 LEDs arranged in the form of a digit or character and one LED at the bottom right, which is used as a dot. The LEDs light up depending on the signals applied to the inputs. If a 0 is present, the LEDs are drawn in the dark representation of the selected light color. If a 1 is present, the bright representation of the light color is used.
+
+Each of the 16 bits of input "S" is mapped to an individual LED as indicated in the image below (hexadecimal numbering).
+
+image:user-manual/base-library/16segment-mapping.png[16-Segment Mapping, 150]
+
+The standard library contains an "ASCII-16 Segment Decoder" that decodes ASCII encoded characters to the corresponding 16-Segment code. It supports codes for the following ASCII characters:
+
+[cols="1,1"]
+|===
+|**ASCII Codes** | **Characters**
+|0..15 | Hexadecimal digits
+|34,36,37,39,40,41,42,43,44,45,47 | Special characters
+|48..57 | Decimal digits
+|61 | Special character
+|65..90 | Uppercase letters
+|91,92,93,95 | Special characters
+|97..122 | Lowercase letters displayed as uppercase
+|123..125 | Special characters
+|===
+
+== Pins
+
+p:: Controls the decimal point
+
+s:: Accepts an 16-bit value whose bits control the 16 segments of the display.
+
+== Attributes
+
+LED color:: The color of the LEDs. The menu offers all light colors implemented in Antares for selection.
+
+Size:: The 16-segment display can be displayed in the three sizes "large", "medium" and "small".
+
+Border:: If not set, the display is drawn without a border, which can be useful for building areas of multiple displays.
+
+
+
+

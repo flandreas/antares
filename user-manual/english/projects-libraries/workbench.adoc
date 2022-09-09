@@ -12,7 +12,9 @@ This chapter describes the properties and possibilities of the workbench, which 
 
 == Structure
 
-The contents of the workbench are displayed as a tree whose topmost nodes represent the project (if present) and the library being used. The leaves of the tree are either basic components that are built-in in Antares or circuits that can be opened. You can also create directories to group circuits.
+The workbench can either be empty, contain a single project, or a single main library. Both projects and libraries can be based on many other libraries. Those libraries are called "Added libraries" or sometimes also "imported libraries". Added libraries are denoted by a "Library" icon containing a small arrow.
+
+The contents of the workbench are displayed as a tree whose topmost nodes represent the project (if present) and the libraries being used. The leaves of the tree are either basic components that are built-in in Antares or circuits that can be opened. You can also create directories to group circuits.
 
 Depending on their type, the individual workbench elements offer a menu with actions that can be executed by selecting the element and then clicking the right mouse button. Important actions can also be accessed via the main menu of Antares.
 
@@ -20,21 +22,30 @@ On each workbench element that can contain child elements (project, library, dir
 
 == Opening a project/library
 
-A project is opened via the main menu menu:File[Projects] and subsequent selection in the dialog that appears. In the workbench, not only the selected project is opened, but also the library that uses the project.
+A project is opened via the main menu menu:File[Projects] and subsequent selection in the dialog that appears. In the workbench, not only the selected project is opened, but also the libraries the project/library uses.
 
-If a project consists of several circuits, one of these circuits is often the "main circuit" or "top circuit", which contains the other circuits as subcircuits. In order for Antares to automatically open this main circuit when the project is opened, this main circuit can be marked with the popup menu menu:Open when Loading[]. The name of this circuit is displayed [.underline]#underlined# in the workbench tree .
+If a project consists of several circuits, one of these circuits is often the "main circuit" or "top circuit", which contains the other circuits as subcircuits. In order for Antares to automatically open this main circuit when the project is opened, this main circuit can be marked with the popup menu menu:Open when Loading[]. The name of this circuit is displayed [.underline]#underlined# in the workbench tree.
 
-A library can be opened by selecting the main menu menu:File[Libraries] and then selecting it in the displayed dialog. Since libraries cannot use other libraries, the workbench in this case only shows the open library.
+Antares remembers which project was open when you closed the application the last time, and automatically reopens this project the next time you start Antares.
 
-NOTE: It is rarely necessary to open a library manually. When you are working on a project, Antares will automatically open the library you are using. However, if you are developing a library, you can open the library directly by yourself. You can also have a test project open for the library you are using and still edit circuits in the library.
+A library can be opened by selecting the main menu menu:File[Libraries] and then selecting it in the displayed dialog. If the library uses other libraries, these other libraries are displayed with a library icon containing a small arrow.
+
+NOTE: It is rarely necessary to open a library manually. When you are working on a project, Antares will automatically open the libraries the project uses. However, if you are developing a library, you can open the library directly by yourself. You can also have a test project open for the library you are using and still edit circuits in the library.
+
+== Adding/removing a library import
+
+Projects and libraries can be based on multiple other libraries.
+
+To add a library to the list of imported libraries of the currently open main project/library, select the "Desktop" tree node and choose "Add Library.." in the popup menu.
+
+To remove a library from the list of imported libraries of the currently open main project/library, select the library to be removed and choose "Remove Library" in the popup menu.
 
 == Opening a circuit
 
-You can open a circuit of a project or a library by double-clicking on the workbench element or by selecting its pop-up menu menu:Open circuit[]. The currently open circuit is indicated by an orange background of the icon in the workbench tree.
+You can open a circuit of a project or a library by double-clicking on the workbench element or by selecting its pop-up menu menu:Open circuit[]. The currently open circuit is indicated by an orange icon in the workbench tree.
 
 If you have made a change in the previously opened circuit that you have not yet saved, Antares will ask you if you want to save these changes.
 
-Antares remembers which circuit was open when you close the application the last time, and automatically reopens this circuit the next time you start Antares.
 
 == Searching for components
 
@@ -58,10 +69,11 @@ The newly created, empty circuit is automatically opened by Antares.
 
 == Moving components
 
-You can use drag & drop to move a component to another position within the directory, to another directory or even from a project to the library (and vice versa). Antares ensures that the following rules are followed:
+You can use drag & drop to move a component to another position within the directory, to another directory or even from a project to a library (and vice versa). Antares ensures that the following rules are followed:
 
-* A circuit cannot be moved from the project to the library if it references other circuits in the project.
-* The default Antares libraries cannot be changed.
+* A circuit cannot be moved from the project to a library if it references other circuits in the project.
+* You cannot move a circuit from a project/library to a library that is not added (be a base of) the source project/library.
+* The built-in Antares libraries cannot be changed.
 
 == Exporting/Importing circuits
 

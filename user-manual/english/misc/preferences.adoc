@@ -24,6 +24,8 @@ Server URL:: Only relevant for the upcoming web version of Antares. Specifies th
 
 == Rendering
 
+Main Font:: The font to be used for the UI elements. In the current version, circuit content still uses specific fonts which might differ from the UI font.
+
 Theme:: The theme used for rendering the entire UI. The most important ones are "Winter", the standard light theme with white and blue coloring, and "Darcula", a dark theme.
 
 Shadow:: If this option is enabled, circuit components like gates or switches are displayed with a drop shadow.
@@ -69,6 +71,10 @@ Grid distance:: The distance between grid snap points in model coordinate space.
 Grid dot step:: The number of "Grid distance" units between two grid dots (or grid lines, depending on "Grid rendering"). The default value is 2, which results in a distance of 14 between two grid dots if "Grid Distance" is 7.
 
 Minimum grid dot distance:: The minimum distance between two grid dots (or grid lines, depending on "Grid rendering") in view coordinate space. Below this value, the grid is not drawn any more, which avoids drawing grid that are too dense and therefore useless.
+
+Grid rendering:: The way the editor grid is drawn.
+- **Lines**: A vertical and horizontal line is drawn at every grid location
+- **Dots**: A dot is drawn at every grid location
 
 Number of undo per Snapshot:: The undo system uses snapshots (copies of the circuit) from which recorded actions are replayed when the user requests undoing or redoing them. This value determines how many actions are recorded before a new snapshot is created. Smaller values result in better performance, but more memory consumption, larger values may lead to worse performance. The default value is 10.
 

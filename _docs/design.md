@@ -30,6 +30,12 @@ Use the built-in symbol editor to draw custom symbols for your subcircuits.
 
 <img src="/assets/images/design/symbol-editor.png" width="150">
 
+Or you can forgo to design them and let Antares automatically generate them using two different styles. And if you like, adjust the symbol after it has been generated.
+
+| Narrow | Wide |
+| --- | ----- |
+| <img src="/assets/images/user-manual/subcircuits/generate_narrow-symbol.png" width="200"> | <img src="/assets/images/user-manual/subcircuits/generate_wide_symbol.png" width="200"> |
+
 ### IEC and ANSI gate symbols
 
 Switch between IEC and ANSI symbol style.
@@ -37,6 +43,12 @@ Switch between IEC and ANSI symbol style.
 | IEC | ANSI |
 | --- | ----- |
 | <img src="/assets/images/design/iec-symbol-style.png" width="300"> | <img src="/assets/images/design/ansi-symbol-style.png" width="300"> |
+
+### Versatile gates
+
+Use gates with up to 8 inputs and optional input negation, and even with multi-bit inputs and outputs.
+
+<img src="/assets/images/design/gate-versatility.png" width="400">
 
 ### DIL symbols
 
@@ -71,17 +83,44 @@ Combine multiple 1-bit wires to multi-bit bundles and denote bus-like wires.
 
 <img src="/assets/images/design/wire-types.png" width="350">
 
+### Various wire logic
+
+Choose whether different signals on the same wire should be considered a conflict, or
+whether they should be OR-ed together.
+
+| Conflict | Wired-OR |
+| --- | ----- |
+| <img src="/assets/images/design/wire-logic-conflict.png" width="500"> | <img src="/assets/images/design/wire-logic-or.png" width="500"> |
+
 ### Automatic wire layout
 
 Let Antares automatically re-layout your wires when you move components.
 
 <img src="/assets/images/design/wire-layout.gif" width="350">
 
+### Aligning components
+
+Let the align tool help you aligning components in complex circuits.
+
+<img src="/assets/images/design/align.gif" width="500">
+
+### Search for components in circuits
+
+Use the search bar to search for components in a circuit based on names, labels, or component types.
+
+<img src="/assets/images/user-manual/circuits/search-in-circuit.png" width="700">
+
 ### Multi-circuit desktop
 
-Open subcircuits in additional views.
+Open subcircuits in additional desktop views. Keep track of symbol-to-circuit relations by the color references created by Antares.
 
 <img src="/assets/images/design/desktop.png" width="1000">
+
+### Multi-window support
+
+Open subcircuits in separate windows to take advantage of workplaces with more than one screen when working with complex projects.
+
+<img src="/assets/images/design/multi-window.png" width="1000">
 
 ### Boolean Expressions and Circuit Synthesis
 
@@ -97,3 +136,9 @@ behaviour of your circuits. Scripts are written in a custom DSL (Domain Specific
 digital circuits.
 
 <img src="/assets/images/design/scripting.png" width="600">
+
+### Statistics
+
+Let Antares deep dive into your circuit hierarchy and count how many subcircuits of each type are used, either for "Deep" or "Flat" traversal.
+
+<img src="/assets/images/design/statistics.png" width="500">

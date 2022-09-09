@@ -51,13 +51,15 @@ Description:: This attribute is used to capture a longer description of the circ
 
 Propagation Delay:: This optional attribute can be used to specify the length of time that elapses between the processing of an input signal and the appearance of a modified output signal. It is used to control the display of the processing state of a subcircuit during link:{{site.basedir}}/user-manual/english/simulation/simulation[simulation].
 
-Start-up Duration:: The time (in ns) it takes the circuit to settle after starting the simulation. This optional attribute is used to omit signal flow animations during simulation start-up. In order to figure out the start-up duration of your circuit, activate menu menu:Simulation[Display Simulation Time in State Bar], start the simulation, and wait until the circuit has settled. Then use the value displayed at the right edge of the state bar.
+Start-up Duration:: The time (in ns) it takes the circuit to settle after starting the simulation. This optional attribute is used to omit signal flow animations and soft breakpoints during simulation start-up. In order to figure out the start-up duration of your circuit, activate menu menu:Simulation[Display Simulation Time in State Bar], start the simulation, and wait until the circuit has settled. Then use the value displayed at the right edge of the state bar.
 
 Function:: This attribute can be used to specify the script that Antares executes for this component during simulation, if the simulation is run in link:{{site.basedir}}/user-manual/english/simulation/simulation["Flat simulation"] mode. This is an advanced technique; for details on scripting, see the chapter link:{{site.basedir}}/user-manual/english/circuits/circuit-scripting["Scripting in Circuits"].
 
 Always use function:: This attributes is used to activate the "purely scripted" feature of a circuit. If the attribute is set, the script in attribute "Function" is executed even if simulation depth is "deep". This can be used to build functional components without the need to build the entire inner circuit, although you probably will add some inputs and outputs to give the component an interface to the surrounding circuit.
 
 Default light color:: The light color that all components in this circuit should have by default (LED, 7-segment display, terminal). If you change the value of this attribute while the circuit already contains lit components, Antares will ask you if the new light color should be applied to these components. With this option, for example, all red LEDs and 7-segment displays can be changed to yellow with a single action.
+
+Wire Logic:: Determines the logic to be applied when asserting different values to the same wire. Choose between the standard "Conflict" mode, which regards differing values as conflicts, or the "Wired OR" mode. See the section "Wire Logic" in the user manual's link:{{site.basedir}}/user-manual/english/simulation/simulation["Simulation"] chapter for more information.
 
 == Adding components
 

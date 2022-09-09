@@ -16,7 +16,7 @@ After selecting a library, the description of the library is displayed below the
 
 btn:[Open]:: Opens the selected library. This action is useful if you want to create a new project based on the selected library afterwards.
 
-btn:[New]:: Creates a new library. Besides the name of the new library, an already existing library can be used as a template. All elements of the template are copied into the new library; the new library will no longer have any connection to the template afterwards. Choose the base library as template if you want to create a new, rich library from scratch. You can later add additional elements from other libraries to your new library using the menu:Edit Library[] action (see below).
+btn:[New]:: Creates a new library. Besides the name of the new library, an already existing library can be selected to be added (to be a base of) the new library.
 
 btn:[Delete]:: Deletes the selected library. This action cannot be undone. If you have projects based on the deleted library, these projects will no longer be usable.
 
