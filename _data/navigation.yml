@@ -189,3 +189,5 @@ examples:
         url: /docs/examples/bidirectional-splitter/bidirectional-splitter
       - title: "Sine Wave"
         url: /docs/examples/sine-wave/sine-wave
+      - title: "But how do it know?"
+        url: /docs/examples/but-how-do-it-know/description
