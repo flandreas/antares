@@ -35,4 +35,4 @@ If your are new to Antares, you might want to check out the [First Steps](/user-
 
 ## Bugs or missing features?
 
-If you find any bugs or are missing a feature, you are very welcome to open an issue in the issue tracker of the [GitHub project](https://github.com/flandreas/antares).
+If you find any bugs or are missing a feature, we'd like to hear from you! The guidelines on ["Report Bugs and Feature Requests"](/docs/issues/) explain how you can contact us. Your collaboration in making Antares better is truly appreciated.
