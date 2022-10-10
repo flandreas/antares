@@ -42,6 +42,7 @@ Color:: Normally, the color in which a component is drawn is determined by its s
 * image:user-manual/base-library/real-switch.svg[Real Switch] link:{{site.basedir}}/user-manual/english/base-library/real-switch[Real Switch]
 * image:user-manual/base-library/double-throw-switch.svg[Double-Throw Switch] link:{{site.basedir}}/user-manual/english/base-library/double-throw-switch[Double-Throw Switch]
 * image:user-manual/base-library/wire-tap.svg[Wire Tap] link:{{site.basedir}}/user-manual/english/base-library/wire-tap[Wire Tap]
+* image:user-manual/base-library/power-on-reset.svg[Power-On Reset] link:{{site.basedir}}/user-manual/english/base-library/powerOn-reset[Power-On Reset]
 * Bus Transceiver n Bit
 * Bus Transceiver 4 Bit
 * Bus Transceiver 8 Bit

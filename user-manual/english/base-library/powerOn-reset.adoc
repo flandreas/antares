@@ -1,0 +1,25 @@
+= Power-On Reset
+include::../../page-variables.txt[]
+:page-permalink: /user-manual/english/base-library/powerOn-Reset
+
+== Appearance
+
+image:user-manual/base-library/powerOnReset-sample.png[Example Power-On Reset, 250]
+
+== Behavior
+
+The "Power-On Reset" component can be used to bring a circuit into a defined state when the simulation gets started, i.e. when the circuit is "powered on".
+
+When the simulation is started, the single output of the component immediately goes to 1 and stays there as long as its "Propagation Delay" property indicated. After that, the output goes back to 0 and stays there during the entire simulation.
+
+Using the property "Logic" can invert this behaviour, such that the output goes to 0 and then back to 1 for the entire simulation.
+
+== Pins
+
+Output:: The component has a single output producing the reset signal.
+
+== Attributes
+
+Propagation Delay:: Determines how long the output produces the reset signal before it goes back to its idle value.
+
+Logic:: Determines whether the reset signal is 1 (with logic "Positive") or 0 (with logic "Negative").

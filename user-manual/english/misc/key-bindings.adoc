@@ -51,7 +51,7 @@ include::../../page-variables.txt[]
 3+|*Wires*
 | Start wire with intermediate points | kbd:[ALT] | kbd:[ALT]
 | Reconnect wire | kbd:[ALT] | kbd:[ALT]
-| Select all wire parts | kbd:[CMD] + click | kbd:[CMD] + click
+| Select all wire parts | kbd:[CMD] + click | kbd:[CTRL] + click
 |===
 
 == Simulation Mode
@@ -64,4 +64,5 @@ include::../../page-variables.txt[]
 | Move focus in inputs/outputs | kbd:[ARROW L/R] | kbd:[ARROW L/R]
 | Toggle focused switch | kbd:[ENTER] | kbd:[ENTER]
 | Toggle focused input digits | kbd:[ENTER] | kbd:[ENTER]
+| Enable Soft Breakpoints | kbd:[CMD] + kbd:[B] | kbd:[CTRL] + kbd:[B]
 |===

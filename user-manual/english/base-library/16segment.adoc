@@ -39,6 +39,8 @@ s:: Accepts an 16-bit value whose bits control the 16 segments of the display.
 
 LED color:: The color of the LEDs. The menu offers all light colors implemented in Antares for selection.
 
+Active:: "Positive" turns LEDs on with 1, "Negative" with 0.
+
 Size:: The 16-segment display can be displayed in the three sizes "large", "medium" and "small".
 
 Border:: If not set, the display is drawn without a border, which can be useful for building areas of multiple displays.
