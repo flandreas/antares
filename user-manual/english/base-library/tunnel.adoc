@@ -34,7 +34,7 @@ Input:: The input of the tunnel component is bidirectional, i.e. it is both inpu
 
 Orientation:: The direction in which the component's symbol is pointing.
 
-Name:: The name of the tunnel into which this component is sending its signal. The name is displayed on the opposite side of the pin.
+Name:: The name of the tunnel into which this component is sending its signal. The name is displayed on the opposite side of the pin. If you change the name, and the old name is also used for other tunnels, Antares will ask you it you want to change the name of those other tunnels as well.
 
 Bit Width:: The number of bits that can be transmitted simultaneously through this tunnel.
 

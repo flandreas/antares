@@ -36,13 +36,15 @@ Or you can forgo to design them and let Antares automatically generate them usin
 | --- | ----- |
 | <img src="/assets/images/user-manual/subcircuits/generate_narrow-symbol.png" width="200"> | <img src="/assets/images/user-manual/subcircuits/generate_wide_symbol.png" width="200"> |
 
-### IEC and ANSI gate symbols
+### Various gate symbol styles
 
-Switch between IEC and ANSI symbol style.
+Choose your preferred gate symbol style.
 
-| IEC | ANSI |
+| Style | Example |
 | --- | ----- |
-| <img src="/assets/images/design/iec-symbol-style.png" width="300"> | <img src="/assets/images/design/ansi-symbol-style.png" width="300"> |
+|IEC | <img src="/assets/images/design/iec-symbol-style.png" width="300"> |
+|ANSI | <img src="/assets/images/design/ansi-symbol-style.png" width="300"> |
+|Verbose | <img src="/assets/images/design/verbose-symbol-style.png" width="300">  |
 
 ### Versatile gates
 

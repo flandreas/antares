@@ -90,7 +90,7 @@ Fill signal curve:: If set, signal curves in oscilloscope rows are filled with a
 
 == Circuit
 
-Gate style:: The style in which logic gates are drawn. Choose between ANSI/IEEE (rounded symbols) and IEC (rectangular symbols) style.
+Gate style:: The style in which logic gates are drawn. Choose between "ANSI/IEEE" (rounded symbols), "IEC" (rectangular symbols), and "Verbose" (rectangular with verbose label) style.
 
 Style of generated symbols:: Determines whether and how Antares automatically generates symbols for your custom circuit.
 - **None (deactivated)**: Antares doesn't generate symbols. You will have to draw them on your own using the symbol editor.

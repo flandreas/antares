@@ -90,3 +90,4 @@ The ultimate goal of Antares is to facilitate interactive textbooks with active 
 - [AdoptOpenJDK](https://adoptopenjdk.net)
 - [FlatLaf Look and Feel](https://www.formdev.com/flatlaf/)
 - Icons by Janis
+- Ping service and upcoming web app by Noah

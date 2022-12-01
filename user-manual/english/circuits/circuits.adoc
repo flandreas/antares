@@ -41,6 +41,14 @@ menu:View[Center]:: Centers the display without changing the zoom factor.
 
 menu:View[Fit]:: Centers the display and sets the zoom factor so that the circuit completely fills the entire main view.
 
+== Changing component attributes
+
+If you select a component in a circuit, the attributes of the components are offered for editing in the attributes view.
+
+You can also select multiple components and edit their attributes in a single operation, e.g. to change the color of multiple LEDs to the same value. Antares will try to find the "largest common denominator" of the types of all selected components to determine the set of attributes. Since that operation is costly, Antares limits the number of components to edit in a single operation to 8.
+
+NOTE: When selecting multiple components, the attributes window will display the attributes values of the last component in the selection. This approach was easier to implement than supporting a set of attributes editors that could display something like "<Various>" if the attribute's value differs among the selected components.
+
 == Changing circuit attributes
 
 If you click with the mouse on the background of the circuit in the main window, the attributes of the circuit are offered for editing in the attributes view.

@@ -60,4 +60,6 @@ the "Break" component.
 
 ### Why is my custom flip-flop oscillating?
 
-Simulation of sequential circuits is sensitive to logic gate's propagation delay, which is 20 ns by default. Choose either a different propagation delay for both of the gates in the flip-flop, or select menu "Simulation" -> "Noise" -> "Random noise" to let Antares vary the propagation delays randomly.
+Simulation of sequential circuits is sensitive to logic gate's propagation delay, which is 20 ns by default. To avoid oscillation, you have several possibilities:
+- Choose a different propagation delay for both of the gates in the flip-flop
+- Select menu "Simulation" -> "Noise" -> "Random noise" to let Antares vary the propagation delays randomly

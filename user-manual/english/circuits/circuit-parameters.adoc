@@ -51,11 +51,13 @@ When your done, click "Save" to save your parameter definition to the circuit. S
 
 Now that your multiplier circuit is parametrized, you want to use the bit width parameter as bit width of your inputs and output elements. Input "A" and "B" should have the bit width of the multiplier circuit (e.g. 8), where as output "O" should have a bit width twice as wide as the inputs (e.g. 16)
 
-Select the circuit input "A" and open the dropdown list of its property "Bit Width". Select the entry "Expression" and the click on the button at its right side to open the expression editor. By entering `BW` as bit width expression, you're saying that you want the bit width of circuit input "A" to be the same as the circuit's bit width.
+Select the circuit input "A" and click on the "Bit Width" property in the property window. Click on the "Edit Script" button at the left side of the property field to open the expression editor. By entering `BW` as bit width expression, you're saying that you want the bit width of circuit input "A" to be the same as the circuit's bit width.
 
 image::user-manual/circuits/parameters-expression.png[Expression, 600,align="center"]
 
 After confirmation with "OK", you will notice that the current bit width of circuit input "A" has changed to 8. This is because the multiplier circuit is currently the top-level circuit, which is why the default value of the circuit parameter gets applied to every parametrized circuit component as current value.
+
+TIP: You can also directly enter "=BW" in the text field of the property "Bit Width" to avoid opening the script dialog. Don't forget to start your expression with a "=" character to tell Antares that you enter an expression instead of a constant bit width.
 
 Do the same for circuit input "B". Do the same also for circuit output "O", except that this time you specify `BW * 2` as expression.
 
