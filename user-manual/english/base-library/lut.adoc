@@ -10,7 +10,7 @@ image:user-manual/base-library/lut-sample.png[Example Lookup Table, 150]
 
 The lookup table component works much like the link:{{site.basedir}}/user-manual/english/base-library/rom[ROM] component, but without a CS input and with a much more compact look.
 
-The lookup table consists of an internal read-only memory whose data cell bit with is determined by the attribute "Data Bit Width". The size of the memory (i.e. the number of cells) is determined by the attribute "Address Bit Width".
+The lookup table consists of an internal read-only memory whose data cell bit with is determined by the property "Data Bit Width". The size of the memory (i.e. the number of cells) is determined by the property "Address Bit Width".
 
 Just like with a ROM component, double-click the symbol and edit the memory values of the lookup table.
 
@@ -18,11 +18,11 @@ During simulation, whenever the value at the address input "A" changes, the look
 
 == Pins
 
-A:: Address Input. Its bit width is determined by attribute "Address Bit Width".
+A:: Address Input. Its bit width is determined by property "Address Bit Width".
 
-D:: Data Output. Its bit width is determined by attribute "Data Bit Width".
+D:: Data Output. Its bit width is determined by property "Data Bit Width".
 
-== Attributes
+== Properties
 
 Address Bit Width::  Determines the number of lookup table entries.
 

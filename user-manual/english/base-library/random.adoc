@@ -16,7 +16,7 @@ Input:: The clock input. With a rising edge a new random number is generated.
 
 Output:: An n-bit output that outputs the last generated random number.
 
-== Attributes
+== Properties
 
 Orientation:: The direction in which the output points.
 

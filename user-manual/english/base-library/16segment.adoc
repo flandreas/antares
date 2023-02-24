@@ -35,7 +35,7 @@ p:: Controls the decimal point
 
 s:: Accepts an 16-bit value whose bits control the 16 segments of the display.
 
-== Attributes
+== Properties
 
 LED color:: The color of the LEDs. The menu offers all light colors implemented in Antares for selection.
 

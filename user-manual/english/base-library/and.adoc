@@ -31,7 +31,7 @@ The multi-bit version of the AND gate will perform its one-bit transformation bi
 
 AND gates are often used in data path circuits in which one of several data paths is selected by means of control inputs. AND gates with n+1 inputs are used, where n is the number of bits required to select the data path.
 
-The AND gate offers the possibility to visualize the data path. If the attribute "Data input" is set with the number of the input where the data path arrives, the AND gate draws the path from this input to the output. If the control inputs all have the value 1, the data path is drawn as a solid line. If one of the control inputs has the value 0, the AND gate disables and the data path is drawn as a dashed line.
+The AND gate offers the possibility to visualize the data path. If the property "Data input" is set with the number of the input where the data path arrives, the AND gate draws the path from this input to the output. If the control inputs all have the value 1, the data path is drawn as a solid line. If one of the control inputs has the value 0, the AND gate disables and the data path is drawn as a dashed line.
 
 The following example shows the use of data paths in the "4-1 Multiplexer" circuit of the standard Antares library.
 
@@ -45,19 +45,19 @@ image:user-manual/base-library/and-mnemonic.png[Example Mnemonic, 300]
 
 == Pins
 
-Inputs:: The one-bit inputs of the AND gate. Their number is determined by the attribute "Number of inputs".
+Inputs:: The one-bit inputs of the AND gate. Their number is determined by the property "Number of inputs".
 
 Output:: The 1-bit output of the AND gate. Outputs the value of the calculated AND function.
 
-== Attributes
+== Properties
 
 Orientation:: The direction in which the output points.
 
 Number of inputs:: Determines how many inputs the AND gate has. There are 2 to max. 8 inputs available. Can even be changed if the gate is already connected to wires.
 
-Negate input n:: When selected, the n-th input pin is negated. The maximum of "n" is determined by attribute "Number of inputs". Negation is also
+Negate input n:: When selected, the n-th input pin is negated. The maximum of "n" is determined by property "Number of inputs". Negation is also
 applied to the truth table and the mnemonics displayed for the gate.
 
 Output Name:: The optional name displayed next to the output. This can be useful if the AND gate is the end of a complex combinatorial circuit and the logical expression produced by the AND gate is to be specified.
 
-Data Input:: In this attribute the number of the input containing the data path can be selected if the feature "data path" (see above) is to be used. In the direction of data flow through the AND gate, number 1 designates the left-most input.
+Data Input:: In this property the number of the input containing the data path can be selected if the feature "data path" (see above) is to be used. In the direction of data flow through the AND gate, number 1 designates the left-most input.

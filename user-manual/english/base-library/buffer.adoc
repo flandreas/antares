@@ -37,7 +37,7 @@ image:user-manual/base-library/buffer-mnemonic.png[Example buffer, 300]
 Input:: The input to the buffer.
 Output:: The output of the buffer, which outputs the unchanged signal of the input.
 
-== Attributes
+== Properties
 
 Orientation:: The direction in which the output points.
 

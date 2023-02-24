@@ -30,7 +30,7 @@ The scope of a tunnel name is limited to the current circuit. If a circuit conta
 
 Input:: The input of the tunnel component is bidirectional, i.e. it is both input and output at the same time. This makes it possible to use the same component type for sending a signal into a tunnel and receiving the signal from this tunnel.
 
-== Attributes
+== Properties
 
 Orientation:: The direction in which the component's symbol is pointing.
 

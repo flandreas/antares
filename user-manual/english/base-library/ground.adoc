@@ -16,6 +16,6 @@ The same functionality can be achieved using the more versatile Constant compone
 
 A ground component has only one output pin that constantly emits 0.
 
-== Attributes
+== Properties
 
 Bit Width:: The number of bits of the output pin.

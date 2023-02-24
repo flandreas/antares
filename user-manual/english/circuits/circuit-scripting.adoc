@@ -5,7 +5,7 @@ include::../../page-variables.txt[]
 
 == Execution Logic
 
-In a link:{{site.basedir}}/user-manual/english/circuits/circuits[circuit] a script can be defined in the attribute "Function" which is executed at link:{{site.basedir}}/user-manual/english/simulation.simulation["Flat simulation"] instead of the circuit if the circuit is used as a subcircuit in another circuit.
+In a link:{{site.basedir}}/user-manual/english/circuits/circuits[circuit] a script can be defined in the property "Function" which is executed at link:{{site.basedir}}/user-manual/english/simulation.simulation["Flat simulation"] instead of the circuit if the circuit is used as a subcircuit in another circuit.
 
 When you write such a script, Antares will predefine all input and output pins of the circuit as implicit variable, so that you can access the signal at these pins simply by accessing those variables.
 

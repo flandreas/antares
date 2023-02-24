@@ -19,7 +19,7 @@ X:: Indicates the knob's x-coordinate, to be interpreted as an unsigned integer 
 
 Y:: Indicates the knob's y-coordinate,  to be interpreted as an unsigned integer whose value will never be 0. A value of 1 represents the top most, and the maximum value for the bit width indicates the down most position. When the knob is at rest (in the center), the value has the pattern 10..00.
 
-== Attributes
+== Properties
 
 Bit Width:: The number of bits used to indicate each of the knob's coordinates.
 

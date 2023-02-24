@@ -8,22 +8,22 @@ image:user-manual/base-library/clock-sample-en.png[Example LED, 400]
 
 == Behavior
 
-The clock generates a 1-bit signal at its output, the value of which changes periodically back and forth between the values 0 and 1. The period can be set in the attribute "Period".
+The clock generates a 1-bit signal at its output, the value of which changes periodically back and forth between the values 0 and 1. The period can be set in the property "Period".
 
 If the mouse stays over the clock  during simulation, Antares will display a knob after a certain time, which can be used to change the period during simulation. Click on the knob and move the mouse left or right while holding down the mouse button to change the period. The knob has a logarithmic behaviour: One complete turn of the knob changes the period by a factor of 10 *at the highest decimal place*. If, for example, the current period is 1'000, it will have the value 10'000 after one complete clockwise rotation, making it easy to set both small and large values.
 
-A value of the period changed during simulation is not retained; the period is reset to the value configured in the attribute "Period" at the end of the simulation.
+A value of the period changed during simulation is not retained; the period is reset to the value configured in the property "Period" at the end of the simulation.
 
 == Pins
 
 The clock has a single 1-bit output where the periodically changing signal is output.
 
-== Attributes
+== Properties
 
 Orientation:: The direction in which the output pin points.
 
 Period:: The period in microseconds. The period is the time that elapses until the clock emits the same signal again. If the period is 1'000 µs, the output is 1 for 500 µs and 0 for 500 µs.
 
-Enabled:: If the "Enabled" attribute is not set, the output always remains at 0 during simulation.
+Enabled:: If the "Enabled" property is not set, the output always remains at 0 during simulation.
 
-Change period during simulation:: The knob with which the period can be changed by the user during simulation is only displayed if this attribute is set.
+Change period during simulation:: The knob with which the period can be changed by the user during simulation is only displayed if this property is set.

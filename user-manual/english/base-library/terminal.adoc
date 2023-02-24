@@ -26,7 +26,7 @@ EN:: "Enable" - Must have the value 1 for the terminal to accept characters. Sig
 
 CLR:: "Clear" - With the value 1, the terminal content is deleted asynchronously.
 
-== Attributes
+== Properties
 
 Number of rows:: The number of rows the terminal can display.
 

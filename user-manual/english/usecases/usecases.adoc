@@ -39,7 +39,7 @@ A test case consists of a separate script that typically checks states of the ci
 
 Use cases of the open circuit are configured in the "Use Cases" sidebar that opens on the right side of the Antares window.
 
-The sidebar contains a tree with all use cases (oval icon). When you select a node in the tree, the attributes of the use case are displayed in the properties view below it and are available for modification.
+The sidebar contains a tree with all use cases (oval icon). When you select a node in the tree, the properties of the use case are displayed in the properties view below it and are available for modification.
 
 image::user-manual/usecases/usecases-panel-en.png[Example use cases, 500,align="center"]
 
@@ -57,7 +57,7 @@ Run Test:: Context menu on the application case node, which is only active if a 
 
 Run all Tests:: Context menu on the circuit node. Runs the tests of all use cases.
 
-=== Attributes of Use Cases
+=== Properties of Use Cases
 
 Name:: The name of the use case that can be translated into all supported languages.
 

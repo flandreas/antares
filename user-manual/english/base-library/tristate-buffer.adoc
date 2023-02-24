@@ -12,7 +12,7 @@ The tri-state buffer is a buffer that has a control input in addition to the dat
 
 Tri-state buffers are used when the output of several components is to be combined on one wire. In this case, the output of these components is routed via a tri-state buffer, whereby only the tri-state buffer whose wire carries the desired signal is activated by means of the control input.
 
-The control input of the tri-state buffer can be set to "positive" or "negative" with the "Logic" attribute.
+The control input of the tri-state buffer can be set to "positive" or "negative" with the "Logic" property.
 
 .Truth table "Positive logic"
 [%header,cols=5*, width="40%"]
@@ -48,13 +48,13 @@ image:user-manual/base-library/tristate-buffer-mnemonic.png[Mnemonic Tri-State B
 
 == Pins
 
-Data input:: The buffer's input. The number of bits is determined by the attribute "Bit Width".
+Data input:: The buffer's input. The number of bits is determined by the property "Bit Width".
 
-EN:: "Enable" - 1-bit control input. An active value results in all bits of the data input being output unchanged at the output. If the value is inactive, an n-bit value is output whose n bits are all undefined. What is considered an active value is determined by the attribute "logic".
+EN:: "Enable" - 1-bit control input. An active value results in all bits of the data input being output unchanged at the output. If the value is inactive, an n-bit value is output whose n bits are all undefined. What is considered an active value is determined by the property "logic".
 
-Output:: The output of the buffer. The number of bits is determined by the attribute "Bit Width".
+Output:: The output of the buffer. The number of bits is determined by the property "Bit Width".
 
-== Attributes
+== Properties
 
 Orientation:: The direction in which the output points.
 

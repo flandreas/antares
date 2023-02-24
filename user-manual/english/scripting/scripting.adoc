@@ -11,7 +11,7 @@ The programming language in which the scripts is a custom DSL (domain specific l
 
 Since this programming language does not need to be compiled, but is interpreted during execution, the scripts do not need to be created separately and stored in the directory where Antares is installed, but can be stored as pure text within the circuit.
 
-Scripts are entered as attributes of selected objects in the properties window.
+Scripts are entered as properties of selected objects in the properties window.
 
 image::user-manual/scripting/script-attribute-en.png[script property, 300]
 
@@ -19,13 +19,13 @@ In the example above, the "Function" property contains a script. This is indicat
 
 image::user-manual/scripting/scripting-editor-en.png[Script Editor, 500, align=center]
 
-In this window you write your script as described in the following sections. You can use the button btn:[Check] to let Antares check your script for syntactic or semantic errors. With the button btn:[OK] the current script is saved in the attribute where you opened the script editor.
+In this window you write your script as described in the following sections. You can use the button btn:[Check] to let Antares check your script for syntactic or semantic errors. With the button btn:[OK] the current script is saved in the property where you opened the script editor.
 
 If you have made a programming error in a script (which can happen), Antares will detect this during simulation - sooner or later depending on the type of script - and pause the simulation. In the "Issues" view, which can be displayed at the bottom of the main window, the color of the icon changes to red, and the table in the view contains a new entry that gives you information about the error that occurred.
 
 image::user-manual/scripting/scripting-error-en.png[Script error, 600, align=center]
 
-The entries in the table have the following attributes:
+The entries in the table have the following properties:
 
 Name:: The name or type of the issue. For scripting errors the name "Script Error". There are other types of errors, such as "Design Error", which occurs when your circuit contains wires connecting pins of different bit widths.
 
@@ -33,7 +33,7 @@ Origin:: An identification of the object where the error occurred. This can be a
 
 NOTE: It would be desirable if Antares would highlight the source of the problem in the circuit when you select an entry in the table. This feature may be available in a future version of Antares.
 
-Context:: Additional information that further specifies the source of the error. If an object contains multiple scripts, the context is the name of the attribute of the source whose script contains the error. In the example above, this is the attribute "Function" of the subcircuit "SR Latch".
+Context:: Additional information that further specifies the source of the error. If an object contains multiple scripts, the context is the name of the property of the source whose script contains the error. In the example above, this is the property "Function" of the subcircuit "SR Latch".
 
 Description:: Describes the cause of the error. In the example above, in the script on line 6, the statement `if (not S and not R) {` was replaced by the erroneous statement `if (not I and not R) {`, which caused the error, because Antares tried to access a signal from port "I", which doesn't exist in the SR latch.
 

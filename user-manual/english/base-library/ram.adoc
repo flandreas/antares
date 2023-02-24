@@ -12,7 +12,7 @@ The RAM is a link:{{site.basedir}}/user-manual/english/base-library/memory[memor
 
 The contents of the memory cells of the RAM component can be read and written synchronously via a bidirectional data pin.
 
-The RAM component provides two different interfaces that can be selected via the value of the attribute "Clock Input".
+The RAM component provides two different interfaces that can be selected via the value of the property "Clock Input".
 
 Synchronous:: With this interface the RAM contains the clock input "CLK". If the input "WR" has the value 1, the data present at input "D" is read on the rising edge of the clock input.
 
@@ -26,14 +26,14 @@ CS:: Input "Chip Select": The RAM component only reads or writes data if this in
 
 D:: Input/Output "Data": Outputs the data to be read or accepts the data to be written, depending on the value of inputs "WR" and "CLK".
 
-CLK:: Input "Clock": Is only displayed if the attribute "Clock Input" is set. At the rising edge of the CLK signal, data is read or written, depending on the value of "WR".
+CLK:: Input "Clock": Is only displayed if the property "Clock Input" is set. At the rising edge of the CLK signal, data is read or written, depending on the value of "WR".
 
 WR:: Input "Write": With the value 1 data can be written into the RAM.
 
 CLR:: Input "Clear": Asynchronous input at which a value of 1 causes all memory cells to be reset to the value 0, independent of the other inputs.
 
-== Attributes
+== Properties
 
-See the chapter link:{{site.basedir}}/user-manual/english/base-library/memory[Memory] for a description of the general memory attributes. In this section only the special attributes of the RAM component are described.
+See the chapter link:{{site.basedir}}/user-manual/english/base-library/memory[Memory] for a description of the general memory properties. In this section only the special properties of the RAM component are described.
 
-Clock Input:: If this attribute is set, the RAM contains the "CLK" pin.
+Clock Input:: If this property is set, the RAM contains the "CLK" pin.

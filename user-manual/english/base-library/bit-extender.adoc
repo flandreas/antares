@@ -16,7 +16,7 @@ Input:: The input signal to be extended.
 
 Output:: The extended output signal.
 
-== Attributes
+== Properties
 
 Input Bit Width:: The number of bits of the input pin. Must be smaller than "Output Bit Width".
 

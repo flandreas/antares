@@ -22,7 +22,7 @@ a-g:: Only available with the "Single" pin scheme. Controls the 7 segments of th
 
 s:: Only available with the "Combined" pin scheme. Accepts an 8-bit value whose bits control the 7 segments of the display, whereby bit 0 corresponds to segment "a" and bit 6 to segment "g". The most significant bit is not used.
 
-== Attributes
+== Properties
 
 LED color:: The color of the LEDs. The menu offers all light colors implemented in Antares for selection.
 
@@ -30,6 +30,6 @@ Active:: "Positive" turns LEDs on with 1, "Negative" with 0.
 
 Size:: The 7-segment display can be displayed in the three sizes "large", "medium" and "small".
 
-Pin Scheme:: This attribute is only available if the attribute "Size" has the value "large". It determines whether a separate pin should be provided for each segment of the LED (value "Single"), or whether all 7 segments should be combined into a single 8-bit pin (value "Combined").
+Pin Scheme:: This property is only available if the property "Size" has the value "large". It determines whether a separate pin should be provided for each segment of the LED (value "Single"), or whether all 7 segments should be combined into a single 8-bit pin (value "Combined").
 
 Border:: If not set, the display is drawn without a border, which can be useful for building areas of multiple displays.

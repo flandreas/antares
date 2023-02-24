@@ -62,6 +62,8 @@ Switch mode using zoom factor:: If set, you can switch between the the circuit e
 
 Max. number of collected issues:: The maximum number of issues collected during a simulation run and displayed in the "Issues" tab.
 
+Slow-down factor of simulation speed:: Determines how much the simulation speed is slowed down when dragging the simulation speed slider more to the left side. Larger values result in slower simulation speeds. The default is 4. The minimum value is 0.0001.
+
 Allowed net contention duration (ns):: The time in nanoseconds during which net contention (i.e. conflicting signals on a net) are allowed without generating a simulation issue. The default is 20.
 
 == Editor

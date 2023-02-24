@@ -10,13 +10,13 @@ image:user-manual/base-library/video-ram-sample.png[Example Video RAM, 200]
 
 Used to display bitmap graphics. A Video RAM behaves exactly like a normal link:{{site.basedir}}/user-manual/english/base-library/ram[RAM], except that it displays its contents as an image.
 
-Each memory cell value is interpreted as an index in a color map defined by the attribute "Color Model".
+Each memory cell value is interpreted as an index in a color map defined by the property "Color Model".
 
 == Pins
 
 The Video RAM has the same pins like the link:{{site.basedir}}/user-manual/english/base-library/ram[RAM].
 
-== Attributes
+== Properties
 
 Width:: The width of the Video RAM display in pixels. Limited to 600. The bit width of pin "A" (Address) must be sufficiently large to address he resulting Video RAM size (Width * Height).
 

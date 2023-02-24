@@ -15,10 +15,10 @@ When pressing the double-throw switch with the mouse, it receives the keyboard f
 
 == Pins
 
-A double-throw switch has three pins whose bit width is derived from the attribute "Bit Width".
+A double-throw switch has three pins whose bit width is derived from the property "Bit Width".
 
-== Attributes
+== Properties
 
 Bit Width:: The number of bits of both pins.
 
-Switch:: If this attribute is set (default), the switch remains in the pressed state after the user has released the mouse button (or the keyboard key that triggered the pressing of the switch).
+Switch:: If this property is set (default), the switch remains in the pressed state after the user has released the mouse button (or the keyboard key that triggered the pressing of the switch).

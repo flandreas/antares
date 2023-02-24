@@ -79,6 +79,10 @@ manual:
         url: /user-manual/english/misc/key-bindings
 
 releases:
+  - title: 2023
+    children:
+      - title: "1.3.0"
+        url: /docs/releases/release-1.3.0
   - title: 2022
     children:
       - title: "1.2.0"

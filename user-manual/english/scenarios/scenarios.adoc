@@ -36,7 +36,7 @@ Scenarios and their scenario steps are always saved together with the open circu
 
 Scenarios of the open circuit are configured in the "Scenarios" sidebar on the right side of the Antares window.
 
-The sidebar contains a tree with all scenarios (gear icon) and their scenario steps (footprint icon). When you select a node in the tree, the attributes of the object are displayed in the properties view below it and offered for modification.
+The sidebar contains a tree with all scenarios (gear icon) and their scenario steps (footprint icon). When you select a node in the tree, the properties of the object are displayed in the properties view below it and offered for modification.
 
 image::user-manual/scenarios/scenario-panel-en.png[Scenario configuration, 300,align="center"]
 
@@ -73,7 +73,7 @@ See link:{{site.basedir}}/user-manual/english/scripting/scripting[Scripting] for
 S == 1 and R == 0
 ----
 
-=== Attributes of Scenario Steps
+=== Properties of Scenario Steps
 
 Name:: The name of the scenario step, which can be translated into all supported languages. It is only used in the current version of Antares for display in the tree.
 

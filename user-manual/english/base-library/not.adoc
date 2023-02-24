@@ -40,7 +40,7 @@ Mnemonics are only displayed if property "Bit Width" is 1.
 Input:: The input of the NOT gate. Its bit width is determined by property "Bit Width".
 Output:: The output of the NOT gate, which outputs the inverted signal of the input. Its bit width is determined by property "Bit Width".
 
-== Attributes
+== Properties
 
 Orientation:: The direction in which the output points.
 

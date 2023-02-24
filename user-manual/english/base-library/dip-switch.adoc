@@ -8,9 +8,9 @@ image:user-manual/base-library/dip-switch-sample.png[Example DIP Switch, 150].
 
 == Behavior
 
-The DIP switch combines small switches for 1 bit each to a single component. The number of small switches is determined by the attribute "Bit Width".
+The DIP switch combines small switches for 1 bit each to a single component. The number of small switches is determined by the property "Bit Width".
 
-The DIP switch has the attribute "Initial value", which is stored in the circuit and used as the current value of the DIP switch when the simulation is started.
+The DIP switch has the property "Initial value", which is stored in the circuit and used as the current value of the DIP switch when the simulation is started.
 
 The individual switches behave like the "Switch" component, i.e. the switching of an individual switch during simulation only becomes effective after the configured propagation delay has elapsed. Until then the DIP switch is shown as "inactive" and does not accept any user input.
 
@@ -18,10 +18,10 @@ When pressing the individual switch with the mouse, the DIP switch receives the 
 
 == Pins
 
-A DIP switch has only one output with the bit width configured in the attribute "Bit Width".
+A DIP switch has only one output with the bit width configured in the property "Bit Width".
 
 
-== Attributes
+== Properties
 
 Orientation:: The direction in which the output points.
 

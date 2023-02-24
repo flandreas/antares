@@ -14,12 +14,12 @@ You open a circuit by double-clicking on the project element or the library elem
 
 * **Title bar**: The Antares window title bar shows the name of the circuit and whether the circuit is part of the open project or library. Example: __Antares - Project Element "4-Bit Carry Ripple Adder"__.
 * **Navigation bar**: The first element of the navigation bar specifies the name of the open circuit.
-* **Properties view**: If you click on the background of the current circuit in the drawing area, the attributes of the circuit are displayed in the properties window. The title of the properties window contains the name of the open circuit.
+* **Properties view**: If you click on the background of the current circuit in the drawing area, the properties of the circuit are displayed in the properties window. The title of the properties window contains the name of the open circuit.
 * **Workbench tree**: The node in the workbench tree corresponding to the open circuit contains the name of the circuit. The icon of the node is highlighted in orange for the open circuit.
 
 A circuit always consists of the circuit itself and its symbol, which is used when the circuit is added as a subcircuit to other circuits. Both parts can be edited separately. Use the view tools (the first two buttons in the toolbar) to switch between the two views.
 
-All changes - whether to the circuit itself, to the symbol, or to attributes of the circuit - are always saved together. The circuit is the "storage unit" of Antares. While changes to project or library structures are always saved automatically, you must save changes to the circuit itself. Use the menu menu:File[Save] or the key combination kbd:[Cmd +S].
+All changes - whether to the circuit itself, to the symbol, or to properties of the circuit - are always saved together. The circuit is the "storage unit" of Antares. While changes to project or library structures are always saved automatically, you must save changes to the circuit itself. Use the menu menu:File[Save] or the key combination kbd:[Cmd +S].
 
 == Zooming and panning
 
@@ -41,29 +41,29 @@ menu:View[Center]:: Centers the display without changing the zoom factor.
 
 menu:View[Fit]:: Centers the display and sets the zoom factor so that the circuit completely fills the entire main view.
 
-== Changing component attributes
+== Changing component properties
 
-If you select a component in a circuit, the attributes of the components are offered for editing in the attributes view.
+If you select a component in a circuit, the properties of the components are offered for editing in the properties view.
 
-You can also select multiple components and edit their attributes in a single operation, e.g. to change the color of multiple LEDs to the same value. Antares will try to find the "largest common denominator" of the types of all selected components to determine the set of attributes. Since that operation is costly, Antares limits the number of components to edit in a single operation to 8.
+You can also select multiple components and edit their properties in a single operation, e.g. to change the color of multiple LEDs to the same value. Antares will try to find the "largest common denominator" of the types of all selected components to determine the set of properties. Since that operation is costly, Antares limits the number of components to edit in a single operation to 8.
 
-NOTE: When selecting multiple components, the attributes window will display the attributes values of the last component in the selection. This approach was easier to implement than supporting a set of attributes editors that could display something like "<Various>" if the attribute's value differs among the selected components.
+NOTE: When selecting multiple components, the properties window will display the properties values of the last component in the selection. This approach was easier to implement than supporting a set of properties editors that could display something like "<Various>" if the property's value differs among the selected components.
 
-== Changing circuit attributes
+== Changing circuit properties
 
-If you click with the mouse on the background of the circuit in the main window, the attributes of the circuit are offered for editing in the attributes view.
+If you click with the mouse on the background of the circuit in the main window, the properties of the circuit are offered for editing in the properties view.
 
-Name:: In this attribute a short name of the circuit can be entered in all supported languages. Note that you can still change the name of a circuit even if it is part of a library and is already used in projects as a subcircuit. This is because Antares does not use the name of the circuit for referencing subcircuits in libraries, but an internal unique identification (a so-called UUID).
+Name:: In this property a short name of the circuit can be entered in all supported languages. Note that you can still change the name of a circuit even if it is part of a library and is already used in projects as a subcircuit. This is because Antares does not use the name of the circuit for referencing subcircuits in libraries, but an internal unique identification (a so-called UUID).
 
-Description:: This attribute is used to capture a longer description of the circuit which is displayed in the preview of the explorer and in the description popup when used as a subcircuit in other circuits.
+Description:: This property is used to capture a longer description of the circuit which is displayed in the preview of the explorer and in the description popup when used as a subcircuit in other circuits.
 
-Propagation Delay:: This optional attribute can be used to specify the length of time that elapses between the processing of an input signal and the appearance of a modified output signal. It is used to control the display of the processing state of a subcircuit during link:{{site.basedir}}/user-manual/english/simulation/simulation[simulation].
+Propagation Delay:: This optional property can be used to specify the length of time that elapses between the processing of an input signal and the appearance of a modified output signal. It is used to control the display of the processing state of a subcircuit during link:{{site.basedir}}/user-manual/english/simulation/simulation[simulation].
 
-Start-up Duration:: The time (in ns) it takes the circuit to settle after starting the simulation. This optional attribute is used to omit signal flow animations and soft breakpoints during simulation start-up. In order to figure out the start-up duration of your circuit, activate menu menu:Simulation[Display Simulation Time in State Bar], start the simulation, and wait until the circuit has settled. Then use the value displayed at the right edge of the state bar.
+Start-up Duration:: The time (in ns) it takes the circuit to settle after starting the simulation. This optional property is used to omit signal flow animations and soft breakpoints during simulation start-up. In order to figure out the start-up duration of your circuit, activate menu menu:Simulation[Display Simulation Time in State Bar], start the simulation, and wait until the circuit has settled. Then use the value displayed at the right edge of the state bar.
 
-Function:: This attribute can be used to specify the script that Antares executes for this component during simulation, if the simulation is run in link:{{site.basedir}}/user-manual/english/simulation/simulation["Flat simulation"] mode. This is an advanced technique; for details on scripting, see the chapter link:{{site.basedir}}/user-manual/english/circuits/circuit-scripting["Scripting in Circuits"].
+Function:: This property can be used to specify the script that Antares executes for this component during simulation, if the simulation is run in link:{{site.basedir}}/user-manual/english/simulation/simulation["Flat simulation"] mode. This is an advanced technique; for details on scripting, see the chapter link:{{site.basedir}}/user-manual/english/circuits/circuit-scripting["Scripting in Circuits"].
 
-Always use function:: This attributes is used to activate the "purely scripted" feature of a circuit. If the attribute is set, the script in attribute "Function" is executed even if simulation depth is "deep". This can be used to build functional components without the need to build the entire inner circuit, although you probably will add some inputs and outputs to give the component an interface to the surrounding circuit.
+Always use function:: This property is used to activate the "purely scripted" feature of a circuit. If the attribute is set, the script in attribute "Function" is executed even if simulation depth is "deep". This can be used to build functional components without the need to build the entire inner circuit, although you probably will add some inputs and outputs to give the component an interface to the surrounding circuit.
 
 Default light color:: The light color that all components in this circuit should have by default (LED, 7-segment display, terminal). If you change the value of this attribute while the circuit already contains lit components, Antares will ask you if the new light color should be applied to these components. With this option, for example, all red LEDs and 7-segment displays can be changed to yellow with a single action.
 
@@ -71,9 +71,9 @@ Wire Logic:: Determines the logic to be applied when asserting different values 
 
 == Adding components
 
-You add components to a circuit by selecting the components to be added in the workbench tree and dragging them into the circuit (Drag & Drop). The new component is given the default attributes specified by the programming.
+You add components to a circuit by selecting the components to be added in the workbench tree and dragging them into the circuit (Drag & Drop). The new component is given the default properties specified by the programming.
 
-It often happens that you need several components with the same, modified attributes in a circuit, e.g. OR gates with three inputs instead of only two as with the default value. In these cases it may be useful to use copy/paste: Drag the first copy of the component into the circuit, set the desired attributes, copy the component to the clipboard using menu:Edit[Copy], and then paste the required number of additional components into the circuit using menu:Edit[Paste].
+It often happens that you need several components with the same, modified properties in a circuit, e.g. OR gates with three inputs instead of only two as with the default value. In these cases it may be useful to use copy/paste: Drag the first copy of the component into the circuit, set the desired properties, copy the component to the clipboard using menu:Edit[Copy], and then paste the required number of additional components into the circuit using menu:Edit[Paste].
 
 When pasting a particular component from the clipboard for the first time, Antares places the pasted component at a small distance from the original. If you then move the pasted component to a new location and then perform additional paste actions, Antares will use the distance between the original and the location you defined for the first inserted component as a template. This makes it easy to create uniform arrangements of similar components, e.g. for flip-flops in shift register circuits.
 
@@ -81,9 +81,9 @@ When pasting a particular component from the clipboard for the first time, Antar
 
 Connecting components using wires is a separate, large topic that is dealt with in the separate chapter link:{{site.basedir}}/user-manual/english/circuits/wires["Wires"].
 
-== Attributes of subcircuits
+== Properties of subcircuits
 
-The properties of the built-in components are explained in chapter link:{{site.basedir}}/user-manual/english/base-library/base-library["Base Library"]. This section describes the attributes of subcircuit components.
+The properties of the built-in components are explained in chapter link:{{site.basedir}}/user-manual/english/base-library/base-library["Base Library"]. This section describes the properties of subcircuit components.
 
 Orientation:: The cardinal point to which the symbol of the subcircuit points. Like basic components, symbols of subcircuits can also be rotated with kbd:[Cmd + R].
 
@@ -120,6 +120,16 @@ NOTE: The modified symbol is only valid for the selected subcircuit in the curre
 
 The original symbol can be restored with context menu menu:Reset Symbol[].
 
+== Extracting subcircuit
+
+This feature is for users who like working in a "Figma-like" style, i.e. to start drawing everything in a single circuit and the extract part of the design as separate subcircuits.
+
+image::user-manual/circuits/extract-subcircuit.png[Extracting Subcircuit, 300,align="center"]
+
+Select the component you'd like to extract, right-click with the mouse, and select "Extract as subcircuit". Antares asks you for the name of the new subcircuit and creates it in the same folder of the project/library in which the currently open circuit is contained.
+
+While extracting, Antares replaces all switches by circuit inputs and all LEDs by circuit outputs. The selected components are then deleted and replaced with the symbol of the newly created subcircuit. Note that Antares it not yet capable of automatically creating inputs/outputs for pins of components that are left unconnected when extracting them. This may be a topic of a future release.
+
 == Using the drawing tools
 
 A circuit in Antares can not only consist of digital components and the connected wires, but also of purely graphical elements such as rectangles or texts. Use the drawing tools in the Antares window toolbar to add such elements to the circuit.
@@ -140,7 +150,7 @@ image:user-manual/circuits/text.gif[Text] **Text** A click with the left mouse b
 
 The selection state of the graphical objects is displayed by drawing in the selection color, as with digital components, and not by displaying the small editing rectangles (handles) as in other applications. These are only displayed when you move the mouse over a selected graphic component.
 
-Select a graphic component and change its attributes such as "Fill", "Border", "Shadow", "Style", "Color", "Line style" to customize the appearance of the component. In chapter link:{{site.basedir}}/user-manual/english/styles/styles["Styles and themes"] you can find more information about styles, colors and other graphical properties.
+Select a graphic component and change its properties such as "Fill", "Border", "Shadow", "Style", "Color", "Line style" to customize the appearance of the component. In chapter link:{{site.basedir}}/user-manual/english/styles/styles["Styles and themes"] you can find more information about styles, colors and other graphical properties.
 
 == Aligning components
 

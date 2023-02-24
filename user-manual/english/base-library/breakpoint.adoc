@@ -12,8 +12,8 @@ The breakpoint component is used to temporarily interrupt the execution of the s
 
 == Pins
 
-Input:: The breakpoint component has a single 1-bit input whose signal determines whether the breakpoint is active or not. Whether the breakpoint is activated by the signal 0 or 1 is determined by the attribute "Logic".
+Input:: The breakpoint component has a single 1-bit input whose signal determines whether the breakpoint is active or not. Whether the breakpoint is activated by the signal 0 or 1 is determined by the property "Logic".
 
-== Attributes
+== Properties
 
 Logic:: With the value "Positive" the breakpoint is activated by the input signal 1. The value "Negative" reverses the logic; here, the input signal 0 activates the breakpoint.

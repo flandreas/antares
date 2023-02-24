@@ -8,9 +8,9 @@ image:user-manual/base-library/pin.png[Example port, 500]
 
 == Behavior
 
-A port is either an input, an output, or an input/output, depending on the value of the "Port Type" attribute. Ports are represented graphically as arrows, with the position of the arrowhead relative to the component's pin indicating whether it is an input or an output. In the case of an input, the arrowhead is located at the pin, in the case of an output, it is located on the opposite side of the pin.
+A port is either an input, an output, or an input/output, depending on the value of the "Port Type" property. Ports are represented graphically as arrows, with the position of the arrowhead relative to the component's pin indicating whether it is an input or an output. In the case of an input, the arrowhead is located at the pin, in the case of an output, it is located on the opposite side of the pin.
 
-Ports show the current signal during simulation. Depending on the value of the attributes "Bit Width" and "Representation", different numbers of digits are required. Antares arranges the digits in blocks of 4 digits on top of each other, with lower digits at the bottom/right and higher digits at the top/left.
+Ports show the current signal during simulation. Depending on the value of the properties "Bit Width" and "Representation", different numbers of digits are required. Antares arranges the digits in blocks of 4 digits on top of each other, with lower digits at the bottom/right and higher digits at the top/left.
 
 During simulation, input ports can be used like a switch, but only if they are part of the main circuits, i.e. the outermost circuit. If Antares would allow the user to change the signal of an input of a subcircuit, there would be a conflict with the signal passed to the input by the surrounding circuit.
 
@@ -18,13 +18,13 @@ In case of ports with binary value representation, you can click on a digit to t
 the kbd:[Alt] key, the digit ist set to "undefined ie. floating". Digits of ports with hexadecimal value representation cannot
 be changed using the mouse.
 
-Note that you can also use the keyboard to alter the signal of an input port. The digit that currently has the focus is highlighted with a dashed rectangle. The keys you can use to alter the input signal depends on the the value of the "representation" attributes: For binary representations, you can use the 0 and 1 keys, whereas for hexadecimal representation, you can use all keys from 0..9 and from A..F. Use the key Z to set the digit to "undefined", or the key X to set it to the "error" value.
+Note that you can also use the keyboard to alter the signal of an input port. The digit that currently has the focus is highlighted with a dashed rectangle. The keys you can use to alter the input signal depends on the the value of the "representation" property: For binary representations, you can use the 0 and 1 keys, whereas for hexadecimal representation, you can use all keys from 0..9 and from A..F. Use the key Z to set the digit to "undefined", or the key X to set it to the "error" value.
 
 == Pins
 
-A port component has only one pin, the bit width of which is determined by the attribute "Bit Width".
+A port component has only one pin, the bit width of which is determined by the property "Bit Width".
 
-== Attributes
+== Properties
 
 Name:: The name of the port displayed on the opposite side of the pin. Antares uses the name to connect the pins of a subcircuit symbol to the ports of the subcircuit. For this reason the name must not be empty, and it must be unique within the subcircuit. For the same reason the name cannot be translated into multiple languages (at least in the current version of Antares).
 
@@ -34,6 +34,6 @@ Bit Width:: The number of bits that can be transmitted simultaneously through th
 
 Representation:: Determines whether the value of the current signal is represented in binary or hexadecimal.
 
-Switch:: Defines the behavior of a port when used as a switch by the user during simulation. If this attribute is set, the port remains in its state when the mouse button is released.
+Switch:: Defines the behavior of a port when used as a switch by the user during simulation. If this property is set, the port remains in its state when the mouse button is released.
 
 Tri-State Output:: Only available for output ports. If set, the port has tri-state behaviour. The corresponding pin in a sub circuit will then allow you to connect it with other output pins on the same net, which Antares wouldn't allow otherwise.

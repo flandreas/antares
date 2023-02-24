@@ -16,7 +16,7 @@ EN:: 1-bit "Enabled" input. If 1, the sound is played.
 F:: 12-bit "Frequency" input.
 V:: 8-bit "Volume" input.
 
-== Attributes
+== Properties
 
 Waveform:: The waveform of the played sound. Determines the acoustic characteristics of the played sound.
 * **Sine**

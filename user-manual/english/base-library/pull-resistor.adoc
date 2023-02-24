@@ -14,9 +14,9 @@ If it is connected to a multi-bit wire, each bit of the wire's signal that is fl
 
 == Pins
 
-A pull resistor has only one output pin whose bit width is determined by the attribute "Bit Width".
+A pull resistor has only one output pin whose bit width is determined by the property "Bit Width".
 
-== Attributes
+== Properties
 
 Bit Width:: The number of bits of the output pin.
 

@@ -8,21 +8,21 @@ Compared to similar tools, it may seem that these are rather few components. The
 
 For this reason, Antares does not contain any built-in or elementary flip-flops, full adders or multiplexers; these are included in Antares as fully modelled subcircuits in the standard library and can therefore be opened by the user at any time as a subcircuit, so that their functionality can be observed during simulation.
 
-== Common Attributes
+== Common Properties
 
-Attributes that only apply to a specific component, or that have a different meaning depending on the component, are explained in the description of the respective component. This chapter describes attributes that apply equally to all components.
+Properties that only apply to a specific component, or that have a different meaning depending on the component, are explained in the description of the respective component. This chapter describes properties that apply equally to all components.
 
 ID:: The identification number of the component which is unique within the circuit in which the component is located. It is mainly used for scripting applications.
 
-Model ID:: Antares components consist of a view part and a model part. The attribute "ID" corresponds with the view part, while the attribute "Model ID" uniquely identifies the model part of a component. Since the simulation of a circuit operates mainly on the model parts of components, issues that occur during the simulation (such as signal conflicts) reference the model ID of the components that caused the issue.
+Model ID:: Antares components consist of a view part and a model part. The property "ID" corresponds with the view part, while the property "Model ID" uniquely identifies the model part of a component. Since the simulation of a circuit operates mainly on the model parts of components, issues that occur during the simulation (such as signal conflicts) reference the model ID of the components that caused the issue.
 
-Description:: In this attribute a multi-lingual text can be entered that describes the purpose of a component within the circuit. If available, it is displayed in the description popup instead of the standard description of the component. See chapter link:{{site.basedir}}/user-manual/english/description/description[Descriptions and Explanations] for more details.
+Description:: In this property a multi-lingual text can be entered that describes the purpose of a component within the circuit. If available, it is displayed in the description popup instead of the standard description of the component. See chapter link:{{site.basedir}}/user-manual/english/description/description[Descriptions and Explanations] for more details.
 
 Propagation Delay:: The time in nanoseconds it takes the component to calculate new output signals after its inputs have changed, or, as in the case of the LED, to update its graphical representation.
 
-Shadows:: This attribute controls whether this particular component is to be displayed with a shadow. Shadows are only displayed if they have been activated in the Antares settings. If shadows are activated in the settings, you can prevent an individual component from drawing a shadow.
+Shadows:: This property controls whether this particular component is to be displayed with a shadow. Shadows are only displayed if they have been activated in the Antares settings. If shadows are activated in the settings, you can prevent an individual component from drawing a shadow.
 
-Color:: Normally, the color in which a component is drawn is determined by its style. The attribute "Color" can be used to override the color for a specific component. This can be used, for example, to identify all components of a circuit that perform a similar function with the same color. See chapter link:{{site.basedir}}/user-manual/english/styles/styles[Styles and Themes] for more details.
+Color:: Normally, the color in which a component is drawn is determined by its style. The property "Color" can be used to override the color for a specific component. This can be used, for example, to identify all components of a circuit that perform a similar function with the same color. See chapter link:{{site.basedir}}/user-manual/english/styles/styles[Styles and Themes] for more details.
 
 == Components
 

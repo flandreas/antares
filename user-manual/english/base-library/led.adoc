@@ -14,7 +14,7 @@ Indicates the value at the input by displaying the LED's luminous body according
 
 An LED has only one single input of bit width 1.
 
-== Attributes
+== Properties
 
 Orientation:: The direction in which the luminous body is pointing.
 

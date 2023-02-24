@@ -6,9 +6,9 @@ This chapter describes properties that apply to both the link:{{site.basedir}}/u
 
 == Behavior
 
-A memory component stores data values that are up to 32 bits long. The number of stored data values is determined by the width of the address, which is defined in the attribute "Address Bit Width".
+A memory component stores data values that are up to 32 bits long. The number of stored data values is determined by the width of the address, which is defined in the property "Address Bit Width".
 
-The attribute "Display content" can be used to control whether the memory component should display its memory content as part of the symbol during simulation. Even if the attribute is set, the memory content is only displayed in the symbol if the simulation speed is at most in the "Observe" category - in the fastest "Use" category the memory content is never displayed. For an explanation of simulation speeds see chapter link:{{site.basedir}}/user-manual/english/simulation/simulation[Simulation].
+The property "Display content" can be used to control whether the memory component should display its memory content as part of the symbol during simulation. Even if the property is set, the memory content is only displayed in the symbol if the simulation speed is at most in the "Observe" category - in the fastest "Use" category the memory content is never displayed. For an explanation of simulation speeds see chapter link:{{site.basedir}}/user-manual/english/simulation/simulation[Simulation].
 
 == Importing and exporting memory contents
 
@@ -24,7 +24,7 @@ The format of the file from which the data of a memory component can be imported
 
 The data in the file essentially consists of a sequence of hexadecimal values separated by either a space or a line break, whereby both types of separation can occur in any combination in the same file. This allows, for example, 8 bytes to be combined on one line.
 
-The length of the hexadecimal value is determined by the attribute "Data Bit Width": e.g. data for an 8-bit memory have the form "FF". Antares accepts both uppercase letters and lowercase letters as hexadecimal digits.
+The length of the hexadecimal value is determined by the property "Data Bit Width": e.g. data for an 8-bit memory have the form "FF". Antares accepts both uppercase letters and lowercase letters as hexadecimal digits.
 
 .Example with spaces and line break
 ----
@@ -89,7 +89,7 @@ NOTE: The corresponding format identifier of the "Standard" format is **amd-df-0
 
 === Show memory contents in the symbol
 
-The attribute "Show content" can be used to control whether a part of the memory content should be displayed within the symbol. During simulation, Antares displays the memory content in the region of the current address and highlights the memory cell that is addressed. Comments are not displayed.
+The property "Show content" can be used to control whether a part of the memory content should be displayed within the symbol. During simulation, Antares displays the memory content in the region of the current address and highlights the memory cell that is addressed. Comments are not displayed.
 
 == Show memory content separately
 
@@ -97,7 +97,7 @@ In addition to displaying the memory contents in the icon, the memory contents c
 
 When double-clicking with the kbd:[Alt] key pressed, the same view is displayed as subview in the main window. This can be useful if the contents of several memory components are to be displayed simultaneously.
 
-== Attributes
+== Properties
 
 Orientation:: The direction in which the data port is facing.
 

@@ -16,11 +16,11 @@ Like all bi-directional components, it adds a certain overhead to the simulation
 
 == Pins
 
-Wide side pin:: The wire tap has a single input/output pin whose bit width is determined by attribute "Wide Bit Width".
+Wide side pin:: The wire tap has a single input/output pin whose bit width is determined by property "Wide Bit Width".
 
-Narrow side pins:: The wire taps has as many input/output pins at its narrow side indicates with attribute "Number of Outputs". Their bit width is determined by attribute "Narrow Bit Width".
+Narrow side pins:: The wire taps has as many input/output pins at its narrow side indicates with property "Number of Outputs". Their bit width is determined by property "Narrow Bit Width".
 
-== Attributes
+== Properties
 
 Wide Bit Width:: The number of bits at the wide side of the wire tap. This must correspond with the bit width of the bus to which it is to be connected. Only editable if the wire tap is still unconnected.
 
@@ -38,6 +38,6 @@ Antares enforces that tapped bit positions don't overlap, as this would lead to 
 
 [Note]
 ====
-*Note:* Due to technical restrictions, Antares will reset the wire tap to standard settings when certain attributes like "Wide Bit Width" are changed.
+*Note:* Due to technical restrictions, Antares will reset the wire tap to standard settings when certain properties like "Wide Bit Width" are changed.
 ====
 

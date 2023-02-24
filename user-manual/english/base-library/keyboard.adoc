@@ -30,6 +30,6 @@ D:: Output "Data" - The first character of the buffer is output at this 8-bit ou
 
 AV:: Output "Available" - 1 indicates that at least 1 character is contained in the buffer. Goes to 0 when the buffer is empty.
 
-== Attributes
+== Properties
 
 Buffer size :: The number of characters the buffer can store.

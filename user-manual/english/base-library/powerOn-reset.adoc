@@ -18,7 +18,7 @@ Using the property "Logic" can invert this behaviour, such that the output goes 
 
 Output:: The component has a single output producing the reset signal.
 
-== Attributes
+== Properties
 
 Propagation Delay:: Determines how long the output produces the reset signal before it goes back to its idle value.
 

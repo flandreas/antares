@@ -58,15 +58,15 @@ image::user-manual/styles/style-properties-en.png[styles, 350,align="center"]
 
 NOTE: The example shows the properties of a rectangle. For other components the properties view may look different.
 
-Style:: In this attribute you determine the style the component has.
+Style:: In this property you determine the style the component has.
 
-Color:: In this attribute you can set the composite color of the component. The default value is "From style", i.e. the component inherits the color that the style specifies. But you can override this color, e.g. to make an AND gate, which is normally drawn in the color of the style, red to express that it has a special meaning in the circuit.
+Color:: In this property you can set the composite color of the component. The default value is "From style", i.e. the component inherits the color that the style specifies. But you can override this color, e.g. to make an AND gate, which is normally drawn in the color of the style, red to express that it has a special meaning in the circuit.
 
-Line Style:: In this attribute you can set the line style of the component. The default value is "From Style", i.e. the component inherits the line style that the style specifies. Currently, all combinations of three line styles (extended, dashed, dotted) and three widths (narrow, medium, wide) are available.
+Line Style:: In this property you can set the line style of the component. The default value is "From Style", i.e. the component inherits the line style that the style specifies. Currently, all combinations of three line styles (extended, dashed, dotted) and three widths (narrow, medium, wide) are available.
 
 Depending on the type of the selected component, more graphic properties such as "Filled", "Border" and "Shadow" can be set.
 
-NOTE: The "Shadow" attribute only has an effect if the display of shadows is basically activated in Antares settings.
+NOTE: The "Shadow" property only has an effect if the display of shadows is basically activated in Antares settings.
 
 == Themes
 

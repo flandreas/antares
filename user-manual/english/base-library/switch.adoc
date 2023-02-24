@@ -8,7 +8,7 @@ image:user-manual/base-library/switch-sample.png[Example switch, 400]
 
 == Behavior
 
-This component implements a switch that the user can press with the left mouse button. A pressed switch generates the value 1 at the output, otherwise the value is 0. Depending on the value of the attribute "Toggle" the switch remains on after releasing the mouse button or it switches off again.
+This component implements a switch that the user can press with the left mouse button. A pressed switch generates the value 1 at the output, otherwise the value is 0. Depending on the value of the property "Toggle" the switch remains on after releasing the mouse button or it switches off again.
 
 When pressing the switch with the mouse, the switch receives the keyboard focus, which is represented by a thin blue dashed rectangle. If a switch has the keyboard focus, it can also be operated with the kbd:[Enter] key as well as with the keys kbd:[0] and kbd:[1].
 
@@ -18,11 +18,11 @@ A pressed switch does not immediately generate a signal at the output, but only 
 
 A switch has only one single 1-bit output, which has the value 1 when the switch is pressed.
 
-== Attributes
+== Properties
 
 Orientation:: The direction in which the output points.
 
-Name:: The optional name of the switch, which is displayed depending on the value of the attribute "Label Position".
+Name:: The optional name of the switch, which is displayed depending on the value of the property "Label Position".
 
 Label Position:: Determines where the "Name" of the switch is displayed as text.
 
@@ -30,5 +30,5 @@ Label Position:: Determines where the "Name" of the switch is displayed as text.
 * *Externally*: The name is displayed outside of the switch, opposite to the pin.
 * *Internally*: The name is displayed inside the switch. If the name contains more than one character, the switch is enlarged accordingly.
 
-Switch:: If this attribute is set (default), the switch remains in the pressed state after the user has released the mouse button (or the keyboard key that triggered the pressing of the switch).
+Switch:: If this property is set (default), the switch remains in the pressed state after the user has released the mouse button (or the keyboard key that triggered the pressing of the switch).
 

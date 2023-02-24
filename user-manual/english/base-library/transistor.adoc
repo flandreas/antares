@@ -20,11 +20,11 @@ An N-type transistor behaves very similar to a Tri-State Buffer. The primary dif
 
 Input G:: Gate. Always has bit width 1.
 
-Input S:: Source. Its bit width is derived from the value of the attribute "Bit Width".
+Input S:: Source. Its bit width is derived from the value of the property "Bit Width".
 
-Output D:: Drain. Its bit width is derived from the value of the attribute "Bit Width".
+Output D:: Drain. Its bit width is derived from the value of the property "Bit Width".
 
-== Attributes
+== Properties
 
 Type::
 * **N**: N-type transistor
