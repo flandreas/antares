@@ -18,6 +18,10 @@ include::../../page-variables.txt[]
 | Zoom Centered| kbd:[CMD]+kbd:[M]| kbd:[CTRL]+kbd:[M]
 | Zoom to Fit| kbd:[CMD]+kbd:[F]| kbd:[CTRL]+kbd:[F]
 | Zoom to Fit (Max. 100%)| kbd:[ALT]+kbd:[CMD]+kbd:[F]| kbd:[ALT]+kbd:[CTRL]+kbd:[F]
+| Zoom with mouse | Mouse wheel | Mouse wheel
+| Zoom with trackpad | Scroll gesture | Scroll gesture
+| Pan with mouse | Press mouse wheel | Press mouse wheel
+| Pan with trackpad | kbd:[ALT] + scroll gesture | kbd:[CTRL] + scroll gesture
 3+|*Subcircuit Navigation*
 | Omit dive animation (double-click on symbol)| kbd:[CMD] | kbd:[CTRL]
 | Omit emmerge animation (click on breadcrumb)| kbd:[CMD] | kbd:[CTRL]
@@ -42,10 +46,12 @@ include::../../page-variables.txt[]
 | Redo | kbd:[SHIFT]+kbd:[CMD]+kbd:[Z] | kbd:[CTRL]+kbd:[Y]
 | Delete | kbd:[BACKSPACE] | kbd:[DEL]
 | Rotate | kbd:[CMD]+kbd:[R] | kbd:[CTRL]+kbd:[R]
+| Rotate Clockwise | kbd:[ALT]+kbd:[CMD]+kbd:[R] | kbd:[ALT]+kbd:[CTRL]+kbd:[R]
 | Select All | kbd:[CMD]+kbd:[A] | kbd:[CTRL]+kbd:[A]
 | Select Next | kbd:[CMD]+kbd:[ARROW RIGHT] | kbd:[CTRL]+kbd:[ARROW RIGHT]
 | Select Previous | kbd:[CMD]+kbd:[ARROW LEFT] | kbd:[CTRL]+kbd:[ARROW LEFT]
 | Expand/reduce selection| kbd:[SHIFT] + click | kbd:[SHIFT] + click
+| Switch selection box mode | kbd:[ALT] + drag | kbd:[ALT] + drag
 | Move | kbd:[ARROW L/R/U/D] | kbd:[ARROW L/R/U/D]
 | Orthogonal mouse drag | kbd:[SHIFT] | kbd:[SHIFT]
 | Omit Snap during mouse drag | kbd:[ALT] | kbd:[ALT]

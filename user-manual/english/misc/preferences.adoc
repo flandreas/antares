@@ -80,6 +80,11 @@ Grid rendering:: The way the editor grid is drawn.
 
 Number of undo per Snapshot:: The undo system uses snapshots (copies of the circuit) from which recorded actions are replayed when the user requests undoing or redoing them. This value determines how many actions are recorded before a new snapshot is created. Smaller values result in better performance, but more memory consumption, larger values may lead to worse performance. The default value is 10.
 
+Selection box scope:: Determines how components are selected with the selection box. Pressing ALT while dragging the selection box temporarily switches between the two modes.
+- **Completely contained**: Selects only components that are completely contained in the selection box.
+- **Partially contained**: Selects also components that are only partially contained in the selection box.
+
+
 Save history:: If enabled, Antares saves a copy of the previous version whenever a circuit is saved, which allows you to view the save history using menu:Popup[Show History..] and to restore old versions of a circuit.
 
 == Oscilloscope
