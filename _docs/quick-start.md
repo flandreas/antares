@@ -7,9 +7,10 @@ header:
 
 ## Download
 
-[Windows](https://github.com/flandreas/antares/releases/download/v1.4.0/Antares-1.4.0.msi){: .btn .btn--success .btn--large}
-[macOS](https://github.com/flandreas/antares/releases/download/v1.4.0/Antares-1.4.0.dmg){: .btn .btn--success .btn--large}
-[Linux](https://github.com/flandreas/antares/releases/download/v1.4.0/antares-1.4.0-1.x86_64.rpm){: .btn .btn--success .btn--large}
+[Windows](https://github.com/flandreas/antares/releases/download/v1.5.0/Antares-1.5.0.msi){: .btn .btn--success .btn--large}
+[macOS](https://github.com/flandreas/antares/releases/download/v1.5.0/Antares-1.5.0.dmg){: .btn .btn--success .btn--large}
+[Linux](https://github.com/flandreas/antares/releases/download/v1.5.0/antares-1.5.0-1.x86_64.rpm){: .btn .btn--success .btn--large}
+[JAR](https://github.com/flandreas/antares/releases/download/v1.5.0/antares-1.5.0-all.jar){: .btn .btn--success .btn--large}
 
 ## Installation
 
@@ -28,6 +29,14 @@ Download the .rmp package and install it with
 `sudo alien -i <name of package>.rpm`
 
 Tested on Ubuntu 20.
+
+### JAR
+
+Download the Java JAR file and start it with
+
+`java -jar antares-[version]-all.jar`
+
+Java runtime of at least version 16 required. 
 
 ## Usage
 

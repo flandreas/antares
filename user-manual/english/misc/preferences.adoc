@@ -50,6 +50,8 @@ Maximum zoom factor:: The maximum zoom factor.
 
 Tooltip delay (ms):: The time in milliseconds Antares waits before displaying a tooltip after the mouse stopped moving over a component.
 
+Pan method:: The method to use to pan the view.
+
 Zoom factor in symbol editor:: The initial zoom factor used when switching to the symbol editor.
 
 === Navigation

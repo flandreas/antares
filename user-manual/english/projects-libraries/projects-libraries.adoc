@@ -45,3 +45,12 @@ If you edit a single circuit, you must explicitly save your changes, i.e. you sh
 However, changes to the structure of projects and libraries are always saved automatically. For example, if you delete a directory in a project, this directory disappears from the workbench and the new project structure is immediately saved in the working directory of Antares. Since such actions cannot be undone, Antares will ask you for a confirmation before executing such actions.
 
 NOTE: As of release 0.2, actions on projects and libraries are disabled if the main circuit contains unsaved changes. This is for avoiding inconsistent states when undoing and redoing main circuit changes while project and library states have changed in the meantime.
+
+== Workspace
+
+As of release 1.5, Antares allows you to choose the directory where Antares stores your custom projects and libraries. This directory is called "Workspace". Use menu menu:File[Open Workspace...] to switch to another workspace. Antares remembers the workspace you've chosen in its application settings file and automatically opens that workspace the next time you start Antares.
+
+[Note]
+====
+Note that the application settings, user preferences and log files are still stored in the application data directory, which you cannot chance.
+====
