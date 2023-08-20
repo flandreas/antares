@@ -32,7 +32,7 @@ Besides the usual bugfixes, release 1.1.0 some new features like the new "Power-
 
 # Bugfixes
 
-* **#466: Error when quitting Antares with open main Library:** When quitting Antares while the main open library is a library and not a project, an unexpected error occured. This has been fixed.
+* **#466: Error when quitting Antares with open main Library:** When quitting Antares while the main open library is a library and not a project, an unexpected error occurred. This has been fixed.
 
 * **#469: "D Latch" in standard library stores inverted value":** If D is 1, Q was 0 instead of 1. This happened because the output line crossing has been copy/pasted from the edge-triggered D flip-flop, and has now been fixed. Breaking change.
 

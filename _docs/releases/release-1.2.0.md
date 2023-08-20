@@ -8,7 +8,7 @@ sidebar: { nav: "releases" }
 
 **Release Date**: December 1, 2022
 
-Besides the usual bugfixes, this release contains some new features like a shape library in the symbol editor, a new circuit hierarchy tree view, support for changing the name of all tunnels with the same name, arbitrary bith width, changing properties of multiple selected components in one go, and a new "Verbose" gate symbol style.
+Besides the usual bugfixes, this release contains some new features like a shape library in the symbol editor, a new circuit hierarchy tree view, support for changing the name of all tunnels with the same name, arbitrary bit width, changing properties of multiple selected components in one go, and a new "Verbose" gate symbol style.
 
 # Features
 
@@ -22,7 +22,7 @@ Besides the usual bugfixes, this release contains some new features like a shape
 
 * **#493: Change names of all tunnels with the same old name:** When the user changes the name of a single tunnel, and there are other tunnels with the same old name, Antares now asks the user whether he wants to change the name of these other tunnels as well.
 
-* **#498: Arbitrary Bitwidth for IO (and params):** All bitwidth properties of any component now support adding arbitrary bitwidth between 1 and 64. The commonly used bitwidths are still offered in a dropdown menu.
+* **#498: Arbitrary Bitwidth for IO (and params):** All bit width properties of any component now support adding arbitrary bitwidth between 1 and 64. The commonly used bit widths are still offered in a dropdown menu.
 
 * **#502: Help menu with link to YouTube channel:** Added a "Introduction Videos (YouTub)" item to the "Help" menu that directs the user's web browser to the Antares YouTube channel.
 

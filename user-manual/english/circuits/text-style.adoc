@@ -1,0 +1,68 @@
+= Text Style
+include::../../page-variables.txt[]
+:page-permalink: /user-manual/english/circuits/text-style
+
+=== Overview
+
+When writing names or descriptions of certain objects like circuits, pins, or scenarios, you will often want to apply advanced styles to your text, like an overline over a pin name in order to denote negation.
+
+Antares supports an embedded rich-text grammar you can include into the texts you are writing. The grammar supports overline, subscript, superscript as well as bold and italic font style.
+
+For example, to apply an overline over the name of the inverted output of a flip-flop, you would specify its name as `!Q`, where the exclamation mark requests to render the following character with an overline.
+
+=== Subscript
+
+Render a text block following another text block as subscript with an underscore `\_` for single characters or `_(text)` for multi-character text.
+
+**Examples:**
+
+* `O_1`
+* `Output_(12)`
+
+=== Superscript
+
+Render a text block following another text block as subscript with an caret `^` for single characters or `^(text)` for multi-character text.
+
+**Examples:**
+
+* `O^2`
+* `base^(exp)`
+* `A_2^3`
+
+=== Negation
+
+Render a text block with an overline by using an exclamation mark `!` for single characters or `!(text)` for multi-character text.
+
+**Examples:**
+
+* `!Q`
+* `!(neg)`
+* `A^(!(exp))`
+
+=== Bold
+
+Render a text block as bold by using an asterix `\*` for single characters or `*(bold)` for multi-character text.
+
+**Examples:**
+
+* `This is a *(bold) text.`
+* `*(A_1)`
+
+=== Italic
+
+Render a text block as bold by using a slash `/` for single characters or `/(italic)` for multi-character text.
+
+**Examples:**
+
+* `This text is /(italic)`
+* `/(base^(exp))`
+
+
+=== Escaping
+
+If your text contains one of the control characters used to control styles (such as an exclamation mark), you can add a backslash `\` to escape the character.
+
+** Examples:**
+
+* `This is great\!`
+* `2 \* 2 = 4`
