@@ -32,6 +32,6 @@ When building the circuits from the book with Antares, all circuits have to expl
 
 Note also that not all instructions have been thoroughly tested, but only those that were needed to implement the first machine program that endlessly increments a register value and outputs its current value using a 7-segment display.
 
-Although the project contains a ROM circuit consisting of individual memory cells, like it is decribed in the book, we didn't fully build it due to the immense wiring work involved, and instead replaced it with an Antares built-in ROM component. This also allows you to easily upload a machine program you've editded with a text editor into the ROM component.
+Although the project contains a ROM circuit consisting of individual memory cells, like it is described in the book, we didn't fully build it due to the immense wiring work involved, and instead replaced it with an Antares built-in ROM component. This also allows you to easily upload a machine program you've edited with a text editor into the ROM component.
 
-Once we have more time available, we will enhance the circuits with Antares scenarios to display state-sensitve explanation texts while the microcomputer is simulated.
+Once we have more time available, we will enhance the circuits with Antares scenarios to display state-sensitive explanation texts while the microcomputer is simulated.

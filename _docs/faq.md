@@ -26,6 +26,10 @@ Move the mouse over an existing wire, press ALT and the left mouse button, and d
 
 First create an orthogonal wire. Then change the wire's "Layout" property to "None". Now you can select the wire and move the line segment's end point.
 
+### How to I format text?
+
+See the section in the [user manual](/user-manual/english//circuits/text-style.html).
+
 ### How do I choose the circuit to be automatically opened when I open a project?
 
 Open the project, select the circuit in the explorer's tree, right-click to open the
