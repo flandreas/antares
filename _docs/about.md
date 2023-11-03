@@ -64,6 +64,7 @@ The ultimate goal of Antares is to facilitate interactive textbooks with active 
   - Circuit synthesis based on truth tables or boolean expressions, including expression minimization
   - Circuit generation from minimized expressions
   - Circuit analysis
+  - Circuit test cases
 - **Simulation**
   - Simulation of individual propagation delays
   - Signal flow animation
@@ -75,6 +76,7 @@ The ultimate goal of Antares is to facilitate interactive textbooks with active 
   - Internationalization: Custom texts are translatable to all supported user languages
   - Programmable scenarios for displaying dynamic explanations during simulation
   - Programmable use cases with support for test case implementation
+  - Record mode for use cases
 
 ## Roadmap
 

@@ -36,6 +36,26 @@ private fun setInputAt(time: Long, inputName: String, signal: Any)
 private fun pauseAt(time: Long)
 
 /**
+ * Click the left mouse button at a particular coordinate.
+ *
+ * @param time the simulation time (ns) at which the mouse click is to be done
+ * @param x the x coordinate of the click location  in model space
+ * @param y the y coordinate of the click location in model space
+ * @param delay the time (in ns) between mouse press and mouse release
+ */
+private fun clickMouseAt(time: Long, x: Int, y: Int, delay: Int)
+
+/**
+ * Click the keyboard key with the specified ASCII code at a particular
+ * simulation time.
+
+ * @param time the simulation time (ns) at which the key is to be pressed
+ * @param keyCode the ASCII code of the key
+ * @param delay the time (in ns) between key press and key release
+ */
+private fun clickKeyAt(time: Long, keyCode: Int, delay: Int)
+
+/**
  * Press a button at a particular simulation time.
  *
  * @param time the simulation time (ns) at which the button is to be pressed

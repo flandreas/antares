@@ -1,6 +1,6 @@
 = Global DSL Functions
 include::../../page-variables.txt[]
-:page-permalink: /user-manual/english/scripting/circuit-global-functions
+:page-permalink: /user-manual/english/scripting/scripting-global-functions
 :icons: font
 
 This chapter describes the functions that are globally available in all scripts written in the

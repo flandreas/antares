@@ -41,6 +41,8 @@ manual:
         url: /user-manual/english/circuits/circuits
       - title: "Wires"
         url: /user-manual/english/circuits/wires
+      - title: "Tests"
+        url: /user-manual/english/circuits/circuit-tests
       - title: "Text Style"
         url: /user-manual/english/circuits/text-style
       - title: "Synthesis"
@@ -83,6 +85,8 @@ manual:
 releases:
   - title: 2023
     children:
+      - title: "1.8.0"
+        url: /docs/releases/release-1.8.0
       - title: "1.7.0"
         url: /docs/releases/release-1.7.0
       - title: "1.6.0"

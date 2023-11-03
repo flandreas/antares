@@ -79,3 +79,49 @@ Test:: The script that contains the test conditions of the use case. +
 assertLedOnAt(20000, 2)
 ----
 
+[[recording]]
+=== Recording Use Cases
+
+The scripting API used for writing "Action" scripts in use cases also features the following two functions:
+
+[source,javascript]
+----
+clickMouseAt(time: Long, x: Int, y: Int, delay: Int)
+clickKeyAt(time: Long, keyCode: Int, delay: Int)
+----
+
+These functions can be useful if a use case includes user actions on subcircuit symbol controls, such as clicking on a DIP switch or a button on a symbol. The function `pressButton(time: Long, id: Int)` would not be applicable in this situation, because is can only be used for top-level circuit elements, not for controls in a subcircuit symbol. However, writing a lot of `clickMouseAt()` function calls can be tedious, especially since you have to find out the x and y coordinates of the mouse pointer.
+
+To make the creation of such use case action scripts easier, Antares has a "Record Use Case" mode. Using this mode, Antares can automatically record all mouse clicks and keyboard key presses during a simulation run and add them to the use case action script.
+
+To enter the "Record Use Case" mode, select an existing use case in the "Use Cases" tab at the right side of the main window. Open the context menu by right-clicking and select "Record...". Antares will then open the "Record Use Case" dialog.
+
+image::user-manual/usecases/record-usecase.png[recording, 500,align="center"]
+
+Recording consists of 4 steps:
+
+- Configure recording
+- Recording
+- Stop recording
+
+==== Configure recording
+
+Use case recording supports 2 different modes: In "Realtime" mode, the time between two clicks (mouse or keyboard) when executing a use case will be the same as during recording. If you wait 5 seconds between 2 clicks during recording, the clicks will be later replayed with a 5 second pause when executing the use case. In "Non-realtime" mode, the clicks are recorded to replayed "as fast as possible", or at least faster than you are able to produce them during recording.
+
+Use the following properties in the dialog to configure recording.
+
+Realtime:: If selected, "Realtime" mode is activated. Note that this will disable property "Time between clicks".
+
+Click/release delay:: The delay (in ms) between clicking the mouse (or a key) and releasing it again. This value should not be smaller than the "Propagation delay" value of your interactive components like switches, whose default is configured in the user preferences in "Circuit -> Switch propagation delay".
+
+Time between clicks:: The time (in ms) between 2 click actions. Only enabled in "Non-realtime" mode.
+
+==== Recording
+
+After you've configured recording, you can hit btn:[Start recording]. This will start the simulation of the currently open circuit, and Antares will start listening for mouse and keyboard clicks. Every registered click is recorded as Antares scripting function in the text area below.
+
+Note that the recording dialog switches from "modal" mode to "non-modal" mode, which is necessary to let you click in the simulated circuit. Also note that the button text changes to "Stop recording", and a red glowing icon indicates that Antares is recording your clicks.
+
+==== Stop recording
+
+Once you've done everything in the simulation that should be part of your use case, press btn:[Stop recording]. This will stop the simulation, and the dialog switches back to "Modal" mode. If you're happy with your recording, press btn:[OK] to set the recorded click statements as "Action" script of your use case. If not, leave the dialog by pressing btn:[Cancel], or do another recording round by pressing "Start recording" again.

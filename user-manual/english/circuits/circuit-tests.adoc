@@ -1,0 +1,98 @@
+= Circuit Tests
+include::../../page-variables.txt[]
+:page-permalink: /user-manual/english/circuits/circuit-tests
+
+After you've built a new circuit, you might want to ensure that it works correctly for different input signal combinations.
+
+You can do that by creating "Circuit tests" for your circuit, where you define a truth table with test vectors containing input signals and their expected output signals. When running such a circuit test, Antares will simulate your circuit in the background, establish the input signals from your test vector, and compare the vector's output signals with the actual signals produced by your circuit.
+
+Let's use the "Half Adder" circuit from Antares' standard library to explain how to use circuit tests, and pretend that we have a bug in our design of the half adder. We'll detect it by applying a test case for the half adder circuit.
+
+image::user-manual/circuits/circuit-tests-overview.png[Overview,600,align="center"]
+
+== Create circuit tests
+
+You can create circuit tests for the currently open circuit.
+
+1. Open the "Test Cases" side bar at the right edge of Antares' main window by clicking on "Test cases"
+2. In the tree at the top of the opened side bar, select the circuit node and press the left mouse button to display the context menu. Select "Add test case". Enter a name for your test case in the dialog and press btn:[OK].
+
+3. Select the newly created node in the tree to display the test case's properties in the properties window below the tree.
+
+== Write test vectors
+
+To define test vectors for your test case, select the "Test vectors" property in the properties dialog and click on the "Edit script" button. This opens a dialog with a text area, which is where you write your test vectors.
+
+NOTE:: Test vectors define signals for input and output components in your circuit. Providing inputs for switches, DIP switches etc. and reading output from LEDs etc. is not supported.
+
+A test script consists of two parts:
+
+* A single line containing the input and output names for which you want to define test signals.
+* One or more lines containing test signals. The order of the signals must correspond with the order of the input/output names.
+
+TIP:: If your input/output names contain blanks or rich text formatting tags like `!`, enclose the name in single quotes.
+
+Signal values can be written in three different forms:
+
+* Decimal values, such as `0`, `1` or `16`
+* Hexadecimal values, such as `0x0`, `0x1` or `0x7FB5`
+* Binary values, such as `0b0`, `0b1` or `0b00111011`. Note that binary values can also contain undefined bits denoted as `Z`.
+
+You can use `X` do denote "Don't care" values. When used for input values, Antares will duplicate your test vector and use `0` in the first copy and `1` in the second copy of the test vector. In output values, Antares will not test the actual output value, i.e. every value produced by your circuit will be accepted.
+
+TIP:: Before quitting the test script editor, use the btn:[Check] button to let Antares check the syntax (and semantics) of your script.
+
+Your test cases are saved when you save your circuit.
+
+== Running tests
+
+After you've written your test vectors, you will want to run your test case. Select your test case in the tree at the top of the "Test Cases" side bar, and then menu:left-click[Run] to run your test case, or simply click on the btn:[Run] button in the header of the side bar.
+
+Antares will then run your test case and display the results in side bar "Test results" at the bottom of Antares' main window. In the "Half Adder" example, you'll see that the output "S" is marked in red color for inputs A=1,B=1, because the expected value was `0`, but the circuit produced `1` as output.
+
+The reason for the failed test is of course that the circuit uses an OR gate instead of an XOR gate. After fixing the circuit and running the test again, the test passes successfully.
+
+NOTE:: If your circuit contains an execution script, Antares will run your test vectors for the execution script as well. Its test results are displayed in the tab "Script", whereas the tab "Circuit" contains the results of running the test against the circuit itself.
+
+There are more ways to run circuit tests:
+
+* menu:left-click["Run all"] on the tree's root node to run all tests of a circuit
+* menu:left-click["Run all tests"] on a library/project node in the explorer tree to run all tests in all circuits
+
+== Advanced test scripts
+
+=== Clock signals
+
+In circuits using clock signals, you often want to establish other input signals before you assert the clock signal. Let's look at the test case for "D Flip-Flop" in the standard library:
+
+```
+C   D  Q  '!Q'
+0   0  0  1
+0   1  0  1
+^1  1  1  0
+^1  0  0  1
+```
+
+Input signals that should be set AFTER all other signals have been set can be denoted by a `^` character.
+
+=== Reusing circuit state
+
+Combinational logic generally depends on the current state of a circuit. For example, when testing a counter circuit, you want to test that the counter value increases with every clock impulse.
+
+Since Antares starts a new simulation run for every test vector in your test script, this cannot be achieved by default. However, for such purposes, you can use the `run` statement to combine multiple test vectors into a single simulation run. This is an example from the "Counter n Bit" test:
+
+```
+   C  EN CLR O
+run {
+   ^1 1  0   1
+   0  1  0   1
+   ^1 1  0   2
+   0  1  0   2
+   ^1 1  0   3
+   0  1  0   3
+}
+```
+
+Note how the results table draws a parenthesis in the first column to denote that the corresponding lines all belong to the same `run` block.
+
+image::user-manual/circuits/circuit-tests-run-block.png[Overview,600,align="center"]

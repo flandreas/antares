@@ -112,6 +112,12 @@ Use the search bar to search for components in a circuit based on names, labels,
 
 <img src="/assets/images/user-manual/circuits/search-in-circuit.png" width="700">
 
+### Circuit tests
+
+Write test cases to check whether your circuit produces the expected outputs.
+
+<img src="/assets/images/design/circuit-tests.png" width="700">
+
 ### Multi-circuit desktop
 
 Open subcircuits in additional desktop views. Keep track of symbol-to-circuit relations by the color references created by Antares.

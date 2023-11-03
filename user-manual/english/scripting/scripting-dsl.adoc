@@ -17,10 +17,11 @@ _Antares DSL_ supports the following basic types:
 
 Number values are primarily used as counting variables in loops and in arithmetic expressions. Strings are currently only used as names of pins in circuits. Most of the time, you will use digital signal values.
 
-_Antares DSL_ uses special prefixes to specify hexadecimal values of digital signals.
+_Antares DSL_ uses special prefixes to specify hexadecimal or binary values of digital signals.
 
 * *0x* (Hexadecimal literal)
 * *0x?* (Undefined / floating hexadecimal value)
+* *0b* (Binary literal)
 
 [source,javascript]
 ----
@@ -33,8 +34,14 @@ _Antares DSL_ uses special prefixes to specify hexadecimal values of digital sig
 // Hexadecimal literal
 0xFA
 
-// Hexadecimal literal with 8 undefined (floating) Bits
+// Hexadecimal literal with 8 undefined (floating) bits
 0x?8
+
+// Binary literal
+0b1001
+
+// Binary literal with undefined (floating) bit
+0b00Z01
 ----
 
 When hexadecimal values are combined with or assigned to other hexadecimal values with a different bit width, the value with the smaller bit width is left padded with zeros.
