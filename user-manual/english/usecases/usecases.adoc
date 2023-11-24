@@ -57,6 +57,7 @@ Run Test:: Context menu on the application case node, which is only active if a 
 
 Run all Tests:: Context menu on the circuit node. Runs the tests of all use cases.
 
+[[scripting]]
 === Properties of Use Cases
 
 Name:: The name of the use case that can be translated into all supported languages.

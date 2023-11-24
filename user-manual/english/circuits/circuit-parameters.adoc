@@ -27,6 +27,7 @@ Let's start by defining the plain multiplication circuit. Since we use an Antare
 
 image::user-manual/circuits/parameters-multiplier-plain.png[Plain Multiplier, 300,align="center"]
 
+[[graphParamDefinitions]]
 == Defining Circuit Parameters
 
 Next, we need to define a "Bit Width" parameter for our multiplication circuit. Click on the background of the circuit to display its properties in the properties window. Click on the property "Parameters" (which currently says "None") and then click on the button at the right side. This opens the dialog for editing the circuit parameter definitions.

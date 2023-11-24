@@ -65,6 +65,7 @@ The ultimate goal of Antares is to facilitate interactive textbooks with active 
   - Circuit generation from minimized expressions
   - Circuit analysis
   - Circuit test cases
+  - VHDL export
 - **Simulation**
   - Simulation of individual propagation delays
   - Signal flow animation

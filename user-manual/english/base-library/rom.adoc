@@ -12,6 +12,7 @@ The ROM is a link:{{site.basedir}}/user-manual/english/base-library/memory[memor
 
 If the CS input of the ROM has the value 1 during simulation, the data at a specific memory address can be read out by applying the address at input "A". The data stored at this address will be available at output D after the propagation delay has expired.
 
+[[disassembler]]
 == Disassembler
 
 The ROM component offers the possibility to translate the values of memory cells into a readable form when they are displayed. A typical example is machine code of a microcomputer whose individual machine instructions are to be translated into the corresponding assembler instructions, a process called "disassembling".

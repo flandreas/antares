@@ -64,6 +64,7 @@ Name:: The name of the scenario, which can be translated into all supported lang
 
 Description:: The description of the scenario, which can be translated into all supported languages. It is displayed during simulation in a text box above the circuit as long as the scenario is active.
 
+[[scenarioCondition]]
 Condition:: The script with the condition that must be fulfilled for this scenario to be activated. If several scenarios fulfill their condition at the same time, Antares will only activate the first of these scenarios.
 See link:{{site.basedir}}/user-manual/english/scripting/scripting[Scripting] for details on scripting.  +
 +
@@ -73,6 +74,7 @@ See link:{{site.basedir}}/user-manual/english/scripting/scripting[Scripting] for
 S == 1 and R == 0
 ----
 
+[[scenarioStepScripting]]
 === Properties of Scenario Steps
 
 Name:: The name of the scenario step, which can be translated into all supported languages. It is only used in the current version of Antares for display in the tree.

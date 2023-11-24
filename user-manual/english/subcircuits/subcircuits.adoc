@@ -114,7 +114,8 @@ Output Annotation:: Only available for outputs. Depending on the value "None", "
 
 When you click on the background of the drawing area, the Antares properties window displays the properties of the entire symbol.
 
-Display during simulation:: In this property you can enter a script that can be used to additionally influence the representation of the symbol (currently still within narrow limits) during simulation. For example, the multiplexer components of the standard Antares library contain a script that represents the selected data path within the symbol by drawing a line from input to output. +
+[[representation]]
+Representation during simulation:: In this property you can enter a script that can be used to additionally influence the representation of the symbol (currently still within narrow limits) during simulation. For example, the multiplexer components of the standard Antares library contain a script that represents the selected data path within the symbol by drawing a line from input to output. +
 +
 image:user-manual/subcircuits/exec-draw-sample.png[, 350, align="center"]
 +
