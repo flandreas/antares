@@ -124,6 +124,12 @@ Export your circuits to VHDL and generate a test bench from one of your circuit'
 
 <img src="/assets/images/design/vhdl-export-sample.png" width="700">
 
+### Analog circuits
+
+Design analog circuits and observe electrical current and voltage during simulation. Build analog gates from MOSFETs and use them as subcircuits in your digital circuits.
+
+<img src="/assets/images/user-manual/circuits/analog/analog.gif" width="500">
+
 ### Multi-circuit desktop
 
 Open subcircuits in additional desktop views. Keep track of symbol-to-circuit relations by the color references created by Antares.

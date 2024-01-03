@@ -1,0 +1,29 @@
+= Light Bulb
+include::../../../page-variables.txt[]
+:page-permalink: /user-manual/english/base-library/analog/light-bulb
+
+== Appearance
+
+image:user-manual/base-library/analog/light-bulb.png[Example light bulb]
+
+== Behaviour
+
+Glows in the specified light color if the current flowing through the light bulb exceed the "Min. current". The higher the current, the brighter the light bulb is rendered, until "Max. current" is reached. Unlike real light bulb, an Antares light bulb doesn't get damaged if "Max. current" is exceeded.
+
+Current calculation takes the light bulb's configured "Resistance" into account.
+
+A light bulb can also be added as a control to the analog circuit's symbol.
+
+== Pins
+
+A light bulb has two bi-directional pins.
+
+== Properties
+
+Light Color:: The color of the light produced during simulation.
+
+Resistance:: The inner resistance in Ohm.
+
+Min. current:: The current (A) above which the light bulb starts to glow.
+
+Max. current:: The current (A) at which the largest brightness is reached.

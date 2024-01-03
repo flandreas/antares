@@ -10,7 +10,7 @@ The main menu menu:File[Libraries...] leads you to the Antares library managemen
 
 image::user-manual/projects-libraries/libraries-sample-en.png[libraries,400,align="center"]
 
-The table shows all libraries available on your computer. These include the "Basic" and "Standard" libraries provided by Antares, as well as your own user libraries. The lock icon in the table indicates the type of library: User libraries (in the example "Test") show an open lock, while the build-in libraries, which you cannot change, are shown with a closed lock.
+The table shows all libraries available on your computer. These include the "Basic" and "Standard" libraries provided by Antares, as well as your own user libraries. The lock icon in the table indicates the type of library: User libraries (in the example "Test") show an open lock, while the built-in libraries, which you cannot change, are shown with a closed lock.
 
 After selecting a library, the description of the library is displayed below the table.
 

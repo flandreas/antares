@@ -53,7 +53,7 @@ If your project or the library you are using contains a lot of components, possi
 
 == Selecting a component
 
-If you select an build-in component or a subcircuit in the workbench tree, the preview above the workbench displays the component's icon as well as its name and short description (if available). This information helps you to identify the correct component before you add it to your circuit. You add the selected component to your circuit by dragging and dropping it into your circuit.
+If you select an built-in component or a subcircuit in the workbench tree, the preview above the workbench displays the component's icon as well as its name and short description (if available). This information helps you to identify the correct component before you add it to your circuit. You add the selected component to your circuit by dragging and dropping it into your circuit.
 
 == Expanding and collapsing tree nodes
 

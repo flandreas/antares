@@ -11,7 +11,9 @@ _Antares DSL_ is a dynamically typed programming language. Expressions do have a
 
 _Antares DSL_ supports the following basic types:
 
-* Number (Long)
+* Number
+** Long (used in digital circuits)
+** Float (used in analog circuits)
 * String
 * Digital Signal
 
@@ -25,8 +27,11 @@ _Antares DSL_ uses special prefixes to specify hexadecimal or binary values of d
 
 [source,javascript]
 ----
-// Number literal
+// Long number literal
 42
+
+// Float number literal
+3.14
 
 // String literal
 "Hello"
@@ -429,20 +434,20 @@ To access pin values of any of the circuit's element, you can use the "Property 
 
 [source,javascript]
 ----
-#1.A == 1 and #1.B == 0
+#1:A == 1 and #1:B == 0
 ----
 
-The first number right after the `#` tag represents the model ID of the circuit components whose pins you want to access. The second value right after the `.` identifies an individual port of that circuit component. Both together are resolved to the corresponding pin's current signal value.
+The first number right after the `#` tag represents the model ID of the circuit components whose pins you want to access. The second value right after the `:` identifies an individual port of that circuit component. Both together are resolved to the corresponding pin's current signal value.
 
 TIP: How do you find out the model ID of a circuit component? Select the component in your circuit and consult the property "Model ID" in the properties window.
 
 The above example identifies pins by their names. Remember to use quoted port names like `"!Q"` if the port name doesn't represent a legal variable name.
 
-Since names are not mandatory for ports (and a lot of build-in components like logic gates don't have port names), is is also possible to reference ports by their ID.
+Since names are not mandatory for ports (and a lot of built-in components like logic gates don't have port names), is is also possible to reference ports by their ID.
 
 [source,javascript]
 ----
-#1.1 == 1 and #1.1 == 0
+#1:1 == 1 and #1:1 == 0
 ----
 
 There are two ways how to find out the ID of a port in a circuit component.

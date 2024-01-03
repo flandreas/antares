@@ -1,0 +1,19 @@
+= Current Source
+include::../../../page-variables.txt[]
+:page-permalink: /user-manual/english/base-library/analog/current-source
+
+== Appearance
+
+image:user-manual/base-library/analog/current-source.png[Current Source]
+
+== Behaviour
+
+Produces a constant electrical current at its single output.
+
+== Pins
+
+Current source has a single output pin.
+
+== Properties
+
+Current:: The electrical current (A) this component produces at its output pin.

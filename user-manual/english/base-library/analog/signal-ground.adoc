@@ -1,0 +1,17 @@
+= Signal Ground
+include::../../../page-variables.txt[]
+:page-permalink: /user-manual/english/base-library/analog/signal-ground
+
+== Appearance
+
+image:user-manual/base-library/analog/signal-ground.png[Signal Ground]
+
+== Behaviour
+
+Defines the electrical reference potential.
+
+An analog circuit doesn't necessarily have to contain a signal ground component. For example, if your circuit contains a battery, its negative pin is used to define the reference potential.
+
+== Pins
+
+The signal ground has one bi-directional pin.

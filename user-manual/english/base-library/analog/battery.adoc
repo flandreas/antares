@@ -1,0 +1,19 @@
+= Battery
+include::../../../page-variables.txt[]
+:page-permalink: /user-manual/english/base-library/analog/battery
+
+== Appearance
+
+image:user-manual/base-library/analog/battery.png[Example battery]
+
+== Behaviour
+
+A battery provides a constant electrical voltage at its two outputs. Although real-world batteries don't act as ideal voltage source, an Antares battery does. The name "Battery" was chosen because it is more familiar from daily usage.
+
+== Pins
+
+A battery has two bi-directional pins. The positive pin annotated with "+" is the cathode and produces the positive voltage level as specified by the property "Voltage".
+
+== Properties
+
+Voltage:: The electrical voltage (V) produced by the battery.

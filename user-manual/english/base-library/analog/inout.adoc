@@ -1,0 +1,23 @@
+= Input/Output
+include::../../../page-variables.txt[]
+:page-permalink: /user-manual/english/base-library/analog/inout
+
+== Appearance
+
+image:user-manual/base-library/analog/inout.png[Input/Output]
+
+== Behaviour
+
+An Input/Output is used to provide a voltage level from a surrounding circuit (in case of "Input") or forward a voltage level to a surrounding circuit (in case of an "Output").
+
+When using an analog circuit as a subcircuit in a digital circuit, Input/Output automatically converts digital signals from outside to a certain voltage; the corresponding conversion happens for "Outputs". In the current version of Antares, the voltage at an output must be at least 2.0 Volts to be recognized as logical 1. At an input pin, a logical 1 is converted to 5.0 Volts.
+
+During simulation of an analog top-level circuit, you can click on an input to toggle between 0.0 and 5.0 Volts.
+
+== Pins
+
+An Input/Output has a single pin Its direction (input, output, bi-directional) depends on the property "Port Type".
+
+== Properties
+
+Port Type:: Choose whether the port (or pin) acts as "Input", "Output" or "Input/Output".

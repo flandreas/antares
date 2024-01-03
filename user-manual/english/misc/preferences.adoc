@@ -99,12 +99,18 @@ Fill signal curve:: If set, signal curves in oscilloscope rows are filled with a
 
 == Circuit
 
-Gate style:: The style in which logic gates are drawn. Choose between "ANSI/IEEE" (rounded symbols), "IEC" (rectangular symbols), and "Verbose" (rectangular with verbose label) style.
+=== General
+
+Symbol style:: The style in which symbols (primarily gates, but also others like resistors) are drawn. Choose between "ANSI/IEEE" (rounded symbols), "IEC" (rectangular symbols), and "Verbose" (rectangular with verbose label) style.
 
 Style of generated symbols:: Determines whether and how Antares automatically generates symbols for your custom circuit.
 - **None (deactivated)**: Antares doesn't generate symbols. You will have to draw them on your own using the symbol editor.
 - **Narrow**: Antares generates narrow symbols that contain an abbreviation of the circuit name as label, as well as input and output pins.
 - **Wide**: Antares generates wide symbols that contain the entire circuit name as label, as well as input and output pins.
+
+Transistor with circle:: If set, transistors are drawn with a circle around the three pins.
+
+=== Digital
 
 Undefined gate input behaviour:: Determines how Antares behaves if gates have undefined signals at their input pins during simulation.
 - **Read as 0**: Undefined signals are treated as if they were 0 (zero)
@@ -125,16 +131,18 @@ Tunnel symbol:: Determines the style in which link:{{site.basedir}}/user-manual/
 
 Transistor symbol:: Determines the style in which link:{{site.basedir}}/user-manual/english/base-library/transistor["Transistor symbols"] are drawn.
 
-Transistor with circle:: If set, transistors are drawn with a circle around the three pins.
-
 Wide bus stroke:: If set, wires with a bit width larger than 1 are drawn with a wider stroke.
 
 Switch propagation delay (ns):: The propagation delay in nanoseconds used for switch-like components like switch or DIP switch as default propagation delay. Default value is 1'000.
 
-=== Expressions
+==== Expressions
 
 Notation:: The default notation for boolean expression used when Antares generates them.
 
 Omit AND for single character variable names:: If set, Antares omits "AND" operators when generating terms in boolean expressions whose variable names consist only of a single character, as in `AB or CD`.
 
 Put AND terms in parenthesis:: If set, Antares puts AND terms in generated boolean expressions in parenthesis, as in `(AB) or (CD)` to explicitly denote operator precedence.
+
+=== Analog
+
+Current speed:: The speed of current flow animation in analog circuits. Supported values range from 1 (slow) to 10 (fast).

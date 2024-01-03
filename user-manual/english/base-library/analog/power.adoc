@@ -1,0 +1,19 @@
+= Power
+include::../../../page-variables.txt[]
+:page-permalink: /user-manual/english/base-library/analog/power
+
+== Appearance
+
+image:user-manual/base-library/analog/power.png[Power]
+
+== Behaviour
+
+Produces a constant voltage at its output pin.
+
+== Pins
+
+Power has a single output pin.
+
+== Properties
+
+Voltage:: The voltage (V) this component produces at its output pin.

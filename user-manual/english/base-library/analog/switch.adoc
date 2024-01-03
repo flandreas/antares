@@ -1,0 +1,21 @@
+= Switch
+include::../../../page-variables.txt[]
+:page-permalink: /user-manual/english/base-library/analog/switch
+
+== Appearance
+
+image:user-manual/base-library/analog/switch.png[Switch]
+
+== Behaviour
+
+A switch allows you to manually open or close a wire segment during simulation.
+
+A switch can also be added as a control to the analog circuit's symbol, where it is rendered as a push button.
+
+== Pins
+
+The switch has two bi-directional pins.
+
+== Properties
+
+Name:: The name of a switch is displayed as a label beneath the switch symbol.

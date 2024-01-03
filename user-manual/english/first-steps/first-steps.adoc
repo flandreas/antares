@@ -6,6 +6,20 @@ In this chapter you will learn the most important areas of the main window and t
 
 If necessary, see link:{{site.basedir}}/user-manual/english/first-steps/orientation[Orientation] for a basic overview of the user interface's elements.
 
+== TL;DR
+
+- When Antares is  started for the first time, a project "My first project" with an empty circuit "New Circuit" is created and opened.
+- To add an AND gate to your circuit, expand the folder "Library 'Standard'" and "Frequently used" in the explorer tree at the left side of the window, press the left mouse button on the "AND" icon, drag it into the blank area of the circuit, and release the mouse button.
+- To connect components with a wire, hover with the mouse over a pin until a green circle appears, press the left mouse button, and drag the mouse onto the destination pin. Release the mouse button after a green circle appears.
+- To create a wire junction, hover with the mouse over a wire, press btn:[ALT] to display the green circle, press the left mouse button, and drag the mouse onto a destination pin until the green circle appears. Release the mouse button to create the wire.
+- To start simulation, press the third button in the toolbar (the one with the right-pointing triangle).
+- During simulation, you can click with the mouse on active components like switches to alter signals.
+- To stop simulation and to continue editing your circuit, press the right-pointing triangle again.
+- Save your circuit with menu:File[Save] or by pressing CMD+S
+- To create a new circuit within your project, select "My first project" in the explorer tree, right-click with the mouse, and select "New circuit" in the popup menu.
+- To create a new project, select menu:File[Projects] and press btn:[New].
+- To open another project, select menu:File[Projects], select the project in the displayed list, and press btn:[Open].
+
 == Drawing circuits
 
 As a first exercise example we build a circuit that represents the XOR function of two variables. Actually, this would not be necessary, because the standard library of Antares already contains a built-in XOR component. Nevertheless, we will build our own XOR component, because it is a good introductory example.

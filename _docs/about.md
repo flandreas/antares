@@ -29,7 +29,7 @@ by this famous application that has sadly been discontinued a long time ago. How
 
 ## Supported Platforms
 
-Antares is a desktop application for Windows and macOS. The installation programs include the entire required runtime environment; installation of additional components like Java JRE is not required.
+Antares is a desktop application for Windows, macOS and Linux. The installation programs include the entire required runtime environment; installation of additional components like Java JRE is not required.
 
 ## Mission
 
@@ -66,6 +66,7 @@ The ultimate goal of Antares is to facilitate interactive textbooks with active 
   - Circuit analysis
   - Circuit test cases
   - VHDL export
+  - Analog circuits with electrical current and voltage
 - **Simulation**
   - Simulation of individual propagation delays
   - Signal flow animation
@@ -73,6 +74,7 @@ The ultimate goal of Antares is to facilitate interactive textbooks with active 
   - Continuously choosable simulation speed
   - Single-step simulation
   - Oscilloscope
+  - Current flow animation in analog circuits
 - **Explanations**
   - Internationalization: Custom texts are translatable to all supported user languages
   - Programmable scenarios for displaying dynamic explanations during simulation

@@ -24,7 +24,9 @@ Shadows:: This property controls whether this particular component is to be disp
 
 Color:: Normally, the color in which a component is drawn is determined by its style. The property "Color" can be used to override the color for a specific component. This can be used, for example, to identify all components of a circuit that perform a similar function with the same color. See chapter link:{{site.basedir}}/user-manual/english/styles/styles[Styles and Themes] for more details.
 
-== Components
+== Digital Components
+
+These components are contained in the built-in library "Standard".
 
 === Net
 
@@ -149,3 +151,19 @@ Color:: Normally, the color in which a component is drawn is determined by its s
 * Sync. BCD Counter 4 Bit
 * Frequency Divider 1:16
 * Binary Counter 4 Bit LD/CLR
+
+== Analog Components
+
+These components are contained in the built-in library "Analog".
+
+* image:user-manual/base-library/analog/light-bulb.svg[Light Bulb] link:{{site.basedir}}/user-manual/english/base-library/analog/light-bulb[Light Bulb]
+* image:user-manual/base-library/analog/battery.svg[Battery] link:{{site.basedir}}/user-manual/english/base-library/analog/battery[Battery]
+* image:user-manual/base-library/analog/resistor-ansi.svg[Resistor] link:{{site.basedir}}/user-manual/english/base-library/analog/resistor[Resistor]
+* image:user-manual/base-library/real-switch.svg[Switch] link:{{site.basedir}}/user-manual/english/base-library/analog/switch[Switch]
+* image:user-manual/base-library/analog/signal-ground.svg[Signal Ground] link:{{site.basedir}}/user-manual/english/base-library/analog/signal-ground[Signal Ground]
+* image:user-manual/base-library/transistor.svg[MOSFET] link:{{site.basedir}}/user-manual/english/base-library/analog/mosfet[MOSFET]
+* image:user-manual/base-library/input.svg[Input/Output] link:{{site.basedir}}/user-manual/english/base-library/analog/inout[Input/Output]
+* image:user-manual/base-library/power.svg[Power] link:{{site.basedir}}/user-manual/english/base-library/analog/power[Power]
+* image:user-manual/base-library/analog/current-source.svg[Current Source] link:{{site.basedir}}/user-manual/english/base-library/analog/current-source[Current Source]
+
+

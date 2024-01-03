@@ -53,6 +53,8 @@ manual:
         url: /user-manual/english/subcircuits/subcircuits
       - title: "VHDL Export"
         url: /user-manual/english/circuits/vhdl-export
+      - title: "Analog circuits"
+        url: /user-manual/english/circuits/analog-circuits
   - title: Simulation
     children:
       - title: "Simulation"
@@ -85,6 +87,10 @@ manual:
         url: /user-manual/english/misc/key-bindings
 
 releases:
+  - title: 2024
+    children:
+      - title: "1.10.0"
+        url: /docs/releases/release-1.10.0
   - title: 2023
     children:
       - title: "1.9.0"

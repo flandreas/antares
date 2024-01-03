@@ -1,0 +1,22 @@
+= Resistor
+include::../../../page-variables.txt[]
+:page-permalink: /user-manual/english/base-library/analog/resistor
+
+== Appearance
+
+image:user-manual/base-library/analog/resistor-ansi.png[Resistor (ANSI)]
+image:user-manual/base-library/analog/resistor-iec.png[Resistor (IEC)]
+
+== Behaviour
+
+A resistor establishes electrical resistance between its two pins.
+
+== Pins
+
+The resistor has two bi-directional pins.
+
+== Properties
+
+Resistance:: The electrical resistance in Ohm.
+
+Variable:: If checked, the resistor turns into a potentiometer. You can then click on the resistor during simulation to bring up a knob that allows you to change the resistance.
