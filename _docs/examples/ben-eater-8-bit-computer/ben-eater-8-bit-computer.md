@@ -13,8 +13,7 @@ gallery:
 
 # "Ben Eater's 8-bit computer"
 
-[Download](https://github.com/flandreas/antares/releases/download/v1.8.0/Ben-Eater-8-bit-computer.acp){: 
-.btn .btn--primary .btn--large}
+[Download](https://github.com/flandreas/antares/releases/download/v1.8.0/Ben.Eater.8-bit.computer.acp){: .btn .btn--primary .btn--large}
 
 {% include gallery id="gallery" caption="Screenshots" %}
 
