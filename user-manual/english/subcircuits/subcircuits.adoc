@@ -20,12 +20,17 @@ It often happens that you have not yet decided at the beginning of the design of
 
 Ports must have a unique **name** so that they can be identified at various points by the user of the circuit, e.g. in the symbol of the subcircuit. Antares itself uses a different identification of ports internally. If a circuit uses a subcircuit with an input named "A" and a wire leads to this input, Antares does not remember the name "A" as a reference, but the internal number of the port (see below). This allows you to change the names of ports in subcircuits even if the subcircuit is already used in other circuits.
 
+==== Name Styles
+
 Digital circuits often have inputs and outputs that transmit an inverted signal and whose names are marked with a crossbar above the text. An example is a flip-flops with the outputs Q and [overline]#Q#. You can create a crossbar in Antares by placing an exclamation mark in front of the letter that you want to have a crossbar. Longer text with crossbars can be additionally marked with round brackets.
 
 Examples:
 
  !Q
  !(ABC)
+
+Subscript and superscript is possible with the `\_` and `^` marks, e.g. `Mem_(In)` will be displayed as Mem~In~. The `/` mark will make letters _italic_ and `*` will make them bold.
+If this special meaning of the formatting characters is not desired, a backslash can be used to escape them: `I\/O` will become "I/O" instead of "I__O__".
 
 === Bidirectional Ports
 
