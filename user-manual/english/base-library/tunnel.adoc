@@ -18,13 +18,17 @@ This type of symbol uses a triangle-shaped arrow. The direction into which the a
 
 image:user-manual/base-library/tunnel-arrow.png[Tunnel with arrows, 600]
 
+Global arrow tunnels are drawn with a filled shape.
+
 == Behavior
 
 The tunnel component is a wire element that is used to connect distant points of a circuit without the need to draw a wire.
 
 A circuit can contain several tunnel connections, which are distinguished by the name of the tunnel. In the example above, there are the two tunnel names "A" and "B". The signal of the switch on the far left leads to the tunnel input "A" and is automatically routed to the tunnel output with the same name. Note that the tunnel named "B" does not receive the signal, because it has a different name.
 
-The scope of a tunnel name is limited to the current circuit. If a circuit contains a subcircuit which itself contains a tunnel with the same name "A", the signal in tunnel "A" of the main circuit *not* is passed to tunnel "A" in the subcircuit.
+Tunnels can either be local or global. With local tunnels, the scope of a tunnel name is limited to the current circuit. If a circuit contains a subcircuit which itself contains a tunnel with the same name "A", the signal in tunnel "A" of the main circuit is *not* passed to tunnel "A" in the subcircuit.
+
+With global tunnels, this restriction doesn't exist. When sending a signal into a global tunnel, that signal is forwarded to all tunnels with the same name in the entire library or project, i.e. to tunnels in open subcircuits, or from subcircuits to the main circuit or other subcircuits.
 
 == Pins
 
@@ -39,3 +43,5 @@ Name:: The name of the tunnel into which this component is sending its signal. T
 Bit Width:: The number of bits that can be transmitted simultaneously through this tunnel.
 
 Flow Direction:: Only available for symbol type "Arrow". Rotates the arrow triangle to indicate the direction in which signals flow through the tunnel.
+
+Global:: Determines whether the tunnel is global, meaning that it can send and receive global signals across circuit boundaries. Local tunnels communicate only within the same circuit.

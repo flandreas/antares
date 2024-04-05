@@ -110,6 +110,8 @@ Style of generated symbols:: Determines whether and how Antares automatically ge
 
 Transistor with circle:: If set, transistors are drawn with a circle around the three pins.
 
+Transistor port names: If set, transistor ports display a pin name, such as "G" for "Gate".
+
 === Digital
 
 Undefined gate input behaviour:: Determines how Antares behaves if gates have undefined signals at their input pins during simulation.
