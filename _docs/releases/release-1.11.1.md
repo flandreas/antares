@@ -19,4 +19,6 @@ Fixes some severe bugs
 
 * **#714: "Undo" broken after opening RAM/ROM:** If a user opened a RAM or ROM's content view, subsequent undo/redo operations could lead to an error. This has been fixed.
 
+* **#715: RAM can ignore writes:** The RAM component ignored writing a 0 value in certain circumstances. This has been fixed.
+
 * **#721: Error in "Undo" if moving wire segment is involved:** Moving wire segments could lead to errors in subsequent undo/redo operations. This has been fixed.
