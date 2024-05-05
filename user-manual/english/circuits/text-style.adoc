@@ -33,6 +33,8 @@ Render a text block following another text block as subscript with an caret `^` 
 
 Render a text block with an overline by using an exclamation mark `!` for single characters or `!(text)` for multi-character text.
 
+Negations can also be nested, for example `!(ENABLE !(A+B))`.
+
 **Examples:**
 
 * `!Q`
@@ -41,7 +43,7 @@ Render a text block with an overline by using an exclamation mark `!` for single
 
 === Bold
 
-Render a text block as bold by using an asterix `\*` for single characters or `*(bold)` for multi-character text.
+Render a text block as bold by using an asterisk `\*` for single characters or `*(bold)` for multi-character text.
 
 **Examples:**
 

@@ -152,6 +152,20 @@ The selection state of the graphical objects is displayed by drawing in the sele
 
 Select a graphic component and change its properties such as "Fill", "Border", "Shadow", "Style", "Color", "Line style" to customize the appearance of the component. In chapter link:{{site.basedir}}/user-manual/english/styles/styles["Styles and themes"] you can find more information about styles, colors and other graphical properties.
 
+== Images
+
+Antares allows you to add images to your project and use them in various places, e.g. directly in a circuit, but also in a circuit's symbol. There are also special components like "Image switch" which you can configure to display an image for each of the "on" and "off" state.
+
+=== Adding images to circuits
+
+Right-click on a folder in the explorer tree (e.g. your current project) and menu:right click[Import image...] to open the image importer dialog. Click btn:[Select] to open the file chooser dialog, select the image to import, and optionally edit the image's name.
+
+Once imported, the image appears as special image node in the explorer's tree. Drag the image from the explorer into a circuit to create an image component in your circuit.
+
+=== Adding images to symbols
+
+The tree on the left side of the symbol editor has a "Images" folder that contains all images you've imported into your project. Drag an image into the symbol editor window to add the image to your symbol. Adjust the image's size if needed.
+
 == Aligning components
 
 Antares offers two tools that facilitate the mutual alignment of components.

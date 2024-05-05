@@ -1,0 +1,31 @@
+= Image Switch
+include::../../page-variables.txt[]
+:page-permalink: /user-manual/english/base-library/image-switch
+
+== Appearance
+
+image:user-manual/base-library/image-switch-sample.png[Example image switch, 200]
+
+If the image switch has not yet been configured with images, it is drawn as a simple box with a cross in it. With configured images, it displays the "off" image in edit mode.
+
+== Behaviour
+
+The behaviour of an image switch is exactly the same as the normal (digital) switch. The only difference is that you can define two images to be displayed depending on the switch's state during simulation: One image for "on", and another for "off".
+
+== Pins
+
+A image switch has only one single 1-bit output, which has the value 1 when the switch is pressed.
+
+== Properties
+
+Pin direction:: The direction in which the output pin points relative to the image.
+
+Orientation:: Rotates the entire component around its origin.
+
+Switch:: If this property is set (default), the switch remains in the pressed state after the user has released the mouse button (or the keyboard key that triggered the pressing of the switch).
+
+On image:: The image to be displayed during simulation when the switch is in state "on".
+
+Off image:: The image to be displayed during simulation when the switch is in state "off".
+
+Scaling factor:: The factor to be applied for scaling the images. Typically used if the imported images are too large compared to other components.

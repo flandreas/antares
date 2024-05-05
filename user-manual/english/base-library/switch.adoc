@@ -32,3 +32,4 @@ Label Position:: Determines where the "Name" of the switch is displayed as text.
 
 Switch:: If this property is set (default), the switch remains in the pressed state after the user has released the mouse button (or the keyboard key that triggered the pressing of the switch).
 
+Minimum on time:: If the switch property is set, a minimum on time can be configured. If the user releases the mouse button before this time has expired, the button will stay pressed until the time is over.

@@ -38,7 +38,7 @@ The set of styles is predefined by Antares. The following styles are available:
 
 Figure:: This style is the basic style in Antares. It is mainly used for "pure" graphical objects like rectangle, ellipse, line etc.
 
-Element:: This style is used for the vertice elements of the graph that make up the circuit. In Antares these are the circuit components such as logic gates or subcircuits.
+Element:: This style is used for the vertex elements of the graph that make up the circuit. In Antares these are the circuit components such as logic gates or subcircuits.
 
 Connection:: This style is used in Antares for the wires that connect the circuit components.
 

@@ -72,6 +72,7 @@ These components are contained in the built-in library "Standard".
 * image:user-manual/base-library/clock.svg[Clock] link:{{site.basedir}}/user-manual/english/base-library/clock[Clock]
 * image:user-manual/base-library/keyboard.svg[Keyboard] link:{{site.basedir}}/user-manual/english/base-library/keyboard[Keyboard]
 * image:user-manual/base-library/joystick.svg[Joystick] link:{{site.basedir}}/user-manual/english/base-library/joystick[Joystick]
+* image:user-manual/base-library/switch.svg[Image Switch] link:{{site.basedir}}/user-manual/english/base-library/image-switch[Image Switch]
 
 === Output
 
