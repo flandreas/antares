@@ -9,14 +9,17 @@ Although the Antares desktop client is already very powerful and provides many u
 
 # Interactive online textbooks
 
-With the help of Antares, it will be possible in the future for authors of digital technology textbooks to create online versions of their textbooks that contain interactive, animated circuits. This will supplement the author's explanatory text with interactive elements in which the student can interactively experience and deepen the subject matter.
+Design your circuits in Antares Desktop. Upload your projects to Antares Web and embed circuits in your own web pages.
 
-The following examples show how pages in an online textbook with Antares circuit elements might look like:
+Like so:
 
-- [Binary Addition](../antares-web.html): Built as a ReactJS page.
-- [Making Logic Gates from Transistors](/gates-from-transistors): Embedded iFrames in Jekyll blog page.
-
-An essential element is the question of the form in which the textual content is created, supplemented by interactive Antares elements. We aim to provide plugins for common CMS systems that can be used to integrate Antares elements into online pages.
+<iframe
+style="border:1px solid gray;"
+title="CMOS NAND Gate"
+width="650"
+height="880"
+src="https://viewer.antarescircuit.io?library=0aefe653-220e-49fe-9f6b-da3bade5b944&circuit=fabe8b34-563d-43b2-ac49-537caab74dec&theme=Black+%26+White">
+</iframe>
 
 # Integration with course management and online homework assignments
 

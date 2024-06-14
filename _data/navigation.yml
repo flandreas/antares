@@ -3,6 +3,8 @@ main:
     url: /docs/quick-start/
   - title: "About"
     url: /docs/about/
+  - title: "Webapp"
+    url: https://app.antarescircuit.io
   - title: "Manual"
     url: /user-manual/english/usermanual
   - title: "Blog"
@@ -85,10 +87,16 @@ manual:
         url: /user-manual/english/misc/preferences
       - title: "Key Bindings"
         url: /user-manual/english/misc/key-bindings
+  - title: Web
+    children:
+      - title: "Publish circuits"
+        url: /user-manual/english/web/web-publishing
 
 releases:
   - title: 2024
     children:
+      - title: "1.13.0"
+        url: /docs/releases/release-1.13.0
       - title: "1.12.0"
         url: /docs/releases/release-1.12.0
       - title: "1.11.1"

@@ -114,6 +114,8 @@ Transistor port names: If set, transistor ports display a pin name, such as "G" 
 
 === Digital
 
+Default propagation delay (ns):: The default propagation delay (in nanoseconds) of logic gates (and some other components). Only applied for new components added to circuits.
+
 Undefined gate input behaviour:: Determines how Antares behaves if gates have undefined signals at their input pins during simulation.
 - **Read as 0**: Undefined signals are treated as if they were 0 (zero)
 - **Read as 1**: Undefined signals are treated as if they were 1

@@ -85,6 +85,11 @@ Connecting components using wires is a separate, large topic that is dealt with 
 
 The properties of the built-in components are explained in chapter link:{{site.basedir}}/user-manual/english/base-library/base-library["Base Library"]. This section describes the properties of subcircuit components.
 
+Propagation Delay [ns]:: On subcircuits, this property is only used in "shallow" simulation mode to determine the time when the executed script sends its results to the output pins. In deep simulation mode, this property is not used, because propagation delay results naturally by executing the inner subcircuit. +
+ +
+NOTE: This property is not displayed if the subcircuit has a parameter with semantic "Propagation Delay", in which case the property is replaced by the generic "Parameter <Name>" from the subcircuit.
+
+
 Orientation:: The cardinal point to which the symbol of the subcircuit points. Like basic components, symbols of subcircuits can also be rotated with kbd:[Cmd + R].
 
 Mirror Horizontally:: Mirrors the symbol in horizontal direction (or on the vertical axis through the origin of the symbol). This is useful, for example, if wires with input signals arrive in the using circuit from the right side, but the inputs in the symbol are located on the left side of the symbol.
@@ -103,6 +108,8 @@ Control Visibility:: Determines when controls contained in a subcircuit symbol a
 * **Never**: Controls are displayed neither in edit mode nor during simulation.
 * **During Simulation**: Controls are displayed only during simulation. This is the default value.
 * **Always**: Controls are displayed in edit mode as well as during simulation.
+
+Parameter 'XYZ':: These parameters allow you to specify a value for generic parameters defined by the subcircuit.
 
 == Editing subcircuit symbols
 

@@ -12,7 +12,7 @@ To avoid this, you can build just one circuit and define a circuit parameter of 
 
 The circuit parameter system currently has the following restrictions:
 
-* **Supported parameter types**: Currently only "Bit Width" is supported as type of a circuit parameter. More types like "Boolean", "Number", "Text" or "Light Color" will follow.
+* **Supported parameter types**: Currently only "Bit Width" and "Integer Number" are supported as type of circuit parameter. More types like "Boolean", "Text" or "Light Color" will follow.
 * **Circuit Generation**: Circuit parameters can only be used as values of circuit element properties. Although perhaps desirable, it is not yet possible to generate the contents of a sub circuit depending on the value of a circuit parameter.
 
 === Example
@@ -39,6 +39,7 @@ You can define multiple circuit parameters for a circuit. Each circuit parameter
 * **Name**: The name of the parameter. You reference this name when you write an expression for a bit width property of your circuit elements. Note that this name must be unique, and that is must not collide with names of circuit inputs or outputs.
 * **Type**": The type of the parameter. This determines where you can use the value of this parameter definition. A parameter definition of type "Bit Width" can only provide values for bit width properties of circuit elements.
 * **Default Value**: The default value of this parameter definition. This default value is applied to all parametrized circuit components when you open the circuit as a toplevel circuit, i.e. without the context of a sub circuit element which would normally provide the value to be used.
+* **Semantic**: Used to express what the semantic or meaning of the parameter is. This can be used by other parts of Antares.
 
 Click the "Add" button to add a new parameter definition. Specify e.g. "BW" as the name of the parameter definition, choose e.g. "8" as the "Default Value", and click the "Apply" button to add your new parameter definition to the list.
 
