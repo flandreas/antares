@@ -16,7 +16,7 @@ gallery:
 
 # Hexadecimal Keyboard
 
-[Download](https://github.com/flandreas/antares/releases/download/v1.3.0/Hexadecimal.Keyboard.acp)
+[Download](https://github.com/flandreas/antares/releases/download/v1.13.0/Hexadecimal.Keyboard.acp)
 {: .btn .btn--primary .btn--large}
 
 {% include gallery id="gallery" caption="Screenshots" %}
