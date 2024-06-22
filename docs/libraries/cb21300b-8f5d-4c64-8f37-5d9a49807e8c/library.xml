@@ -1,0 +1,117 @@
+<library _id='0' uuid='cb21300b-8f5d-4c64-8f37-5d9a49807e8c' author='5ecf330b-e395-4e17-88b0-0883834b384a' system="true">
+  <desc>
+    <translation lang='en' text='Contains only build-in components'/>
+    <translation lang='de' text='Enhält nur alle eingebauten Komponenten'/>
+  </desc>
+  <folder>
+    <libraryFolder _id='1'>
+      <name>
+        <translation lang='en' text='Base'/>
+        <translation lang='de' text='Basis'/>
+      </name>
+      <items>
+          <libraryFolder _id='38'>
+            <name>
+                <translation lang='en' text='Frequently used'/>
+                <translation lang='de' text='Häufig verwendet'/>
+            </name>
+            <items>
+                <baseLibraryElement _id='39' id='Switch'/>
+                <baseLibraryElement _id='40' id='LED'/>
+                <baseLibraryElement _id='41' id='Input'/>
+                <baseLibraryElement _id='42' id='Output'/>
+                <baseLibraryElement _id='43' id='AND'/>
+                <baseLibraryElement _id='44' id='OR'/>
+                <baseLibraryElement _id='45' id='NOT'/>
+            </items>
+          </libraryFolder>
+        <libraryFolder _id='2'>
+          <name>
+            <translation lang='en' text='Net'/>
+            <translation lang='de' text='Netz'/>
+          </name>
+          <items>
+            <baseLibraryElement _id='3' id='Splitter'/>
+            <baseLibraryElement _id='4' id='Concentrator'/>
+            <baseLibraryElement _id='50' id='BidirectionalSplitter'/>
+            <baseLibraryElement _id='5' id='Probe'/>
+            <baseLibraryElement _id='6' id='Tunnel'/>
+            <baseLibraryElement _id='7' id='Constant'/>
+            <baseLibraryElement _id='37' id='Break'/>
+            <baseLibraryElement _id='46' id='PullResistor'/>
+            <baseLibraryElement _id='47' id='Transistor'/>
+            <baseLibraryElement _id='48' id='Ground'/>
+            <baseLibraryElement _id='49' id='Power'/>
+            <baseLibraryElement _id='51' id='RealSwitch'/>
+          </items>
+        </libraryFolder>
+        <libraryFolder _id='8'>
+          <name>
+            <translation lang='en' text='Logical Gates'/>
+            <translation lang='de' text='Logische Gatter'/>
+          </name>
+          <items>
+            <baseLibraryElement _id='18' id='AND'/>
+            <baseLibraryElement _id='9' id='OR'/>
+            <baseLibraryElement _id='10' id='NOT'/>
+            <baseLibraryElement _id='11' id='NAND'/>
+            <baseLibraryElement _id='12' id='NOR'/>
+            <baseLibraryElement _id='13' id='XOR'/>
+            <baseLibraryElement _id='14' id='XNOR'/>
+            <baseLibraryElement _id='15' id='Buffer'/>
+            <baseLibraryElement _id='16' id='TriStateBuffer'/>
+            <baseLibraryElement _id='17' id='Delay'/>
+          </items>
+        </libraryFolder>
+        <libraryFolder _id='19'>
+          <name>
+            <translation lang='en' text='Input'/>
+            <translation lang='de' text='Eingabe'/>
+          </name>
+          <items>
+            <baseLibraryElement _id='23' id='Input'/>
+            <baseLibraryElement _id='20' id='Switch'/>
+            <baseLibraryElement _id='21' id='DipSwitch'/>
+            <baseLibraryElement _id='22' id='Clock'/>
+            <baseLibraryElement _id='35' id='Keyboard'/>
+            <baseLibraryElement _id='50' id='Joystick'/>
+          </items>
+        </libraryFolder>
+        <libraryFolder _id='24'>
+          <name>
+            <translation lang='en' text='Output'/>
+            <translation lang='de' text='Ausgabe'/>
+          </name>
+          <items>
+            <baseLibraryElement _id='29' id='Output'/>
+            <baseLibraryElement _id='25' id='LED'/>
+            <baseLibraryElement _id='26' id='RgbLED'/>
+            <baseLibraryElement _id='27' id='SevenSegmentDisplay'/>
+            <baseLibraryElement _id='28' id='LEDMatrix'/>
+            <baseLibraryElement _id='36' id='Terminal'/>
+          </items>
+        </libraryFolder>
+        <libraryFolder _id='30'>
+          <name>
+            <translation lang='en' text='Memory'/>
+            <translation lang='de' text='Speicher'/>
+          </name>
+          <items>
+            <baseLibraryElement _id='31' id='RAM'/>
+            <baseLibraryElement _id='32' id='ROM'/>
+          </items>
+        </libraryFolder>
+        <libraryFolder _id='33'>
+          <name>
+            <translation lang='en' text='Arithmetic'/>
+            <translation lang='de' text='Arithmetik'/>
+          </name>
+          <items>
+            <baseLibraryElement _id='34' id='Random'/>
+            <baseLibraryElement _id='52' id='BitExtender'/>
+          </items>
+        </libraryFolder>
+      </items>
+    </libraryFolder>
+  </folder>
+</library>

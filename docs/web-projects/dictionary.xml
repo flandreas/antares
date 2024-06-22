@@ -1,0 +1,14 @@
+<libraryDictionary _id='0'>
+  <entries>
+    <libraryDictionaryEntry _id='1' uuid='532f0477-722c-4c88-ada3-c419a386d06a' author='5ecf330b-e395-4e17-88b0-0883834b384a'>
+      <name>
+        <translation lang='en' text='Binary Addition'/>
+      </name>
+    </libraryDictionaryEntry>
+    <libraryDictionaryEntry _id='2' uuid='a445e8d3-9aa8-4e84-91e9-04ec98ede249' author='5ecf330b-e395-4e17-88b0-0883834b384a'>
+      <name>
+        <translation lang='en' text='Logic Gates from Transistors'/>
+      </name>
+    </libraryDictionaryEntry>
+  </entries>
+</libraryDictionary>
