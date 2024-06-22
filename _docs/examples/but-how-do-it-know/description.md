@@ -19,7 +19,7 @@ gallery:
 
 # "But How Do It Know?"
 
-[Download](https://github.com/flandreas/antares/releases/download/v1.13.0/But-How-Do-It-Know.acp){: 
+[Download](https://github.com/flandreas/antares/releases/download/v1.13.0/But.How.Do.It.Know.acp){: 
 .btn .btn--primary .btn--large}
 
 {% include gallery id="gallery" caption="Screenshots" %}
