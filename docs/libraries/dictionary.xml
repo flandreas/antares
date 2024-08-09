@@ -1,0 +1,24 @@
+<libraryDictionary _id='0'>
+  <entries>
+    <libraryDictionaryEntry _id='1' uuid='cb21300b-8f5d-4c64-8f37-5d9a49807e8c' author='5ecf330b-e395-4e17-88b0-0883834b384a'>
+        <name>
+            <translation lang='en' text='Base'/>
+            <translation lang='de' text='Basis'/>
+        </name>
+        <desc>
+            <translation lang='en' text='Contains only build-in components'/>
+            <translation lang='de' text='Enthält nur alle eingebauten Komponenten'/>
+        </desc>
+    </libraryDictionaryEntry>
+    <libraryDictionaryEntry _id='2' uuid='6707f981-110d-4629-a0bf-c35a4688025c' author='5ecf330b-e395-4e17-88b0-0883834b384a'>
+      <name>
+          <translation lang='en' text='Standard'/>
+          <translation lang='de' text='Standart'/>
+      </name>
+      <desc>
+        <translation lang='en' text='Contains build-in components and some commonly used subcircuits'/>
+        <translation lang='de' text='Enthält alle eingebauten Komponenten sowie einige gebräuchliche Teilschaltungen'/>
+      </desc>
+    </libraryDictionaryEntry>
+  </entries>
+</libraryDictionary>

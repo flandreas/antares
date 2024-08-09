@@ -1,0 +1,470 @@
+<library _id='0' uuid='6707f981-110d-4629-a0bf-c35a4688025c' author='5ecf330b-e395-4e17-88b0-0883834b384a' system='true'>
+  <folder>
+    <libraryFolder _id='1'>
+      <name>
+        <translation lang='en' text='Standard'/>
+        <translation lang='de' text='Standard'/>
+      </name>
+      <items>
+        <libraryFolder _id='2'>
+          <name>
+            <translation lang='en' text='Frequently used'/>
+            <translation lang='de' text='Häufig verwendet'/>
+          </name>
+          <items>
+            <baseLibraryElement _id='3' id='Switch'/>
+            <baseLibraryElement _id='4' id='LED'/>
+            <baseLibraryElement _id='5' id='Input'/>
+            <baseLibraryElement _id='6' id='Output'/>
+            <baseLibraryElement _id='7' id='AND'/>
+            <baseLibraryElement _id='8' id='OR'/>
+            <baseLibraryElement _id='9' id='NOT'/>
+          </items>
+        </libraryFolder>
+        <libraryFolder _id='10'>
+          <name>
+            <translation lang='en' text='Net'/>
+            <translation lang='de' text='Netz'/>
+          </name>
+          <items>
+            <baseLibraryElement _id='11' id='Constant'/>
+            <baseLibraryElement _id='12' id='Splitter'/>
+            <baseLibraryElement _id='13' id='Concentrator'/>
+            <baseLibraryElement _id='14' id='BidirectionalSplitter'/>
+            <baseLibraryElement _id='15' id='Probe'/>
+            <baseLibraryElement _id='16' id='Tunnel'/>
+            <baseLibraryElement _id='17' id='Break'/>
+            <baseLibraryElement _id='18' id='PullResistor'/>
+            <baseLibraryElement _id='19' id='Transistor'/>
+            <baseLibraryElement _id='20' id='Ground'/>
+            <baseLibraryElement _id='21' id='Power'/>
+            <baseLibraryElement _id='22' id='RealSwitch'/>
+            <containerLibraryElement _id='23' uuid='39c2c9c7-f461-4800-baaf-8d1f7d575577'>
+              <name>
+                <translation lang='en' text='Bus Transceiver 4 Bit'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='24' uuid='8c584d65-c513-45bf-9332-3e6211e95a5a'>
+              <name>
+                <translation lang='en' text='Bus Transceiver 8 Bit'/>
+              </name>
+            </containerLibraryElement>
+          </items>
+        </libraryFolder>
+        <libraryFolder _id='25'>
+          <name>
+            <translation lang='en' text='Logical Gates'/>
+            <translation lang='de' text='Logische Gatter'/>
+          </name>
+          <items>
+            <baseLibraryElement _id='26' id='AND'/>
+            <baseLibraryElement _id='27' id='OR'/>
+            <baseLibraryElement _id='28' id='NOT'/>
+            <baseLibraryElement _id='29' id='NAND'/>
+            <baseLibraryElement _id='30' id='NOR'/>
+            <baseLibraryElement _id='31' id='XOR'/>
+            <baseLibraryElement _id='32' id='XNOR'/>
+            <baseLibraryElement _id='33' id='Buffer'/>
+            <baseLibraryElement _id='34' id='TriStateBuffer'/>
+            <baseLibraryElement _id='35' id='Delay'/>
+            <containerLibraryElement _id='36' uuid='2d7bbd36-5dca-4c71-9a27-19a3bfa81bc5'>
+              <name>
+                <translation lang='en' text='Pulse Generator'/>
+                <translation lang='de' text='Impulsglied'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='37' uuid='6b75bce8-f115-4154-a7d8-782b8f4b629a'>
+              <name>
+                <translation lang='en' text='Pulse Generator (Neg)'/>
+                <translation lang='de' text='Impulsglied (Neg)'/>
+              </name>
+            </containerLibraryElement>
+          </items>
+        </libraryFolder>
+        <libraryFolder _id='38'>
+          <name>
+            <translation lang='en' text='Input'/>
+            <translation lang='de' text='Eingabe'/>
+          </name>
+          <items>
+            <baseLibraryElement _id='39' id='Input'/>
+            <baseLibraryElement _id='40' id='Switch'/>
+            <baseLibraryElement _id='41' id='DipSwitch'/>
+            <baseLibraryElement _id='42' id='Clock'/>
+            <baseLibraryElement _id='43' id='Keyboard'/>
+            <baseLibraryElement _id='44' id='Joystick'/>
+          </items>
+        </libraryFolder>
+        <libraryFolder _id='45'>
+          <name>
+            <translation lang='en' text='Output'/>
+            <translation lang='de' text='Ausgabe'/>
+          </name>
+          <items>
+            <baseLibraryElement _id='46' id='Output'/>
+            <baseLibraryElement _id='47' id='LED'/>
+            <baseLibraryElement _id='48' id='RgbLED'/>
+            <baseLibraryElement _id='49' id='SevenSegmentDisplay'/>
+            <baseLibraryElement _id='50' id='LEDMatrix'/>
+            <baseLibraryElement _id='51' id='Terminal'/>
+            <containerLibraryElement _id='52' uuid='8cb1ea46-2a0d-4a1d-87af-02487049a050'>
+              <name>
+                <translation lang='en' text='8x8 LED Matrix with Ctrl'/>
+                <translation lang='de' text='8x8 LED-Matrix mit Ctrl'/>
+              </name>
+            </containerLibraryElement>
+          </items>
+        </libraryFolder>
+        <libraryFolder _id='53'>
+          <name>
+            <translation lang='en' text='Memory'/>
+            <translation lang='de' text='Speicher'/>
+          </name>
+          <items>
+            <baseLibraryElement _id='54' id='ROM'/>
+            <baseLibraryElement _id='55' id='RAM'/>
+            <containerLibraryElement _id='56' uuid='e802fb9c-82dc-4196-b266-79fa023fb12e'>
+              <name>
+                <translation lang='en' text='Register 4 Bit'/>
+                <translation lang='de' text='Register 4-Bit'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='57' uuid='2578848c-f03a-40d6-a7c4-6febf588e408'>
+              <name>
+                <translation lang='en' text='Register 16 Bit'/>
+                <translation lang='de' text='Register 16-Bit'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='58' uuid='ce8674e0-8778-419b-b459-d10d2a0678ab'>
+              <name>
+                <translation lang='en' text='Register 32 Bit'/>
+                <translation lang='de' text='Register 32-Bit'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='59' uuid='f8869bb7-cce3-4811-8f58-07eef9b04823'>
+              <name>
+                <translation lang='en' text='Register 8 Bit'/>
+                <translation lang='de' text='Register 8-Bit'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='60' uuid='2fa2c8a7-fc2d-4139-8f6b-bd4b07933916'>
+              <name>
+                <translation lang='en' text='Shift Register Parallel-Out 4 Bit'/>
+                <translation lang='de' text='Schieberegister Parallel-Out 4-Bit'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='61' uuid='38cc0a3a-c46c-4c1b-85ca-0fc6dab00289'>
+              <name>
+                <translation lang='en' text='Shift Register Parallel-Out 8 Bit'/>
+                <translation lang='de' text='Schieberegister Parallel-Out 8-Bit'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='62' uuid='2e062374-9367-4d33-af1d-4a512cdca4e6'>
+              <name>
+                <translation lang='de' text='Schieberegister Parallel-In 4-Bit'/>
+                <translation lang='en' text='Shift Register Parallel-In 4 Bit'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='63' uuid='ff9e0257-bbc2-4961-8d23-71565dac09b3'>
+              <name>
+                <translation lang='de' text='Schieberegister Parallel-In 8-Bit'/>
+                <translation lang='en' text='Shift Register Parallel-In 8 Bit'/>
+              </name>
+            </containerLibraryElement>
+          </items>
+        </libraryFolder>
+        <libraryFolder _id='64'>
+          <name>
+            <translation lang='en' text='Arithmetic'/>
+            <translation lang='de' text='Arithmetik'/>
+          </name>
+          <items>
+            <baseLibraryElement _id='65' id='Random'/>
+            <baseLibraryElement _id='111' id='BitExtender'/>
+            <containerLibraryElement _id='66' uuid='52255dc4-c010-4f6f-8ea6-9c2c8f5f9a82'>
+              <name>
+                <translation lang='en' text='Half Adder'/>
+                <translation lang='de' text='Halbaddierer'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='67' uuid='08aba425-96c2-4c43-b10b-2e0c72ce8300'>
+              <name>
+                <translation lang='en' text='Full Adder'/>
+                <translation lang='de' text='Volladdierer'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='68' uuid='81e0ad9b-4678-4e79-aeef-8f59b153f2e3'>
+              <name>
+                <translation lang='en' text='Incrementer 8 Bit'/>
+                <translation lang='de' text='Inkrementierer 8-Bit'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='69' uuid='9eb38fe7-5844-4be6-9192-25104a077b0c'>
+              <name>
+                <translation lang='en' text='Shifter 8 Bit'/>
+                <translation lang='de' text='Shifter 8-Bit'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='70' uuid='c79ec2d7-ed8a-4be3-b334-49f8a9ee3779'>
+              <name>
+                <translation lang='en' text='Shifter 16 Bit'/>
+                <translation lang='de' text='Shifter 16-Bit'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='71' uuid='a523d891-bd1a-4b0c-9072-ae6351db6ca7'>
+              <name>
+                <translation lang='en' text='Comparator 4 Bit'/>
+                <translation lang='de' text='Komparator 4-Bit'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='72' uuid='e5954353-6045-4cad-9e43-cb843fd679fc'>
+              <name>
+                <translation lang='en' text='Comparator 8 Bit'/>
+                <translation lang='de' text='Komparator 8-Bit'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='73' uuid='c51a1fc5-6a4d-4037-9b4f-0694d84ab54c'>
+              <name>
+                <translation lang='de' text='Grössenvergleich 4-Bit'/>
+                <translation lang='en' text='Magnitue Comparator 4 Bit'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='74' uuid='fcd7cd6c-ce46-4713-82f6-d449b36af8ff'>
+              <name>
+                <translation lang='de' text='Volladierer 4-Bit (schneller Übertrag)'/>
+                <translation lang='en' text='Full Adder 4 Bit (Fast Cary)'/>
+              </name>
+            </containerLibraryElement>
+          </items>
+        </libraryFolder>
+        <libraryFolder _id='75'>
+          <name>
+            <translation lang='en' text='Codec'/>
+            <translation lang='de' text='Codec'/>
+          </name>
+          <items>
+            <containerLibraryElement _id='76' uuid='326eba0f-e139-4786-b1e8-99610ec33bc9'>
+              <name>
+                <translation lang='en' text='2-4 Decoder'/>
+                <translation lang='de' text='2-4 Dekodierer'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='77' uuid='4a1729f4-06ee-4683-a65d-ebaef1271d92'>
+              <name>
+                <translation lang='en' text='3-8 Decoder'/>
+                <translation lang='de' text='3-8 Dekodierer'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='78' uuid='ff6a54e3-7b67-4800-936a-1b213e851790'>
+              <name>
+                <translation lang='en' text='4-16 Decoder'/>
+                <translation lang='de' text='4-16 Dekodierer'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='79' uuid='d95b72af-a5b6-4c1c-9b43-a4a2f3330589'>
+              <name>
+                <translation lang='en' text='BCD 7-Seg Decoder'/>
+                <translation lang='de' text='BCD 7-Seg Dekodierer'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='80' uuid='9eab72cb-2347-4bb1-9c22-40911beba7d4'>
+              <name>
+                <translation lang='en' text='BCD 7-Seg (Hex) Decoder'/>
+                <translation lang='de' text='BCD 7-Seg (Hex) Dekodierer'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='81' uuid='d01256b9-f8cd-49a2-a141-3a4d3aea789a'>
+              <name>
+                <translation lang='en' text='BCD-DEC Decoder (Neg)'/>
+                <translation lang='de' text='BCD-DEC Dekodierer (Neg)'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='82' uuid='5f7f0e18-de3f-4776-ab82-a74f6fda8c75'>
+              <name>
+                <translation lang='en' text='4-2 Priority Encoder'/>
+                <translation lang='de' text='4-2 Priorität-Kodierer'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='83' uuid='473fb78a-d491-42bf-a119-c4299979b89d'>
+              <name>
+                <translation lang='en' text='8-3 Priorität Encoder'/>
+                <translation lang='de' text='8-3 Priorität-Kodierer'/>
+              </name>
+            </containerLibraryElement>
+          </items>
+        </libraryFolder>
+        <libraryFolder _id='84'>
+          <name>
+            <translation lang='en' text='Flipflops'/>
+            <translation lang='de' text='Flipflops'/>
+          </name>
+          <items>
+            <containerLibraryElement _id='85' uuid='d6ab312a-a94b-403a-9291-642295ff29c5'>
+              <name>
+                <translation lang='en' text='D Flip-Flop'/>
+                <translation lang='de' text='D-Flipflop'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='86' uuid='a1b8c056-8f4b-4ffe-90a9-dbcc321fe733'>
+              <name>
+                <translation lang='en' text='D Flip-Flop PRE/CRL'/>
+                <translation lang='de' text='D-Flipflop PRE/CRL'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='87' uuid='f5ffee61-6d3e-453e-a352-e702a06b11d2'>
+              <name>
+                <translation lang='de' text='D-Flipflop PRE/CRL (Neg)'/>
+                <translation lang='en' text='D Flip-Flop PRE/CRL (Neg)'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='88' uuid='e0786c72-2fa2-4ec4-a1de-0a84b7281bec'>
+              <name>
+                <translation lang='en' text='T Flip-Flop'/>
+                <translation lang='de' text='T-Flipflop'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='89' uuid='e57241a4-0282-4006-9abd-59bbcb16bb87'>
+              <name>
+                <translation lang='en' text='SR Latch'/>
+                <translation lang='de' text='SR Latch'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='90' uuid='50285a47-f299-4c92-bc2b-c52441dbcce8'>
+              <name>
+                <translation lang='en' text='SR Flip-Flop'/>
+                <translation lang='de' text='SR-Flipflop'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='91' uuid='54f46f36-85cf-41c9-a63a-b43fe4446742'>
+              <name>
+                <translation lang='en' text='SR Flip-Flop (Neg)'/>
+                <translation lang='de' text='SR Flipflop (Neg)'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='92' uuid='d34d3483-be1d-432b-a949-7f68e0ee756b'>
+              <name>
+                <translation lang='en' text='SR Flip-Flop PRE/CLR'/>
+                <translation lang='de' text='SR-Flipflop PRE/CLR'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='93' uuid='9dc3d0a1-b49e-41d1-b298-c043a2f01228'>
+              <name>
+                <translation lang='en' text='SR Flip-Flop PRE/CLR (Neg)'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='94' uuid='204aeecf-cdca-4678-8c36-f8a834922966'>
+              <name>
+                <translation lang='en' text='JK Flip-Flop'/>
+                <translation lang='de' text='JK-Flipflop'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='95' uuid='9631ce5c-fd31-484d-b63a-ef0d9f2b5c58'>
+              <name>
+                <translation lang='en' text='JK Flip-Flop (Neg)'/>
+                <translation lang='de' text='JK-Flipflop (Neg)'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='96' uuid='5485c628-408c-45ea-9d1e-8d930c8760e7'>
+              <name>
+                <translation lang='en' text='JK Master-Slave Flip-Flop'/>
+                <translation lang='de' text='JK-Master/Slave-Flipflop'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='97' uuid='048daa5b-de3e-4ae9-a343-e8c355a033dc'>
+              <name>
+                <translation lang='en' text='JK MS-Flip-Flop PRE/CLR'/>
+                <translation lang='de' text='JK-MS-Flipflop PRE/CLR'/>
+              </name>
+            </containerLibraryElement>
+          </items>
+        </libraryFolder>
+        <libraryFolder _id='98'>
+          <name>
+            <translation lang='en' text='Plexer'/>
+            <translation lang='de' text='Plexer'/>
+          </name>
+          <items>
+            <containerLibraryElement _id='99' uuid='83ba937d-5277-45f2-adff-1abab9207e33'>
+              <name>
+                <translation lang='en' text='2x 4-4 Multiplexer'/>
+                <translation lang='de' text='2x 4-4 Multiplexer'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='100' uuid='2f202e6b-504f-4a18-b6e9-53f99371b1b9'>
+              <name>
+                <translation lang='en' text='2x 8-8 Multiplexer'/>
+                <translation lang='de' text='2x 8-8 Multiplexer'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='101' uuid='06e7b5c3-daad-4019-8a8f-945a9215cab6'>
+              <name>
+                <translation lang='en' text='2x 16-16 Multiplexer'/>
+                <translation lang='de' text='2x 16-16 Multiplexer'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='102' uuid='4fd29ab0-fb62-4f3c-a2c6-54a9c33ac437'>
+              <name>
+                <translation lang='en' text='4-1 Multiplexer'/>
+                <translation lang='de' text='4-1 Multiplexer'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='103' uuid='7f483f75-3f41-4d89-aef5-ae07afbaf1f7'>
+              <name>
+                <translation lang='en' text='2-1 Multiplexer'/>
+                <translation lang='de' text='2-1 Multiplexer'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='104' uuid='d5d282d6-21e9-4f1b-9429-75c882213cb3'>
+              <name>
+                <translation lang='en' text='8-1 Multiplexer'/>
+                <translation lang='de' text='8-1 Multiplexer'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='105' uuid='2cb91fb8-b233-41b5-96b2-e898c9122e68'>
+              <name>
+                <translation lang='en' text='2x 2-2 Multiplexer'/>
+                <translation lang='de' text='2x 2-2 Multiplexer'/>
+              </name>
+            </containerLibraryElement>
+          </items>
+        </libraryFolder>
+        <libraryFolder _id='106'>
+          <name>
+            <translation lang='en' text='Counter'/>
+            <translation lang='de' text='Zähler'/>
+          </name>
+          <items>
+            <containerLibraryElement _id='107' uuid='2be67615-ff7b-4f4b-a2e1-3fd9ff1d1d97'>
+              <name>
+                <translation lang='en' text='Sync. Forward Counter 3 Bit'/>
+                <translation lang='de' text='Synch. Vorwärtszähler 3-Bit'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='108' uuid='380a6b70-ca2f-4983-8a45-d2c4de03c7f4'>
+              <name>
+                <translation lang='en' text='Sync. BCD Counter 4 Bit'/>
+                <translation lang='de' text='Synch. BCD-Zähler 4-Bit'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='109' uuid='0a2995f4-af04-4830-b141-76de188e2e34'>
+              <name>
+                <translation lang='en' text='Frequency Divider 1:16'/>
+                <translation lang='de' text='Frequenzteiler 1:16'/>
+              </name>
+            </containerLibraryElement>
+            <containerLibraryElement _id='110' uuid='7de920b3-7694-4f03-a1e6-f44ff92475ec'>
+              <name>
+                <translation lang='de' text='Binärzähler 4-Bit mit Load/Reset'/>
+                <translation lang='en' text='Binary Counter 4 Bit LD/CLR'/>
+              </name>
+            </containerLibraryElement>
+          </items>
+        </libraryFolder>
+      </items>
+    </libraryFolder>
+  </folder>
+  <desc>
+    <translation lang='en' text='Contains built-in components and some commonly used subcircuits'/>
+    <translation lang='de' text='Enthält alle eingebauten Komponenten sowie einige gebräuchliche Teilschaltungen'/>
+  </desc>
+</library>

@@ -1,0 +1,204 @@
+<metaGraph _id='0'>
+  <graph>
+    <graphStorable _id='1'>
+      <model>
+        <graph _id='2'>
+          <elements>
+            <transistor _id='3' id='1' delay='20' bitWidth='1' type='p'/>
+            <switch _id='4' id='2' delay='1000'/>
+            <power _id='5' id='4' delay='1' bitWidth='1'/>
+            <digitalNet _id='6' id='5' delay='0'>
+              <ports>
+                <netPortRef _id='7' verticeId='5' portId='1'/>
+                <netPortRef _id='8' verticeId='3' portId='1'/>
+              </ports>
+            </digitalNet>
+            <digitalNet _id='9' id='6' delay='0'>
+              <ports>
+                <netPortRef _id='10' verticeId='4' portId='1'/>
+                <netPortRef _id='11' verticeId='3' portId='2'/>
+              </ports>
+            </digitalNet>
+            <pullResistor _id='12' id='7' delay='0' bitWidth='1' pullDir='low'/>
+            <digitalNet _id='13' id='8' delay='0'>
+              <ports>
+                <netPortRef _id='14' verticeId='12' portId='1'/>
+                <netPortRef _id='15' verticeId='16' portId='1'/>
+                <netPortRef _id='17' verticeId='3' portId='3'/>
+              </ports>
+            </digitalNet>
+            <led _id='16' id='9' delay='0'/>
+            <graphElementWrapper _id='18' id='10' delay='0'/>
+            <graphElementWrapper _id='19' id='11' delay='0'/>
+            <graphElementWrapper _id='20' id='12' delay='0'/>
+            <graphElementWrapper _id='21' id='13' delay='0'/>
+            <graphElementWrapper _id='22' id='14' delay='0'/>
+            <graphElementWrapper _id='23' id='15' delay='0'/>
+          </elements>
+        </graph>
+      </model>
+      <view>
+        <graphView _id='24'>
+          <netViews>
+            <netView _id='25' modelId='6' style='line'/>
+            <netView _id='26' modelId='9' style='line'/>
+            <netView _id='27' modelId='13' style='line'/>
+          </netViews>
+          <scenarios>
+            <scenarios _id='28'>
+              <scenarios>
+                <scenario _id='29' id='1' condition='#1.2 == 0'>
+                  <name>
+                    <translation lang='en' text='Input 0'/>
+                  </name>
+                  <desc>
+                    <translation lang='en' text='A PMOS transistor is &quot;on&quot; if the gate input is 0.'/>
+                  </desc>
+                  <steps>
+                    <scenarioStep _id='30' id='1' highlightIds='1,5,8,12' condition='#1.2 == 0'>
+                      <name>
+                        <translation lang='en' text='Input 0 Step'/>
+                      </name>
+                      <desc>
+                        <translation lang='en' text='Since the transistor is &quot;on&quot;, the 1 from the power supply flows into the LED, which is why the LED is on.'/>
+                      </desc>
+                    </scenarioStep>
+                  </steps>
+                </scenario>
+                <scenario _id='31' id='2' condition='#1.2 == 1'>
+                  <name>
+                    <translation lang='en' text='Input 1'/>
+                  </name>
+                  <desc>
+                    <translation lang='en' text='A PMOS transistor is &quot;off&quot; if the gate input is 1.'/>
+                  </desc>
+                  <steps>
+                    <scenarioStep _id='32' id='1' highlightIds='7,11,12' condition='#1.2 == 1'>
+                      <name>
+                        <translation lang='en' text='Input 1 Step'/>
+                      </name>
+                      <desc>
+                        <translation lang='en' text='Since the transistor is off, the LED is connected to ground, which is why the LED is off.'/>
+                      </desc>
+                    </scenarioStep>
+                  </steps>
+                </scenario>
+              </scenarios>
+            </scenarios>
+          </scenarios>
+          <components>
+            <graphElement _id='33' modelId='21' id='16'>
+              <component>
+                <rectangle _id='34' id='16' style='subsystem' filled='true' stroked='true' x='-266.0' y='-294.0' w='161.0' h='147.0' vAlign='top' hAlign='left'>
+                  <text>
+                    <translation lang='en' text='PMOS'/>
+                  </text>
+                </rectangle>
+              </component>
+            </graphElement>
+            <transistorView _id='35' id='1' rot='0' filled='true' stroked='true' modelId='3' x='-224.0' y='-203.0' symbol='inverterCircle'/>
+            <switchView _id='36' id='2' rot='0' filled='true' stroked='true' modelId='4' x='-280.0' y='-217.0'/>
+            <powerView _id='37' id='4' rot='270' filled='true' stroked='true' modelId='5' x='-182.0' y='-322.0'/>
+            <digitalEdgeView _id='38' id='5' filled='true' stroked='true' modelId='6' layout='ortho' orig='37' origPort='1' origPortOutput='true' dest='35' destPort='1' adjusted='false'>
+              <shape>
+                <polylineShape points='-182.0,-336.0 -182.0,-238.0'/>
+              </shape>
+            </digitalEdgeView>
+            <digitalEdgeView _id='39' id='6' filled='true' stroked='true' modelId='9' layout='ortho' orig='36' origPort='1' origPortOutput='true' dest='35' destPort='2' adjusted='false'>
+              <shape>
+                <polylineShape points='-294.0,-217.0 -210.0,-217.0'/>
+              </shape>
+            </digitalEdgeView>
+            <pullResistorView _id='40' id='7' rot='90' filled='true' stroked='true' modelId='12' x='-182.0' y='-91.0'/>
+            <digitalEdgeView _id='41' id='8' filled='true' stroked='true' modelId='13' layout='ortho' orig='35' origPort='3' origPortOutput='true' dest='42' adjusted='false'>
+              <shape>
+                <polylineShape points='-182.0,-196.0 -182.0,-112.0'/>
+              </shape>
+            </digitalEdgeView>
+            <ledView _id='43' id='9' rot='0' filled='true' stroked='true' modelId='16' x='-119.0' y='-112.0' size='large' lightColor='red'/>
+            <digitalNodeView _id='42' id='10' filled='true' stroked='true' modelId='13'>
+              <location>
+                <point x='-182.0' y='-112.0'/>
+              </location>
+            </digitalNodeView>
+            <digitalEdgeView _id='44' id='11' filled='true' stroked='true' modelId='13' layout='ortho' orig='42' dest='40' destPort='1' destPortOutput='true' adjusted='false'>
+              <shape>
+                <polylineShape points='-182.0,-112.0 -182.0,-77.0'/>
+              </shape>
+            </digitalEdgeView>
+            <digitalEdgeView _id='45' id='12' filled='true' stroked='true' modelId='13' layout='ortho' orig='42' dest='43' destPort='1' adjusted='false'>
+              <shape>
+                <polylineShape points='-182.0,-112.0 -105.0,-112.0'/>
+              </shape>
+            </digitalEdgeView>
+            <graphElement _id='46' modelId='18' id='13'>
+              <component>
+                <text _id='47' id='13' style='figure' filled='false' stroked='false' x='-182.0' y='-273.0' w='70.0' h='41.0' hAlign='left'>
+                  <text>
+                    <translation lang='en' text='Source'/>
+                  </text>
+                </text>
+              </component>
+            </graphElement>
+            <graphElement _id='48' modelId='19' id='14'>
+              <component>
+                <text _id='49' id='14' style='figure' filled='false' stroked='false' x='-182.0' y='-203.0' w='56.0' h='41.0' hAlign='left'>
+                  <text>
+                    <translation lang='en' text='Drain'/>
+                  </text>
+                </text>
+              </component>
+            </graphElement>
+            <graphElement _id='50' modelId='20' id='15'>
+              <component>
+                <text _id='51' id='15' style='figure' filled='false' stroked='false' x='-259.0' y='-224.0' w='56.0' h='41.0' hAlign='left'>
+                  <text>
+                    <translation lang='en' text='Gate'/>
+                  </text>
+                </text>
+              </component>
+            </graphElement>
+            <graphElement _id='52' modelId='22' id='17'>
+              <component>
+                <text _id='53' id='17' style='figure' filled='false' stroked='false' x='-259.0' y='-392.0' w='154.0' h='41.0' hAlign='left'>
+                  <text>
+                    <translation lang='en' text='Power Supply (1)'/>
+                  </text>
+                </text>
+              </component>
+            </graphElement>
+            <graphElement _id='54' modelId='23' id='18'>
+              <component>
+                <text _id='55' id='18' style='figure' filled='false' stroked='false' x='-231.0' y='-14.0' w='105.0' h='41.0' hAlign='left'>
+                  <text>
+                    <translation lang='en' text='Ground (0)'/>
+                  </text>
+                </text>
+              </component>
+            </graphElement>
+          </components>
+        </graphView>
+      </view>
+    </graphStorable>
+  </graph>
+  <container>
+    <containerDrawing _id='56'>
+      <components>
+        <rectangle _id='57' id='1' style='figure' filled='true' stroked='true' x='140.0' y='140.0' w='56.0' h='70.0'/>
+        <originIndicator _id='58'>
+          <location>
+            <point x='140.0' y='140.0'/>
+          </location>
+        </originIndicator>
+      </components>
+      <model>
+        <subGraphVertice _id='59' id='0' delay='0' uuid='b33f254e-73c4-443d-87cc-5668bf6ca202'>
+          <name>
+            <translation lang='en' text='PMOS Transistor'/>
+          </name>
+          <ports/>
+        </subGraphVertice>
+      </model>
+    </containerDrawing>
+  </container>
+</metaGraph>
