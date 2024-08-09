@@ -37,3 +37,5 @@ CLR:: Input "Clear": Asynchronous input at which a value of 1 causes all memory 
 See the chapter link:{{site.basedir}}/user-manual/english/base-library/memory[Memory] for a description of the general memory properties. In this section only the special properties of the RAM component are described.
 
 Clock Input:: If this property is set, the RAM contains the "CLK" pin.
+
+Non-volatile:: If set, the RAM content is preserved across multiple simulation runs. When the simulation is stopped, Antares stores the currentRAM data in the directory "nonVolatile" in the workspace where the circuit is located. Each RAM instance in different circuits has its own storage location. When restarting the simulation, the data is loaded again into the RAM. Note that since the data isn't stored in the circuit file, the user doesn't have to perform "Save".

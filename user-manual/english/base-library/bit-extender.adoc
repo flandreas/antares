@@ -18,7 +18,7 @@ Output:: The extended output signal.
 
 == Properties
 
-Input Bit Width:: The number of bits of the input pin. Must be smaller than "Output Bit Width".
+Input Bit Width:: The number of bits of the input pin. Must be smaller than or equal to "Output Bit Width".
 
-Output Bit Width:: The number of bits of the output pin. Must be larger than "Input Bit Width".
+Output Bit Width:: The number of bits of the output pin. Must be larger than or equal to "Input Bit Width".
 

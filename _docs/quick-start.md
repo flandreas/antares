@@ -7,10 +7,10 @@ header:
 
 ## Download
 
-[Windows](https://github.com/flandreas/antares/releases/download/v1.13.0/Antares-1.13.0.msi){: .btn .btn--success .btn--large}
-[macOS](https://github.com/flandreas/antares/releases/download/v1.13.0/Antares-1.13.0.dmg){: .btn .btn--success .btn--large}
-[Linux](https://github.com/flandreas/antares/releases/download/v1.13.0/antares-1.13.0-1.x86_64.rpm){: .btn .btn--success .btn--large}
-[JAR](https://github.com/flandreas/antares/releases/download/v1.13.0/antares-1.13.0.jar){: .btn .btn--success .btn--large}
+[Windows](https://github.com/flandreas/antares/releases/download/v1.14.0/Antares-1.14.0.msi){: .btn .btn--success .btn--large}
+[macOS](https://github.com/flandreas/antares/releases/download/v1.14.0/Antares-1.14.0.dmg){: .btn .btn--success .btn--large}
+[Linux](https://github.com/flandreas/antares/releases/download/v1.14.0/antares-1.14.0-1.x86_64.rpm){: .btn .btn--success .btn--large}
+[JAR](https://github.com/flandreas/antares/releases/download/v1.14.0/antares-1.14.0.jar){: .btn .btn--success .btn--large}
 
 ## Installation
 
@@ -40,7 +40,7 @@ Java runtime of at least version 16 required.
 
 ## Usage
 
-If your are new to Antares, you might want to check out the [First Steps](/user-manual/english/first-steps/first-steps) tutorial. Otherwise, go to [Releases](/docs/releases/releases/) to see what's new in the current release.
+If you are new to Antares, you might want to check out the [First Steps](/user-manual/english/first-steps/first-steps) tutorial. Otherwise, go to [Releases](/docs/releases/releases/) to see what's new in the current release.
 
 Or watch our Antares introduction video on YouTube.
 

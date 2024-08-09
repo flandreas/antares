@@ -67,7 +67,7 @@ include::../../page-variables.txt[]
 |===
 | Action | MacOS | Windows
 | Start/Stop (Run) | kbd:[CTRL]+kbd:[R] | kbd:[CTRL]+kbd:[R]
-| Pause/Resume | kbd:[SPACE] | kbd:[SPACE]
+| Pause/Resume | kbd:[CTRL]+[SPACE] | kbd:[CTRL]+[SPACE]
 | Move focus in inputs/outputs | kbd:[ARROW L/R] | kbd:[ARROW L/R]
 | Toggle focused switch | kbd:[ENTER] | kbd:[ENTER]
 | Toggle focused input digits | kbd:[ENTER] | kbd:[ENTER]

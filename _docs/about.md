@@ -67,6 +67,9 @@ The ultimate goal of Antares is to facilitate interactive textbooks with active 
   - Circuit test cases
   - VHDL export
   - Analog circuits with electrical current and voltage
+  - Image component, image buttons
+  - Global tunnels overview
+  - Non-volatile RAM (optionally)
 - **Simulation**
   - Simulation of individual propagation delays
   - Signal flow animation

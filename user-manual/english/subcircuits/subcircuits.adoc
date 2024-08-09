@@ -146,6 +146,7 @@ The following built-in components of Antares can be used as controls.
 * Clock
 * Joystick
 * Video RAM
+* RAM / ROM
 
 Antares not only allows you to use controls of the circuit for which the symbol is created, but also controls of all sub-circuits and their sub-circuits and so forth.
 

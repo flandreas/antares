@@ -36,4 +36,6 @@ Representation:: Determines whether the value of the current signal is represent
 
 Switch:: Defines the behavior of a port when used as a switch by the user during simulation. If this property is set, the port remains in its state when the mouse button is released.
 
+Start value:: The decimal value to be asserted when the simulation is started. Only used if the port is unconnected. If empty, the value is taken from the default value, which is 0.
+
 Tri-State Output:: Only available for output ports. If set, the port has tri-state behaviour. The corresponding pin in a sub circuit will then allow you to connect it with other output pins on the same net, which Antares wouldn't allow otherwise.

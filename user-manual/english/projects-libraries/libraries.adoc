@@ -37,6 +37,10 @@ image::user-manual/projects-libraries/libraries-attributes-en.png[properties,400
 
 Both texts are internationalized, i.e. you can enter texts in all languages supported by Antares. The description is mainly used in the "Libraries" window.
 
+The tab "Preferences" contains user preference value that are copied from the user preferences and stored in the library. These are mainly values that have an influence on the behaviour of a circuit during simulation. If a library was designed based on values in the user's local preferences, changes are the circuits don't behave as expected after the library has been exported and imported by another user.
+
+You can also change a libraries "Preferences" to use different values that your normal preferences.
+
 === Ownership
 
 The property "Owned by me" indicates whether the current project is owned by you. This is true for all libraries and projects you've created by yourself. You can only edit projects and libraries (and the circuit contained in them) that are owned by your. This prevents you from accidentally altering imported libraries and projects, since your changes would be overwritten once you re-import the library.
