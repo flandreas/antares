@@ -6,6 +6,19 @@ include::../../page-variables.txt[]
 This chapter describes the functions that are globally available in all scripts written in the
 link:{{site.basedir}}/user-manual/english/scripting/scripting-dsl[_Antares DSL_] programming language.
 
+== General Functions
+
+[source,javascript]
+----
+/**
+ * Recalculates a component after [delay] ns have passed in the simulator,
+ * even if no input signals have changed. Can be used e.g. to implement a monostable multivibrator.
+ *
+ * Example: triggerAfter(200)
+ */
+private fun triggerAfter(delay: Long) {
+----
+
 == Arithmetic Functions
 
 [source,javascript]

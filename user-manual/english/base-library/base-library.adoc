@@ -166,5 +166,6 @@ These components are contained in the built-in library "Analog".
 * image:user-manual/base-library/input.svg[Input/Output] link:{{site.basedir}}/user-manual/english/base-library/analog/inout[Input/Output]
 * image:user-manual/base-library/power.svg[Power] link:{{site.basedir}}/user-manual/english/base-library/analog/power[Power]
 * image:user-manual/base-library/analog/current-source.svg[Current Source] link:{{site.basedir}}/user-manual/english/base-library/analog/current-source[Current Source]
+* image:user-manual/base-library/analog/capacitor.svg[Capacitor] link:{{site.basedir}}/user-manual/english/base-library/analog/capacitor[Capacitor]
 
 

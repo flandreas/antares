@@ -159,3 +159,5 @@ Put AND terms in parenthesis:: If set, Antares puts AND terms in generated boole
 === Analog
 
 Current speed:: The speed of current flow animation in analog circuits. Supported values range from 1 (slow) to 10 (fast).
+
+Simulation time step:: Determines how accurate the simulation of an analog circuit will be, especially when calculating capacitors or inductors. The lower the value, the more accurate the calculation, but the slower the simulation.

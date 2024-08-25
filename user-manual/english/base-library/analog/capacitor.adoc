@@ -1,0 +1,20 @@
+= Capacitor
+include::../../../page-variables.txt[]
+:page-permalink: /user-manual/english/base-library/analog/capacitor
+
+== Appearance
+
+image:user-manual/base-library/analog/capacitor.png[Example capacitor]
+
+== Behaviour
+
+A capacitor stores electrical energy by accumulating electric energy on its plates.
+
+== Pins
+
+A capacitor has two bi-directional pins. Depending on the voltage at these pins, and the current charge of the capacitor, the capacitor charges or discharges, resulting in current flowing from or to the pins.
+
+== Properties
+
+Capacitance:: The capacitance of the capacitor in microfarad.
+
