@@ -128,7 +128,7 @@ Export your circuits to VHDL and generate a test bench from one of your circuit'
 
 Design analog circuits and observe electrical current and voltage during simulation. Build analog gates from MOSFETs and use them as subcircuits in your digital circuits.
 
-<img src="/assets/images/user-manual/circuits/analog/analog.gif" width="500">
+<img src="/assets/images/design/analog.gif" width="500">
 
 ### Multi-circuit desktop
 
