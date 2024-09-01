@@ -1,0 +1,66 @@
+<project _id='0' defaultElement='67f91a27-32da-4c8d-a081-f5b705c99618' uuid='a445e8d3-9aa8-4e84-91e9-04ec98ede249' author='5ecf330b-e395-4e17-88b0-0883834b384a' import='6707f981-110d-4629-a0bf-c35a4688025c'>
+  <folder>
+    <libraryFolder _id='1'>
+      <name>
+        <translation lang='en' text='Logic Gates from Transistors'/>
+      </name>
+      <items>
+        <containerLibraryElement _id='2' uuid='fea3e489-5c05-4896-a740-84b174634fec'>
+          <name>
+            <translation lang='en' text='NAND Gate (Abstraction)'/>
+          </name>
+        </containerLibraryElement>
+        <containerLibraryElement _id='3' uuid='67f91a27-32da-4c8d-a081-f5b705c99618'>
+          <name>
+            <translation lang='en' text='NMOS Transistor'/>
+          </name>
+        </containerLibraryElement>
+        <containerLibraryElement _id='4' uuid='b33f254e-73c4-443d-87cc-5668bf6ca202'>
+          <name>
+            <translation lang='en' text='PMOS Transistor'/>
+          </name>
+        </containerLibraryElement>
+        <containerLibraryElement _id='5' uuid='567d75fc-34be-4813-9f7d-59f00bd407d7'>
+          <name>
+            <translation lang='en' text='NMOS NAND Gate'/>
+          </name>
+        </containerLibraryElement>
+        <containerLibraryElement _id='6' uuid='fee1b924-720c-4d5f-b363-a15bddad56b7'>
+          <name>
+            <translation lang='en' text='NMOS NOR Gate'/>
+          </name>
+        </containerLibraryElement>
+        <containerLibraryElement _id='7' uuid='c6b5c866-031b-4c7e-baea-508c0bf9153c'>
+          <name>
+            <translation lang='en' text='CMOS NOT Gate'/>
+          </name>
+        </containerLibraryElement>
+        <containerLibraryElement _id='8' uuid='3e1d438a-51d3-4adc-9ca5-b7a7245c0153'>
+          <name>
+            <translation lang='en' text='PMOS NAND Gate'/>
+          </name>
+        </containerLibraryElement>
+        <containerLibraryElement _id='9' uuid='4469886a-ec82-4080-acd5-4f2f6cc230bf'>
+          <name>
+            <translation lang='en' text='CMOS NAND Gate'/>
+          </name>
+        </containerLibraryElement>
+        <containerLibraryElement _id='10' uuid='9c66f498-bf48-4be1-ac40-35ca3584eac6'>
+          <name>
+            <translation lang='en' text='CMOS AND Gate'/>
+          </name>
+        </containerLibraryElement>
+        <containerLibraryElement _id='11' uuid='2fd1f19f-515d-47ed-ba65-08392564cc38'>
+          <name>
+            <translation lang='en' text='CMOS NOR Gate'/>
+          </name>
+        </containerLibraryElement>
+        <containerLibraryElement _id='12' uuid='390a6f49-407c-4b6e-b4c8-401b8a03a5a4'>
+          <name>
+            <translation lang='en' text='CMOS OR Gate'/>
+          </name>
+        </containerLibraryElement>
+      </items>
+    </libraryFolder>
+  </folder>
+</project>

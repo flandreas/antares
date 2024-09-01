@@ -1,0 +1,382 @@
+<metaGraph _id='0'>
+  <graph>
+    <graphStorable _id='1'>
+      <model>
+        <graph _id='2'>
+          <elements>
+            <transistor _id='3' id='1' delay='20' bitWidth='1' type='p'/>
+            <transistor _id='4' id='2' delay='20' bitWidth='1' type='p'/>
+            <digitalNet _id='5' id='3' delay='0'>
+              <ports>
+                <netPortRef _id='6' verticeId='3' portId='3'/>
+                <netPortRef _id='7' verticeId='4' portId='1'/>
+              </ports>
+            </digitalNet>
+            <power _id='8' id='4' delay='1' bitWidth='1'/>
+            <digitalNet _id='9' id='5' delay='0'>
+              <ports>
+                <netPortRef _id='10' verticeId='8' portId='1'/>
+                <netPortRef _id='11' verticeId='3' portId='1'/>
+              </ports>
+            </digitalNet>
+            <switch _id='12' id='6' delay='1000' name='A'/>
+            <switch _id='13' id='7' delay='1000' name='B'/>
+            <digitalNet _id='14' id='8' delay='0'>
+              <ports>
+                <netPortRef _id='15' verticeId='13' portId='1'/>
+                <netPortRef _id='16' verticeId='4' portId='2'/>
+                <netPortRef _id='17' verticeId='18' portId='2'/>
+              </ports>
+            </digitalNet>
+            <digitalNet _id='19' id='9' delay='0'>
+              <ports>
+                <netPortRef _id='20' verticeId='12' portId='1'/>
+                <netPortRef _id='21' verticeId='3' portId='2'/>
+                <netPortRef _id='22' verticeId='23' portId='2'/>
+              </ports>
+            </digitalNet>
+            <transistor _id='18' id='10' delay='20' bitWidth='1' type='n'/>
+            <transistor _id='23' id='11' delay='20' bitWidth='1' type='n'/>
+            <digitalNet _id='24' id='12' delay='0'>
+              <ports>
+                <netPortRef _id='25' verticeId='26' portId='2'/>
+                <netPortRef _id='27' verticeId='28' portId='2'/>
+                <netPortRef _id='29' verticeId='4' portId='3'/>
+                <netPortRef _id='30' verticeId='18' portId='3'/>
+                <netPortRef _id='31' verticeId='23' portId='3'/>
+              </ports>
+            </digitalNet>
+            <led _id='32' id='13' delay='0' name='Out'/>
+            <ground _id='33' id='14' delay='1' bitWidth='1'/>
+            <digitalNet _id='34' id='15' delay='0'>
+              <ports>
+                <netPortRef _id='35' verticeId='33' portId='1'/>
+                <netPortRef _id='36' verticeId='18' portId='1'/>
+              </ports>
+            </digitalNet>
+            <ground _id='37' id='16' delay='1' bitWidth='1'/>
+            <digitalNet _id='38' id='17' delay='0'>
+              <ports>
+                <netPortRef _id='39' verticeId='37' portId='1'/>
+                <netPortRef _id='40' verticeId='23' portId='1'/>
+              </ports>
+            </digitalNet>
+            <graphElementWrapper _id='41' id='19' delay='0'/>
+            <transistor _id='26' id='20' delay='20' bitWidth='1' type='p'/>
+            <transistor _id='28' id='21' delay='20' bitWidth='1' type='n'/>
+            <digitalNet _id='42' id='22' delay='0'>
+              <ports>
+                <netPortRef _id='43' verticeId='32' portId='1'/>
+                <netPortRef _id='44' verticeId='26' portId='3'/>
+                <netPortRef _id='45' verticeId='28' portId='3'/>
+              </ports>
+            </digitalNet>
+            <power _id='46' id='23' delay='1' bitWidth='1'/>
+            <digitalNet _id='47' id='24' delay='0'>
+              <ports>
+                <netPortRef _id='48' verticeId='46' portId='1'/>
+                <netPortRef _id='49' verticeId='26' portId='1'/>
+              </ports>
+            </digitalNet>
+            <ground _id='50' id='25' delay='1' bitWidth='1'/>
+            <digitalNet _id='51' id='26' delay='0'>
+              <ports>
+                <netPortRef _id='52' verticeId='50' portId='1'/>
+                <netPortRef _id='53' verticeId='28' portId='1'/>
+              </ports>
+            </digitalNet>
+            <graphElementWrapper _id='54' id='27' delay='0'/>
+          </elements>
+        </graph>
+      </model>
+      <view>
+        <graphView _id='55'>
+          <netViews>
+            <netView _id='56' modelId='5' style='line'/>
+            <netView _id='57' modelId='9' style='line'/>
+            <netView _id='58' modelId='14' style='line'/>
+            <netView _id='59' modelId='19' style='line'/>
+            <netView _id='60' modelId='24' style='line'/>
+            <netView _id='61' modelId='34' style='line'/>
+            <netView _id='62' modelId='38' style='line'/>
+            <netView _id='63' modelId='42' style='line'/>
+            <netView _id='64' modelId='47' style='line'/>
+            <netView _id='65' modelId='51' style='line'/>
+          </netViews>
+          <scenarios>
+            <scenarios _id='66'>
+              <scenarios>
+                <scenario _id='67' id='1' condition='#1.2 == 0 and #2.2 == 0'>
+                  <name>
+                    <translation lang='en' text='Input 0,0'/>
+                  </name>
+                  <desc>
+                    <translation lang='en' text='The output of an OR gate is 0 if both inputs are 0.'/>
+                  </desc>
+                  <steps>
+                    <scenarioStep _id='68' id='1' highlightIds='1,2,3,4,5,18,33,34,37,38,41,43,44,47' condition='#1.2 == 0 and #2.2 == 0'>
+                      <name>
+                        <translation lang='en' text='Input 0,0 Step'/>
+                      </name>
+                      <desc>
+                        <translation lang='en' text='Note how the NOR subgate connects its output only to the power supply, while the NOT subgate connects its output only to ground, which results in the desired negation of the NOR&apos;s output.'/>
+                      </desc>
+                    </scenarioStep>
+                  </steps>
+                </scenario>
+                <scenario _id='69' id='2' condition='#1.2 == 1 and #2.2 == 0'>
+                  <name>
+                    <translation lang='en' text='Input 1,0'/>
+                  </name>
+                  <desc>
+                    <translation lang='en' text='The output of an OR gate is 1 if any input is 1.'/>
+                  </desc>
+                  <steps>
+                    <scenarioStep _id='70' id='1' highlightIds='11,14,15,17,18,22,23,32,35,36,40,41,44,46' condition='#1.2 == 1 and #2.2 == 0'>
+                      <name>
+                        <translation lang='en' text='Input 1,0 Step'/>
+                      </name>
+                      <desc>
+                        <translation lang='en' text='Note how the NOR subgate connects its output only to ground, while the NOT subgate connects its output only to the power supply, which results in the desired negation of the NOR&apos;s output.'/>
+                      </desc>
+                    </scenarioStep>
+                  </steps>
+                </scenario>
+                <scenario _id='71' id='3' condition='#1.2 == 0 and #2.2 == 1'>
+                  <name>
+                    <translation lang='en' text='Input 0,1'/>
+                  </name>
+                  <desc>
+                    <translation lang='en' text='The output of an OR gate is 1 if any input is 1.'/>
+                  </desc>
+                  <steps>
+                    <scenarioStep _id='72' id='1' highlightIds='10,12,14,17,18,20,21,32,35,36,40,41,44,46' condition='#1.2 == 0 and #2.2 == 1'>
+                      <name>
+                        <translation lang='en' text='Input 0,1 Step'/>
+                      </name>
+                      <desc>
+                        <translation lang='en' text='Note how the NOR subgate connects its output only to ground, while the NOT subgate connects its output only to the power supply, which results in the desired negation of the NOR&apos;s output.'/>
+                      </desc>
+                    </scenarioStep>
+                  </steps>
+                </scenario>
+                <scenario _id='73' id='4' condition='#1.2 == 1 and #2.2 == 1'>
+                  <name>
+                    <translation lang='en' text='Input 1,1'/>
+                  </name>
+                  <desc>
+                    <translation lang='en' text='The output of an OR gate is 1 if both inputs are 1.'/>
+                  </desc>
+                  <steps>
+                    <scenarioStep _id='74' id='1' highlightIds='10,11,12,14,15,17,18,20,21,22,23,32,35,36,40,41,44,46' condition='#1.2 == 1 and #2.2 == 1'>
+                      <name>
+                        <translation lang='en' text='Input 1,1 Step'/>
+                      </name>
+                      <desc>
+                        <translation lang='en' text='Note how the NOR subgate connects its output only to ground, while the NOT subgate connects its output only to the power supply, which results in the desired negation of the NOR&apos;s output.'/>
+                      </desc>
+                    </scenarioStep>
+                  </steps>
+                </scenario>
+              </scenarios>
+            </scenarios>
+          </scenarios>
+          <components>
+            <graphElement _id='75' modelId='54' id='48'>
+              <component>
+                <rectangle _id='76' id='48' style='subsystem' filled='true' stroked='true' x='133.0' y='-315.0' w='126.0' h='280.0' vAlign='top'>
+                  <text>
+                    <translation lang='en' text='NOT'/>
+                  </text>
+                </rectangle>
+              </component>
+            </graphElement>
+            <graphElement _id='77' modelId='41' id='31'>
+              <component>
+                <rectangle _id='78' id='31' style='subsystem' filled='true' stroked='true' x='-126.0' y='-420.0' w='224.0' h='448.0' vAlign='top'>
+                  <text>
+                    <translation lang='en' text='NOR'/>
+                  </text>
+                </rectangle>
+              </component>
+            </graphElement>
+            <transistorView _id='79' id='1' rot='0' filled='true' stroked='true' modelId='3' x='-56.0' y='-301.0' symbol='inverterCircle'/>
+            <transistorView _id='80' id='2' rot='0' filled='true' stroked='true' modelId='4' x='-56.0' y='-217.0' symbol='inverterCircle'/>
+            <digitalEdgeView _id='81' id='3' filled='true' stroked='true' modelId='5' layout='ortho' orig='79' origPort='3' origPortOutput='true' dest='80' destPort='1' adjusted='false'>
+              <shape>
+                <polylineShape points='-14.0,-294.0 -14.0,-252.0'/>
+              </shape>
+            </digitalEdgeView>
+            <powerView _id='82' id='4' rot='270' filled='true' stroked='true' modelId='8' x='-14.0' y='-350.0'/>
+            <digitalEdgeView _id='83' id='5' filled='true' stroked='true' modelId='9' layout='ortho' orig='82' origPort='1' origPortOutput='true' dest='79' destPort='1' adjusted='false'>
+              <shape>
+                <polylineShape points='-14.0,-364.0 -14.0,-336.0'/>
+              </shape>
+            </digitalEdgeView>
+            <switchView _id='84' id='6' rot='0' filled='true' stroked='true' modelId='12' x='-154.0' y='-315.0'/>
+            <switchView _id='85' id='7' rot='0' filled='true' stroked='true' modelId='13' x='-154.0' y='-231.0'/>
+            <digitalEdgeView _id='86' id='8' filled='true' stroked='true' modelId='14' layout='ortho' orig='85' origPort='1' origPortOutput='true' dest='87' adjusted='false'>
+              <shape>
+                <polylineShape points='-168.0,-231.0 -147.0,-231.0'/>
+              </shape>
+            </digitalEdgeView>
+            <digitalEdgeView _id='88' id='9' filled='true' stroked='true' modelId='19' layout='ortho' orig='84' origPort='1' origPortOutput='true' dest='89' adjusted='false'>
+              <shape>
+                <polylineShape points='-168.0,-315.0 -105.0,-315.0'/>
+              </shape>
+            </digitalEdgeView>
+            <transistorView _id='90' id='10' rot='0' filled='true' stroked='true' modelId='18' x='-112.0' y='-42.0' symbol='inverterCircle'/>
+            <transistorView _id='91' id='11' rot='0' filled='true' stroked='true' modelId='23' x='14.0' y='-42.0' symbol='inverterCircle'/>
+            <digitalEdgeView _id='92' id='12' filled='true' stroked='true' modelId='24' layout='ortho' orig='90' origPort='3' origPortOutput='true' dest='93' adjusted='true'>
+              <shape>
+                <polylineShape points='-70.0,-77.0 -70.0,-140.0 -14.0,-140.0'/>
+              </shape>
+            </digitalEdgeView>
+            <digitalNodeView _id='93' id='13' filled='true' stroked='true' modelId='24'>
+              <location>
+                <point x='-14.0' y='-140.0'/>
+              </location>
+            </digitalNodeView>
+            <digitalEdgeView _id='94' id='15' filled='true' stroked='true' modelId='24' layout='ortho' orig='93' dest='91' destPort='3' destPortOutput='true' adjusted='false'>
+              <shape>
+                <polylineShape points='-14.0,-140.0 56.0,-140.0 56.0,-77.0'/>
+              </shape>
+            </digitalEdgeView>
+            <digitalEdgeView _id='95' id='17' filled='true' stroked='true' modelId='24' layout='ortho' orig='93' dest='96' adjusted='false'>
+              <shape>
+                <polylineShape points='-14.0,-140.0 -14.0,-168.0'/>
+              </shape>
+            </digitalEdgeView>
+            <ledView _id='97' id='19' rot='0' filled='true' stroked='true' modelId='32' x='280.0' y='-168.0' size='large' lightColor='red'/>
+            <groundView _id='98' id='20' rot='90' filled='true' stroked='true' modelId='33' x='-70.0' y='-21.0'/>
+            <digitalEdgeView _id='99' id='21' filled='true' stroked='true' modelId='34' layout='ortho' orig='98' origPort='1' origPortOutput='true' dest='90' destPort='1' adjusted='false'>
+              <shape>
+                <polylineShape points='-70.0,-7.0 -70.0,-35.0'/>
+              </shape>
+            </digitalEdgeView>
+            <groundView _id='100' id='22' rot='90' filled='true' stroked='true' modelId='37' x='56.0' y='-21.0'/>
+            <digitalEdgeView _id='101' id='23' filled='true' stroked='true' modelId='38' layout='ortho' orig='100' origPort='1' origPortOutput='true' dest='91' destPort='1' adjusted='false'>
+              <shape>
+                <polylineShape points='56.0,-7.0 56.0,-35.0'/>
+              </shape>
+            </digitalEdgeView>
+            <digitalNodeView _id='87' id='24' filled='true' stroked='true' modelId='14'>
+              <location>
+                <point x='-147.0' y='-231.0'/>
+              </location>
+            </digitalNodeView>
+            <digitalEdgeView _id='102' id='25' filled='true' stroked='true' modelId='14' layout='ortho' orig='87' dest='80' destPort='2' adjusted='false'>
+              <shape>
+                <polylineShape points='-147.0,-231.0 -42.0,-231.0'/>
+              </shape>
+            </digitalEdgeView>
+            <digitalEdgeView _id='103' id='26' filled='true' stroked='true' modelId='14' layout='ortho' orig='87' dest='90' destPort='2' adjusted='true'>
+              <shape>
+                <polylineShape points='-147.0,-231.0 -147.0,-56.0 -98.0,-56.0'/>
+              </shape>
+            </digitalEdgeView>
+            <digitalNodeView _id='89' id='27' filled='true' stroked='true' modelId='19'>
+              <location>
+                <point x='-105.0' y='-315.0'/>
+              </location>
+            </digitalNodeView>
+            <digitalEdgeView _id='104' id='28' filled='true' stroked='true' modelId='19' layout='ortho' orig='89' dest='79' destPort='2' adjusted='false'>
+              <shape>
+                <polylineShape points='-105.0,-315.0 -42.0,-315.0'/>
+              </shape>
+            </digitalEdgeView>
+            <digitalEdgeView _id='105' id='29' filled='true' stroked='true' modelId='19' layout='ortho' orig='89' dest='91' destPort='2' adjusted='true'>
+              <shape>
+                <polylineShape points='-105.0,-315.0 -105.0,-91.0 -14.0,-91.0 -14.0,-56.0 28.0,-56.0'/>
+              </shape>
+            </digitalEdgeView>
+            <transistorView _id='106' id='32' rot='0' filled='true' stroked='true' modelId='26' x='168.0' y='-203.0' symbol='inverterCircle'/>
+            <transistorView _id='107' id='33' rot='0' filled='true' stroked='true' modelId='28' x='168.0' y='-105.0' symbol='inverterCircle'/>
+            <digitalEdgeView _id='108' id='34' filled='true' stroked='true' modelId='42' layout='ortho' orig='107' origPort='3' origPortOutput='true' dest='109' adjusted='false'>
+              <shape>
+                <polylineShape points='210.0,-140.0 210.0,-168.0'/>
+              </shape>
+            </digitalEdgeView>
+            <powerView _id='110' id='35' rot='270' filled='true' stroked='true' modelId='46' x='210.0' y='-252.0'/>
+            <digitalEdgeView _id='111' id='36' filled='true' stroked='true' modelId='47' layout='ortho' orig='110' origPort='1' origPortOutput='true' dest='106' destPort='1' adjusted='false'>
+              <shape>
+                <polylineShape points='210.0,-266.0 210.0,-238.0'/>
+              </shape>
+            </digitalEdgeView>
+            <groundView _id='112' id='37' rot='90' filled='true' stroked='true' modelId='50' x='210.0' y='-84.0'/>
+            <digitalEdgeView _id='113' id='38' filled='true' stroked='true' modelId='51' layout='ortho' orig='112' origPort='1' origPortOutput='true' dest='107' destPort='1' adjusted='false'>
+              <shape>
+                <polylineShape points='210.0,-70.0 210.0,-98.0'/>
+              </shape>
+            </digitalEdgeView>
+            <digitalNodeView _id='109' id='39' filled='true' stroked='true' modelId='42'>
+              <location>
+                <point x='210.0' y='-168.0'/>
+              </location>
+            </digitalNodeView>
+            <digitalEdgeView _id='114' id='40' filled='true' stroked='true' modelId='42' layout='ortho' orig='109' dest='106' destPort='3' destPortOutput='true' adjusted='false'>
+              <shape>
+                <polylineShape points='210.0,-168.0 210.0,-196.0'/>
+              </shape>
+            </digitalEdgeView>
+            <digitalEdgeView _id='115' id='41' filled='true' stroked='true' modelId='42' layout='ortho' orig='109' dest='97' destPort='1' adjusted='false'>
+              <shape>
+                <polylineShape points='210.0,-168.0 294.0,-168.0'/>
+              </shape>
+            </digitalEdgeView>
+            <digitalNodeView _id='96' id='42' filled='true' stroked='true' modelId='24'>
+              <location>
+                <point x='-14.0' y='-168.0'/>
+              </location>
+            </digitalNodeView>
+            <digitalEdgeView _id='116' id='43' filled='true' stroked='true' modelId='24' layout='ortho' orig='96' dest='80' destPort='3' destPortOutput='true' adjusted='false'>
+              <shape>
+                <polylineShape points='-14.0,-168.0 -14.0,-210.0'/>
+              </shape>
+            </digitalEdgeView>
+            <digitalEdgeView _id='117' id='44' filled='true' stroked='true' modelId='24' layout='ortho' orig='96' dest='118' adjusted='false'>
+              <shape>
+                <polylineShape points='-14.0,-168.0 154.0,-168.0'/>
+              </shape>
+            </digitalEdgeView>
+            <digitalNodeView _id='118' id='45' filled='true' stroked='true' modelId='24'>
+              <location>
+                <point x='154.0' y='-168.0'/>
+              </location>
+            </digitalNodeView>
+            <digitalEdgeView _id='119' id='46' filled='true' stroked='true' modelId='24' layout='ortho' orig='118' dest='106' destPort='2' adjusted='true'>
+              <shape>
+                <polylineShape points='154.0,-168.0 154.0,-217.0 182.0,-217.0'/>
+              </shape>
+            </digitalEdgeView>
+            <digitalEdgeView _id='120' id='47' filled='true' stroked='true' modelId='24' layout='ortho' orig='118' dest='107' destPort='2' adjusted='true'>
+              <shape>
+                <polylineShape points='154.0,-168.0 154.0,-119.0 182.0,-119.0'/>
+              </shape>
+            </digitalEdgeView>
+          </components>
+        </graphView>
+      </view>
+    </graphStorable>
+  </graph>
+  <container>
+    <containerDrawing _id='121'>
+      <components>
+        <rectangle _id='122' id='1' style='figure' filled='true' stroked='true' x='140.0' y='140.0' w='56.0' h='70.0'/>
+        <originIndicator _id='123'>
+          <location>
+            <point x='140.0' y='140.0'/>
+          </location>
+        </originIndicator>
+      </components>
+      <model>
+        <subGraphVertice _id='124' id='0' delay='0' uuid='390a6f49-407c-4b6e-b4c8-401b8a03a5a4'>
+          <name>
+            <translation lang='en' text='CMOS OR Gate'/>
+          </name>
+          <ports/>
+        </subGraphVertice>
+      </model>
+    </containerDrawing>
+  </container>
+</metaGraph>
