@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby RUBY_VERSION
+ruby '3.0.3'
 
 gem "minimal-mistakes-jekyll"
 
