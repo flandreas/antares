@@ -4,7 +4,7 @@ include::../../page-variables.txt[]
 
 After you've built a new circuit, you might want to ensure that it works correctly for different input signal combinations.
 
-You can do that by creating "Circuit tests" for your circuit, where you define a truth table with test vectors containing input signals and their expected output signals. When running such a circuit test, Antares will simulate your circuit in the background, establish the input signals from your test vector, and compare the vector's output signals with the actual signals produced by your circuit.
+You can do that by creating "Circuit tests" for your circuit, where you define a truth table with test vectors containing input signals and their expected output signals. When running such a circuit test, Antares will simulate your circuit in the background, apply the input signals from your test vector, and compare the vector's output signals with the actual signals produced by your circuit.
 
 Let's use the "Half Adder" circuit from Antares' standard library to explain how to use circuit tests, and pretend that we have a bug in our design of the half adder. We'll detect it by applying a test case for the half adder circuit.
 

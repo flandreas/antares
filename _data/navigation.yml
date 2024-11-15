@@ -79,8 +79,6 @@ manual:
         url: /user-manual/english/usecases/usecases
       - title: "Circuit Parameters"
         url: /user-manual/english/circuits/circuit-parameters
-      - title: "Oscilloscope"
-        url: /user-manual/english/oscilloscope/oscilloscope
   - title: Miscellaneous
     children:
       - title: "Preferences"
@@ -95,6 +93,8 @@ manual:
 releases:
   - title: 2024
     children:
+      - title: "1.16.0"
+        url: /docs/releases/release-1.16.0
       - title: "1.15.1"
         url: /docs/releases/release-1.15.1
       - title: "1.15.0"
@@ -245,3 +245,5 @@ examples:
         url: /docs/examples/but-how-do-it-know/description
       - title: "Ben Eater's 8-bit computer"
         url: /docs/examples/ben-eater-8-bit-computer/ben-eater-8-bit-computer
+      - title: "Tic-Tac-Toe"
+        url: /docs/examples/tic-tac-toe/tic-tac-toe

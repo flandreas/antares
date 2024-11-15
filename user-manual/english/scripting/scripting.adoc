@@ -3,11 +3,11 @@ include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/scripting/scripting
 :icons: font
 
-Scripting is a powerful feature of Antares that allows you to influence the behavior of circuits during simulation in different ways. To do this, you write small scripts, i.e. small pieces of program that are stored in different places in a circuit and that are executed by Antares during simulation.
+Scripting is a powerful feature of Antares that allows you to influence the behavior of circuits during simulation in different ways. To do this, you write small scripts, i.e. small pieces of program code that are stored in different places in a project, and that are executed by Antares during simulation.
 
 == Enter Scripts
 
-The programming language in which the scripts is a custom DSL (domain specific language) that carefully been tailored to work particularly well with digital signals and accessing ports of circuits.
+The programming language in which the scripts are written is a custom DSL (domain specific language). It has been carefully tailored to work particularly well with digital signals and accessing pins of circuits.
 
 Since this programming language does not need to be compiled, but is interpreted during execution, the scripts do not need to be created separately and stored in the directory where Antares is installed, but can be stored as pure text within the circuit.
 
@@ -21,13 +21,13 @@ image::user-manual/scripting/scripting-editor-en.png[Script Editor, 500, align=c
 
 In this window you write your script as described in the following sections. You can use the button btn:[Check] to let Antares check your script for syntactic or semantic errors. With the button btn:[OK] the current script is saved in the property where you opened the script editor.
 
-If you have made a programming error in a script (which can happen), Antares will detect this during simulation - sooner or later depending on the type of script - and pause the simulation. In the "Issues" view, which can be displayed at the bottom of the main window, the color of the icon changes to red, and the table in the view contains a new entry that gives you information about the error that occurred.
+If you have made a programming error in a script (which can happen), Antares will detect this during simulation - sooner or later depending on the type of script - and pause the simulation. In the "Issues" view, which can be displayed at the bottom of the main window, the color of the icon changes to red, and the table in the view contains a new entry that gives you information about the error that has occurred.
 
 image::user-manual/scripting/scripting-error-en.png[Script error, 600, align=center]
 
 The entries in the table have the following properties:
 
-Name:: The name or type of the issue. For scripting errors the name "Script Error". There are other types of errors, such as "Design Error", which occurs when your circuit contains wires connecting pins of different bit widths.
+Name:: The name or type of the issue. For scripting errors the name is "Script Error". There are other types of errors, such as "Design Error", which occurs when your circuit contains wires connecting pins of different bit widths.
 
 Origin:: An identification of the object where the error occurred. This can be a subcircuit, a use case, a scenario or in the future any other origin.
 

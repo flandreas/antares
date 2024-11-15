@@ -23,7 +23,7 @@ All changes - whether to the circuit itself, to the symbol, or to properties of 
 
 == Zooming and panning
 
-If the circuit is larger, the need to select the size and section of the circuit display in the main window quickly arises. The size of the area containing the circuit is basically unlimited. This is also the reason why the main view does not contain scrollbars; instead, Antares offers several other options for selecting the size and section of the display.
+If the circuit is larger, the need to change the size and section of the circuit display in the main window quickly arises. The size of the area containing the circuit is basically unlimited. This is also the reason why the main view does not contain scrollbars; instead, Antares offers several other options for changing the size and section of the display.
 
 TIP: When the mouse is moved around in the main view, Antares displays the current coordinates of the mouse position in the status bar at the bottom right.
 
@@ -57,7 +57,7 @@ Name:: In this property a short name of the circuit can be entered in all suppor
 
 Description:: This property is used to capture a longer description of the circuit which is displayed in the preview of the explorer and in the description popup when used as a subcircuit in other circuits.
 
-Propagation Delay:: This optional property can be used to specify the length of time that elapses between the processing of an input signal and the appearance of a modified output signal. It is used to control the display of the processing state of a subcircuit during link:{{site.basedir}}/user-manual/english/simulation/simulation[simulation].
+Propagation Delay:: This optional property can be used to specify the length of time that elapses between the processing of an input signal and the appearance of a modified output signal. It is used to control the display of the processing state of a subcircuit during link:{{site.basedir}}/user-manual/english/simulation/simulation[simulation]. In case of scripted circuits, this value is also effectively to determine when the calculated output signals are produced at the output pins.
 
 Start-up Duration:: The time (in ns) it takes the circuit to settle after starting the simulation. This optional property is used to omit signal flow animations and soft breakpoints during simulation start-up. In order to figure out the start-up duration of your circuit, activate menu menu:Simulation[Display Simulation Time in State Bar], start the simulation, and wait until the circuit has settled. Then use the value displayed at the right edge of the state bar.
 
@@ -65,13 +65,13 @@ Function:: This property can be used to specify the script that Antares executes
 
 Always use function:: This property is used to activate the "purely scripted" feature of a circuit. If the attribute is set, the script in attribute "Function" is executed even if simulation depth is "deep". This can be used to build functional components without the need to build the entire inner circuit, although you probably will add some inputs and outputs to give the component an interface to the surrounding circuit.
 
-Default light color:: The light color that all components in this circuit should have by default (LED, 7-segment display, terminal). If you change the value of this attribute while the circuit already contains lit components, Antares will ask you if the new light color should be applied to these components. With this option, for example, all red LEDs and 7-segment displays can be changed to yellow with a single action.
+Default light color:: The light color that all components in this circuit should have by default (LED, 7-segment display, terminal). If you change the value of this attribute while the circuit already contains light-emitting components, Antares will ask you if the new light color should be applied to these components. With this option, for example, all red LEDs and 7-segment displays can be changed to yellow with a single action.
 
-Wire Logic:: Determines the logic to be applied when asserting different values to the same wire. Choose between the standard "Conflict" mode, which regards differing values as conflicts, or the "Wired OR" mode. See the section "Wire Logic" in the user manual's link:{{site.basedir}}/user-manual/english/simulation/simulation["Simulation"] chapter for more information.
+Wire Logic:: Determines the logic to be applied when asserting different values to the same wire. Choose between the standard "Conflict" mode, which handles differing values as conflicts, or the "Wired OR" mode. See the section "Wire Logic" in the user manual's link:{{site.basedir}}/user-manual/english/simulation/simulation["Simulation"] chapter for more information.
 
 == Adding components
 
-You add components to a circuit by selecting the components to be added in the workbench tree and dragging them into the circuit (Drag & Drop). The new component is given the default properties specified by the programming.
+You add components to a circuit by selecting the components to be added in the workbench tree and dragging them into the circuit (Drag & Drop). The new component is given default properties.
 
 It often happens that you need several components with the same, modified properties in a circuit, e.g. OR gates with three inputs instead of only two as with the default value. In these cases it may be useful to use copy/paste: Drag the first copy of the component into the circuit, set the desired properties, copy the component to the clipboard using menu:Edit[Copy], and then paste the required number of additional components into the circuit using menu:Edit[Paste].
 
@@ -90,13 +90,13 @@ Propagation Delay [ns]:: On subcircuits, this property is only used in "shallow"
 NOTE: This property is not displayed if the subcircuit has a parameter with semantic "Propagation Delay", in which case the property is replaced by the generic "Parameter <Name>" from the subcircuit.
 
 
-Orientation:: The cardinal point to which the symbol of the subcircuit points. Like basic components, symbols of subcircuits can also be rotated with kbd:[Cmd + R].
+Orientation:: The direction to which the symbol of the subcircuit points. Like basic components, symbols of subcircuits can also be rotated with kbd:[Cmd + R].
 
 Mirror Horizontally:: Mirrors the symbol in horizontal direction (or on the vertical axis through the origin of the symbol). This is useful, for example, if wires with input signals arrive in the using circuit from the right side, but the inputs in the symbol are located on the left side of the symbol.
 
 Mirror Vertically:: Mirrors the symbol in vertical direction (or on the horizontal axis through the origin of the symbol). This is useful e.g. if wires with control signals arrive from above in the using circuit, but the control inputs in the symbol are located at the lower side of the symbol.
 
-Description:: In this attribute a description of the subcircuit can be entered which is only valid for this one use of the subcircuit. This description replaces the one given by the author of the subcircuit.
+Description:: In this attribute a description of the subcircuit can be entered which is only valid for this one use of the subcircuit. This description replaces the one given by the author of the subcircuit. Certain functionality, such as tooltip, might display both the description of the referenced circuit as well as the complementing description of the subcircuit instance.
 
 Label:: This attribute is only available if the symbol of the subcircuit contains at least one designation element, i.e. a text and/or a label. This attribute can be used to change the text of the label specified by the symbol. +
  +
@@ -153,7 +153,7 @@ image:user-manual/circuits/polyline.gif[Polyline] **Polyline** Click the left mo
 
 image:user-manual/circuits/curve-20.png[Curve] **Curve** Click with the mouse at three points to define the three points of a curve. The three points are the support points of a square Bézier curve.
 
-image:user-manual/circuits/text.gif[Text] **Text** A click with the left mouse button creates a text component with a standard text. Double click on the text to change the text or use the "Text" attribute in the Antares properties window. The text can contain several lines. In the current version of Antares, the text is left aligned. Change the size of the text box by editing it like a rectangle.
+image:user-manual/circuits/text.gif[Text] **Text** A click with the left mouse button creates a text component with a standard text. Double-click on the text to change the text or use the "Text" attribute in the Antares properties window. The text can contain several lines. The horizontal alignment of the text can be changed in the properties. Change the size of the text box by editing it like a rectangle.
 
 The selection state of the graphical objects is displayed by drawing in the selection color, as with digital components, and not by displaying the small editing rectangles (handles) as in other applications. These are only displayed when you move the mouse over a selected graphic component.
 
@@ -199,7 +199,7 @@ Select an entry in the list of old version to display a preview of that version.
 
 NOTE: The save history of a circuit gets also deleted if that circuit is deleted from the project or library.
 
-== Searching in Circuits
+== Searching in circuits
 
 Antares allows you to search for components in a circuit that currently has the focus. If you press kbd:[ALT]+kbd:[CMD]+kbd:[F], Antares displays the search bar just above the circuit. Enter your search expression in the search field, and Antares will execute a search for every entered character. The components matching the search criteria get selected in the circuit.
 
@@ -210,6 +210,6 @@ Components are found according to the following criteria:
 * If you enter a numerical value such as 42, this value is also interpreted as "ID" of the component, as displayed in the property field "ID" when selecting a component. This can be useful when you write scripts, which is when you often have to deal with IDs of components.
 * The search expression matches the type name of components, such as "Flip-Flop" or "Shifter 16 Bit".
 * The search expression matches labels of components, such as inputs, outputs, LEDs, switches, tunnels or DIP switches.
-* When a search matches an input, an output, a tunnel, a switch or a DIP switch, the wire connected to the single port of that component is also selected. This can e.g. used to get an overview of a signal line leading through tunnels.
+* When a search matches an input, an output, a tunnel, a switch or a DIP switch, the wire connected to the single port of that component is also selected. This can e.g. be used to get an overview of a signal line leading through tunnels.
 
 Press kbd:[ESC] to close the search bar, or click button btn:[X] at the right edge of the search bar.

@@ -35,15 +35,17 @@ image:user-manual/base-library/xor-mnemonic.png[Example Mnemonic, 300]
 
 == Pins
 
-Inputs:: The 1-bit inputs of the XNOR gate. Their number is determined by the property "Number of inputs".
+Inputs:: The n-bit inputs of the XNOR gate. Their number is determined by the property "Number of inputs".
 
-Output:: The 1-bit output of the XNOR gate. Outputs the value of the calculated XNOR function.
+Output:: The n-bit output of the XNOR gate. Outputs the value of the calculated XNOR function.
 
 == Properties
 
 Orientation:: The direction in which the output points.
 
 Number of inputs:: Determines how many inputs the XNOR gate has. There are 2 to max. 8 inputs available. Can even be changed if the gate is already connected to wires.
+
+Bit width:: The number of bits of every input pin and the output pin.
 
 Negate input n:: When selected, the n-th input pin is negated. The maximum of "n" is determined by property "Number of inputs". Negation is also
 applied to the truth table and the mnemonics displayed for the gate.

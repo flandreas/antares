@@ -21,13 +21,13 @@ Output to input:: Move the mouse with the left mouse button pressed down to the 
 
 Input to output or wire:: Move the mouse with pressed mouse button to the input of a component or to an already existing wire.
 
-Wire to input:: To start a new wire on an already existing wire (branch), move the mouse over the existing wire and press the kbd:[Alt] key. Hold down the kbd:[Alt] key while dragging.
+Wire to input:: To start a new wire on an already existing wire (branch), move the mouse over the existing wire and press the kbd:[Alt] key. Hold down the kbd:[Alt] key while clicking to create the branched-off wire..
 
 TIP: Bidirectional pins are both input and output and can be connected in both ways.
 
 In addition to these options, you can create an unconnected wire in all cases by releasing the mouse button over the background of the circuit.
 
-By default, Antares automatically creates an orthogonal layout while creating the wire. To influence the layout of the resulting wire, press the kbd:[Alt]-key while defining the start location. Antares will then display a green square instead of the green circle. Then you can define the intermediate points of the resulting wire by clicking with the left mouse button. You do not have to keep the mouse button pressed while moving the mouse. Use the kbd:[ESC]-key to remove the last intermediate point. With a single click on an input or with a double click on the background the creation of the wire is completed.
+By default, Antares automatically applies an orthogonal layout when creating the wire. To influence the layout of the resulting wire, press the kbd:[Alt]-key while defining the start location. Antares will then display a green square instead of the green circle. Then you can define the intermediate points of the resulting wire by clicking with the left mouse button. You do not have to keep the mouse button pressed while moving the mouse. Use the kbd:[ESC]-key to remove the last intermediate point. With a single click on an input or with a double click on the background the creation of the wire is completed.
 
 == Wire Bundle
 
@@ -43,7 +43,7 @@ Circuits with design errors cannot be simulated; before the simulation can be st
 
 Sometimes it happens that you have connected a wire to the wrong component. To change this, it is not necessary to delete the wire and then create a new wire. Antares offers the possibility to reassign existing wires to other pins.
 
-Move the mouse over the port to which the wire is connected. Antares displays a small green circle. Press the left mouse button and move the mouse to the new pin while keeping the mouse button pressed.
+Move the mouse over the port to which the wire is connected and press ALT. Antares displays a small green circle with 4 arrows. Press the left mouse button and move the mouse to the new pin while keeping the mouse button pressed.
 
 == Automatic connection
 
@@ -59,7 +59,7 @@ By default, the way wires are drawn is only influenced by the bit width of the c
 
 image::user-manual/circuits/wire-styles.png[Wire styles,600,align="center"]
 
-Antares provides several options that allow you to additionally influence the display of wires. Select the wire and choose the corresponding properties in the properties window.
+Antares provides several options that allow you to additionally influence how wires are drawn. Select the wire and choose the corresponding properties in the properties window.
 
 Arrow:: Select this property if you want an arrowhead to be displayed at the end of the wire, if the wire ends at an input or a bidirectional pin.
 
@@ -75,12 +75,12 @@ Select the wire and set the "Layout" property in the Properties window to one of
 
 Orthogonal:: With this layout, the wire is built up from orthogonal segments. Although the algorithm implemented for this is already far from trivial, it creates layouts that some users might call suboptimal; for example, it does not prevent wires from passing through components. The currently implemented algorithm represents a pragmatic relationship between implementation effort and functionality; it is still open whether future versions of Antares will include a much more intelligent algorithm. +
  +
-With this layout, individual segments can be moved in parallel. To do this, click on a segment and move it at right angles to the direction in which the segment is pointing while holding down the mouse button.
+With this layout, individual segments can be moved in parallel. To do this, click on a segment and move it orthogonally to the direction in which the segment is pointing while holding down the mouse button.
 
 None:: In this layout, Antares does not make any adjustments to the layout at either end when moving the components to which the wire is connected. This layout is typically used to draw non-orthogonal wires, as is often required for flip-flop circuits. +
  +
 With this layout, the individual intermediate points can be moved. Select the wire, where upon Antares will display small empty rectangles at the intermediate points. Move these intermediate points by holding down the left mouse button.
 
-Straight:: In this layout a straight connection between the start and end point of the wire is drawn. This layout exists for reasons of completeness, but is rather not used in digital circuits. +
+Straight:: In this layout a straight connection between the start and end point of the wire is drawn. This layout exists for reasons of completeness, but is rarely used in digital circuits. +
  +
 With this layout the geometry of the wire cannot be influenced.

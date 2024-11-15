@@ -17,16 +17,18 @@ image::user-manual/scenarios/scenarios-sample-en.png[Example scenarios, 500,alig
 
 == Concept
 
-As the author of a circuit, you can define scenarios yourself, which in turn consist of scenario steps. For scenarios and scenario steps you define the conditions under which they are activated. These conditions are, for example, current output signals from components of the circuit. Antares constantly checks during simulation whether one of these conditions has occurred, and if so, activates the relevant scenario and/or scenario step. The activation causes the additional information you have defined for this scenario or scenario step to be displayed.
+As the author of a circuit, you can define scenarios, which in turn consist of scenario steps. For scenarios and scenario steps you define the conditions under which they are activated. These conditions are, for example, current output signals from components of the circuit. Antares constantly checks during simulation whether one of these conditions has occurred, and if so, activates the relevant scenario and/or scenario step. The activation causes the additional information you have defined for this scenario or scenario step to be displayed.
 
 In the above example of "SR Latch", the author of the circuit has defined four scenarios:
 
 * **Set**: The condition of this scenario is that S has the value 1 and R has the value 0. The latch is therefore set.
 * **Reset**: The condition of this scenario is that S has the value 0 and R has the value 1. The latch is therefore reset.
-* **Store**: The condition of this scenario is that both S and R must be 0. This is the store case: The current output value should be retained even after the input signals have disappeared.
+* **Store**: The condition of this scenario is that both S and R are 0. This is the store case: The current output value should be retained even after the input signals have disappeared.
 * **Race Condition**: The condition of this scenario is that both S and R have the value 1. This is an illegal use of the "SR Latch".
 
-Scenario steps can be used to further refine a single scenario, e.g. to explain in detail how to set the "SR Latch". For scenario steps, it can be useful not only to display explanatory texts, but also to highlight the component that plays an important role in this scenario step, or to highlight wires through which a signal important for this scenario step is transmitted.
+Scenario steps can be used to further refine a single scenario, e.g. to explain the individual steps that happen until the latch locks into the "Set" state. A scenario step can only be active if its parent scenario is active as well.
+
+For scenario steps, it can be useful not only to display explanatory texts, but also to highlight the component that plays an important role in this scenario step, or to highlight wires through which a signal important for this scenario step is transmitted.
 
 The explanation text of an active scenario is displayed in a text box above the circuit, while the explanation text of an active scenario step is displayed below the circuit.
 
@@ -34,7 +36,7 @@ Scenarios and their scenario steps are always saved together with the open circu
 
 == Configuration
 
-Scenarios of the open circuit are configured in the "Scenarios" sidebar on the right side of the Antares window.
+Scenarios of the currently open circuit are configured in the "Scenarios" sidebar on the right side of the Antares window.
 
 The sidebar contains a tree with all scenarios (gear icon) and their scenario steps (footprint icon). When you select a node in the tree, the properties of the object are displayed in the properties view below it and offered for modification.
 
@@ -81,18 +83,18 @@ Name:: The name of the scenario step, which can be translated into all supported
 
 Description:: The description of the scenario step, which can be translated into all supported languages. It will be displayed in a text box below the circuit during simulation, as long as the scenario step is active.
 
-Condition:: The script with the condition that must be fulfilled in order for this scenario to be recognized. If several scenario steps of the active scenario fulfilled their condition at the same time, Antares will activate only the first of these scenario steps. A scenario step can only be activated if the scenario it is part of is active.
+Condition:: The script with the condition that must be fulfilled in order for this scenario to be activated. If several scenario steps of the active scenario fulfilled their condition at the same time, Antares will activate only the first of these scenario steps. A scenario step can only be activated if the scenario it is part of is active.
 See link:{{site.basedir}}/user-manual/english/scripting/scripting[Scripting] for details on scripting.  +
 +
 .Example
 [source,javascript]
 ----
-#1.1 == 1 and #1.2 == 0 and #1.3 == 1
+#1:1 == 1 and #1:2 == 0 and #1:3 == 1
 ----
 
-Highlightings:: A comma-separated list of IDs of components to be highlighted when the scenario step has been detected. The ID of a component is displayed in the properties window of the circuit when the component is selected. Antares displays highlighted components on a bright yellow background (the color may vary depending on the theme used).  +
+Highlightings:: A comma-separated list of IDs of components to be highlighted when the scenario step has been activated. The ID of a component is displayed in the properties window of the circuit when the component is selected. Antares displays highlighted components on a bright yellow background (the color may vary depending on the theme used).  +
 +
-.example
+.Example
 ----
 9,11,13
 ----

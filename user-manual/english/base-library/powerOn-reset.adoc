@@ -8,7 +8,7 @@ image:user-manual/base-library/powerOnReset-sample.png[Example Power-On Reset, 2
 
 == Behavior
 
-The "Power-On Reset" component can be used to bring a circuit into a defined state when the simulation gets started, i.e. when the circuit is "powered on".
+The "Power-On Reset" component can be used to bring a circuit into a defined state when the simulation is started, i.e. when the circuit is "powered on".
 
 When the simulation is started, the single output of the component immediately goes to 1 and stays there as long as its "Propagation Delay" property indicated. After that, the output goes back to 0 and stays there during the entire simulation.
 

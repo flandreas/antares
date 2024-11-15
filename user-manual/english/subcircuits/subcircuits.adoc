@@ -22,7 +22,7 @@ Ports must have a unique **name** so that they can be identified at various poin
 
 === Name Styles
 
-Digital circuits often have inputs and outputs that transmit an inverted signal and whose names are marked with a crossbar above the text. An example is a flip-flops with the outputs Q and [overline]#Q#. You can create a crossbar in Antares by placing an exclamation mark in front of the letter that you want to have a crossbar. Longer text with crossbars can be additionally marked with round brackets.
+Digital circuits often have inputs and outputs that transmit an inverted signal and whose names are marked with a overline above the text. An example is a flip-flops with the outputs Q and [overline]#Q#. You can create an overline in Antares by placing an exclamation mark in front of the letter that you want to have a overline. Longer text with overlines can be additionally marked with round brackets.
 
 Examples:
 
@@ -77,11 +77,11 @@ image::user-manual/subcircuits/symbol-editor-tree-en.png[tree, 250, align="cente
 
 The elements in the tree are divided into three categories.
 
-Ports :: The inputs and outputs of the circuit that can be included in the symbol. They are shown in the symbol with a connection dash (pin) and the name of the port.
+Ports :: The inputs and outputs of the circuit that can be included in the symbol. They are shown in the symbol with a connection line (pin) and the name of the port.
 
-Controls:: Controls are additional components of the circuit that can also be included in the symbol. See the "Controls" section below for more details. Controls are represented differently in the symbol depending on their type. Control pins display the current signal value of the pin, while interactive controls such as switches, LEDs, or 7-segment displays are displayed in the same way as in the circuit.
+Controls:: Controls are additional components of the circuit that can also be included in the symbol. See the "Controls" section below for more details. Controls are represented differently in the symbol depending on their type. Input/output controls display the current signal value of the pin, while interactive controls such as switches, LEDs, or 7-segment displays are displayed in the same way as in the circuit.
 
-Subcircuits:: This tree node contains all subcircuits of the circuit for which the symbol is created. It is used to include inner control elements of subcircuits in the symbol.
+Subcircuits:: This tree node contains all subcircuits of the circuit (and recursively all their subcircuits!) for which the symbol is created. It is used to include inner control elements of subcircuits in the symbol.
 
 If you drag an element from the tree into the symbol editor, the symbol is removed from the tree, as it makes no sense to have the same element in the symbol more than once. Conversely, if you delete an element in the symbol editor, it is added to the tree again.
 
@@ -93,10 +93,10 @@ Port ID :: Displays the ID of the port (cannot be changed). This ID can be used 
 
 Name:: The name of the port (cannot be changed). The name of a port can only be changed in the circuit itself.
 
-Orientation:: The cardinal point to which the pin of the port points.
+Orientation:: The direction to which the port points.
 
 Label Position:: This property controls whether and where the pin name is displayed in the symbol. +
-**Internally**: The name is displayed inside the symbol, i.e. as slightly larger text opposite the connecting dash. +
+**Internally**: The name is displayed inside the symbol, i.e. as slightly larger text opposite the connecting line. +
 **Externally**: The name is displayed outside the symbol, i.e. as a slightly smaller text above the connecting wire. +
 **Hide**: The name is not displayed.
 
@@ -108,7 +108,7 @@ Label Orientation:: Only available for "Label Position" "Internally". Determines
 
 Show Bit Width:: Pins with a bit width greater than 1 are by default a small annotation that shows the number of bits of the pin. This property can be used to hide this annotation.
 
-Logic:: Only available for inputs. Controls the logic annotation of this pin. With the value "Negative", a small circle is displayed outside the symbol for this pin.
+Logic:: Controls the logic annotation of this pin. With the value "Negative", a small circle is displayed outside the symbol for this pin.
 
 Triggering:: Available for inputs only. With the value "Edge" a small triangle is displayed inside the symbol for the pin.
 
@@ -119,7 +119,7 @@ Output Annotation:: Only available for outputs. Depending on the value "None", "
 When you click on the background of the drawing area, the Antares properties window displays the properties of the entire symbol.
 
 [[representation]]
-Representation during simulation:: In this property you can enter a script that can be used to additionally influence the representation of the symbol (currently still within narrow limits) during simulation. For example, the multiplexer components of the standard Antares library contain a script that represents the selected data path within the symbol by drawing a line from input to output. +
+Representation during simulation:: In this property you can enter a script that can be used to additionally influence the representation of the symbol (currently still only to a small degree) during simulation. For example, the multiplexer components of the standard Antares library contain a script that denotes the selected data path within the symbol by drawing a line from input to output. +
 +
 image:user-manual/subcircuits/exec-draw-sample.png[, 350, align="center"]
 +
@@ -130,6 +130,8 @@ Scripting is an advanced concept. See the chapter link:{{site.basedir}}/user-man
 Controls in symbols are an extremely powerful concept that allows you to create dynamic and interactive symbols.
 
 Controls are components of the circuit that are additionally included in the symbol and can display their current state in the symbol during simulation. Interactive components such as switches also allow the user to perform actions such as pressing the switch during simulation, which are then processed in the subcircuit.
+
+NOTE: When controls are added to a symbol, the pins of the controls are not drawn.
 
 The following built-in components of Antares can be used as controls.
 

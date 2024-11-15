@@ -24,7 +24,7 @@ Narrow side pins:: The wire taps has as many input/output pins at its narrow sid
 
 Wide Bit Width:: The number of bits at the wide side of the wire tap. This must correspond with the bit width of the bus to which it is to be connected. Only editable if the wire tap is still unconnected.
 
-Narrow Bit Width:: The number of bits of all pins at the narrow side of the wire tap. All those pins have the same bit width. . Only editable if the wire tap is still unconnected.
+Narrow Bit Width:: The number of bits of all pins at the narrow side of the wire tap. All those pins have the same bit width. Only editable if the wire tap is still unconnected.
 
 Narrow Pin Facing:: The direction into which the narrow pins are facing if the wire tap is oriented to the east.
 
@@ -32,7 +32,7 @@ Pin Spacing:: Determines the space between the narrow pins. Choose between "Narr
 
 Number of Outputs:: The number of pins at the narrow side.
 
-Bit Position [n]:: The starting position of the bit range of the wide bus into which this narrow pin is tapping. These positions start with 0 indicating the least significant bit. The effective tapped bit range is the "Bit Position .. (Bit Position + Narrow Bit Width"). Example: Tapping into an 8 bit bus with narrow bit with 4 and bit position 2 taps the bits 2..6. +
+Bit Position [n]:: The starting position of the bit range of the wide bus into which this narrow pin is tapping. These positions start with 0 indicating the least significant bit. The effective tapped bits range from "Bit Position" to "Bit Position" + "Narrow Bit Width". Example: Tapping into an 8 bit bus with narrow bit with 4 and bit position 2 taps the bits 2..6. +
 +
 Antares enforces that tapped bit positions don't overlap, as this would lead to conflicts during simulation. Therefore, bit positions like "0..3" and "1..4" together are not allowed.
 

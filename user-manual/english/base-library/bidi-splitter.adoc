@@ -10,6 +10,8 @@ image:user-manual/base-library/bidi-splitter-sample.png[Splitter,300]
 
 The bi-directional splitter combines link:{{site.basedir}}/user-manual/english/base-library/splitter[splitter] and link:{{site.basedir}}/user-manual/english/base-library/combiner[combiner] in one single component and can therefore forward signals in both directions.
 
+NOTE: Simulation of circuits containing bi-directional splitters is more time-consuming. Try to avoid them if you can and if simulation speed is a concern.
+
 == Pins
 
 All pins of bi-directional splitter are input/output pins.

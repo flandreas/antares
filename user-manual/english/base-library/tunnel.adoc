@@ -42,6 +42,6 @@ Name:: The name of the tunnel into which this component is sending its signal. T
 
 Bit Width:: The number of bits that can be transmitted simultaneously through this tunnel.
 
-Flow Direction:: Only available for symbol type "Arrow". Rotates the arrow triangle to indicate the direction in which signals flow through the tunnel.
+Flow Direction:: Only available for symbol type "Arrow". Rotates the arrow triangle to indicate the direction in which signals flow through the tunnel. Note that this only influences the graphical representation: Even if you choose "Into tunnel", the tunnel still remains bidirectional.
 
 Global:: Determines whether the tunnel is global, meaning that it can send and receive global signals across circuit boundaries. Local tunnels communicate only within the same circuit.

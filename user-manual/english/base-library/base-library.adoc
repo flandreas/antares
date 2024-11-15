@@ -12,7 +12,7 @@ For this reason, Antares does not contain any built-in or elementary flip-flops,
 
 Properties that only apply to a specific component, or that have a different meaning depending on the component, are explained in the description of the respective component. This chapter describes properties that apply equally to all components.
 
-ID:: The identification number of the component which is unique within the circuit in which the component is located. It is mainly used for scripting applications.
+ID:: The identification number of the component which is unique within the circuit in which the component is located. This is mainly used for scripting applications.
 
 Model ID:: Antares components consist of a view part and a model part. The property "ID" corresponds with the view part, while the property "Model ID" uniquely identifies the model part of a component. Since the simulation of a circuit operates mainly on the model parts of components, issues that occur during the simulation (such as signal conflicts) reference the model ID of the components that caused the issue.
 

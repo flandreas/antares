@@ -18,13 +18,13 @@ The degree of splitting is limited in that only integer divisors of the bit widt
 
 The splitter is uni-directional; it only forwards signals from the input pin to its output pins. See link:{{site.basedir}}/user-manual/english/base-library/bidi-splitter[bi-directional splitter] for a bi-directional version.
 
-For technical reasons, the current version of Antares has the restriction that the properties "Bit Width", "Fan Out" and "Position Bit 0" can no longer be changed if the pins are already connected to wires. Perhaps a future version will at least allow to increase the bit width without having to disconnect existing wire connections beforehand.
+For technical reasons, the current version of Antares has the restriction that the properties "Bit Width" and "Fan Out" can no longer be changed if the pins are already connected to wires. Perhaps a future version will at least allow to increase the bit width without having to disconnect existing wire connections beforehand.
 
 == Pins
 
 Input:: The splitter has a single input whose bit width is determined by the property "Bit Width".
 
-Outputs:: The number of outputs of the splitter is determined by the property "Fan Out". Each output has the bit width "Bit Width" / "Fan Out" and carries during simulation those bits of the input signal which correspond to the index of the output. For a splitter with 8-bit input and a fan out of 2, output 0 carries the bits 0..3 and output 1 carries the bits 4..7.
+Outputs:: The number of outputs of the splitter is determined by the property "Fan Out". Each output has the bit width calculated as "Bit Width" divided by "Fan Out" and carries during simulation those bits of the input signal which correspond to the index of the output. For a splitter with 8-bit input and a fan out of 2, output 0 carries the bits 0..3 and output 1 carries the bits 4..7.
 
 == Properties
 

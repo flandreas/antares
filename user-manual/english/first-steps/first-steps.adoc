@@ -36,7 +36,7 @@ The truth table of the XOR function looks like this:
 |1|1|0
 |===
 
-From literature we know that the XOR function can be constructed as follows from AND gates, OR gates and inverters.
+From literature we know that the XOR function can be constructed as follows from AND gates, OR gates, and inverters.
 
 image::user-manual/first-steps/xor.png[XOR, 300]
 
@@ -44,7 +44,7 @@ First you add the logic gates to the circuit. To do this, expand the "Logical Ga
 
 TIP: Components that are frequently used when building circuits can also be found in the folder called "Frequently used".
 
-As soon as you have added a component to the circuit, the selection tool becomes active. ou can use it to select components and move them by holding down the left mouse button while dragging. Place the components so that there is some space between them for the wires you are going to add later.
+As soon as you have added a component to the circuit, the selection tool becomes active. You can use it to select components and move them by holding down the left mouse button while dragging. Place the components so that there is some space between them for the wires you are going to add later.
 
 TIP: Antares supports Copy/Paste. Instead of dragging the same component several times from the library into the circuit, you can also select the first added inverter and copy it with kbd:[Cmd+C] / kbd:[Cmd+V] (macOS) or kbd:[Ctrl+C] / kbd:[Ctrl+V] (Windows).
 
@@ -52,13 +52,13 @@ image::user-manual/first-steps/gates-en.png[Gates, 700, align="center"]
 
 Next you add the circuit inputs and the circuit output. The circuit input can be found in the "Input" folder of the library, and the circuit output is located in the "Output" folder. Drag and drop them into the circuit just like you did with the logic gates.
 
-Antares automatically assigns continuous names of the form "I1", "I2" etc. to newly added inputs and outputs. To change the name, select the output, enter the new name "O" in the "Name" field of the properties view and confirm your input by pressing kbd:[Enter]. In the same way you change the names of the inputs to "A" and "B".
+Antares automatically assigns continuous names of the form "I1", "I2" etc. to newly added inputs and outputs. To change the name, select the output, enter the new name "O" in the "Name" field of the properties view and confirm your input by pressing kbd:[Enter] (or by just leaving the edit field). In the same way you change the names of the inputs to "A" and "B".
 
 image::user-manual/first-steps/inout-en.png[Inputs and outputs, 700, align="center"]
 
 NOTE: You may wonder why we don't use switches and an LED instead of inputs and output. We want to build an XOR gate that can be reused as a component in other circuits. In order to take signals from and return results to the surrounding circuit, input and output components must be used. You will see in the section "Simulating Circuits" that inputs can be used like switches, and that outputs can display the current signal during simulation just like LEDs do.
 
-After you have added all components to the circuit, you can connect them with wires. When you move the mouse over the output pin of a component, Antares will display a small green circle to indicate that a wire can be added at this point. Left-click and drag the mouse to the input of the next component to which the wire should lead and release the mouse button. At the input of the target component, Antares will again indicate with a small orange circle that the wire can be terminated here.
+After you have added all components to the circuit, you can connect them with wires. When you move the mouse over the output pin of a component, Antares will display a small green circle to indicate that a wire can be added at this point. Left-click and drag the mouse to the input of the next component to which the wire should lead and release the mouse button. At the input of the target component, Antares will again indicate with a small green circle that the wire can be terminated here.
 
 From the inputs A and B, two wires each lead to different components. To create a junction of a wire from an existing wire, move the mouse over the existing wire and press the kbd:[Alt] key. Antares will then again indicate with a small green circle that a new wire can be started here.
 
@@ -70,15 +70,17 @@ NOTE: Antares also allows you to create non-orthogonal wires or to design the la
 
 Congratulations! You have created your first own Antares circuit. Save it now by pressing kbd:[Cmd+S](macOS) resp. kbd:[Ctrl+S](Windows) or by selecting the menu menu:File[Save]. Your XOR circuit is now saved in the project "My first project" in the circuit "New circuit".
 
-Finally, you now adjust the name of the circuit in the properties window. Make sure that no component in the circuit is selected, so that the properties of the whole circuit are displayed and not those of the selected component. Click on the background of the circuit. The properties window now shows the title "Properties of 'New Circuit'". Enter the value "XOR" in the "Name" field and finish by pressing kbd:[Enter]. Save the circuit again. The new name of the circuit is now displayed in the workbench.
+Finally, you now adjust the name of the circuit in the properties window. Make sure that no component in the circuit is selected, so that the properties of the whole circuit are displayed and not those of the selected component. Click on the background of the circuit. The properties window now shows the title "Properties of 'New Circuit'". Enter "XOR" in the "Name" field and finish by pressing kbd:[Enter] (or leaving the field). Save the circuit again. The new name of the circuit is now displayed in the workbench.
 
 NOTE: You may have noticed the globe symbol in the "Name" field. This indicates the internationalization feature of Antares, which allows you to enter all names and texts in all supported languages. This feature will be explained in later chapters.
 
 == Navigating within the circuit
 
-Antares offers many possibilities to select the display size of the circuit and the displayed region. When the mouse is over the circuit in the main window, the display size of the circuit (zoom) can be influenced by using the mouse wheel. The displayed region (pan) is changed by moving the mouse while holding down the middle mouse button.
+Antares offers many possibilities to select the display size of the circuit and the displayed region. When the mouse is over the circuit in the main window, the display size of the circuit (zoom) can be influenced by using the mouse wheel. By default, the displayed region (pan) is changed by moving the mouse while holding down the middle mouse button.
 
 Size and region of the display can also be controlled via the menu and the key status. To do this, use the options in the "View" menu  e.g. with menu:View[Zoom to fit] or the corresponding keyboard shortcut to choose the size so that the circuit occupies the entire available space of the main view.
+
+NOTE: The zoom and pan methods can be changed in the "Preferences" dialog (menu:Antares[Settings])
 
 == Simulating circuits
 
@@ -112,7 +114,9 @@ The circuit cannot be edited in simulation mode. Press the button with the arrow
 
 Each circuit you build in Antares can be reused as a component in other, higher level circuits. After you have already built your XOR circuit in the previous sections, you can now define the symbol that will be used as a component when your XOR circuit is used within another circuit.
 
-Symbols are created in the symbol editor. Use the two buttons in the toolbar view tools to toggle between the circuit editor and the symbol editor.
+Symbols are created in the symbol editor. Use the two right-most buttons in the toolbar to toggle between the circuit editor and the symbol editor.
+
+NOTE: This section is not up-to-date anymore. In the current release, Antares generates the symbol automatically, including adding input and outputs to the symbol. This is indicated by the "Symbol generated" checkbox in the toolbar. To follow along with the description below, you can first select all symbol elements and them. This turns the symbol editor into manual (e.g. not auto-generated) mode.
 
 The symbol editor contains a tree on the left side, which offers the elements you can add to the symbol, and the drawing area on the right side, where the symbol of the circuit is created. For this introduction, you will only use the elements in the "Ports" folder of the tree. The elements in the "Controls" and "Subcircuits" folders represent advanced concepts that will be explained in later chapters of this user manual.
 
@@ -140,9 +144,11 @@ Next, you will learn how to reuse your new XOR component in a surrounding circui
 
 To do this, you will create another circuit in the project "My first project". Select the project in the workbench and select  menu:Context Menu[New Circuit]. Antares now asks you for the name of the new circuit. Enter e.g. "Usage of XOR" and confirm with btn:[OK].
 
+NOTE: Make sure the "Type" field is set to "Digital". The other option "Analog" is an advanced concept which is covered in other chapters of the user manual.
+
 The new, empty circuit "Usage of XOR" appears in the workbench project and is also opened in the main view. In the tree of the workbench the currently open circuit is displayed with an orange icon. You can switch between the two circuits by double-clicking on the entry in the tree. However, only one circuit can be open for editing at a time.
 
-Now open the circuit "Usage of XOR" by double-clicking and drag and drop your XOR component into the previously empty circuit. Add a switch and an LED so that the component can be tested. Open the "Input" directory in the "Standard" library in the workbench and drag and drop two switches into the circuit. In the same way, add an LED from the "Output" directory of the "Standard" library to the circuit. Connect the outputs of the switches to the inputs of your XOR component, and connect their output to the LED. Then save your new circuit.
+Now open the circuit "Usage of XOR" by double-clicking and drag and drop your XOR component into the previously empty circuit. Add a switch and an LED so that the component can be tested. Open the "Input" directory in the "Standard" library in the workbench and drag and drop two switches into the circuit. In the same way, add an LED from the "Output" directory of the "Standard" library to the circuit. Connect the outputs of the switches to the inputs of your XOR component, and connect its output to the LED. Then save your new circuit.
 
 If you now start the simulation and press the switches, you will see how Antares simulates your XOR component within a surrounding circuit.
 
@@ -150,15 +156,15 @@ image::user-manual/first-steps/component-usage-en.png[Component usage, 700, alig
 
 == Navigating in subcircuits
 
-In the final step of this introduction, you will learn how to navigate within complex circuits and their subcircuits with Antares, and how Antares can display one circuit and several of its subcircuits simultaneously.
+In the final step of this introduction, you will learn how to navigate within complex circuits and their subcircuits, and how Antares can display one circuit and several of its subcircuits simultaneously.
 
-Antares allows you to "dive" into each subcircuit of a circuit to view its contents. This works in both Edit Mode and Simulation Mode. To do this, open your circuit "Usage of XOR", start the simulation, and double click with the left mouse button on the "XOR" component. Antares now executes an animation that replaces the contents of the main view with the inner circuit. The current "Dive Depth" is displayed in the navigation bar.
+Antares allows you to "dive" into each subcircuit of a circuit to view its contents. This works in both edit mode and simulation mode. To do this, open your circuit "Usage of XOR", start the simulation, and double click with the left mouse button on the "XOR" component. Antares now executes an animation that replaces the contents of the main view with the inner circuit. The current "Dive depth" is displayed in the navigation bar above the circuit..
 
 image::user-manual/first-steps/navigation-bar-en.png[Navigation bar, 500, align="center"]
 
-The navigation bar shows the path starting with the main circuit to the currently displayed subcircuit. To return to the main circuit, click with the left mouse button on the path element "Usage of XOR". Antares now executes an animation again, replacing the contents of the main view with the outer circuit.
+The navigation bar shows the path starting with the main circuit to the currently displayed subcircuit. To return to the main circuit, click with the left mouse button on the path element "Usage of XOR". Antares now executes again an animation, replacing the contents of the main view with the outer circuit.
 
-TIP: Sometimes it has to be fast, and you want to omit the animation. To do so, press the kbd:[Cmd] key at the same time when you dive into a subcircuit or when you click on a path element of the navigation bar to reappear.
+TIP: Sometimes it has to be fast, and you want to omit the animation. To do so, press the kbd:[Cmd] key at the same time when you dive into a subcircuit or when you click on a path element of the navigation bar to re-surface.
 
 Instead of diving into a subcircuit, sometimes you want to see the surrounding circuit and the subcircuit at the same time. To do this, hold down kbd:[Alt] when you double-click on the symbol of a subcircuit. Antares then opens the subcircuit in an additional subview.
 
@@ -168,9 +174,9 @@ Antares automatically places the subviews on the right side of the main view. If
 
 Notice how Antares gives the symbol in the main circuit a light red background and shows the corresponding opened subcircuit with a frame in the same color. A different color is used for each open symbol. This allows you to keep track of several open subcircuits.
 
-The subview contains a navigation bar in the same way as the main view. If the subcircuit would contain more subcircuits, you could also dive into these subcircuits and resurface with the help of the navigation bar.
+The subview contains a navigation bar in the same way as the main view. If the subcircuit would contain more subcircuits, you could also dive into these subcircuits and re-surface with the help of the navigation bar.
 
-Subviews can be closed  with the close button at the top right of the navigation bar or with kbd:[Cmd+W]. When using the keyboard, the subview that currently has the focus is closed. The focus is represented by a thin blue border in the subview.
+Subviews can be closed  with the close button at the top right of the navigation bar or by pressing kbd:[Cmd+W]. When using the keyboard, the subview that currently has the focus is closed. The focus is represented by a thin blue border around the subview.
 
 == Next steps
 

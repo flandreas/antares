@@ -10,7 +10,7 @@ image:user-manual/base-library/tristate-buffer-sample.png[Example Tri-State Buff
 
 The tri-state buffer is a buffer that has a control input in addition to the data input. If the control input is active, the signal from the input is passed on unchanged to the output. If the control input is not active, the output is undefined/high impedance.
 
-Tri-state buffers are used when the output of several components is to be combined on one wire. In this case, the output of these components is routed via a tri-state buffer, whereby only the tri-state buffer whose wire carries the desired signal is activated by means of the control input.
+Tri-state buffers are used when the output of several components is to be connected to a single wire. In this case, the output of these components is routed via a tri-state buffer, whereby only the tri-state buffer whose wire carries the desired signal is activated by means of the control input.
 
 The control input of the tri-state buffer can be set to "positive" or "negative" with the "Logic" property.
 

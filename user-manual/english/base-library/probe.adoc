@@ -16,7 +16,7 @@ The probe also supports interpreting signals as fixed point fractional (non-inte
 
 Input:: The probe has a single input that accepts the signal to be displayed. The bit width is determined by the property "Bit Width".
 
-Output:: If the property "Has Output" is set, the probe has an output at the opposite end where the read signal is output unchanged. This allows probes to be integrated directly into a wire without the need for branching.
+Output:: If the property "Has Output" is set, the probe has an output at the opposite end where the read signal is put out unchanged. This allows probes to be integrated directly into a wire without the need for branching.
 
 == Properties
 
@@ -26,12 +26,12 @@ Orientation:: The direction in which the probe points.
 
 Bit Width:: The bit width of the input (and output, if any).
 
-Representation:: The manner in which signal value is represented. If "Fixed Point" is selected, you can use the additional properties "Number of fraction bits" and "Signed Fixed Point" to specify how the current signal is displayed as decimal fixed point number.
+Representation:: The way in which the signal value is represented. If "Fixed Point" is selected, you can use the additional properties "Number of fraction bits" and "Signed Fixed Point" to specify how the current signal is displayed as decimal fixed point number.
 
 Has Output:: If this property is set, the probe has an additional output opposite the input.
 
 Logging:: If this property is set, changed signal values are collected and displayed in the "Log" view of Antares.
 
-Number of fraction bits:: The number of bits after the decimal point. Only available for "Representation" "Fixed Point".
+Number of fraction bits:: The number of bits after the decimal point. Only available if "Representation" is set to "Fixed Point".
 
 Signed Fixed Point:: If set, the signal is interpreted as signed fixed point number. The number is negative if the most significant bit set.

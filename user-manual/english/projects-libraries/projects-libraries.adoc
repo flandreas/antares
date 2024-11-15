@@ -6,13 +6,13 @@ include::../../page-variables.txt[]
 
 Projects and libraries are both ways in which several circuits can be combined and given a name. Internally they are very similar, and most of the actions you can perform as a user are available for both projects and libraries.
 
-The difference between projects and libraries is that circuits from libraries can be reused in projects, whereas this is not possible with projects: Projects cannot be used in other projects. Libraries are therefore what their name says: a set of circuits that can be used in multiple projects.
+The difference between projects and libraries is that circuits from libraries can be reused in projects, whereas this is not possible with projects. Projects cannot be used in other projects. Libraries are therefore what their name says: a set of circuits that can be used in multiple projects.
 
 == Libraries
 
 Antares contains two libraries by default: The "Basic" library and the "Standard" library. Both libraries cannot be changed by you as a user. You can use their circuits in your own projects, you can open, execute and analyze their circuits, but you cannot change them, and you cannot add more circuits to these default libraries. This is because otherwise your changes would be overwritten when installing a new version of Antares.
 
-The **Base library** contains only the basic components built-in into Antares, such as logic gates, LEDs, switches, etc. In the link:{{site.basedir}}/user-manual/english/base-library/base-library[Library Reference] you will find a description of these base components. You can use the base library to create projects that build circuits "from scratch". You can also use the base library as a starting point to create your own libraries.
+The **Base library** contains only the basic components built-in into Antares, such as logic gates, LEDs, switches, etc. In the link:{{site.basedir}}/user-manual/english/base-library/base-library[Library Reference] you find a description of these base components. You can use the base library to create projects that build circuits "from scratch". You can also use the base library as a starting point to create your own libraries.
 
 The **Standard Library** also contains all the basic built-in components of Antares. Additionally, it contains important, frequently used subcircuits such as flip-flops, registers and multiplexers that you can include into your own projects.
 
@@ -44,7 +44,7 @@ If you edit a single circuit, you must explicitly save your changes, i.e. you sh
 
 However, changes to the structure of projects and libraries are always saved automatically. For example, if you delete a directory in a project, this directory disappears from the workbench and the new project structure is immediately saved in the working directory of Antares. Since such actions cannot be undone, Antares will ask you for a confirmation before executing such actions.
 
-NOTE: As of release 0.2, actions on projects and libraries are disabled if the main circuit contains unsaved changes. This is for avoiding inconsistent states when undoing and redoing main circuit changes while project and library states have changed in the meantime.
+NOTE: As of release 0.2, actions on projects and libraries are disabled if the main circuit contains unsaved changes. This is to avoid inconsistent states when undoing and redoing main circuit changes while project and library states have changed in the meantime.
 
 == Workspace
 

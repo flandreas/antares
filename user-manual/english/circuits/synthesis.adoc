@@ -51,17 +51,13 @@ NOTE: These expressions are not stored in the project file. Every time you chang
 
 After having created the minimized expressions, you can press button btn:[Create Circuit..] to let Antares create a circuit that implements these expression. They same can also be achieved using the menu:Context[Create Circuit..] menu on a truth table in the explorer tree.
 
-Antares creates a circuit with AND and OR gates. Other implementation types (like such based on look-up tables) might follow in the future.
-
-CAUTION: Since AND and OR gates in Antares can only have up to 8 input pins, the expression terms are also limited to 8 factors each.
-
 The created circuit is added to the same explorer tree folder in which the truth table is contained. Antares also automatically creates a default circuit symbol that contains an input pin for every variable and an output pins for every output column.
 
 image::user-manual/circuits/truth-table-circuit.png[AND/OR circuit,700,align="center"]
 
 Besides the name of the circuit to be created, Antares also lets you choose the type of the circuit to be created. The are currently the following types available:
 
-- **AND/OR Gates**: The logic of the circuit is built from AND and OR gates only (see image above).
+- **AND/OR Gates**: The logic of the circuit is built from AND and OR gates only (see image above). Since AND and OR gates in Antares can only have up to 8 input pins, the expression terms are also limited to 8 factors each.
 - **Lookup Table**: The circuit contains a lookup table for each output (see image below).
 
 image::user-manual/circuits/synthesis-lut-sample.png[Truth Table,700,align="center"]

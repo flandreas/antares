@@ -18,7 +18,7 @@ Selecting menu:View[Oscilloscope] creates a new, empty oscilloscope component an
 
 image::user-manual/oscilloscope/oscilloscope-added.png[Empty Oscilloscope, 500, align="center"]
 
-Technically, the oscilloscope is just a circuit component like any other. After you added it to the circuit, the circuit can be saved, and all changes you've made to the oscilloscope will be saved within the circuit.
+Technically, the oscilloscope is just a circuit component like any other. After you've added it to the circuit, the circuit can be saved, and all changes you've made to the oscilloscope will be saved within the circuit.
 
 However, once created and added to the circuit, the oscilloscope can be hidden by deselecting menu:View[Oscilloscope] again. This sets the "visible" property of the oscilloscope to "false", a change that can also be saved.
 
@@ -56,7 +56,7 @@ Removing entire rows can be achieved by pressing the btn:[-] button at the start
 
 The oscilloscope supports different timing modes. You can choose the mode by selecting the oscilloscope and changing the value of is property "Mode" in the properties panel. Newly created oscilloscopes have mode "Clocked" by default. Clocked mode is also designated in the oscilloscope component by a small triangle at the right side of the first row.
 
-In clocked mode, the captured signal curves don't represent the real simulation time, but an artificial "oscilloscope time" that leads to evenly alternating signal curves, because signals are captures only when the signal at the first (clocked) row changes. This can be convenient because large time differences between signal changes (such as microsecond clocks and nanosecond gate propagation delays) are "normalized" to the artificial, evenly spaced "oscilloscope time". The drawback of clocked mode is that propagation delay subtleties are not shown.
+In clocked mode, the captured signal curves don't represent the real simulation time, but an artificial "oscilloscope time" that leads to evenly alternating signal curves, because signals are captured only when the signal at the first (clocked) row changes. This can be convenient because large time differences between signal changes (such as microsecond clocks and nanosecond gate propagation delays) are "normalized" to the artificial, evenly spaced "oscilloscope time". The drawback of clocked mode is that propagation delay subtleties are not shown.
 
 Start the simulation and observe how the signal curve of each row evolves while the circuit is driven by the clock component.
 

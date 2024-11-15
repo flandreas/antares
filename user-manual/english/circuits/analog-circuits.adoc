@@ -6,15 +6,15 @@ Although the digital part of Antares already contains quasi-analog components li
 
 Analog circuits in Antares are simulated completely differently than digital circuit. Instead of an event-based simulation, where digital signals are propagated sequentially through the circuit, analog circuits are simulated by composing a linear equation system and solving it for node voltages and wire currents.
 
-Besides simple components like switches, light bulbs or resistors which behave in a linear fashion, the only non-linear component currently supported is the MOSFET transistor. The intention is that this allows you to build logic gates from analog components working with electrical voltage and current. There are currently no other non-linear components like coils or capacitors, and maybe never will, because Antares' mission to be a digital circuit learning platform hasn't changed. However, if someone would like to build logic gates from relays or from bi-polar transistors, because they might be easier to understand than MOSFETs, it would be straight-forward to implement them in Antares as well.
+Besides simple components like switches, light bulbs or resistors which behave in a linear fashion, the only non-linear components currently supported are the MOSFET transistor and the capacitor. The intention is that this allows you to build logic gates from analog components working with electrical voltage and current. There are currently no other non-linear components like coils or diodes, and maybe never will, because Antares' mission to be a digital circuit learning platform hasn't changed. However, if someone would like to build logic gates from relays or from bipolar transistors, because they might be easier to understand than MOSFETs, or just for fun, it would be straight-forward to implement them in Antares as well.
 
-In short: Use the analog module to play around with electrical voltage and current, experience Ohm's and Kirchhoff's law through current flow simulation and voltage display by color, and build logic gates from real MOSFETs, but don't expect Antares to be a fully-fledged analog simulator tool.
+To summarize: Use the analog module to play around with electrical voltage and current, experience Ohm's and Kirchhoff's law through current flow simulation and voltage display by color, and build logic gates from real MOSFETs, but don't expect Antares to be a fully-fledged analog simulator tool.
 
 == Creating analog circuits
 
-The analog module in Antares is strictly separated from the digital part. There is a separate "Analog" library, and each circuit in Antares is either digital or analog. However, an Antares project can contain both digital and analog circuits.
+The analog module in Antares is generally separated from the digital part. There is a separate "Analog" library, and each circuit in Antares is either digital or analog. However, an Antares project can contain both digital and analog circuits, and you can use analog circuits as subcircuits in digital circuits.
 
-To create an analog circuit, use "New circuit" as usual, and choose "Analog" as circuit type in the "New Circuit" dialog.
+To create an analog circuit, use "New circuit" as usual, but choose "Analog" as circuit type in the "New Circuit" dialog.
 
 image::user-manual/circuits/analog/new-circuit.png[New circuit,400,align="center"]
 
@@ -30,7 +30,7 @@ Designing analog circuits works just the same like with digital circuits: Drag c
 
 image::user-manual/circuits/analog/designing.png[Designing,400,align="center"]
 
-Remember however that digital and analog circuits are strictly separated: You can only add analog components to an analog circuit. Antares prevents you from adding a component from the digital "Standard" library to an analog circuit.
+Remember however that digital and analog circuits are generally separated: You can only add analog components to an analog circuit. Antares prevents you from adding a component from the digital "Standard" library to an analog circuit.
 
 == Simulating analog circuits
 

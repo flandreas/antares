@@ -2,7 +2,7 @@
 include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/usecases/usecases
 
-Use cases in Antares are programmed uses of a circuit using link:{{site.basedir}}/user-manual/english/scripting/scripting[scripts]. The script of a use case can be used to program simulated user interactions such as pressing a switch or the presence of a particular signal at an input port. The user of a circuit can start the programmed use cases and observe how the circuit behaves without having to interact with the circuit at the right time.
+Use cases in Antares consists of link:{{site.basedir}}/user-manual/english/scripting/scripting[scripts] that interact with the circuit just like a regular user would. The script of a use case can be used to program simulated user interactions such as pressing a switch. The user of a circuit can start the programmed use cases and observe how the circuit behaves without having to interact with the circuit at the right time.
 
 See link:{{site.basedir}}/user-manual/english/usecases/usecase-scripting[Scripting in Use Cases] for an in-depth explanation of how to use scripting for use cases.
 
@@ -27,13 +27,13 @@ image::user-manual/usecases/usecases-dropdown-en.png[execution, 500,align="cente
 
 When the user starts the execution of a use case, Antares automatically switches to simulation mode and starts the use case script. All possibilities of the simulation mode are available, such as controlling the simulation speed, single step mode or signal animation. If link:{{site.basedir}}/user-manual/english/scenarios/scenarios[Scenarios] are defined for the current circuit, they will also be applied and their descriptions will be displayed during the execution of the use case.
 
-At the end of a use case execution, Antares remains in simulation mode.
+At the end of a use case execution, Antares remains in simulation mode, so that the human user can take in on from there by himself.
 
 == Test Cases
 
 For each use case, a test case can also be defined to check that the circuit functions correctly when this use case is executed.
 
-A test case consists of a separate script that typically checks states of the circuit, e.g. whether an output has a certain value or whether an LED is lit. When executing a test case, Antares first executes the use case and then the test case script. For each test condition that is not met, Antares adds a new entry in the "Isses" view at the bottom of the main window.
+A test case consists of a separate script that typically checks states of the circuit, e.g. whether an output has a certain value or whether an LED is on. When executing a test case, Antares first executes the use case and then the test case script. For each test condition that is not met, Antares adds a new entry in the "Isses" view at the bottom of the main window.
 
 == Configuration
 

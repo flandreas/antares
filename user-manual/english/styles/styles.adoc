@@ -2,11 +2,12 @@
 include::../../page-variables.txt[]
 :page-permalink: /user-manual/english/styles/styles
 
-When displaying graphical objects, Antares - like any other graphical application - uses some graphical properties that influence the display. These properties are essentially the following:
+When displaying graphical objects, Antares - like any other graphical application - uses some graphical properties that influence how the objects are drawn. These properties are essentially the following:
 
 * Color
 * Character set (font)
 * Line type (Stroke)
+* Drop shadow
 
 image::user-manual/styles/styles-sample.png[Styles, 500,align="center"]
 
@@ -28,6 +29,8 @@ So, in Antares, when you give a graphic object the color "green", you set the co
 
 The available composite colors are predefined by Antares. In the current version of Antares, there is no way to change these colors or add more colors.
 
+NOTE: Antares maintains two different sets of composite colors: One for light themes, and one for dark themes.
+
 == Styles
 
 A style in Antares is a set of graphical properties that are available under a specific name. When such a style is "applied" to a graphical object, the graphical object automatically receives all graphical properties of that style.
@@ -38,7 +41,7 @@ The set of styles is predefined by Antares. The following styles are available:
 
 Figure:: This style is the basic style in Antares. It is mainly used for "pure" graphical objects like rectangle, ellipse, line etc.
 
-Element:: This style is used for the vertex elements of the graph that make up the circuit. In Antares these are the circuit components such as logic gates or subcircuits.
+Element:: This style is used for the elements of the drawing that make up the circuit. In Antares these are the circuit components such as logic gates or subcircuits.
 
 Connection:: This style is used in Antares for the wires that connect the circuit components.
 
@@ -66,13 +69,13 @@ Line Style:: In this property you can set the line style of the component. The d
 
 Depending on the type of the selected component, more graphic properties such as "Filled", "Border" and "Shadow" can be set.
 
-NOTE: The "Shadow" property only has an effect if the display of shadows is basically activated in Antares settings.
+NOTE: The "Shadow" property only has an effect if displaying shadows is basically activated in the user preferences.
 
 == Themes
 
 In Antares, a "theme" is a set of styles with specific values, all of which are grouped under a specific name. Not only styles that are available to you as a user for application to components are considered, but also "internal" styles like "selection" or "background".
 
-This makes it possible to fundamentally change the way circuits are displayed by changing the theme. The current theme is can be selected in the preferences window.
+This makes it possible to fundamentally change the way circuits (and the UI) are displayed by changing the theme. The current theme is can be selected in the preferences window.
 
 The following themes are available in the current version of Antares.
 

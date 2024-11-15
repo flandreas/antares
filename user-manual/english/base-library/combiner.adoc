@@ -10,7 +10,7 @@ image:user-manual/base-library/combiner-sample.png[Example combiner, 300]
 
 The combiner can be used to combine the signals of several wire bundles (or single wires) onto a wire bundle that contains more bits than the incoming wire bundles.
 
-The degree of comining is limited in that only integer dividers of the bit width of the output wire bundle are possible. For example, an 8-bit wire bundle can only be combined as follows:
+The degree of combining is limited in that only integer dividers of the bit width of the output wire bundle are possible. For example, an 8-bit wire bundle can only be combined as follows:
 
 * 2: The combiner has 2 inputs of 4 bits each
 * 4: The combiner has 4 inputs of 2 bits each
@@ -18,7 +18,7 @@ The degree of comining is limited in that only integer dividers of the bit width
 
 The combiner is uni-directional; it only forwards signals from the input pins to its output pin. See link:{{site.basedir}}/user-manual/english/base-library/bidi-splitter[bi-directional splitter] for a bi-directional version.
 
-For technical reasons, the current version of Antares has the restriction that the properties "Bit Width", "Fan Out" and "Position Bit 0" can no longer be changed if pins are already connected to wires. Perhaps a future version will at least allow to increase the number of bits without having to disconnect existing wire connections beforehand.
+For technical reasons, the current version of Antares has the restriction that the properties "Bit Width" and "Fan Out" can no longer be changed if pins are already connected to wires. Perhaps a future version will at least allow to increase the number of bits without having to disconnect existing wire connections beforehand.
 
 == Pins
 
@@ -32,7 +32,7 @@ Orientation:: The direction in which the output pin points.
 
 Bit Width:: Determines the bit width of the output.
 
-Fan Out:: Specifies the number of inputs. The bit width of each input is defined by the formula Bit Width" / "Fan Out".
+Fan Out:: Specifies the number of inputs. The bit width of each input is defined by the formula Bit Width" / "Fan Out". Should maybe more accurately be called "Fan In".
 
 Position Bit 0:: This property can be used to determine the position of the inputs within the combiner.
 

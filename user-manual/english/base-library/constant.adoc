@@ -20,6 +20,6 @@ Orientation:: The direction in which the output pin points.
 
 Bit Width:: The number of bits that make up the output signal. If this property is changed so that the number of bits is no longer sufficient to represent the set value in the "Value (decimal)" property, the value is truncated accordingly.
 
-Representation:: The way in which the value of the output signal is represented in the representation.
+Representation:: The way in which the value of the output signal is displayed in the view.
 
-Value (decimal):: The value (in decimal notation) that is output at the output of the constant.
+Value (decimal):: The value (in decimal notation) that is produced at the output of the constant.
