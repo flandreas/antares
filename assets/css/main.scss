@@ -14,5 +14,8 @@ $type-size-6 : 0.937em;   // ~12px
 $type-size-7 : 0.859em; // ~11px
 $type-size-8 : 0.781em;  // ~10px
 
+$max-width:1440px;
+
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
