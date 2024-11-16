@@ -16,8 +16,7 @@ gallery:
 
 # Sine Wave
 
-[Download](https://github.com/flandreas/antares/releases/download/v1.13.0/Sine.Wave.acp){: .btn .
-btn--primary .btn--large}
+[Download](https://github.com/flandreas/antares/releases/download/v1.13.0/Sine.Wave.acp){: .btn .btn--primary .btn--large}
 
 {% include gallery id="gallery" caption="Screenshots" %}
 

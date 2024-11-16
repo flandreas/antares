@@ -231,19 +231,19 @@ examples:
     children:
       - title: Overview
         url: /docs/examples/examples
-      - title: "Tanenbaum CPU"
+      - title: "- Tanenbaum CPU"
         url: /docs/examples/tannenbaum/tannenbaum
-      - title: "Hexadecimal Keyboard"
+      - title: "- Hexadecimal Keyboard"
         url: /docs/examples/hex-keyboard/hex-keyboard
-      - title: "Building logic gates with transistors"
+      - title: "- Building logic gates with transistors"
         url: /docs/examples/quasi-analog/quasi-analog
-      - title: "Bus transceiver"
+      - title: "- Bus transceiver"
         url: /docs/examples/bidirectional-splitter/bidirectional-splitter
-      - title: "Sine Wave"
+      - title: "- Sine Wave"
         url: /docs/examples/sine-wave/sine-wave
-      - title: "But how do it know?"
+      - title: "- But how do it know?"
         url: /docs/examples/but-how-do-it-know/description
-      - title: "Ben Eater's 8-bit computer"
+      - title: "- Ben Eater's 8-bit computer"
         url: /docs/examples/ben-eater-8-bit-computer/ben-eater-8-bit-computer
-      - title: "Tic-Tac-Toe"
+      - title: "- Tic-Tac-Toe"
         url: /docs/examples/tic-tac-toe/tic-tac-toe
