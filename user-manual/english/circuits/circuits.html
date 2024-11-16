@@ -1,0 +1,989 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Circuits - Antares</title>
+<meta name="description" content="Digital circuit simulation and learning platform ">
+
+
+  <meta name="author" content="Andreas Fleischmann">
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Antares">
+<meta property="og:title" content="Circuits">
+<meta property="og:url" content="https://www.antarescircuit.io/user-manual/english/circuits/circuits">
+
+
+  <meta property="og:description" content="Digital circuit simulation and learning platform ">
+
+
+
+  <meta property="og:image" content="https://www.antarescircuit.io/assets/images/splash2.png">
+
+
+
+  <meta name="twitter:site" content="@AntaresCircuit">
+  <meta name="twitter:title" content="Circuits">
+  <meta name="twitter:description" content="Digital circuit simulation and learning platform ">
+  <meta name="twitter:url" content="https://www.antarescircuit.io/user-manual/english/circuits/circuits">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.antarescircuit.io/assets/images/splash2.png">
+  
+
+  
+
+
+
+
+
+
+
+
+<link rel="canonical" href="https://www.antarescircuit.io/user-manual/english/circuits/circuits">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Andreas Fleischmann",
+      "url": "https://www.antarescircuit.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Antares Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- Used for AsciiDoc integration -->
+<link rel="stylesheet" href="/assets/css/asciidoc.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+<link rel="manifest" href="/assets/images/site.webmanifest">
+<link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="theme-color" content="#ffffff">
+
+<!-- end custom head snippets -->
+
+  <script async defer data-domain="antarescircuit.io" src="https://plausible.io/js/plausible.js"></script></head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Antares
+          <span class="site-subtitle">Digital Circuit Learning Platform</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/docs/quick-start/">Quick-Start</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://app.antarescircuit.io">Webapp</a>
+            </li><li class="masthead__menu-item">
+              <a href="/user-manual/english/usermanual">Manual</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/blog">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/faq">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/releases/releases">Releases</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/examples/examples">Examples</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: url('/assets/images/splash2.png');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Circuits
+
+        
+      </h1>
+      
+      
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">User Manual</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/usermanual">Welcome</a></li>
+          
+            <li><a href="/user-manual/english/first-steps/first-steps">First Steps</a></li>
+          
+            <li><a href="/user-manual/english/first-steps/orientation">Orientation</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Projects and libraries</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/projects-libraries/projects-libraries">Overview</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/libraries">Libraries</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/projects">Projects</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/workbench">Workbench</a></li>
+          
+            <li><a href="/user-manual/english/base-library/base-library">Library Reference</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Circuits</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/circuits/circuits" class="active">Circuits</a></li>
+          
+            <li><a href="/user-manual/english/circuits/wires">Wires</a></li>
+          
+            <li><a href="/user-manual/english/circuits/circuit-tests">Tests</a></li>
+          
+            <li><a href="/user-manual/english/circuits/text-style">Text Style</a></li>
+          
+            <li><a href="/user-manual/english/circuits/synthesis">Synthesis</a></li>
+          
+            <li><a href="/user-manual/english/circuits/analysis">Analysis</a></li>
+          
+            <li><a href="/user-manual/english/subcircuits/subcircuits">Subcircuits</a></li>
+          
+            <li><a href="/user-manual/english/circuits/vhdl-export">VHDL Export</a></li>
+          
+            <li><a href="/user-manual/english/circuits/analog-circuits">Analog circuits</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Simulation</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/simulation/simulation">Simulation</a></li>
+          
+            <li><a href="/user-manual/english/oscilloscope/oscilloscope">Oscilloscope</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Other Basic Techniques</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/styles/styles">Styles and Themes</a></li>
+          
+            <li><a href="/user-manual/english/description/description">Descriptions and Explanations</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Advanced Techniques</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/scripting/scripting">Scripting</a></li>
+          
+            <li><a href="/user-manual/english/scenarios/scenarios">Scenarios</a></li>
+          
+            <li><a href="/user-manual/english/usecases/usecases">Use Cases</a></li>
+          
+            <li><a href="/user-manual/english/circuits/circuit-parameters">Circuit Parameters</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Miscellaneous</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/misc/preferences">Preferences</a></li>
+          
+            <li><a href="/user-manual/english/misc/key-bindings">Key Bindings</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Web</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/web/web-publishing">Publish circuits</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Circuits">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#_orientation">Orientation</a></li>
+  <li><a href="#_zooming-and-panning">Zooming and panning</a></li>
+  <li><a href="#_changing-component-properties">Changing component properties</a></li>
+  <li><a href="#_changing-circuit-properties">Changing circuit properties</a></li>
+  <li><a href="#_adding-components">Adding components</a></li>
+  <li><a href="#_connecting-components">Connecting components</a></li>
+  <li><a href="#_properties-of-subcircuits">Properties of subcircuits</a></li>
+  <li><a href="#_editing-subcircuit-symbols">Editing subcircuit symbols</a></li>
+  <li><a href="#_extracting-subcircuit">Extracting subcircuit</a></li>
+  <li><a href="#_using-the-drawing-tools">Using the drawing tools</a></li>
+  <li><a href="#_images">Images</a>
+    <ul>
+      <li><a href="#_adding-images-to-circuits">Adding images to circuits</a></li>
+      <li><a href="#_adding-images-to-symbols">Adding images to symbols</a></li>
+    </ul>
+  </li>
+  <li><a href="#_aligning-components">Aligning components</a></li>
+  <li><a href="#_save-history">Save History</a></li>
+  <li><a href="#_searching-in-circuits">Searching in circuits</a></li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Circuits are the central structuring element of Antares.</p>
+</div>
+<div class="paragraph">
+<p>In the introductory chapter <a href="/user-manual/english/first-steps/first-steps">First Steps</a> you have already made first experiences with your own circuits. The chapter <a href="/user-manual/english/projects-libraries/projects-libraries">Projects and Libraries</a> describes how to group circuits into your own projects or how to organize circuits in libraries so that they can be used in multiple projects. In the chapter <a href="/user-manual/english/projects-libraries/workbench">Workbench</a> you learn how to create new circuits or open existing circuits for editing.</p>
+</div>
+<div class="paragraph">
+<p>This chapter describes how to edit a single circuit.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_orientation">Orientation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You open a circuit by double-clicking on the project element or the library element in the workbench tree. The name of the opened circuit is displayed in several places in the Antares window:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Title bar</strong>: The Antares window title bar shows the name of the circuit and whether the circuit is part of the open project or library. Example: <em>Antares - Project Element "4-Bit Carry Ripple Adder"</em>.</p>
+</li>
+<li>
+<p><strong>Navigation bar</strong>: The first element of the navigation bar specifies the name of the open circuit.</p>
+</li>
+<li>
+<p><strong>Properties view</strong>: If you click on the background of the current circuit in the drawing area, the properties of the circuit are displayed in the properties window. The title of the properties window contains the name of the open circuit.</p>
+</li>
+<li>
+<p><strong>Workbench tree</strong>: The node in the workbench tree corresponding to the open circuit contains the name of the circuit. The icon of the node is highlighted in orange for the open circuit.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A circuit always consists of the circuit itself and its symbol, which is used when the circuit is added as a subcircuit to other circuits. Both parts can be edited separately. Use the view tools (the first two buttons in the toolbar) to switch between the two views.</p>
+</div>
+<div class="paragraph">
+<p>All changes - whether to the circuit itself, to the symbol, or to properties of the circuit - are always saved together. The circuit is the "storage unit" of Antares. While changes to project or library structures are always saved automatically, you must save changes to the circuit itself. Use the menu <span class="menuseq"><b class="menu">File</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Save</b></span> or the key combination <span class="keyseq"><kbd>Cmd</kbd>+<kbd>S</kbd></span>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_zooming-and-panning">Zooming and panning</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If the circuit is larger, the need to change the size and section of the circuit display in the main window quickly arises. The size of the area containing the circuit is basically unlimited. This is also the reason why the main view does not contain scrollbars; instead, Antares offers several other options for changing the size and section of the display.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+When the mouse is moved around in the main view, Antares displays the current coordinates of the mouse position in the status bar at the bottom right.
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Manual zooming</dt>
+<dd>
+<p>Manual zooming can be triggered with the same action that is used in windows with scroll bars for vertical scrolling. For a mouse with mouse wheel, this is moving the mouse wheel. When using a trackpad, the corresponding scroll gesture can be used.</p>
+</dd>
+<dt class="hdlist1">Select region (Pan)</dt>
+<dd>
+<p>The currently displayed region of the main window can be moved by dragging the mouse while holding down the middle mouse button. When using a trackpad, the scroll gesture can be used with the <kbd>Alt</kbd> key pressed simultaneously.</p>
+</dd>
+<dt class="hdlist1"><span class="menuseq"><b class="menu">View</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Zoom In</b></span></dt>
+<dd>
+<p>Enlarges the section of the main window by one zoom level.</p>
+</dd>
+<dt class="hdlist1"><span class="menuseq"><b class="menu">View</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Original Size</b></span></dt>
+<dd>
+<p>Centers the display and sets the zoom factor to 100%.</p>
+</dd>
+<dt class="hdlist1"><span class="menuseq"><b class="menu">View</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Zoom Out</b></span></dt>
+<dd>
+<p>Reduces the section of the main window by one zoom level.</p>
+</dd>
+<dt class="hdlist1"><span class="menuseq"><b class="menu">View</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Center</b></span></dt>
+<dd>
+<p>Centers the display without changing the zoom factor.</p>
+</dd>
+<dt class="hdlist1"><span class="menuseq"><b class="menu">View</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Fit</b></span></dt>
+<dd>
+<p>Centers the display and sets the zoom factor so that the circuit completely fills the entire main view.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_changing-component-properties">Changing component properties</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you select a component in a circuit, the properties of the components are offered for editing in the properties view.</p>
+</div>
+<div class="paragraph">
+<p>You can also select multiple components and edit their properties in a single operation, e.g. to change the color of multiple LEDs to the same value. Antares will try to find the "largest common denominator" of the types of all selected components to determine the set of properties. Since that operation is costly, Antares limits the number of components to edit in a single operation to 8.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+When selecting multiple components, the properties window will display the properties values of the last component in the selection. This approach was easier to implement than supporting a set of properties editors that could display something like "&lt;Various&gt;" if the property&#8217;s value differs among the selected components.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_changing-circuit-properties">Changing circuit properties</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you click with the mouse on the background of the circuit in the main window, the properties of the circuit are offered for editing in the properties view.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Name</dt>
+<dd>
+<p>In this property a short name of the circuit can be entered in all supported languages. Note that you can still change the name of a circuit even if it is part of a library and is already used in projects as a subcircuit. This is because Antares does not use the name of the circuit for referencing subcircuits in libraries, but an internal unique identification (a so-called UUID).</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<p>This property is used to capture a longer description of the circuit which is displayed in the preview of the explorer and in the description popup when used as a subcircuit in other circuits.</p>
+</dd>
+<dt class="hdlist1">Propagation Delay</dt>
+<dd>
+<p>This optional property can be used to specify the length of time that elapses between the processing of an input signal and the appearance of a modified output signal. It is used to control the display of the processing state of a subcircuit during <a href="/user-manual/english/simulation/simulation">simulation</a>. In case of scripted circuits, this value is also effectively to determine when the calculated output signals are produced at the output pins.</p>
+</dd>
+<dt class="hdlist1">Start-up Duration</dt>
+<dd>
+<p>The time (in ns) it takes the circuit to settle after starting the simulation. This optional property is used to omit signal flow animations and soft breakpoints during simulation start-up. In order to figure out the start-up duration of your circuit, activate menu <span class="menuseq"><b class="menu">Simulation</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Display Simulation Time in State Bar</b></span>, start the simulation, and wait until the circuit has settled. Then use the value displayed at the right edge of the state bar.</p>
+</dd>
+<dt class="hdlist1">Function</dt>
+<dd>
+<p>This property can be used to specify the script that Antares executes for this component during simulation, if the simulation is run in <a href="/user-manual/english/simulation/simulation">"Flat simulation"</a> mode. This is an advanced technique; for details on scripting, see the chapter <a href="/user-manual/english/circuits/circuit-scripting">"Scripting in Circuits"</a>.</p>
+</dd>
+<dt class="hdlist1">Always use function</dt>
+<dd>
+<p>This property is used to activate the "purely scripted" feature of a circuit. If the attribute is set, the script in attribute "Function" is executed even if simulation depth is "deep". This can be used to build functional components without the need to build the entire inner circuit, although you probably will add some inputs and outputs to give the component an interface to the surrounding circuit.</p>
+</dd>
+<dt class="hdlist1">Default light color</dt>
+<dd>
+<p>The light color that all components in this circuit should have by default (LED, 7-segment display, terminal). If you change the value of this attribute while the circuit already contains light-emitting components, Antares will ask you if the new light color should be applied to these components. With this option, for example, all red LEDs and 7-segment displays can be changed to yellow with a single action.</p>
+</dd>
+<dt class="hdlist1">Wire Logic</dt>
+<dd>
+<p>Determines the logic to be applied when asserting different values to the same wire. Choose between the standard "Conflict" mode, which handles differing values as conflicts, or the "Wired OR" mode. See the section "Wire Logic" in the user manual&#8217;s <a href="/user-manual/english/simulation/simulation">"Simulation"</a> chapter for more information.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_adding-components">Adding components</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You add components to a circuit by selecting the components to be added in the workbench tree and dragging them into the circuit (Drag &amp; Drop). The new component is given default properties.</p>
+</div>
+<div class="paragraph">
+<p>It often happens that you need several components with the same, modified properties in a circuit, e.g. OR gates with three inputs instead of only two as with the default value. In these cases it may be useful to use copy/paste: Drag the first copy of the component into the circuit, set the desired properties, copy the component to the clipboard using <span class="menuseq"><b class="menu">Edit</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Copy</b></span>, and then paste the required number of additional components into the circuit using <span class="menuseq"><b class="menu">Edit</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Paste</b></span>.</p>
+</div>
+<div class="paragraph">
+<p>When pasting a particular component from the clipboard for the first time, Antares places the pasted component at a small distance from the original. If you then move the pasted component to a new location and then perform additional paste actions, Antares will use the distance between the original and the location you defined for the first inserted component as a template. This makes it easy to create uniform arrangements of similar components, e.g. for flip-flops in shift register circuits.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_connecting-components">Connecting components</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Connecting components using wires is a separate, large topic that is dealt with in the separate chapter <a href="/user-manual/english/circuits/wires">"Wires"</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_properties-of-subcircuits">Properties of subcircuits</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The properties of the built-in components are explained in chapter <a href="/user-manual/english/base-library/base-library">"Base Library"</a>. This section describes the properties of subcircuit components.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Propagation Delay [ns]</dt>
+<dd>
+<p>On subcircuits, this property is only used in "shallow" simulation mode to determine the time when the executed script sends its results to the output pins. In deep simulation mode, this property is not used, because propagation delay results naturally by executing the inner subcircuit.<br>
+<br>
+NOTE: This property is not displayed if the subcircuit has a parameter with semantic "Propagation Delay", in which case the property is replaced by the generic "Parameter &lt;Name&gt;" from the subcircuit.</p>
+</dd>
+<dt class="hdlist1">Orientation</dt>
+<dd>
+<p>The direction to which the symbol of the subcircuit points. Like basic components, symbols of subcircuits can also be rotated with <span class="keyseq"><kbd>Cmd</kbd>+<kbd>R</kbd></span>.</p>
+</dd>
+<dt class="hdlist1">Mirror Horizontally</dt>
+<dd>
+<p>Mirrors the symbol in horizontal direction (or on the vertical axis through the origin of the symbol). This is useful, for example, if wires with input signals arrive in the using circuit from the right side, but the inputs in the symbol are located on the left side of the symbol.</p>
+</dd>
+<dt class="hdlist1">Mirror Vertically</dt>
+<dd>
+<p>Mirrors the symbol in vertical direction (or on the horizontal axis through the origin of the symbol). This is useful e.g. if wires with control signals arrive from above in the using circuit, but the control inputs in the symbol are located at the lower side of the symbol.</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<p>In this attribute a description of the subcircuit can be entered which is only valid for this one use of the subcircuit. This description replaces the one given by the author of the subcircuit. Certain functionality, such as tooltip, might display both the description of the referenced circuit as well as the complementing description of the subcircuit instance.</p>
+</dd>
+<dt class="hdlist1">Label</dt>
+<dd>
+<p>This attribute is only available if the symbol of the subcircuit contains at least one designation element, i.e. a text and/or a label. This attribute can be used to change the text of the label specified by the symbol.<br>
+<br>
+Example: The example project "Microcomputer (Tanenbaum)" contains two 16-bit registers that serve as latches in both data paths A and B of the CPU. The symbol of the 16-bit register contains the label component "REG" (for register). When using the registers within the CPU, this attribute "Label" can now be used to replace the text "REG" with "A Latch" or "B Latch".<br>
+<br>
+The value of the attribute "Label" can also be deleted to ensure that the label specified by the symbol is not displayed.</p>
+</dd>
+<dt class="hdlist1">Control Visibility</dt>
+<dd>
+<p>Determines when controls contained in a subcircuit symbol are to be displayed.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Never</strong>: Controls are displayed neither in edit mode nor during simulation.</p>
+</li>
+<li>
+<p><strong>During Simulation</strong>: Controls are displayed only during simulation. This is the default value.</p>
+</li>
+<li>
+<p><strong>Always</strong>: Controls are displayed in edit mode as well as during simulation.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Parameter 'XYZ'</dt>
+<dd>
+<p>These parameters allow you to specify a value for generic parameters defined by the subcircuit.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_editing-subcircuit-symbols">Editing subcircuit symbols</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The previously presented possibilities of adapting the symbol of a subcircuit by mirroring or changing the label are often sufficient to integrate a subcircuit optimally into a circuit. Sometimes, however, the symbol of a subcircuit needs to be adapted even further.</p>
+</div>
+<div class="paragraph">
+<p>The figure below shows the already described application of 16-bit registers as data path latches in a CPU. In addition to adapting the standard description of the register, in this case one would like to display e.g. the currently stored value of the register directly in the symbol, something which is not provided by the 16-bit register in the standard library.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/circuits/edit-symbol.png" alt="Edit Symbol" width="300">
+</div>
+</div>
+<div class="paragraph">
+<p>For such and similar applications, Antares offers the possibility to edit the symbol of a single subcircuit completely free. With context menu <b class="menuref">Edit Symbol</b> Antares opens the same symbol editor that is used for editing the symbol of circuits. This provides all the editor&#8217;s options such as moving inputs, editing graphical elements such as rectangles, or adding control elements. In the example above, the control element "Output" of the 16-bit register has been added to the symbol.</p>
+</div>
+<div class="paragraph">
+<p>With <b class="button">OK</b> the symbol editor is closed and the changed symbol is saved as symbol of the subcircuit in the current circuit.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The modified symbol is only valid for the selected subcircuit in the current circuit. Other subcircuits of the same circuit retain their symbol and, in particular, the library or project containing the subcircuit is not changed.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The original symbol can be restored with context menu <b class="menuref">Reset Symbol</b>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_extracting-subcircuit">Extracting subcircuit</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This feature is for users who like working in a "Figma-like" style, i.e. to start drawing everything in a single circuit and the extract part of the design as separate subcircuits.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/circuits/extract-subcircuit.png" alt="Extracting Subcircuit" width="300">
+</div>
+</div>
+<div class="paragraph">
+<p>Select the component you&#8217;d like to extract, right-click with the mouse, and select "Extract as subcircuit". Antares asks you for the name of the new subcircuit and creates it in the same folder of the project/library in which the currently open circuit is contained.</p>
+</div>
+<div class="paragraph">
+<p>While extracting, Antares replaces all switches by circuit inputs and all LEDs by circuit outputs. The selected components are then deleted and replaced with the symbol of the newly created subcircuit. Note that Antares it not yet capable of automatically creating inputs/outputs for pins of components that are left unconnected when extracting them. This may be a topic of a future release.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_using-the-drawing-tools">Using the drawing tools</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A circuit in Antares can not only consist of digital components and the connected wires, but also of purely graphical elements such as rectangles or texts. Use the drawing tools in the Antares window toolbar to add such elements to the circuit.</p>
+</div>
+<div class="paragraph">
+<p>Select the drawing tool and then move the mouse over the drawing area. The changed mouse pointer icon indicates that you can start drawing.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="/assets/images/user-manual/circuits/pointer.gif" alt="Selection"></span> <strong>Selection</strong> With the selection tool you can select single or multiple components. In addition to clicking the left mouse button, use <kbd>Shift</kbd> to expand or reduce the current selection. Click with the mouse on the background to draw a selection range with the mouse button pressed down.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="/assets/images/user-manual/circuits/rectangle.png" alt="Rectangle"></span> <strong>Rectangle</strong> Click the left mouse button and draw the rectangle while holding down the mouse button. With <kbd>Shift</kbd> a square can be created.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="/assets/images/user-manual/circuits/ellipse.png" alt="Ellipse"></span> <strong>Ellipse</strong> Click the left mouse button and draw the ellipse with the mouse button pressed down. With <kbd>Shift</kbd> a circle can be created.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="/assets/images/user-manual/circuits/polyline.gif" alt="Polyline"></span> <strong>Polyline</strong> Click the left mouse button to set the points of a polyline. A double click terminates the creation of the polyline. To add further points later, you can select the polyline and double-click on a segment of the polyline. If you move an intermediate point to another intermediate point, the two points will be merged into a single point.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="/assets/images/user-manual/circuits/curve-20.png" alt="Curve"></span> <strong>Curve</strong> Click with the mouse at three points to define the three points of a curve. The three points are the support points of a square Bézier curve.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="/assets/images/user-manual/circuits/text.gif" alt="Text"></span> <strong>Text</strong> A click with the left mouse button creates a text component with a standard text. Double-click on the text to change the text or use the "Text" attribute in the Antares properties window. The text can contain several lines. The horizontal alignment of the text can be changed in the properties. Change the size of the text box by editing it like a rectangle.</p>
+</div>
+<div class="paragraph">
+<p>The selection state of the graphical objects is displayed by drawing in the selection color, as with digital components, and not by displaying the small editing rectangles (handles) as in other applications. These are only displayed when you move the mouse over a selected graphic component.</p>
+</div>
+<div class="paragraph">
+<p>Select a graphic component and change its properties such as "Fill", "Border", "Shadow", "Style", "Color", "Line style" to customize the appearance of the component. In chapter <a href="/user-manual/english/styles/styles">"Styles and themes"</a> you can find more information about styles, colors and other graphical properties.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_images">Images</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Antares allows you to add images to your project and use them in various places, e.g. directly in a circuit, but also in a circuit&#8217;s symbol. There are also special components like "Image switch" which you can configure to display an image for each of the "on" and "off" state.</p>
+</div>
+<div class="sect2">
+<h3 id="_adding-images-to-circuits">Adding images to circuits</h3>
+<div class="paragraph">
+<p>Right-click on a folder in the explorer tree (e.g. your current project) and <span class="menuseq"><b class="menu">right click</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Import image&#8230;&#8203;</b></span> to open the image importer dialog. Click <b class="button">Select</b> to open the file chooser dialog, select the image to import, and optionally edit the image&#8217;s name.</p>
+</div>
+<div class="paragraph">
+<p>Once imported, the image appears as special image node in the explorer&#8217;s tree. Drag the image from the explorer into a circuit to create an image component in your circuit.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_adding-images-to-symbols">Adding images to symbols</h3>
+<div class="paragraph">
+<p>The tree on the left side of the symbol editor has a "Images" folder that contains all images you&#8217;ve imported into your project. Drag an image into the symbol editor window to add the image to your symbol. Adjust the image&#8217;s size if needed.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_aligning-components">Aligning components</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Antares offers two tools that facilitate the mutual alignment of components.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="/assets/images/user-manual/circuits/snapGrid.gif" alt="Raster"></span> <strong>Raster</strong> This tool always sets the zero point of a component to a grid point. The spacing of the grid points can be changed in Antares preferences; note, however, that most of the given components are dimensioned so that their pins are aligned to the standard grid spacing.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="/assets/images/user-manual/circuits/snap.gif" alt="Components"></span> <strong>Components</strong> With this tool, Antares tries to align the component you place with respect to existing components. Depending on the type of component, either the zero point of the component or its inputs and outputs will be used. Antares uses thin orange guidelines to indicate where it has found a possible alignment with others.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/circuits/snap.png" alt="Alignment" width="400">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_save-history">Save History</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Antares can maintain a history of all saved versions of a circuit. You can use this feature to restore a previously saved version in case case you&#8217;ve accidentally saved some undesired changes.</p>
+</div>
+<div class="paragraph">
+<p>To enable save histories, enable the user preference <span class="menuseq"><b class="menu">Preferences</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Editor</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Save History</b></span>. After that, Antares will create a side copy of your already saved circuit whenever you save new changes of that circuit.</p>
+</div>
+<div class="paragraph">
+<p>To view the save history of a particular circuit, select that circuit in the explorer tree, left-click to open the context menu, and select <span class="menuseq"><b class="menu">Context Menu</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Show History..</b></span>. This will open the "History" view for the selected circuit.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The menu <span class="menuseq"><b class="menu">Context Menu</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Show History..</b></span> is disabled if there are unsaved changes in the currently open circuit.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/circuits/save-history-sample.png" alt="Alignment" width="600">
+</div>
+</div>
+<div class="paragraph">
+<p>Select an entry in the list of old version to display a preview of that version. Click <b class="button">Restore</b> to restore the old version and make it the current version.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The save history of a circuit gets also deleted if that circuit is deleted from the project or library.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_searching-in-circuits">Searching in circuits</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Antares allows you to search for components in a circuit that currently has the focus. If you press <kbd>ALT</kbd>+<kbd>CMD</kbd>+<kbd>F</kbd>, Antares displays the search bar just above the circuit. Enter your search expression in the search field, and Antares will execute a search for every entered character. The components matching the search criteria get selected in the circuit.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/circuits/search-in-circuit.png" alt="Alignment" width="700">
+</div>
+</div>
+<div class="paragraph">
+<p>Components are found according to the following criteria:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If you enter a numerical value such as 42, this value is also interpreted as "ID" of the component, as displayed in the property field "ID" when selecting a component. This can be useful when you write scripts, which is when you often have to deal with IDs of components.</p>
+</li>
+<li>
+<p>The search expression matches the type name of components, such as "Flip-Flop" or "Shifter 16 Bit".</p>
+</li>
+<li>
+<p>The search expression matches labels of components, such as inputs, outputs, LEDs, switches, tunnels or DIP switches.</p>
+</li>
+<li>
+<p>When a search matches an input, an output, a tunnel, a switch or a DIP switch, the wire connected to the single port of that component is also selected. This can e.g. be used to get an overview of a signal line leading through tunnels.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Press <kbd>ESC</kbd> to close the search bar, or click button <b class="button">X</b> at the right edge of the search bar.</p>
+</div>
+</div>
+</div>
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      <!-- Empty to disable pagination -->
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/flandreas/antares" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/AntaresCircuit" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 Andreas Fleischmann. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

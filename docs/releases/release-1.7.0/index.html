@@ -1,0 +1,587 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Release 1.7.0 - Antares</title>
+<meta name="description" content="Release Date: September 30, 2023  ">
+
+
+  <meta name="author" content="Andreas Fleischmann">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Antares">
+<meta property="og:title" content="Release 1.7.0">
+<meta property="og:url" content="https://www.antarescircuit.io/docs/releases/release-1.7.0/">
+
+
+  <meta property="og:description" content="Release Date: September 30, 2023  ">
+
+
+
+
+
+  <meta name="twitter:site" content="@AntaresCircuit">
+  <meta name="twitter:title" content="Release 1.7.0">
+  <meta name="twitter:description" content="Release Date: September 30, 2023  ">
+  <meta name="twitter:url" content="https://www.antarescircuit.io/docs/releases/release-1.7.0/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2024-11-16T06:47:40+00:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://www.antarescircuit.io/docs/releases/release-1.7.0/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Andreas Fleischmann",
+      "url": "https://www.antarescircuit.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Antares Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- Used for AsciiDoc integration -->
+<link rel="stylesheet" href="/assets/css/asciidoc.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+<link rel="manifest" href="/assets/images/site.webmanifest">
+<link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="theme-color" content="#ffffff">
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Antares
+          <span class="site-subtitle">Digital Circuit Learning Platform</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/docs/quick-start/">Quick-Start</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://app.antarescircuit.io">Webapp</a>
+            </li><li class="masthead__menu-item">
+              <a href="/user-manual/english/usermanual">Manual</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/blog">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/faq">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/releases/releases">Releases</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/examples/examples">Examples</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">2024</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/docs/releases/release-1.16.0">1.16.0</a></li>
+          
+            <li><a href="/docs/releases/release-1.15.1">1.15.1</a></li>
+          
+            <li><a href="/docs/releases/release-1.15.0">1.15.0</a></li>
+          
+            <li><a href="/docs/releases/release-1.14.0">1.14.0</a></li>
+          
+            <li><a href="/docs/releases/release-1.13.0">1.13.0</a></li>
+          
+            <li><a href="/docs/releases/release-1.12.0">1.12.0</a></li>
+          
+            <li><a href="/docs/releases/release-1.11.1">1.11.1</a></li>
+          
+            <li><a href="/docs/releases/release-1.11.0">1.11.0</a></li>
+          
+            <li><a href="/docs/releases/release-1.10.0">1.10.0</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">2023</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/docs/releases/release-1.9.0">1.9.0</a></li>
+          
+            <li><a href="/docs/releases/release-1.8.0">1.8.0</a></li>
+          
+            <li><a href="/docs/releases/release-1.7.0">1.7.0</a></li>
+          
+            <li><a href="/docs/releases/release-1.6.0">1.6.0</a></li>
+          
+            <li><a href="/docs/releases/release-1.5.0">1.5.0</a></li>
+          
+            <li><a href="/docs/releases/release-1.4.0">1.4.0</a></li>
+          
+            <li><a href="/docs/releases/release-1.3.0">1.3.0</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">2022</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/docs/releases/release-1.2.0">1.2.0</a></li>
+          
+            <li><a href="/docs/releases/release-1.1.0">1.1.0</a></li>
+          
+            <li><a href="/docs/releases/release-1.0.0">1.0.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.31.0">0.31.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.30.0">0.30.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.29.2">0.29.2</a></li>
+          
+            <li><a href="/docs/releases/release-0.29.1">0.29.1</a></li>
+          
+            <li><a href="/docs/releases/release-0.29.0">0.29.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.28.0">0.28.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.27.1">0.27.1</a></li>
+          
+            <li><a href="/docs/releases/release-0.27.0">0.27.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.26.0">0.26.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.25.0">0.25.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.24.0">0.24.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.23.1">0.23.1</a></li>
+          
+            <li><a href="/docs/releases/release-0.23.0">0.23.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.22.0">0.22.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.21.0">0.21.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.20.0">0.20.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.19.0">0.19.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.18.0">0.18.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.17.1">0.17.1</a></li>
+          
+            <li><a href="/docs/releases/release-0.17.0">0.17.0</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">2021</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/docs/releases/release-0.16.0">0.16.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.15.1">0.15.1</a></li>
+          
+            <li><a href="/docs/releases/release-0.15.0">0.15.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.14.0">0.14.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.13.0">0.13.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.12.2">0.12.2</a></li>
+          
+            <li><a href="/docs/releases/release-0.12.0">0.12.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.11.0">0.11.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.10.0">0.10.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.9.0">0.9.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.8.0">0.8.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.7.0">0.7.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.6.1">0.6.1</a></li>
+          
+            <li><a href="/docs/releases/release-0.6.0">0.6.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.5.2">0.5.2</a></li>
+          
+            <li><a href="/docs/releases/release-0.5.1">0.5.1</a></li>
+          
+            <li><a href="/docs/releases/release-0.5.0">0.5.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.4.1">0.4.1</a></li>
+          
+            <li><a href="/docs/releases/release-0.4.0">0.4.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.3.1">0.3.1</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">2020</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/docs/releases/release-0.3.0">0.3.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.2.0">0.2.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.1.0">0.1.0</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Release 1.7.0">
+    <meta itemprop="description" content="Release Date: September 30, 2023">
+    <meta itemprop="datePublished" content="2024-11-16T06:47:40+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Release 1.7.0
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p><strong>Release Date</strong>: September 30, 2023</p>
+
+<p>Release 1.7 brings besides some smaller features a lot of bug fixes, especially the fix for the severe bug #648, which could lead to corrupt circuit files when undoing wire junctions, and bug #613, which prevented you from changing properties of “Input/Output” components.</p>
+
+<p>Also worth mentioning is the new feature #641: Antares now highlights coinciding pins not connected by a wire, a situation that can occur after copy/paste or after moving components with arrow keys, and that could lead to confused users and circuits not working as expected.</p>
+
+<h1 id="features">Features</h1>
+
+<ul>
+  <li>
+    <p><strong>#624: External label for ‘Lookup Table’ component:</strong> The lookup table component can now have an external label. Also required for upcoming VHDL export.</p>
+  </li>
+  <li>
+    <p><strong>#631: 16:1 multiplexer, 1:16 demultiplexer:</strong> The standard library now contains a 16:1 multiplexer and a 1:16 demultiplexer, in addition to the already available version with smaller bit width.</p>
+  </li>
+  <li>
+    <p><strong>#633: Change LED colour in symbol controls:</strong> If a subcircuit contains e.g. red LEDs, and you add these LEDs as controls to the subcircuit’s symbol, you can now change the colours in the symbol when using the subcircuit in another circuit by “Edit symbol” in the host circuit.</p>
+  </li>
+  <li>
+    <p><strong>#641: Missing connection after copy/paste if pins coincide:</strong> When copy/pasting components, it can occur that pins of pasted components coincide with pins of other components. Since Antares doesn’t automatically create wires in such situations, and the pins are therefore not connected, this could lead to confusion of users and circuits not working as expected. Antares now highlights coinciding pins that are not connected by a wire with little red dots.</p>
+  </li>
+  <li>
+    <p><strong>#644: Numeric keypad input for DIP switches:</strong> You can now also use the numeric keypad on your keyboard to operate DIP switches during simulation.</p>
+  </li>
+  <li>
+    <p><strong>#645: Avoid double bit width annotations:</strong> If the wire between two multi-bit pins is small, their bitwidth annotations are close together, resulting in visual clutter. Antares now hides one of them in such a situation.</p>
+  </li>
+</ul>
+
+<h1 id="bugfixes">Bugfixes</h1>
+
+<ul>
+  <li>
+    <p><strong>#613: Error when changing ‘Input/Output’ property:</strong> When trying to change any property of an “Input/Output” in the properties window, nothing happened, and below the property window, a red message “Expected ‘(‘” appeared. This has been fixed.</p>
+  </li>
+  <li>
+    <p><strong>#616: Missing pin names in ROM and RAM:</strong> ROM and RAM should display the names of their pins, i.e. A, D, CS etc. This has been fixed.</p>
+  </li>
+  <li>
+    <p><strong>#627: Wire distortion when creating horizontal junction:</strong> In fact, this problem could occur when creating a junction at a corner of a wire, and the mouse position was slightly below the corner. The algorithm now tries to snap exactly to the corner location.</p>
+  </li>
+  <li>
+    <p><strong>#629: Wrong carry bit calculation in ‘Full Adder 4 Bit (Fast Carry)’:</strong> Circuit used an inverter instead of a buffer.</p>
+  </li>
+  <li>
+    <p><strong>#630: Multiplexer Issues:</strong> 4:1 and 8:1 multiplexer produced wrong results in “shallow simulation” mode.</p>
+  </li>
+  <li>
+    <p><strong>#632: Missing redraw of ‘Representation during simulation’ feature:</strong> The signal path e.g. drawn on multiplexer symbols didn’t refresh sometimes with simulation speed “Use”.</p>
+  </li>
+  <li>
+    <p><strong>#634: Simulation error with pull resistor on bus with wire tap:</strong> An unexpected error occurred during simulation of a circuit with a 8-bit bus an 8-bit pull resistor. The error was caused by a 4-bit wire tap on the same bus, running into a bit width negotiation issue with the pull resistor.</p>
+  </li>
+  <li>
+    <p><strong>#635: Error in ‘Reset Symbol’ on subcircuit symbol:</strong> When trying to reset a customized subcircuit symbol to the predefined symbol, an unexpected error occurred.</p>
+  </li>
+  <li>
+    <p><strong>#636: Port control in ‘D Latch’ symbol shows !Q instead of Q:</strong> This has been fixed.</p>
+  </li>
+  <li>
+    <p><strong>#638: Missing re-layout after changing ‘Logic’ property of tri-state buffer:</strong> When changing the “Logic” property of a tri-state buffer with connected wires from “Negative” to “Positive”, the negation circle disappeared, but the wire dit not experience a re-layout, resulting in a gap.</p>
+  </li>
+  <li>
+    <p><strong>#639: Cannot load circuit containing subcircuit with changed pin name (after ‘Edit Symbol’):</strong> When editing a subcircuit’s symbol in a host circuit by “Edit Symbol”, the host circuit could not be opened if pin names in the subcircuit were changed in the meantime. This has been fixed.</p>
+  </li>
+  <li>
+    <p><strong>#643: ‘System malfunction’ dialog when opening circuit after deleting subcircuit pin:</strong> Deleting pins in subcircuit is a standard, albeit not common usage scenario. Antares should not raise a ‘System malfunction’ issue in this situation. This has been fixed.</p>
+  </li>
+  <li>
+    <p><strong>#646: Bit width annotations overlap with wire arrow head (and partially with negation circle):</strong> This has been fixed.</p>
+  </li>
+  <li>
+    <p><strong>#648: Undoing wire junction creation can lead to corrupt circuit:</strong> Under certain circumstances, a bug in the undo/redo system could lead to corrupt circuits when undoing the creation of a wire junction.</p>
+  </li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-11-16T06:47:40+00:00">November 16, 2024</time></p>
+        
+      </footer>
+
+      
+
+      <!-- Empty to disable pagination -->
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/flandreas/antares" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/AntaresCircuit" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 Andreas Fleischmann. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

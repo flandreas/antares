@@ -1,0 +1,698 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Oscilloscope - Antares</title>
+<meta name="description" content="Digital circuit simulation and learning platform ">
+
+
+  <meta name="author" content="Andreas Fleischmann">
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Antares">
+<meta property="og:title" content="Oscilloscope">
+<meta property="og:url" content="https://www.antarescircuit.io/user-manual/english/oscilloscope/oscilloscope">
+
+
+  <meta property="og:description" content="Digital circuit simulation and learning platform ">
+
+
+
+  <meta property="og:image" content="https://www.antarescircuit.io/assets/images/splash2.png">
+
+
+
+  <meta name="twitter:site" content="@AntaresCircuit">
+  <meta name="twitter:title" content="Oscilloscope">
+  <meta name="twitter:description" content="Digital circuit simulation and learning platform ">
+  <meta name="twitter:url" content="https://www.antarescircuit.io/user-manual/english/oscilloscope/oscilloscope">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.antarescircuit.io/assets/images/splash2.png">
+  
+
+  
+
+
+
+
+
+
+
+
+<link rel="canonical" href="https://www.antarescircuit.io/user-manual/english/oscilloscope/oscilloscope">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Andreas Fleischmann",
+      "url": "https://www.antarescircuit.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Antares Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- Used for AsciiDoc integration -->
+<link rel="stylesheet" href="/assets/css/asciidoc.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+<link rel="manifest" href="/assets/images/site.webmanifest">
+<link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="theme-color" content="#ffffff">
+
+<!-- end custom head snippets -->
+
+  <script async defer data-domain="antarescircuit.io" src="https://plausible.io/js/plausible.js"></script></head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Antares
+          <span class="site-subtitle">Digital Circuit Learning Platform</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/docs/quick-start/">Quick-Start</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://app.antarescircuit.io">Webapp</a>
+            </li><li class="masthead__menu-item">
+              <a href="/user-manual/english/usermanual">Manual</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/blog">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/faq">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/releases/releases">Releases</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/examples/examples">Examples</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: url('/assets/images/splash2.png');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Oscilloscope
+
+        
+      </h1>
+      
+      
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">User Manual</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/usermanual">Welcome</a></li>
+          
+            <li><a href="/user-manual/english/first-steps/first-steps">First Steps</a></li>
+          
+            <li><a href="/user-manual/english/first-steps/orientation">Orientation</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Projects and libraries</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/projects-libraries/projects-libraries">Overview</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/libraries">Libraries</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/projects">Projects</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/workbench">Workbench</a></li>
+          
+            <li><a href="/user-manual/english/base-library/base-library">Library Reference</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Circuits</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/circuits/circuits">Circuits</a></li>
+          
+            <li><a href="/user-manual/english/circuits/wires">Wires</a></li>
+          
+            <li><a href="/user-manual/english/circuits/circuit-tests">Tests</a></li>
+          
+            <li><a href="/user-manual/english/circuits/text-style">Text Style</a></li>
+          
+            <li><a href="/user-manual/english/circuits/synthesis">Synthesis</a></li>
+          
+            <li><a href="/user-manual/english/circuits/analysis">Analysis</a></li>
+          
+            <li><a href="/user-manual/english/subcircuits/subcircuits">Subcircuits</a></li>
+          
+            <li><a href="/user-manual/english/circuits/vhdl-export">VHDL Export</a></li>
+          
+            <li><a href="/user-manual/english/circuits/analog-circuits">Analog circuits</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Simulation</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/simulation/simulation">Simulation</a></li>
+          
+            <li><a href="/user-manual/english/oscilloscope/oscilloscope" class="active">Oscilloscope</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Other Basic Techniques</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/styles/styles">Styles and Themes</a></li>
+          
+            <li><a href="/user-manual/english/description/description">Descriptions and Explanations</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Advanced Techniques</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/scripting/scripting">Scripting</a></li>
+          
+            <li><a href="/user-manual/english/scenarios/scenarios">Scenarios</a></li>
+          
+            <li><a href="/user-manual/english/usecases/usecases">Use Cases</a></li>
+          
+            <li><a href="/user-manual/english/circuits/circuit-parameters">Circuit Parameters</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Miscellaneous</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/misc/preferences">Preferences</a></li>
+          
+            <li><a href="/user-manual/english/misc/key-bindings">Key Bindings</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Web</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/web/web-publishing">Publish circuits</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Oscilloscope">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#_introduction">Introduction</a></li>
+  <li><a href="#_adding-the-oscilloscope">Adding the Oscilloscope</a></li>
+  <li><a href="#_adding-oscilloscope-rows-and-probes">Adding Oscilloscope Rows and Probes</a></li>
+  <li><a href="#_simulation-in-clocked-mode">Simulation in “Clocked” Mode</a></li>
+  <li><a href="#_simulation-in-real-time-mode">Simulation in “Real-Time” Mode</a></li>
+  <li><a href="#_user-preferences">User Preferences</a></li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <div class="sect1">
+<h2 id="_introduction">Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Antares' oscilloscope component can capture signal values at various points in a circuit and display how these signals change over time as graphical signal curves.</p>
+</div>
+<div class="paragraph">
+<p>Unlike similar tool which don&#8217;t treat component propagation delays, Antares simulates components with individual propagation delays, and the oscilloscope is capable of displaying the resulting timing differences, which can help you trouble-shooting subtle timing problems in your circuit designs.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s explain how the oscilloscope is used by going through an example circuit. Assume you have a counter circuit like below. Since such a counter circuit can also be viewed as a frequency divider, we want to set up an oscilloscope that nicely shows how frequencies are divided during simulation.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/oscilloscope/oscilloscope-circuit.png" alt="Counter" width="500">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_adding-the-oscilloscope">Adding the Oscilloscope</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Selecting <span class="menuseq"><b class="menu">View</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Oscilloscope</b></span> creates a new, empty oscilloscope component and adds it to your circuit.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/oscilloscope/oscilloscope-added.png" alt="Empty Oscilloscope" width="500">
+</div>
+</div>
+<div class="paragraph">
+<p>Technically, the oscilloscope is just a circuit component like any other. After you&#8217;ve added it to the circuit, the circuit can be saved, and all changes you&#8217;ve made to the oscilloscope will be saved within the circuit.</p>
+</div>
+<div class="paragraph">
+<p>However, once created and added to the circuit, the oscilloscope can be hidden by deselecting <span class="menuseq"><b class="menu">View</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Oscilloscope</b></span> again. This sets the "visible" property of the oscilloscope to "false", a change that can also be saved.</p>
+</div>
+<div class="paragraph">
+<p>When the oscilloscope is initially added to a circuit, it is positioned just below the circuit. You can select it and move it to another position, which is then stored when the circuit is saved.</p>
+</div>
+<div class="paragraph">
+<p>To get rid of an oscilloscope, just select and delete it. The next time you select <span class="menuseq"><b class="menu">View</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Oscilloscope</b></span>, a newly initialized oscilloscope will be created.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Since oscilloscopes come with a certain overhead, tend to avoid adding them to low-level library circuits you plan to use multiple times in project circuits. You can use an oscilloscope while designing low-level circuits, but consider removing the oscilloscope from library circuits once their design is stable.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_adding-oscilloscope-rows-and-probes">Adding Oscilloscope Rows and Probes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>An oscilloscope consists of up to 8 rows, each of which has a signal probe and a signal curve. To add a new row, click on the <b class="button">+</b> button at the bottom of the oscilloscope. Each click adds a new row initially named by its index.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/oscilloscope/oscilloscope-rows.png" alt="Rows" width="600">
+</div>
+</div>
+<div class="paragraph">
+<p>The bubble-shaped icon at the start of a row represents the signal probe. Click it with the mouse and drag it into the circuit.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/oscilloscope/oscilloscope-probes.png" alt="Probes" width="600">
+</div>
+</div>
+<div class="paragraph">
+<p>Think of this like the probe of a particular row has been taken off its slot in the oscilloscope and moved into the circuit where it should capture signals. An empty slot in the oscilloscope is drawn only as outline, while the effective probe is always drawn as a filled icon.</p>
+</div>
+<div class="paragraph">
+<p>Probes only capture signals if they are connected to a wire, which is indicated by a small circle at the tip of the probe. You can place a probe anywhere else in the circuit, but then it won&#8217;t capture signals.</p>
+</div>
+<div class="paragraph">
+<p>Also notice how the name of a probe changes if you drop it on a circuit&#8217;s wire. Antares uses a strategy to automatically determine the name of a probe depending on where it has been dropped. This strategy tries to use names from components and input/output ports that participate in the net to which the probe has been added. If there is no such name, or the evaluated name is not unique, Antares uses a generic, unique name.</p>
+</div>
+<div class="paragraph">
+<p>You can change the automatically assigned probe name by selecting the probe and entering the new name in the properties view. Antares will ensure that all probe names are unique.</p>
+</div>
+<div class="paragraph">
+<p>You can also rotate a selected probe in the circuit using <b class="button">Cmd R</b>.</p>
+</div>
+<div class="paragraph">
+<p>To remove a probe from the circuit, just select and delete it. Antares will then move it back to its slot in the oscilloscope.</p>
+</div>
+<div class="paragraph">
+<p>Removing entire rows can be achieved by pressing the <b class="button">-</b> button at the start of a row. If the row&#8217;s probe has previously been dragged into the circuit, it will be deleted as well.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_simulation-in-clocked-mode">Simulation in "Clocked" Mode</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The oscilloscope supports different timing modes. You can choose the mode by selecting the oscilloscope and changing the value of is property "Mode" in the properties panel. Newly created oscilloscopes have mode "Clocked" by default. Clocked mode is also designated in the oscilloscope component by a small triangle at the right side of the first row.</p>
+</div>
+<div class="paragraph">
+<p>In clocked mode, the captured signal curves don&#8217;t represent the real simulation time, but an artificial "oscilloscope time" that leads to evenly alternating signal curves, because signals are captured only when the signal at the first (clocked) row changes. This can be convenient because large time differences between signal changes (such as microsecond clocks and nanosecond gate propagation delays) are "normalized" to the artificial, evenly spaced "oscilloscope time". The drawback of clocked mode is that propagation delay subtleties are not shown.</p>
+</div>
+<div class="paragraph">
+<p>Start the simulation and observe how the signal curve of each row evolves while the circuit is driven by the clock component.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/oscilloscope/oscilloscope-simulation-clocked.png" alt="Probes" width="600">
+</div>
+</div>
+<div class="paragraph">
+<p>The oscilloscope has a "Scaling" property that scales the signal curve when being drawn on the screen. Set the default scaling value in the oscilloscope&#8217;s property, or change it during simulation by hovering over the knob button at the bottom of the oscilloscope and adjusting the scale by turning the popup knob. Press/hold the left mouse button while turning the know around its center.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/oscilloscope/oscilloscope-scale.png" alt="Probes" width="600">
+</div>
+</div>
+<div class="paragraph">
+<p>Note also the three gray dots in the first and second rows. These indicate that there are no more data values available for the given point in time. Antares only stores a certain number of captured signals; if this number is reached, older values are deleted. You can configure this number in the user preferences (see below).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_simulation-in-real-time-mode">Simulation in "Real-Time" Mode</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In "Real-Time" oscilloscope mode, the oscilloscope uses the real simulation time when capturing signal changes in the circuit. Therefore, real propagation delays of circuit components become transparent in signal curves.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s demonstrate this by equipping the "Pulse Generator" circuit from Antares' standard library with an oscilloscope in order to analyse the circuit&#8217;s timing in detail. Remember that this circuit creates a short pulse at its output "O" for every rising edge at its input "I".</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/oscilloscope/oscilloscope-simulation-realtime.png" alt="Probes" width="600">
+</div>
+</div>
+<div class="paragraph">
+<p>Note how the propagation delay of the AND gate ultimately determines the length of the generated output pulse, and how it is driven by the accumulated NOT gate propagation delays.</p>
+</div>
+<div class="paragraph">
+<p>In order to make the timing subtleties nicely visible, the oscilloscope&#8217;s scale had to be scaled up to around 57'000.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_user-preferences">User Preferences</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Antares' user preferences allows you to configure certain aspects of oscilloscope behaviour and looks.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Max. number of signal values</dt>
+<dd>
+<p>The maximum number of signals stored in each oscilloscope row. If this number is reached, older captured signal values are deleted.</p>
+</dd>
+<dt class="hdlist1">Individual probe colors</dt>
+<dd>
+<p>Determines whether oscilloscope signal curves and probes have an individual color (default). If you deselect this property, all signal curves and probes have the same color, whose value depends on the current theme.</p>
+</dd>
+</dl>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/oscilloscope/oscilloscope-unicolor.png" alt="Probes" width="600">
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Fill signal curve</dt>
+<dd>
+<p>Determines whether signal curves are filled or not.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      <!-- Empty to disable pagination -->
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/flandreas/antares" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/AntaresCircuit" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 Andreas Fleischmann. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

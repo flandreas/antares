@@ -1,0 +1,705 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Scripting in Circuits - Antares</title>
+<meta name="description" content="Digital circuit simulation and learning platform ">
+
+
+  <meta name="author" content="Andreas Fleischmann">
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Antares">
+<meta property="og:title" content="Scripting in Circuits">
+<meta property="og:url" content="https://www.antarescircuit.io/user-manual/english/circuits/circuit-scripting">
+
+
+  <meta property="og:description" content="Digital circuit simulation and learning platform ">
+
+
+
+  <meta property="og:image" content="https://www.antarescircuit.io/assets/images/splash2.png">
+
+
+
+  <meta name="twitter:site" content="@AntaresCircuit">
+  <meta name="twitter:title" content="Scripting in Circuits">
+  <meta name="twitter:description" content="Digital circuit simulation and learning platform ">
+  <meta name="twitter:url" content="https://www.antarescircuit.io/user-manual/english/circuits/circuit-scripting">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.antarescircuit.io/assets/images/splash2.png">
+  
+
+  
+
+
+
+
+
+
+
+
+<link rel="canonical" href="https://www.antarescircuit.io/user-manual/english/circuits/circuit-scripting">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Andreas Fleischmann",
+      "url": "https://www.antarescircuit.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Antares Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- Used for AsciiDoc integration -->
+<link rel="stylesheet" href="/assets/css/asciidoc.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+<link rel="manifest" href="/assets/images/site.webmanifest">
+<link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="theme-color" content="#ffffff">
+
+<!-- end custom head snippets -->
+
+  <script async defer data-domain="antarescircuit.io" src="https://plausible.io/js/plausible.js"></script></head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Antares
+          <span class="site-subtitle">Digital Circuit Learning Platform</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/docs/quick-start/">Quick-Start</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://app.antarescircuit.io">Webapp</a>
+            </li><li class="masthead__menu-item">
+              <a href="/user-manual/english/usermanual">Manual</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/blog">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/faq">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/releases/releases">Releases</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/examples/examples">Examples</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: url('/assets/images/splash2.png');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Scripting in Circuits
+
+        
+      </h1>
+      
+      
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">User Manual</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/usermanual">Welcome</a></li>
+          
+            <li><a href="/user-manual/english/first-steps/first-steps">First Steps</a></li>
+          
+            <li><a href="/user-manual/english/first-steps/orientation">Orientation</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Projects and libraries</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/projects-libraries/projects-libraries">Overview</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/libraries">Libraries</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/projects">Projects</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/workbench">Workbench</a></li>
+          
+            <li><a href="/user-manual/english/base-library/base-library">Library Reference</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Circuits</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/circuits/circuits">Circuits</a></li>
+          
+            <li><a href="/user-manual/english/circuits/wires">Wires</a></li>
+          
+            <li><a href="/user-manual/english/circuits/circuit-tests">Tests</a></li>
+          
+            <li><a href="/user-manual/english/circuits/text-style">Text Style</a></li>
+          
+            <li><a href="/user-manual/english/circuits/synthesis">Synthesis</a></li>
+          
+            <li><a href="/user-manual/english/circuits/analysis">Analysis</a></li>
+          
+            <li><a href="/user-manual/english/subcircuits/subcircuits">Subcircuits</a></li>
+          
+            <li><a href="/user-manual/english/circuits/vhdl-export">VHDL Export</a></li>
+          
+            <li><a href="/user-manual/english/circuits/analog-circuits">Analog circuits</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Simulation</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/simulation/simulation">Simulation</a></li>
+          
+            <li><a href="/user-manual/english/oscilloscope/oscilloscope">Oscilloscope</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Other Basic Techniques</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/styles/styles">Styles and Themes</a></li>
+          
+            <li><a href="/user-manual/english/description/description">Descriptions and Explanations</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Advanced Techniques</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/scripting/scripting">Scripting</a></li>
+          
+            <li><a href="/user-manual/english/scenarios/scenarios">Scenarios</a></li>
+          
+            <li><a href="/user-manual/english/usecases/usecases">Use Cases</a></li>
+          
+            <li><a href="/user-manual/english/circuits/circuit-parameters">Circuit Parameters</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Miscellaneous</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/misc/preferences">Preferences</a></li>
+          
+            <li><a href="/user-manual/english/misc/key-bindings">Key Bindings</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Web</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/web/web-publishing">Publish circuits</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Scripting in Circuits">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#_execution-logic">Execution Logic</a>
+    <ul>
+      <li><a href="#_examples">Examples</a>
+        <ul>
+          <li><a href="#_half-adder">Half Adder</a></li>
+          <li><a href="#_incrementer">Incrementer</a></li>
+          <li><a href="#_2-4-decoder">2-4 Decoder</a></li>
+        </ul>
+      </li>
+      <li><a href="#_undefined-gate-input-behaviour">Undefined Gate Input Behaviour</a></li>
+    </ul>
+  </li>
+  <li><a href="#_symbol-representation">Symbol Representation</a>
+    <ul>
+      <li><a href="#_external-functions">External Functions</a></li>
+      <li><a href="#_examples-2">Examples</a>
+        <ul>
+          <li><a href="#_signal-flow">Signal Flow</a></li>
+          <li><a href="#_setting-labels">Setting Labels</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <div class="sect1">
+<h2 id="_execution-logic">Execution Logic</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In a <a href="/user-manual/english/circuits/circuits">circuit</a> a script can be defined in the property "Function" which is executed at <a href="/user-manual/english/simulation.simulation">"Flat simulation"</a> instead of the circuit if the circuit is used as a subcircuit in another circuit.</p>
+</div>
+<div class="paragraph">
+<p>When you write such a script, Antares will predefine all input and output pins of the circuit as implicit variable, so that you can access the signal at these pins simply by accessing those variables.</p>
+</div>
+<div class="paragraph">
+<p>You write these scripts using the <a href="/user-manual/english/scripting/scripting-dsl"><em>Antares DSL</em></a> programming language.</p>
+</div>
+<div class="sect2">
+<h3 id="_examples">Examples</h3>
+<div class="sect3">
+<h4 id="_half-adder">Half Adder</h4>
+<div class="paragraph">
+<p>This example shows the execution logic of a 1-bit half-adder with 2 inputs "A" and "B" and the outputs "S" (sum) and "C" (carry).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript">S = (A or B) and not (A and B)
+C = A and B</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Notice how the signals of the inputs are read, how logical operations are executed in <em>Antares DSL</em>, and how the results of these operations are set as output signals.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_incrementer">Incrementer</h4>
+<div class="paragraph">
+<p>This example shows the execution logic of an 8-bit incrementer with data input "D" and the outputs "O" (data) and "CO" (carry out).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript">O = (D + 1) % 256
+CO = D == 255</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2-4-decoder">2-4 Decoder</h4>
+<div class="paragraph">
+<p>This example shows the execution logic of a 2-4 decoder with two 1-bit data inputs "I0" and "I1", one enable input "EN" and 4 data outputs "O0".."O3". The decoder selects one of the 4 data outputs based on the 2-bit value at the two data inputs if "EN" is set.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript">val = I0 + 2 * I1
+O0 = EN and val == 0
+O1 = EN and val == 1
+O2 = EN and val == 2
+O3 = EN and val == 3</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note how the value of the "EN" input is used by the <code>and</code> operator to ensure that an output is only set to 1 if "EN" is also 1.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_undefined-gate-input-behaviour">Undefined Gate Input Behaviour</h3>
+<div class="paragraph">
+<p>Antares' system preference "Undefined Gate Input Behaviour" defines how gates behave with undefined (floating) input values. The default setting for this preference is "Read as O", meaning that a logic gate will treat an undefined signal at any of its outputs as 0.</p>
+</div>
+<div class="paragraph">
+<p>When you write execution scripts for subcircuits, this logic is not applied per default, because the script engine can&#8217;t know which input pins are to be treated according to this logic, while others like data bus inputs must not.</p>
+</div>
+<div class="paragraph">
+<p>Therefore, you can use the global DSL function <code>gated()</code> to apply the logic according to "Undefined Gate Input Behaviour" when accessing an input signal in an execution script.</p>
+</div>
+<div class="paragraph">
+<p>For example, if you write a script for a "Multiplexer n Bit" subcircuit that is fully scripted, and you would like its output O to always be zero if the selection input or the selected input is undefined, you would write the script as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript">if (gated(S)) {
+  O = gated(B)
+} else {
+  O = gated(A)
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>See also <a href="/user-manual/english/scripting/scripting-global-functions"><em>Global DSL Functions</em></a> for a description of this function.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_symbol-representation">Symbol Representation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In the symbol of a <a href="/user-manual/english/subcircuits/subcircuits">subcircuit</a> scripting can be used to change the visualization of the symbol during simulation.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The possibilities for this are still rudimentary in the current version of Antares; future versions of Antares will provide more support here.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Use the property "Representation during simulation" in the symbol editor to define such a script for the symbol of a circuit.</p>
+</div>
+<div class="sect2">
+<h3 id="_external-functions">External Functions</h3>
+<div class="paragraph">
+<p>In addition to the variables Antares automatically declares to access all pins of the symbol, Antares also declares some functions you can use to adjust the graphical representation of the symbol.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript">/**
+ * Draws a line in the correct signal color from an input pin to an output pin.
+ * @param inputName the name of the input pin
+ * @param outputName the name of the output pin
+ */
+private fun drawDataFlow(inputName: String, outputName: String)
+
+/**
+ * Sets the label of the symbol during execution. Only applicable if the symbol contains a label component.
+ * @param label the current label text
+ */
+private fun setLabel(label: String)</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_examples-2">Examples</h3>
+<div class="sect3">
+<h4 id="_signal-flow">Signal Flow</h4>
+<div class="paragraph">
+<p>The example shows the representation logic of a multiplexer with two 4-bit inputs "A" and "B", a 1-bit selection input "S" (Select) and a 4-bit data output "O". Depending on the signal at the selection input, the resulting data flow from the selected input to the output is drawn.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript">if (S) drawDataFlow("B", "O") else drawDataFlow("A", "O")</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_setting-labels">Setting Labels</h4>
+<div class="paragraph">
+<p>Changing symbol labels during simulation can be useful for complex subcircuits that perform a particular function
+depending on some control inputs. Examples of such circuits are ALUs or shifters.</p>
+</div>
+<div class="paragraph">
+<p>During simulation, a user can more easily follow what a circuit is doing if such subcircuits indicate by their label
+what function they are currently performing.</p>
+</div>
+<div class="paragraph">
+<p>The following example was taken from the ALU in the Tanenbaum example project. It supports 4 different arithmetic operations
+depending on the value of the control inputs F0 and F1.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript">when (2 * F1 + F0) {
+    0 : setLabel("A+B")
+    1 : setLabel("A and B")
+    2 : setLabel("A")
+    3 : setLabel("not A")
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      <!-- Empty to disable pagination -->
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/flandreas/antares" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/AntaresCircuit" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 Andreas Fleischmann. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,691 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Wires - Antares</title>
+<meta name="description" content="Digital circuit simulation and learning platform ">
+
+
+  <meta name="author" content="Andreas Fleischmann">
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Antares">
+<meta property="og:title" content="Wires">
+<meta property="og:url" content="https://www.antarescircuit.io/user-manual/english/circuits/wires">
+
+
+  <meta property="og:description" content="Digital circuit simulation and learning platform ">
+
+
+
+  <meta property="og:image" content="https://www.antarescircuit.io/assets/images/splash2.png">
+
+
+
+  <meta name="twitter:site" content="@AntaresCircuit">
+  <meta name="twitter:title" content="Wires">
+  <meta name="twitter:description" content="Digital circuit simulation and learning platform ">
+  <meta name="twitter:url" content="https://www.antarescircuit.io/user-manual/english/circuits/wires">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.antarescircuit.io/assets/images/splash2.png">
+  
+
+  
+
+
+
+
+
+
+
+
+<link rel="canonical" href="https://www.antarescircuit.io/user-manual/english/circuits/wires">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Andreas Fleischmann",
+      "url": "https://www.antarescircuit.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Antares Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- Used for AsciiDoc integration -->
+<link rel="stylesheet" href="/assets/css/asciidoc.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+<link rel="manifest" href="/assets/images/site.webmanifest">
+<link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="theme-color" content="#ffffff">
+
+<!-- end custom head snippets -->
+
+  <script async defer data-domain="antarescircuit.io" src="https://plausible.io/js/plausible.js"></script></head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Antares
+          <span class="site-subtitle">Digital Circuit Learning Platform</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/docs/quick-start/">Quick-Start</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://app.antarescircuit.io">Webapp</a>
+            </li><li class="masthead__menu-item">
+              <a href="/user-manual/english/usermanual">Manual</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/blog">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/faq">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/releases/releases">Releases</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/examples/examples">Examples</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: url('/assets/images/splash2.png');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Wires
+
+        
+      </h1>
+      
+      
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">User Manual</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/usermanual">Welcome</a></li>
+          
+            <li><a href="/user-manual/english/first-steps/first-steps">First Steps</a></li>
+          
+            <li><a href="/user-manual/english/first-steps/orientation">Orientation</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Projects and libraries</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/projects-libraries/projects-libraries">Overview</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/libraries">Libraries</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/projects">Projects</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/workbench">Workbench</a></li>
+          
+            <li><a href="/user-manual/english/base-library/base-library">Library Reference</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Circuits</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/circuits/circuits">Circuits</a></li>
+          
+            <li><a href="/user-manual/english/circuits/wires" class="active">Wires</a></li>
+          
+            <li><a href="/user-manual/english/circuits/circuit-tests">Tests</a></li>
+          
+            <li><a href="/user-manual/english/circuits/text-style">Text Style</a></li>
+          
+            <li><a href="/user-manual/english/circuits/synthesis">Synthesis</a></li>
+          
+            <li><a href="/user-manual/english/circuits/analysis">Analysis</a></li>
+          
+            <li><a href="/user-manual/english/subcircuits/subcircuits">Subcircuits</a></li>
+          
+            <li><a href="/user-manual/english/circuits/vhdl-export">VHDL Export</a></li>
+          
+            <li><a href="/user-manual/english/circuits/analog-circuits">Analog circuits</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Simulation</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/simulation/simulation">Simulation</a></li>
+          
+            <li><a href="/user-manual/english/oscilloscope/oscilloscope">Oscilloscope</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Other Basic Techniques</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/styles/styles">Styles and Themes</a></li>
+          
+            <li><a href="/user-manual/english/description/description">Descriptions and Explanations</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Advanced Techniques</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/scripting/scripting">Scripting</a></li>
+          
+            <li><a href="/user-manual/english/scenarios/scenarios">Scenarios</a></li>
+          
+            <li><a href="/user-manual/english/usecases/usecases">Use Cases</a></li>
+          
+            <li><a href="/user-manual/english/circuits/circuit-parameters">Circuit Parameters</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Miscellaneous</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/misc/preferences">Preferences</a></li>
+          
+            <li><a href="/user-manual/english/misc/key-bindings">Key Bindings</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Web</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/web/web-publishing">Publish circuits</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Wires">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#_creating-wires">Creating Wires</a></li>
+  <li><a href="#_wire-bundle">Wire Bundle</a></li>
+  <li><a href="#_reconnecting-wires">Reconnecting wires</a></li>
+  <li><a href="#_automatic-connection">Automatic connection</a></li>
+  <li><a href="#_wire-properties">Wire properties</a></li>
+  <li><a href="#_layout">Layout</a></li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Wires are circuit elements with which pins of components can be connected, so that during
+simulation of the circuit signals can flow between these components.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/circuits/wires-sample.png" alt="wires" width="250">
+</div>
+</div>
+<div class="paragraph">
+<p>To help you recognize unconnected wires at a glance, Antares displays unconnected wire ends with a small white circle.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_creating-wires">Creating Wires</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To start creating a new wire, move the mouse over a pin of a component or an existing wire. Antares will then show a small green circle to indicate that you can start a new wire at this point.</p>
+</div>
+<div class="paragraph">
+<p>Then press and hold the left mouse button while moving the mouse to the desired destination of the wire. Antares automatically creates a orthogonal layout of the resulting wire.</p>
+</div>
+<div class="paragraph">
+<p>Depending on the location where you start the wire, the following destinations of wires are possible:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Output to input</dt>
+<dd>
+<p>Move the mouse with the left mouse button pressed down to the input of a component.</p>
+</dd>
+<dt class="hdlist1">Input to output or wire</dt>
+<dd>
+<p>Move the mouse with pressed mouse button to the input of a component or to an already existing wire.</p>
+</dd>
+<dt class="hdlist1">Wire to input</dt>
+<dd>
+<p>To start a new wire on an already existing wire (branch), move the mouse over the existing wire and press the <kbd>Alt</kbd> key. Hold down the <kbd>Alt</kbd> key while clicking to create the branched-off wire..</p>
+</dd>
+</dl>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Bidirectional pins are both input and output and can be connected in both ways.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>In addition to these options, you can create an unconnected wire in all cases by releasing the mouse button over the background of the circuit.</p>
+</div>
+<div class="paragraph">
+<p>By default, Antares automatically applies an orthogonal layout when creating the wire. To influence the layout of the resulting wire, press the <kbd>Alt</kbd>-key while defining the start location. Antares will then display a green square instead of the green circle. Then you can define the intermediate points of the resulting wire by clicking with the left mouse button. You do not have to keep the mouse button pressed while moving the mouse. Use the <kbd>ESC</kbd>-key to remove the last intermediate point. With a single click on an input or with a double click on the background the creation of the wire is completed.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_wire-bundle">Wire Bundle</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Wire bundles are wires that can transmit several bits simultaneously. The bit width of a wire does not have to be explicitly specified, but is derived from the pins to which the wire is connected. Since pins of components can have different bit widths, this can lead to an inconsistency, because Antares requires that a network of wires be connected exclusively to pins of the same bit width.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/circuits/inconsistent-net-en.png" alt="Inconsistent net" width="400">
+</div>
+</div>
+<div class="paragraph">
+<p>This is an error in the design of the circuit, which Antares indicates by drawing the relevant wire in red; if you move the mouse over the red wire in this state, a popup will show the cause of the error.</p>
+</div>
+<div class="paragraph">
+<p>Circuits with design errors cannot be simulated; before the simulation can be started, the design error must be corrected. In the example above, output "O2" must have bit width 1.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_reconnecting-wires">Reconnecting wires</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Sometimes it happens that you have connected a wire to the wrong component. To change this, it is not necessary to delete the wire and then create a new wire. Antares offers the possibility to reassign existing wires to other pins.</p>
+</div>
+<div class="paragraph">
+<p>Move the mouse over the port to which the wire is connected and press ALT. Antares displays a small green circle with 4 arrows. Press the left mouse button and move the mouse to the new pin while keeping the mouse button pressed.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_automatic-connection">Automatic connection</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Antares offers the possibility to automatically connect the pins of components to open ends of existing wires. This is useful, for example, if you have already connected the pins of a logical gate before you realize that you need a different type of gate.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/circuits/auto-connect.png" alt="Automatic Connecting" width="300">
+</div>
+</div>
+<div class="paragraph">
+<p>In this case the old gate can be deleted, resulting in three wires with one open end each (see example above). Now you can drag another gate into the circuit and move it over the place where the old gate was before. Antares detects this situation and indicates with green circles that the component&#8217;s pins are automatically connected when you release the mouse at this position.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_wire-properties">Wire properties</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>By default, the way wires are drawn is only influenced by the bit width of the connected pins. Wires connecting pins of bit width 1 are displayed with a narrow line, while wire bundles are displayed with a wider line.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/circuits/wire-styles.png" alt="Wire styles" width="600">
+</div>
+</div>
+<div class="paragraph">
+<p>Antares provides several options that allow you to additionally influence how wires are drawn. Select the wire and choose the corresponding properties in the properties window.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Arrow</dt>
+<dd>
+<p>Select this property if you want an arrowhead to be displayed at the end of the wire, if the wire ends at an input or a bidirectional pin.</p>
+</dd>
+<dt class="hdlist1">Style</dt>
+<dd>
+<p>For certain circuits, intelligibility can be increased by highlighting important wires, such as the data or address bus in a microprocessor circuit. The "Block" style can be used for this purpose. The wire is then not shown as a wire, but as a "block" with a border and a background in a different colour.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_layout">Layout</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Antares contains layout algorithms that ensure that the geometry of a wire is adjusted when the components to which the wire is connected are moved.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/circuits/wire-layout.png" alt="Layout" width="600">
+</div>
+</div>
+<div class="paragraph">
+<p>Select the wire and set the "Layout" property in the Properties window to one of the following values:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Orthogonal</dt>
+<dd>
+<p>With this layout, the wire is built up from orthogonal segments. Although the algorithm implemented for this is already far from trivial, it creates layouts that some users might call suboptimal; for example, it does not prevent wires from passing through components. The currently implemented algorithm represents a pragmatic relationship between implementation effort and functionality; it is still open whether future versions of Antares will include a much more intelligent algorithm.<br>
+<br>
+With this layout, individual segments can be moved in parallel. To do this, click on a segment and move it orthogonally to the direction in which the segment is pointing while holding down the mouse button.</p>
+</dd>
+<dt class="hdlist1">None</dt>
+<dd>
+<p>In this layout, Antares does not make any adjustments to the layout at either end when moving the components to which the wire is connected. This layout is typically used to draw non-orthogonal wires, as is often required for flip-flop circuits.<br>
+<br>
+With this layout, the individual intermediate points can be moved. Select the wire, where upon Antares will display small empty rectangles at the intermediate points. Move these intermediate points by holding down the left mouse button.</p>
+</dd>
+<dt class="hdlist1">Straight</dt>
+<dd>
+<p>In this layout a straight connection between the start and end point of the wire is drawn. This layout exists for reasons of completeness, but is rarely used in digital circuits.<br>
+<br>
+With this layout the geometry of the wire cannot be influenced.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      <!-- Empty to disable pagination -->
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/flandreas/antares" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/AntaresCircuit" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 Andreas Fleischmann. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

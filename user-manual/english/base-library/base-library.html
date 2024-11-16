@@ -1,0 +1,979 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Library Reference - Antares</title>
+<meta name="description" content="Digital circuit simulation and learning platform ">
+
+
+  <meta name="author" content="Andreas Fleischmann">
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Antares">
+<meta property="og:title" content="Library Reference">
+<meta property="og:url" content="https://www.antarescircuit.io/user-manual/english/base-library/base-library">
+
+
+  <meta property="og:description" content="Digital circuit simulation and learning platform ">
+
+
+
+  <meta property="og:image" content="https://www.antarescircuit.io/assets/images/splash2.png">
+
+
+
+  <meta name="twitter:site" content="@AntaresCircuit">
+  <meta name="twitter:title" content="Library Reference">
+  <meta name="twitter:description" content="Digital circuit simulation and learning platform ">
+  <meta name="twitter:url" content="https://www.antarescircuit.io/user-manual/english/base-library/base-library">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.antarescircuit.io/assets/images/splash2.png">
+  
+
+  
+
+
+
+
+
+
+
+
+<link rel="canonical" href="https://www.antarescircuit.io/user-manual/english/base-library/base-library">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Andreas Fleischmann",
+      "url": "https://www.antarescircuit.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Antares Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- Used for AsciiDoc integration -->
+<link rel="stylesheet" href="/assets/css/asciidoc.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+<link rel="manifest" href="/assets/images/site.webmanifest">
+<link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="theme-color" content="#ffffff">
+
+<!-- end custom head snippets -->
+
+  <script async defer data-domain="antarescircuit.io" src="https://plausible.io/js/plausible.js"></script></head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Antares
+          <span class="site-subtitle">Digital Circuit Learning Platform</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/docs/quick-start/">Quick-Start</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://app.antarescircuit.io">Webapp</a>
+            </li><li class="masthead__menu-item">
+              <a href="/user-manual/english/usermanual">Manual</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/blog">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/faq">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/releases/releases">Releases</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/examples/examples">Examples</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: url('/assets/images/splash2.png');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Library Reference
+
+        
+      </h1>
+      
+      
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">User Manual</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/usermanual">Welcome</a></li>
+          
+            <li><a href="/user-manual/english/first-steps/first-steps">First Steps</a></li>
+          
+            <li><a href="/user-manual/english/first-steps/orientation">Orientation</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Projects and libraries</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/projects-libraries/projects-libraries">Overview</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/libraries">Libraries</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/projects">Projects</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/workbench">Workbench</a></li>
+          
+            <li><a href="/user-manual/english/base-library/base-library" class="active">Library Reference</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Circuits</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/circuits/circuits">Circuits</a></li>
+          
+            <li><a href="/user-manual/english/circuits/wires">Wires</a></li>
+          
+            <li><a href="/user-manual/english/circuits/circuit-tests">Tests</a></li>
+          
+            <li><a href="/user-manual/english/circuits/text-style">Text Style</a></li>
+          
+            <li><a href="/user-manual/english/circuits/synthesis">Synthesis</a></li>
+          
+            <li><a href="/user-manual/english/circuits/analysis">Analysis</a></li>
+          
+            <li><a href="/user-manual/english/subcircuits/subcircuits">Subcircuits</a></li>
+          
+            <li><a href="/user-manual/english/circuits/vhdl-export">VHDL Export</a></li>
+          
+            <li><a href="/user-manual/english/circuits/analog-circuits">Analog circuits</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Simulation</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/simulation/simulation">Simulation</a></li>
+          
+            <li><a href="/user-manual/english/oscilloscope/oscilloscope">Oscilloscope</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Other Basic Techniques</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/styles/styles">Styles and Themes</a></li>
+          
+            <li><a href="/user-manual/english/description/description">Descriptions and Explanations</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Advanced Techniques</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/scripting/scripting">Scripting</a></li>
+          
+            <li><a href="/user-manual/english/scenarios/scenarios">Scenarios</a></li>
+          
+            <li><a href="/user-manual/english/usecases/usecases">Use Cases</a></li>
+          
+            <li><a href="/user-manual/english/circuits/circuit-parameters">Circuit Parameters</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Miscellaneous</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/misc/preferences">Preferences</a></li>
+          
+            <li><a href="/user-manual/english/misc/key-bindings">Key Bindings</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Web</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/web/web-publishing">Publish circuits</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Library Reference">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#_common-properties">Common Properties</a></li>
+  <li><a href="#_digital-components">Digital Components</a>
+    <ul>
+      <li><a href="#_net">Net</a></li>
+      <li><a href="#_logic-gates">Logic Gates</a></li>
+      <li><a href="#_input">Input</a></li>
+      <li><a href="#_output">Output</a></li>
+      <li><a href="#_memory">Memory</a></li>
+      <li><a href="#_arithmetic">Arithmetic</a></li>
+      <li><a href="#_codec">Codec</a></li>
+      <li><a href="#_flip-flops">FLip-Flops</a></li>
+      <li><a href="#_plexer">Plexer</a></li>
+      <li><a href="#_counter">Counter</a></li>
+    </ul>
+  </li>
+  <li><a href="#_analog-components">Analog Components</a></li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This chapter describes all library components that are built into Antares. These components are included in both the "Basic" and the "Standard" library.</p>
+</div>
+<div class="paragraph">
+<p>Compared to similar tools, it may seem that these are rather few components. The philosophy of Antares differs from that of other tools in this respect: With Antares, the user should be able to explore the inner workings of as many components as possible.</p>
+</div>
+<div class="paragraph">
+<p>For this reason, Antares does not contain any built-in or elementary flip-flops, full adders or multiplexers; these are included in Antares as fully modelled subcircuits in the standard library and can therefore be opened by the user at any time as a subcircuit, so that their functionality can be observed during simulation.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_common-properties">Common Properties</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Properties that only apply to a specific component, or that have a different meaning depending on the component, are explained in the description of the respective component. This chapter describes properties that apply equally to all components.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">ID</dt>
+<dd>
+<p>The identification number of the component which is unique within the circuit in which the component is located. This is mainly used for scripting applications.</p>
+</dd>
+<dt class="hdlist1">Model ID</dt>
+<dd>
+<p>Antares components consist of a view part and a model part. The property "ID" corresponds with the view part, while the property "Model ID" uniquely identifies the model part of a component. Since the simulation of a circuit operates mainly on the model parts of components, issues that occur during the simulation (such as signal conflicts) reference the model ID of the components that caused the issue.</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<p>In this property a multi-lingual text can be entered that describes the purpose of a component within the circuit. If available, it is displayed in the description popup instead of the standard description of the component. See chapter <a href="/user-manual/english/description/description">Descriptions and Explanations</a> for more details.</p>
+</dd>
+<dt class="hdlist1">Propagation Delay</dt>
+<dd>
+<p>The time in nanoseconds it takes the component to calculate new output signals after its inputs have changed, or, as in the case of the LED, to update its graphical representation.</p>
+</dd>
+<dt class="hdlist1">Shadows</dt>
+<dd>
+<p>This property controls whether this particular component is to be displayed with a shadow. Shadows are only displayed if they have been activated in the Antares settings. If shadows are activated in the settings, you can prevent an individual component from drawing a shadow.</p>
+</dd>
+<dt class="hdlist1">Color</dt>
+<dd>
+<p>Normally, the color in which a component is drawn is determined by its style. The property "Color" can be used to override the color for a specific component. This can be used, for example, to identify all components of a circuit that perform a similar function with the same color. See chapter <a href="/user-manual/english/styles/styles">Styles and Themes</a> for more details.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_digital-components">Digital Components</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>These components are contained in the built-in library "Standard".</p>
+</div>
+<div class="sect2">
+<h3 id="_net">Net</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/constant.svg" alt="Constant"></span> <a href="/user-manual/english/base-library/constant">Constant</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/splitter.svg" alt="Splitter"></span> <a href="/user-manual/english/base-library/splitter">Splitter</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/concentrator.svg" alt="Combiner"></span> <a href="/user-manual/english/base-library/combiner">Combiner</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/splitter.svg" alt="Bi-directional Splitter"></span> <a href="/user-manual/english/base-library/bidi-splitter">Bi-directional Splitter</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/probe.svg" alt="Probe"></span> <a href="/user-manual/english/base-library/probe">Probe</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/tunnel.svg" alt="Tunnel"></span> <a href="/user-manual/english/base-library/tunnel">Tunnel</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/break.svg" alt="Breakpoint"></span> <a href="/user-manual/english/base-library/breakpoint">Breakpoint</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/pull-resistor.svg" alt="Pull Resistor"></span> <a href="/user-manual/english/base-library/pull-resistor">Pull Resistor</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/transistor.svg" alt="Transistor"></span> <a href="/user-manual/english/base-library/transistor">Transistor</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/ground.svg" alt="Ground"></span> <a href="/user-manual/english/base-library/ground">Ground</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/power.svg" alt="Power"></span> <a href="/user-manual/english/base-library/power">Power</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/real-switch.svg" alt="Real Switch"></span> <a href="/user-manual/english/base-library/real-switch">Real Switch</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/double-throw-switch.svg" alt="Double-Throw Switch"></span> <a href="/user-manual/english/base-library/double-throw-switch">Double-Throw Switch</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/wire-tap.svg" alt="Wire Tap"></span> <a href="/user-manual/english/base-library/wire-tap">Wire Tap</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/power-on-reset.svg" alt="Power-On Reset"></span> <a href="/user-manual/english/base-library/powerOn-reset">Power-On Reset</a></p>
+</li>
+<li>
+<p>Bus Transceiver n Bit</p>
+</li>
+<li>
+<p>Bus Transceiver 4 Bit</p>
+</li>
+<li>
+<p>Bus Transceiver 8 Bit</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_logic-gates">Logic Gates</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/and.svg" alt="AND"></span> <a href="/user-manual/english/base-library/and">AND</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/or.svg" alt="OR"></span> <a href="/user-manual/english/base-library/or">OR</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/not.svg" alt="NOT"></span> <a href="/user-manual/english/base-library/not">NOT</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/nand.svg" alt="NAND"></span> <a href="/user-manual/english/base-library/nand">NAND</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/nor.svg" alt="NOR"></span> <a href="/user-manual/english/base-library/nor">NOR</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/xor.svg" alt="Exculsive OR (XOR)"></span> <a href="/user-manual/english/base-library/xor">XOR</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/xor.svg" alt="Exclusive OR (XNOR)"></span> <a href="/user-manual/english/base-library/xnor">XNOR</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/buffer.svg" alt="Buffer"></span> <a href="/user-manual/english/base-library/buffer">Buffer</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/tristate-buffer.svg" alt="Tri-State Puffer"></span> <a href="/user-manual/english/base-library/tristate-buffer">Tri-State Buffer</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/delay.svg" alt="Delay"></span> <a href="/user-manual/english/base-library/delay">Delay</a></p>
+</li>
+<li>
+<p>Pulse Generator</p>
+</li>
+<li>
+<p>Pulse Generator (Neg)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_input">Input</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/input.svg" alt="Circuit Input"></span> <a href="/user-manual/english/base-library/port">Circuit Input</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/switch.svg" alt="Switch"></span> <a href="/user-manual/english/base-library/switch">Switch</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/dip-switch.svg" alt="DIP Switch"></span> <a href="/user-manual/english/base-library/dip-switch">DIP Switch</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/clock.svg" alt="Clock"></span> <a href="/user-manual/english/base-library/clock">Clock</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/keyboard.svg" alt="Keyboard"></span> <a href="/user-manual/english/base-library/keyboard">Keyboard</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/joystick.svg" alt="Joystick"></span> <a href="/user-manual/english/base-library/joystick">Joystick</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/switch.svg" alt="Image Switch"></span> <a href="/user-manual/english/base-library/image-switch">Image Switch</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_output">Output</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/output.svg" alt="Circuit Output"></span> <a href="/user-manual/english/base-library/port">Circuit Output</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/led.svg" alt="LED"></span> <a href="/user-manual/english/base-library/led">LED</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/rgb-led.svg" alt="RGB-LED"></span> <a href="/user-manual/english/base-library/rgb-led">RGB-LED</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/7segment.svg" alt="7-Segment-Display"></span> <a href="/user-manual/english/base-library/7segment">7-Segment-Display</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/16segment.svg" alt="16-Segment-Display"></span> <a href="/user-manual/english/base-library/16segment">16-Segment-Display</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/led-matrix.svg" alt="LED-Matrix"></span> <a href="/user-manual/english/base-library/led-matrix">LED-Matrix</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/terminal.svg" alt="Terminal"></span> <a href="/user-manual/english/base-library/terminal">Terminal</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/buzzer.svg" alt="Buzzer"></span> <a href="/user-manual/english/base-library/buzzer">Buzzer</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/videoram.svg" alt="Video RAM"></span> <a href="/user-manual/english/base-library/video-ram">Video RAM</a></p>
+</li>
+<li>
+<p>8x8 LED Matrix with Ctrl</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_memory">Memory</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/ram.svg" alt="RAM"></span> <a href="/user-manual/english/base-library/ram">RAM</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/rom.svg" alt="ROM"></span> <a href="/user-manual/english/base-library/rom">ROM</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/lut.svg" alt="LUT"></span> <a href="/user-manual/english/base-library/lut">Lookup Table</a></p>
+</li>
+<li>
+<p>Register 4,8,16,32 Bit</p>
+</li>
+<li>
+<p>Shift Register Parallel-Out 4,8 Bit</p>
+</li>
+<li>
+<p>Shift Register Parallel-In 4,8 Bit</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_arithmetic">Arithmetic</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/random.svg" alt="Random"></span> <a href="/user-manual/english/base-library/random">Random</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/bitextender.svg" alt="Bit Extender"></span> <a href="/user-manual/english/base-library/bit-extender">Bit Extender</a></p>
+</li>
+<li>
+<p>Adder n Bit</p>
+</li>
+<li>
+<p>Subtractor n Bit</p>
+</li>
+<li>
+<p>Multiplier n Bit</p>
+</li>
+<li>
+<p>Divider n Bit</p>
+</li>
+<li>
+<p>Comparator n Bit</p>
+</li>
+<li>
+<p>Half Adder</p>
+</li>
+<li>
+<p>Full Adder</p>
+</li>
+<li>
+<p>Incrementer 8 Bit</p>
+</li>
+<li>
+<p>Shifter 8,16 Bit</p>
+</li>
+<li>
+<p>Comparator 4,8 Bit</p>
+</li>
+<li>
+<p>Magnitude Comparator 4 Bit</p>
+</li>
+<li>
+<p>Full Adder 4 Bit (Fast Carry)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_codec">Codec</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>2-4 Decoder</p>
+</li>
+<li>
+<p>3-8 Decoder</p>
+</li>
+<li>
+<p>4-16 Decoder</p>
+</li>
+<li>
+<p>BCD 7-Seg Decoder</p>
+</li>
+<li>
+<p>BCD 7-Seg (Hex) Decoder</p>
+</li>
+<li>
+<p>BCD-DEC Decoder (Neg)</p>
+</li>
+<li>
+<p>4-2 Priority Encoder</p>
+</li>
+<li>
+<p>8-3 Priority Encoder</p>
+</li>
+<li>
+<p>ASCII-16Seg Decoder</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_flip-flops">FLip-Flops</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>D Flip-Flop</p>
+</li>
+<li>
+<p>T Flip-Flop</p>
+</li>
+<li>
+<p>SR Latch</p>
+</li>
+<li>
+<p>SR Flip-Flop</p>
+</li>
+<li>
+<p>JK Flip-Flop</p>
+</li>
+<li>
+<p>JK Master-Slave Flip-Flop</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_plexer">Plexer</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Multiplexer n Bit</p>
+</li>
+<li>
+<p>Bit Selector n Bit</p>
+</li>
+<li>
+<p>2x 4-4 Multiplexer</p>
+</li>
+<li>
+<p>2x 8-8 Multiplexer</p>
+</li>
+<li>
+<p>2x 16-16 Multiplexer</p>
+</li>
+<li>
+<p>2-1 Multiplexer</p>
+</li>
+<li>
+<p>4-1 Multiplexer</p>
+</li>
+<li>
+<p>8-1 Multiplexer</p>
+</li>
+<li>
+<p>2x 2-2 Multiplexer</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_counter">Counter</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Sync. Forward Counter 3 Bit</p>
+</li>
+<li>
+<p>Sync. BCD Counter 4 Bit</p>
+</li>
+<li>
+<p>Frequency Divider 1:16</p>
+</li>
+<li>
+<p>Binary Counter 4 Bit LD/CLR</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_analog-components">Analog Components</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>These components are contained in the built-in library "Analog".</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/analog/light-bulb.svg" alt="Light Bulb"></span> <a href="/user-manual/english/base-library/analog/light-bulb">Light Bulb</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/analog/battery.svg" alt="Battery"></span> <a href="/user-manual/english/base-library/analog/battery">Battery</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/analog/resistor-ansi.svg" alt="Resistor"></span> <a href="/user-manual/english/base-library/analog/resistor">Resistor</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/real-switch.svg" alt="Switch"></span> <a href="/user-manual/english/base-library/analog/switch">Switch</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/analog/signal-ground.svg" alt="Signal Ground"></span> <a href="/user-manual/english/base-library/analog/signal-ground">Signal Ground</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/transistor.svg" alt="MOSFET"></span> <a href="/user-manual/english/base-library/analog/mosfet">MOSFET</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/input.svg" alt="Input/Output"></span> <a href="/user-manual/english/base-library/analog/inout">Input/Output</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/power.svg" alt="Power"></span> <a href="/user-manual/english/base-library/analog/power">Power</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/analog/current-source.svg" alt="Current Source"></span> <a href="/user-manual/english/base-library/analog/current-source">Current Source</a></p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/base-library/analog/capacitor.svg" alt="Capacitor"></span> <a href="/user-manual/english/base-library/analog/capacitor">Capacitor</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      <!-- Empty to disable pagination -->
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/flandreas/antares" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/AntaresCircuit" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 Andreas Fleischmann. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

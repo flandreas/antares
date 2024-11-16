@@ -1,0 +1,925 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Preferences - Antares</title>
+<meta name="description" content="Digital circuit simulation and learning platform ">
+
+
+  <meta name="author" content="Andreas Fleischmann">
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Antares">
+<meta property="og:title" content="Preferences">
+<meta property="og:url" content="https://www.antarescircuit.io/user-manual/english/misc/preferences">
+
+
+  <meta property="og:description" content="Digital circuit simulation and learning platform ">
+
+
+
+  <meta property="og:image" content="https://www.antarescircuit.io/assets/images/splash2.png">
+
+
+
+  <meta name="twitter:site" content="@AntaresCircuit">
+  <meta name="twitter:title" content="Preferences">
+  <meta name="twitter:description" content="Digital circuit simulation and learning platform ">
+  <meta name="twitter:url" content="https://www.antarescircuit.io/user-manual/english/misc/preferences">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.antarescircuit.io/assets/images/splash2.png">
+  
+
+  
+
+
+
+
+
+
+
+
+<link rel="canonical" href="https://www.antarescircuit.io/user-manual/english/misc/preferences">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Andreas Fleischmann",
+      "url": "https://www.antarescircuit.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Antares Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- Used for AsciiDoc integration -->
+<link rel="stylesheet" href="/assets/css/asciidoc.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+<link rel="manifest" href="/assets/images/site.webmanifest">
+<link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="theme-color" content="#ffffff">
+
+<!-- end custom head snippets -->
+
+  <script async defer data-domain="antarescircuit.io" src="https://plausible.io/js/plausible.js"></script></head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Antares
+          <span class="site-subtitle">Digital Circuit Learning Platform</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/docs/quick-start/">Quick-Start</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://app.antarescircuit.io">Webapp</a>
+            </li><li class="masthead__menu-item">
+              <a href="/user-manual/english/usermanual">Manual</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/blog">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/faq">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/releases/releases">Releases</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/examples/examples">Examples</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: url('/assets/images/splash2.png');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Preferences
+
+        
+      </h1>
+      
+      
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">User Manual</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/usermanual">Welcome</a></li>
+          
+            <li><a href="/user-manual/english/first-steps/first-steps">First Steps</a></li>
+          
+            <li><a href="/user-manual/english/first-steps/orientation">Orientation</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Projects and libraries</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/projects-libraries/projects-libraries">Overview</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/libraries">Libraries</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/projects">Projects</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/workbench">Workbench</a></li>
+          
+            <li><a href="/user-manual/english/base-library/base-library">Library Reference</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Circuits</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/circuits/circuits">Circuits</a></li>
+          
+            <li><a href="/user-manual/english/circuits/wires">Wires</a></li>
+          
+            <li><a href="/user-manual/english/circuits/circuit-tests">Tests</a></li>
+          
+            <li><a href="/user-manual/english/circuits/text-style">Text Style</a></li>
+          
+            <li><a href="/user-manual/english/circuits/synthesis">Synthesis</a></li>
+          
+            <li><a href="/user-manual/english/circuits/analysis">Analysis</a></li>
+          
+            <li><a href="/user-manual/english/subcircuits/subcircuits">Subcircuits</a></li>
+          
+            <li><a href="/user-manual/english/circuits/vhdl-export">VHDL Export</a></li>
+          
+            <li><a href="/user-manual/english/circuits/analog-circuits">Analog circuits</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Simulation</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/simulation/simulation">Simulation</a></li>
+          
+            <li><a href="/user-manual/english/oscilloscope/oscilloscope">Oscilloscope</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Other Basic Techniques</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/styles/styles">Styles and Themes</a></li>
+          
+            <li><a href="/user-manual/english/description/description">Descriptions and Explanations</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Advanced Techniques</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/scripting/scripting">Scripting</a></li>
+          
+            <li><a href="/user-manual/english/scenarios/scenarios">Scenarios</a></li>
+          
+            <li><a href="/user-manual/english/usecases/usecases">Use Cases</a></li>
+          
+            <li><a href="/user-manual/english/circuits/circuit-parameters">Circuit Parameters</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Miscellaneous</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/misc/preferences" class="active">Preferences</a></li>
+          
+            <li><a href="/user-manual/english/misc/key-bindings">Key Bindings</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Web</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/web/web-publishing">Publish circuits</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Preferences">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#_general">General</a></li>
+  <li><a href="#_rendering">Rendering</a></li>
+  <li><a href="#_view">View</a>
+    <ul>
+      <li><a href="#_zoom-pan">Zoom / Pan</a></li>
+      <li><a href="#_navigation">Navigation</a></li>
+    </ul>
+  </li>
+  <li><a href="#_simulation">Simulation</a></li>
+  <li><a href="#_editor">Editor</a></li>
+  <li><a href="#_oscilloscope">Oscilloscope</a></li>
+  <li><a href="#_circuit">Circuit</a>
+    <ul>
+      <li><a href="#_general-2">General</a></li>
+      <li><a href="#_digital">Digital</a>
+        <ul>
+          <li><a href="#_expressions">Expressions</a></li>
+        </ul>
+      </li>
+      <li><a href="#_analog">Analog</a></li>
+    </ul>
+  </li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Use menu <span class="menuseq"><b class="menu">File</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Preferences&#8230;&#8203;</b></span> (or <span class="menuseq"><b class="menu">Antares</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Preferences&#8230;&#8203;</b></span> on macOS) to display the preferences window.</p>
+</div>
+<div class="paragraph">
+<p>Select an entry of the tree in window&#8217;s left part to display the preferences of a particular section. Once you&#8217;ve changed any of the preferences values, press button <b class="button">Apply</b> to apply your changes to Antares. If you press <b class="button">Close</b> without applying your changes, they wont become effective.</p>
+</div>
+<div class="paragraph">
+<p>Some of the preferences can&#8217;t be made effective without restarting the application. Antares will show a dialog if that&#8217;s the case.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_general">General</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Language</dt>
+<dd>
+<p>The language in which texts of the user interface are displayed. Currently only English and German supported.</p>
+</dd>
+<dt class="hdlist1">Log Level</dt>
+<dd>
+<p>Determines the amount of log file output being produced. "Error" produces the least amount of log output, while "Trace" produces a lot of output and should normally only be used by developers.</p>
+</dd>
+<dt class="hdlist1">Show tips for beginners</dt>
+<dd>
+<p>If this option is enabled, Antares shows certain tooltips that should help beginners to familiarize with Antares' functionality. More experienced users can disable this option.</p>
+</dd>
+<dt class="hdlist1">Show unexpected errors</dt>
+<dd>
+<p>If this option is enabled, Antares shows an error dialog whenever an unexpected situation in the code arises. You can help supporting the project by following the description shown in the dialog to report this situation to the development team.</p>
+</dd>
+<dt class="hdlist1">Data location</dt>
+<dd>
+<p>Only relevant for the upcoming web version of Antares. Determines where Antares stores a user&#8217;s projects and libraries.</p>
+</dd>
+<dt class="hdlist1">Server URL</dt>
+<dd>
+<p>Only relevant for the upcoming web version of Antares. Specifies the base URL of the Antares REST API.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_rendering">Rendering</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Main Font</dt>
+<dd>
+<p>The font to be used for the UI elements. In the current version, circuit content still uses specific fonts which might differ from the UI font.</p>
+</dd>
+<dt class="hdlist1">Theme</dt>
+<dd>
+<p>The theme used for rendering the entire UI. The most important ones are "Winter", the standard light theme with white and blue coloring, and "Darcula", a dark theme.</p>
+</dd>
+<dt class="hdlist1">Shadow</dt>
+<dd>
+<p>If this option is enabled, circuit components like gates or switches are displayed with a drop shadow.</p>
+</dd>
+<dt class="hdlist1">Shadow distance</dt>
+<dd>
+<p>The number of pixels the shadow is placed apart from the origin component. Only effective if "Shadow" is enabled.</p>
+</dd>
+<dt class="hdlist1">Fill basic components</dt>
+<dd>
+<p>If enabled, basic components like gates or switches are filled with the theme&#8217;s default color for filling content. Because sub circuit symbols are always filled, this option can help to visually distinguish between basic, built in components and subcircuit symbols. However, some basic components like LEDs are also always filled due to their nature.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_view">View</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Component tooltips</dt>
+<dd>
+<p>If enabled, tooltips for circuit components are displayed when the mouse hovers over the component.</p>
+</dd>
+<dt class="hdlist1">Tooltip delay (ms)</dt>
+<dd>
+<p>The time in milliseconds Antares waits before displaying a tooltip after the mouse stopped moving over a component.</p>
+</dd>
+</dl>
+</div>
+<div class="sect2">
+<h3 id="_zoom-pan">Zoom / Pan</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Zoom step</dt>
+<dd>
+<p>The increment or decrement of the zoom factor when using <span class="menuseq"><b class="menu">View</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Zoom In</b></span> or <span class="menuseq"><b class="menu">View</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Zoom Out</b></span>.</p>
+</dd>
+<dt class="hdlist1">Zoom step (mousse wheel)</dt>
+<dd>
+<p>The increment or decrement of the zoom factor when zooming with the mouse wheel.</p>
+</dd>
+<dt class="hdlist1">Pan step (mouse)</dt>
+<dd>
+<p>The amount of view displacement when panning with the mouse (drag with left mouse button pressed)</p>
+</dd>
+<dt class="hdlist1">Default zoom factor</dt>
+<dd>
+<p>The zoom factor applied when executing action <span class="menuseq"><b class="menu">View</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Zoom Normal</b></span>.</p>
+</dd>
+<dt class="hdlist1">Minimum zoom factor</dt>
+<dd>
+<p>The minimum zoom factor.</p>
+</dd>
+<dt class="hdlist1">Maximum zoom factor</dt>
+<dd>
+<p>The maximum zoom factor.</p>
+</dd>
+<dt class="hdlist1">Pan method</dt>
+<dd>
+<p>The method to use to pan the view.</p>
+</dd>
+<dt class="hdlist1">Zoom factor in symbol editor</dt>
+<dd>
+<p>The initial zoom factor used when switching to the symbol editor.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_navigation">Navigation</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Use animation when immerging into subcircuits</dt>
+<dd>
+<p>If set, Antares plays an animation when you double click on a subcircuit symbol to immerge into it&#8217;s inner circuit.</p>
+</dd>
+<dt class="hdlist1">Switch mode using zoom factor</dt>
+<dd>
+<p>If set, you can switch between the the circuit editor and the symbol editor by zooming out and zooming in with large factors.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_simulation">Simulation</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Max. number of collected issues</dt>
+<dd>
+<p>The maximum number of issues collected during a simulation run and displayed in the "Issues" tab.</p>
+</dd>
+<dt class="hdlist1">Slow-down factor of simulation speed</dt>
+<dd>
+<p>Determines how much the simulation speed is slowed down when dragging the simulation speed slider more to the left side. Larger values result in slower simulation speeds. The default is 4. The minimum value is 0.0001.</p>
+</dd>
+<dt class="hdlist1">Allowed net contention duration (ns)</dt>
+<dd>
+<p>The time in nanoseconds during which net contention (i.e. conflicting signals on a net) are allowed without generating a simulation issue. The default is 20.<br>
+Can be overwritten in projects and libraries.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_editor">Editor</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Grid distance</dt>
+<dd>
+<p>The distance between grid snap points in model coordinate space. The default is 7. This value should normally not be changed, because the geometry of many components is aligned with this value, such as the distance between logic gate pins.</p>
+</dd>
+<dt class="hdlist1">Grid dot step</dt>
+<dd>
+<p>The number of "Grid distance" units between two grid dots (or grid lines, depending on "Grid rendering"). The default value is 2, which results in a distance of 14 between two grid dots if "Grid Distance" is 7.</p>
+</dd>
+<dt class="hdlist1">Minimum grid dot distance</dt>
+<dd>
+<p>The minimum distance between two grid dots (or grid lines, depending on "Grid rendering") in view coordinate space. Below this value, the grid is not drawn any more, which avoids drawing grid that are too dense and therefore useless.</p>
+</dd>
+<dt class="hdlist1">Grid rendering</dt>
+<dd>
+<p>The way the editor grid is drawn.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Lines</strong>: A vertical and horizontal line is drawn at every grid location</p>
+</li>
+<li>
+<p><strong>Dots</strong>: A dot is drawn at every grid location</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Number of undo per Snapshot</dt>
+<dd>
+<p>The undo system uses snapshots (copies of the circuit) from which recorded actions are replayed when the user requests undoing or redoing them. This value determines how many actions are recorded before a new snapshot is created. Smaller values result in better performance, but more memory consumption, larger values may lead to worse performance. The default value is 10.</p>
+</dd>
+<dt class="hdlist1">Selection box scope</dt>
+<dd>
+<p>Determines how components are selected with the selection box. Pressing ALT while dragging the selection box temporarily switches between the two modes.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Completely contained</strong>: Selects only components that are completely contained in the selection box.</p>
+</li>
+<li>
+<p><strong>Partially contained</strong>: Selects also components that are only partially contained in the selection box.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Save history</dt>
+<dd>
+<p>If enabled, Antares saves a copy of the previous version whenever a circuit is saved, which allows you to view the save history using <span class="menuseq"><b class="menu">Popup</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Show History..</b></span> and to restore old versions of a circuit.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_oscilloscope">Oscilloscope</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Max. number of signal values</dt>
+<dd>
+<p>The maximum number of signal values a row in the oscilloscope can store and display. If more signals arrive, the oldest ones are deleted.</p>
+</dd>
+<dt class="hdlist1">Individual probe colors</dt>
+<dd>
+<p>If set, the rows of an oscilloscope and their corresponding probe components are drawn in different, system defined colors.</p>
+</dd>
+<dt class="hdlist1">Fill signal curve</dt>
+<dd>
+<p>If set, signal curves in oscilloscope rows are filled with a fill color.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_circuit">Circuit</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_general-2">General</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Symbol style</dt>
+<dd>
+<p>The style in which symbols (primarily gates, but also others like resistors) are drawn. Choose between "ANSI/IEEE" (rounded symbols), "IEC" (rectangular symbols), and "Verbose" (rectangular with verbose label) style.</p>
+</dd>
+<dt class="hdlist1">Style of generated symbols</dt>
+<dd>
+<p>Determines whether and how Antares automatically generates symbols for your custom circuit.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>None (deactivated)</strong>: Antares doesn&#8217;t generate symbols. You will have to draw them on your own using the symbol editor.</p>
+</li>
+<li>
+<p><strong>Narrow</strong>: Antares generates narrow symbols that contain an abbreviation of the circuit name as label, as well as input and output pins.</p>
+</li>
+<li>
+<p><strong>Wide</strong>: Antares generates wide symbols that contain the entire circuit name as label, as well as input and output pins.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Transistor with circle</dt>
+<dd>
+<p>If set, transistors are drawn with a circle around the three pins.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>Transistor port names: If set, transistor ports display a pin name, such as "G" for "Gate".</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_digital">Digital</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Default propagation delay (ns)</dt>
+<dd>
+<p>The default propagation delay (in nanoseconds) of logic gates (and some other components). Only applied for new components added to circuits.<br>
+Can be overwritten in projects and libraries.</p>
+</dd>
+<dt class="hdlist1">Undefined gate input behaviour</dt>
+<dd>
+<p>Determines how Antares behaves if gates have undefined signals at their input pins during simulation. Can be overwritten in projects and libraries.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Read as 0</strong>: Undefined signals are treated as if they were 0 (zero)</p>
+</li>
+<li>
+<p><strong>Read as 1</strong>: Undefined signals are treated as if they were 1</p>
+</li>
+<li>
+<p><strong>Read as random value</strong>: Undefined signal are randomly read as either 0 or 1.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Data flow display in AND gates</dt>
+<dd>
+<p>If set, the <a href="/user-manual/english/base-library/and">"Data Path"</a> feature for AND gates is generally enabled. Disable this option if you don&#8217;t like that feature.</p>
+</dd>
+<dt class="hdlist1">Light color</dt>
+<dd>
+<p>The default light color of light-emitting components like LEDs. Applied when such components are added to a circuit.</p>
+</dd>
+<dt class="hdlist1">Signal notation</dt>
+<dd>
+<p>Determines how signals are annotated to distinguish between different signal representations like "Binary" or "Hexadecimal".</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Prefix</strong>: Annotated with a prefix, e.g. "0x10" for hexadecimal 16.</p>
+</li>
+<li>
+<p><strong>Subscript</strong>: Annotated with a subscript, e.g. "10&#x2081;&#x2086;"</p>
+</li>
+<li>
+<p><strong>Suffix</strong>: Annotated with a suffix, e.g. "10h"</p>
+</li>
+<li>
+<p><strong>Suffix (Uppercase)</strong>: Annotated with an uppercase suffix, e.g. "11H"</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Tunnel symbol</dt>
+<dd>
+<p>Determines the style in which <a href="/user-manual/english/base-library/tunnel">"Tunnel symbols"</a> are drawn.</p>
+</dd>
+<dt class="hdlist1">Transistor symbol</dt>
+<dd>
+<p>Determines the style in which <a href="/user-manual/english/base-library/transistor">"Transistor symbols"</a> are drawn.</p>
+</dd>
+<dt class="hdlist1">Wide bus stroke</dt>
+<dd>
+<p>If set, wires with a bit width larger than 1 are drawn with a wider stroke.</p>
+</dd>
+<dt class="hdlist1">Switch propagation delay (ns)</dt>
+<dd>
+<p>The propagation delay in nanoseconds used for switch-like components like switch or DIP switch as default propagation delay. Default value is 1'000.<br>
+Can be overwritten in projects and libraries.</p>
+</dd>
+</dl>
+</div>
+<div class="sect3">
+<h4 id="_expressions">Expressions</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Notation</dt>
+<dd>
+<p>The default notation for boolean expression used when Antares generates them.</p>
+</dd>
+<dt class="hdlist1">Omit AND for single character variable names</dt>
+<dd>
+<p>If set, Antares omits "AND" operators when generating terms in boolean expressions whose variable names consist only of a single character, as in <code>AB or CD</code>.</p>
+</dd>
+<dt class="hdlist1">Put AND terms in parenthesis</dt>
+<dd>
+<p>If set, Antares puts AND terms in generated boolean expressions in parenthesis, as in <code>(AB) or (CD)</code> to explicitly denote operator precedence.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_analog">Analog</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Current speed</dt>
+<dd>
+<p>The speed of current flow animation in analog circuits. Supported values range from 1 (slow) to 10 (fast).</p>
+</dd>
+<dt class="hdlist1">Simulation time step</dt>
+<dd>
+<p>Determines how accurate the simulation of an analog circuit will be, especially when calculating capacitors or inductors. The lower the value, the more accurate the calculation, but the slower the simulation.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      <!-- Empty to disable pagination -->
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/flandreas/antares" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/AntaresCircuit" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 Andreas Fleischmann. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,681 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Workbench - Antares</title>
+<meta name="description" content="Digital circuit simulation and learning platform ">
+
+
+  <meta name="author" content="Andreas Fleischmann">
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Antares">
+<meta property="og:title" content="Workbench">
+<meta property="og:url" content="https://www.antarescircuit.io/user-manual/english/projects-libraries/workbench">
+
+
+  <meta property="og:description" content="Digital circuit simulation and learning platform ">
+
+
+
+  <meta property="og:image" content="https://www.antarescircuit.io/assets/images/splash2.png">
+
+
+
+  <meta name="twitter:site" content="@AntaresCircuit">
+  <meta name="twitter:title" content="Workbench">
+  <meta name="twitter:description" content="Digital circuit simulation and learning platform ">
+  <meta name="twitter:url" content="https://www.antarescircuit.io/user-manual/english/projects-libraries/workbench">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.antarescircuit.io/assets/images/splash2.png">
+  
+
+  
+
+
+
+
+
+
+
+
+<link rel="canonical" href="https://www.antarescircuit.io/user-manual/english/projects-libraries/workbench">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Andreas Fleischmann",
+      "url": "https://www.antarescircuit.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Antares Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- Used for AsciiDoc integration -->
+<link rel="stylesheet" href="/assets/css/asciidoc.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+<link rel="manifest" href="/assets/images/site.webmanifest">
+<link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="theme-color" content="#ffffff">
+
+<!-- end custom head snippets -->
+
+  <script async defer data-domain="antarescircuit.io" src="https://plausible.io/js/plausible.js"></script></head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Antares
+          <span class="site-subtitle">Digital Circuit Learning Platform</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/docs/quick-start/">Quick-Start</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://app.antarescircuit.io">Webapp</a>
+            </li><li class="masthead__menu-item">
+              <a href="/user-manual/english/usermanual">Manual</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/blog">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/faq">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/releases/releases">Releases</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/examples/examples">Examples</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: url('/assets/images/splash2.png');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Workbench
+
+        
+      </h1>
+      
+      
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">User Manual</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/usermanual">Welcome</a></li>
+          
+            <li><a href="/user-manual/english/first-steps/first-steps">First Steps</a></li>
+          
+            <li><a href="/user-manual/english/first-steps/orientation">Orientation</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Projects and libraries</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/projects-libraries/projects-libraries">Overview</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/libraries">Libraries</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/projects">Projects</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/workbench" class="active">Workbench</a></li>
+          
+            <li><a href="/user-manual/english/base-library/base-library">Library Reference</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Circuits</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/circuits/circuits">Circuits</a></li>
+          
+            <li><a href="/user-manual/english/circuits/wires">Wires</a></li>
+          
+            <li><a href="/user-manual/english/circuits/circuit-tests">Tests</a></li>
+          
+            <li><a href="/user-manual/english/circuits/text-style">Text Style</a></li>
+          
+            <li><a href="/user-manual/english/circuits/synthesis">Synthesis</a></li>
+          
+            <li><a href="/user-manual/english/circuits/analysis">Analysis</a></li>
+          
+            <li><a href="/user-manual/english/subcircuits/subcircuits">Subcircuits</a></li>
+          
+            <li><a href="/user-manual/english/circuits/vhdl-export">VHDL Export</a></li>
+          
+            <li><a href="/user-manual/english/circuits/analog-circuits">Analog circuits</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Simulation</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/simulation/simulation">Simulation</a></li>
+          
+            <li><a href="/user-manual/english/oscilloscope/oscilloscope">Oscilloscope</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Other Basic Techniques</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/styles/styles">Styles and Themes</a></li>
+          
+            <li><a href="/user-manual/english/description/description">Descriptions and Explanations</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Advanced Techniques</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/scripting/scripting">Scripting</a></li>
+          
+            <li><a href="/user-manual/english/scenarios/scenarios">Scenarios</a></li>
+          
+            <li><a href="/user-manual/english/usecases/usecases">Use Cases</a></li>
+          
+            <li><a href="/user-manual/english/circuits/circuit-parameters">Circuit Parameters</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Miscellaneous</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/misc/preferences">Preferences</a></li>
+          
+            <li><a href="/user-manual/english/misc/key-bindings">Key Bindings</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Web</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/web/web-publishing">Publish circuits</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Workbench">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#_structure">Structure</a></li>
+  <li><a href="#_opening-a-projectlibrary">Opening a project/library</a></li>
+  <li><a href="#_addingremoving-a-library-import">Adding/removing a library import</a></li>
+  <li><a href="#_opening-a-circuit">Opening a circuit</a></li>
+  <li><a href="#_searching-for-components">Searching for components</a></li>
+  <li><a href="#_selecting-a-component">Selecting a component</a></li>
+  <li><a href="#_expanding-and-collapsing-tree-nodes">Expanding and collapsing tree nodes</a></li>
+  <li><a href="#_creating-new-circuits">Creating new circuits</a></li>
+  <li><a href="#_moving-components">Moving components</a></li>
+  <li><a href="#_exportingimporting-circuits">Exporting/Importing circuits</a></li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Workbench is the part of the Antares user interface that displays the open project and the library in use, and allows you to use their circuits and create new circuits.</p>
+</div>
+<div class="paragraph">
+<p>The example below shows the opened project "Microcomputer (Tanenbaum)", which is based on the library "Standard".</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/projects-libraries/workbench-sample-en.png" alt="Workbench" width="300">
+</div>
+</div>
+<div class="paragraph">
+<p>This chapter describes the properties and possibilities of the workbench, which apply equally to projects and libraries opened in it. The special properties of <a href="/user-manual/english/projects-libraries/projects">Projects</a> and <a href="/user-manual/english/projects-libraries/libraries">Libraries</a> are explained in the corresponding chapters.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_structure">Structure</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The workbench can either be empty, contain a single project, or a single main library. Both projects and libraries can be based on many other libraries. Those libraries are called "Added libraries" or sometimes also "imported libraries". Added libraries are denoted by a "Library" icon containing a small arrow.</p>
+</div>
+<div class="paragraph">
+<p>The contents of the workbench are displayed as a tree whose topmost nodes represent the project (if present) and the libraries being used. The leaves of the tree are either basic components that are built-in in Antares or circuits that can be opened. You can also create directories to group circuits.</p>
+</div>
+<div class="paragraph">
+<p>Depending on their type, the individual workbench elements offer a menu with actions that can be executed by selecting the element and then clicking the right mouse button. Important actions can also be accessed via the main menu of Antares.</p>
+</div>
+<div class="paragraph">
+<p>On each workbench element that can contain child elements (project, library, directory), you can use the popup menu <b class="menuref">New directory</b> to create a new directory in that element. Directories can be deleted in the same way. Note that when you delete directories, all elements contained in them are also deleted.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_opening-a-projectlibrary">Opening a project/library</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A project is opened via the main menu <span class="menuseq"><b class="menu">File</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Projects</b></span> and subsequent selection in the dialog that appears. In the workbench, not only the selected project is opened, but also the libraries the project/library uses.</p>
+</div>
+<div class="paragraph">
+<p>If a project consists of several circuits, one of these circuits is often the "main circuit" or "top circuit", which contains the other circuits as subcircuits. In order for Antares to automatically open this main circuit when the project is opened, this main circuit can be marked with the popup menu <b class="menuref">Open when Loading</b>. The name of this circuit is displayed <span class="underline">underlined</span> in the workbench tree.</p>
+</div>
+<div class="paragraph">
+<p>Antares remembers which project was open when you closed the application the last time, and automatically reopens this project the next time you start Antares.</p>
+</div>
+<div class="paragraph">
+<p>A library can be opened by selecting the main menu <span class="menuseq"><b class="menu">File</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Libraries</b></span> and then selecting it in the displayed dialog. If the library uses other libraries, these other libraries are displayed with a library icon containing a small arrow.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+It is rarely necessary to open a library manually. When you are working on a project, Antares will automatically open the libraries the project uses. However, if you are developing a library, you can open the library directly by yourself. You can also have a test project open for the library you are using and still edit circuits in the library.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_addingremoving-a-library-import">Adding/removing a library import</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Projects and libraries can be based on multiple other libraries.</p>
+</div>
+<div class="paragraph">
+<p>To add a library to the list of imported libraries of the currently open main project/library, select the "Desktop" tree node and choose "Add Library.." in the popup menu.</p>
+</div>
+<div class="paragraph">
+<p>To remove a library from the list of imported libraries of the currently open main project/library, select the library to be removed and choose "Remove Library" in the popup menu.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_opening-a-circuit">Opening a circuit</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can open a circuit of a project or a library by double-clicking on the workbench element or by selecting its pop-up menu <b class="menuref">Open circuit</b>. The currently open circuit is indicated by an orange icon in the workbench tree.</p>
+</div>
+<div class="paragraph">
+<p>If you have made a change in the previously opened circuit that you have not yet saved, Antares will ask you if you want to save these changes.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_searching-for-components">Searching for components</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If your project or the library you are using contains a lot of components, possibly structured with directories, it can be difficult to find a specific component. Therefore, the workbench contains a search field that can be used to search for component names. After each character entered, Antares reduces the tree to those components that contain the search text entered in their name.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_selecting-a-component">Selecting a component</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you select an built-in component or a subcircuit in the workbench tree, the preview above the workbench displays the component&#8217;s icon as well as its name and short description (if available). This information helps you to identify the correct component before you add it to your circuit. You add the selected component to your circuit by dragging and dropping it into your circuit.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_expanding-and-collapsing-tree-nodes">Expanding and collapsing tree nodes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>On each tree node that can contain child elements, Antares offers you the two pop-up menus <b class="menuref">Expand all</b> and <b class="menuref">Collapse all</b>, which can be used to expand and collapse this node and all nodes within it.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_creating-new-circuits">Creating new circuits</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In the tree elements "Project", "Library" and "Directory" you can create a new circuit with the popup menu <b class="menuref">New circuit</b>.</p>
+</div>
+<div class="paragraph">
+<p>The name entered in the dialog is used as name in the currently selected user language. The name of the circuit can be translated into other languages in the properties view of the circuit. In the current version Antares does not ensure that the name is unique within the directory. Nevertheless it is recommended to use unique names.</p>
+</div>
+<div class="paragraph">
+<p>The newly created, empty circuit is automatically opened by Antares.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_moving-components">Moving components</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can use drag &amp; drop to move a component to another position within the directory, to another directory or even from a project to a library (and vice versa). Antares ensures that the following rules are followed:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A circuit cannot be moved from the project to a library if it references other circuits in the project.</p>
+</li>
+<li>
+<p>You cannot move a circuit from a project/library to a library that is not added (be a base of) the source project/library.</p>
+</li>
+<li>
+<p>The built-in Antares libraries cannot be changed.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exportingimporting-circuits">Exporting/Importing circuits</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In order to share custom circuits between users, Antares allows you to export a circuit (including all non-standard circuits it depends on) to a ZIP file. Other users can then import this ZIP file into their own project or custom library.</p>
+</div>
+<div class="paragraph">
+<p>To export a circuit, use the pop-up menu <b class="menuref">Export&#8230;&#8203;</b> on a circuit element in the workbench tree.</p>
+</div>
+<div class="paragraph">
+<p>To import a circuit from a ZIP file, use the pop-up <b class="menuref">Import circuit&#8230;&#8203;</b> on the project element, the library element, or any folder element in the workbench tree. After selecting the ZIP file to import, Antares will create a new folder "Import '[Name]'" and add all imported circuits to that folder. You can then choose to move the imported circuits to wherever you like in the workbench.</p>
+</div>
+</div>
+</div>
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      <!-- Empty to disable pagination -->
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/flandreas/antares" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/AntaresCircuit" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 Andreas Fleischmann. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

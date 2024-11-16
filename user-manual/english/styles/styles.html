@@ -1,0 +1,763 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Styles and Themes - Antares</title>
+<meta name="description" content="Digital circuit simulation and learning platform ">
+
+
+  <meta name="author" content="Andreas Fleischmann">
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Antares">
+<meta property="og:title" content="Styles and Themes">
+<meta property="og:url" content="https://www.antarescircuit.io/user-manual/english/styles/styles">
+
+
+  <meta property="og:description" content="Digital circuit simulation and learning platform ">
+
+
+
+  <meta property="og:image" content="https://www.antarescircuit.io/assets/images/splash2.png">
+
+
+
+  <meta name="twitter:site" content="@AntaresCircuit">
+  <meta name="twitter:title" content="Styles and Themes">
+  <meta name="twitter:description" content="Digital circuit simulation and learning platform ">
+  <meta name="twitter:url" content="https://www.antarescircuit.io/user-manual/english/styles/styles">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.antarescircuit.io/assets/images/splash2.png">
+  
+
+  
+
+
+
+
+
+
+
+
+<link rel="canonical" href="https://www.antarescircuit.io/user-manual/english/styles/styles">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Andreas Fleischmann",
+      "url": "https://www.antarescircuit.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Antares Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- Used for AsciiDoc integration -->
+<link rel="stylesheet" href="/assets/css/asciidoc.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+<link rel="manifest" href="/assets/images/site.webmanifest">
+<link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="theme-color" content="#ffffff">
+
+<!-- end custom head snippets -->
+
+  <script async defer data-domain="antarescircuit.io" src="https://plausible.io/js/plausible.js"></script></head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Antares
+          <span class="site-subtitle">Digital Circuit Learning Platform</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/docs/quick-start/">Quick-Start</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://app.antarescircuit.io">Webapp</a>
+            </li><li class="masthead__menu-item">
+              <a href="/user-manual/english/usermanual">Manual</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/blog">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/faq">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/releases/releases">Releases</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/examples/examples">Examples</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: url('/assets/images/splash2.png');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Styles and Themes
+
+        
+      </h1>
+      
+      
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">User Manual</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/usermanual">Welcome</a></li>
+          
+            <li><a href="/user-manual/english/first-steps/first-steps">First Steps</a></li>
+          
+            <li><a href="/user-manual/english/first-steps/orientation">Orientation</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Projects and libraries</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/projects-libraries/projects-libraries">Overview</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/libraries">Libraries</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/projects">Projects</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/workbench">Workbench</a></li>
+          
+            <li><a href="/user-manual/english/base-library/base-library">Library Reference</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Circuits</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/circuits/circuits">Circuits</a></li>
+          
+            <li><a href="/user-manual/english/circuits/wires">Wires</a></li>
+          
+            <li><a href="/user-manual/english/circuits/circuit-tests">Tests</a></li>
+          
+            <li><a href="/user-manual/english/circuits/text-style">Text Style</a></li>
+          
+            <li><a href="/user-manual/english/circuits/synthesis">Synthesis</a></li>
+          
+            <li><a href="/user-manual/english/circuits/analysis">Analysis</a></li>
+          
+            <li><a href="/user-manual/english/subcircuits/subcircuits">Subcircuits</a></li>
+          
+            <li><a href="/user-manual/english/circuits/vhdl-export">VHDL Export</a></li>
+          
+            <li><a href="/user-manual/english/circuits/analog-circuits">Analog circuits</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Simulation</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/simulation/simulation">Simulation</a></li>
+          
+            <li><a href="/user-manual/english/oscilloscope/oscilloscope">Oscilloscope</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Other Basic Techniques</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/styles/styles" class="active">Styles and Themes</a></li>
+          
+            <li><a href="/user-manual/english/description/description">Descriptions and Explanations</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Advanced Techniques</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/scripting/scripting">Scripting</a></li>
+          
+            <li><a href="/user-manual/english/scenarios/scenarios">Scenarios</a></li>
+          
+            <li><a href="/user-manual/english/usecases/usecases">Use Cases</a></li>
+          
+            <li><a href="/user-manual/english/circuits/circuit-parameters">Circuit Parameters</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Miscellaneous</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/misc/preferences">Preferences</a></li>
+          
+            <li><a href="/user-manual/english/misc/key-bindings">Key Bindings</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Web</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/web/web-publishing">Publish circuits</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Styles and Themes">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#_bundling-of-graphical-properties">Bundling of graphical properties</a></li>
+  <li><a href="#_styles">Styles</a>
+    <ul>
+      <li><a href="#_applying-styles">Applying Styles</a></li>
+    </ul>
+  </li>
+  <li><a href="#_themes">Themes</a></li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>When displaying graphical objects, Antares - like any other graphical application - uses some graphical properties that influence how the objects are drawn. These properties are essentially the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Color</p>
+</li>
+<li>
+<p>Character set (font)</p>
+</li>
+<li>
+<p>Line type (Stroke)</p>
+</li>
+<li>
+<p>Drop shadow</p>
+</li>
+</ul>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/styles/styles-sample.png" alt="Styles" width="500">
+</div>
+</div>
+<div class="paragraph">
+<p>Antares pursues the goal of presenting circuits in an aesthetically pleasing way. To achieve this goal, Antares uses - among other things - the following means:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Bundling of graphical properties</p>
+</li>
+<li>
+<p>Styles</p>
+</li>
+<li>
+<p>Themes</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bundling-of-graphical-properties">Bundling of graphical properties</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>By bundling graphical properties, it becomes easier to achieve a certain graphical consistency within a single circuit and across multiple circuits.</p>
+</div>
+<div class="paragraph">
+<p>The most important example of bundling graphical properties in Antares is the <strong>color</strong>. The color "green" in Antares is not just a specific RGB value such as "(0,255,0)", but consists of three different RGB values for foreground color, background color, and text color.  In Antares' program code, such a color is called "Composite Color".</p>
+</div>
+<div class="paragraph">
+<p>The color components of a composite color are deliberately balanced. The foreground color, with which, for example, the edge of a green rectangle is drawn, is still green, but much darker than the green background. The same applies to the text color, which is also green but has a tone that stands out sufficiently well from the background.</p>
+</div>
+<div class="paragraph">
+<p>So, in Antares, when you give a graphic object the color "green", you set the color of the foreground, background and text at the same time.</p>
+</div>
+<div class="paragraph">
+<p>The available composite colors are predefined by Antares. In the current version of Antares, there is no way to change these colors or add more colors.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Antares maintains two different sets of composite colors: One for light themes, and one for dark themes.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_styles">Styles</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A style in Antares is a set of graphical properties that are available under a specific name. When such a style is "applied" to a graphical object, the graphical object automatically receives all graphical properties of that style.</p>
+</div>
+<div class="paragraph">
+<p>Basically, a style can have values for the basic properties color, font and line types. In addition, a style can define whether the graphic object has a shadow or not. Internally, Antares uses other special styles, e.g. for wires, to support different wire types for bus lines or for the display during simulation.</p>
+</div>
+<div class="paragraph">
+<p>The set of styles is predefined by Antares. The following styles are available:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Figure</dt>
+<dd>
+<p>This style is the basic style in Antares. It is mainly used for "pure" graphical objects like rectangle, ellipse, line etc.</p>
+</dd>
+<dt class="hdlist1">Element</dt>
+<dd>
+<p>This style is used for the elements of the drawing that make up the circuit. In Antares these are the circuit components such as logic gates or subcircuits.</p>
+</dd>
+<dt class="hdlist1">Connection</dt>
+<dd>
+<p>This style is used in Antares for the wires that connect the circuit components.</p>
+</dd>
+<dt class="hdlist1">Annotation</dt>
+<dd>
+<p>Annotations are small graphical elements or texts within elements, e.g. the small triangle used in a flip-flop to indicate that an input is active with a rising signal edge. Labels of pins are also annotations.</p>
+</dd>
+<dt class="hdlist1">Explanation</dt>
+<dd>
+<p>Explanations are text boxes which are included in the circuit as graphical elements.</p>
+</dd>
+<dt class="hdlist1">Subsystem</dt>
+<dd>
+<p>Subsystems are rectangles with a text that combine parts of a circuit to graphically express that these parts together form a subsystem of the circuit.</p>
+</dd>
+</dl>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Antares internally uses many other styles such as "background", "selection", "highlighting" etc., but these styles are not available in the user interface for applying to graphical objects.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_applying-styles">Applying Styles</h3>
+<div class="paragraph">
+<p>If you select a component in the circuit editor, you can then determine the style of the component in the properties view and also influence certain graphical properties.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/styles/style-properties-en.png" alt="styles" width="350">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The example shows the properties of a rectangle. For other components the properties view may look different.
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Style</dt>
+<dd>
+<p>In this property you determine the style the component has.</p>
+</dd>
+<dt class="hdlist1">Color</dt>
+<dd>
+<p>In this property you can set the composite color of the component. The default value is "From style", i.e. the component inherits the color that the style specifies. But you can override this color, e.g. to make an AND gate, which is normally drawn in the color of the style, red to express that it has a special meaning in the circuit.</p>
+</dd>
+<dt class="hdlist1">Line Style</dt>
+<dd>
+<p>In this property you can set the line style of the component. The default value is "From Style", i.e. the component inherits the line style that the style specifies. Currently, all combinations of three line styles (extended, dashed, dotted) and three widths (narrow, medium, wide) are available.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>Depending on the type of the selected component, more graphic properties such as "Filled", "Border" and "Shadow" can be set.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The "Shadow" property only has an effect if displaying shadows is basically activated in the user preferences.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_themes">Themes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In Antares, a "theme" is a set of styles with specific values, all of which are grouped under a specific name. Not only styles that are available to you as a user for application to components are considered, but also "internal" styles like "selection" or "background".</p>
+</div>
+<div class="paragraph">
+<p>This makes it possible to fundamentally change the way circuits (and the UI) are displayed by changing the theme. The current theme is can be selected in the preferences window.</p>
+</div>
+<div class="paragraph">
+<p>The following themes are available in the current version of Antares.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Winter</dt>
+<dd>
+<p>This is the default theme of Antares. It mainly uses blue figures on a white background.</p>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/styles/winter-theme-sample-en.png" alt="Styles" width="400">
+</div>
+</div>
+</dd>
+<dt class="hdlist1">Black &amp; White</dt>
+<dd>
+<p>An alternative theme similar to "Winter" but without the blue colour.</p>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/styles/bw-theme-sample-en.png" alt="Styles" width="400">
+</div>
+</div>
+</dd>
+<dt class="hdlist1">Darcula</dt>
+<dd>
+<p>A dark theme.</p>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/styles/darcula-theme-sample-en.png" alt="Styles" width="400">
+</div>
+</div>
+</dd>
+<dt class="hdlist1">Desert</dt>
+<dd>
+<p>A light, warm theme in sandy colors.</p>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/styles/desert-theme-sample.png" alt="Styles" width="400">
+</div>
+</div>
+</dd>
+<dt class="hdlist1">CRT</dt>
+<dd>
+<p>An experimental "Dark Theme" which aims to explore the possibilities and limitations of themes. The name "CRT" is a reminiscence of times in the past when computers still had monochrome terminals.</p>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/styles/crt-theme-sample-en.png" alt="Styles" width="400">
+</div>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      <!-- Empty to disable pagination -->
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/flandreas/antares" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/AntaresCircuit" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 Andreas Fleischmann. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

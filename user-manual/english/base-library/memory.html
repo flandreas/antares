@@ -1,0 +1,700 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Memory - Antares</title>
+<meta name="description" content="Digital circuit simulation and learning platform ">
+
+
+  <meta name="author" content="Andreas Fleischmann">
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Antares">
+<meta property="og:title" content="Memory">
+<meta property="og:url" content="https://www.antarescircuit.io/user-manual/english/base-library/memory">
+
+
+  <meta property="og:description" content="Digital circuit simulation and learning platform ">
+
+
+
+  <meta property="og:image" content="https://www.antarescircuit.io/assets/images/splash2.png">
+
+
+
+  <meta name="twitter:site" content="@AntaresCircuit">
+  <meta name="twitter:title" content="Memory">
+  <meta name="twitter:description" content="Digital circuit simulation and learning platform ">
+  <meta name="twitter:url" content="https://www.antarescircuit.io/user-manual/english/base-library/memory">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.antarescircuit.io/assets/images/splash2.png">
+  
+
+  
+
+
+
+
+
+
+
+
+<link rel="canonical" href="https://www.antarescircuit.io/user-manual/english/base-library/memory">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Andreas Fleischmann",
+      "url": "https://www.antarescircuit.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Antares Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- Used for AsciiDoc integration -->
+<link rel="stylesheet" href="/assets/css/asciidoc.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+<link rel="manifest" href="/assets/images/site.webmanifest">
+<link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="theme-color" content="#ffffff">
+
+<!-- end custom head snippets -->
+
+  <script async defer data-domain="antarescircuit.io" src="https://plausible.io/js/plausible.js"></script></head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Antares
+          <span class="site-subtitle">Digital Circuit Learning Platform</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/docs/quick-start/">Quick-Start</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://app.antarescircuit.io">Webapp</a>
+            </li><li class="masthead__menu-item">
+              <a href="/user-manual/english/usermanual">Manual</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/blog">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/faq">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/releases/releases">Releases</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/examples/examples">Examples</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: url('/assets/images/splash2.png');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Memory
+
+        
+      </h1>
+      
+      
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">User Manual</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/usermanual">Welcome</a></li>
+          
+            <li><a href="/user-manual/english/first-steps/first-steps">First Steps</a></li>
+          
+            <li><a href="/user-manual/english/first-steps/orientation">Orientation</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Projects and libraries</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/projects-libraries/projects-libraries">Overview</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/libraries">Libraries</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/projects">Projects</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/workbench">Workbench</a></li>
+          
+            <li><a href="/user-manual/english/base-library/base-library">Library Reference</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Circuits</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/circuits/circuits">Circuits</a></li>
+          
+            <li><a href="/user-manual/english/circuits/wires">Wires</a></li>
+          
+            <li><a href="/user-manual/english/circuits/circuit-tests">Tests</a></li>
+          
+            <li><a href="/user-manual/english/circuits/text-style">Text Style</a></li>
+          
+            <li><a href="/user-manual/english/circuits/synthesis">Synthesis</a></li>
+          
+            <li><a href="/user-manual/english/circuits/analysis">Analysis</a></li>
+          
+            <li><a href="/user-manual/english/subcircuits/subcircuits">Subcircuits</a></li>
+          
+            <li><a href="/user-manual/english/circuits/vhdl-export">VHDL Export</a></li>
+          
+            <li><a href="/user-manual/english/circuits/analog-circuits">Analog circuits</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Simulation</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/simulation/simulation">Simulation</a></li>
+          
+            <li><a href="/user-manual/english/oscilloscope/oscilloscope">Oscilloscope</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Other Basic Techniques</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/styles/styles">Styles and Themes</a></li>
+          
+            <li><a href="/user-manual/english/description/description">Descriptions and Explanations</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Advanced Techniques</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/scripting/scripting">Scripting</a></li>
+          
+            <li><a href="/user-manual/english/scenarios/scenarios">Scenarios</a></li>
+          
+            <li><a href="/user-manual/english/usecases/usecases">Use Cases</a></li>
+          
+            <li><a href="/user-manual/english/circuits/circuit-parameters">Circuit Parameters</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Miscellaneous</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/misc/preferences">Preferences</a></li>
+          
+            <li><a href="/user-manual/english/misc/key-bindings">Key Bindings</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Web</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/web/web-publishing">Publish circuits</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Memory">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#_behavior">Behavior</a></li>
+  <li><a href="#_importing-and-exporting-memory-contents">Importing and exporting memory contents</a></li>
+  <li><a href="#_standard-file-format">“Standard” file format</a></li>
+  <li><a href="#_file-format-single-lines">File format “Single Lines”</a>
+    <ul>
+      <li><a href="#_show-memory-contents-in-the-symbol">Show memory contents in the symbol</a></li>
+    </ul>
+  </li>
+  <li><a href="#_show-memory-content-separately">Show memory content separately</a></li>
+  <li><a href="#_properties">Properties</a></li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This chapter describes properties that apply to both the <a href="/user-manual/english/base-library/rom">ROM</a>- and the <a href="/user-manual/english/base-library/ram">RAM</a> component.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_behavior">Behavior</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A memory component stores data values that are up to 32 bits long. The number of stored data values is determined by the width of the address, which is defined in the property "Address Bit Width".</p>
+</div>
+<div class="paragraph">
+<p>The property "Display content" can be used to control whether the memory component should display its memory content as part of the symbol during simulation. Even if the property is set, the memory content is only displayed in the symbol if the simulation speed is at most in the "Observe" category - in the fastest "Use" category the memory content is never displayed. For an explanation of simulation speeds see chapter <a href="/user-manual/english/simulation/simulation">Simulation</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_importing-and-exporting-memory-contents">Importing and exporting memory contents</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A double click on a memory component opens a dialog that allows the memory content to be imported from a file (ROM only) and exported to a file. The memory content can also be reset, i.e. all memory cells are set to the value 0.</p>
+</div>
+<div class="paragraph">
+<p>This allows you to write the content of a memory component in any editor, save it as a file, and then import it into the memory component. The imported memory content becomes part of the memory component and is added to the circuit file when the circuit is saved; the file from which the memory content was loaded is then no longer needed. The format of the file from which memory contents can be imported is described below.</p>
+</div>
+<div class="paragraph">
+<p>When exporting the memory contents to a file, the current version of Antares always uses the "Standard" file format (see below).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_standard-file-format">"Standard" file format</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The format of the file from which the data of a memory component can be imported is deliberately designed to be simple enough to allow the data to be written with any text editor.</p>
+</div>
+<div class="paragraph">
+<p>The data in the file essentially consists of a sequence of hexadecimal values separated by either a space or a line break, whereby both types of separation can occur in any combination in the same file. This allows, for example, 8 bytes to be combined on one line.</p>
+</div>
+<div class="paragraph">
+<p>The length of the hexadecimal value is determined by the property "Data Bit Width": e.g. data for an 8-bit memory have the form "FF". Antares accepts both uppercase letters and lowercase letters as hexadecimal digits.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example with spaces and line break</div>
+<div class="content">
+<pre>1F 7E 05 B8
+45 A0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The file format does not include "run-length encoding". Longer sections of data that have the same value at each address must explicitly contain these values. An exception are final 0 values, which do not have to occur explicitly. If a file with the above sample content is loaded into an 8-bit memory with 256 data cells, the first 6 bytes are set with the data from the file and the remaining 250 data cells are set to the value 0. The concluding 0 values do not therefore have to appear in the file.</p>
+</div>
+<div class="paragraph">
+<p>The same applies to saving files. Antares only store "effectively relevant" data. In the example above, Antares determines after writing the last A0 byte that only 0 values will follow, and does not write these 0 values to the file.</p>
+</div>
+<div class="paragraph">
+<p>Memory cells can contain an optional comment, which is displayed in the separate content view if "1 column" is selected as the display layout. Comments are separated from the data value in the file by a colon.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example comments</div>
+<div class="content">
+<pre>1F:Comment 7E 05:Comment2 B8
+45:Comment3 A0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Because spaces are used to separate data cells and colons are used to separate data and comments, these two characters must be handled specially when they occur in comments. For this purpose, a so-called "escaping" with the help of the \ character (backslash) is used.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example comment with escaping</div>
+<div class="content">
+<pre>1F:This\ is\ a\ comment\ 7E 05:comment\ with\ \: B8
+45:Comment \3 A0</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_file-format-single-lines">File format "Single Lines"</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The file format "Standard" is not very suitable for editing in an editor if there are many comments. This is the case, for example, if the file contains a machine program to be loaded into the ROM component of a microprocessor circuit. Such files can contain a comment with spaces in each line.</p>
+</div>
+<div class="paragraph">
+<p>For this purpose Antares supports a second file format in which each data value including comment is on a separate line. With this file format it is therefore not necessary to escape blanks and colons.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example single lines</div>
+<div class="content">
+<pre>#amd-nl-0.1
+7000:Initialize I at 0800
+1800
+7065:Initialize L at 0801
+1801
+7000:Initialize S at 0802
+1802
+7001:Initialize ONE at 0803
+1803
+0801:IF (I == L) THEN GOTO END
+3800
+5013
+0802:S = S + I
+2800
+1802
+1FFE:Output S
+0800:I = I + 1
+2803
+1800
+6008:GOTO LOOP
+FF00:Stop program</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In order for Antares to recognize the format when loading a file, the format ID <strong>amd-nl-0.1</strong> must appear on the first line ("amd": Antares Memory Dump, "nl": Newline, 0.1: Version number of the format).</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The corresponding format identifier of the "Standard" format is <strong>amd-df-0.1</strong>. It is optional. If Antares does not find a format identifier in a memory file to be loaded, the file will be interpreted as the default format.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_show-memory-contents-in-the-symbol">Show memory contents in the symbol</h3>
+<div class="paragraph">
+<p>The property "Show content" can be used to control whether a part of the memory content should be displayed within the symbol. During simulation, Antares displays the memory content in the region of the current address and highlights the memory cell that is addressed. Comments are not displayed.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_show-memory-content-separately">Show memory content separately</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In addition to displaying the memory contents in the icon, the memory contents can also be displayed separately. Double-clicking a memory component opens a dialog that displays the memory content. In the "Layout" selection field, you can choose how many columns are displayed in a row. Comments are only displayed in the layout "1 Column".</p>
+</div>
+<div class="paragraph">
+<p>When double-clicking with the <kbd>Alt</kbd> key pressed, the same view is displayed as subview in the main window. This can be useful if the contents of several memory components are to be displayed simultaneously.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_properties">Properties</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Orientation</dt>
+<dd>
+<p>The direction in which the data port is facing.</p>
+</dd>
+<dt class="hdlist1">Address Bit Width</dt>
+<dd>
+<p>The number of bits that make up the addresses of the memory component. This determines the number of memory cells of the memory component.</p>
+</dd>
+<dt class="hdlist1">Data Bit Width</dt>
+<dd>
+<p>The bit width of each memory cell.</p>
+</dd>
+<dt class="hdlist1">Show contents</dt>
+<dd>
+<p>Determines whether the memory content within the symbol should be displayed.</p>
+</dd>
+<dt class="hdlist1">Number of content rows</dt>
+<dd>
+<p>Can only be set if "Show content" is selected. Determines the number of rows of memory content display within the symbol.</p>
+</dd>
+<dt class="hdlist1">Number of content columns</dt>
+<dd>
+<p>Can only be set if "Show content" is selected. Determines the number of columns of the memory content display within the symbol.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      <!-- Empty to disable pagination -->
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/flandreas/antares" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/AntaresCircuit" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 Andreas Fleischmann. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

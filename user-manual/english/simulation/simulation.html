@@ -1,0 +1,875 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Simulation - Antares</title>
+<meta name="description" content="Digital circuit simulation and learning platform ">
+
+
+  <meta name="author" content="Andreas Fleischmann">
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Antares">
+<meta property="og:title" content="Simulation">
+<meta property="og:url" content="https://www.antarescircuit.io/user-manual/english/simulation/simulation">
+
+
+  <meta property="og:description" content="Digital circuit simulation and learning platform ">
+
+
+
+  <meta property="og:image" content="https://www.antarescircuit.io/assets/images/splash2.png">
+
+
+
+  <meta name="twitter:site" content="@AntaresCircuit">
+  <meta name="twitter:title" content="Simulation">
+  <meta name="twitter:description" content="Digital circuit simulation and learning platform ">
+  <meta name="twitter:url" content="https://www.antarescircuit.io/user-manual/english/simulation/simulation">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.antarescircuit.io/assets/images/splash2.png">
+  
+
+  
+
+
+
+
+
+
+
+
+<link rel="canonical" href="https://www.antarescircuit.io/user-manual/english/simulation/simulation">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Andreas Fleischmann",
+      "url": "https://www.antarescircuit.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Antares Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- Used for AsciiDoc integration -->
+<link rel="stylesheet" href="/assets/css/asciidoc.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+<link rel="manifest" href="/assets/images/site.webmanifest">
+<link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="theme-color" content="#ffffff">
+
+<!-- end custom head snippets -->
+
+  <script async defer data-domain="antarescircuit.io" src="https://plausible.io/js/plausible.js"></script></head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Antares
+          <span class="site-subtitle">Digital Circuit Learning Platform</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/docs/quick-start/">Quick-Start</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://app.antarescircuit.io">Webapp</a>
+            </li><li class="masthead__menu-item">
+              <a href="/user-manual/english/usermanual">Manual</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/blog">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/faq">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/releases/releases">Releases</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/examples/examples">Examples</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: url('/assets/images/splash2.png');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Simulation
+
+        
+      </h1>
+      
+      
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">User Manual</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/usermanual">Welcome</a></li>
+          
+            <li><a href="/user-manual/english/first-steps/first-steps">First Steps</a></li>
+          
+            <li><a href="/user-manual/english/first-steps/orientation">Orientation</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Projects and libraries</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/projects-libraries/projects-libraries">Overview</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/libraries">Libraries</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/projects">Projects</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/workbench">Workbench</a></li>
+          
+            <li><a href="/user-manual/english/base-library/base-library">Library Reference</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Circuits</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/circuits/circuits">Circuits</a></li>
+          
+            <li><a href="/user-manual/english/circuits/wires">Wires</a></li>
+          
+            <li><a href="/user-manual/english/circuits/circuit-tests">Tests</a></li>
+          
+            <li><a href="/user-manual/english/circuits/text-style">Text Style</a></li>
+          
+            <li><a href="/user-manual/english/circuits/synthesis">Synthesis</a></li>
+          
+            <li><a href="/user-manual/english/circuits/analysis">Analysis</a></li>
+          
+            <li><a href="/user-manual/english/subcircuits/subcircuits">Subcircuits</a></li>
+          
+            <li><a href="/user-manual/english/circuits/vhdl-export">VHDL Export</a></li>
+          
+            <li><a href="/user-manual/english/circuits/analog-circuits">Analog circuits</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Simulation</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/simulation/simulation" class="active">Simulation</a></li>
+          
+            <li><a href="/user-manual/english/oscilloscope/oscilloscope">Oscilloscope</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Other Basic Techniques</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/styles/styles">Styles and Themes</a></li>
+          
+            <li><a href="/user-manual/english/description/description">Descriptions and Explanations</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Advanced Techniques</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/scripting/scripting">Scripting</a></li>
+          
+            <li><a href="/user-manual/english/scenarios/scenarios">Scenarios</a></li>
+          
+            <li><a href="/user-manual/english/usecases/usecases">Use Cases</a></li>
+          
+            <li><a href="/user-manual/english/circuits/circuit-parameters">Circuit Parameters</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Miscellaneous</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/misc/preferences">Preferences</a></li>
+          
+            <li><a href="/user-manual/english/misc/key-bindings">Key Bindings</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Web</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/web/web-publishing">Publish circuits</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Simulation">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#_simulation-tools">Simulation Tools</a></li>
+  <li><a href="#_signal-colors">Signal colors</a></li>
+  <li><a href="#_simulation-depth">Simulation depth</a></li>
+  <li><a href="#_simulation-algorithm">Simulation algorithm</a>
+    <ul>
+      <li><a href="#_signal-values">Signal values</a></li>
+      <li><a href="#_propagation-delay">Propagation delay</a></li>
+      <li><a href="#_switch-on-behaviour">Switch-on behaviour</a></li>
+      <li><a href="#_behavior-with-undefined-input-values">Behavior with undefined input values</a></li>
+      <li><a href="#_bus-contention-and-signal-conflicts">Bus contention and signal conflicts</a></li>
+      <li><a href="#_wire-logic">Wire Logic</a></li>
+    </ul>
+  </li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <div class="sect1">
+<h2 id="_simulation-tools">Simulation Tools</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The simulation of Antares is controlled by the simulation tools in the toolbar. The most important actions can also be performed using the keyboard or menus.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/assets/images/user-manual/simulation/simulation-tools.png" alt="Simulation Tools" width="300">
+</div>
+</div>
+<div class="paragraph">
+<p>The simulation toolbar contains the following tools:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/simulation/play24.png" alt="Start"></span> With this button (<span class="keyseq"><kbd>Ctrl</kbd>+<kbd>R</kbd></span>) the simulation can be started and stopped.</p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/simulation/pause24.png" alt="Pause"></span> Pauses or resumes the simulation (<span class="keyseq"><kbd>Ctrl</kbd>+<kbd>Space</kbd></span>). The button turns orange if simulation is paused.</p>
+</li>
+<li>
+<p><span class="image"><img src="/assets/images/user-manual/simulation/resume24.png" alt="Continue"></span> Activates the single step mode of the simulation.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+If single step mode should pause simulation with every new signal being generated, make sure to select menu option <span class="menuseq"><b class="menu">Simulation</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Soft Breakpoints</b></span>. Otherwise, only "hard breakpoints" from the "Break" component are used.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>With the slider the simulation speed can be controlled. The simulation speed is divided into three categories whose names are displayed as a tooltip when you move the mouse over the slider. The further to the left the slider is, the slower the simulation is executed and the more support information is displayed during simulation.</p>
+</div>
+<div class="paragraph">
+<p>The speed categories have the following names:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Use</dt>
+<dd>
+<p>This category is mainly used to use a circuit without displaying more details about how it works. For example, if you have finished designing a microprocessor circuit and are running machine programs in it that you want to see the results of, you will move the controller all the way to the right to make the simulation run as fast as possible.</p>
+</dd>
+<dt class="hdlist1">Observe</dt>
+<dd>
+<p>This category displays support information that can be useful during the development of a circuit without running the simulation too slow.</p>
+</dd>
+<dt class="hdlist1">Explore</dt>
+<dd>
+<p>This category displays all available support information, if enabled in the settings. In particular, the signal flow animations (if enabled) used in this category slow down the simulation so much that you will use this category mainly for demonstration, education, or debugging.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>The following table shows which support information is used in which area.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Information</th>
+<th class="tableblock halign-left valign-top">Explore</th>
+<th class="tableblock halign-left valign-top">Observe</th>
+<th class="tableblock halign-left valign-top">Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Active components</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-check"></i></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-check"></i></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-check"></i></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Execution Animation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(<span class="icon"><i class="fa fa-check"></i></span>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(<span class="icon"><i class="fa fa-check"></i></span>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(<span class="icon"><i class="fa fa-check"></i></span>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="/user-manual/english/scenarios/scenarios">scenarios</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(<span class="icon"><i class="fa fa-check"></i></span>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(<span class="icon"><i class="fa fa-check"></i></span>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(<span class="icon"><i class="fa fa-check"></i></span>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Colored wires</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-check"></i></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-check"></i></span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="/user-manual/english/description/description">Mnemonics</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-check"></i></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-check"></i></span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="/user-manual/english/base-library/memory">ROM/RAM</a>-memory contents</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-check"></i></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-check"></i></span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Display Execution Delay</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(<span class="icon"><i class="fa fa-check"></i></span>)</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Signal flow animation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-check"></i></span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>(<span class="icon"><i class="fa fa-check"></i></span>) Only in single step mode</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_signal-colors">Signal colors</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Antares uses different colors during simulation to represent the different values of signals or the states of wires and pins. The following circuit illustrates the colors used, where the wires on the left have the wire style "Line" and the wires on the right have the wire style "Block".</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/simulation/wire-colors.png" alt="wire colors" width="700">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Blue</strong> The wire carries a signal with value "undefined". This occurs if no component is sending a signal to the wire, either because it is not connected to a component or because a connected tri-state buffer is sending an undefined signal.</p>
+</li>
+<li>
+<p><strong>Dark green</strong>: The wire carries a 1-bit signal with the value 0.</p>
+</li>
+<li>
+<p><strong>Light green</strong>: The wire carries a 1-bit signal with the value 1.</p>
+</li>
+<li>
+<p><strong>Red</strong>: The wire carries a signal in which at least one bit has the value "Error". This can occur if several components transmit different signals on the same wire.</p>
+</li>
+<li>
+<p><strong>Black</strong>: The wire carries a signal with several bits which all have the value 0.</p>
+</li>
+<li>
+<p><strong>Gray</strong>: The wire carries a signal with several bits, at least one of which has the value 1.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Colors are defined in Antares by <a href="/user-manual/english/styles/styles">"Themes"</a>. The themes currently contained in Antares all use the above colors. However, maybe in the future more themes will be added (or users may define their own themes) that use other colors.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_simulation-depth">Simulation depth</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>One of the most important design goals of Antares is to enable the user to explore all the components of a circuit in order to understand its operation as deeply and thoroughly as possible. For this reason, the basic library contains rather few built-in components. Instead, standard components like flip-flops or registers are available as modelled subcircuits in the standard library, which the user can open and observe during circuit design and simulation.</p>
+</div>
+<div class="paragraph">
+<p>The disadvantage of this approach is that large circuits consist of a large number of basic components if all subcircuits are expanded down to the built-in gate level. For example, the microcomputer in the example project "Microcomputer (Tanenbaum)" contains (when fully expanded) over 2'000 built-in logic gates and over 5'000 wires.</p>
+</div>
+<div class="paragraph">
+<p>The simulation of such large circuits can take a lot of time. To mitigate this, Antares has the possibility to define an <a href="/user-manual/english/circuits/circuit-scripting">Execution script</a> for a subcircuit, which contains the logic of the subcircuit and is executed during simulation instead of the inner circuit.</p>
+</div>
+<div class="paragraph">
+<p>With the menu <span class="menuseq"><b class="menu">Simulation</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Deep Simulation</b></span> you can choose whether Antares applies the execution scripts of subcircuits or not. "Deep Simulation" means that the execution scripts are not applied and Antares simulates the full depth of the circuit. The opposite is called "Flat Simulation": Subcircuits are simulated only as deep as the depth of the circuit until a subcircuit contains an execution script.</p>
+</div>
+<div class="paragraph">
+<p>A flat simulation has one important limitation: If you open a subcircuit containing an execution script during a flat simulation, Antares can display the contents of the subcircuit, but it can&#8217;t tell you anything about the state of the components and wires of that subcircuit.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/simulation/simulation-depth.png" alt="wire colors" width="700">
+</div>
+</div>
+<div class="paragraph">
+<p>Antares therefore represents such a subcircuit in a "disguised" state. In the picture above, one of the half adders has been opened in a separate view. Antares shows the opened half adder with a grey overlay. If the subcircuit would contain another subcircuit, you could also open it or dive into it, but it would also be shown in a disguised state.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_simulation-algorithm">Simulation algorithm</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Antares' algorithm for simulating circuits is usually not something you need to understand in detail to use Antares. Therefore, this section only explains the basics.</p>
+</div>
+<div class="sect2">
+<h3 id="_signal-values">Signal values</h3>
+<div class="paragraph">
+<p>The simulation of Antares uses signals with four possible values 0, 1, "Undefined" (high impedance, displayed as Z) and "Error" (displayed as X).</p>
+</div>
+<div class="paragraph">
+<p>Other simulation tools use additional signals such as "0/1 (rising edge)" and "1/0 (falling edge)". So far, Antares has not shown any need for such extended models.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_propagation-delay">Propagation delay</h3>
+<div class="paragraph">
+<p>The simulation uses the propagation delay defined for each component and each wire. This is the time (in nanoseconds) a component needs to process a changed input signal and generate a corresponding signal at one or more outputs.</p>
+</div>
+<div class="paragraph">
+<p>The simulation algorithm is event-based. Whenever a component detects a change in an input value, a new entry in an event queue is created in the simulation engine. The entry is intended to be executed after the propagation delay of the component has expired. When this time is reached, the simulator asks the component to recalculate the value of its outputs. For this calculation, the component uses the signals that <strong> exist at its inputs at this time</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Pure net components (wires, splitter, combiner, subcircuit ports) have a propagation delay of zero.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_switch-on-behaviour">Switch-on behaviour</h3>
+<div class="paragraph">
+<p>When starting simulation, each component is requested to recalculate its outputs. The propagation delay is also taken into account. If at the time of calculation no signal from other components has arrived at the inputs, it is up to the component to decide how to deal with this at the start. Most components then initially set the inputs to the value 0, which results in an unconnected AND gate having the output value 0 at startup and an unconnected NOT gate having the output value 1.</p>
+</div>
+<div class="paragraph">
+<p>This behavior must be considered when designing sequential circuits. Without further action, the way the simulation algorithm works and the power-on behavior of Antares will cause an SR latch with NOR gates to go into an illegal state at power-on, or will oscillate indefinitely between the two states.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/simulation/sr-latch.png" alt="Wire colors" width="400">
+</div>
+</div>
+<div class="paragraph">
+<p>Real latches do not show this behaviour, because slight differences in the propagation delay of the individual gates cause the circuit to settle into a stable and correct state when switched on.</p>
+</div>
+<div class="paragraph">
+<p>In Antares there are three approaches to achieve the same behavior in simulation as in real circuits.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Different propagation delays</strong>: In the example above, both NOR gates have the same propagation delay, e.g. 10 ns. If different propagation delays are defined for the two gates (e.g. 8 ns for the upper gate and 11 ns for the lower gate), the circuit will settle into a stable, correct state at startup. The latches and flip-flops of Antares' standard library are built according to this approach.</p>
+</li>
+<li>
+<p><strong>Noise</strong>: With the menu option <span class="menuseq"><b class="menu">Simulation</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Noise</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Random Noise</b></span> the simulator can be instructed to slightly change the propagation delays of the components by a random value. With this option, the above SR latch takes a correct state at the start of simulation (possibly after a short settling phase), even if both gates have configured the same propagation delay.</p>
+</li>
+<li>
+<p><strong>Power-On Reset</strong>: Use a "Power-On Reset" component (introduced with 1.1.0) to bring the circuit into a defined state when the simulation gets started.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_behavior-with-undefined-input-values">Behavior with undefined input values</h3>
+<div class="paragraph">
+<p>Certain components like tri-state buffers or bi-directional inputs/outputs can produce undefined (floating) values. The same happens with
+input ports left unconnected: their signal is assumed to be undefined. On the other hand, logic gates require defined inputs to work properly.</p>
+</div>
+<div class="paragraph">
+<p>Using the system preference "Undefined Gate Input Behaviour", you can define how Antares behaves during simulation regarding undefined input values. The following
+options are available.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Read as 0</strong>: An undefined input signal is treated as a 0. This is equivalent to a real logic gate with an integrated pull-down resistors at its inputs.</p>
+</li>
+<li>
+<p><strong>Read as 1</strong>: An undefined input signal is treated as a 1. This is equivalent to a real logic gate with an integrated pull-up resistors at its inputs.</p>
+</li>
+<li>
+<p><strong>Read as random value</strong>: An undefined input signal is treated as a random value. If you choose this option, you have to make sure that all input ports
+are connected, and all tri-state output ports connected to the same input port are coordinated such that a stable signal is always produced, unless your
+circuits explicitly contains pull resistors that cover these cases.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_bus-contention-and-signal-conflicts">Bus contention and signal conflicts</h3>
+<div class="paragraph">
+<p>While Antares prevents you from connecting more than one output-only port to the same wire, it is often useful to connect various input/output ports to the same wire. It is then up to the circuit logic to avoid that these ports assert different signals to this wire at the same time. If the circuit fails to achieve this, a signal conflict occurs. This often happens due to a timing problem in the circuit, and the signal propagation algorithm of Antares tries to help you to detect and fix these problems.</p>
+</div>
+<div class="paragraph">
+<p>Whenever an output port asserts a signal to a wire, Antares checks if this signal is in conflict with the signal asserted by any other output port to the same net. The term "net" refers to the combination of all wires that are reachable by this output port, including those behind splitters and combiners, and those that are connected to input ports within subcircuits.</p>
+</div>
+<div class="paragraph">
+<p>If Antares detects a signal conflict, the signal will not be asserted to the wire. Instead, the behaviour in this situation depends on the value of the following system preferences and settings.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Preference "Allowed net contention duration"</strong>: This preference defines how long Antares ignores bus contention situations before issuing a warning or error.</p>
+</li>
+<li>
+<p>Menu <strong><span class="menuseq"><b class="menu">Simulation</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">On signal conflict</b></span></strong>: Defines whether Antares ignores bus contention issues, or whether it issues a warning or an error. The issued warnings or errors are collected in the "Issues" tab of Antares' main window.</p>
+</li>
+<li>
+<p>Menu <strong><span class="menuseq"><b class="menu">Simulation</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Pause on issue</b></span></strong>: Determines whether the simulation should be paused when an issue occurs. This allows you to analyse the current state of the simulated circuit and to identify the cause of the issue.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If you hover the mouse over a wire in red error state, Antares displays a tooltip containing detailed information about the signal conflict.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/simulation/signal-conflict.png" alt="signal conflict" width="700">
+</div>
+</div>
+<div class="paragraph">
+<p>Note that the IDs referenced in the tooltip&#8217;s origin and source designations (e.g. 2 in "to Input/Output (2)") reference model ID&#8217;s of components. You see these model ID&#8217;s in Antares' property panel when selecting a component in the edit mode.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_wire-logic">Wire Logic</h3>
+<div class="paragraph">
+<p>Starting with release 1.0, Antares supports two different types of "Wire Logic", which determine how the simulation behaves when two different signals are asserted to the same wire.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Conflict</strong>: This is the default value: Different values asserted to the same wire are regared as conflict. See the preceding section for a description of how Antares reacts to conflicts during simulation.</p>
+</li>
+<li>
+<p><strong>Wired OR</strong>: In this mode, conflicting signals are OR-ed together, allowing you to build circuits based on "Wired OR" behaviour. Every component in the circuit is regarded to be an open-collector device with an internal pull resistor. See Wikipedia&#8217;s <a href="https://en.wikipedia.org/wiki/Open_collector">"Open Collector"</a> article for more detail, or the <a href="https://de.wikipedia.org/wiki/Wired-OR-Verknüpfung">"Wired OR"</a> article in the German Wikipedia.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can choose your preferred wire logic in a circuit&#8217;s properties. When starting a simulation run, Antares uses the wire logic of the main circuit, even if subcircuits might have a different wire logic property value.</p>
+</div>
+</div>
+</div>
+</div>
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      <!-- Empty to disable pagination -->
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/flandreas/antares" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/AntaresCircuit" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 Andreas Fleischmann. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

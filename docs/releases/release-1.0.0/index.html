@@ -1,0 +1,718 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Release 1.0.0 - Antares</title>
+<meta name="description" content="Release Date: September 9, 2022  ">
+
+
+  <meta name="author" content="Andreas Fleischmann">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Antares">
+<meta property="og:title" content="Release 1.0.0">
+<meta property="og:url" content="https://www.antarescircuit.io/docs/releases/release-1.0.0/">
+
+
+  <meta property="og:description" content="Release Date: September 9, 2022  ">
+
+
+
+  <meta property="og:image" content="https://www.antarescircuit.io/assets/images/splash2.png">
+
+
+
+  <meta name="twitter:site" content="@AntaresCircuit">
+  <meta name="twitter:title" content="Release 1.0.0">
+  <meta name="twitter:description" content="Release Date: September 9, 2022  ">
+  <meta name="twitter:url" content="https://www.antarescircuit.io/docs/releases/release-1.0.0/">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.antarescircuit.io/assets/images/splash2.png">
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2024-11-16T06:47:40+00:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://www.antarescircuit.io/docs/releases/release-1.0.0/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Andreas Fleischmann",
+      "url": "https://www.antarescircuit.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Antares Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- Used for AsciiDoc integration -->
+<link rel="stylesheet" href="/assets/css/asciidoc.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+<link rel="manifest" href="/assets/images/site.webmanifest">
+<link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="theme-color" content="#ffffff">
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Antares
+          <span class="site-subtitle">Digital Circuit Learning Platform</span>
+        </a>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/docs/quick-start/">Quick-Start</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/docs/about/">About</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="https://app.antarescircuit.io">Webapp</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/user-manual/english/usermanual">Manual</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/docs/blog">Blog</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/docs/faq">FAQ</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/docs/releases/releases">Releases</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/docs/examples/examples">Examples</a>
+            </li>
+</ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay" style=" background-image: url('/assets/images/splash2.png');">
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Release 1.0.0
+
+        
+      </h1>
+      
+      
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox">
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">2024</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/docs/releases/release-1.16.0">1.16.0</a></li>
+          
+            <li><a href="/docs/releases/release-1.15.1">1.15.1</a></li>
+          
+            <li><a href="/docs/releases/release-1.15.0">1.15.0</a></li>
+          
+            <li><a href="/docs/releases/release-1.14.0">1.14.0</a></li>
+          
+            <li><a href="/docs/releases/release-1.13.0">1.13.0</a></li>
+          
+            <li><a href="/docs/releases/release-1.12.0">1.12.0</a></li>
+          
+            <li><a href="/docs/releases/release-1.11.1">1.11.1</a></li>
+          
+            <li><a href="/docs/releases/release-1.11.0">1.11.0</a></li>
+          
+            <li><a href="/docs/releases/release-1.10.0">1.10.0</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">2023</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/docs/releases/release-1.9.0">1.9.0</a></li>
+          
+            <li><a href="/docs/releases/release-1.8.0">1.8.0</a></li>
+          
+            <li><a href="/docs/releases/release-1.7.0">1.7.0</a></li>
+          
+            <li><a href="/docs/releases/release-1.6.0">1.6.0</a></li>
+          
+            <li><a href="/docs/releases/release-1.5.0">1.5.0</a></li>
+          
+            <li><a href="/docs/releases/release-1.4.0">1.4.0</a></li>
+          
+            <li><a href="/docs/releases/release-1.3.0">1.3.0</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">2022</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/docs/releases/release-1.2.0">1.2.0</a></li>
+          
+            <li><a href="/docs/releases/release-1.1.0">1.1.0</a></li>
+          
+            <li><a href="/docs/releases/release-1.0.0">1.0.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.31.0">0.31.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.30.0">0.30.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.29.2">0.29.2</a></li>
+          
+            <li><a href="/docs/releases/release-0.29.1">0.29.1</a></li>
+          
+            <li><a href="/docs/releases/release-0.29.0">0.29.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.28.0">0.28.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.27.1">0.27.1</a></li>
+          
+            <li><a href="/docs/releases/release-0.27.0">0.27.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.26.0">0.26.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.25.0">0.25.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.24.0">0.24.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.23.1">0.23.1</a></li>
+          
+            <li><a href="/docs/releases/release-0.23.0">0.23.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.22.0">0.22.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.21.0">0.21.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.20.0">0.20.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.19.0">0.19.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.18.0">0.18.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.17.1">0.17.1</a></li>
+          
+            <li><a href="/docs/releases/release-0.17.0">0.17.0</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">2021</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/docs/releases/release-0.16.0">0.16.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.15.1">0.15.1</a></li>
+          
+            <li><a href="/docs/releases/release-0.15.0">0.15.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.14.0">0.14.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.13.0">0.13.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.12.2">0.12.2</a></li>
+          
+            <li><a href="/docs/releases/release-0.12.0">0.12.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.11.0">0.11.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.10.0">0.10.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.9.0">0.9.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.8.0">0.8.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.7.0">0.7.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.6.1">0.6.1</a></li>
+          
+            <li><a href="/docs/releases/release-0.6.0">0.6.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.5.2">0.5.2</a></li>
+          
+            <li><a href="/docs/releases/release-0.5.1">0.5.1</a></li>
+          
+            <li><a href="/docs/releases/release-0.5.0">0.5.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.4.1">0.4.1</a></li>
+          
+            <li><a href="/docs/releases/release-0.4.0">0.4.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.3.1">0.3.1</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">2020</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/docs/releases/release-0.3.0">0.3.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.2.0">0.2.0</a></li>
+          
+            <li><a href="/docs/releases/release-0.1.0">0.1.0</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Release 1.0.0">
+    <meta itemprop="description" content="Release Date: September 9, 2022">
+    <meta itemprop="datePublished" content="2024-11-16T06:47:40+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p><strong>Release Date</strong>: September 9, 2022</p>
+
+<p>After seven years of intense development, Antares finally reaches release 1.0!
+This release contains some major new features, which will be described below, but
+also some important bug fixes.</p>
+
+<blockquote>
+  <p><img class="emoji" title=":warning:" alt=":warning:" src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png" height="20" width="20"> <strong>Breaking Change #460</strong>: The fix of bug #460 can lead to signal controls in the symbol of your subcircuits being dislocated in y direction. You will have to correct these dislocations manually. We apologize for the inconvenience.</p>
+</blockquote>
+
+<h1 id="overview">Overview</h1>
+
+<h2 id="the-release-number">The release number</h2>
+
+<p>The fact that we are going from 0.31.0 to 1.0.0 does not necessarily mean that it’s a ground-breaking jump in functionality, or that Antares development has finally completed. Going to 1.0.0 was primarily induced by adding a signature to the installer for macOS, because Apple notarization, which is part of the code signing procedure, doesn’t allow version numbers starting with zero.</p>
+
+<p>However, release 1.0.0 does contain some big, necessary features that have been waiting in the backlog for a very long time, primarily “App Signing” and the support for multi-library import into a project.</p>
+
+<h2 id="signed-installers">Signed installers</h2>
+
+<p>The annoying security warning users saw on all platforms when installing Antares embarrassed us all for a long time, and we finally took the time - and the money for the certificates - to sign the installers.</p>
+
+<p>On macOS, all warnings should now be gone, and your Mac will allow you to install Antares without any complaints. On Windows, you will still see a blue question screen, but that is not as frightening as the former warning was. To get rid of this screen as well would require a much more expensive certificate that we can’t affort yet.</p>
+
+<h2 id="linux-installer">Linux installer</h2>
+
+<p>Since Antares deals with a pretty technical topic, we thought that there might be some potential users with Linux PCs, and because setting-up a Linux installer is quite similar to the other ones, we did it. But we have no experience as Linux users, and we are not sure whether the provided <code class="language-plaintext highlighter-rouge">.rmp</code> package is the preferred way of doing things on the Linux platform. We tested on Ubuntu, and everthing looked fine, but we invite you Linux people to give feedback if you have problems with using Antares on Linux.</p>
+
+<h2 id="projects-importing-multiple-libraries">Projects importing multiple libraries</h2>
+
+<p>This is probably the most awaited and most useful new feature for a long time. You can now build your own library and add it to your project along with libraries from other people, such as the 74xx library that you can download from the Antares Assets GitHub project.</p>
+
+<p>This feature required massive changes in Antares’ core, so there might still be some bugs in this area. Please start proceeding with care when using this feature, and report any bugs you find in this area.</p>
+
+<h2 id="wired-or">Wired OR</h2>
+
+<p>The necessity for the new wire logic mode “Wired OR” (in addition to the already existing “Conflict” mode) arose when we tried to build the circuits from the Book “But How Do It Know” by J.Clark Scott. In this book, where Mr. Scott builds an entire computer from scratch, the concept of “tri-state” is completely omitted, and the circuits are based on wired-or logic instead. In order to build these circuits in Antares, we had to introduce the new “Wire Logic” property for circuits.</p>
+
+<h2 id="open-circuit-in-multiple-windows">Open circuit in multiple windows</h2>
+
+<p>With 0.31.0, you could already open other circuits from the explorer tree in individual windows, but now you can also open subcircuits from the currently open library or project in separate windows.</p>
+
+<p>This proved to be useful when working on and debugging large projects like microcomputers, where you want to inspect e.g. the CPU circuit and its control logic circuit at the same time. Since both circuits are complex, this new feature now allows you to open them in separate windows and place these windows in separate screen of your work place, where you can maximize the windows to see all the details you need for debugging.</p>
+
+<h2 id="the-future">The future</h2>
+
+<p>So, now that we have release 1.0.0 of Antares, what is going to come next?</p>
+
+<p>There will surely still be some bugs, potentially also new ones we’ve introduced with this release, which we will be happy to fix after you’ve reported them. And we are always happy to hear your feature requests and other ideas and ways of how we can improve Antares.</p>
+
+<p>Beside that, we are going to focus again on the upcoming web version of Antares, which will allow you to create an online account and publish your circuits into it, from where you can build online web pages that contain your circuits in an interactive and simulated way.</p>
+
+<h1 id="features">Features</h1>
+
+<ul>
+  <li>
+    <p><strong>#86: Sign Installers:</strong> The installers for macOS and Windows are now signed with a proper developer certificate to get rid of security warnings during installation.</p>
+  </li>
+  <li>
+    <p><strong>#212: Multiple open libraries:</strong> Libraries as well as projects can now be based on multiple libraries and not just a single one as in the previous version. Just select the desktop node of a library/project in the explorer, execute the popup menu action “Add Library..” and choose the library to add.</p>
+  </li>
+  <li>
+    <p><strong>#422: “Wired OR” to make book “But How Do It Know” possible:</strong> Circuits have now a new property “Wire Logic” you can use to define whether different signals should be regarded as conflicts, or whether they should be OR-ed together. Wired-OR enables you e.g. to build the computer in the book “But How Do It Know” by J.Clark Scott.</p>
+  </li>
+  <li>
+    <p><strong>#423: Allow changing “Position Bit 0” for Splitter, Combiner, Bidirectional Splitter:</strong> It is now possible to change this property even if ports are already connected. However, depending on the current wires, their layout will get distored and must be adjusted afterwards.</p>
+  </li>
+  <li>
+    <p><strong>#433: Select all parts of a wire net:</strong> If you press CMD while selecting a wire, all wires of the same net are now selected. This can be helpful when building large circuits with long wires and many junctions.</p>
+  </li>
+  <li>
+    <p><strong>#434: Improve size of connection highlighters:</strong> The green connection highlighters are now independent of the current zoom factor, which makes them still visible even with small zoom factors. In addition, their size has been increased to make the better visible with 100% zoom.</p>
+  </li>
+  <li>
+    <p><strong>#435: Vertical label of “internal” ports in subcircuit symbols:</strong> In the symbol editor now provides a new value “Aligned with pin” for the property “Label orientation” if “Label Position” is internal. This support better usage of real estate within a symbol.</p>
+  </li>
+  <li>
+    <p><strong>#436: Documentation of Antares -&gt; Preferences:</strong> Antares’ user preferences are now documented in the <a href="/user-manual/english/misc/preferences">“User Manual”</a>.</p>
+  </li>
+  <li>
+    <p><strong>#437: Validation Feedback in Preferences Dialog:</strong> If the user entered a value that violates a validation condition of a particular preference field, Antares silently reset the field to the former value. Similar to what is already supported in the circuit’s properties view, the validation failure is now displayed.</p>
+  </li>
+  <li>
+    <p><strong>#439: Operate Joystick component with keyboard keys:</strong> During simulation, if the joystick component has the input focus, the user is now to move the joystick knob with the arrow keys left, right, up and down.</p>
+  </li>
+  <li>
+    <p><strong>#442: New component “D Latch”:</strong> A new “D Latch” component was added to the “Standard Library”.</p>
+  </li>
+  <li>
+    <p><strong>#443: New theme “Desert”:</strong> A light, warmer theme in yellow/sandy coloring has been added to the available sets of themes.</p>
+  </li>
+  <li>
+    <p><strong>#446: Apply circuit’s “Start-up Duration” to soft breakpoints as well:</strong> The property “Start-up Duration” has been introduced a couple of releases ago to avoid useless signal flow animations while the simulated circuit settles into its initial state after simulation has started.</p>
+
+    <p>Working on complex circuits like the microcomputer in the book “But how do it know?” showed that applying this property also to soft breakpoints can be useful while debugging early versions of such a complex circuit. Debugging often involves single-stepping right from the simulation start, and stepping through all the circuit setup soft breakpoints until the simulation reaches the interesting stages proved to be annoying.</p>
+  </li>
+  <li>
+    <p><strong>#451: Linux Installer”:</strong> You can now download an Antares installer for Linux, technically an .rpm package. Tested on Ubuntu 22.</p>
+  </li>
+  <li>
+    <p><strong>#452: Open subcircuit in separate window”:</strong> You can now open a subcircuit in a separate window. This is useful when working on complex projects to take benefit of multi-screen setups. Note that this only works in edit mode, not yet during simulation, because the popup-menu mechanis relies on selected components. But you can open a new window in edit mode and then start the simulation.</p>
+  </li>
+  <li>
+    <p><strong>#454: Store column width of memory contents view:</strong> The memory contents view allows the user to display and edit memory contents. The single column layout can be used to enter comments for every memory cell. The width of this comment column should be larger by default, and width changed by the are now stored.</p>
+  </li>
+  <li>
+    <p><strong>#456: Choose main application font in preferences:</strong> Antares uses a logical font family name for the main application font. This logical font is mapped by the runtime to a physical font of the operation system. Mapping on macOS results in an acceptable font on macOS, but IMHO not on Windows and Linux. Therefore, you can now choose the main UI font in the preferences and pick one that works well on your system.</p>
+  </li>
+  <li>
+    <p><strong>#459: Keep current ROM/RAM contents cell highlighed even with CS=0:</strong> A ROM/RAM component can display a portion of its memory contents in the symbol. If the component is active as of input CS, the contents cell being active as of input A is highlighted.</p>
+
+    <p>If CS is low, the highlighting disappeared. This was annoying in microcomputer circuits, where the user would expect the cell to keep being highlighted that corresponds with the “Instruction Address Register” or “Program counter”, even if the ROM currently isn’t active. In these cases, the cell is now highlighted with a non-filled rectangle.</p>
+  </li>
+  <li>
+    <p><strong>#462: 16-Segment Display”:</strong> The new component “16-Segment Display” has been added to the built-in libraries, including a new “ASCII-16Seg Decoder” that decodes many ASCII values to the proper 16-Segment code.</p>
+  </li>
+</ul>
+
+<h1 id="bugfixes">Bugfixes</h1>
+
+<ul>
+  <li>
+    <p><strong>#431: Multiple questions “Do you want to save?” when changing the project:</strong> If you had unsaved changes in your current circuit, and you tried to open another project, Antares asked to whether you want to save your changes. However, this question was asked multiple times. This has been fixed.</p>
+  </li>
+  <li>
+    <p><strong>#438: Signal flow animation is slower on wires with more segments:</strong> Signal animations traverling along wires with more segments are now equals fast like signals on wires with less segments. However, it seems like more junctions still lead to slightly different travel times.</p>
+  </li>
+  <li>
+    <p><strong>#440: Circuit input “shake animation” can distort digit position:</strong> If you enter an invalid character/key in a focused circuit input during simulation, it plays a short “shake animation” to indicate the invalid input. If you entered another invalid input, another shake animation was started, leading to an random final location of the digit view being shaken. This has been fixed.</p>
+  </li>
+  <li>
+    <p><strong>#441: More validation of numerical component properties:</strong> The user can change properties of selected components in the properties windows. Certain properties, especially numerical ones, didn’t have enough validation conditions established yet. For example, it was possible to enter a negative “Propagation Delay”, which must be prohibited.</p>
+  </li>
+  <li>
+    <p><strong>#444: Oscilloscope probes are displayed even if “Show Oscilloscope” is off:</strong> When opening a circuit containing an oscilloscope, but that has been saved with “Show Oscilloscope” turned off, the oscilloscope probes were displayed nonetheless. This has been fixed.</p>
+  </li>
+  <li>
+    <p><strong>#445: Error when ALT-clicking on wire in read-only circuit:</strong> When clicking on a wire with ALT pressed on a read-only circuit (e.g. on one of the standard library), an unexpected error occured.</p>
+  </li>
+  <li>
+    <p><strong>#447: Cannot edit comments in ROM popup with “1 Columns” layout:</strong> Double-clicking on a ROM opens the memory popup that allows the user to edit the data contents of the ROM. When choosing “1 Column” as layout, the comment column is display, which would allow the user to enter a comment for every memory cell. However, this didn’t work correctly: The column was not editable, and if it was, the comment would not have been propertly saved in the ROM.</p>
+  </li>
+  <li>
+    <p><strong>#448: Mirrored components get dislocated when editing custom symbol:</strong> When editing the symbol of a subcircuit using popup menu -&gt; “Edit Symbol” that is mirrored (using properties “Mirror Horizontally” or “Mirror Vertically”), the location of the subcircuit symbol was at an unexpected location after closing the “Edit Symbol” popup.</p>
+  </li>
+  <li>
+    <p><strong>#448: Circuit symbol is unexpectedly re-generated:</strong> If symbol generation is activated in the user preferences, and the user has manually edited the generated symbol, it could happen that the symbol was re-generated unexpectedly. Did only occur after opening more than one main circuit in a row.</p>
+  </li>
+  <li>
+    <p><strong>#450: “Quit” doesn’t work anymore on macOS after declining once:</strong> If you had unsaved changes and pressed Cmd-Q to quit on macOS, and you pressed “Cancel” in the “Do you want to save” dialog, the “Quit” menu afterwards didn’t work correctly anymore.</p>
+  </li>
+  <li>
+    <p><strong>#457: Re-displayed oscilloscope can overlap circuit:</strong> Newly created oscilloscopes are automatically placed below the circuit’s bounding box. If a user then hides the oscilloscope, adds new components at the place where the oscilloscope was, and finally re-displays the oscilloscope, it overlaps the circuits bounding box. When displaying the oscilloscope, Antares now checks whether it overlaps the circuit, and repositions the oscilloscope below the circuit.</p>
+  </li>
+  <li>
+    <p><strong>#458: File-&gt;Close in separate circuit window closes view in main desktop instead:</strong> This has been fixed.</p>
+  </li>
+  <li>
+    <p><strong>#460: Controls with signal display are misplaced in subcircuit symbols:</strong> When dropping a control with a signal display (Circuit In/Out, Probe) into a sub circuit’s symbol, it was misplayed by 14 pct up in y direction.</p>
+
+    <p>Since users corrected this misplacement manually after it occurred, the fix of this bug will be a breaking change, because users will have to fix the placement of those controls in their circuit’s symbols.</p>
+  </li>
+  <li>
+    <p><strong>#461: Undo/Redo in “Edit Symbol” of subcircuit symbol doesn’t work:</strong> Could lead to unexpected errors or inconsistent states. This has been fixed.</p>
+  </li>
+  <li>
+    <p><strong>#463: Clearing explorer search field expands entire tree:</strong> When using the search field in the explorer view, Antares filters the tree to match the search criteria and expands to tree to all found leaf nodes. When clearing the search field, the same happend, but without any filtering performed. This lead to a fully expanded explorer tree, which was be annoying. Now, when clearing the search field, the tree gets fully collapsed and then expanded only to the currently open circuit (if any).</p>
+  </li>
+  <li>
+    <p><strong>#464: Loading exported “Bundles” can lead to unconnected subcircuits:</strong> You can export a single circuit within a “bundle”.zip that contains all non-standard referenced subciruits. When loading such a bundle into another project, wires leading to subcircuits referencing the other circuits were sometimes not correctly connected. This happened because of a dependency on the order in which the circuits was contained in the bundle: If a circuit was loaded whose referenced subcircuits have not yet been loaded, the corresponding wires could not be connected.</p>
+  </li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-11-16T06:47:40+00:00">November 16, 2024</time></p>
+        
+      </footer>
+
+      
+
+      <!-- Empty to disable pagination -->
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term...">
+  </form>
+  <div id="results" class="results"></div>
+</div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/flandreas/antares" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/AntaresCircuit" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">© 2024 Andreas Fleischmann. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

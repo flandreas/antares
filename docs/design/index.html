@@ -1,0 +1,524 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Design - Antares</title>
+<meta name="description" content="High quality rendering  ">
+
+
+  <meta name="author" content="Andreas Fleischmann">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Antares">
+<meta property="og:title" content="Design">
+<meta property="og:url" content="https://www.antarescircuit.io/docs/design/">
+
+
+  <meta property="og:description" content="High quality rendering  ">
+
+
+
+  <meta property="og:image" content="https://www.antarescircuit.io/assets/images/splash2.png">
+
+
+
+  <meta name="twitter:site" content="@AntaresCircuit">
+  <meta name="twitter:title" content="Design">
+  <meta name="twitter:description" content="High quality rendering  ">
+  <meta name="twitter:url" content="https://www.antarescircuit.io/docs/design/">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.antarescircuit.io/assets/images/splash2.png">
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2024-11-16T06:47:40+00:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://www.antarescircuit.io/docs/design/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Andreas Fleischmann",
+      "url": "https://www.antarescircuit.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Antares Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- Used for AsciiDoc integration -->
+<link rel="stylesheet" href="/assets/css/asciidoc.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+<link rel="manifest" href="/assets/images/site.webmanifest">
+<link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="theme-color" content="#ffffff">
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Antares
+          <span class="site-subtitle">Digital Circuit Learning Platform</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/docs/quick-start/">Quick-Start</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://app.antarescircuit.io">Webapp</a>
+            </li><li class="masthead__menu-item">
+              <a href="/user-manual/english/usermanual">Manual</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/blog">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/faq">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/releases/releases">Releases</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/examples/examples">Examples</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: url('/assets/images/splash2.png');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Design
+
+        
+      </h1>
+      
+      
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Design">
+    <meta itemprop="description" content="High quality rendering">
+    <meta itemprop="datePublished" content="2024-11-16T06:47:40+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h3 id="high-quality-rendering">High quality rendering</h3>
+
+<p>Draw beautiful circuits in publishing quality.</p>
+
+<p><img src="/assets/images/design/counter.png" alt="Counter" /></p>
+
+<h3 id="rich-component-set">Rich component set</h3>
+
+<p>Use components from a rich built-in component library.</p>
+
+<p><img src="/assets/images/design/rich-component-set.png" width="200" /></p>
+
+<h3 id="hierarchical-design">Hierarchical design</h3>
+
+<p>Use your own circuits as subcircuits in other circuits. Organize these subcircuits
+in libraries to use them in multiple projects.</p>
+
+<p><img src="/assets/images/design/hierarchical-design.png" width="300" /></p>
+
+<h3 id="symbol-editor">Symbol editor</h3>
+
+<p>Use the built-in symbol editor to draw custom symbols for your subcircuits.</p>
+
+<p><img src="/assets/images/design/symbol-editor.png" width="150" /></p>
+
+<p>Or you can forgo to design them and let Antares automatically generate them using two different styles. And if you like, adjust the symbol after it has been generated.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Narrow</th>
+      <th>Wide</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="/assets/images/user-manual/subcircuits/generate_narrow-symbol.png" width="200" /></td>
+      <td><img src="/assets/images/user-manual/subcircuits/generate_wide_symbol.png" width="200" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="various-gate-symbol-styles">Various gate symbol styles</h3>
+
+<p>Choose your preferred gate symbol style.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Style</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>IEC</td>
+      <td><img src="/assets/images/design/iec-symbol-style.png" width="300" /></td>
+    </tr>
+    <tr>
+      <td>ANSI</td>
+      <td><img src="/assets/images/design/ansi-symbol-style.png" width="300" /></td>
+    </tr>
+    <tr>
+      <td>Verbose</td>
+      <td><img src="/assets/images/design/verbose-symbol-style.png" width="300" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="versatile-gates">Versatile gates</h3>
+
+<p>Use gates with up to 8 inputs and optional input negation, and even with multi-bit inputs and outputs.</p>
+
+<p><img src="/assets/images/design/gate-versatility.png" width="400" /></p>
+
+<h3 id="dil-symbols">DIL symbols</h3>
+
+<p>Use the pre-defined DIL shape to wrap your custom circuit in a DIL shape, or
+use the 74xx library in the Antares assets project.</p>
+
+<p><img src="/assets/images/design/dil.png" width="400" /></p>
+
+<h3 id="dynamic-and-interactive-custom-symbols">Dynamic and interactive custom symbols</h3>
+
+<p>Add subcircuit components like switches, LEDs or probes to your subcircuit’s custom symbol
+to let it display subcircuit state, and to let the user interact with internals
+of your subcircuit, e.g. by pressing switches on the symbol.</p>
+
+<p><img src="/assets/images/design/controls.png" width="400" /></p>
+
+<h3 id="individual-symbol-customization">Individual symbol customization</h3>
+
+<p>Rotate or mirror a subcircuit’s symbol, and even edit it individually for
+optimal integration into its host circuit.</p>
+
+<p><img src="/assets/images/design/symbol-customization.png" width="300" /></p>
+
+<h3 id="true-bi-directional-signal-flow">True bi-directional signal flow</h3>
+
+<p>Pins, wires and wire splitters in Antares can be truly bi-directional, allowing
+you to build bus-like circuits with ease.</p>
+
+<h3 id="wire-bundles-and-bus-style-wires">Wire bundles and bus-style wires</h3>
+
+<p>Combine multiple 1-bit wires to multi-bit bundles and denote bus-like wires.</p>
+
+<p><img src="/assets/images/design/wire-types.png" width="350" /></p>
+
+<h3 id="various-wire-logic">Various wire logic</h3>
+
+<p>Choose whether different signals on the same wire should be considered a conflict, or
+whether they should be OR-ed together.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Conflict</th>
+      <th>Wired-OR</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="/assets/images/design/wire-logic-conflict.png" width="500" /></td>
+      <td><img src="/assets/images/design/wire-logic-or.png" width="500" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="automatic-wire-layout">Automatic wire layout</h3>
+
+<p>Let Antares automatically re-layout your wires when you move components.</p>
+
+<p><img src="/assets/images/design/wire-layout.gif" width="350" /></p>
+
+<h3 id="aligning-components">Aligning components</h3>
+
+<p>Let the align tool help you aligning components in complex circuits.</p>
+
+<p><img src="/assets/images/design/align.gif" width="500" /></p>
+
+<h3 id="search-for-components-in-circuits">Search for components in circuits</h3>
+
+<p>Use the search bar to search for components in a circuit based on names, labels, or component types.</p>
+
+<p><img src="/assets/images/user-manual/circuits/search-in-circuit.png" width="700" /></p>
+
+<h3 id="circuit-tests">Circuit tests</h3>
+
+<p>Write test cases to check whether your circuit produces the expected outputs.</p>
+
+<p><img src="/assets/images/design/circuit-tests.png" width="700" /></p>
+
+<h3 id="vhdl-export">VHDL export</h3>
+
+<p>Export your circuits to VHDL and generate a test bench from one of your circuit’s test cases.</p>
+
+<p><img src="/assets/images/design/vhdl-export-sample.png" width="700" /></p>
+
+<h3 id="analog-circuits">Analog circuits</h3>
+
+<p>Design analog circuits and observe electrical current and voltage during simulation. Build analog gates from MOSFETs and use them as subcircuits in your digital circuits.</p>
+
+<p><img src="/assets/images/design/analog.gif" width="500" /></p>
+
+<h3 id="multi-circuit-desktop">Multi-circuit desktop</h3>
+
+<p>Open subcircuits in additional desktop views. Keep track of symbol-to-circuit relations by the color references created by Antares.</p>
+
+<p><img src="/assets/images/design/desktop.png" width="1000" /></p>
+
+<h3 id="multi-window-support">Multi-window support</h3>
+
+<p>Open subcircuits in separate windows to take advantage of workplaces with more than one screen when working with complex projects.</p>
+
+<p><img src="/assets/images/design/multi-window.png" width="1000" /></p>
+
+<h3 id="boolean-expressions-and-circuit-synthesis">Boolean Expressions and Circuit Synthesis</h3>
+
+<p>Define and edit truth tables, generate optimized boolean expressions (DNF), and let
+Antares generate a combinational circuit that realizes these expressions.</p>
+
+<p><img src="/assets/images/user-manual/circuits/truth-table-sample.png" width="1000" /></p>
+
+<h3 id="scripting">Scripting</h3>
+
+<p>Use scripts to customize various parts of Antares’ functionality and the
+behaviour of your circuits. Scripts are written in a custom DSL (Domain Specific Language) that has been specially designed for dealing with
+digital circuits.</p>
+
+<p><img src="/assets/images/design/scripting.png" width="600" /></p>
+
+<h3 id="statistics">Statistics</h3>
+
+<p>Let Antares deep dive into your circuit hierarchy and count how many subcircuits of each type are used, either for “Deep” or “Flat” traversal.</p>
+
+<p><img src="/assets/images/design/statistics.png" width="500" /></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-11-16T06:47:40+00:00">November 16, 2024</time></p>
+        
+      </footer>
+
+      
+
+      <!-- Empty to disable pagination -->
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/flandreas/antares" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/AntaresCircuit" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 Andreas Fleischmann. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

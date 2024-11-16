@@ -1,0 +1,706 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Circuit Parameters - Antares</title>
+<meta name="description" content="Digital circuit simulation and learning platform ">
+
+
+  <meta name="author" content="Andreas Fleischmann">
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Antares">
+<meta property="og:title" content="Circuit Parameters">
+<meta property="og:url" content="https://www.antarescircuit.io/user-manual/english/circuits/circuit-parameters">
+
+
+  <meta property="og:description" content="Digital circuit simulation and learning platform ">
+
+
+
+  <meta property="og:image" content="https://www.antarescircuit.io/assets/images/splash2.png">
+
+
+
+  <meta name="twitter:site" content="@AntaresCircuit">
+  <meta name="twitter:title" content="Circuit Parameters">
+  <meta name="twitter:description" content="Digital circuit simulation and learning platform ">
+  <meta name="twitter:url" content="https://www.antarescircuit.io/user-manual/english/circuits/circuit-parameters">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.antarescircuit.io/assets/images/splash2.png">
+  
+
+  
+
+
+
+
+
+
+
+
+<link rel="canonical" href="https://www.antarescircuit.io/user-manual/english/circuits/circuit-parameters">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Andreas Fleischmann",
+      "url": "https://www.antarescircuit.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Antares Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- Used for AsciiDoc integration -->
+<link rel="stylesheet" href="/assets/css/asciidoc.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+<link rel="manifest" href="/assets/images/site.webmanifest">
+<link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="theme-color" content="#ffffff">
+
+<!-- end custom head snippets -->
+
+  <script async defer data-domain="antarescircuit.io" src="https://plausible.io/js/plausible.js"></script></head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Antares
+          <span class="site-subtitle">Digital Circuit Learning Platform</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/docs/quick-start/">Quick-Start</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://app.antarescircuit.io">Webapp</a>
+            </li><li class="masthead__menu-item">
+              <a href="/user-manual/english/usermanual">Manual</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/blog">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/faq">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/releases/releases">Releases</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/examples/examples">Examples</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: url('/assets/images/splash2.png');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Circuit Parameters
+
+        
+      </h1>
+      
+      
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">User Manual</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/usermanual">Welcome</a></li>
+          
+            <li><a href="/user-manual/english/first-steps/first-steps">First Steps</a></li>
+          
+            <li><a href="/user-manual/english/first-steps/orientation">Orientation</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Projects and libraries</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/projects-libraries/projects-libraries">Overview</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/libraries">Libraries</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/projects">Projects</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/workbench">Workbench</a></li>
+          
+            <li><a href="/user-manual/english/base-library/base-library">Library Reference</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Circuits</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/circuits/circuits">Circuits</a></li>
+          
+            <li><a href="/user-manual/english/circuits/wires">Wires</a></li>
+          
+            <li><a href="/user-manual/english/circuits/circuit-tests">Tests</a></li>
+          
+            <li><a href="/user-manual/english/circuits/text-style">Text Style</a></li>
+          
+            <li><a href="/user-manual/english/circuits/synthesis">Synthesis</a></li>
+          
+            <li><a href="/user-manual/english/circuits/analysis">Analysis</a></li>
+          
+            <li><a href="/user-manual/english/subcircuits/subcircuits">Subcircuits</a></li>
+          
+            <li><a href="/user-manual/english/circuits/vhdl-export">VHDL Export</a></li>
+          
+            <li><a href="/user-manual/english/circuits/analog-circuits">Analog circuits</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Simulation</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/simulation/simulation">Simulation</a></li>
+          
+            <li><a href="/user-manual/english/oscilloscope/oscilloscope">Oscilloscope</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Other Basic Techniques</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/styles/styles">Styles and Themes</a></li>
+          
+            <li><a href="/user-manual/english/description/description">Descriptions and Explanations</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Advanced Techniques</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/scripting/scripting">Scripting</a></li>
+          
+            <li><a href="/user-manual/english/scenarios/scenarios">Scenarios</a></li>
+          
+            <li><a href="/user-manual/english/usecases/usecases">Use Cases</a></li>
+          
+            <li><a href="/user-manual/english/circuits/circuit-parameters" class="active">Circuit Parameters</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Miscellaneous</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/misc/preferences">Preferences</a></li>
+          
+            <li><a href="/user-manual/english/misc/key-bindings">Key Bindings</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Web</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/web/web-publishing">Publish circuits</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Circuit Parameters">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#_introduction">Introduction</a>
+    <ul>
+      <li><a href="#_restrictions">Restrictions</a></li>
+      <li><a href="#_example">Example</a></li>
+    </ul>
+  </li>
+  <li><a href="#_designing-the-plain-circuit">Designing the Plain Circuit</a></li>
+  <li><a href="#graphParamDefinitions">Defining Circuit Parameters</a></li>
+  <li><a href="#_using-circuit-parameters">Using Circuit Parameters</a></li>
+  <li><a href="#_setting-parameter-values">Setting Parameter Values</a></li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <div class="sect1">
+<h2 id="_introduction">Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Sometimes you design a circuit that you want to use as a sub circuit in different variants. Consider for example a particular counter circuit that you want to use with different bit widths. You would have to design a circuit variant for every bit width, e.g. 4 bit, 8 bit, 16 bit and so forth. This is annoying, because all these circuits would essentially be the same, except for their bit width.</p>
+</div>
+<div class="paragraph">
+<p>To avoid this, you can build just one circuit and define a circuit parameter of type "Bit Width". The components in your circuit could then refer to this circuit parameter to get a value for their own bit width. When using this circuit as a sub circuit in another circuit, you choose the concrete value for the bit width, and all components in the subcircuit will automatically adjust to that value.</p>
+</div>
+<div class="sect2">
+<h3 id="_restrictions">Restrictions</h3>
+<div class="paragraph">
+<p>The circuit parameter system currently has the following restrictions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Supported parameter types</strong>: Currently only "Bit Width" and "Integer Number" are supported as type of circuit parameter. More types like "Boolean", "Text" or "Light Color" will follow.</p>
+</li>
+<li>
+<p><strong>Circuit Generation</strong>: Circuit parameters can only be used as values of circuit element properties. Although perhaps desirable, it is not yet possible to generate the contents of a sub circuit depending on the value of a circuit parameter.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_example">Example</h3>
+<div class="paragraph">
+<p>The rest of this chapter is based on a concrete example of a parametrized circuit. It describes how you would build a n-bit multiplier circuit, so the circuit will contain a parameter "BW" of type "Bit Width".</p>
+</div>
+<div class="paragraph">
+<p>Since multiplication requires complex circuitry, the example assumes that you would define the circuit&#8217;s logic as an Antares DSL execution script. However, even as a fully scripted sub circuit, it is necessary that the multiplier&#8217;s input ports are of bit width n, and its output port is of bit width 2 * n. The example therefore also shows how to define expressions for circuit element bit width properties based on circuit parameters.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_designing-the-plain-circuit">Designing the Plain Circuit</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Let&#8217;s start by defining the plain multiplication circuit. Since we use an Antares DSL script for the execution logic, we only have to build a circuit that contains the input and output ports.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/circuits/parameters-multiplier-plain.png" alt="Plain Multiplier" width="300">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="graphParamDefinitions">Defining Circuit Parameters</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Next, we need to define a "Bit Width" parameter for our multiplication circuit. Click on the background of the circuit to display its properties in the properties window. Click on the property "Parameters" (which currently says "None") and then click on the button at the right side. This opens the dialog for editing the circuit parameter definitions.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/circuits/parameters-dialog.png" alt="Definition" width="600">
+</div>
+</div>
+<div class="paragraph">
+<p>You can define multiple circuit parameters for a circuit. Each circuit parameter has the following properties:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Name</strong>: The name of the parameter. You reference this name when you write an expression for a bit width property of your circuit elements. Note that this name must be unique, and that is must not collide with names of circuit inputs or outputs.</p>
+</li>
+<li>
+<p><strong>Type</strong>": The type of the parameter. This determines where you can use the value of this parameter definition. A parameter definition of type "Bit Width" can only provide values for bit width properties of circuit elements.</p>
+</li>
+<li>
+<p><strong>Default Value</strong>: The default value of this parameter definition. This default value is applied to all parametrized circuit components when you open the circuit as a toplevel circuit, i.e. without the context of a sub circuit element which would normally provide the value to be used.</p>
+</li>
+<li>
+<p><strong>Semantic</strong>: Used to express what the semantic or meaning of the parameter is. This can be used by other parts of Antares.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Click the "Add" button to add a new parameter definition. Specify e.g. "BW" as the name of the parameter definition, choose e.g. "8" as the "Default Value", and click the "Apply" button to add your new parameter definition to the list.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/circuits/parameters-list.png" alt="Expression" width="600">
+</div>
+</div>
+<div class="paragraph">
+<p>If you select an entry in the list, its values are filled in the form below the list, allowing you to change its properties. Click "Apply" to apply your changes to the list.</p>
+</div>
+<div class="paragraph">
+<p>When you&#8217;re done, click "Save" to save your parameter definition to the circuit. Save the circuit to store your changes.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_using-circuit-parameters">Using Circuit Parameters</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Now that your multiplier circuit is parametrized, you want to use the bit width parameter as bit width of your inputs and output elements. Input "A" and "B" should have the bit width of the multiplier circuit (e.g. 8), where as output "O" should have a bit width twice as wide as the inputs (e.g. 16)</p>
+</div>
+<div class="paragraph">
+<p>Select the circuit input "A" and click on the "Bit Width" property in the property window. Click on the "Edit Script" button at the left side of the property field to open the expression editor. By entering <code>BW</code> as bit width expression, you&#8217;re saying that you want the bit width of circuit input "A" to be the same as the circuit&#8217;s bit width.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/circuits/parameters-expression.png" alt="Expression" width="600">
+</div>
+</div>
+<div class="paragraph">
+<p>After confirmation with "OK", you will notice that the current bit width of circuit input "A" has changed to 8. This is because the multiplier circuit is currently the top-level circuit, which is why the default value of the circuit parameter gets applied to every parametrized circuit component as current value.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+You can also directly enter "=BW" in the text field of the property "Bit Width" to avoid opening the script dialog. Don&#8217;t forget to start your expression with a "=" character to tell Antares that you enter an expression instead of a constant bit width.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Do the same for circuit input "B". Do the same also for circuit output "O", except that this time you specify <code>BW * 2</code> as expression.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/circuits/parameters-expression-output.png" alt="Expression" width="600">
+</div>
+</div>
+<div class="paragraph">
+<p>To round it up, you could change the "Representation" property of all circuit ports to "Hexadecimal" and add an ellipse component with the text "Scripted" making it clear to all users opening this circuit that the logic of the circuit is scripted.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/circuits/parameters-circuit-scripted.png" alt="Expression" width="400">
+</div>
+</div>
+<div class="paragraph">
+<p>Finally, set the circuit&#8217;s "Function" property to <code>O = A * B</code> and select the circuit&#8217;s property "Always use function".</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+To achieve implicit bit width extension of intermediate calculation results, you can (and should) use <code>O = (1 * A) * (1 * B)</code> as "Function" expression. This will cast the input signals to numbers before doing the multiplication. See <a href="/user-manual/english/scripting/scripting-dsl"><em>Antares DSL</em></a> for the reasoning behind this.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>As usual when designing circuits to be used as sub circuits, you need to draw its circuit symbol in the symbol editor, e.g. something like this:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/circuits/parameters-multiplier-symbol.png" alt="Expression" width="200">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_setting-parameter-values">Setting Parameter Values</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You are now ready to use your parametrized multiplier as a sub circuit in another circuit. Create a new circuit and add your parametrized multiplier as a component. You notice that is has bit width 8 per default.</p>
+</div>
+<div class="paragraph">
+<p>Select the multiplier and notice that the properties window contains a property "Bit Width 'BW'" allowing you to select a value for the bit width parameter. Choose e.g. 16 and observe how the input&#8217;s bit width change to 16 and the output&#8217;s bit width changes to 32.</p>
+</div>
+<div class="paragraph">
+<p>Add inputs and outputs of appropriate bit width that allow to test your parametrized multiplier.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/circuits/parameters-multiplier-usage.png" alt="Expression" width="600">
+</div>
+</div>
+<div class="paragraph">
+<p>Note that circuit parameters also work recursively. You could define a bit width parameter in your test circuit and use this parameter as expression in the bit width property of the multiplier component.</p>
+</div>
+</div>
+</div>
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      <!-- Empty to disable pagination -->
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/flandreas/antares" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/AntaresCircuit" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 Andreas Fleischmann. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

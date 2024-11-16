@@ -1,0 +1,980 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>First Steps - Antares</title>
+<meta name="description" content="Digital circuit simulation and learning platform ">
+
+
+  <meta name="author" content="Andreas Fleischmann">
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Antares">
+<meta property="og:title" content="First Steps">
+<meta property="og:url" content="https://www.antarescircuit.io/user-manual/english/first-steps/first-steps">
+
+
+  <meta property="og:description" content="Digital circuit simulation and learning platform ">
+
+
+
+  <meta property="og:image" content="https://www.antarescircuit.io/assets/images/splash2.png">
+
+
+
+  <meta name="twitter:site" content="@AntaresCircuit">
+  <meta name="twitter:title" content="First Steps">
+  <meta name="twitter:description" content="Digital circuit simulation and learning platform ">
+  <meta name="twitter:url" content="https://www.antarescircuit.io/user-manual/english/first-steps/first-steps">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.antarescircuit.io/assets/images/splash2.png">
+  
+
+  
+
+
+
+
+
+
+
+
+<link rel="canonical" href="https://www.antarescircuit.io/user-manual/english/first-steps/first-steps">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Andreas Fleischmann",
+      "url": "https://www.antarescircuit.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Antares Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- Used for AsciiDoc integration -->
+<link rel="stylesheet" href="/assets/css/asciidoc.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+<link rel="manifest" href="/assets/images/site.webmanifest">
+<link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="theme-color" content="#ffffff">
+
+<!-- end custom head snippets -->
+
+  <script async defer data-domain="antarescircuit.io" src="https://plausible.io/js/plausible.js"></script></head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Antares
+          <span class="site-subtitle">Digital Circuit Learning Platform</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/docs/quick-start/">Quick-Start</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://app.antarescircuit.io">Webapp</a>
+            </li><li class="masthead__menu-item">
+              <a href="/user-manual/english/usermanual">Manual</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/blog">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/faq">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/releases/releases">Releases</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/examples/examples">Examples</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: url('/assets/images/splash2.png');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          First Steps
+
+        
+      </h1>
+      
+      
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">User Manual</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/usermanual">Welcome</a></li>
+          
+            <li><a href="/user-manual/english/first-steps/first-steps" class="active">First Steps</a></li>
+          
+            <li><a href="/user-manual/english/first-steps/orientation">Orientation</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Projects and libraries</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/projects-libraries/projects-libraries">Overview</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/libraries">Libraries</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/projects">Projects</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/workbench">Workbench</a></li>
+          
+            <li><a href="/user-manual/english/base-library/base-library">Library Reference</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Circuits</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/circuits/circuits">Circuits</a></li>
+          
+            <li><a href="/user-manual/english/circuits/wires">Wires</a></li>
+          
+            <li><a href="/user-manual/english/circuits/circuit-tests">Tests</a></li>
+          
+            <li><a href="/user-manual/english/circuits/text-style">Text Style</a></li>
+          
+            <li><a href="/user-manual/english/circuits/synthesis">Synthesis</a></li>
+          
+            <li><a href="/user-manual/english/circuits/analysis">Analysis</a></li>
+          
+            <li><a href="/user-manual/english/subcircuits/subcircuits">Subcircuits</a></li>
+          
+            <li><a href="/user-manual/english/circuits/vhdl-export">VHDL Export</a></li>
+          
+            <li><a href="/user-manual/english/circuits/analog-circuits">Analog circuits</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Simulation</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/simulation/simulation">Simulation</a></li>
+          
+            <li><a href="/user-manual/english/oscilloscope/oscilloscope">Oscilloscope</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Other Basic Techniques</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/styles/styles">Styles and Themes</a></li>
+          
+            <li><a href="/user-manual/english/description/description">Descriptions and Explanations</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Advanced Techniques</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/scripting/scripting">Scripting</a></li>
+          
+            <li><a href="/user-manual/english/scenarios/scenarios">Scenarios</a></li>
+          
+            <li><a href="/user-manual/english/usecases/usecases">Use Cases</a></li>
+          
+            <li><a href="/user-manual/english/circuits/circuit-parameters">Circuit Parameters</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Miscellaneous</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/misc/preferences">Preferences</a></li>
+          
+            <li><a href="/user-manual/english/misc/key-bindings">Key Bindings</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Web</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/web/web-publishing">Publish circuits</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="First Steps">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#_tldr">TL;DR</a></li>
+  <li><a href="#_drawing-circuits">Drawing circuits</a></li>
+  <li><a href="#_navigating-within-the-circuit">Navigating within the circuit</a></li>
+  <li><a href="#_simulating-circuits">Simulating circuits</a></li>
+  <li><a href="#_creating-symbols">Creating symbols</a></li>
+  <li><a href="#_reusing-circuits">Reusing circuits</a></li>
+  <li><a href="#_navigating-in-subcircuits">Navigating in subcircuits</a></li>
+  <li><a href="#_next-steps">Next steps</a></li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>In this chapter you will learn the most important areas of the main window and the basic functions of Antares.</p>
+</div>
+<div class="paragraph">
+<p>If necessary, see <a href="/user-manual/english/first-steps/orientation">Orientation</a> for a basic overview of the user interface&#8217;s elements.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tldr">TL;DR</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>When Antares is  started for the first time, a project "My first project" with an empty circuit "New Circuit" is created and opened.</p>
+</li>
+<li>
+<p>To add an AND gate to your circuit, expand the folder "Library 'Standard'" and "Frequently used" in the explorer tree at the left side of the window, press the left mouse button on the "AND" icon, drag it into the blank area of the circuit, and release the mouse button.</p>
+</li>
+<li>
+<p>To connect components with a wire, hover with the mouse over a pin until a green circle appears, press the left mouse button, and drag the mouse onto the destination pin. Release the mouse button after a green circle appears.</p>
+</li>
+<li>
+<p>To create a wire junction, hover with the mouse over a wire, press <b class="button">ALT</b> to display the green circle, press the left mouse button, and drag the mouse onto a destination pin until the green circle appears. Release the mouse button to create the wire.</p>
+</li>
+<li>
+<p>To start simulation, press the third button in the toolbar (the one with the right-pointing triangle).</p>
+</li>
+<li>
+<p>During simulation, you can click with the mouse on active components like switches to alter signals.</p>
+</li>
+<li>
+<p>To stop simulation and to continue editing your circuit, press the right-pointing triangle again.</p>
+</li>
+<li>
+<p>Save your circuit with <span class="menuseq"><b class="menu">File</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Save</b></span> or by pressing CMD+S</p>
+</li>
+<li>
+<p>To create a new circuit within your project, select "My first project" in the explorer tree, right-click with the mouse, and select "New circuit" in the popup menu.</p>
+</li>
+<li>
+<p>To create a new project, select <span class="menuseq"><b class="menu">File</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Projects</b></span> and press <b class="button">New</b>.</p>
+</li>
+<li>
+<p>To open another project, select <span class="menuseq"><b class="menu">File</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Projects</b></span>, select the project in the displayed list, and press <b class="button">Open</b>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_drawing-circuits">Drawing circuits</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As a first exercise example we build a circuit that represents the XOR function of two variables. Actually, this would not be necessary, because the standard library of Antares already contains a built-in XOR component. Nevertheless, we will build our own XOR component, because it is a good introductory example.</p>
+</div>
+<div class="paragraph">
+<p>The truth table of the XOR function looks like this:</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 40%;">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">A</th>
+<th class="tableblock halign-left valign-top">B</th>
+<th class="tableblock halign-left valign-top">A xor B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>From literature we know that the XOR function can be constructed as follows from AND gates, OR gates, and inverters.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/assets/images/user-manual/first-steps/xor.png" alt="XOR" width="300">
+</div>
+</div>
+<div class="paragraph">
+<p>First you add the logic gates to the circuit. To do this, expand the "Logical Gates" folder in the "Standard" library in the workbench, click on the AND gate with the mouse, and drag the AND gate to the drawing area of the main view (Drag&amp;Drop). In the same way you add the OR gate and the inverters, which you can also find in the "Logical Gates" directory.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Components that are frequently used when building circuits can also be found in the folder called "Frequently used".
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>As soon as you have added a component to the circuit, the selection tool becomes active. You can use it to select components and move them by holding down the left mouse button while dragging. Place the components so that there is some space between them for the wires you are going to add later.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Antares supports Copy/Paste. Instead of dragging the same component several times from the library into the circuit, you can also select the first added inverter and copy it with <span class="keyseq"><kbd>Cmd</kbd>+<kbd>C</kbd></span> / <span class="keyseq"><kbd>Cmd</kbd>+<kbd>V</kbd></span> (macOS) or <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>C</kbd></span> / <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>V</kbd></span> (Windows).
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/first-steps/gates-en.png" alt="Gates" width="700">
+</div>
+</div>
+<div class="paragraph">
+<p>Next you add the circuit inputs and the circuit output. The circuit input can be found in the "Input" folder of the library, and the circuit output is located in the "Output" folder. Drag and drop them into the circuit just like you did with the logic gates.</p>
+</div>
+<div class="paragraph">
+<p>Antares automatically assigns continuous names of the form "I1", "I2" etc. to newly added inputs and outputs. To change the name, select the output, enter the new name "O" in the "Name" field of the properties view and confirm your input by pressing <kbd>Enter</kbd> (or by just leaving the edit field). In the same way you change the names of the inputs to "A" and "B".</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/first-steps/inout-en.png" alt="Inputs and outputs" width="700">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You may wonder why we don&#8217;t use switches and an LED instead of inputs and output. We want to build an XOR gate that can be reused as a component in other circuits. In order to take signals from and return results to the surrounding circuit, input and output components must be used. You will see in the section "Simulating Circuits" that inputs can be used like switches, and that outputs can display the current signal during simulation just like LEDs do.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>After you have added all components to the circuit, you can connect them with wires. When you move the mouse over the output pin of a component, Antares will display a small green circle to indicate that a wire can be added at this point. Left-click and drag the mouse to the input of the next component to which the wire should lead and release the mouse button. At the input of the target component, Antares will again indicate with a small green circle that the wire can be terminated here.</p>
+</div>
+<div class="paragraph">
+<p>From the inputs A and B, two wires each lead to different components. To create a junction of a wire from an existing wire, move the mouse over the existing wire and press the <kbd>Alt</kbd> key. Antares will then again indicate with a small green circle that a new wire can be started here.</p>
+</div>
+<div class="paragraph">
+<p>When you drag the mouse while creating a wire, Antares automatically creates a layout of the resulting wire. After creating the wire, you can adjust the layout by clicking on a wire segment and dragging it while holding down the mouse button.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/first-steps/wires-en.png" alt="wires" width="700">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Antares also allows you to create non-orthogonal wires or to design the layout yourself by clicking with the mouse while creating the wire. These features will be explained in later chapters.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Congratulations! You have created your first own Antares circuit. Save it now by pressing <span class="keyseq"><kbd>Cmd</kbd>+<kbd>S</kbd></span>(macOS) resp. <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>S</kbd></span>(Windows) or by selecting the menu <span class="menuseq"><b class="menu">File</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Save</b></span>. Your XOR circuit is now saved in the project "My first project" in the circuit "New circuit".</p>
+</div>
+<div class="paragraph">
+<p>Finally, you now adjust the name of the circuit in the properties window. Make sure that no component in the circuit is selected, so that the properties of the whole circuit are displayed and not those of the selected component. Click on the background of the circuit. The properties window now shows the title "Properties of 'New Circuit'". Enter "XOR" in the "Name" field and finish by pressing <kbd>Enter</kbd> (or leaving the field). Save the circuit again. The new name of the circuit is now displayed in the workbench.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You may have noticed the globe symbol in the "Name" field. This indicates the internationalization feature of Antares, which allows you to enter all names and texts in all supported languages. This feature will be explained in later chapters.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_navigating-within-the-circuit">Navigating within the circuit</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Antares offers many possibilities to select the display size of the circuit and the displayed region. When the mouse is over the circuit in the main window, the display size of the circuit (zoom) can be influenced by using the mouse wheel. By default, the displayed region (pan) is changed by moving the mouse while holding down the middle mouse button.</p>
+</div>
+<div class="paragraph">
+<p>Size and region of the display can also be controlled via the menu and the key status. To do this, use the options in the "View" menu  e.g. with <span class="menuseq"><b class="menu">View</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Zoom to fit</b></span> or the corresponding keyboard shortcut to choose the size so that the circuit occupies the entire available space of the main view.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The zoom and pan methods can be changed in the "Preferences" dialog (<span class="menuseq"><b class="menu">Antares</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Settings</b></span>)
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_simulating-circuits">Simulating circuits</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>With Antares, digital circuits can not only be drawn, but also simulated. Press the button with the arrow symbol in the simulation tools to start the simulation.</p>
+</div>
+<div class="paragraph">
+<p>You will notice that the colors of the inputs, the wires and the output have changed. With the default settings, Antares uses a dark green color to represent signal 0 and a light green color for signal 1. In addition, inputs and outputs also display the current signal as text.</p>
+</div>
+<div class="paragraph">
+<p>Now click with the left mouse button on an input and observe how the circuit behaves. Try all possible value combinations of the two inputs and check if the output really only has the value 1 if the two inputs have different values.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/first-steps/simulation-en.png" alt="Simulation" width="700">
+</div>
+</div>
+<div class="paragraph">
+<p>A speciality of Antares is the possibility to display the signal flow in a circuit as an animation. Move the slider of the simulation tools to the left-most of the three areas. The tooltip of the slider will then display the text "Simulation Speed: Explore".</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/first-steps/simulationTool-en.png" alt="Simulation Tool" width="400">
+</div>
+</div>
+<div class="paragraph">
+<p>If you now change the value of an input again by clicking with the mouse, you will see how Antares animates the flow of signals through the circuit.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/first-steps/animation-en.png" alt="Animation" width="700">
+</div>
+</div>
+<div class="paragraph">
+<p>The slider in the simulation tools can be used to choose between three different speed categories:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Explore</dt>
+<dd>
+<p>In this category, the simulation is executed at the slowest speed. The wires display the signal by their color, and the flow of signals through the circuit is animated. When using subcircuits, the symbol of the subcircuits performs a "glow animation" to indicate that the subcircuit is currently processing changed input signals.</p>
+</dd>
+<dt class="hdlist1">Observe</dt>
+<dd>
+<p>This is the category that is active by default. In this category, the wires display the signal by color, but no animations are performed.</p>
+</dd>
+<dt class="hdlist1">Use</dt>
+<dd>
+<p>In this category the simulation is executed as fast as possible. The wires do not display the signal by their color, and no animations are performed. This category is typically used to simulate complex circuits such as entire microprocessors that should execute a machine program as quickly as possible.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>The circuit cannot be edited in simulation mode. Press the button with the arrow symbol in the simulation tools to return to the edit mode.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_creating-symbols">Creating symbols</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Each circuit you build in Antares can be reused as a component in other, higher level circuits. After you have already built your XOR circuit in the previous sections, you can now define the symbol that will be used as a component when your XOR circuit is used within another circuit.</p>
+</div>
+<div class="paragraph">
+<p>Symbols are created in the symbol editor. Use the two right-most buttons in the toolbar to toggle between the circuit editor and the symbol editor.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This section is not up-to-date anymore. In the current release, Antares generates the symbol automatically, including adding input and outputs to the symbol. This is indicated by the "Symbol generated" checkbox in the toolbar. To follow along with the description below, you can first select all symbol elements and them. This turns the symbol editor into manual (e.g. not auto-generated) mode.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The symbol editor contains a tree on the left side, which offers the elements you can add to the symbol, and the drawing area on the right side, where the symbol of the circuit is created. For this introduction, you will only use the elements in the "Ports" folder of the tree. The elements in the "Controls" and "Subcircuits" folders represent advanced concepts that will be explained in later chapters of this user manual.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/first-steps/symboleditor-en.png" alt="symbol editor" width="700">
+</div>
+</div>
+<div class="paragraph">
+<p>To use a circuit as a subcircuit in a higher order circuit, at least the inputs and outputs of the circuit must be added to the symbol. The "Ports" directory of the tree in the left part contains the two inputs "A" and "B" and the output "O".</p>
+</div>
+<div class="paragraph">
+<p>Drag and drop the two inputs and the output into the drawing area. By default, inputs are oriented to the left (west), while outputs point to the right (east). To change the orientation, select the component in the drawing area and set the desired orientation in the "Orientation" field of the properties window at the bottom left.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+You can also use the menu option <span class="menuseq"><b class="menu">Edit</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Rotate</b></span> or keyboard key <span class="keyseq"><kbd>Cmd</kbd>+<kbd>R</kbd></span> to rotate components.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The symbol of each new circuit contains a filled rectangle by default, which can be used as the "body" of the symbol. Change the rectangle to a suitable size and place the inputs at the left edge of the rectangle and the output at its right edge. Use the text tool from the drawing tools to add text to the symbol drawing, select the text, and change the text in the "Text" field of the properties view to "XOR".</p>
+</div>
+<div class="paragraph">
+<p>The dark blue crosshairs represent the future origin location of the symbol graphic. Move it so that it is at the end of the pin of input "A".</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/first-steps/symboleditor-final-en.png" alt="Finished symbol" width="700">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Note that in the tree on the left, the "Ports" directory is empty in the meantime. Antares moves the elements back and forth between the tree and the drawing area. If you delete a port in the drawing area, it will reappear in the "Ports" directory of the tree. The same happens when you add or remove a port in the circuit editor.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The creation of the symbol for your XOR component is now complete. Switch back to the circuit editor and save the circuit. If you now select your circuit "XOR" in the workbench, you will see the new symbol in the preview.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_reusing-circuits">Reusing circuits</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Next, you will learn how to reuse your new XOR component in a surrounding circuit.</p>
+</div>
+<div class="paragraph">
+<p>To do this, you will create another circuit in the project "My first project". Select the project in the workbench and select  <span class="menuseq"><b class="menu">Context Menu</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">New Circuit</b></span>. Antares now asks you for the name of the new circuit. Enter e.g. "Usage of XOR" and confirm with <b class="button">OK</b>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Make sure the "Type" field is set to "Digital". The other option "Analog" is an advanced concept which is covered in other chapters of the user manual.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The new, empty circuit "Usage of XOR" appears in the workbench project and is also opened in the main view. In the tree of the workbench the currently open circuit is displayed with an orange icon. You can switch between the two circuits by double-clicking on the entry in the tree. However, only one circuit can be open for editing at a time.</p>
+</div>
+<div class="paragraph">
+<p>Now open the circuit "Usage of XOR" by double-clicking and drag and drop your XOR component into the previously empty circuit. Add a switch and an LED so that the component can be tested. Open the "Input" directory in the "Standard" library in the workbench and drag and drop two switches into the circuit. In the same way, add an LED from the "Output" directory of the "Standard" library to the circuit. Connect the outputs of the switches to the inputs of your XOR component, and connect its output to the LED. Then save your new circuit.</p>
+</div>
+<div class="paragraph">
+<p>If you now start the simulation and press the switches, you will see how Antares simulates your XOR component within a surrounding circuit.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/first-steps/component-usage-en.png" alt="Component usage" width="700">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_navigating-in-subcircuits">Navigating in subcircuits</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In the final step of this introduction, you will learn how to navigate within complex circuits and their subcircuits, and how Antares can display one circuit and several of its subcircuits simultaneously.</p>
+</div>
+<div class="paragraph">
+<p>Antares allows you to "dive" into each subcircuit of a circuit to view its contents. This works in both edit mode and simulation mode. To do this, open your circuit "Usage of XOR", start the simulation, and double click with the left mouse button on the "XOR" component. Antares now executes an animation that replaces the contents of the main view with the inner circuit. The current "Dive depth" is displayed in the navigation bar above the circuit..</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/first-steps/navigation-bar-en.png" alt="Navigation bar" width="500">
+</div>
+</div>
+<div class="paragraph">
+<p>The navigation bar shows the path starting with the main circuit to the currently displayed subcircuit. To return to the main circuit, click with the left mouse button on the path element "Usage of XOR". Antares now executes again an animation, replacing the contents of the main view with the outer circuit.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Sometimes it has to be fast, and you want to omit the animation. To do so, press the <kbd>Cmd</kbd> key at the same time when you dive into a subcircuit or when you click on a path element of the navigation bar to re-surface.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Instead of diving into a subcircuit, sometimes you want to see the surrounding circuit and the subcircuit at the same time. To do this, hold down <kbd>Alt</kbd> when you double-click on the symbol of a subcircuit. Antares then opens the subcircuit in an additional subview.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="/assets/images/user-manual/first-steps/subview-en.png" alt="Subview" width="700">
+</div>
+</div>
+<div class="paragraph">
+<p>Antares automatically places the subviews on the right side of the main view. If you open several subviews, Antares will arrange them one below the other.</p>
+</div>
+<div class="paragraph">
+<p>Notice how Antares gives the symbol in the main circuit a light red background and shows the corresponding opened subcircuit with a frame in the same color. A different color is used for each open symbol. This allows you to keep track of several open subcircuits.</p>
+</div>
+<div class="paragraph">
+<p>The subview contains a navigation bar in the same way as the main view. If the subcircuit would contain more subcircuits, you could also dive into these subcircuits and re-surface with the help of the navigation bar.</p>
+</div>
+<div class="paragraph">
+<p>Subviews can be closed  with the close button at the top right of the navigation bar or by pressing <span class="keyseq"><kbd>Cmd</kbd>+<kbd>W</kbd></span>. When using the keyboard, the subview that currently has the focus is closed. The focus is represented by a thin blue border around the subview.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_next-steps">Next steps</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This completes this first introduction, and you should now be able to use the basic features of Antares to build your own first circuits.</p>
+</div>
+<div class="paragraph">
+<p>Read the rest of the user manual to learn about the other powerful features of Antares.</p>
+</div>
+</div>
+</div>
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      <!-- Empty to disable pagination -->
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/flandreas/antares" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/AntaresCircuit" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 Andreas Fleischmann. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

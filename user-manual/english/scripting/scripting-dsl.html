@@ -1,0 +1,1342 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Antares Scripting DSL - Antares</title>
+<meta name="description" content="Digital circuit simulation and learning platform ">
+
+
+  <meta name="author" content="Andreas Fleischmann">
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Antares">
+<meta property="og:title" content="Antares Scripting DSL">
+<meta property="og:url" content="https://www.antarescircuit.io/user-manual/english/scripting/scripting-dsl">
+
+
+  <meta property="og:description" content="Digital circuit simulation and learning platform ">
+
+
+
+  <meta property="og:image" content="https://www.antarescircuit.io/assets/images/splash2.png">
+
+
+
+  <meta name="twitter:site" content="@AntaresCircuit">
+  <meta name="twitter:title" content="Antares Scripting DSL">
+  <meta name="twitter:description" content="Digital circuit simulation and learning platform ">
+  <meta name="twitter:url" content="https://www.antarescircuit.io/user-manual/english/scripting/scripting-dsl">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.antarescircuit.io/assets/images/splash2.png">
+  
+
+  
+
+
+
+
+
+
+
+
+<link rel="canonical" href="https://www.antarescircuit.io/user-manual/english/scripting/scripting-dsl">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Andreas Fleischmann",
+      "url": "https://www.antarescircuit.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Antares Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- Used for AsciiDoc integration -->
+<link rel="stylesheet" href="/assets/css/asciidoc.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+<link rel="manifest" href="/assets/images/site.webmanifest">
+<link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="theme-color" content="#ffffff">
+
+<!-- end custom head snippets -->
+
+  <script async defer data-domain="antarescircuit.io" src="https://plausible.io/js/plausible.js"></script></head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Antares
+          <span class="site-subtitle">Digital Circuit Learning Platform</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/docs/quick-start/">Quick-Start</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://app.antarescircuit.io">Webapp</a>
+            </li><li class="masthead__menu-item">
+              <a href="/user-manual/english/usermanual">Manual</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/blog">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/faq">FAQ</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/releases/releases">Releases</a>
+            </li><li class="masthead__menu-item">
+              <a href="/docs/examples/examples">Examples</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: url('/assets/images/splash2.png');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Antares Scripting DSL
+
+        
+      </h1>
+      
+      
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">User Manual</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/usermanual">Welcome</a></li>
+          
+            <li><a href="/user-manual/english/first-steps/first-steps">First Steps</a></li>
+          
+            <li><a href="/user-manual/english/first-steps/orientation">Orientation</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Projects and libraries</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/projects-libraries/projects-libraries">Overview</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/libraries">Libraries</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/projects">Projects</a></li>
+          
+            <li><a href="/user-manual/english/projects-libraries/workbench">Workbench</a></li>
+          
+            <li><a href="/user-manual/english/base-library/base-library">Library Reference</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Circuits</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/circuits/circuits">Circuits</a></li>
+          
+            <li><a href="/user-manual/english/circuits/wires">Wires</a></li>
+          
+            <li><a href="/user-manual/english/circuits/circuit-tests">Tests</a></li>
+          
+            <li><a href="/user-manual/english/circuits/text-style">Text Style</a></li>
+          
+            <li><a href="/user-manual/english/circuits/synthesis">Synthesis</a></li>
+          
+            <li><a href="/user-manual/english/circuits/analysis">Analysis</a></li>
+          
+            <li><a href="/user-manual/english/subcircuits/subcircuits">Subcircuits</a></li>
+          
+            <li><a href="/user-manual/english/circuits/vhdl-export">VHDL Export</a></li>
+          
+            <li><a href="/user-manual/english/circuits/analog-circuits">Analog circuits</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Simulation</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/simulation/simulation">Simulation</a></li>
+          
+            <li><a href="/user-manual/english/oscilloscope/oscilloscope">Oscilloscope</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Other Basic Techniques</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/styles/styles">Styles and Themes</a></li>
+          
+            <li><a href="/user-manual/english/description/description">Descriptions and Explanations</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Advanced Techniques</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/scripting/scripting">Scripting</a></li>
+          
+            <li><a href="/user-manual/english/scenarios/scenarios">Scenarios</a></li>
+          
+            <li><a href="/user-manual/english/usecases/usecases">Use Cases</a></li>
+          
+            <li><a href="/user-manual/english/circuits/circuit-parameters">Circuit Parameters</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Miscellaneous</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/misc/preferences">Preferences</a></li>
+          
+            <li><a href="/user-manual/english/misc/key-bindings">Key Bindings</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Web</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/user-manual/english/web/web-publishing">Publish circuits</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Antares Scripting DSL">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#_language-description">Language Description</a>
+    <ul>
+      <li><a href="#_types-and-literals">Types and Literals</a></li>
+      <li><a href="#_statements-and-expressions">Statements and Expressions</a></li>
+      <li><a href="#_operations">Operations</a>
+        <ul>
+          <li><a href="#_arithmetic-operations">Arithmetic Operations</a></li>
+          <li><a href="#_logic-operations">Logic Operations</a></li>
+          <li><a href="#_comparison-operations">Comparison Operations</a></li>
+          <li><a href="#_bit-access-operations">Bit Access Operations</a></li>
+        </ul>
+      </li>
+      <li><a href="#_mixing-types-in-operations">Mixing Types in Operations</a></li>
+      <li><a href="#_variables-and-assignments">Variables and Assignments</a></li>
+      <li><a href="#_arrays">Arrays</a></li>
+      <li><a href="#_conditions">Conditions</a></li>
+      <li><a href="#_loops">Loops</a></li>
+      <li><a href="#_functions">Functions</a></li>
+      <li><a href="#_return-statement">Return Statement</a></li>
+      <li><a href="#_asserted-pins">Asserted Pins</a></li>
+      <li><a href="#_initialization-code-blocks">Initialization Code Blocks</a></li>
+      <li><a href="#_keeping-values-across-script-calls">Keeping values across script calls</a></li>
+      <li><a href="#_accessing-circuit-elements">Accessing Circuit Elements</a></li>
+    </ul>
+  </li>
+  <li><a href="#_example">Example</a></li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <div class="sect1">
+<h2 id="_language-description">Language Description</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_types-and-literals">Types and Literals</h3>
+<div class="paragraph">
+<p><em>Antares DSL</em> is a dynamically typed programming language. Expressions do have a type, but type checking when evaluating assignments or calling functions is only done at runtime.</p>
+</div>
+<div class="paragraph">
+<p><em>Antares DSL</em> supports the following basic types:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Number</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Long (used in digital circuits)</p>
+</li>
+<li>
+<p>Float (used in analog circuits)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>String</p>
+</li>
+<li>
+<p>Digital Signal</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Number values are primarily used as counting variables in loops and in arithmetic expressions. Strings are currently only used as names of pins in circuits. Most of the time, you will use digital signal values.</p>
+</div>
+<div class="paragraph">
+<p><em>Antares DSL</em> uses special prefixes to specify hexadecimal or binary values of digital signals.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>0x</strong> (Hexadecimal literal)</p>
+</li>
+<li>
+<p><strong>0x?</strong> (Undefined / floating hexadecimal value)</p>
+</li>
+<li>
+<p><strong>0b</strong> (Binary literal)</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript">// Long number literal
+42
+
+// Float number literal
+3.14
+
+// String literal
+"Hello"
+
+// Hexadecimal literal
+0xFA
+
+// Hexadecimal literal with 8 undefined (floating) bits
+0x?8
+
+// Binary literal
+0b1001
+
+// Binary literal with undefined (floating) bit
+0b00Z01</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When hexadecimal values are combined with or assigned to other hexadecimal values with a different bit width, the value with the smaller bit width is left padded with zeros.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Note that there is no "Boolean" type. Booleans are represented as Numbers, where 0 (zero) is interpreted as "false", and every value other than 0 is interpreted as "true".
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_statements-and-expressions">Statements and Expressions</h3>
+<div class="paragraph">
+<p>An <em>Antares DSL</em> script is a sequence of statements. All of these statements are dealing somehow with expressions that get evaluated to values. Statements return those values as their result. These results can be used by other statements that surround those statements, or are simply returned as the final result of a script.</p>
+</div>
+<div class="paragraph">
+<p>This is important to remember when writing conditions scripts from which Antares expects a number to be interpreted as boolean value. In such scripts, the value returned by the last statement of the script will be used as return value of the script.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript">// This would just return 0
+0
+
+// This would return the result of evaluating the expression
+A * (B + C)
+
+// This would return the result of the `then` block in the `if` statement
+if (1) {
+    A + B
+} else {
+    C
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_operations">Operations</h3>
+<div class="paragraph">
+<p>The kind of operations you can use in expressions depends on the type of terms the expression contains.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+When expressions contain digital signals that are fully or partially undefined, the user preference
+"Undefined Gate Input Behaviour" is applied to derive a defined value to be used in the expression. The default
+value of this preference is 0.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_arithmetic-operations">Arithmetic Operations</h4>
+<div class="paragraph">
+<p><em>Antares DSL</em> supports the following arithmetic operations.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>+</strong> (Integer addition)</p>
+</li>
+<li>
+<p><strong>-</strong> (Integer subtraction)</p>
+</li>
+<li>
+<p><strong>*</strong> (Integer multiplication)</p>
+</li>
+<li>
+<p><strong>/</strong> (Integer division)</p>
+</li>
+<li>
+<p><strong>^</strong> (Integer power)</p>
+</li>
+<li>
+<p><strong>%</strong> (Modulo operation)</p>
+</li>
+<li>
+<p><strong>&lt;</strong>&lt; (Bitwise shift left)</p>
+</li>
+<li>
+<p><strong>&gt;&gt;</strong> (Bitwise shift right)</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript">A + 25 - B
+A * (B + C)
+A / B
+A % 2
+
+// Raises 2 to the power 3
+2^3
+
+// Shift every bit of 128 by 2 bits to the right
+128 &gt;&gt; 2</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_logic-operations">Logic Operations</h4>
+<div class="paragraph">
+<p><em>Antares DSL</em> supports the following logic operations. These logic operations are performed on every bit of the two terms (or the one term in case of the unary "not" operation).</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>and</strong> (Bitwise AND)</p>
+</li>
+<li>
+<p><strong>or</strong> (Bitwise OR)</p>
+</li>
+<li>
+<p><strong>not</strong> (Bitwise NOT)</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript">A and B
+A and (B or C)
+not A</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_comparison-operations">Comparison Operations</h4>
+<div class="paragraph">
+<p><em>Antares DSL</em> support the following comparison operations. The result of a comparison operation is a value of type "Number", where 0 represents "false" and 1 represents "true".</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>==</strong> (Equal)</p>
+</li>
+<li>
+<p><strong>!=</strong> (Non equal)</p>
+</li>
+<li>
+<p><strong>&gt;</strong> (Greater than)</p>
+</li>
+<li>
+<p><strong>&gt;=</strong> (Greater than or equal)</p>
+</li>
+<li>
+<p><strong>&lt;</strong> (Smaller than)</p>
+</li>
+<li>
+<p><strong>&lt;=</strong> (Smaller than or equal)</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript">A == 42
+A != B
+A &gt; B
+A &gt;= 17
+B &lt;= A</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_bit-access-operations">Bit Access Operations</h4>
+<div class="paragraph">
+<p>Bit access operations are available both for numbers and digital signals and allow to query and to set individual bits of such values.</p>
+</div>
+<div class="paragraph">
+<p>The bit access operator <code>@</code> uses the bit position to reference an individual bit within a value, where the
+first (least significant bit) is referenced by 0 (zero).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript">// Querying bit 2 of value 4 (binary 100) returns 1
+4@2
+
+// Use expressions for the bit position
+A@(I + 1)
+
+// Setting bit 0 in value 4 (binary 100) returns 5 (binary 101)
+4@0 = 1</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mixing-types-in-operations">Mixing Types in Operations</h3>
+<div class="paragraph">
+<p>Since Antares supports arithmetic operations on both numbers and signals signals, you can mix values of
+different types in an operation.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript">F0 + 2 + F1</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this example, F0 and F1 are the names of input pins and are therefore mapped to variables holding
+a digital signal.</p>
+</div>
+<div class="paragraph">
+<p>The first thing to be aware of is that operations on digital signals try to produce results
+<span class="underline">with the same bit width</span>. If you add two 1-bit digital signals, the result is still a 1-bit signal,
+although this might lead to an overflow and therefore to a result different from what you&#8217;ve might expected. The
+reason for this behaviour is that its results are closer to the signals produced by your circuit when simulated
+in "deep simulation" mode.</p>
+</div>
+<div class="paragraph">
+<p>If you mix types in an operation, the term of the <span class="underline">left side</span> determines the type of the result. Therefore, the result of</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript">2 + F1</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>is a number and not a digital signal, because 2 is a number. Adding digital signals to numbers doesn&#8217;t limit the
+result to a particular size other than the maximum length of numbers.</p>
+</div>
+<div class="paragraph">
+<p>Therefore, when your script needs to avoid data truncation by overflow, the above example should be formulated as</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript">2 * F1 + F0</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since expressions are evaluated from left to right, the first term <code>2 * F1</code> evaluates to a number, and then adding that
+number to <code>F0</code> still evaluates to a number.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>There are situations when you can&#8217;t live with results of digital signal expressions being truncated to the bit width of the left-most term. An example of such a situation is an execution script of a multiplier circuit with 8 bit inputs A and B and a 16 bit output O. If you would simply write the execution script as <code>O = A * B</code>, the result would never exceed 255, because the result of the multiplication is truncated to 8 bit before it is assigned to the output.</p>
+</div>
+<div class="paragraph">
+<p>To overcome this limitation, you can explicitly convert digital signals to numbers using e.g. the following expression:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript">// Either so
+O = (1 * A) * (1 * B)
+// or so
+O = (0 + A) * (0 + B)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The seemingly redundant multiplication by 1 converts the signal values to numbers which will then be used for expression evaluation without any upper bound other than the maximum value for long numbers.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_variables-and-assignments">Variables and Assignments</h3>
+<div class="paragraph">
+<p>As in any other programming language, you can use named variables to store values. Variables must be explicitly declared using <code>var</code>.</p>
+</div>
+<div class="paragraph">
+<p>Variable are case-sensitive; their names must start with a character.</p>
+</div>
+<div class="paragraph">
+<p>Use the assignment operator "=" to assign a value to a variable.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript">var A = 42
+var B1 = A * (C + 1)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Variables are accessible from the scope they are declared in, or in any nested scope. Variables can be redeclared
+within a deeper scope.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript">var A = 42
+var B = 17
+if (B == 17) {
+    // This creates a another instance of A within this scope.
+    // The outer A is not changed.
+    var A = 0
+
+    // This accesses B from the outer scope
+    B = 1
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Depending on the context in which your script is executed, Antares makes sure that some variables are already predefined. For example, if you write the execution logic script of a RS Latch, the pin names "S", "R", "Q" and "!Q" are automatically predefined, which allows you to easily access the signals at these pins just by using them as variables.</p>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+If you want to use scripting in your circuits, make sure you don&#8217;t name your pins like any of the reserved keywords of <em>Antares DSL</em> (like <code>var</code>, <code>if</code>, <code>then</code> and so forth.)
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript">if (S and R) {
+    Q = 0
+    '!Q' = 0
+    return
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If your pin name doesn&#8217;t start with a character or contains white space characters such as blanks, you have to quote the pin name using single quotes. This is for example always the case with negated pin names like "!Q".
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_arrays">Arrays</h3>
+<div class="paragraph">
+<p>While variable values are usually "scalar", they can also represent an array of values. This can be useful when writing an execution script for a circuit like a "Register File" in a CPU that has to store multiple register values.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript">// Write array field
+R[0] = 0xE3
+R[1] = 0x73
+
+// Read array field
+A = R[0]</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Although arrays in <em>Antares DSL</em> are conceptually "associative arrays" (i.e. more like maps than arrays) and would support access to values using arbitrary keys, currently only keys of type "Number" are supported.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_conditions">Conditions</h3>
+<div class="paragraph">
+<p>Conditions are used to execute code blocks depending on a certain condition.</p>
+</div>
+<div class="paragraph">
+<p>The <code>if</code> statement is used if there are only two options.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript">if (A == 0) {
+    B = 0xF
+} else {
+    B = 0x0
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>when</code> statement is used if there are more than two options.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript">when (A) {
+    1 : B = 11
+    2 : B = 22
+    3 : {
+        B = 33
+        C = 0
+    }
+    else : B = 99
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_loops">Loops</h3>
+<div class="paragraph">
+<p>Use the <code>for</code> statement to iterate over a block of code while incrementing (or decrementing) a dedicated loop variable.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript">for (i in 1 to 3) {
+    A[i] = 2 * i
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_functions">Functions</h3>
+<div class="paragraph">
+<p><em>Antares DSL</em> supports calling functions that consume argument values and return a result value.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript">var A = 0
+hello(A, 42)
+
+var B = hello(A, 0) + hello(A, 1)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Some functions are globally defined and are available to all scripts written in Antares DSL.
+See <a href="/user-manual/english/scripting/scripting-global-functions"><em>Global DSL Functions</em></a> for a description of these functions.</p>
+</div>
+<div class="paragraph">
+<p>Other functions depend on the context the script is running in. For example, when writing action script for Antares "Usecases", Antares provides the function <code>setInputAt(time, inputName, signal)</code> that allows to set the input of a circuit at a particular simulation time.</p>
+</div>
+<div class="paragraph">
+<p>Check out the corresponding user manual sections to learn what external functions are available
+in particular contexts.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The current version of <em>Antares DSL</em> does not yet allow you to define your own functions.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_return-statement">Return Statement</h3>
+<div class="paragraph">
+<p>Use the <code>return</code> statement to exit the entire script.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript">if (A) {
+    return 1
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The expression of the <code>return</code> statement is optional. If you don&#8217;t specify an expression, 0 is returned.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_asserted-pins">Asserted Pins</h3>
+<div class="paragraph">
+<p>When writing execution scripts for subcircuits, it is often necessary to calculate output signals depending on whether input pins have been asserted or not. An edge-triggered D flipflop for example changes its state only when the clock input "C" has been asserted, i.e. went from 0 to 1 <span class="underline">in the current simulation step</span>.</p>
+</div>
+<div class="paragraph">
+<p>Use the unary <code>^</code> operator to find out if an input port has been asserted.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript">if (^C) {
+    Q = D
+    '!Q' = not D
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The assertion operator respect the "Logic" property of input pins. If an input pin has negative logic, the assertion operator returns 1 if the input pin changed from 1 to 0.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_initialization-code-blocks">Initialization Code Blocks</h3>
+<div class="paragraph">
+<p>When writing execution scripts for subcircuits, you sometimes want to have code that is only executed when the simulation is started, for example to initialize output pin values. You can do so using the <code>init</code> code block.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript">init {
+    Q = 0
+    '!Q' = 1
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_keeping-values-across-script-calls">Keeping values across script calls</h3>
+<div class="paragraph">
+<p>During simulation of a circuit, your scripts are called very often. In the case of subcircuit execution scripts, they are called whenever an input pin has changed its value. When a script gets called, its memory state is reset by Antares, meaning that all variable values from former runs are cleared.</p>
+</div>
+<div class="paragraph">
+<p>However, there are situation where you need to keep such values across multiple script call. An example of such situations is a script for a CPU&#8217;s register file that must contain register values across script calls. You can achieve this using <code>store</code> variable declarations.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript">init {
+    store fcStore
+    for (i in 0 to 15) {
+        fcStore[i] = 0
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Think of <code>store</code> variable declarations as normal <code>var</code> declarations, but with a live time that spans multiple script calls.</p>
+</div>
+<div class="paragraph">
+<p><code>store</code> variables are typically declared within an <code>init</code> block.</p>
+</div>
+<div class="paragraph">
+<p>After having declared a variable as a <code>store</code> variable, in can be accessed like any other normal variable.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript">store fcStore
+if (ENC and ^CLK) {
+    if (FC == 10 or FC &lt;= 4) {
+        fcStore[FC] = C
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_accessing-circuit-elements">Accessing Circuit Elements</h3>
+<div class="paragraph">
+<p>So far, we have seen how a subcircuits scripts accesses the values of the subcircuit&#8217;s pins by simply accessing them as normal variables.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript">O = I1 and I2</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>But what about situations where your script runs in the context of an entire circuit and you need to access the pins of any of the circuit&#8217;s element? This demand arises especially when writing scripts for Antares "Usecases" that need to display explanations depending on the state of the entire circuit.</p>
+</div>
+<div class="paragraph">
+<p>To access pin values of any of the circuit&#8217;s element, you can use the "Property access syntax" based on the <code>#</code> operator.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript">#1:A == 1 and #1:B == 0</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The first number right after the <code>#</code> tag represents the model ID of the circuit components whose pins you want to access. The second value right after the <code>:</code> identifies an individual port of that circuit component. Both together are resolved to the corresponding pin&#8217;s current signal value.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+How do you find out the model ID of a circuit component? Select the component in your circuit and consult the property "Model ID" in the properties window.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The above example identifies pins by their names. Remember to use quoted port names like <code>"!Q"</code> if the port name doesn&#8217;t represent a legal variable name.</p>
+</div>
+<div class="paragraph">
+<p>Since names are not mandatory for ports (and a lot of built-in components like logic gates don&#8217;t have port names), is is also possible to reference ports by their ID.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript">#1:1 == 1 and #1:1 == 0</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>There are two ways how to find out the ID of a port in a circuit component.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Hover with the mouse in the circuit over the port. The displayed tooltip shows the port ID if the circuit is in edit mode (i.e. not being simulated).</p>
+</li>
+<li>
+<p>For custom subcircuits, you can also go to the subcircuit&#8217;s symbol editor, select the port in the editor, and use the value displayed in the property "Port ID".</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>To avoid the need to go to the property window every time to need a port ID of a built-in component, you can also use the following rules of thumb to figure it out by yourself.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Port IDs start with 1</p>
+</li>
+<li>
+<p>Inputs come before outputs</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_example">Example</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following example has been taken from the "Register File" circuit in the "Tanenbaum CPU" example project.</p>
+</div>
+<div class="paragraph">
+<p>The register file contains some 16 bit registers and some constant values used for microprogram execution. The circuit has a 16 bit input "C" and two 16 bit output "A" and "B". The "FA" an "FB" 4 bit inputs determine which of the 16 values should be written to the "A" and "B" output. The 4 bit "FC" input determine which register should store the new value arriving at "C" when "EN" is high and "CLK" is asserted.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript">init {
+    store fcStore
+    for (i in 0 to 15) {
+        fcStore[i] = 0
+    }
+}
+
+if (ENC and ^CLK) {
+    if (FC == 10 or FC &lt;= 4) {
+        fcStore[FC] = C
+    }
+}
+
+when (FA) {
+    0 : A = fcStore[0]
+    1 : A = fcStore[1]
+    2 : A = fcStore[2]
+    3 : A = fcStore[3]
+    4 : A = fcStore[4]
+    5 : A = 0
+    6 : A = 1
+    7 : A = 0xFFFF
+    8 : A = 0x0FFF
+    9 : A = 0x00FF
+    10 : A = fcStore[10]
+    else : A = 0x?16
+}
+
+when (FB) {
+    0 : B = fcStore[0]
+    1 : B = fcStore[1]
+    2 : B = fcStore[2]
+    3 : B = fcStore[3]
+    4 : B = fcStore[4]
+    5 : B = 0
+    6 : B = 1
+    7 : B = 0xFFFF
+    8 : B = 0x0FFF
+    9 : B = 0x00FF
+    10 : B = fcStore[10]
+    else : B = 0x?16
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The register values are stored by the script using the <code>store</code> array variable "fcStore". Note how these values are initialized in the <code>init</code> block.</p>
+</div>
+<div class="paragraph">
+<p>The <code>if</code> statement on line 8 make sure that the stored values are only updated if both "ENC" and "CLK" are asserted.</p>
+</div>
+<div class="paragraph">
+<p>The <code>when</code> statements on line 14 and 29 dispatch the register or constant addresses in "FA" and "FB" to the corresponding output values "A" and "B".</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>It would be nice if the <code>when</code> statement could be used as an expression of the form</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript">A = when (FA) {
+    0: fcStore[0]
+    1: fcStore[1]
+    // ...
+    else : 0x?16
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This has not yet been implemented.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      <!-- Empty to disable pagination -->
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/flandreas/antares" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/AntaresCircuit" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 Andreas Fleischmann. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
