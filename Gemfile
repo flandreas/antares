@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby '3.0.3'
+ruby RUBY_VERSION
 
 gem "minimal-mistakes-jekyll"
 
@@ -33,4 +33,4 @@ end
 # Performance-booster for watching directories on Windows
 gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
 
-gem "webrick", "~> 1.8"
+gem "webrick", "~> 1.7"
