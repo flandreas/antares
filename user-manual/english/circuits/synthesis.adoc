@@ -6,6 +6,7 @@ Antares' "Synthesis" module allows you to specify a combinational circuit's logi
 filling out a truth table or by entering boolean expressions. After that, you can ask Antares
 to generate a circuit from your specification.
 
+[[chapter-truth-tables]]
 == Truth Tables
 
 Truth tables allows you to define the logic of a combinational circuit by filling out
@@ -62,6 +63,7 @@ Besides the name of the circuit to be created, Antares also lets you choose the 
 
 image::user-manual/circuits/synthesis-lut-sample.png[Truth Table,700,align="center"]
 
+[[chapter-boolean-expressions]]
 == Boolean Expressions
 
 Boolean expressions allow you to define the logic of a combinational circuit, optimizing them, and finally letting Antares create a circuit that implements these boolean expressions.

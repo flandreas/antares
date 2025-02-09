@@ -199,3 +199,18 @@ The recommended dimensions of DIL symbols are as follows:
 When using DIL symbols in circuits along with other subcircuits that contain multi-bit ports, you will often
 use splitters to split wires to the single-bit wire required by DIL packages. In order to be aligned with
 the recommended DIL port distance, the splitter components offer a property "Pin Spacing" with a value "Wide". This allows you to connect splitters to DIL symbols with straight wires.
+
+[[symbol-comparison]]
+=== Symbol comparison
+
+Sometimes when drawing a custom symbol for your circuit, you would want it to have the same size as another symbol, or you would want to align the pins with those of another symbol, because they are often used together in a circuit.
+
+Instead of opening the symbol to which you want to align your new circuit, make a screenshot of it, and return to your actual design, Antares hat a feature "Symbol comparison" that transparently blends an existing symbol into your current symbol drawing.
+
+image::user-manual/subcircuits/symbol-comparison.png[,700, align="center"]
+
+When in the symbol editor, open the sidebar "Symbol Comparison" to the right. The tree displays the current desktop content with your open project/library, just like the explorer in the circuit editor does.
+
+Expand the tree to the circuit (or built-in component) whose symbol you want to use as a reference, and select it. The symbol is then displayed as a non-selectable "ghost" version in the symbol drawing area. You can now adjust your new symbol accordingly, e.g. by changing its size or by placing pins to match those of the "ghost" symbol.
+
+Use the "Position" drop-down to choose where the "ghost" symbol is to be placed in relation to your new symbol, e.g. "East" or "North".

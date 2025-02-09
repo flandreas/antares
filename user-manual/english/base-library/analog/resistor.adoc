@@ -13,7 +13,7 @@ A resistor establishes electrical resistance between its two pins.
 
 == Pins
 
-The resistor has two bi-directional pins.
+The resistor has two bidirectional pins.
 
 == Properties
 

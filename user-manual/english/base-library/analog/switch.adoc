@@ -14,7 +14,7 @@ A switch can also be added as a control to the analog circuit's symbol, where it
 
 == Pins
 
-The switch has two bi-directional pins.
+The switch has two bidirectional pins.
 
 == Properties
 

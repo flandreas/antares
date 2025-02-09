@@ -12,7 +12,7 @@ A capacitor stores electrical energy by accumulating electric energy on its plat
 
 == Pins
 
-A capacitor has two bi-directional pins. Depending on the voltage at these pins, and the current charge of the capacitor, the capacitor charges or discharges, resulting in current flowing from or to the pins.
+A capacitor has two bidirectional pins. Depending on the voltage at these pins, and the current charge of the capacitor, the capacitor charges or discharges, resulting in current flowing from or to the pins.
 
 == Properties
 

@@ -78,5 +78,19 @@ Show Disassembler:: Only displayed if the property "Show contents" is selected. 
 Disassembler configuration:: A list of disassembler regular expressions. The definitions must be separated by line breaks.
 
 Highlight current cell even without CS:: Only displayed if the attribute "Show contents" is selected. Normally, the currently addressed cell is only highlighted in the memory contents view if the memory is selected, i.e. the input CS is asserted. If this attribute is set, the last addressed cell keeps highlighted even if the CS is not asserted any more. This can be
-usefull in microcomputer circuits where the ROM component contains the executed machine program, and you want the user to
+useful in microcomputer circuits where the ROM component contains the executed machine program, and you want the user to
 be able to keep track of the progress in the machine program.
+
+== Memory content objects
+
+If you build a microcomputer with Antares, you'll probably write various machine programs to be executed in your microcomputer. Conventionally, you store these programs in external hex files and load them into the ROM of your microcomputer before you start the simulation. If you export your microcomputer project to share it with other people, you have to remember to send your external program files along with your project .zip file.
+
+Starting with version 1.17 of Antares, memory contents files can now be Antares project objects. You can create a new "Memory contents" object in your project or library using the context menu "New memory contents" of a project/library directory node in the explorer tree.
+
+image:user-manual/base-library/memory-contents.png[Memory contents, 600, align="center"]
+
+Once you've created a "Memory contents" object, you can open it by double-clicking on its node in the explorer tree. Use the properties windows to set "Address Bit Width" and "Data Bit Width". Setting the cell values works just the same as editing the contents of a ROM component: Edit the cells directly, or import an external binary file. Use "Save" to store your changes.
+
+Memory content objects are used in ROM components. Set the ROM property "Referenced memory contents" to one of your "Memory contents" objects in your project/library. When the simulation is started, Antares will load the contents of this object into your ROM component.
+
+NOTE:: This feature has precedence over "Read data on every simulation start".

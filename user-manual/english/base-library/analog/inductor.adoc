@@ -1,0 +1,20 @@
+= Inductor
+include::../../../page-variables.txt[]
+:page-permalink: /user-manual/english/base-library/analog/inductor
+
+== Appearance
+
+image:user-manual/base-library/analog/inductor_ansi.png[Inductor (ANSI)]
+image:user-manual/base-library/analog/inductor_iec.png[Resistor (IEC)]
+
+== Behaviour
+
+An inductor stores energy in a magnetic field when an electric current flows through it.
+
+== Pins
+
+The inductor has two bidirectional pins.
+
+== Properties
+
+Inductance:: The inductance of the inductor in Henry.

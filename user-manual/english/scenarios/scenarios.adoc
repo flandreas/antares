@@ -34,6 +34,8 @@ The explanation text of an active scenario is displayed in a text box above the 
 
 Scenarios and their scenario steps are always saved together with the open circuit.
 
+See link:{{site.basedir}}/user-manual/english/scenarios/scenario-scripting[Scripting in Scenarios] for an in-depth explanation of how to use scripting for scenarios.
+
 == Configuration
 
 Scenarios of the currently open circuit are configured in the "Scenarios" sidebar on the right side of the Antares window.
@@ -102,3 +104,13 @@ Highlightings:: A comma-separated list of IDs of components to be highlighted wh
 On Entry:: The script that is executed when the scenario is activated.
 
 On Exit:: The script that is executed when the scenario is deactivated.
+
+=== Scenario Breakpoint
+
+The menu menu:Scenarios[Scenario Breakpoints] can be used to activate or deactivate breakpoints for scenario steps. If activated, and the simulation runs in single-step mode, the simulation gets suspended in a breakpoint whenever a scenario step is activated.
+
+Scenario breakpoints can be useful when writing tutorials with embedded explanations. If you create a scenario step for every point where something interesting happens in the circuit that you want to explain using scenario step descriptions, you can enable scenario step breakpoints to give the student enough time to read the explanation. When he's done reading, he can resume the simulation using the "Pause/Resume" button.
+
+This technique is especially useful when combined with a use case that runs through multiple use cases, only stopping at interesting points.
+
+Can sometimes also be useful for debugging, because you can take benefit of Antares scripting to formulate complex breakpoint conditions when tracking down hard-to-find bugs in your design.

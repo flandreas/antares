@@ -1,0 +1,32 @@
+= Relay
+include::../../../page-variables.txt[]
+:page-permalink: /user-manual/english/base-library/analog/relay
+
+== Appearance
+
+image:user-manual/base-library/analog/relay-us.png[Relay US]
+image:user-manual/base-library/analog/relay-eu.png[Relay EU]
+
+== Behaviour
+
+A relay is an electro-mechanical switch that is operated by the magnetic field resulting from the electrical current through a coil. If the coil current exceeds a configurable limit, the switch is closed.
+
+The switch can be configured to be either SPST (Single pole, single throw) or SPDT (Single pole, double throw).
+
+The relay's symbol is designed such that the coil's magnetic field attracts the movable part of the switch. Therefore, the "off" position is further away from the coil, while the "on" position is closer to the coil.
+
+If user preference "Rendering -> Sound effects" is enabled, Antares plays a click sound when the relay is switched on or off.
+
+== Pins
+
+A relay has 4 (SPST) or 5 (SPDT) bidirectional pins. Pin 1 and 2 are for the inductor (coil), and the other ones are for the switch.
+
+== Properties
+
+Switch configuration:: Choose between SPST (Single pole, single throw) or SPDT (Single pole, double throw).
+
+Inductance (H):: The inductance of the coil in Henry.
+
+On Current (A):: The coil current in Ampère above which the switch gets closed (i.e. goes into "On" state). Below that current, the switch is open (i.e. is in "Off" state).
+
+Normally on:: If set, the switch is in "On" state if there is not enough current flowing through the coil. The default is "Normally off", i.e. the switch is in "Off" state if there is not enough current.

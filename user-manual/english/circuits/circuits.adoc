@@ -151,7 +151,9 @@ image:user-manual/circuits/ellipse.png[Ellipse] **Ellipse** Click the left mouse
 
 image:user-manual/circuits/polyline.gif[Polyline] **Polyline** Click the left mouse button to set the points of a polyline. A double click terminates the creation of the polyline. To add further points later, you can select the polyline and double-click on a segment of the polyline. If you move an intermediate point to another intermediate point, the two points will be merged into a single point.
 
-image:user-manual/circuits/curve-20.png[Curve] **Curve** Click with the mouse at three points to define the three points of a curve. The three points are the support points of a square Bézier curve.
+image:user-manual/circuits/curve-20.png[Quadradic Curve] **Quadratic Curve** Click with the mouse at three points to define the three points of a quadratic curve. The three points are the defining points of a quadratic Bézier curve.
+
+image:user-manual/circuits/curve-20.png[Cubic Curve] **Cubic Curve** Click with the mouse at four points to define the four points of a cubic curve. The four points are the defining points of a cubic Bézier curve.
 
 image:user-manual/circuits/text.gif[Text] **Text** A click with the left mouse button creates a text component with a standard text. Double-click on the text to change the text or use the "Text" attribute in the Antares properties window. The text can contain several lines. The horizontal alignment of the text can be changed in the properties. Change the size of the text box by editing it like a rectangle.
 
@@ -213,3 +215,15 @@ Components are found according to the following criteria:
 * When a search matches an input, an output, a tunnel, a switch or a DIP switch, the wire connected to the single port of that component is also selected. This can e.g. be used to get an overview of a signal line leading through tunnels.
 
 Press kbd:[ESC] to close the search bar, or click button btn:[X] at the right edge of the search bar.
+
+== Port renaming
+
+Antares has a tool that makes it easier to rename multiple input/outputs ports of a circuit in one go. Using menu menu:Edit["Port renaming..."] opens the dialog "Port renaming".
+
+image::user-manual/circuits/port-renaming.png[Port renaming, 700, align="center"]
+
+This dialog list all inputs and outputs of the current circuit, displaying the name and the type of the port. If you select one of the table entries, the corresponding input/output in the circuit is selected. If you select checkbox "Zoom to port", Antares plays a zoom/pan animation in the circuit to focus in to the selected port.
+
+The table column "Name" is editable, which allows you to edit the name of the selected port.
+
+Note that the dialog is modal; the circuit behind the dialog is not reachable until you've closed the dialog.

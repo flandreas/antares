@@ -12,18 +12,20 @@ Used to display bitmap graphics. A Video RAM behaves exactly like a normal link:
 
 Each memory cell value is interpreted as an index in a color map defined by the property "Color Model".
 
+The address input's bit width is automatically calculated from the selected "Width" and "Height" properties, while the data input's bit width is determined by what is required by the selected "Color Model" property.
+
 == Pins
 
-The Video RAM has the same pins like the link:{{site.basedir}}/user-manual/english/base-library/ram[RAM].
+The Video RAM has the same pins as the link:{{site.basedir}}/user-manual/english/base-library/ram[RAM].
 
 == Properties
 
-Width:: The width of the Video RAM display in pixels. Limited to 600. The bit width of pin "A" (Address) must be sufficiently large to address he resulting Video RAM size (Width * Height).
+Width:: The width of the Video RAM display in pixels. Limited to 600. The bit width of pin "A" (Address) automatically calculated to support the selected Video RAM size (Width * Height).
 
-Height:: The height of the Video RAM display in pixels. Limited to 400. The bit width of pin "A" (Address) must be sufficiently large to address he resulting Video RAM size (Width * Height).
+Height:: The height of the Video RAM display in pixels. Limited to 400.  The bit width of pin "A" (Address) automatically calculated to support the selected Video RAM size (Width * Height).
 
 Pixel Size:: The size of each Video RAM pixel on the real screen with the values "Small" (2 real pixels), "Medium" (6 real pixels) and "Large" (10 real pixels).
 
-Color Model:: Defines the color map used to map a memory cell value to the color in which the corresponding pixel is drawn. Each color model determines the bit width of the ROM's "D" pin. +
+Color Model:: Defines the color map used to map a memory cell value to the color in which the corresponding pixel is drawn. Each color model determines the bit width of the Video RAM's "D" pin. +
 +
 - **CGA 16**: The 4-bit / 16 color palette of the https://en.wikipedia.org/wiki/Color_Graphics_Adapter["Computer Graphics Adapter"] standard ("Full CGA 16-color palette"). See the linked Wikipedia page for a definition of the color values.

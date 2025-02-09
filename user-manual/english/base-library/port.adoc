@@ -38,4 +38,6 @@ Switch:: Defines the behavior of a port when used as a switch by the user during
 
 Start value:: The decimal value to be asserted when the simulation is started. Only used in top-level circuits. If empty, the value defaults to 0.
 
+Interactive PropagationDelay:: The required time (in ns) to recalculate the output after the user manually interacted with the port, either by clicking with the mouse or by pressing ENTER when the port has the focus. The default value comes from the user preferences "Switch propagation delay (ns)" in Preferences -> Circuit -> Digital.
+
 Tri-State Output:: Only available for output ports. If set, the port has tri-state behavior. The corresponding pin in a sub circuit will then allow you to connect it with other output pins on the same net, which Antares wouldn't allow otherwise.

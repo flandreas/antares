@@ -26,6 +26,8 @@ Server URL:: Only relevant for the upcoming web version of Antares. Specifies th
 
 Main Font:: The font to be used for the UI elements. In the current version, circuit content still uses specific fonts which might differ from the UI font.
 
+Sound effects:: If enabled, Antares plays sounds for certain actions, e.g. when a relay gets switched.
+
 Theme:: The theme used for rendering the entire UI. The most important ones are "Winter", the standard light theme with white and blue coloring, and "Darcula", a dark theme.
 
 Shadow:: If this option is enabled, circuit components like gates or switches are displayed with a drop shadow.

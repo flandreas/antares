@@ -1,0 +1,19 @@
+= Dpuble-Throw Switch
+include::../../../page-variables.txt[]
+:page-permalink: /user-manual/english/base-library/analog/double-throw-switch
+
+== Appearance
+
+image:user-manual/base-library/double-throw-switch-example.png[Example Real Switch, 150]
+
+== Behaviour
+
+A double-throw switch allows you to connect a wire with one of two possible other wires.
+
+== Pins
+
+The double-throw switch has three pins.
+
+== Properties
+
+No specific ones.

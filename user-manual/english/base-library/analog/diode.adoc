@@ -1,0 +1,20 @@
+= Diode
+include::../../../page-variables.txt[]
+:page-permalink: /user-manual/english/base-library/analog/inductor
+
+== Appearance
+
+image:user-manual/base-library/analog/diode-us.png[Inductor (ANSI)]
+image:user-manual/base-library/analog/diode_eu.png[Resistor (IEC)]
+
+== Behaviour
+
+A diode conducts current flowing from anode to cathode, and blocks it in the other direction. The direction to which current flows is depicted by the diode's arrow symbol.
+
+== Pins
+
+A diode has two bidirectional pins called anode and cathode.
+
+== Properties
+
+No specific ones.

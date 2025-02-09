@@ -73,3 +73,5 @@ image::user-manual/circuits/analog/scenario.png[Scenario,400,align="center"]
 The oscilloscope you might be familiar with from digital circuits can be used without any adjustments for analog circuits as well.
 
 image::user-manual/circuits/analog/oscilloscope.png[Oscilloscope,500,align="center"]
+
+Select an oscilloscope probe and use its property "Measured value" to choose whether the oscilloscope row should display the voltage or the current measured by the probe.
