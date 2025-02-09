@@ -62,7 +62,7 @@ Before we can fix this issue, we'll have to setup a staging area for all our bro
 
 # Improvements
 
-**#841: Set default value of "|=" in "Magnitude Comparator 4 Bit" circuit to 1:** The input |= of the least significant state must be set to 1 in order for the circuit to work correctly. Inexperienced users will forget this when they open the circuit from the Standard Library and start the simulation. The property "Start value" of the input is now 1.0
+**#841: Set default value of "I=" in "Magnitude Comparator 4 Bit" circuit to 1:** The input I= of the least significant state must be set to 1 in order for the circuit to work correctly. Inexperienced users will forget this when they open the circuit from the Standard Library and start the simulation. The property "Start value" of the input is now 1.0
 
 **#844: Help links in 'Truth table' and 'Expression' forms:** Added help button to desktop window toolbar.
 
