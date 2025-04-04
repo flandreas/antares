@@ -79,6 +79,8 @@ manual:
         url: /user-manual/english/usecases/usecases
       - title: "Circuit Parameters"
         url: /user-manual/english/circuits/circuit-parameters
+      - title: "Finite State Machines"
+        url: /user-manual/english/fsm/fsm
   - title: Miscellaneous
     children:
       - title: "Preferences"

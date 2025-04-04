@@ -1,6 +1,6 @@
 = Finite State Machines (FSM)
 include::../../page-variables.txt[]
-:page-permalink: /user-manual/english/circuits/fsm
+:page-permalink: /user-manual/english/fsm
 
 Antares' FSM module allows you to draw finite state machines (Moore, Mealy), convert it to a truth table, and generate a circuit from the truth table.
 
