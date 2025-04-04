@@ -163,3 +163,7 @@ Put AND terms in parenthesis:: If set, Antares puts AND terms in generated boole
 Current speed:: The speed of current flow animation in analog circuits. Supported values range from 1 (slow) to 10 (fast).
 
 Simulation time step:: Determines how accurate the simulation of an analog circuit will be, especially when calculating capacitors or inductors. The lower the value, the more accurate the calculation, but the slower the simulation.
+
+=== Test cases
+
+Check propagation delay consistency:: If set, executing test cases also checks whether the maximum of the measured propagation delays when executing circuit test cases is close to the configured propagation delay to be used for executing the circuit script (shallow simulation). If the propagation delays differ by more than 10%, a test fail is issued.

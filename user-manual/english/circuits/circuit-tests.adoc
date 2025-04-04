@@ -77,7 +77,7 @@ Input signals that should be set AFTER all other signals have been set can be de
 
 === Reusing circuit state
 
-Combinational logic generally depends on the current state of a circuit. For example, when testing a counter circuit, you want to test that the counter value increases with every clock impulse.
+Sequential logic generally depends on the current state of a circuit. For example, when testing a counter circuit, you want to test that the counter value increases with every clock impulse.
 
 Since Antares starts a new simulation run for every test vector in your test script, this cannot be achieved by default. However, for such purposes, you can use the `run` statement to combine multiple test vectors into a single simulation run. This is an example from the "Counter n Bit" test:
 
@@ -96,3 +96,20 @@ run {
 Note how the results table draws a parenthesis in the first column to denote that the corresponding lines all belong to the same `run` block.
 
 image::user-manual/circuits/circuit-tests-run-block.png[Overview,600,align="center"]
+
+=== Propagation delay consistency check
+
+If you use "Deep simulation" mode, Antares applies the propagation delay of every individual component of a circuit, which results in a certain time until new values appear at the outputs of the circuit. If you use "Shallow simulation" mode, Antares executes the circuit's execution script (if any) to calculate the output signals. The overall propagation delay of a subcircuit is then determined by the property "Propagation delay" of the circuit. This is configured by the author of the circuit.
+
+If the configured propagation delay (used when executing the script in shallow simulation mode) of a circuit differs significantly from the propagation delay resulting from deep simulation mode, the two simulation modes can produce different results for the same circuit. This is usually not desirable.
+
+In order to help identifying such cases, the Antares "Test cases" feature has an implicit test called "Propagation delay consistency". This test checks if the maximum measured propagation delay when executing a test case in deep simulation mode (using the circuit, not the script) differs more that 10% from the configured propagation delay used by the script in shallow simulation mode.
+
+image::user-manual/circuits/prop-delay-consistency.png[Overview,700,align="center"]
+
+The test result is displayed in the section "General tests" of the "Test results" tab. If that test fails for a circuit, the author can fine-tune the configured propagation delay and/or adjust the individual component propagation delays if circuit parameters are used.
+
+Execution of this test can be disabled
+
+- in the user preferences in Circuit -> Test cases
+- for an individual test case in its property "Skip propagation delay check"

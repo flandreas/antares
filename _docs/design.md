@@ -147,7 +147,13 @@ Open subcircuits in separate windows to take advantage of workplaces with more t
 Define and edit truth tables, generate optimized boolean expressions (DNF), and let
 Antares generate a combinational circuit that realizes these expressions.
 
-<img src="/assets/images/user-manual/circuits/truth-table-sample.png" width="1000">
+<img src="/assets/images/user-manual/circuits/truth-table-sample.png" width="800">
+
+### Finite State Machines (FSM)
+
+Draw a finite state machine (Moore, Mealy), export it to a truth-table, and generate a circuit that implements the FSM.
+
+<img src="/assets/images/design/fsm-sample.png" width="800">
 
 ### Scripting
 

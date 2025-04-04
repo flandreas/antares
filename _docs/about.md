@@ -70,6 +70,7 @@ The ultimate goal of Antares is to facilitate interactive textbooks with active 
   - Image component, image buttons
   - Global tunnels overview
   - Non-volatile RAM (optionally)
+  - Finite state machines (FSM) incl. circuit generation
 - **Simulation**
   - Simulation of individual propagation delays
   - Signal flow animation

@@ -172,6 +172,3 @@ These components are contained in the built-in library "Analog".
 * image:user-manual/base-library/analog/diode.svg[Diode] link:{{site.basedir}}/user-manual/english/base-library/analog/diode[Diode]
 
 
-
-
-
