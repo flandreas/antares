@@ -54,7 +54,8 @@ Removing entire rows can be achieved by pressing the btn:[-] button at the start
 
 == Simulation in "Clocked" Mode
 
-The oscilloscope supports different timing modes. You can choose the mode by selecting the oscilloscope and changing the value of is property "Mode" in the properties panel. Newly created oscilloscopes have mode "Clocked" by default. Clocked mode is also designated in the oscilloscope component by a small triangle at the right side of the first row.
+The oscilloscope supports different timing modes. You can choose the mode by selecting the oscilloscope and changing the value of is property "Mode" in the properties panel. Newly created oscilloscopes have mode "Real-Time" by default,
+because this one is easier to understand for beginners. Clocked mode is designated in the oscilloscope component by a small triangle on the right side of the first row.
 
 In clocked mode, the captured signal curves don't represent the real simulation time, but an artificial "oscilloscope time" that leads to evenly alternating signal curves, because signals are captured only when the signal at the first (clocked) row changes. This can be convenient because large time differences between signal changes (such as microsecond clocks and nanosecond gate propagation delays) are "normalized" to the artificial, evenly spaced "oscilloscope time". The drawback of clocked mode is that propagation delay subtleties are not shown.
 

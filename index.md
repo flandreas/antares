@@ -7,7 +7,7 @@ header:
       url: "/docs/quick-start"
 excerpt: >
   A free, powerful platform for designing, simulating and explaining digital circuits.<br />
-  <small><a href="docs/releases/release-1.18.0">Latest release 1.18.0</a></small><br />
+  <small><a href="docs/releases/release-1.19.0">Latest release 1.19.0</a></small><br />
 description: "digital circuit simulator simulation education"
 intro:
   - excerpt: We are a small, independent team with a passion for software development and for explaining how complex systems work.<br><br>You can contact us on <img src="/assets/images/antares-email.png" style="width:250px"> or by creating an issue or starting a discussion on our <a href="https://github.com/flandreas/antares">GitHub project</a>.<br><br>[Privacy Policy](/docs/privacy-policy/)

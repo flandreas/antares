@@ -1,6 +1,6 @@
 = Finite State Machines (FSM)
 include::../../page-variables.txt[]
-:page-permalink: /user-manual/english/fsm
+:page-permalink: /user-manual/english/circuits/fsm
 
 Antares' FSM module allows you to draw finite state machines (Moore, Mealy), convert it to a truth table, and generate a circuit from the truth table.
 
@@ -35,7 +35,7 @@ State number:: The unique number used to identify the current state. This is als
 
 Name:: Only used to convey explanation to human readers. The name is displayed in the center of the state.
 
-Output:: The output signal produced by the FSM when the system is in this state. Possible formats: "1" or "O=1", where "O" is the name of an output signal. If no output name is specified, all output definitions in the entire FSM must have no output name, and Antares applies the default name "O" to all of them.
+Output:: The output signal produced by the FSM when the system is in this state. Possible formats: "1" or "O=1", where "O" is the name of an output signal. If no output name is specified, all output definitions in the entire FSM must have no output name, and Antares applies the default name "O" to all of them. You can also specify a list of outputs and use binary and hexadecimal values: "A=0x2, B=0b10".
 
 Description:: Optional free-text field.
 
@@ -49,7 +49,7 @@ Select a transition to edit its properties in the properties window.
 
 Condition:: The condition regarding the input signals that must be fulfilled in order for the FSM to change to the destination state. Possible formats: "1" or "I=1", where "I" is the name of an input signal.
 
-Output:: The output signal produced by the FSM if it passes this transition (Mealy). Possible formats: "1" or "O=1", where "O" is the name of an output signal.
+Output:: The output signal produced by the FSM if it passes this transition (Mealy). Possible formats: "1" or "O=1", where "O" is the name of an output signal.  You can also specify a list of outputs and use binary and hexadecimal values: "A=0x2, B=0b10".
 
 Description:: Optional free-text field.
 
