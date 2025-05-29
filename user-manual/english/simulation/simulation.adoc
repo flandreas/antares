@@ -12,10 +12,10 @@ image::user-manual/simulation/simulation-tools.png[Simulation Tools, 300]
 The simulation toolbar contains the following tools:
 
 - image:user-manual/simulation/play24.png[Start] With this button (kbd:[Ctrl + R]) the simulation can be started and stopped.
-- image:user-manual/simulation/pause24.png[Pause] Pauses or resumes the simulation (kbd:[Ctrl + Space]). The button turns orange if simulation is paused.
-- image:user-manual/simulation/resume24.png[Continue] Activates the single step mode of the simulation.
+- image:user-manual/simulation/pause24.png[Pause] Pauses or resumes the simulation (kbd:[Ctrl + Space]) manually. The button turns orange if the simulation is waiting in a breakpoint.
+- image:user-manual/simulation/resume24.png[Continue] Activates the single-step mode of the simulation. In single-step mode, the simulation gets automatically paused when it runs into a breakpoint.
 
-TIP: If single step mode should pause simulation with every new signal being generated, make sure to select menu option menu:Simulation[Soft Breakpoints]. Otherwise, only "hard breakpoints" from the "Break" component are used.
+TIP: If single-step mode should pause simulation with every new signal being generated, make sure to select menu option menu:Simulation[Soft Breakpoints]. Otherwise, only "hard breakpoints" from the "Break" component are used.
 
 With the slider the simulation speed can be controlled. The simulation speed is divided into three categories whose names are displayed as a tooltip when you move the mouse over the slider. The further to the left the slider is, the slower the simulation is executed and the more support information is displayed during simulation.
 
@@ -50,11 +50,11 @@ Antares uses different colors during simulation to represent the different value
 image::user-manual/simulation/wire-colors.png[wire colors, 700,align="center"]
 
 * **Blue** The wire carries a signal with value "undefined". This occurs if no component is sending a signal to the wire, either because it is not connected to a component or because a connected tri-state buffer is sending an undefined signal.
-* **Dark green**: The wire carries a 1-bit signal with the value 0.
-* **Light green**: The wire carries a 1-bit signal with the value 1.
+* **Dark green**: The wire carries a 1-bit signal with value 0.
+* **Light green**: The wire carries a 1-bit signal with value 1.
 * **Red**: The wire carries a signal in which at least one bit has the value "Error". This can occur if several components transmit different signals on the same wire.
-* **Black**: The wire carries a signal with several bits which all have the value 0.
-* **Gray**: The wire carries a signal with several bits, at least one of which has the value 1.
+* **Black**: The wire carries a signal with several bits which all have value 0.
+* **Gray**: The wire carries a signal with several bits, at least one of which has value 1.
 
 NOTE: Colors are defined in Antares by link:{{site.basedir}}/user-manual/english/styles/styles["Themes"]. The themes currently contained in Antares all use the above colors. However, maybe in the future more themes will be added (or users may define their own themes) that use other colors.
 

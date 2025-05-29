@@ -58,3 +58,10 @@ steps become active. Use single-step simulation mode to step through
 the scenarios and read the explanation for every individual step.
 
 <img src="/assets/images/explain/scenarios.gif" width="500">
+
+### Markdown editor
+
+Describe how your circuit works with a Markdown text. Preview the text as HTML.
+
+<img src="/assets/images/explain/markdown.png" width="800">
+

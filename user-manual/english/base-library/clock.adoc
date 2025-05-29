@@ -22,7 +22,9 @@ The clock has a single 1-bit output where the periodically changing signal is ou
 
 Orientation:: The direction in which the output pin points.
 
-Period:: The period in microseconds. The period is the time that elapses until the clock emits the same signal again. If the period is 1'000 µs, the output is 1 for 500 µs and 0 for 500 µs.
+Period/Frequency:: The period in microseconds. The period is the time that elapses until the clock emits the same signal again. If the period is 1'000 µs, the output is 1 for 500 µs and 0 for 500 µs.
+
+Off time(%):: The percentage of 'Period/Frequency" during which the output is off. For example, with a value of 20, the output is 80% ot the time 1 and 20% of the time 0.
 
 Enabled:: If the "Enabled" property is not set, the output always remains at 0 during simulation.
 

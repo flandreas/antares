@@ -8,12 +8,16 @@ image:user-manual/base-library/breakpoint-sample.png[Example Breakpoint, 300]
 
 == Behaviour
 
-The breakpoint component is used to temporarily interrupt the execution of the simulation if a certain signal is present at the input. A breakpoint is only active if the simulation is executed in single step mode. In normal execution mode the state of the breakpoint components is ignored. After the simulation has been temporarily interrupted, the user can resume it with the simulation tool "Resume".
+The breakpoint component is used to temporarily interrupt the execution of the simulation if a certain signal is present at the input. A breakpoint is only active if the simulation is executed in single-step mode. In normal execution mode the state of the breakpoint components is ignored.
+
+After the simulation has been temporarily interrupted, the user can resume it with the simulation tool "Resume".
 
 == Pins
 
-Input:: The breakpoint component has a single 1-bit input whose signal determines whether the breakpoint is active or not. Whether the breakpoint is activated by the signal 0 or 1 is determined by the property "Logic".
+Input:: The breakpoint component has a single n-bit input whose signal determines whether the breakpoint is triggered or not.
 
 == Properties
 
 Logic:: With the value "Positive" the breakpoint is activated by the input signal 1. The value "Negative" reverses the logic; here, the input signal 0 activates the breakpoint.
+
+Value:: The value (specified as decimal number) that triggers the breakpoint if asserted at the input pin.
