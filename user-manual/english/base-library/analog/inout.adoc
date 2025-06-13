@@ -21,3 +21,5 @@ An Input/Output has a single pin Its direction (input, output, bi-directional) d
 == Properties
 
 Port Type:: Choose whether the port (or pin) acts as "Input", "Output" or "Input/Output".
+
+Output resistance:: Resistance of imaginary resistor connecting this output to ground. Used to create outgoing current during simulation for educational purposes. Only available for outputs.
