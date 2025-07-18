@@ -105,6 +105,8 @@ Address Bit Width:: The number of bits that make up the addresses of the memory 
 
 Data Bit Width:: The bit width of each memory cell.
 
+Label:: The label of a memory component displays a default text containing address and data bit width, such as "ROM 256 x 8". You can override this default text with your own text. If you clear your custom text, the default text is used again.
+
 Show contents:: Determines whether the memory content within the symbol should be displayed.
 
 Number of content rows:: Can only be set if "Show content" is selected. Determines the number of rows of memory content display within the symbol.

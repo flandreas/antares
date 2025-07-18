@@ -38,6 +38,33 @@ The truth table view contains a table with two types of columns:
 
 Select an output column cell and enter 0, 1 or X (for "don't care") using the keyboard. Save your data using menu menu:File[Save].
 
+=== Importing from CSV
+
+Sometimes you want to prepare the data for a truth table in an external application and then import these data into an Antares truth table. The truth table feature allows you to import output columns from a CSV file, for example like this:
+
+[source, csv]
+----
+O1,O2
+0,1
+1,0
+0,X
+1,X
+----
+
+Tip:: The allowed values in the cells are 0, 1 and X.
+
+To initiate the import, click the button btn:[Import (CSV)...] below the truth table, which opens the parameter dialog.
+
+image::user-manual/circuits/import-truth-table-from-csv.png[CSV import,600,align="center"]
+
+- **Column headers**: Select this option if your CSV file contains column names that map the CVS columns to the names in your truth table output columns. If you omit this option, Antares assigns the CSV columns in the order they appear to the columns in the truth table.
+
+- **Input columns**: Select this option if your CSV file not only contains output columns, but also input columns. Antares will then calculate the corresponding row from the values in the CSV input columns. If you omit this option, Antares will assume that the rows in the CSV are in ascending order.
+
+- **File**: Use the btn:[Select...] button to select the file from which the CSV data is imported.
+
+The resulting change in the truth table is undoable using "Undo". The change needs to be manually saved.
+
 === Creating Minimized Expressions
 
 Antares uses the "Quine McCluskey" algorithm for creating minimized boolean expressions for the data in the truth table. Since the complexity of this algorithm increases exponentially with the number of variables, the number of inputs and outputs is limited to 8.
