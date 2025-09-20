@@ -26,6 +26,6 @@ Period/Frequency:: The period in microseconds. The period is the time that elaps
 
 Off time(%):: The percentage of 'Period/Frequency" during which the output is off. For example, with a value of 20, the output is 80% ot the time 1 and 20% of the time 0.
 
-Enabled:: If the "Enabled" property is not set, the output always remains at 0 during simulation.
+Enabled:: If the "Enabled" property is not set, the output is not toggled automatically, but only if you click with the mouse on the clock's symbol.
 
 Change period during simulation:: The knob with which the period can be changed by the user during simulation is only displayed if this property is set.

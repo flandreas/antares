@@ -114,3 +114,7 @@ Scenario breakpoints can be useful when writing tutorials with embedded explanat
 This technique is especially useful when combined with a use case that runs through multiple use cases, only stopping at interesting points.
 
 Can sometimes also be useful for debugging, because you can take benefit of Antares scripting to formulate complex breakpoint conditions when tracking down hard-to-find bugs in your design.
+
+=== Disabling Scenarios
+
+Scenario texts are displayed during simulation if the simulation speed category is "Observe" or slower. This is a fix system setting. You can disable scenario texts using menu menu:Simulation[Show scenario texts].

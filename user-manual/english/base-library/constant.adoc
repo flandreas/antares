@@ -22,4 +22,4 @@ Bit Width:: The number of bits that make up the output signal. If this property 
 
 Representation:: The way in which the value of the output signal is displayed in the view.
 
-Value (decimal):: The value (in decimal notation) that is produced at the output of the constant.
+Value (decimal):: The value (in decimal notation) that is produced at the output of the constant. It can also be an expression that uses circuit parameters to calculate the value.

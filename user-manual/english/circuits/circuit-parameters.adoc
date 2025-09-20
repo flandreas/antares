@@ -40,6 +40,7 @@ You can define multiple circuit parameters for a circuit. Each circuit parameter
 * **Type**": The type of the parameter. This determines where you can use the value of this parameter definition. A parameter definition of type "Bit Width" can only provide values for bit width properties of circuit elements.
 * **Default Value**: The default value of this parameter definition. This default value is applied to all parametrized circuit components when you open the circuit as a toplevel circuit, i.e. without the context of a sub circuit element which would normally provide the value to be used.
 * **Semantic**: Used to express what the semantic or meaning of the parameter is. This can be used by other parts of Antares.
+* **Description**: A multi-language description that will be displayed in the properties window when editing a subcircuit property defined by this parameter definition.
 
 Click the "Add" button to add a new parameter definition. Specify e.g. "BW" as the name of the parameter definition, choose e.g. "8" as the "Default Value", and click the "Apply" button to add your new parameter definition to the list.
 

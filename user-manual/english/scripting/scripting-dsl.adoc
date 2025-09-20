@@ -218,6 +218,21 @@ O = (0 + A) * (0 + B)
 ----
 
 The seemingly redundant multiplication by 1 converts the signal values to numbers which will then be used for expression evaluation without any upper bound other than the maximum value for long numbers.
+
+Starting with version 1.29, you can also use an explicit "Length Cast" operator "$", which casts a variable to an either longer or shorter digital signal. In the above multiplicator example, it is used as follows:
+
+[source,javascript]
+----
+O = A$8 + B$8
+----
+
+If the bit width is not constant, like in the "Multiplier n Bit" of the standard library, you can use an expression containing the bit width variable BW as the length value:
+
+[source,javascript]
+----
+O = A$(2*BW) + B$(2*BW)
+----
+
 ====
 
 === Variables and Assignments

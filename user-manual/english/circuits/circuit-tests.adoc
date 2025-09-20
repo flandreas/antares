@@ -19,7 +19,7 @@ You can create circuit tests for the currently open circuit.
 
 3. Select the newly created node in the tree to display the test case's properties in the properties window below the tree.
 
-== Write test vectors
+== Writing test vectors
 
 To define test vectors for your test case, select the "Test vectors" property in the properties dialog and click on the "Edit script" button. This opens a dialog with a text area, which is where you write your test vectors.
 
@@ -65,13 +65,14 @@ There are more ways to run circuit tests:
 
 In circuits using clock signals, you often want to establish other input signals before you assert the clock signal. Let's look at the test case for "D Flip-Flop" in the standard library:
 
-```
+[source]
+----
 C   D  Q  '!Q'
 0   0  0  1
 0   1  0  1
 ^1  1  1  0
 ^1  0  0  1
-```
+----
 
 Input signals that should be set AFTER all other signals have been set can be denoted by a `^` character.
 
@@ -81,7 +82,8 @@ Sequential logic generally depends on the current state of a circuit. For exampl
 
 Since Antares starts a new simulation run for every test vector in your test script, this cannot be achieved by default. However, for such purposes, you can use the `run` statement to combine multiple test vectors into a single simulation run. This is an example from the "Counter n Bit" test:
 
-```
+[source]
+----
    C  EN CLR O
 run {
    ^1 1  0   1
@@ -91,7 +93,7 @@ run {
    ^1 1  0   3
    0  1  0   3
 }
-```
+----
 
 Note how the results table draws a parenthesis in the first column to denote that the corresponding lines all belong to the same `run` block.
 
@@ -113,3 +115,38 @@ Execution of this test can be disabled
 
 - in the user preferences in Circuit -> Test cases
 - for an individual test case in its property "Skip propagation delay check"
+
+=== Dealing with bidirectional pins
+
+With the standard way of writing test vectors, you simply list the input and output pins by their names, and Antares knows from the type of the pins how to handle the signal in the test vector: Assert it for input pins, and read and check it for output pins.
+
+Obviously, this approach doesn't work if your circuit contains bidirectional pins, like the "Bus Transceiver n Bit" circuit in the standard library:
+
+image::user-manual/circuits/bus-transceiver.png[Overview,600,align="center"]
+
+Both the A and B pins are bidirectional, and if you would write a test script for sending signals from A to B (DIR = 1), the Antares' test runner wouldn't know that it is supposed to assert to A and read from B.
+
+For such applications, you can extend the input and output names with either ">" to designate an input or with "<" to designate an output.
+
+The corresponding test script for "A to B" then looks like this:
+
+[source]
+----
+DIR   '!(EN)'  >A  <B
+1     0        0   0
+1     0        1   1
+1     0        Z   0
+----
+
+For the inverse direction "B to A", you would typically write a second test script that contains the inverse designations in the pin names:
+
+[source]
+----
+DIR   '!(EN)'  >B  <A
+0     0        0   0
+0     0        1   1
+0     0        Z   0
+
+----
+
+Note:: The order in which the pins appear has no impact on whether they are treated as input or output.
