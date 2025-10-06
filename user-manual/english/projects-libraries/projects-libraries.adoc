@@ -54,3 +54,11 @@ As of release 1.5, Antares allows you to choose the directory where Antares stor
 ====
 Note that the application settings, user preferences and log files are still stored in the application data directory, which you cannot chance.
 ====
+
+As of release 1.30, Antares checks at start-up time if the configured workspace is valid, i.e. it is an existing directory for which you have read and write permissions. If that's not the case, Antares will ask you to choose another directory:
+
+image::user-manual/projects-libraries/workspace-selection.png[Workbench,600,align="center"]
+
+Select s suitable directory and press btn:[OK] to direct Antares to choose that directory as your workspace. This dialog is also shown when double-clicking a project and library file on your computer's desktop to import it into Antares, and the currently configured workspace is not valid.
+
+The option "Default location" sets the directory to the default directory on your computer where all applications commonly store user's data. This directory is different for every operating system.

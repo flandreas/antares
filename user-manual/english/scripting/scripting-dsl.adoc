@@ -149,19 +149,20 @@ B <= A
 
 Bit access operations are available both for numbers and digital signals and allow to query and to set individual bits of such values.
 
-The bit access operator `@` uses the bit position to reference an individual bit within a value, where the
-first (least significant bit) is referenced by 0 (zero).
+The bit access operator `@` uses the bit position to reference an individual bit within a value, where the first (least significant bit) is referenced by 0 (zero).
+
+On the left side of the operator, only identifiers (variables) are allowed.
 
 [source,javascript]
 ----
-// Querying bit 2 of value 4 (binary 100) returns 1
-4@2
+// Querying bit 2 of variable A with value 0b100 returns 1
+A@2
 
 // Use expressions for the bit position
 A@(I + 1)
 
-// Setting bit 0 in value 4 (binary 100) returns 5 (binary 101)
-4@0 = 1
+// Setting bit 0 in value A with value 0b100 returns 5 (binary 101)
+A@0 = 1
 ----
 
 === Mixing Types in Operations
