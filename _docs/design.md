@@ -168,3 +168,9 @@ digital circuits.
 Let Antares deep dive into your circuit hierarchy and count how many subcircuits of each type are used, either for "Deep" or "Flat" traversal.
 
 <img src="/assets/images/design/statistics.png" width="500">
+
+### Poster
+
+Create a poster with all circuits in your project and export it to an image.
+
+<img src="/assets/images/design/poster-example.png" width="800">

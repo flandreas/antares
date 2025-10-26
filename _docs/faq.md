@@ -20,6 +20,10 @@ Press/hold middle mouse button and move the mouse.
 
 To avoid very small texts and icons when using Antares on Linux with HDPI screens (and certain window managers), you can tweak the starter script. For details, checkout this [issue](https://github.com/flandreas/antares/issues/699).
 
+### Is there a dark mode?
+
+Yes. Settings -> Rendering -> Theme -> Darcula.
+
 ## Editing
 
 ### How do I create a wire junction?
