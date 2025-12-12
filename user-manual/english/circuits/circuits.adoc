@@ -67,6 +67,8 @@ Always use function:: This property is used to activate the "purely scripted" fe
 
 Default light color:: The light color that all components in this circuit should have by default (LED, 7-segment display, terminal). If you change the value of this attribute while the circuit already contains light-emitting components, Antares will ask you if the new light color should be applied to these components. With this option, for example, all red LEDs and 7-segment displays can be changed to yellow with a single action.
 
+Default signal representation:: The default way in which newly added components like inputs or outputs represent the current signal values. Examples of supported representations are "Binary" or "Hexadecimal". The initial setting is determined by the corresponding user preference setting.
+
 Wire Logic:: Determines the logic to be applied when asserting different values to the same wire. Choose between the standard "Conflict" mode, which handles differing values as conflicts, or the "Wired OR" mode. See the section "Wire Logic" in the user manual's link:{{site.basedir}}/user-manual/english/simulation/simulation["Simulation"] chapter for more information.
 
 == Adding components

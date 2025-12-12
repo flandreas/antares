@@ -170,5 +170,6 @@ These components are contained in the built-in library "Analog".
 * image:user-manual/base-library/analog/inductor.svg[Inductor] link:{{site.basedir}}/user-manual/english/base-library/analog/inductor[Inductor]
 * image:user-manual/base-library/analog/relay.svg[Relay] link:{{site.basedir}}/user-manual/english/base-library/analog/relay[Relay]
 * image:user-manual/base-library/analog/diode.svg[Diode] link:{{site.basedir}}/user-manual/english/base-library/analog/diode[Diode]
+* image:user-manual/base-library/analog/led-fill.svg[LED] link:{{site.basedir}}/user-manual/english/base-library/analog/analog-led[LED]
 
 

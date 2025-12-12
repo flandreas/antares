@@ -1,0 +1,29 @@
+= Analog LED
+include::../../../page-variables.txt[]
+:page-permalink: /user-manual/english/base-library/analog/analog-led
+
+== Appearance
+
+image:user-manual/base-library/analog/analog-led-ieee.png[LED (IEEE)]
+image:user-manual/base-library/analog/analog-led-iec.png[LED (IEC)]
+image:user-manual/base-library/analog/analog-led-sim.png[LED simulation]
+
+== Behaviour
+
+An analog LED behaves the same as the diode component, except that it emits light if the current is above the lower limit.
+
+If the user preference Circuit -> Analog -> Draw LED halo is enabled, Antares draws a nice halo during simulation. The brightness of the halo depends on the electrical current and the "Min. current" / "Max. current" properties.
+
+Note:: Unlike in a real circuit, the LED in Antares doesn't become damaged (and stop conducting) if the current exceed a certain limit. However, above the max. current limit, the LED's brightness doesn't increase anymore.
+
+== Pins
+
+An LED has two bidirectional pins called anode and cathode.
+
+== Properties
+
+Light color:: The color of the light the LED emits. Can also be an expression containing a circuit parameter, such as "=LC".
+
+Min. current:: The current (A) above wich the LED starts to emit light.
+
+Max. current:: The current (A) at which the largest brightness is reached.

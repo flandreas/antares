@@ -1,11 +1,11 @@
 = Diode
 include::../../../page-variables.txt[]
-:page-permalink: /user-manual/english/base-library/analog/inductor
+:page-permalink: /user-manual/english/base-library/analog/diode
 
 == Appearance
 
-image:user-manual/base-library/analog/diode-us.png[Inductor (ANSI)]
-image:user-manual/base-library/analog/diode_eu.png[Resistor (IEC)]
+image:user-manual/base-library/analog/diode-us.png[Diode (ANSI)]
+image:user-manual/base-library/analog/diode_eu.png[Diode (IEC)]
 
 == Behaviour
 

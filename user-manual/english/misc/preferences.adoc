@@ -94,8 +94,13 @@ Selection box scope:: Determines how components are selected with the selection 
 - **Completely contained**: Selects only components that are completely contained in the selection box.
 - **Partially contained**: Selects also components that are only partially contained in the selection box.
 
-
 Save history:: If enabled, Antares saves a copy of the previous version whenever a circuit is saved, which allows you to view the save history using menu:Popup[Show History..] and to restore old versions of a circuit.
+
+Advanced wire layout (Experimental):: This mode for laying out wires tries to avoid overlapping segments of different wires.
+
+Connect method:: The method used when creating new wires.
+- **Auto-layout**: Press/hold the left mouse button on a pin or wire and drag the mouse onto a target pin or wire. Antares applies an orthogonal layout algorithm for the created wire.
+- **Set points manually**: Click on a pin, click on intermediate points, and click on a target pin or wire. Antares does not apply any layout for the created wire.
 
 == Oscilloscope
 
@@ -134,6 +139,8 @@ Undefined gate input behaviour:: Determines how Antares behaves if gates have un
 Data flow display in AND gates:: If set, the link:{{site.basedir}}/user-manual/english/base-library/and["Data Path"] feature for AND gates is generally enabled. Disable this option if you don't like that feature.
 
 Light color:: The default light color of light-emitting components like LEDs. Applied when such components are added to a circuit.
+
+Signal representation:: The default kind of representing signal values in components like circuit inputs/outputs, or in signal flow animation. This default is applied to the corresponding circuit property when creating a new circuit, and can there be change to overwrite the system preference.
 
 Signal notation:: Determines how signals are annotated to distinguish between different signal representations like "Binary" or "Hexadecimal".
 - **Prefix**: Annotated with a prefix, e.g. "0x10" for hexadecimal 16.
