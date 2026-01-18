@@ -27,3 +27,7 @@ Light color:: The color of the light the LED emits. Can also be an expression co
 Min. current:: The current (A) above wich the LED starts to emit light.
 
 Max. current:: The current (A) at which the largest brightness is reached.
+
+== Symbol control properties
+
+LED Shape:: Determines whether the LED is drawn as a circle, a square, or a narrow stripe.

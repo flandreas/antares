@@ -22,7 +22,7 @@ Name:: The name of the LED, which is displayed as text next to the luminous body
 
 Color:: The color of the luminous body. The menu offers all light colors implemented in Antares for selection.
 
-Square:: If set, the luminous body is drawn as a square rather than a circle.
+LED shape:: Determines whether the LED is drawn as a circle, a square, or a narrow stripe. This can be useful when the LED is added as control to the circuit's symbol.
 
 Size:: The size in which the LED is drawn.
 

@@ -22,6 +22,10 @@ Data location:: Only relevant for the upcoming web version of Antares. Determine
 
 Server URL:: Only relevant for the upcoming web version of Antares. Specifies the base URL of the Antares REST API.
 
+== Network
+
+Connection timeout [s]:: The duration in seconds after which Antares cancels trying to fetch a resource from a remote location (check for a new version, fetching configuration parameters etc.)
+
 == Rendering
 
 Main Font:: The font to be used for the UI elements. In the current version, circuit content still uses specific fonts which might differ from the UI font.
@@ -38,17 +42,24 @@ Fill basic components:: If enabled, basic components like gates or switches are 
 
 == View
 
+Show tree root handles:: If enabled, the root node of trees show a handle for expanding/collapsing the node.
+
 Component tooltips:: If enabled, tooltips for circuit components are displayed when the mouse hovers over the component.
 
 Tooltip delay (ms):: The time in milliseconds Antares waits before displaying a tooltip after the mouse stopped moving over a component.
 
 === Zoom / Pan
 
+Pan method:: Determines how the user can pan the view (i.e. changing the region of the drawing displayed in the view).
+- Press/hold middle mouse button
+- ALT + press/hold left mouse button
+- SPACE + press/hold middle mouse button
+
+Pan step (mouse):: The amount of view displacement when panning with the mouse (drag with left mouse button pressed)
+
 Zoom step:: The increment or decrement of the zoom factor when using menu:View[Zoom In] or menu:View[Zoom Out].
 
 Zoom step (mousse wheel):: The increment or decrement of the zoom factor when zooming with the mouse wheel.
-
-Pan step (mouse):: The amount of view displacement when panning with the mouse (drag with left mouse button pressed)
 
 Default zoom factor:: The zoom factor applied when executing action menu:View[Zoom Normal].
 
@@ -56,25 +67,13 @@ Minimum zoom factor:: The minimum zoom factor.
 
 Maximum zoom factor:: The maximum zoom factor.
 
-Pan method:: The method to use to pan the view.
-
 Zoom factor in symbol editor:: The initial zoom factor used when switching to the symbol editor.
-
 
 === Navigation
 
 Use animation when immerging into subcircuits:: If set, Antares plays an animation when you double click on a subcircuit symbol to immerge into it's inner circuit.
 
 Switch mode using zoom factor:: If set, you can switch between the the circuit editor and the symbol editor by zooming out and zooming in with large factors.
-
-== Simulation
-
-Max. number of collected issues:: The maximum number of issues collected during a simulation run and displayed in the "Issues" tab.
-
-Slow-down factor of simulation speed:: Determines how much the simulation speed is slowed down when dragging the simulation speed slider more to the left side. Larger values result in slower simulation speeds. The default is 4. The minimum value is 0.0001.
-
-Allowed net contention duration (ns):: The time in nanoseconds during which net contention (i.e. conflicting signals on a net) are allowed without generating a simulation issue. The default is 20. +
-Can be overwritten in projects and libraries.
 
 == Editor
 
@@ -88,7 +87,7 @@ Grid rendering:: The way the editor grid is drawn.
 - **Lines**: A vertical and horizontal line is drawn at every grid location
 - **Dots**: A dot is drawn at every grid location
 
-Number of undo per Snapshot:: The undo system uses snapshots (copies of the circuit) from which recorded actions are replayed when the user requests undoing or redoing them. This value determines how many actions are recorded before a new snapshot is created. Smaller values result in better performance, but more memory consumption, larger values may lead to worse performance. The default value is 10.
+Number of undo per snapshot:: The undo system uses snapshots (copies of the circuit) from which recorded actions are replayed when the user requests undoing or redoing them. This value determines how many actions are recorded before a new snapshot is created. Smaller values result in better performance, but more memory consumption, larger values may lead to worse performance. The default value is 10.
 
 Selection box scope:: Determines how components are selected with the selection box. Pressing ALT while dragging the selection box temporarily switches between the two modes.
 - **Completely contained**: Selects only components that are completely contained in the selection box.
@@ -101,6 +100,17 @@ Advanced wire layout (Experimental):: This mode for laying out wires tries to av
 Connect method:: The method used when creating new wires.
 - **Auto-layout**: Press/hold the left mouse button on a pin or wire and drag the mouse onto a target pin or wire. Antares applies an orthogonal layout algorithm for the created wire.
 - **Set points manually**: Click on a pin, click on intermediate points, and click on a target pin or wire. Antares does not apply any layout for the created wire.
+
+== Simulation
+
+Max. number of collected issues:: The maximum number of issues collected during a simulation run and displayed in the "Issues" tab.
+
+Slow-down factor of simulation speed:: Determines how much the simulation speed is slowed down when dragging the simulation speed slider more to the left side. Larger values result in slower simulation speeds. The default is 4. The minimum value is 0.0001.
+
+Allowed net contention duration (ns):: The time in nanoseconds during which net contention (i.e. conflicting signals on a net) are allowed without generating a simulation issue. The default is 20. +
+Can be overwritten in projects and libraries.
+
+Different color for non-zero multi-bit signal:: During simulation, wires and signal animation in multi-bit wires are painted in black for zero values. If set, non-zero values are painted in gray.
 
 == Oscilloscope
 
@@ -123,7 +133,13 @@ Style of generated symbols:: Determines whether and how Antares automatically ge
 
 Transistor with circle:: If set, transistors are drawn with a circle around the three pins.
 
-Transistor port names: If set, transistor ports display a pin name, such as "G" for "Gate".
+Transistor pin names:: If set, transistor ports display a pin name, such as "G" for "Gate".
+
+Display tri-state buffer as triangle:: If set, tri-state buffers are always drawn in the (American) triangle shape, independent of the current "Symbol style".
+
+Adjust bit width to connected net:: If set, Antares attempts to adjust the bit width of a newly added component to the bit width of the net it gets connected to.
+
+Calculate propagation delay upon save:: A circuit has a property "Propagation delay" which is used if the simulation mode isn't "Deep" and the circuit has an execution script. Antares has a utility function menu:File[Calculation propagation delay] to calculate this propagation delay. If the preference is set, the calculation is automatically done when the circuit is saved, and stored in the circuit's property (if not already set).
 
 === Digital
 
@@ -134,9 +150,6 @@ Undefined gate input behaviour:: Determines how Antares behaves if gates have un
 - **Read as 0**: Undefined signals are treated as if they were 0 (zero)
 - **Read as 1**: Undefined signals are treated as if they were 1
 - **Read as random value**: Undefined signal are randomly read as either 0 or 1.
-
-
-Data flow display in AND gates:: If set, the link:{{site.basedir}}/user-manual/english/base-library/and["Data Path"] feature for AND gates is generally enabled. Disable this option if you don't like that feature.
 
 Light color:: The default light color of light-emitting components like LEDs. Applied when such components are added to a circuit.
 
@@ -157,6 +170,8 @@ Wide bus stroke:: If set, wires with a bit width larger than 1 are drawn with a 
 Switch propagation delay (ns):: The propagation delay in nanoseconds used for switch-like components like switch or DIP switch as default propagation delay. Default value is 1'000. +
 Can be overwritten in projects and libraries.
 
+Data path display in AND gates:: If set, the link:{{site.basedir}}/user-manual/english/base-library/and["Data Path"] feature for AND gates is generally enabled. Disable this option if you don't like that feature.
+
 ==== Expressions
 
 Notation:: The default notation for boolean expression used when Antares generates them.
@@ -170,6 +185,8 @@ Put AND terms in parenthesis:: If set, Antares puts AND terms in generated boole
 Current speed:: The speed of current flow animation in analog circuits. Supported values range from 1 (slow) to 10 (fast).
 
 Simulation time step:: Determines how accurate the simulation of an analog circuit will be, especially when calculating capacitors or inductors. The lower the value, the more accurate the calculation, but the slower the simulation.
+
+Draw LED halo:: If set, analog LEDs are drawn with a glowing halo during simulation.
 
 === Test cases
 

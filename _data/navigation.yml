@@ -93,6 +93,10 @@ manual:
         url: /user-manual/english/web/web-publishing
 
 releases:
+  - title: 2026
+    children:
+      - title: "1.33.0"
+        url: /docs/releases/release-1.33.0
   - title: 2025
     children:
       - title: "1.32.0"
