@@ -125,6 +125,12 @@ A and (B or C)
 not A
 ----
 
+[TIP]
+====
+Note that if you use `not` with number literals of type "Long" like `3`, the literal is first converted to a digital signal with the minimal required bit width, and only then inverted bit-wise. Therefore, `not 3` results in `0`.
+
+This is to avoid running into signed inversion.  If that's not what you want, assign the number literal to a variable and apply the "Length cast" operator `$` (see below) when using the variable in the `not` term.
+====
 ==== Comparison Operations
 
 _Antares DSL_ support the following comparison operations. The result of a comparison operation is a value of type "Number", where 0 represents "false" and 1 represents "true".
