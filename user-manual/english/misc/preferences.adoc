@@ -71,9 +71,11 @@ Zoom factor in symbol editor:: The initial zoom factor used when switching to th
 
 === Navigation
 
-Use animation when immerging into subcircuits:: If set, Antares plays an animation when you double click on a subcircuit symbol to immerge into it's inner circuit.
+Use animation when immerging into subcircuits:: If set, Antares plays an animation when you double-click on a subcircuit symbol to immerge into it's inner circuit.
 
-Switch mode using zoom factor:: If set, you can switch between the the circuit editor and the symbol editor by zooming out and zooming in with large factors.
+Switch mode using zoom factor:: If set, you can switch between the circuit editor and the symbol editor by zooming out and zooming in with large factors.
+
+Docking (experimental):: If set, you can pick a desktop view (circuit or subcircuit) on its header bar and drag it to another location within the desktop.
 
 == Editor
 

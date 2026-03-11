@@ -12,13 +12,17 @@ Used to display bitmap graphics. A Video RAM behaves exactly like a normal link:
 
 Each memory cell value is interpreted as an index in a color map defined by the property "Color Model".
 
-The address input's bit width is automatically calculated from the selected "Width" and "Height" properties, while the data input's bit width is determined by what is required by the selected "Color Model" property.
+The address input's bit width is automatically calculated from the selected "Width" and "Height" properties. The size of the video RAM components adjusts accordingly.
+
+Note that the component has a minimum size determined by the component's pins. If you choose a small width and height (e.g. 10x10) along with a "Small" pixel size (which is 2x2), the entire drawable screen area might be smaller than what the component offers.
 
 == Pins
 
 The Video RAM has the same pins as the link:{{site.basedir}}/user-manual/english/base-library/ram[RAM].
 
 == Properties
+
+Data Bit Width:: The number of bits in each RAM memory cell. Must be a multiple of the bit width required by the selected "Color Model". If larger than the "Color model"'s bit width, a single memory cell can define more than one pixel.
 
 Width:: The width of the Video RAM display in pixels. Limited to 600. The bit width of pin "A" (Address) automatically calculated to support the selected Video RAM size (Width * Height).
 
@@ -28,4 +32,5 @@ Pixel Size:: The size of each Video RAM pixel on the real screen with the values
 
 Color Model:: Defines the color map used to map a memory cell value to the color in which the corresponding pixel is drawn. Each color model determines the bit width of the Video RAM's "D" pin. +
 +
+- **Monochrome**: A 1-bit "Black and white" palette, where the value 1 designates the color "White".
 - **CGA 16**: The 4-bit / 16 color palette of the https://en.wikipedia.org/wiki/Color_Graphics_Adapter["Computer Graphics Adapter"] standard ("Full CGA 16-color palette"). See the linked Wikipedia page for a definition of the color values.

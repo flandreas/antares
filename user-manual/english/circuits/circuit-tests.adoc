@@ -23,7 +23,7 @@ You can create circuit tests for the currently open circuit.
 
 To define test vectors for your test case, select the "Test vectors" property in the properties dialog and click on the "Edit script" button. This opens a dialog with a text area, which is where you write your test vectors.
 
-NOTE:: Test vectors define signals for input and output components in your circuit. Providing inputs for switches, DIP switches etc. and reading output from LEDs etc. is not supported.
+NOTE:: Test vectors define signals for input components, output components and probes in your circuit. Providing input values for switches, DIP switches etc. and reading output values from LEDs etc. is not supported.
 
 A test script consists of two parts:
 
@@ -150,3 +150,9 @@ DIR   '!(EN)'  >B  <A
 ----
 
 Note:: The order in which the pins appear has no impact on whether they are treated as input or output.
+
+=== Dealing with "Too many iterations"
+
+When you write a test case for a complex circuit or one with sophisticated timing characteristics, you might run into the "Too many iterations" error. By default, Antares executes 1'000 simulation iterations until the circuit is expected to settle into a stable state, where the output values can be safely captured.
+
+If you get the "Too many iterations" error during test case execution, you should check if your circuit is indeed oscillating, which is not supported for test cases. If that's not the case, you can increase the "Number of iterations" property of the test case and then try again.
