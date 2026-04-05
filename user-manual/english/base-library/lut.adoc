@@ -18,7 +18,7 @@ During simulation, whenever the value at the address input "A" changes, the look
 
 == Pins
 
-A:: Address Input. Its bit width is determined by property "Address Bit Width".
+A:: Address Input. Its bit width is determined by property "Address Bit Width".  If any of its bits is undefined (high impedance), the effective address is determined by the value of the user preference "Undefined gate input behaviour", e.g. "Read as 0" or "Read as random".
 
 D:: Data Output. Its bit width is determined by property "Data Bit Width".
 

@@ -61,7 +61,7 @@ image:user-manual/base-library/disassembler.png[Disassembler, 300, align="center
 
 == Pins
 
-A:: Input "Address": Determines the address of the memory cell whose data is to be read out.
+A:: Input "Address": Determines the address of the memory cell whose data is to be read out. If any of its bits is undefined (high impedance), the effective address is determined by the value of the user preference "Undefined gate input behaviour", e.g. "Read as 0" or "Read as random".
 
 CS:: Input "Chip Select": The ROM component only outputs data at output "D" if this input has the value 1. With value 0, output "D" is undefined.
 
