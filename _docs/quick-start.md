@@ -7,10 +7,10 @@ header:
 
 ## Download
 
-[Windows](https://github.com/flandreas/antares/releases/download/v1.36.1/Antares-1.36.1.msi){: .btn .btn--success .btn--large}
-[macOS](https://github.com/flandreas/antares/releases/download/v1.36.1/Antares-1.36.1.dmg){: .btn .btn--success .btn--large}
-[Linux](https://github.com/flandreas/antares/releases/download/v1.36.1/antares-1.36.1-1.x86_64.rpm){: .btn .btn--success .btn--large}
-[JAR](https://github.com/flandreas/antares/releases/download/v1.36.1/antares-1.36.1.jar){: .btn .btn--success .btn--large}
+[Windows](https://github.com/flandreas/antares/releases/download/v2.0.0/Antares-2.0.0.msi){: .btn .btn--success .btn--large}
+[macOS (aarch64)](https://github.com/flandreas/antares/releases/download/v2.0.0/Antares-2.0.0.dmg){: .btn .btn--success .btn--large}
+[Linux (x86)](https://github.com/flandreas/antares/releases/download/v2.0.0/antares-2.0.0-1.x86_64.rpm){: .btn .btn--success .btn--large}
+[JAR](https://github.com/flandreas/antares/releases/download/v2.0.0/antares-2.0.0.jar){: .btn .btn--success .btn--large}
 
 ## Installation
 
@@ -49,3 +49,7 @@ Or watch our Antares introduction video on YouTube.
 ## Bugs or missing features?
 
 If you find any bugs or are missing a feature, we'd like to hear from you! The guidelines on ["Report Bugs and Feature Requests"](/docs/issues/) explain how you can contact us. Your collaboration in making Antares better is truly appreciated.
+
+## Contribute
+
+Checkout the source repo on [GitHub](https://github.com/flandreas/antares-source). Pull requests are welcome!
