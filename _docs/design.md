@@ -48,7 +48,7 @@ Choose your preferred gate symbol style.
 
 ### Versatile gates
 
-Use gates with up to 8 inputs and optional input negation, and even with multi-bit inputs and outputs.
+Use gates with up to 16 inputs and optional input negation, and even with multi-bit inputs and outputs.
 
 <img src="/assets/images/design/gate-versatility.png" width="400">
 
