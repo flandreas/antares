@@ -18,3 +18,5 @@ A capacitor has two bidirectional pins. Depending on the voltage at these pins, 
 
 Capacitance:: The capacitance of the capacitor in microfarad.
 
+Variable:: If checked, you can click on the capacitor during simulation to bring up a knob that allows you to change the capacitance.
+

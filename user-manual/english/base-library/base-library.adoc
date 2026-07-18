@@ -24,6 +24,18 @@ Shadows:: This property controls whether this particular component is to be disp
 
 Color:: Normally, the color in which a component is drawn is determined by its style. The property "Color" can be used to override the color for a specific component. This can be used, for example, to identify all components of a circuit that perform a similar function with the same color. See chapter link:{{site.basedir}}/user-manual/english/styles/styles[Styles and Themes] for more details.
 
+Magnitude values:: Certain components, especially the ones in the analog library, have properties that support magnitudes when entering a value, e.g. "100 K" for entering 100 kiloohm as resistance of a resistor, or "400 mA" for entering 400 milliampère as voltage of a battery. This is the list of supported magnitude characters:
++
+- p: Pico
+- n: Nano
+- u: Micro
+- m: Milli
+- K: Kilo
+- M: Mega
+- G: Giga
++
+If you omit the magnitude, such as when entering "480", the resolved default magnitude depends on the property. An electrical resistance would default to "480 Ohm", while a capacitor's capacity would default to "480 microfarad".
+
 == Digital Components
 
 These components are contained in the built-in library "Standard".

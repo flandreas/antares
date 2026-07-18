@@ -53,6 +53,12 @@ When hexadecimal values are combined with or assigned to other hexadecimal value
 
 NOTE: Note that there is no "Boolean" type. Booleans are represented as Numbers, where 0 (zero) is interpreted as "false", and every value other than 0 is interpreted as "true".
 
+=== Identifiers
+
+Identifiers are used for naming an object that can hold a value, e.g. a variable (see below), or a reference to a component's pin, whose value would then be its current signal.
+
+Names of identifiers must start with a letter, followed by an arbitrary number of letters, digits, or the character `_` (underscore).
+
 === Statements and Expressions
 
 An _Antares DSL_ script is a sequence of statements. All of these statements are dealing somehow with expressions that get evaluated to values. Statements return those values as their result. These results can be used by other statements that surround those statements, or are simply returned as the final result of a script.

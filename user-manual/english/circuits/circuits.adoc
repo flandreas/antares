@@ -157,7 +157,7 @@ image:user-manual/circuits/curve-20.png[Quadradic Curve] **Quadratic Curve** Cli
 
 image:user-manual/circuits/curve-20.png[Cubic Curve] **Cubic Curve** Click with the mouse at four points to define the four points of a cubic curve. The four points are the defining points of a cubic Bézier curve.
 
-image:user-manual/circuits/text.gif[Text] **Text** A click with the left mouse button creates a text component with a standard text. Double-click on the text to change the text or use the "Text" attribute in the Antares properties window. The text can contain several lines. The horizontal alignment of the text can be changed in the properties. Change the size of the text box by editing it like a rectangle.
+image:user-manual/circuits/text.gif[Text] **Text** A click with the left mouse button creates a text component with a standard text. Double-click on the text to change the text or use the "Text" attribute in the Antares properties window. The text can contain several lines. The horizontal alignment of the text can be changed in the properties. Change the size of the text box by editing it like a rectangle. Select the property "Rich text" if you enter formatted text, such as "!(myText)" for text with an overline.
 
 The selection state of the graphical objects is displayed by drawing in the selection color, as with digital components, and not by displaying the small editing rectangles (handles) as in other applications. These are only displayed when you move the mouse over a selected graphic component.
 
