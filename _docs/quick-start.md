@@ -36,7 +36,7 @@ Download the Java JAR file and start it with
 
 `java -jar antares-[version]-all.jar`
 
-Java runtime of at least version 16 required. 
+Tested with Java 25.
 
 ## Usage
 
