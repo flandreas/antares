@@ -174,3 +174,9 @@ Let Antares deep dive into your circuit hierarchy and count how many subcircuits
 Create a poster with all circuits in your project and export it to an image.
 
 <img src="/assets/images/design/poster-example.png" width="800">
+
+### AI Assistant (experimental)
+
+Let the AI Assistant create and explain circuits for you, and let it adjust your circuit.
+
+<img src="/assets/images/design/AI-assistant.png" width="600">
