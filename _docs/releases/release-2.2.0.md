@@ -43,7 +43,9 @@ Made sure all basic digital components with "switch" behaviour (switch, real swi
 
 **#1229: Connecting to wire near a junction can produce non-orthogonal wire segments:** See the detail scenario in JIRA issue. This has been fixed.
 
-**#1231: Error in 'Auto connect':** In certain rare scenarios, the 'Auto connect' feature tried to connect a pin to to another pin and a open-ended wire endpoint at the same time, which is not allowed. This has been fixed. 
+**#1231: Error in 'Auto connect':** In certain rare scenarios, the 'Auto connect' feature tried to connect a pin to to another pin and a open-ended wire endpoint at the same time, which is not allowed. This has been fixed.
+
+**#1232: Error in property editor dropdown menus (Java 26):** When users started the Antares.jar file with Java 26, an error could occur in dropdown property editors of the properties panel. Antares officially supports Java 25. A workaround has been implemented to suppress this bug.
 
 **#1235: Missing view updates during simulation (depending on simulation speed):** Fast oscillating circuits could look during simulation like nothing changes, if the simulation speed resulted in a multiple of the redrawing interval. Implemented a simple solution variant of randomly deviating the number of simulation queue entries processed during a single timer event. That way the display shows at least some activity in the scenario above, although the flashing frequency doesn't always reflect the effective signal change frequency.
 
