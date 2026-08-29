@@ -95,6 +95,8 @@ manual:
 releases:
   - title: 2026
     children:
+      - title: "2.3.0"
+        url: /docs/releases/release-2.3.0
       - title: "2.2.0"
         url: /docs/releases/release-2.2.0
       - title: "2.1.0"
