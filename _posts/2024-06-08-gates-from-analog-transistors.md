@@ -12,8 +12,8 @@ An example of such a gate is the NAND gate shown in the circuit below. Start the
 <iframe
 style="border:1px solid gray;"
 title="NAND Gate (Abstraction)"
-width="500px"
-height="500px"
+width="600px"
+height="600px"
 src="https://viewer.antarescircuit.io?library=0aefe653-220e-49fe-9f6b-da3bade5b944&circuit=ad371eb5-7c03-4d48-bbb3-4a0244ce49fb&theme=Black+%26+White"></iframe>
 
 But how does a NAND gate work inside?
