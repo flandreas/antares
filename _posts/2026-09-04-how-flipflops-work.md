@@ -22,7 +22,7 @@ style="border:1px solid gray;"
 title="Magic Set"
 width="500px"
 height="300px"
-src="http://viewer.antarescircuit.io?library=2cfdd5c6-c8a8-4e72-a188-60229a518df9&circuit=33155198-b5aa-4204-90f9-e3795a5141d7&theme=Black+%26+White">
+src="https://viewer.antarescircuit.io?library=2cfdd5c6-c8a8-4e72-a188-60229a518df9&circuit=33155198-b5aa-4204-90f9-e3795a5141d7&theme=Black+%26+White">
 </iframe>
 
 Initially, the input "Set" is 0, and so is the output "Out". If you click on "Set", it changes to 1, and so does the output "Out". If you now click again on "Set", it goes back to 0. But "Out" is still 1: The box in the middle clearly seems to remember the fact that "Set" was previously 1. It appears to store the 1.
@@ -40,7 +40,7 @@ style="border:1px solid gray;"
 title="Mechanical switch"
 width="500px"
 height="400px"
-src="http://viewer.antarescircuit.io?library=2cfdd5c6-c8a8-4e72-a188-60229a518df9&circuit=6a08b5b1-9cbb-4852-a302-9b28c777b711&theme=Black+%26+White">
+src="https://viewer.antarescircuit.io?library=2cfdd5c6-c8a8-4e72-a188-60229a518df9&circuit=6a08b5b1-9cbb-4852-a302-9b28c777b711&theme=Black+%26+White">
 </iframe>
 
 While this design looks appealing at first glance, there are two reasons why this is not exactly what we are looking for.
@@ -66,7 +66,7 @@ style="border:1px solid gray;"
 title="Set-Latch (OR)"
 width="500px"
 height="300px"
-src="http://viewer.antarescircuit.io?library=2cfdd5c6-c8a8-4e72-a188-60229a518df9&circuit=f093cb3e-512a-4619-b5ba-406b391b1dbc&theme=Black+%26+White">
+src="https://viewer.antarescircuit.io?library=2cfdd5c6-c8a8-4e72-a188-60229a518df9&circuit=f093cb3e-512a-4619-b5ba-406b391b1dbc&theme=Black+%26+White">
 </iframe>
 
 By feeding the output signal back to the first input of the OR gate, we make sure that the 1 keeps being stored even if "Set" goes back to 0. That's the power of the OR gate. Once there is a 1 in the system, it stays there.
@@ -86,7 +86,7 @@ style="border:1px solid gray;"
 title="Magic Set-Reset"
 width="500px"
 height="300px"
-src="http://viewer.antarescircuit.io?library=2cfdd5c6-c8a8-4e72-a188-60229a518df9&circuit=5110e5a6-70b1-4f7f-affa-46a1f5f46cc9&theme=Black+%26+White">
+src="https://viewer.antarescircuit.io?library=2cfdd5c6-c8a8-4e72-a188-60229a518df9&circuit=5110e5a6-70b1-4f7f-affa-46a1f5f46cc9&theme=Black+%26+White">
 </iframe>
 
 How can we implement this "Magic Set-Reset" box? Let's try to find a way to express the new requirements for the circuit using logical expressions.
@@ -103,7 +103,7 @@ style="border:1px solid gray;"
 title="Set-Reset Latch"
 width="600px"
 height="750px"
-src="http://viewer.antarescircuit.io?library=2cfdd5c6-c8a8-4e72-a188-60229a518df9&circuit=e3c0dd8f-3e20-4182-b696-c987ca99673d&theme=Black+%26+White">
+src="https://viewer.antarescircuit.io?library=2cfdd5c6-c8a8-4e72-a188-60229a518df9&circuit=e3c0dd8f-3e20-4182-b696-c987ca99673d&theme=Black+%26+White">
 </iframe>
 
 ## Transistors are costly
@@ -140,7 +140,7 @@ style="border:1px solid gray;"
 title="NOR-SR-Latch (Step 1)"
 width="500px"
 height="500px"
-src="http://viewer.antarescircuit.io?library=2cfdd5c6-c8a8-4e72-a188-60229a518df9&circuit=b40f1027-4e0c-4d44-b5fc-6fc2c49d44fe&theme=Black+%26+White">
+src="https://viewer.antarescircuit.io?library=2cfdd5c6-c8a8-4e72-a188-60229a518df9&circuit=b40f1027-4e0c-4d44-b5fc-6fc2c49d44fe&theme=Black+%26+White">
 </iframe>
 
 ### Step 2: Storing the 1
@@ -156,7 +156,7 @@ style="border:1px solid gray;"
 title="NOR-SR-Latch (Step 1.5)"
 width="900px"
 height="500px"
-src="http://viewer.antarescircuit.io?library=2cfdd5c6-c8a8-4e72-a188-60229a518df9&circuit=02e3bf3c-191b-4a59-af15-fcba3e5456f3&theme=Black+%26+White">
+src="https://viewer.antarescircuit.io?library=2cfdd5c6-c8a8-4e72-a188-60229a518df9&circuit=02e3bf3c-191b-4a59-af15-fcba3e5456f3&theme=Black+%26+White">
 </iframe>
 
 How can we make sure that the second NOR input is 1 in this situation? Luckily, "Out" is already 1, so we can simply feed it back into the second NOR input, replacing the constant 0 we've used before.
@@ -170,7 +170,7 @@ style="border:1px solid gray;"
 title="NOR-SR-Latch (Step 2)"
 width="500px"
 height="400px"
-src="http://viewer.antarescircuit.io?library=2cfdd5c6-c8a8-4e72-a188-60229a518df9&circuit=b01e6620-db22-4037-aeaf-262afc958f68&theme=Black+%26+White">
+src="https://viewer.antarescircuit.io?library=2cfdd5c6-c8a8-4e72-a188-60229a518df9&circuit=b01e6620-db22-4037-aeaf-262afc958f68&theme=Black+%26+White">
 </iframe>
 
 ### Step3: Resetting the latch to 0
@@ -184,7 +184,7 @@ style="border:1px solid gray;"
 title="NOR-SR-Latch (Step 3)"
 width="500px"
 height="400px"
-src="http://viewer.antarescircuit.io?library=2cfdd5c6-c8a8-4e72-a188-60229a518df9&circuit=2329d972-c750-46e0-880b-c4fd5f878794&theme=Black+%26+White">
+src="https://viewer.antarescircuit.io?library=2cfdd5c6-c8a8-4e72-a188-60229a518df9&circuit=2329d972-c750-46e0-880b-c4fd5f878794&theme=Black+%26+White">
 </iframe>
 
 Start the simulation and try to set and reset the latch. Make sure that at any time, only "Set" or "Reset" or none of them is 1, but never both.
@@ -208,7 +208,7 @@ style="border:1px solid gray;"
 title="Oscillation"
 width="500px"
 height="500px"
-src="http://viewer.antarescircuit.io?library=2cfdd5c6-c8a8-4e72-a188-60229a518df9&circuit=9c5d845a-474a-4b4b-ba77-158f2ccf2611&theme=Black+%26+White">
+src="https://viewer.antarescircuit.io?library=2cfdd5c6-c8a8-4e72-a188-60229a518df9&circuit=9c5d845a-474a-4b4b-ba77-158f2ccf2611&theme=Black+%26+White">
 </iframe>
 
 The circuit oscillates quickly between 0 and 1 at "Out". Why is that?
@@ -253,7 +253,7 @@ style="border:1px solid gray;"
 title="Magical D Latch"
 width="500px"
 height="300px"
-src="http://viewer.antarescircuit.io?library=2cfdd5c6-c8a8-4e72-a188-60229a518df9&circuit=7af9a7e3-d18b-486c-8ad7-6ff1b49c7253&theme=Black+%26+White">
+src="https://viewer.antarescircuit.io?library=2cfdd5c6-c8a8-4e72-a188-60229a518df9&circuit=7af9a7e3-d18b-486c-8ad7-6ff1b49c7253&theme=Black+%26+White">
 </iframe>
 
 How would we build such a circuit?
@@ -274,7 +274,7 @@ style="border:1px solid gray;"
 title="D Latch"
 width="700px"
 height="600px"
-src="http://viewer.antarescircuit.io?library=2cfdd5c6-c8a8-4e72-a188-60229a518df9&circuit=1f34fd1f-a455-4f14-a6e6-f5b5e35bca47&theme=Black+%26+White">
+src="https://viewer.antarescircuit.io?library=2cfdd5c6-c8a8-4e72-a188-60229a518df9&circuit=1f34fd1f-a455-4f14-a6e6-f5b5e35bca47&theme=Black+%26+White">
 </iframe>
 
 Note how the two AND gates operate as gate-keepers for the SR latch: As long as "Enable" is 0, both AND gates produce 0, which leads to "Set" = "Reset" = 0, and in turn asks the SR latch to store its state. Note also how the NOT gate produces the "Reset" signal as the inverse of the "D" input.
@@ -314,7 +314,7 @@ style="border:1px solid gray;"
 title="Pulse Generator"
 width="800px"
 height="500px"
-src="http://viewer.antarescircuit.io?library=2cfdd5c6-c8a8-4e72-a188-60229a518df9&circuit=e75a037d-2a1e-45aa-bd2b-73f8704e228c&theme=Black+%26+White">
+src="https://viewer.antarescircuit.io?library=2cfdd5c6-c8a8-4e72-a188-60229a518df9&circuit=e75a037d-2a1e-45aa-bd2b-73f8704e228c&theme=Black+%26+White">
 </iframe>
 
 The oscilloscope shows nicely the resulting pulse, but it doesn't explain **how** the pulse gets created.
@@ -338,7 +338,7 @@ style="border:1px solid gray;"
 title="D Flip-Flop"
 width="900px"
 height="500px"
-src="http://viewer.antarescircuit.io?library=2cfdd5c6-c8a8-4e72-a188-60229a518df9&circuit=7b69d1c5-7f22-4d8f-9453-01d37b7adc2e&theme=Black+%26+White">
+src="https://viewer.antarescircuit.io?library=2cfdd5c6-c8a8-4e72-a188-60229a518df9&circuit=7b69d1c5-7f22-4d8f-9453-01d37b7adc2e&theme=Black+%26+White">
 </iframe>
 
 ## Example usage
@@ -354,7 +354,7 @@ style="border:1px solid gray;"
 title="Example usage"
 width="600px"
 height="400px"
-src="http://viewer.antarescircuit.io?library=2cfdd5c6-c8a8-4e72-a188-60229a518df9&circuit=ce9a9591-2ef0-427c-8f2f-ff154ddec00b&theme=Black+%26+White">
+src="https://viewer.antarescircuit.io?library=2cfdd5c6-c8a8-4e72-a188-60229a518df9&circuit=ce9a9591-2ef0-427c-8f2f-ff154ddec00b&theme=Black+%26+White">
 </iframe>
 
 ## Conclusion
