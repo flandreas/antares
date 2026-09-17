@@ -13,6 +13,8 @@ Design your circuits in Antares Desktop. Upload your projects to Antares Web and
 
 Like so:
 
+> :bulb: Hover with the mouse over the circuit and start the simulation with the right-pointing arrow button.
+
 <iframe
 style="border:1px solid gray;"
 title="CMOS NAND Gate"
@@ -20,6 +22,11 @@ width="650"
 height="880"
 src="https://viewer.antarescircuit.io?library=0aefe653-220e-49fe-9f6b-da3bade5b944&circuit=fabe8b34-563d-43b2-ac49-537caab74dec&theme=Black+%26+White">
 </iframe>
+
+You can also check out some of our tutorials that feature embedded, simulatable circuits:
+
+- [Making logic gates from transistors](/gates-from-analog-transistors)
+- [How flip-flops work](/how-flipflops-work)
 
 # Integration with course management and online homework assignments
 
