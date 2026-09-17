@@ -1,5 +1,8 @@
 # Antares
 
+> [!NOTE]
+> This repository contains only the sources for the project home page and the issue tracker for the Antares application. The application's source code can be found in the [Antares source repository](https://github.com/flandreas/antares-source). 
+> 
 Antares is a learning platform for digital circuits. In addition to drawing and simulating digital circuits, Antares places particular emphasis on providing tools to help students better understand how these circuits work.
 
 ![Example Screen](assets/images/feature-gallery/multiview.png)
