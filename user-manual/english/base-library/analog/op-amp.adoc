@@ -1,0 +1,27 @@
+= Operational Amplifier
+include::../../../page-variables.txt[]
+:page-permalink: /user-manual/english/base-library/analog/op-amp
+
+== Appearance
+
+image:user-manual/base-library/analog/op-amp.png[OpAmp]
+
+== Behaviour
+
+An operational amplifier (op-amp) is a DC-coupled electronic amplifier with a differential input, a single-ended output voltage, and an extremely high gain. It amplifies the voltage difference between its two inputs.
+
+== Pins
+
+-:: Inverting input pin
+
++:: Non-inverting input pin
+
+Output:: The output pin.
+
+== Properties
+
+Position of "+" input:: The position of the non-inverting input relative to the signal flow direction.
+
+Max. Output (V):: The maximum output voltage.
+
+Min. Output (V):: The minimum output voltage.

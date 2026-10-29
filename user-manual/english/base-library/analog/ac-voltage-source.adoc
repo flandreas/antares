@@ -1,0 +1,21 @@
+= A/C Voltage Source
+include::../../../page-variables.txt[]
+:page-permalink: /user-manual/english/base-library/analog/ac-voltage-source
+
+== Appearance
+
+image:user-manual/base-library/analog/ac-voltage-source.png[A/C Voltage Source]
+
+== Behaviour
+
+Produces an alternating voltage at its outputs that changes with the sine of simulation time.
+
+== Pins
+
+A/C voltage source has two bi-directional pins.
+
+== Properties
+
+Max. Voltage (V):: The maximum (or peak) electrical voltage at the output.
+
+Frequency (Hz):: The frequency with which the output voltage changes.

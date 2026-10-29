@@ -16,7 +16,7 @@ gallery:
 
 # Tanenbaum CPU
 
-[Download](https://github.com/flandreas/antares/releases/download/v1.32.0/Microcomputer.Tanenbaum.acp){: .btn .btn--primary .btn--large}
+[Download](https://github.com/flandreas/antares/releases/download/v2.4.0/Microcomputer.Tanenbaum.acp){: .btn .btn--primary .btn--large}
 
 {% include gallery id="gallery" caption="Screenshots" %}
 

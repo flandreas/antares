@@ -78,6 +78,8 @@ See link:{{site.basedir}}/user-manual/english/scripting/scripting[Scripting] for
 S == 1 and R == 0
 ----
 
+TIP: Conditions are evaluated every time a component has been simulated, and its output pins therefore might have been updated with new values. This doesn't necessarily mean that these values have already propagated over wires to the inputs of other components. It is therefore recommended to base condition expressions on circuit inputs or output pins of components, not their input pins.
+
 [[scenarioStepScripting]]
 === Properties of Scenario Steps
 

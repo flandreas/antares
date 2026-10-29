@@ -71,7 +71,11 @@ Note also the three gray dots in the first and second rows. These indicate that 
 
 === Scrolling the signal curve
 
-New signals always arrive at the right edge of each signal row, and then move towards the left edge when time passes, and eventually leave the visible area. The oscilloscope allows to scroll the visible area horizontally by clicking on a signal row and dragging horizontally. Double-clicking resets the scrolling offset.
+New signals always arrive at the right edge of each signal row, and then move towards the left edge when time passes, and eventually leave the visible area. The oscilloscope allows to scroll the visible signal history horizontally by clicking on a signal row and dragging horizontally. Double-clicking resets the scrolling offset.
+
+The time ruler uses a triggered sweep with ten fixed divisions. The center division is labeled `0.0 ns`; divisions to the left show negative time and divisions to the right show positive time. Changing the horizontal scale updates the time represented by each division. During simulation, drag the center trigger line horizontally to compare the time distance between signal transitions or peaks. Drag any of the other lines to change the with of the divisions.
+
+Tip:: For dragging division lines, move the mouse pointer over the tick mark or the label in the timeline. When the mouse pointer changes, press/hold and then drag the mouse to the desired location.
 
 == Simulation in "Real-Time" Mode
 

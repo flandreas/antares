@@ -29,6 +29,14 @@ When the user starts the execution of a use case, Antares automatically switches
 
 At the end of a use case execution, Antares remains in simulation mode, so that the human user can take in on from there by himself.
 
+=== Single-stepped execution
+
+If the simulation is put into "Single-step mode" (menu "Simulation") before starting to execute a use case, the simulation is halted in a breakpoint before execution of each line of the execution stript. The execution can then be resumed by pressing the pause/resume button.
+
+Note that breaking at "each line" is only possible if the individual lines are all timed differently. If you have 3 lines in your script, and each of them has the same execution time, they are all executed at the same time, and you will only experience a single breakpoint.
+
+Tip:: Turn off "menu:Simulation[Soft Breakpoints]" when stepping through use case execution script lines. Soft breakpoints will halt the simulation with every changing pin output, which will distract you from focusing on the use case actions.
+
 == Test Cases
 
 For each use case, a test case can also be defined to check that the circuit functions correctly when this use case is executed.

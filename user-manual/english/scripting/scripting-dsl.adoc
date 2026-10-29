@@ -123,6 +123,10 @@ _Antares DSL_ supports the following logic operations. These logic operations ar
 * *and* (Bitwise AND)
 * *or* (Bitwise OR)
 * *not* (Bitwise NOT)
+* *xor* (Bitwise XOR)
+* *nand* (Bitwise NAND)
+* *nor* (Bitwise NOR)
+* *xnor* (Bitwise XNOR)
 
 [source,javascript]
 ----
@@ -133,9 +137,9 @@ not A
 
 [TIP]
 ====
-Note that if you use `not` with number literals of type "Long" like `3`, the literal is first converted to a digital signal with the minimal required bit width, and only then inverted bit-wise. Therefore, `not 3` results in `0`.
+Note that if you use `not` (or any of the inverting operations like `nand`) with number literals of type "Long" like `3`, the literal is first converted to a digital signal with the minimal required bit width, and only then inverted bit-wise. Therefore, `not 3` results in `0`.
 
-This is to avoid running into signed inversion.  If that's not what you want, assign the number literal to a variable and apply the "Length cast" operator `$` (see below) when using the variable in the `not` term.
+This is to avoid running into signed inversion.  If that's not what you want, assign the number literal to a variable and apply the "Length cast" operator `$` (see below) when using the variable in the `not` term (or in terms in any of the inverting operations like `nand`).
 ====
 ==== Comparison Operations
 
@@ -147,6 +151,7 @@ _Antares DSL_ support the following comparison operations. The result of a compa
 * *>=* (Greater than or equal)
 * *<* (Smaller than)
 * *\<=* (Smaller than or equal)
+* in (Contained in list of values)
 
 [source,javascript]
 ----
@@ -155,6 +160,7 @@ A != B
 A > B
 A >= 17
 B <= A
+A in (1,42,2*B)
 ----
 
 ==== Bit Access Operations

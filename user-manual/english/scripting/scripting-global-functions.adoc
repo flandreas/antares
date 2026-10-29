@@ -11,12 +11,26 @@ link:{{site.basedir}}/user-manual/english/scripting/scripting-dsl[_Antares DSL_]
 [source,javascript]
 ----
 /**
+ * Returns the current execution (i.e. simulation) time in ns.
+ *
+ * Example: time()
+ */
+private fun time(): Long
+
+/**
+ * Returns the propagation delay (in ns) of the current vertice.
+ *
+ * Example: propDelay()
+ */
+private fun propDelay(): Long
+
+/**
  * Recalculates a component after [delay] ns have passed in the simulator,
  * even if no input signals have changed. Can be used e.g. to implement a monostable multivibrator.
  *
  * Example: triggerAfter(200)
  */
-private fun triggerAfter(delay: Long) {
+private fun triggerAfter(delay: Long)
 ----
 
 == Arithmetic Functions
